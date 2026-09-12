@@ -1,0 +1,36 @@
+   Compiling rx-domain v0.1.0 (/src/sdk/crates/rx-domain)
+   Compiling rx-protocol v0.1.0 (/src/sdk/crates/rx-protocol)
+   Compiling rx-package v0.1.0 (/src/sdk/crates/rx-package)
+   Compiling rx-process-contract v0.1.0 (/src/sdk/crates/rx-process-contract)
+   Compiling rx-ports v0.1.0 (/src/sdk/crates/rx-ports)
+   Compiling rx-storage v0.1.0 (/src/sdk/crates/rx-storage)
+   Compiling rx-process v0.1.0 (/src/runtime/rx-process)
+   Compiling rx-executor v0.1.0 (/src/runtime/rx-executor)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 28.14s
+     Running tests/service_owner.rs (/target/debug/deps/service_owner-30ffd1e0626b7420)
+
+running 8 tests
+test invalid_journal_path_cannot_overwrite_the_ownership_file ... ok
+test directory_alias_cannot_bypass_the_service_owner ... ok
+test different_service_roots_do_not_impose_a_global_cell_owner ... ok
+test startup_failure_releases_ownership_without_removing_the_lock_file ... ok
+test ownership_symlink_is_rejected_without_touching_its_target ... ok
+test one_root_cannot_register_two_services_with_different_run_journals ... FAILED
+test ownership_special_files_are_rejected ... ok
+test entrypoint::competing_product_process_never_reaches_connect_and_failure_unlocks_root ... ok
+
+failures:
+
+---- one_root_cannot_register_two_services_with_different_run_journals stdout ----
+
+thread 'one_root_cannot_register_two_services_with_different_run_journals' (338) panicked at runtime/rx-executor/tests/service_owner.rs:23:75:
+called `Result::unwrap()` on an `Err` value: Custom { kind: Other, error: "EXECUTOR_SERVICE_ROOT_UNAVAILABLE: /tmp/.tmpJluFtc: lock acquisition failed because the operation would block" }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    one_root_cannot_register_two_services_with_different_run_journals
+
+test result: FAILED. 7 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
+error: test failed, to rerun pass `-p rx-executor --test service_owner`

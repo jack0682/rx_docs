@@ -1,0 +1,18 @@
+   Compiling rx-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-package)
+   Compiling rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-process-contract)
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+error[E0599]: no method named `operator_view` found for struct `rx_application::Engine<R, C, A>` in the current scope
+   --> crates/rx-application/tests/support/runtime_requalification_tests.rs:142:14
+    |
+141 | /         f.app
+142 | |             .operator_view(&f.admin)
+    | |_____________-^^^^^^^^^^^^^
+    |
+help: there is a method `overview` with a similar name
+    |
+142 -             .operator_view(&f.admin)
+142 +             .overview(&f.admin)
+    |
+
+For more information about this error, try `rustc --explain E0599`.
+error: could not compile `rx-application` (test "transactions") due to 1 previous error

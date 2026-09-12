@@ -1,0 +1,76 @@
+{
+  "schema": "rx.melsec-host-image-test.v1",
+  "status": "PASS",
+  "image_id": "sha256:905ab2715e5cb36705a7937d4b43d8d627fa46b16aa014ba1ea3c785b1afca18",
+  "architecture": "arm64",
+  "non_root": true,
+  "read_only_root": true,
+  "network": "none",
+  "devices": [],
+  "signed_package_verified": true,
+  "release_source_pin_checked": true,
+  "native_journal_initialized": true,
+  "ready": {
+    "admission_open": true,
+    "clock_id": "linux-boottime/a3b42382-d31e-4ea3-82d4-14d0f5ad389f",
+    "endpoint": "https://127.0.0.1:7444",
+    "host": "host/sim",
+    "host_boot": "bb259fea-693c-436c-b844-2cff325eac3e",
+    "installation": "8aaa7d65-3d6e-4db3-9add-71dfc3502865",
+    "instance": "915681af-a2b9-48e1-8095-1c6d0fae1b47",
+    "pending_evidence": null,
+    "phase": "SOFTWARE_READY_UNARMED",
+    "publication": "DISABLED",
+    "qualification_or_arm_restored": false,
+    "schema": "rx.host-service-status.v1",
+    "stop": null
+  },
+  "stop": {
+    "admission_open": false,
+    "clock_id": "linux-boottime/a3b42382-d31e-4ea3-82d4-14d0f5ad389f",
+    "endpoint": "https://127.0.0.1:7444",
+    "host": "host/sim",
+    "host_boot": "bb259fea-693c-436c-b844-2cff325eac3e",
+    "installation": "8aaa7d65-3d6e-4db3-9add-71dfc3502865",
+    "instance": "915681af-a2b9-48e1-8095-1c6d0fae1b47",
+    "pending_evidence": "0",
+    "phase": "STOPPED",
+    "publication": "DISABLED",
+    "qualification_or_arm_restored": false,
+    "schema": "rx.host-service-status.v1",
+    "stop": {
+      "admission_open": false,
+      "host_boot": "bb259fea-693c-436c-b844-2cff325eac3e",
+      "native": {
+        "device_session": "6bf0e593-0209-4338-b575-3f9aa3d172f6",
+        "no_pending_commands": true,
+        "observed_at": {
+          "clock_id": "linux-boottime/a3b42382-d31e-4ea3-82d4-14d0f5ad389f",
+          "ticks_ns": "538657217285"
+        },
+        "resources": [
+          "laser/controller"
+        ],
+        "safe_to_drop": true,
+        "uncertainty_ns": "50578041"
+      },
+      "pending_operations": [],
+      "physical_shutdown_assessed": false,
+      "retained_evidence": "0",
+      "safe_to_drop": true
+    }
+  },
+  "plc": {
+    "reads": 4,
+    "writes": 0,
+    "sequence": 5,
+    "test_only": true
+  },
+  "tls_client_auth_h2": true,
+  "duplicate_owner_rejected": true,
+  "limitations": [
+    "Test-only key and assets; SIMULATION profile and loopback PLC",
+    "No physical qualification or process operation was performed",
+    "Python PLC is an explicit test harness process, not a product-deployed backend"
+  ]
+}

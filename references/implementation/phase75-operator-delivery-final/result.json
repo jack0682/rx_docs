@@ -1,0 +1,28 @@
+{
+  "schema": "rx.operator-delivery-test.v1",
+  "status": "PASS",
+  "platform_image": "sha256:91615fdf2062296433333f8f6c681c64fbdb5816da7fa2c94d6e119c34f6924a",
+  "solutions_image": "sha256:905ab2715e5cb36705a7937d4b43d8d627fa46b16aa014ba1ea3c785b1afca18",
+  "bundle_manifest_sha256": "566684098774081d6e1a687dafae4fcd90409dfbef3e7ca3628198608d12cc72",
+  "bundle_files": 567,
+  "checks": [
+    "UI extracted from pinned S image",
+    "fresh P installation and non-root read-only runtime",
+    "same-origin direct registered-terminal mTLS login",
+    "verified server TLS and missing-client-certificate denial",
+    "real production bundle and Korean fonts; no external assets/dev server",
+    "API/asset/deep-link 404 and static method restrictions",
+    "CreateRun committed reply loss and identical request recovery after reload",
+    "one Run without qualification or native execution",
+    "actual start-context UI and server rejection preserve unqualified Prepared Run",
+    "unregistered service certificate cannot log in",
+    "no JS/CSP errors or mobile overflow",
+    "graceful P software stop"
+  ],
+  "limitations": [
+    "Browser ignores trust errors for the disposable test CA; Python TLS separately verifies the server certificate.",
+    "Successful StartRun/native execution is not covered; the fresh installation start-context denial is checked.",
+    "S image was used as immutable asset source; its Host/controller was not started.",
+    "No physical equipment or qualification; disposable test identities/volumes only."
+  ]
+}

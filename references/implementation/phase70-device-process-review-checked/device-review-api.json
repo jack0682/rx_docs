@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "review": "aaff26c7-3426-4a45-b62a-ff1fe0e6e46b",
+  "scope": "DEVICE_PACKAGE_SOFTWARE",
+  "actual_s_decoder_report": true,
+  "actual_platform_api": true,
+  "checks": [
+    "separate device authority root",
+    "signed report registration",
+    "author approval denied",
+    "independent current-version approval",
+    "idempotent decision",
+    "new report invalidates old approval",
+    "stale target denied",
+    "history remains read-only",
+    "authority file change blocks fresh approval",
+    "wrong cell denied",
+    "no qualification/activation"
+  ]
+}

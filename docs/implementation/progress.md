@@ -1183,3 +1183,18 @@ bridge는 아직 rx-hostd의 NativeAdapter/factory 및 영속 native journal/qua
 - 장비 출처가 있는 공정의 fresh review와 Host binding 적용은 여전히 차단한다. 추가 ABI 허용을 장비 승인·셀 적용·운전 허가로 해석하지 않는다. production JTC 제공자·물리 검증과 R01–R30의 나머지 구현 범위는 미완료다.
 
 [검증 기록](../../references/implementation/phase69_checks.json).
+
+## 2026-09-12 · 장비 변경 후보 공정의 현재 원본 검토·독립 승인
+
+- 기존 active step 검토와 별도로 Create.device_plans를 받아 후보 공정 검토를 생성한다. 초안과 같은 composite catalog를 사용하며 clean/current IMPACT_REVIEWED plan과 모든 영향 셀 접근권을 요구한다. 각 plan·장비 Job/report/decision snapshot을 최대16개/512KiB로 고정하고 v2 request의 device_context_digest에 결합한다. v1 empty context 형식은 유지한다.
+- 보고서 접수/승인 worker는 같은 Store owner/current policy 아래의 공정·모든 장비 원본을 다시 검증한다. 별도 장비 authority의 pinned 파일/서명/validator/report를 검사하고, 최초 plan과 같은 함수로 조건·완료 대응표·Host/Intent·인계 정책을 다시 만들어 원래 후보와 대조한다. 실제 signed compile-input의 plan/binding/step/action 출처와 composite catalog도 대조한다.
+- writer는 commit 전에 plan/장비 승인/authority·구성·공유 영향·계정 접근권·등록/boot/ticket 현재성을 재검사한다. 과거 조회와 동일 key 회수도 영향 셀 접근권을 요구하며 목록은 권한 없는 후보 Job을 노출하지 않는다. 과거 snapshot의 builder가 바뀐 경우 구조 손상으로 취급하지 않고 현재성 검사에서 구별한다.
+- 실제 JTC 장비 작성·서명/검토·binding plan→공정 작성·서명→S compiler 보고서→P 접수·독립 승인을 통과했다. 일부 셀만 접근하는 계정의 생성/보고서/결정/조회 및 제출자의 자기 승인을 거부했다. 장비 authority 파일 변경으로 새 공정 승인을 차단하고, 원본 복구 후 승인한 뒤 실제 장비 승인 철회로 종속 공정의 context/approval 현재성이 사라지는 것을 확인했다.
+- 동일 요청은 같은 보고서/결정만 회수한다. 새 요청의 재승인은 거부하며 역사적 결정 회수는 권한 재발급으로 세지 않는다. active 구성/Run/qualification은 바뀌지 않았다. 현행 process-change와 Prepared 생성기는 device context를 명시적으로 거부한다. 후속 Host binding/envelope 적용 경계를 통과한 것으로 표시하지 않는다.
+- UI가 v2 request/context를 보존하고 누락/형식 혼합을 거부하도록 decoder와 시험을 추가했다. 후보 검토라는 안내와 후보 원문을 표시한다. 전용 plan 선택 화면은 아직 없다. 새 검토 통합은 개발 loopback API이며 production TLS/이미지 승인 인수가 아니다.
+- P298개·S153개 전체 Rust 시험, UI25개/typecheck/build/format, 양쪽 전체 clippy, 새 실제 API 통합과 기존 공정 검토·승인/응답 회수 브라우저 회귀를 확인했다. 첫 통합의 마지막 기존 fixture가 결정1개를 가정해 새 철회 결정과 충돌한 문제를 수정했다. 정적 검사의 불필요한 참조·조건 중첩도 정리하고 최종 API 통합을 다시 통과했다. 검사를 완화하지 않았다.
+- 규범8개·optional6개를 유지하고 shared request의 SDK96개를 동기화했다. phase70에서는 두 이미지를 재빌드하지 않았다. phase68 이미지 결과는 당시 소스의 증거이며 현재 변경의 이미지 증거로 쓰지 않는다.
+
+[장비 후보 공정 검토](https://github.com/jack0682/rx-platform/blob/codex/initial-draft/crates/rx-application/DEVICE_PROCESS_REVIEW.md), [검증 기록](../../references/implementation/phase70_checks.json).
+
+다음은 후보 Host/native binding과 운영 envelope의 변경을 적용 절차에 결합하고, quiet/fence·원장 세대·APPLIED_UNQUALIFIED·qualification을 입증하는 단계다. R01–R30 전체 목표는 유지하며 production JTC 제공자·실물 검증을 포함한 미완료 항목은 계속 남는다.

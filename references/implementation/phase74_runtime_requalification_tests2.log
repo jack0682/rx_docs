@@ -1,0 +1,11 @@
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.51s
+     Running tests/transactions.rs (target/debug/deps/transactions-2d3d144f384ba793)
+
+running 3 tests
+test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::runtime_requalification_tests::review_without_explicit_runtime_restriction_cannot_issue_a_clear_for_it ... ok
+test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::runtime_requalification_tests::initial_runtime_restriction_is_signed_into_requalification_and_cleared_only_at_activation ... ok
+test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::runtime_requalification_tests::restriction_binding_is_atomic_and_missing_or_wrong_origins_never_generate_authority ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 182 filtered out; finished in 0.67s
+

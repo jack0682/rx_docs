@@ -1,18 +1,18 @@
 {
   "schema": "rx.repository-baseline.v1",
-  "recorded_at": "2026-09-12T16:21:40.466584+00:00",
+  "recorded_at": "2026-09-12T17:23:05.276936+00:00",
   "branch": "codex/initial-draft",
   "repositories": {
     "rx-platform": {
       "url": "https://github.com/jack0682/rx-platform.git",
-      "commit": "1970ab3b4f10295f0cf45ae5fb44c678799564d5"
+      "commit": "034f4ce91299661369d8f22a9693339880acb650"
     },
     "rx-solutions": {
       "url": "https://github.com/jack0682/rx-solutions.git",
-      "commit": "5679aba72a6646ec28d533dcd5c13ef4a781da7b"
+      "commit": "4683296658fd38893e35f33b2dc46d4bfeab1b16"
     }
   },
-  "latest_validation": "references/implementation/phase73_checks.json",
+  "latest_validation": "references/implementation/phase74_checks.json",
   "first_physical_cell": "NOT_COMMISSIONED",
   "layout": "Docs and evidence are canonical in rx_docs; legacy rx_ws/docs and rx_ws/references are local compatibility symlinks."
 }

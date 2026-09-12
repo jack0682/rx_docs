@@ -1235,3 +1235,17 @@ bridge는 아직 rx-hostd의 NativeAdapter/factory 및 영속 native journal/qua
 - 독립 제품 흐름 감사로 초기 인수/미소유 RuntimeRestart block, StartRun 표시/배정, recovery/restart, 실제 Host 교체, JTC provider의 공백을 확인했다. 모든 R01–R30을 유지하며 다음 작업은 [제품 인수 흐름](product_acceptance_path.md)의 연결을 우선한다.
 
 [UI 제공](https://github.com/jack0682/rx-solutions/blob/codex/initial-draft/apps/operator/DELIVERY.md), [phase73 기록](../../references/implementation/phase73_checks.json), [실제 이미지 화면](../../references/implementation/phase73-operator-delivery-final/operator-desktop.png).
+
+
+## 2026-09-13 · 재시작 제한의 명시적 재검증과 실행기 기동 소유권
+
+- Engine 재시작 transaction에서 정확한 RuntimeRestart block과 installation/store generation·이전/현재 boot·cell revision/epoch/scope·구성 digest를 원본으로 기록한다. 제한·origin·새 boot·Fence는 함께 commit/rollback된다. 읽기 API는 현재 역할/셀/단말을 검사하고 출처 없는 과거 제한을 합성하지 않는다.
+- Requalification.Begin의 명시적 block→origin digest 선택을 신규 v2 request와 서명 보고서에 결합했다. Change 적용의 before/after 구성에 속하는 원본만 받아들이며 Change·Job·request digest·origin digest별 불변 해제 근거를 저장한다. 선택 없는 Job이 앞선 Job의 결합을 재사용하거나 Begin 자체가 제한을 해제할 수 없다.
+- 독립 검토가 발견한 활성 자격 재시작의 owner origin 누락과 공유 영향의 current 검사 공백을 수정했다. 기존 root가 만드는 RuntimeRestart에도 같은 transaction의 origin을 결합하고 전체 cohort의 Host/resource로 영향 집합을 다시 계산한다. 새 공유 셀은 기존 셀 revision이 같아도 pending/active 자격을 무효화한다.
+- REVALIDATE_CURRENT는 이미 설치된 정확한 compiled 구성에 적용 root가 없을 때 기존 검증·독립 영향 검토·stage·fence·Host metadata ACK를 통과해 APPLIED_UNQUALIFIED를 만든다. 기존 REPLACE의 동일 구성 거부와 직렬화/digest는 유지한다. 현재 구성에 적용 root가 있으면 새 root를 중복 생성하지 않는다.
+- 초기 기동 뒤 실제 Engine 공개 경로의 공정 적용→명시적 재검증→6영역 서명 보고서→독립 승인→발급/Host 확인→활성화, 선택 없는 해제 거부, 잘못된 origin/부분 commit/응답 회수와 shared cohort 반례를 검증했다. ACTIVE에서 P 재시작 후 새 Begin은 검증했으나 Host producer의 새 session 재연결·등록과 전체 재활성화는 미완료다.
+- S 실행기는 journal 상위 service root의 소유권을 Client 연결/Session.Open보다 먼저 확보한다. 디렉토리 별칭·symlink·특수 파일·중복 프로세스를 거부하며 lock 파일을 삭제하지 않는다. 정상 종료 시 명시적으로 unlock하여 잠시 상속된 descriptor 때문에 다음 기동이 막히지 않는다. 전역 one-cell-one-run 제한을 추가한 것은 아니다.
+- P 전체328개·S 전체168개와 양쪽 clippy가 통과했다. P 초기 실패는 읽기 API 시험이 계정 철회로 발생한 정당한 cell 변경까지 읽기의 부작용으로 비교한 fixture 오류였고 각 읽기 전후 snapshot으로 고쳤다. Linux 실제 executor CLI의 연결 직전 probe 포함8개와 공유 descriptor 해제 unit을 별도로 확인한다. 규범8개·optional6개·SDK97개는 변경하지 않았다.
+- phase74에서는 두 제품 이미지를 재빌드하지 않았다. 현재 검증은 native macOS 전체 Rust/API 시험과 격리 Linux executor 시험이다. phase73 이미지/브라우저 증거는 당시 소스 범위로 유지한다. 첫 물리 셀은 NOT_COMMISSIONED이며 실제 장비 조작·물리 qualification은 없다.
+
+[재시작 출처와 선택](https://github.com/jack0682/rx-platform/blob/codex/initial-draft/crates/rx-application/RUNTIME_INVALIDATION_ORIGIN.md), [현재 구성 재검증](https://github.com/jack0682/rx-platform/blob/codex/initial-draft/crates/rx-application/PROCESS_CURRENT_REVALIDATION.md), [phase74 기록](../../references/implementation/phase74_checks.json).

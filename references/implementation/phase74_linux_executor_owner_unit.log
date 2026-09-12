@@ -1,0 +1,9 @@
+   Compiling rx-executor v0.1.0 (/src/runtime/rx-executor)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.34s
+     Running unittests src/lib.rs (/target/debug/deps/rx_executor-2136a46247dda8ff)
+
+running 1 test
+test service_owner::tests::explicit_release_does_not_wait_for_an_inherited_open_file_description ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 8 filtered out; finished in 0.00s
+

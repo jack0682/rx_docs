@@ -12,7 +12,7 @@
 |---|---|---|---|
 | P01 | 검토된 설치 입력·두 이미지로 초기화/기동, HTTPS 앱 접속 | 고정 S bundle, P가 검증한 단말 인증서, 실제 로그인·한글 font·상태 화면, 개발 서버 없음 | phase77 실제 두 제품 이미지·2컨테이너의 새 설치/등록 단말/패키지 검토/자격 활성화 경로 검증. S supervisor의 명시 init·status→Host→Executor 기동과 역순 협력 종료도 검증 |
 | P02 | 작업자가 승인 공정·수량을 선택하여 시작하고 S가 지속 배정받음 | StartRun 응답 유실/화면 새로고침/실행기 재접속에도 같은 Run·소재 시도, 두 소재 완료와 자원 인계 | phase77 실제 이미지의 UI StartRun 응답 유실→같은 요청 회수→서로 다른 소재2/작업2 완료·인계 및 독립 FileDevice 효과2회 대조, desktop/mobile 완료 표시 검증. 재시작 재연결은 미완료 |
-| P03 | 이상 확인·개입·복구·명시적 재개 | UNKNOWN 미해결·후발 모순·참여자 미종료·만료된 준비에서는 재개 거부, 정상 transient와 latched 철회 구별 | 미완료. ACK 이후 recovery/restart 계약·UI 연결 필요 |
+| P03 | 이상 확인·개입·복구·명시적 재개 | UNKNOWN 미해결·후발 모순·참여자 미종료·만료된 준비에서는 재개 거부, 정상 transient와 latched 철회 구별 | 일부 통신 복구 검증. phase78 실제 P-only restart 뒤 유휴 H evidence session/cell 협상을 회복하되 기존 등록·제한·through0 보존. operating rebind·활성 작업 recovery/restart·재개 UI는 미완료 |
 | P04 | 승인된 설정 변경과 설치 교체·복원 | quiet/fence·Host 원장/설치 확인·정확한 교체 receipt·APPLIED_UNQUALIFIED·재검증/독립 승인·별도 시작 | 일부 구현. 현재 제안/검토/stage/읽기 비교/영속 준비까지, 실제 교체·P 조정은 미완료 |
 | P05 | 자사 모델별 실제 제어·관측·수명 관리 | 제품 factory의 실제 provider, 원본 시각/세대·독점 소유·상태 관측, controller 교체/외부 목표/응답 유실/종료 반례 | 일부 구현. JTC production provider는 미연결, 자사 전체 지원 완료가 아님 |
 

@@ -42,3 +42,7 @@ R30의 현장 차단은 공통 구현을 중단시키지 않는다. 이 행의 �
 R01/R14/R15/R16/R19/R22/R23/R27/R28에 대해 실제 P/S 두 이미지·두 운전 컨테이너의 초기 설치, 서명/독립 역할 승인, 자격 활성화, UI 수량2 시작과 응답 유실 회수, 모의 native 효과2회/완료·인계, 상주 E Idle 복귀와 supervisor 협력 종료를 연결했다. named 다중 Host/셀 구성, 중복 Executor/경로/의존성 거부, 상태 보고 실패 시 adapter 유지, TERM 실패 재시도를 별도 반례로 확인했다. 구체 소스·이미지·시험은 [phase77 기록](../../references/implementation/phase77_checks.json)에 있다.
 
 이 연결은 FILE_SIMULATION에 한정하며 각 행의 전체 요구를 VERIFIED로 올리지 않는다. P 전체 종료 attention, 실제 재시작 rebind/복구·재개, 장기 운영·전체 지원 variant·실물 모델 지원과 현장 qualification은 아직 남아 있다. 서명된 공개 원문과 참조 자료를 보존했지만 자동화된 독립 역할 계정을 실제 사람의 검토로 표현하지 않는다.
+
+## phase78 증거 통신 재접속
+
+R05/R07/R08/R10/R23/R28에 대해 같은 저장소의 P-only 재시작 후 유휴 H evidence session/cell 협상과 반복 remote probe를 연결했다. 기존 이미지 실패와 새 이미지 성공을 실제 P/H로 대조하며 같은 Host boot/journal·operating 등록·기존 제한·through0을 보존한다. source 연속성, operating rebind·자격 복원·생산 재개는 미완료다. 빈 probe의 감사 기록 비용과 장기 보존/부하는 R17/R28에 남기며, 관련 행을 전체 VERIFIED로 승격하지 않는다. [phase78 증거](../../references/implementation/phase78_checks.json).

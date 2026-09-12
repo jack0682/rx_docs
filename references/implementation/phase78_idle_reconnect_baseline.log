@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_host_reconnect.py", line 190, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_host_reconnect.py", line 186, in main
+    exercise(docker,materials,final,bundle,p_image,s_image,port)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_host_reconnect.py", line 104, in exercise
+    host_before=until(host_status,lambda value:value['pending_evidence']=='0' and 'Idle' in value['publication'])
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_host_reconnect.py", line 56, in until
+    if time.monotonic()>=deadline:raise AssertionError('reconnection condition did not become true')
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: reconnection condition did not become true

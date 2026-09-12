@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_host_reconnect.py", line 196, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_host_reconnect.py", line 192, in main
+    exercise(docker,materials,final,bundle,p_image,s_image,port)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_host_reconnect.py", line 121, in exercise
+    stopped=oracle()
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_host_reconnect.py", line 99, in oracle
+    return json.loads(docker.command(s_image['Id'],'/usr/bin/python3',['-c',ORACLE],[pd+':/data:ro'],f'oracle-{reads:03}'))
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/cell_delivery/docker.py", line 69, in command
+    output=self.run(*args,'--entrypoint',binary,image,*arguments)
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/cell_delivery/docker.py", line 23, in run
+    raise RuntimeError(f'Docker {args[:2]} failed ({result.returncode}): {result.stderr[-6000:]} {result.stdout[-2000:]}')
+RuntimeError: Docker ('run', '--rm') failed (1): Traceback (most recent call last):
+  File "<string>", line 12, in <module>
+  File "<string>", line 10, in one
+sqlite3.OperationalError: unable to open database file
+ 

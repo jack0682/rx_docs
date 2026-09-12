@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "draft": "a6a42b3a-baae-4bdc-8162-504064a8e62f",
+  "plan": "a1b7603d-6b48-45d5-aa9c-a2d60d3a6e6f",
+  "actual_p_draft_api": true,
+  "actual_s_compiler": true,
+  "checks": [
+    "clean current impact-reviewed plan",
+    "exact device binding selection",
+    "idempotent draft save",
+    "v2 bundle retains plan/step/action provenance",
+    "actual S resolved process and BT generation",
+    "unsigned process package preserves full input",
+    "no qualification or execution"
+  ]
+}

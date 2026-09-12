@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "job": "33444417-8ef2-4ccc-aef6-3b59d79f547c",
+  "request": {
+    "device_context_digest": "c97f648f0ec69c9465c4d911d2bbefe000e66a5df8857ada30fc11c5d4e8a392",
+    "schema": "rx.process-review-request.v2",
+    "id": "33444417-8ef2-4ccc-aef6-3b59d79f547c",
+    "intake": "f2f24eac-a0ff-4767-8833-1a70f0342204",
+    "cell": "cell/demo",
+    "package_manifest": "c9e9a8f8309c034efa64c51ac16593c6127fdbea0e76ccc55f542ea08904178c",
+    "package_signature": "754d3fb501369f9bb82666a39f52f94253c013ff7201be97391140b4903e2330",
+    "configuration_digest": "2a351551850735aaed7f886e2710e7db98cb9969642504a6c91d210b2e340bfc",
+    "package_policy_fingerprint": "c0e58fd5b983fa5166fb1ca6a4cba16c546bbdbd9dd9710d5def341b9f88024c",
+    "package_policy_file_digest": "3567c714554ba11ff069fee6340db1af83edff4eb12f368d637654ce46445807",
+    "verification_authority_digest": "67d9fa160a631886c6223bb9f4ab20f2c58837834ba2cd5b21f3911667b1eb6f",
+    "binding_selections": {
+      "load": "robot/supply"
+    }
+  },
+  "checks": [
+    "actual signed JTC/process packages and S compiler report",
+    "exact candidate conditions and provenance",
+    "all affected cells required for creation/report/decision/history",
+    "independent approval",
+    "fresh device authority file required at approval",
+    "same request recovers one decision",
+    "underlying approval revocation invalidates dependent review",
+    "Host application remains blocked",
+    "no active configuration or qualification change"
+  ]
+}

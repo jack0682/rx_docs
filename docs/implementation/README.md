@@ -24,7 +24,7 @@
 
 ## 현재 상태
 
-구현 중이다. phase69에서 플랫폼298개·솔루션153개 전체 Rust 시험과 같은 검증 정책의 장비/공정 혼합 반입을 통과했다. 추가 ABI 허용은 승인·운전 권한을 부여하지 않는다. phase68에서 platform296개·solutions153개 전체 Rust 시험과 실제 JTC/P 초안 API→S compiler/패키지 후보 연결을 검증했다. 현재 검토된 변경안의 작업을 선택하고 plan/step/action 출처를 v2 입력에 보존한다. 기존 active 구성/Run은 바꾸지 않으며 현행 process review가 아직 device 출처를 재검증하지 못하면 승인하지 않는다. 최신 정적 검사·UI·이미지와 앞선 native/실물 미검증 범위는 각 검증 기록을 따른다.
+구현 중이다. phase70에서 장비 변경 후보를 포함하는 공정의 소프트웨어 검토 요청·서명 보고서 접수·독립 승인을 연결했다. 현재 후보와 장비 원본·승인·구성·영향을 다시 검증하고, 장비 승인 철회 시 공정 승인의 현재성을 잃게 한다. 플랫폼298개·솔루션153개 Rust 시험과 UI25개, 새 API 통합 및 기존 공정 검토 브라우저 회귀를 확인했다. 실제 Host 설정 변경과 셀 적용·qualification은 아직 연결하지 않았으며 새 후보의 process-change는 거부한다. phase70에서는 이미지를 다시 빌드하지 않았다.
 
 ROBOTIS position JTC의 Rust NativeAdapter는 trajectory 원본·controller session·최종 허가 유효기간 검사, 송신 전 영속 기록, 원래 UUID 결과 조회, 분쟁 보존과 child 종료 확인을 제공한다. S가 profile에 결합한 결과 대응표를 생성하고 P는 제조사 비의존 데이터로 성공·실패·취소를 판정한다. Template/Site에서 profile·허용 Intent·결과표와 공통 작업 선언을 작성하는 서명 패키지 도구, Host의 JTC_PACKAGE 검사·metadata 초기화, P의 선언 반입·보관/API/화면까지 연결했다. 제품용 Authority/lifecycle 제공자가 없어 JTC run은 거부한다. 제조사 검증·장비 검토 승인과 실제 셀 구성 변경, controller 교체 차단 및 물리 검증은 남아 있다.
 
@@ -41,6 +41,7 @@ application outbox→Host→T2→자원 인계→두 소재 시도 완료, 로�
 - [장비 패키지 소프트웨어 검증·독립 승인 API](https://github.com/jack0682/rx-platform/blob/codex/initial-draft/crates/rx-application/DEVICE_REVIEW.md)
 - [장비 소프트웨어 검토·승인 화면](https://github.com/jack0682/rx-solutions/blob/codex/initial-draft/apps/operator/DEVICE_REVIEW_UI.md)
 - [승인된 장비 작업의 연결 변경안·영향 검토](https://github.com/jack0682/rx-platform/blob/codex/initial-draft/crates/rx-application/DEVICE_BINDING_PLAN.md)
+- [장비 후보 공정의 현재 원본 검토·독립 승인](https://github.com/jack0682/rx-platform/blob/codex/initial-draft/crates/rx-application/DEVICE_PROCESS_REVIEW.md)
 - [장비 변경 후보의 공정 작성·컴파일 출처 연결](https://github.com/jack0682/rx-platform/blob/codex/initial-draft/crates/rx-application/DEVICE_PLAN_AUTHORING.md)
 - [장비 Template/Site 작성·서명·검사 도구](https://github.com/jack0682/rx-solutions/blob/codex/initial-draft/runtime/rx-device-package/README.md)
 - [오프라인 모의 작성 예제](https://github.com/jack0682/rx-solutions/blob/codex/initial-draft/examples/device/melsec-simulation/README.md)

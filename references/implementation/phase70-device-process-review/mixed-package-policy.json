@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "process_intake": "f2f24eac-a0ff-4767-8833-1a70f0342204",
+  "registration_unchanged": true,
+  "device_approval_still_current": true,
+  "one_store_and_policy": true,
+  "kinds": [
+    "DEVICE_REFERENCE",
+    "PROCESS"
+  ],
+  "checks": [
+    "actual signed JTC and v2-provenance process packages",
+    "explicit ABI allow-list and separate signer kinds",
+    "same registration/fingerprint across both intakes",
+    "device plan approval/context retained",
+    "no active configuration change"
+  ]
+}

@@ -1,0 +1,21 @@
+
+> @rx/operator@0.1.0 test
+> vitest run
+
+
+ RUN  v4.1.11 /Users/ojaehong/RX_automation/rx_ws/rx-solutions/apps/operator
+
+ ❯ tools/build-bundle.test.mjs (0 test)
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tools/build-bundle.test.mjs [ tools/build-bundle.test.mjs ]
+Error: No test suite found in file /Users/ojaehong/RX_automation/rx_ws/rx-solutions/apps/operator/tools/build-bundle.test.mjs
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 8 passed (9)
+      Tests  25 passed (25)
+   Start at  00:38:15
+   Duration  212ms (transform 307ms, setup 0ms, import 699ms, tests 56ms, environment 1ms)
+

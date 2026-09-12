@@ -1263,3 +1263,16 @@ bridge는 아직 rx-hostd의 NativeAdapter/factory 및 영속 native journal/qua
 - 이 원장의 이력은 service당1,024개로 제한된다. 장기 운영용 보관·조회 확장과 불완전 최초 생성의 명시 복구는 후속이다. 상주 CellService·CLI·planner와의 실제 연결은 아직 없고, Run마다 설정을 고치지 않는 연속 운전 인수는 완료하지 않았다. Host producer rebind와 전체 재활성화도 별도 미완료다.
 
 P339개·S197개 전체 Rust 시험, UI37개·bundle 생성기3개와 양쪽 clippy가 통과했다. 두 이미지를 새로 빌드해7개 smoke를 통과했고, 등록 단말 브라우저의 로그인·CreateRun 응답 유실 회수·시작 문맥 표시·서버의 미자격 시작 거부를 검증했다. desktop/mobile 화면, font/CSP·외부 요청·가로 넘침 검사를 확인했다. 첫 브라우저 실행은 select의 접근성 label에 option text가 포함돼 exact locator가 실패했고, 실제 Run option이 있는 combobox로 한정해 재실행했다. 성공 StartRun과 상주 실행기의 두 소재 완료를 이 브라우저 증거로 주장하지 않는다. Linux 원장 검증을 포함한 전체 결과는 phase75 기록에 집계한다. 첫 물리 셀은 NOT_COMMISSIONED이며, 모의/소프트웨어 근거를 물리 자격으로 사용하지 않는다. 전체 R01–R30 범위를 유지한다.
+
+
+## 2026-09-13 · 상주 실행기의 작업 발견·연속 처리·기동 명령
+
+- CellService는 Run이 없는 상태에서 같은 Client/session으로 조회하고, 현재 SINGLE production Run을 정확한 공정/권한으로 재검증한 뒤 영속 Preparing/Attached에 연결한다. 기존 연결 A는 다른 후보 B가 보인다는 이유로 교체하지 않는다. 여러 후보/진행 소재를 임의 순서로 고르지 않으며 이전 session·복구 상태·원장 유실은 Attention이다.
+- RunService의 기존 run→Report 인터페이스를 유지하고 run_owned로 같은 Worker/Client/factory를 반환한다. planner spawn/close/retire의 실패·취소는 sticky Unconfirmed로 남으며 다음 작업을 열지 못한다. Host의 물리 종료나 지지 인계 증명으로 확대하지 않는다.
+- 정상 다음 작업 전환에는 Completed stop, 실제 planner 정리 확인, 정확한 원래 session/runtime/Run/공정, 새 P COMPLETED 조회, 원장의 동일 종료 기록이 모두 필요하다. current pointer 해제 뒤 같은 프로세스가 다음 시작을 기다린다. NONE의 idle 종료는 PauseRun을 만들지 않고, 알려진 ARMING/미완료 연결의 관측 종료는 Attention으로 남는다.
+- 같은 제품 실행파일에 cell init/run을 추가하고 기존 CONFIG 호출을 유지했다. 예상 service identity와 전체 정규화 설정 digest·root를 별도 설치 표식으로 고정한다. 초기화 중간 실패는 덮어쓰지 않는다. run은 root 소유·설치/설정/원장/현재 run 파일을 검증한 다음 실제 Linux clock과 새 peer boot로 연결한다. TLS 자료·실행파일은 크기/일반파일/권한·hash 검사를 거친다.
+- 실제 P mTLS·SQLite와 별도 S CellService/C++ planner 프로세스의 모의 통합을 작성했다. 설정에 Run/visit을 넣지 않고 NONE 대기→A 수량2→B 수량2→idle 종료를 수행했다. 한 E session, 서로 다른 확인 완료 part4개, BeginPart/CompletePart/Submit 각4개, planner4개와 CLOSED 원장2개, PauseRun0을 대조했다. Host 응답과 공유 시계는 시험용이며 두 납품 이미지의 성공 운전 인수로 세지 않는다.
+- 첫 통합은 child가 종료한 시점의 원인이 보존되지 않아 실패 원인을 확정할 수 없다. stdout/report/status 진단을 보강했고 이후 성공 결과를 보존한다. 별도 읽기 감사로 찾은 실제 시간 경계 결함은 직접 재현했다: 마지막 part 관측을 원장에 적는 동안 조회가 만료되면 Waiting을 ContextChanged로 처리할 수 있었다. 이제 admission=false/Expired로 새 조회를 기다리며, 새 조회의 Retire→Finished는 유지한다. deadline을 늘리지 않았다. 이 결함이 첫 실패의 원인이라고 단정하지 않는다.
+- 제품 CLI의 Linux 실제 실행 반례9개와 기존 연결 전 root 소유8개가 통과했다. 기본 Rust 검증 이미지에는 Clippy가 없어 검증용 이미지에 정확한 toolchain의 component만 추가하고 Linux CLI 정적 검사를 수행했다. 이 이미지는 RX의 세 번째 제품 이미지가 아니다.
+
+전체 회귀 P339개·S215개와 양쪽 clippy, Linux CLI17개·Linux clippy가 통과했다. 만료 경계 수정 후 A2/B2 통합을 다시 통과했다. legacy CONFIG 경로도 새 정리 결과를 사용하여 planner cleanup 미확인 상태에서 정상 exit를 반환하지 않도록 보완했으며 Report JSON은 유지했다. 새 S 이미지를 빌드·검증했고 P production/build source194개는 phase75 hash와 같아 당시 P 이미지 근거를 유지한다. UI와 전체 두 이미지 성공 운전 인수를 이번 결과로 확대하지 않는다. 상세 로그·소스 봉인·인수 결과는 [phase76 기록](../../references/implementation/phase76_checks.json)에 기록한다. 첫 실제 셀은 NOT_COMMISSIONED이며 Host rebind·명시 복구/재개·납품 composition과 R01–R30의 다른 미완료 항목은 계속 남는다.

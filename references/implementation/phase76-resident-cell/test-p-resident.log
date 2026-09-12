@@ -1,0 +1,19 @@
+   Compiling rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-api)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 6.07s
+     Running tests/executor_ingress.rs (target/debug/deps/executor_ingress-96962c21812d7152)
+
+running 1 test
+
+thread 'resident_executor_discovers_two_operator_started_runs_in_one_process_and_session' (11390572) panicked at crates/rx-api/tests/support/resident_cell_worker.rs:82:9:
+resident S process exited: 
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test resident_executor_discovers_two_operator_started_runs_in_one_process_and_session ... FAILED
+
+failures:
+
+failures:
+    resident_executor_discovers_two_operator_started_runs_in_one_process_and_session
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; finished in 3.36s
+
+error: test failed, to rerun pass `-p rx-api --test executor_ingress`

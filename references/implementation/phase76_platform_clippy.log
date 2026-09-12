@@ -1,0 +1,13 @@
+    Checking rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+    Checking rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-api)
+error: this creates an owned instance just for comparison
+   --> crates/rx-api/tests/support/resident_cell_worker.rs:160:57
+    |
+160 |                 && value["status"]["completed_runs"] == completed.to_string()
+    |                                                         ^^^^^^^^^^^^^^^^^^^^^ help: try: `completed`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.98.0/index.html#cmp_owned
+    = note: `-D clippy::cmp-owned` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(clippy::cmp_owned)]`
+
+error: could not compile `rx-api` (test "executor_ingress") due to 1 previous error

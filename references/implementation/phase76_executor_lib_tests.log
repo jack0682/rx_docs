@@ -1,0 +1,42 @@
+   Compiling rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-process-contract)
+   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol)
+   Compiling rx-process v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-process)
+   Compiling rx-executor v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-executor)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.52s
+     Running unittests src/lib.rs (target/debug/deps/rx_executor-8b0350d8c1b10132)
+
+running 31 tests
+test cell_service::tests::discovery_does_not_hide_old_owner_expired_attempt_or_restricted_work ... ok
+test cell_service::tests::observation_shutdown_preserves_preparing_attached_and_known_arming_as_attention ... ok
+test cell_service::tests::historical_session_runtime_and_paused_attachment_cannot_resume ... ok
+test cell_service::tests::none_and_arming_are_observation_only_and_ambiguity_has_no_winner ... ok
+test cell_service::tests::completion_requires_structured_cleanup_exact_stop_and_actual_completed_state ... ok
+test client::assignment::tests::accepted_read_expires_or_loses_currency_when_the_trusted_clock_changes ... ok
+test client::assignment::tests::assignment_shares_runtime_sequence_and_time_regression_guards ... ok
+test client::assignment::tests::expired_response_does_not_advance_the_shared_cut ... ok
+test client::assignment::tests::forged_identity_is_rejected_even_with_a_matching_payload_hash ... ok
+test client::tests::artifact_hash_does_not_replace_size_schema_or_typed_payload_validation ... ok
+test frame::tests::a_new_epoch_is_not_implicitly_adopted_by_an_existing_context ... ok
+test frame::tests::restored_p_snapshot_preserves_work_and_does_not_restore_admission ... ok
+test client::assignment::tests::forged_cut_cardinality_and_duplicate_witnesses_fail_closed ... ok
+test pending::tests::wait_start_does_not_drop_the_only_bt_request_and_due_requests_are_fair ... ok
+test pending::tests::full_queue_and_inflight_normal_work_do_not_block_pause_and_meaning_cannot_change ... ok
+test service::tests::cancelled_serial_retirement_cannot_become_confirmation_for_an_empty_engine_slot ... ok
+test service::tests::cleanup_confirmation_distinguishes_no_spawn_and_local_close_from_uncertainty ... ok
+test service::tests::each_serial_planner_requires_its_own_confirmed_cleanup ... ok
+test service::tests::failed_close_is_sticky_after_a_later_successful_cleanup ... ok
+test service::tests::spawn_attempts_are_uncertain_until_cleanup_and_failures_remain_latched ... ok
+test frame::tests::source_clock_expiry_blocks_a_view_even_if_the_local_steady_deadline_has_not_passed ... ok
+test client::assignment::tests::ttl_and_clock_interval_are_checked_before_accepting_a_view ... ok
+test client::assignment::tests::payload_digest_size_schema_and_strict_json_are_independent_checks ... ok
+test worker::production::tests::valid_platform_views_with_multiple_active_parts_require_serial_attention ... ok
+test service_owner::tests::explicit_release_does_not_wait_for_an_inherited_open_file_description ... ok
+test worker::production::tests::serial_selection_preserves_zero_or_one_active_part_without_rewriting_completed_parts ... ok
+test cell_service::tests::actual_production_cut_must_revalidate_discovery_before_any_reservation ... ok
+test client::assignment::tests::cardinalities_retain_old_sessions_expired_attempts_and_restricted_work ... ok
+test cell_service::tests::missing_file_after_creation_entered_never_becomes_fresh_initialization ... ok
+test cell_service::tests::preparing_recovery_keeps_original_ids_and_cannot_switch_to_new_candidate ... ok
+test cell_service::tests::closing_a_preserves_its_stop_and_frees_only_the_next_attachment ... ok
+
+test result: ok. 31 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+

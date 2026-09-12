@@ -1,0 +1,13 @@
+   Compiling rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-api)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 6.81s
+     Running unittests src/lib.rs (target/debug/deps/rx_api-0f08231a12f4b7f6)
+
+running 5 tests
+test operator_ui::tests::bounds_manifest_before_loading_asset_bytes ... ok
+test operator_ui::tests::owns_exact_verified_bytes_and_requires_a_pinned_manifest ... ok
+test operator_ui::tests::rejects_symlink_roots_ancestors_assets_and_manifest ... ok
+test operator_ui::tests::rejects_unlisted_missing_tampered_and_oversized_files ... ok
+test operator_ui::tests::strict_manifest_and_asset_namespace_reject_aliases_and_unsupported_inputs ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+

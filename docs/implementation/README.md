@@ -24,7 +24,7 @@
 
 ## 현재 상태
 
-구현 중이다. phase71에서 승인된 장비 후보 공정을 변경 제안·독립 영향 검토·스테이징으로 연결하고, Host별 Intent·조건·서명 패키지 및 다른 영향 셀 요구를 산출한다. 제품 Host CLI는 현재/제안 기동 설정과 실제 JTC 패키지를 읽기 전용으로 대조한다. 실제 Host 준비·설치 교체·P 적용·qualification은 아직 차단한다. JTC 운전 제공자는 미연결이며 설정 검사 성공이 운전 가능을 뜻하지 않는다. 최신 검증 범위는 phase71 기록을 따른다.
+구현 중이다. phase72에서 실제 종료 구성·Host 원장에 묶인 영속 변경 준비/조회/취소와 기동 차단을 추가했다. phase73에서는 S production UI bundle을 P 직접 단말 HTTPS에 연결하고 실제 두 이미지·등록 단말 브라우저로 로그인/표시/CreateRun 응답 유실 회수를 검증했다. P310개·S160개 Rust 시험, UI25개·bundle 생성기3개 및 두 최신 이미지/7개 smoke가 통과했다. 실제 StartRun/상시 실행기 배정·초기 인수와 이상 후 재개, Host 설치 교체·복원은 남는다. 다음 연결 우선순위는 [제품 전체 인수 흐름](product_acceptance_path.md)을 따른다.
 
 ROBOTIS position JTC의 Rust NativeAdapter는 trajectory 원본·controller session·최종 허가 유효기간 검사, 송신 전 영속 기록, 원래 UUID 결과 조회, 분쟁 보존과 child 종료 확인을 제공한다. S가 profile에 결합한 결과 대응표를 생성하고 P는 제조사 비의존 데이터로 성공·실패·취소를 판정한다. Template/Site에서 profile·허용 Intent·결과표와 공통 작업 선언을 작성하는 서명 패키지 도구, Host의 JTC_PACKAGE 검사·metadata 초기화, P의 선언 반입·보관/API/화면까지 연결했다. 제품용 Authority/lifecycle 제공자가 없어 JTC run은 거부한다. 제조사 검증·장비 검토 승인과 실제 셀 구성 변경, controller 교체 차단 및 물리 검증은 남아 있다.
 

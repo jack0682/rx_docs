@@ -1,0 +1,23 @@
+   Compiling rx-host v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-host)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 11.02s
+     Running tests/service.rs (target/debug/deps/service-b415c1b55c3d0842)
+
+running 15 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 13 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.52s
+

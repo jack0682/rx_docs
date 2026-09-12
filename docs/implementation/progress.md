@@ -1212,3 +1212,26 @@ bridge는 아직 rx-hostd의 NativeAdapter/factory 및 영속 native journal/qua
 [변경 계획](https://github.com/jack0682/rx-platform/blob/codex/initial-draft/crates/rx-application/DEVICE_CHANGE_PLAN.md), [Host 비교](https://github.com/jack0682/rx-solutions/blob/codex/initial-draft/runtime/rx-host/HOST_BINDING_INSPECTION.md), [검증 기록](../../references/implementation/phase71_checks.json).
 
 다음은 Host 설치 identity/기존 원장/현재 소유권을 실제로 확인하는 durable 변경 절차와 결과 조회·복원이다. 개발 API의 준비/전송/적용 거부는 확인했지만 이 신규 통합에서 등록 단말의 Host 변경 적용 인수를 수행한 것은 아니다. Native 변경 효과·unknown 결과·중간 장애와 APPLIED_UNQUALIFIED/qualification 연결 및 R01–R30의 남은 범위는 계속 미완료다. 첫 물리 셀은 NOT_COMMISSIONED다.
+
+## 2026-09-13 · Host 영속 종료 근거와 변경 준비
+
+- 제품 Host가 runtime owner와 DB writer를 확보한 뒤 STARTING을 먼저 기록한다. 실제 서비스 오류 없는 종료와 adapter drop 근거를 확인한 뒤 StopSeal을 기록하며, 새 기동 시도 뒤 옛 상태 파일을 근거로 쓰지 않는다.
+- local prepare/lookup/cancel을 추가했다. 같은 request의 의미 충돌·경쟁 준비·준비 중 기동을 막고, 원장/운영 레코드의 변경과 미해결 Host operation이 있으면 새 준비를 거부한다. 취소는 효과 없는 준비만 해제하며 native 동작 취소나 rollback이 아니다.
+- 독립 검토에서 current/proposed 양쪽 설정 바꿔치기를 찾았다. 실제 실행한 전체 Configuration digest를 STARTING/StopSeal에 묶고 신규 준비 시 대조했다. release/bind/drain 변경 반례와 수정 경로의 독립 재검토를 통과했다.
+- 서비스/maintenance 이력은 native evidence stream과 구별한 DB 레코드로 보존한다. 새 설치 descriptor v2/maintenance marker로 의미를 구별하고, legacy v1 실행은 유지하되 자동 maintenance 승격은 하지 않는다.
+- actual service/FileSimulation, SQLite 재접속, 별도 child의 commit 전/후 즉시 종료로 새6개 반례를 포함한 S160개 전체 시험과 clippy를 통과했다. 물리 종료 유지·P ReleaseManager 위임·실제 설치 교체/복원은 여전히 후속이다.
+
+[Host 준비](https://github.com/jack0682/rx-solutions/blob/codex/initial-draft/runtime/rx-host/HOST_MAINTENANCE_PREPARATION.md), [phase72 기록](../../references/implementation/phase72_checks.json).
+
+## 2026-09-13 · 실제 두 이미지와 직접 단말 HTTPS 운영 앱
+
+- S build가 정렬된 UI manifest를 생성하고 P가 pinned manifest와 전체 inventory/path/size/hash를 검증한 immutable bytes를 제공한다. UI source/build는 S에 두고 P에 Node/ROS 의존을 추가하지 않았다.
+- direct mTLS leaf/Host/origin, 인간 session/현재 단말·역할, cookie Path=/api를 유지한다. 정적 GET/HEAD와 API CSP를 분리하고 API/없는asset/deep link를 HTML로 바꾸지 않는다.
+- 독립 검토의 FIFO 교체 취득 문제를 공통 capability/nofollow/NONBLOCK 함수 재사용으로 수정했다. 경로 별칭의 mutable storage 중첩도 실제 기존 ancestor/미생성 suffix 기준으로 검증하고 반례를 추가했다. P 전체310개 및 clippy가 통과했다.
+- 두 이미지를 최신 소스로 빌드했다. S image digest에서 실제 UI를 추출해 새 P 설치에 read-only 게시하고 등록 단말의 브라우저 로그인·한글 font·desktop/mobile을 확인했다. missing certificate/미등록 service certificate 로그인, 없는API/asset 경로, static POST를 거부했다.
+- 실제 CreateRun 응답을 commit 뒤 끊고 화면을 새로고침한 뒤 동일 key/body로 회수했다. Run은1개이며 qualification/native 실행은 생성하지 않았다. StartRun/실행기 배정 완료로 세지 않는다.
+- 첫 브라우저 시험에서 일부 font가 Vite data URL로 inline되어 CSP에 걸렸다. 모든 asset을 파일로 내보내도록 수정하고 self-only 정책을 유지했다. 최종567파일/약7.24MiB bundle은 JS/CSP 오류·외부asset 요청·mobile overflow 없이 통과했다.
+- S Host/필수stack/diagnostic/supervisor/JTC·MELSEC package와 P의 총7개 image smoke도 통과했다. UI25개·manifest generator3개, 규범8개·optional6개·SDK97개를 유지/확인했다. 브라우저는 임시 시험 CA의 trust 오류만 무시했고 서버 TLS는 Python CA 검증으로 별도 확인했다.
+- 독립 제품 흐름 감사로 초기 인수/미소유 RuntimeRestart block, StartRun 표시/배정, recovery/restart, 실제 Host 교체, JTC provider의 공백을 확인했다. 모든 R01–R30을 유지하며 다음 작업은 [제품 인수 흐름](product_acceptance_path.md)의 연결을 우선한다.
+
+[UI 제공](https://github.com/jack0682/rx-solutions/blob/codex/initial-draft/apps/operator/DELIVERY.md), [phase73 기록](../../references/implementation/phase73_checks.json), [실제 이미지 화면](../../references/implementation/phase73-operator-delivery-final/operator-desktop.png).

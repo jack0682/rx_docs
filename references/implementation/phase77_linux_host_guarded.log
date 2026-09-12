@@ -1,0 +1,16 @@
+   Compiling rx-package v0.1.0 (/src/sdk/crates/rx-package)
+   Compiling rx-host v0.1.0 (/src/runtime/rx-host)
+   Compiling rx-protocol v0.1.0 (/src/sdk/crates/rx-protocol)
+   Compiling rx-solution-catalog v0.1.0 (/src/runtime/rx-solution-catalog)
+   Compiling rx-process-contract v0.1.0 (/src/sdk/crates/rx-process-contract)
+   Compiling rx-service-status v0.1.0 (/src/runtime/rx-service-status)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 25.03s
+     Running tests/guarded_status.rs (/target/debug/deps/guarded_status-7d47efabc95dcedf)
+
+running 3 tests
+test held_adapter_startup_status_failure_fixture ... ignored, isolated environment fixture invoked by the bounded parent test
+test invalid_guarded_writer_fails_before_passive_native_open_or_rpc_admission ... ok
+test reporter_failure_after_native_open_waits_for_explicit_adapter_drop_permission ... ok
+
+test result: ok. 2 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 1.71s
+

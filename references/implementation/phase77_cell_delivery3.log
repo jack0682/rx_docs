@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_cell_delivery.py", line 66, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_cell_delivery.py", line 61, in main
+    exercise(docker,materials,final,bundle,p_image,s_image,port,validator,args.release_evidence.resolve())
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/cell_delivery/installation.py", line 100, in exercise
+    run_commissioning(context)
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/cell_delivery/installation.py", line 106, in run_commissioning
+    run(context)
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/cell_delivery/workflow.py", line 85, in run
+    report=build_report(qjob,c['validator'],c['final']/'qualification-materials',observations,qreport)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/cell_delivery/qualification.py", line 44, in build_report
+    raise ValueError(f"{criterion['area']} lacks actual passing assertions")
+ValueError: CELL_INTEGRATION lacks actual passing assertions

@@ -10,13 +10,15 @@
 
 | 순서 | 연결할 제품 동작 | 합격 증거 | 현재 상태 |
 |---|---|---|---|
-| P01 | 검토된 설치 입력·두 이미지로 초기화/기동, HTTPS 앱 접속 | 고정 S bundle, P가 검증한 단말 인증서, 실제 로그인·한글 font·상태 화면, 개발 서버 없음 | UI 제공 구간 검증. phase73 실제 두 이미지·등록 단말 로그인/CreateRun 응답 회수; 전체 Host/실행기 composition은 후속 |
-| P02 | 작업자가 승인 공정·수량을 선택하여 시작하고 S가 지속 배정받음 | StartRun 응답 유실/화면 새로고침/실행기 재접속에도 같은 Run·소재 시도, 두 소재 완료와 자원 인계 | 일부 검증. phase76 상주 서비스·CLI 및 P/S 별도 프로세스 모의 A2/B2 연속 인수 완료. 실제 두 납품 이미지의 초기 자격 승인→UI 시작→소재 처리 연결은 후속 |
+| P01 | 검토된 설치 입력·두 이미지로 초기화/기동, HTTPS 앱 접속 | 고정 S bundle, P가 검증한 단말 인증서, 실제 로그인·한글 font·상태 화면, 개발 서버 없음 | phase77 실제 두 제품 이미지·2컨테이너의 새 설치/등록 단말/패키지 검토/자격 활성화 경로 검증. S supervisor의 명시 init·status→Host→Executor 기동과 역순 협력 종료도 검증 |
+| P02 | 작업자가 승인 공정·수량을 선택하여 시작하고 S가 지속 배정받음 | StartRun 응답 유실/화면 새로고침/실행기 재접속에도 같은 Run·소재 시도, 두 소재 완료와 자원 인계 | phase77 실제 이미지의 UI StartRun 응답 유실→같은 요청 회수→서로 다른 소재2/작업2 완료·인계 및 독립 FileDevice 효과2회 대조, desktop/mobile 완료 표시 검증. 재시작 재연결은 미완료 |
 | P03 | 이상 확인·개입·복구·명시적 재개 | UNKNOWN 미해결·후발 모순·참여자 미종료·만료된 준비에서는 재개 거부, 정상 transient와 latched 철회 구별 | 미완료. ACK 이후 recovery/restart 계약·UI 연결 필요 |
 | P04 | 승인된 설정 변경과 설치 교체·복원 | quiet/fence·Host 원장/설치 확인·정확한 교체 receipt·APPLIED_UNQUALIFIED·재검증/독립 승인·별도 시작 | 일부 구현. 현재 제안/검토/stage/읽기 비교/영속 준비까지, 실제 교체·P 조정은 미완료 |
 | P05 | 자사 모델별 실제 제어·관측·수명 관리 | 제품 factory의 실제 provider, 원본 시각/세대·독점 소유·상태 관측, controller 교체/외부 목표/응답 유실/종료 반례 | 일부 구현. JTC production provider는 미연결, 자사 전체 지원 완료가 아님 |
 
 P01/P02를 먼저 완결된 모의 운영 흐름으로 묶고 P03을 연결한다. P04/P05의 경계와 자료 형식은 이 과정에서 수용하되, 현재 승인·동작 사실이 없는 것을 true/READY 기본값으로 채우지 않는다.
+
+phase77의 [두 컨테이너 결과](../../references/implementation/phase77-cell-supervised-final/result.json)는 FILE_SIMULATION과 해당 이미지 digest에 한정한다. 서명/독립 역할 API는 실제 제품 경로를 사용하지만 서로 다른 시험 계정의 자동화이며 실제 사람의 독립 평가가 아니다. 실물 셀은 NOT_COMMISSIONED로 유지한다. 한 작업 완료 뒤 동일 셀 실행기의 Idle 대기와 요청 종료를 확인했다. P 종료의 잔여 attention, 실물 보호·복원, 다른 모델/장기 운전/전체 배포 variant까지 PASS로 확대하지 않는다. 앞선 [세 컨테이너 결과](../../references/implementation/phase77-cell-delivery8/result.json)는 당시 이미지 digest의 별도 검증으로 보존한다.
 
 ## 연결 경계의 고정 원칙
 

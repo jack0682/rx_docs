@@ -1,0 +1,1 @@
+{"body":{"command":{"batch":"01a09730-ad31-721a-90e5-3c9ba9de5d97","cell":"cell/a","expected":"1","expected_cells":{"cell/a":"5"}},"request_key":"b2516bbe-86d9-4d11-99ef-9b67bc26d109"},"path":"/api/v1/qualification-activation/activate"}

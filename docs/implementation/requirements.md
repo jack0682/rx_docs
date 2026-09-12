@@ -36,3 +36,9 @@
 | R30 | 첫 현장 미확정 값 및 실제 commissioning 경계 | Q03UDVCPU·로봇/지그/신호 미확정 차단 | FIELD_BLOCKED |
 
 R30의 현장 차단은 공통 구현을 중단시키지 않는다. 이 행의 구현상 완료는 미확정 입력의 강제 검증과 정직한 상태 표시이며, 실제 운전 검증은 제공되지 않은 현장 입력·실물 시험을 요구한다.
+
+## phase77 연결 검증
+
+R01/R14/R15/R16/R19/R22/R23/R27/R28에 대해 실제 P/S 두 이미지·두 운전 컨테이너의 초기 설치, 서명/독립 역할 승인, 자격 활성화, UI 수량2 시작과 응답 유실 회수, 모의 native 효과2회/완료·인계, 상주 E Idle 복귀와 supervisor 협력 종료를 연결했다. named 다중 Host/셀 구성, 중복 Executor/경로/의존성 거부, 상태 보고 실패 시 adapter 유지, TERM 실패 재시도를 별도 반례로 확인했다. 구체 소스·이미지·시험은 [phase77 기록](../../references/implementation/phase77_checks.json)에 있다.
+
+이 연결은 FILE_SIMULATION에 한정하며 각 행의 전체 요구를 VERIFIED로 올리지 않는다. P 전체 종료 attention, 실제 재시작 rebind/복구·재개, 장기 운영·전체 지원 variant·실물 모델 지원과 현장 qualification은 아직 남아 있다. 서명된 공개 원문과 참조 자료를 보존했지만 자동화된 독립 역할 계정을 실제 사람의 검토로 표현하지 않는다.

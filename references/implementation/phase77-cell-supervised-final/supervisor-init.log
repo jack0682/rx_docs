@@ -1,0 +1,1 @@
+{"digest":"39f4aef1ed0db78553bb645ee08b1a03069d09e679c4b27880177094640aabf9","steps":[{"program":"rx/service/host","role":"HOST","instance":"40bfcd65-8219-4b82-9522-40ea6872a0d4","phase":"COMPLETED","exit_code":0,"error":null},{"program":"rx/service/executor","role":"EXECUTOR","instance":"435dcbcb-eefc-4f9d-a8c6-8070c11f1222","phase":"COMPLETED","exit_code":0,"error":null}]}

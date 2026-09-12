@@ -28,6 +28,8 @@
 
 ROBOTIS position JTC의 Rust NativeAdapter는 trajectory 원본·controller session·최종 허가 유효기간 검사, 송신 전 영속 기록, 원래 UUID 결과 조회, 분쟁 보존과 child 종료 확인을 제공한다. S가 profile에 결합한 결과 대응표를 생성하고 P는 제조사 비의존 데이터로 성공·실패·취소를 판정한다. Template/Site에서 profile·허용 Intent·결과표와 공통 작업 선언을 작성하는 서명 패키지 도구, Host의 JTC_PACKAGE 검사·metadata 초기화, P의 선언 반입·보관/API/화면까지 연결했다. 제품용 Authority/lifecycle 제공자가 없어 JTC run은 거부한다. 제조사 검증·장비 검토 승인과 실제 셀 구성 변경, controller 교체 차단 및 물리 검증은 남아 있다.
 
+phase78에서는 P만 같은 저장소로 재시작한 뒤 유휴 Host의 증거 세션을 회복했다. 이전 이미지에서 새 P가 로그인 요청을 처리해도 H producer가 옛 세션에 머무는 실패를 실제 재현했고, 수정 이미지에서는 같은 H instance/boot/journal로 새 session·cell 협상과 추가 빈 요청2회의 실제 처리를 확인했다. 기존 operating HostRegistration과 제한은 보존하며 native effects/evidence와 새 Run은0이다. P 전체350개·S 전체247개 및 정적 검사, 두 컨테이너의 설치→승인→소재2 처리→협력 종료 회귀도 통과했다. source 연속성·운전 등록 rebind/자격 복원은 이 결과에 포함되지 않는다. 빈 probe의 현재 감사 기록 비용과 장기 보존/부하 한계도 미완료로 기록했다. [phase78 증거](../../references/implementation/phase78_checks.json).
+
 application outbox→Host→T2→자원 인계→두 소재 시도 완료, 로컬 계정/API·운영 화면과 별도 Host 증거 전송을 연결했다. Host의 인증된 상태 조회·초기 등록·사용권 갱신도 연결했으며, 동일 boot의 원장 교체를 거부한다. 연결 등록은 장비 조건의 충족이나 운전 허가를 만들지 않는다. 공개 제어 사건의 전체 wire 매핑, 자동 운영 서비스·공정 편집/BT·복구 전체·제품 배포·자사 스택 지원은 아직 미완료다. 각 변경과 시험의 범위는 `progress.md`에 기록한다. 개발 도구는 workspace `.tools` 아래에 설치해 기존 사용자 shell 설정을 변경하지 않는다.
 
 - [로컬 서비스와 HTTP 경계](https://github.com/jack0682/rx-platform/blob/codex/initial-draft/crates/rx-api/README.md)

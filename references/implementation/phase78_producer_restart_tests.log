@@ -1,0 +1,37 @@
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+warning: unused import: `rx_domain::canonical`
+ --> crates/rx-application/tests/support/producer_runtime_restart_tests.rs:3:5
+  |
+3 | use rx_domain::canonical;
+  |     ^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: `rx-application` (test "transactions") generated 1 warning (run `cargo fix --test "transactions" -p rx-application` to apply 1 suggestion)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 12.59s
+     Running tests/transactions.rs (target/debug/deps/transactions-2d3d144f384ba793)
+
+running 7 tests
+test producer_runtime_restart_tests::malformed_provenance_rolls_back_session_replacement_instead_of_claiming_runtime_only ... ok
+test producer_runtime_restart_tests::runtime_only_session_replacement_recovers_commit_loss_without_repeated_invalidation ... FAILED
+test producer_runtime_restart_tests::consecutive_p_restarts_preserve_historical_operating_session_and_each_runtime_block ... ok
+test producer_runtime_restart_tests::current_origin_must_cover_every_registered_cell_of_the_host ... ok
+test producer_runtime_restart_tests::changed_host_journal_authentication_or_session_validity_still_adds_device_restart ... ok
+test producer_runtime_restart_tests::absent_or_wrong_boot_configuration_and_scope_coverage_cannot_suppress_invalidation ... ok
+test producer_runtime_restart_tests::p_only_restart_replaces_only_evidence_session_and_preserves_all_authority_records ... ok
+
+failures:
+
+---- producer_runtime_restart_tests::runtime_only_session_replacement_recovers_commit_loss_without_repeated_invalidation stdout ----
+
+thread 'producer_runtime_restart_tests::runtime_only_session_replacement_recovers_commit_loss_without_repeated_invalidation' (11771474) panicked at crates/rx-application/tests/support/producer_runtime_restart_tests.rs:471:68:
+called `Result::unwrap()` on an `Err` value: Invalid("event batch must be 1..128")
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    producer_runtime_restart_tests::runtime_only_session_replacement_recovers_commit_loss_without_repeated_invalidation
+
+test result: FAILED. 6 passed; 1 failed; 0 ignored; 0 measured; 201 filtered out; finished in 0.21s
+
+error: test failed, to rerun pass `-p rx-application --test transactions`

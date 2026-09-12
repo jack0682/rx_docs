@@ -24,7 +24,7 @@
 
 ## 현재 상태
 
-구현 중이다. phase76에서 상주 실행기·동일 세션의 연속 작업·영속 연결과 cell init/run을 연결했다. 실제 P mTLS/SQLite와 별도 S/C++ 프로세스의 모의 통합에서 설정에 Run ID를 넣지 않고 A 수량2·B 수량2를 처리했다. 한 세션, part4개·planner4개·CLOSED 연결2개, idle 종료의 추가 PauseRun0을 확인했다. P339개·S215개 전체 Rust 시험, Linux CLI17개와 양쪽·Linux CLI clippy가 통과했다. UI37개와 실제 단말의 시작 차단 화면은 phase75 증거이며 성공 운전의 두 납품 이미지 인수와 구별한다. 첫 통합 실패는 진단 자료가 부족해 원인을 확정하지 못했고, 별도 재현한 만료 조회의 완료 전환 결함을 수정한 뒤 통합을 다시 통과했다. 다음 우선순위는 두 이미지의 실제 납품 composition·초기 검증/승인부터 운영까지 연결하는 인수다. Host rebind·재활성화, 이상 후 명시 재개, 설치 교체·복원과 R01–R30의 미완료 범위도 유지한다.
+구현 중이다. phase77에서 실제 두 제품 이미지·두 운전 컨테이너의 새 설치 → 서명 공정 반입/독립 역할 승인 → 구성 적용/재검증/자격 활성화 → 등록 단말 UI 시작 → 소재2개/작업2개 완료·인계 → 동일 실행기 Idle 복귀 → 협력 종료를 FILE_SIMULATION으로 검증했다. P 기록과 Host의 별도 파일 동작 원장을 대조했고, StartRun 응답 유실 뒤 같은 요청을 회수했다. S supervisor가 status·Host·Executor를 직접 기동하고 역순으로 종료했으며 각 guarded child의 exit0와 동일 instance/PID/원문 digest의 STOPPED가 일치했다. P 전체342개·S 전체245개, Linux supervisor27개·별도 Host/상태/실행기 경계와 양쪽 정적 검사가 통과했다. 공개 서명 보고서와 참조 자료56개도 원문·hash로 보존한다. P의 종료 코드2는 미설정 셀 차단 시험/Host fence의 잔여 attention이며 전체 현장 종료 성공을 뜻하지 않는다. 실물 셀은 NOT_COMMISSIONED다. 다음 우선순위는 실제 P/Host 재시작 후 제한을 보존한 재연결·명시 복구/재개, 설치 교체·복원이며 R01–R30의 미완료 범위를 유지한다. 상세 범위는 [phase77 기록](../../references/implementation/phase77_checks.json)에 있다.
 
 ROBOTIS position JTC의 Rust NativeAdapter는 trajectory 원본·controller session·최종 허가 유효기간 검사, 송신 전 영속 기록, 원래 UUID 결과 조회, 분쟁 보존과 child 종료 확인을 제공한다. S가 profile에 결합한 결과 대응표를 생성하고 P는 제조사 비의존 데이터로 성공·실패·취소를 판정한다. Template/Site에서 profile·허용 Intent·결과표와 공통 작업 선언을 작성하는 서명 패키지 도구, Host의 JTC_PACKAGE 검사·metadata 초기화, P의 선언 반입·보관/API/화면까지 연결했다. 제품용 Authority/lifecycle 제공자가 없어 JTC run은 거부한다. 제조사 검증·장비 검토 승인과 실제 셀 구성 변경, controller 교체 차단 및 물리 검증은 남아 있다.
 

@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "change": "a2f09035-57a7-48d6-9f24-cf5f0be34bfa",
+  "checks": [
+    "actual approved device process produces exact target steps and signed package requirements",
+    "independent impact review and fresh package revalidation at stage",
+    "no native preparation/dispatch/apply",
+    "actual product Host CLI accepts exact JTC candidate software",
+    "qualification and storage changes rejected",
+    "JTC control provider remains unavailable",
+    "no Host installation or native process created"
+  ]
+}

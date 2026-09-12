@@ -1198,3 +1198,17 @@ bridge는 아직 rx-hostd의 NativeAdapter/factory 및 영속 native journal/qua
 [장비 후보 공정 검토](https://github.com/jack0682/rx-platform/blob/codex/initial-draft/crates/rx-application/DEVICE_PROCESS_REVIEW.md), [검증 기록](../../references/implementation/phase70_checks.json).
 
 다음은 후보 Host/native binding과 운영 envelope의 변경을 적용 절차에 결합하고, quiet/fence·원장 세대·APPLIED_UNQUALIFIED·qualification을 입증하는 단계다. R01–R30 전체 목표는 유지하며 production JTC 제공자·실물 검증을 포함한 미완료 항목은 계속 남는다.
+
+## 2026-09-12 · 장비 공정 변경 계획·스테이징·Host 기동 설정 비교
+
+- 승인된 device context의 공정을 변경 제안/독립 영향 검토/staging에 연결했다. fresh 공정/장비 검증 뒤 후보의 guard·완료·인계 정책을 실제 compiled node별 target step으로 복사하며 active 구성은 유지한다. 새 Host/resource가 포함된 전체 공유 영향과 접근권을 제안·commit·현재성·stage에서 재검사한다.
+- Change.host_binding_plan과 공유 rx.host-binding-plan.v1을 추가했다. before/after 참조·검토 문맥, Host별 정렬된 실제 Intent/조건·선택된 서명 패키지/catalog, 다른 영향 셀을 묶는다. 기존 device 없는 plan hash는 유지하고 새 요구는 추가 domain으로 결합한다. stage 시 target과 Host 요구를 다시 계산해 원래 값과 비교한다.
+- GET에 HOST_BINDING_CHANGE_REQUIRED를 표시한다. device plan의 BeginPreparation은 아직 거부하며 Host 전송/P 적용 공통 barrier도 막는다. 기존 metadata configuration receipt를 native 설정 적용의 증거로 확대하지 않는다. 완전한 기동 설정 교체/복원·P 연동 receipt와 qualification은 후속이다.
+- 제품 rx-hostd inspect-binding-change PLAN CURRENT_CONFIG PROPOSED_CONFIG를 추가했다. 실제 pinned 설정·release-owned native decoder와 P의 서명 패키지/catalog 요구를 대조하며 정확한 Intent/조건/envelope와 전체 cohort를 검사한다. 다른 셀·자격/purpose/peer·저장/네트워크/릴리스 변경을 끼워 넣지 못한다. JSON은 소프트웨어 비교 자료이며 서명된 승인이나 durable Host 적용 receipt가 아니다.
+- 실제 JTC package→P 독립 공정 승인→변경/영향 검토/staging→제품 Host CLI의 비교가 통과했다. 두 Host가 공유 자원에 의존하는 두 셀 fixture로 전체 영향 권한을 유지하면서 단일 셀 JTC backend 제약을 그대로 검증했다. qualification/storage 변경을 거부하고 data directory/native process가 생기지 않음을 확인했다. JTC runtime provider available=false, installation_changed=false, activation_authorized=false다.
+- 첫 통합에서 source node 이름과 실제 compiled node ID를 혼동한 fixture 기대값을 수정했다. 첫 전체 S 실행 중 기존 ROS pipe 두 시험이 시작 deadline에 걸렸고, 독립 실행3개 및 동시 빌드가 없는 전체 재실행을 통과했다. production timeout과 시험 deadline은 바꾸지 않았다. 실패 로그도 남긴다.
+- P 전체298개·S 전체154개(Host 비교 반례1개 추가)와 양쪽 전체 clippy/format·새 API/CLI 통합이 통과했다. UI production src는 phase70과 같으므로 이전25개/typecheck/build 증거를 보존하고 새 시험으로 세지 않는다. 규범8개·optional6개를 유지하며 shared Host plan을 포함한 SDK97개를 동기화했다. 이미지는 이번 단계에서 재빌드하지 않았다.
+
+[변경 계획](https://github.com/jack0682/rx-platform/blob/codex/initial-draft/crates/rx-application/DEVICE_CHANGE_PLAN.md), [Host 비교](https://github.com/jack0682/rx-solutions/blob/codex/initial-draft/runtime/rx-host/HOST_BINDING_INSPECTION.md), [검증 기록](../../references/implementation/phase71_checks.json).
+
+다음은 Host 설치 identity/기존 원장/현재 소유권을 실제로 확인하는 durable 변경 절차와 결과 조회·복원이다. 개발 API의 준비/전송/적용 거부는 확인했지만 이 신규 통합에서 등록 단말의 Host 변경 적용 인수를 수행한 것은 아니다. Native 변경 효과·unknown 결과·중간 장애와 APPLIED_UNQUALIFIED/qualification 연결 및 R01–R30의 남은 범위는 계속 미완료다. 첫 물리 셀은 NOT_COMMISSIONED다.

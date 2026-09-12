@@ -1,0 +1,17 @@
+    Checking rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-process-contract)
+error[E0277]: the trait bound `rx_domain::types::ArtifactRef: std::cmp::Eq` is not satisfied
+  --> crates/rx-process-contract/src/host_binding_plan.rs:11:5
+   |
+ 6 | #[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+   |                                                           -- in this derive macro expansion
+...
+11 |     pub catalog: ArtifactRef,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^ the trait `std::cmp::Eq` is not implemented for `rx_domain::types::ArtifactRef`
+   |
+note: required by a bound in `std::cmp::AssertParamIsEq`
+  --> /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/cmp.rs:380:0
+
+For more information about this error, try `rustc --explain E0277`.
+error: could not compile `rx-process-contract` (lib test) due to 1 previous error
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `rx-process-contract` (lib) due to 1 previous error

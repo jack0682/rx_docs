@@ -1,0 +1,34 @@
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+   Compiling rx-executor v0.1.0 (/src/runtime/rx-executor)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 32.14s
+     Running tests/cell_cli.rs (/target/debug/deps/cell_cli-481dc74d09d4ec0a)
+
+running 9 tests
+test changed_configuration_and_pinned_bytes_cannot_reach_session_open ... ok
+test copied_installation_cannot_silently_change_its_root ... ok
+test cell_configuration_rejects_run_visit_program_arguments_and_invalid_timing ... ok
+test duplicate_and_root_alias_are_refused_before_session_open_then_cleanup_allows_reopen ... ok
+test initialized_preparing_or_attached_run_file_loss_is_detected_before_new_peer_boot_registration ... ok
+test deployment_file_symlinks_and_private_key_permissions_are_rejected ... ok
+test manifest_only_partial_installation_is_not_overwritten_or_connected ... ok
+test init_pins_expected_identity_and_normalized_defaults_without_peer_registration ... ok
+test missing_manifest_empty_journal_and_changed_header_are_refused_before_connect ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.96s
+
+     Running tests/service_owner.rs (/target/debug/deps/service_owner-3d8b1027d8769509)
+
+running 8 tests
+test directory_alias_cannot_bypass_the_service_owner ... ok
+test different_service_roots_do_not_impose_a_global_cell_owner ... ok
+test invalid_journal_path_cannot_overwrite_the_ownership_file ... ok
+test ownership_symlink_is_rejected_without_touching_its_target ... ok
+test one_root_cannot_register_two_services_with_different_run_journals ... ok
+test startup_failure_releases_ownership_without_removing_the_lock_file ... ok
+test ownership_special_files_are_rejected ... ok
+test entrypoint::competing_product_process_never_reaches_connect_and_failure_unlocks_root ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+

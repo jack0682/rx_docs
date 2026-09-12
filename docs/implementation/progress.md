@@ -1249,3 +1249,17 @@ bridge는 아직 rx-hostd의 NativeAdapter/factory 및 영속 native journal/qua
 - phase74에서는 두 제품 이미지를 재빌드하지 않았다. 현재 검증은 native macOS 전체 Rust/API 시험과 격리 Linux executor 시험이다. phase73 이미지/브라우저 증거는 당시 소스 범위로 유지한다. 첫 물리 셀은 NOT_COMMISSIONED이며 실제 장비 조작·물리 qualification은 없다.
 
 [재시작 출처와 선택](https://github.com/jack0682/rx-platform/blob/codex/initial-draft/crates/rx-application/RUNTIME_INVALIDATION_ORIGIN.md), [현재 구성 재검증](https://github.com/jack0682/rx-platform/blob/codex/initial-draft/crates/rx-application/PROCESS_CURRENT_REVALIDATION.md), [phase74 기록](../../references/implementation/phase74_checks.json).
+
+
+## 2026-09-13 · 시작 문맥·실행 발견·영속 연결의 제품 경계
+
+- 별도 선택 `rx.executor.assignment.v1` binding과 동일 control cut의 NONE/SINGLE/AMBIGUOUS 조회를 추가했다. 현재 Executor/셀 협상을 검사하고, 미시작 PREPARED와 종료 Run은 제외하되 ARMING·만료 attempt·PAUSED/RECOVERY_REQUIRED·과거 구성은 보존한다. 최대 두 후보는 선택 결과가 아니며 기존 Run/자원 동시성을 제한하지 않는다. 새 조회는 admission을 발급하지 않는다.
+- S Client는 payload hash/size/schema·identity·현재 pin·공유 runtime/sequence/시각과 최대100ms 유효기간을 검증한다. 이전 세션·만료·복구 후보를 그대로 보존한다. 이후 실제 공정·원장·Production.Inspect 및 최종 admission 검사가 필요하다.
+- 작업자용 start-context/attempt GET을 추가했다. 현재 역할/셀/단말·정확한 Run/Attempt 관계를 검사하고 StartRun과 읽기 전용 후보 검사를 공유한다. 원래 현재 권한→같은 key 회수→CAS·구성/자격/조건/Executor/Host 검사→원자 기록 순서는 유지한다. 기한 경과 조회는 저장 상태를 변경하지 않는다.
+- UI에서 정확한 Run과 수량을 선택하고 현재 후보를 확인한 뒤 key/body를 고정·저장한다. POST 응답과 동일 Attempt GET의 Run/envelope/예산을 대조한 뒤 미확정 요청을 해제하며, GET 실패/불일치는 원래 요청을 보존한다. 시작 접수·Host 확인·시작 확정·기한 경과를 구별한다.
+- UI 독립 검토에서 새 overview보다 옛 EXECUTING 응답을 우선 표시하던 문제와 STARTED의 Host boot/ACK 대조 누락을 수정했다. 최신 Run 상태는 overview를 사용하고 다른 installation/runtime/revision의 attempt는 이전 기록으로 표시한다. STARTED는 전체 Host/boot 일치를 요구하되 모든 ACK가 있다는 이유로 ARMING을 승격하지 않는다.
+- S service/run 원장의 불변 identity, Preparing→Attached→Closed, 정확한 반복 회수와 별도 DB 경계를 구현했다. Attached commit 뒤에만 기존 요청 Journal을 반환한다. 실제 인증 P 관측·planner 종료는 후속 service 책임이며 원장이 물리 증명을 만들지는 않는다.
+- 독립 검토의 초기화 후 Preparing 파일 유실 반례를 수정했다. file/generic 초기화 모두 service DB에 creation-entered를 먼저 commit한다. 이후 missing/empty/header 없음은 오류이며 같은 UUID로 재초기화하지 않는다. marker commit 응답 유실은 파일 생성 전에 멈추고 원래 원장만 required-open으로 회수한다. phase/index revision은 유지하고 marker 없는 초기 header를 자동 승격하지 않는다.
+- 이 원장의 이력은 service당1,024개로 제한된다. 장기 운영용 보관·조회 확장과 불완전 최초 생성의 명시 복구는 후속이다. 상주 CellService·CLI·planner와의 실제 연결은 아직 없고, Run마다 설정을 고치지 않는 연속 운전 인수는 완료하지 않았다. Host producer rebind와 전체 재활성화도 별도 미완료다.
+
+P339개·S197개 전체 Rust 시험, UI37개·bundle 생성기3개와 양쪽 clippy가 통과했다. 두 이미지를 새로 빌드해7개 smoke를 통과했고, 등록 단말 브라우저의 로그인·CreateRun 응답 유실 회수·시작 문맥 표시·서버의 미자격 시작 거부를 검증했다. desktop/mobile 화면, font/CSP·외부 요청·가로 넘침 검사를 확인했다. 첫 브라우저 실행은 select의 접근성 label에 option text가 포함돼 exact locator가 실패했고, 실제 Run option이 있는 combobox로 한정해 재실행했다. 성공 StartRun과 상주 실행기의 두 소재 완료를 이 브라우저 증거로 주장하지 않는다. Linux 원장 검증을 포함한 전체 결과는 phase75 기록에 집계한다. 첫 물리 셀은 NOT_COMMISSIONED이며, 모의/소프트웨어 근거를 물리 자격으로 사용하지 않는다. 전체 R01–R30 범위를 유지한다.

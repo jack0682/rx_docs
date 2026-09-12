@@ -24,7 +24,7 @@
 
 ## 현재 상태
 
-구현 중이다. phase73에서 S production UI bundle을 P 직접 단말 HTTPS에 연결하고 실제 두 이미지·등록 단말 브라우저로 로그인/표시/CreateRun 응답 유실 회수를 검증했다. phase74에서는 Runtime 재시작 제한의 원본·명시적 재검증 선택·Job별 해제 근거와 현재 구성의 재검증 진입점을 연결했다. P328개·S168개 Rust 시험 및 양쪽 clippy가 통과했다. Linux 실행기 중복 기동의 서버 연결 전 차단도 확인했다. 현재 변경은 모듈/API와 Linux 실행기 시험의 범위이며 phase73 이미지를 새 소스의 이미지 증거로 세지 않는다. 실제 StartRun/상시 실행기 배정, 재시작 후 Host 재연결·재활성화, 이상 후 재개, Host 설치 교체·복원은 남는다. 다음 연결 우선순위는 [제품 전체 인수 흐름](product_acceptance_path.md)을 따른다.
+구현 중이다. phase74에서 재시작 제한의 출처와 명시적 재검증을 연결했고, phase75에서는 작업 시작 문맥/시도 조회·작업 후보 발견·실행기 응답 검증·영속 연결 원장과 시작 화면을 추가했다. P339개·S197개 Rust 시험과 UI37개, 양쪽 clippy를 통과했다. 독립 검토에서 찾은 초기화 후 파일 유실, 과거 상태 우선 표시, Host ACK 대조 누락도 수정했다. 실제 이미지/브라우저 검증은 새 증거에 별도로 기록한다. 상주 실행기 서비스와 CLI의 실제 연결, 재시작 후 Host rebind·재활성화, 이상 후 재개, Host 설치 교체·복원은 남는다. 다음 연결 우선순위는 [제품 전체 인수 흐름](product_acceptance_path.md)을 따른다.
 
 ROBOTIS position JTC의 Rust NativeAdapter는 trajectory 원본·controller session·최종 허가 유효기간 검사, 송신 전 영속 기록, 원래 UUID 결과 조회, 분쟁 보존과 child 종료 확인을 제공한다. S가 profile에 결합한 결과 대응표를 생성하고 P는 제조사 비의존 데이터로 성공·실패·취소를 판정한다. Template/Site에서 profile·허용 Intent·결과표와 공통 작업 선언을 작성하는 서명 패키지 도구, Host의 JTC_PACKAGE 검사·metadata 초기화, P의 선언 반입·보관/API/화면까지 연결했다. 제품용 Authority/lifecycle 제공자가 없어 JTC run은 거부한다. 제조사 검증·장비 검토 승인과 실제 셀 구성 변경, controller 교체 차단 및 물리 검증은 남아 있다.
 

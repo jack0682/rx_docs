@@ -1,0 +1,13 @@
+   Compiling rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-process-contract)
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+   Compiling rx-protocol-adapter v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-protocol-adapter)
+   Compiling rx-runtime v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-runtime)
+   Compiling rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-api)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 7.55s
+     Running tests/http.rs (target/debug/deps/http-5eceb40f9bd7cb59)
+
+running 1 test
+test process_draft_http_preserves_versions_and_blocks_non_engineer_or_cross_cell_writes ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 14 filtered out; finished in 0.82s
+

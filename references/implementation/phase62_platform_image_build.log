@@ -1,0 +1,81 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Platform.Dockerfile
+#1 transferring dockerfile: 1.29kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/rust:1.98.1-bookworm@sha256:9a73a5088750b4c95158ab26629c854c3d6fc4b173cb7bc8079ad252d8ed7bfa
+#2 ...
+
+#3 [auth] library/rust:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [auth] library/ubuntu:pull token for registry-1.docker.io
+#4 DONE 0.0s
+
+#5 [internal] load metadata for docker.io/library/ubuntu:24.04@sha256:224a1869083a311ef3f13648a154ba79832fbef6364d31493642ca03082da254
+#5 DONE 1.4s
+
+#2 [internal] load metadata for docker.io/library/rust:1.98.1-bookworm@sha256:9a73a5088750b4c95158ab26629c854c3d6fc4b173cb7bc8079ad252d8ed7bfa
+#2 DONE 1.4s
+
+#6 [runtime 1/4] FROM docker.io/library/ubuntu:24.04@sha256:224a1869083a311ef3f13648a154ba79832fbef6364d31493642ca03082da254
+#6 resolve docker.io/library/ubuntu:24.04@sha256:224a1869083a311ef3f13648a154ba79832fbef6364d31493642ca03082da254 done
+#6 DONE 0.0s
+
+#7 [build 1/8] FROM docker.io/library/rust:1.98.1-bookworm@sha256:9a73a5088750b4c95158ab26629c854c3d6fc4b173cb7bc8079ad252d8ed7bfa
+#7 resolve docker.io/library/rust:1.98.1-bookworm@sha256:9a73a5088750b4c95158ab26629c854c3d6fc4b173cb7bc8079ad252d8ed7bfa done
+#7 DONE 0.0s
+
+#8 [internal] load build context
+#8 transferring context: 380.80kB 0.0s done
+#8 DONE 0.0s
+
+#9 [build 2/8] WORKDIR /src
+#9 CACHED
+
+#10 [build 3/8] COPY Cargo.toml Cargo.lock ./
+#10 CACHED
+
+#11 [build 4/8] COPY crates ./crates
+#11 DONE 0.1s
+
+#12 [build 5/8] COPY proto ./proto
+#12 DONE 0.0s
+
+#13 [build 6/8] COPY spec ./spec
+#13 DONE 0.0s
+
+#14 [build 7/8] RUN mkdir -p /out
+#14 DONE 0.1s
+
+#15 [build 8/8] RUN --mount=type=cache,id=rx-platform-registry,target=/usr/local/cargo/registry     --mount=type=cache,id=rx-platform-release,target=/src/target     cargo build --release --locked -p rx-platformd && cp target/release/rx-platformd target/release/rx-package-store /out/
+#15 0.410    Compiling rx-process-contract v0.1.0 (/src/crates/rx-process-contract)
+#15 5.884    Compiling rx-application v0.1.0 (/src/crates/rx-application)
+#15 29.01    Compiling rx-protocol-adapter v0.1.0 (/src/crates/rx-protocol-adapter)
+#15 30.01    Compiling rx-runtime v0.1.0 (/src/crates/rx-runtime)
+#15 32.29    Compiling rx-api v0.1.0 (/src/crates/rx-api)
+#15 47.63    Compiling rx-host-client v0.1.0 (/src/crates/rx-host-client)
+#15 53.77    Compiling rx-platformd v0.1.0 (/src/crates/rx-platformd)
+#15 110.1     Finished `release` profile [optimized] target(s) in 1m 50s
+#15 DONE 110.2s
+
+#16 [runtime 2/4] RUN mkdir -p /etc/rx/platform /var/lib/rx /run/rx && chown 10001:10001 /var/lib/rx /run/rx
+#16 CACHED
+
+#17 [runtime 3/4] COPY --from=build /out/rx-platformd /out/rx-package-store /usr/local/bin/
+#17 DONE 0.0s
+
+#18 [runtime 4/4] WORKDIR /var/lib/rx
+#18 DONE 0.0s
+
+#19 exporting to image
+#19 exporting layers
+#19 exporting layers 0.5s done
+#19 exporting manifest sha256:12510976eaf18aa7b1dc9f973990acf02e2abccb4d10b4213abb313a082e13d1 done
+#19 exporting config sha256:f8600325ec12e48d37843b4cc09da5272e57f45cb86b6d977a19c35d6d6828d4 done
+#19 exporting attestation manifest sha256:cf4cb17c683df6fb4f3f684e7228256a0c403a7a0f0b8c3c63cb693b17cc774b done
+#19 exporting manifest list sha256:02ee50ca162822cccd51154b2af06d549f3fb0b7eb90e7e84b0d2da0056cd628 done
+#19 naming to docker.io/library/rx-platform:runtime-draft done
+#19 unpacking to docker.io/library/rx-platform:runtime-draft 0.1s done
+#19 DONE 0.6s

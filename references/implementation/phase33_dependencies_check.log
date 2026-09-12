@@ -1,0 +1,7 @@
+error: no matching package named `hyper-rustls` found
+location searched: crates.io index
+required by package `reqwest v0.12.28`
+    ... which satisfies dependency `reqwest = "^0.12"` (locked to 0.12.28) of package `rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-api)`
+    ... which satisfies path dependency `rx-api` (locked to 0.1.0) of package `rx-host-client v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-host-client)`
+note: offline mode (via `--offline`) can sometimes cause surprising resolution failures
+help: if this error is too confusing you may wish to retry without `--offline`

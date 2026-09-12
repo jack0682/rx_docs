@@ -1,0 +1,46 @@
+   Compiling rx-host v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-host)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 6.51s
+     Running tests/melsec.rs (target/debug/deps/melsec-b710c7cb3fde6552)
+
+running 14 tests
+test melsec_crash_child ... ignored, executed only as an isolated child by the crash-boundary test
+test abrupt_exit_at_native_commit_and_write_boundaries_never_replays ... ok
+test already_satisfied_state_records_evidence_without_a_native_write ... ok
+test corrupted_completion_record_is_not_adopted_as_historical_fact ... ok
+test final_read_within_transport_budget_but_beyond_guard_lifetime_cannot_write ... ok
+test ack_is_pending_and_only_later_independent_sensor_observation_captures ... ok
+test captured_original_session_survives_restart_but_uncaptured_ack_does_not ... ok
+test actual_host_gate_journal_reconcile_evidence_and_stop_use_melsec_adapter ... ok
+test final_native_read_after_journal_commit_rechecks_ready_without_resend ... ok
+test lost_reply_and_new_process_never_resubmit_or_clear_pending ... ok
+test new_or_replaced_journal_and_mismatched_profile_are_rejected_without_native_io ... ok
+test profile_and_intent_scope_fail_before_native_writes ... ok
+test publication_generation_regression_stale_and_inconsistent_images_latch ... ok
+test valid_support_does_not_imply_drop_permission_and_protection_does_not_release_chuck ... ok
+
+test result: ok. 13 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.21s
+
+     Running tests/ros_jtc.rs (target/debug/deps/ros_jtc-ae0bf786fedca5d0)
+
+running 9 tests
+test crash_jtc_child ... ignored, child-only abrupt-exit fixture
+test contradictory_result_is_stored_without_success_capture ... ok
+test abrupt_exit_at_each_native_boundary_preserves_entry_and_never_replays ... ok
+test native_journal_prevents_resend_and_new_id_bypass_after_reply_loss_and_reopen ... ok
+test missing_authority_or_changed_artifact_never_dispatches ... ok
+test journal_identity_loss_and_corrupt_capture_cannot_be_adopted ... ok
+test host_dispatch_context_survives_native_journal_and_rejects_expiry_or_generation_change ... ok
+test independent_generation_ownership_and_drop_proof_are_required ... ok
+test action_completion_does_not_close_bridge_until_support_and_child_exit_are_proven ... ok
+
+test result: ok. 8 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.81s
+
+     Running tests/ros_process.rs (target/debug/deps/ros_process-0d0dc873caf08222)
+
+running 3 tests
+test executable_pin_and_configuration_are_checked_before_spawn ... ok
+test owned_executable_copy_and_bounded_pipes_preserve_context_and_close_without_kill ... ok
+test timeout_oversize_and_wrong_instance_permanently_fault_the_pipe ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.24s
+

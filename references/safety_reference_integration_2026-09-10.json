@@ -1,0 +1,37 @@
+{
+  "date": "2026-09-10",
+  "thread_id": "01a07eaf-57d0-73b1-9acb-124c24f33040",
+  "thread_title": "인증 문서 분석 및 정리",
+  "scope": "reference integration and follow-up design input; not certification decision or v1.0 protocol amendment",
+  "inputs": [
+    {
+      "path": "/Users/ojaehong/research_RX/output/documents/machine_tending_risk/머신텐딩_위험성평가_심화_정리.md",
+      "sha256": "1ca2f36d22da42600f0c52da4a92b58effaef98df03e583d748226b17a55ab50"
+    },
+    {
+      "path": "/Users/ojaehong/research_RX/humanoid_safety_documents_integrated_analysis_2026-09-08.md",
+      "sha256": "5a92bba9d37bed453b2312423c183f99988457835bee77b6f454cf4a875f383a"
+    },
+    {
+      "path": "/Users/ojaehong/research_RX/humanoid_safety_guide_analysis_2026-09-08.md",
+      "sha256": "1a087927c681905bff86c5ccfe8fb02aba5eabd3a0846cb405b8caf4abf06274"
+    },
+    {
+      "path": "/Users/ojaehong/research_RX/tmp/pdfs/humanoid_guide/source_layout.txt",
+      "sha256": "0358935b15e136458262b2552140d18ffe7c2b5219ebdd6408b92fc91e3960e6"
+    }
+  ],
+  "official_catalogues_checked": [
+    "https://www.iso.org/standard/73934.html",
+    "https://www.iso.org/standard/73481.html",
+    "https://www.iso.org/standard/66460.html",
+    "https://www.iso.org/standard/91469.html"
+  ],
+  "issues": [],
+  "v1_normative_documents_unchanged": true,
+  "reader_review": {
+    "scope": "reference integration document only",
+    "result": "no material confusion found between draft/example/standard/certification and v1.0/follow-up design",
+    "execution_or_hardware_test": false
+  }
+}

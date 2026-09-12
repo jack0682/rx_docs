@@ -1,0 +1,26 @@
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.21s
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+   Compiling rx-runtime v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-runtime)
+   Compiling rx-protocol-adapter v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-protocol-adapter)
+   Compiling rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-api)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.90s
+     Running tests/executor_ingress.rs (target/debug/deps/executor_ingress-e1afbc6ccad4d637)
+
+running 1 test
+test durable_s_worker_handles_real_bt_requests_and_preserves_crash_boundaries ... FAILED
+
+failures:
+
+---- durable_s_worker_handles_real_bt_requests_and_preserves_crash_boundaries stdout ----
+
+thread 'durable_s_worker_handles_real_bt_requests_and_preserves_crash_boundaries' (7188596) panicked at crates/rx-api/tests/executor_ingress.rs:213:6:
+called `Result::unwrap()` on an `Err` value: Rejected(Rejected(InvalidInput))
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    durable_s_worker_handles_real_bt_requests_and_preserves_crash_boundaries
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3 filtered out; finished in 3.81s
+
+error: test failed, to rerun pass `-p rx-api --test executor_ingress`

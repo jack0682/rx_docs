@@ -1,0 +1,14 @@
+   Compiling rx-host v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-host)
+    Checking rx-process-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-process-package)
+error: the borrowed expression implements the required traits
+  --> runtime/rx-host/build.rs:81:45
+   |
+81 |         let bytes = fs::read(solutions.join(&path))?;
+   |                                             ^^^^^ help: change this to: `path`
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.98.0/index.html#needless_borrows_for_generic_args
+   = note: `-D clippy::needless-borrows-for-generic-args` implied by `-D warnings`
+   = help: to override `-D warnings` add `#[allow(clippy::needless_borrows_for_generic_args)]`
+
+error: could not compile `rx-host` (build script) due to 1 previous error
+warning: build failed, waiting for other jobs to finish...

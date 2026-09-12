@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite
+  name="ai_sapiens_sim2real.pep257"
+  tests="2"
+  errors="0"
+  failures="0"
+  time="0.024"
+>
+  <testcase
+    name="./launch/ai_sapiens_sim2real.launch.py"
+    classname="ai_sapiens_sim2real.pep257"/>
+  <testcase
+    name="./scripts/run_mode_smoke_tests.py"
+    classname="ai_sapiens_sim2real.pep257"/>
+  <system-out>Checked files:
+* ./launch/ai_sapiens_sim2real.launch.py
+* ./scripts/run_mode_smoke_tests.py</system-out>
+</testsuite>

@@ -1,0 +1,9 @@
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.10s
+     Running tests/transactions.rs (target/debug/deps/transactions-285a2e14f18af9d7)
+
+running 1 test
+test host_read_ingestion_checks_context_and_preserves_the_native_source_fields ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 86 filtered out; finished in 0.18s
+

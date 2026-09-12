@@ -1,0 +1,7 @@
+usage: check_robotis_catalog_sources.py [-h] --source-root SOURCE_ROOT
+                                        [--output OUTPUT]
+
+options:
+  -h, --help            show this help message and exit
+  --source-root SOURCE_ROOT
+  --output OUTPUT

@@ -1,0 +1,373 @@
+    Blocking waiting for file lock on package cache
+   Compiling rx-domain v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-domain)
+   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-protocol)
+   Compiling rx-ports v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-ports)
+   Compiling rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-process-contract)
+   Compiling rx-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-package)
+   Compiling rx-storage v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-storage)
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+   Compiling rx-runtime v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-runtime)
+   Compiling rx-protocol-adapter v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-protocol-adapter)
+   Compiling rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-api)
+   Compiling rx-host-client v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-host-client)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 17.64s
+     Running unittests src/lib.rs (target/debug/deps/rx_api-fdf8094c3c73f8e8)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/local.rs (target/debug/deps/rx_platform_local-5099aa7626553f5c)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/evidence_ingress.rs (target/debug/deps/evidence_ingress-a4f109283cbec24f)
+
+running 1 test
+test publisher_catches_up_over_128_records_after_lost_ack_and_preserves_cursor_on_restart ... ignored, tools/test_evidence_e2e.sh builds and supplies the separate Host publisher
+
+test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/executor_ingress.rs (target/debug/deps/executor_ingress-38a922f23ec700f9)
+
+running 6 tests
+test durable_s_worker_handles_real_bt_requests_and_preserves_crash_boundaries ... ignored, tools/test_executor_worker_e2e.sh supplies S worker and pinned C++ request fixture
+test solutions_reader_restores_a_new_session_without_restoring_run_authority ... ignored, tools/test_executor_read_e2e.sh supplies the separate solutions reader
+test executor_run_reads_require_both_negotiations_and_the_same_registered_certificate ... ok
+test branch_checkpoint_preparation_and_lost_commit_reply_use_the_frozen_wire_contract ... ok
+test wait_checkpoint_start_and_resolution_use_the_frozen_wire_contract ... ok
+test remote_executor_allocates_and_submits_after_a_simulated_operator_start ... ok
+
+test result: ok. 4 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.14s
+
+     Running tests/http.rs (target/debug/deps/http-7adefb165d53f854)
+
+running 6 tests
+test expired_session_and_stopped_writer_never_return_cached_success ... ok
+test mutations_are_durable_idempotent_and_terminal_bypass_is_rejected ... ok
+test scoped_snapshot_login_logout_and_current_revocation ... ok
+test checkpoint_wire_and_exact_artifact_are_scoped_to_current_user_access ... ok
+test actual_tcp_listener_uses_verified_socket_origin_and_real_writer ... ok
+test strict_ingress_and_credentials_never_create_authority_from_headers ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.46s
+
+     Running unittests src/lib.rs (target/debug/deps/rx_application-fedea353d2b9b0b7)
+
+running 1 test
+test checkpoint_artifact::tests::rejects_a_valid_older_artifact_substituted_into_a_newer_run_view ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/transactions.rs (target/debug/deps/transactions-5e34d0f7d992a0ee)
+
+running 57 tests
+test activation_visits_are_unique_for_the_whole_run_across_parts ... ok
+test checkpoint_artifact_requires_current_run_scope_and_exact_owned_reference ... ok
+test changed_intent_under_same_key_is_a_conflict ... ok
+test an_entered_send_with_no_remote_receipt_remains_unknown_and_is_not_reissued ... ok
+test checkpoint_artifact_and_run_projection_commit_with_slot_or_roll_back_together ... ok
+test admission_receipt_is_anchored_to_the_original_control_record_and_survives_later_changes ... ok
+test a_new_contradictory_native_result_preserves_historical_outcome ... ok
+test conflicting_observation_is_committed_as_invalidation_even_though_api_rejects_it ... ok
+test checkpoint_preparation_loss_and_expiry_never_advance_the_run ... ok
+test changing_evidence_journal_does_not_silently_reset_sequence_history ... ok
+test device_generation_change_is_preserved_and_does_not_disappear_on_rejection ... ok
+test checkpoint_commit_rejects_changed_mapping_artifact_and_stale_condition ... ok
+test control_journal_is_atomic_and_audit_sessions_do_not_advance_its_cursor ... ok
+test direct_state_puts_during_hold_are_captured_at_one_final_transaction_cut ... ok
+test early_native_evidence_is_reapplied_when_the_receipt_establishes_correlation ... ok
+test evidence_gap_is_not_skipped_and_conflicting_sequence_is_quarantined ... ok
+test checkpoint_wait_uses_p_time_and_success_cannot_be_committed_after_deadline ... ok
+test checkpoint_proposal_is_not_an_applied_decision_and_commit_response_survives_loss ... ok
+test hold_proves_unsent_work_not_executed_without_releasing_resource ... ok
+test executor_part_and_activation_mutations_preserve_full_request_identity_and_atomic_results ... ok
+test handover_release_is_atomic_and_duplicate_proof_does_not_release_another_owner ... ok
+test maintained_condition_recovery_does_not_revive_an_old_mandate ... ok
+test false_handover_facts_are_retained_and_identity_conflicts_block_release ... ok
+test late_prepared_receipt_after_pause_does_not_create_an_authorization ... ok
+test executor_reconnect_is_idempotent_but_changed_incarnation_revokes_authority ... ok
+test live_execution_snapshot_preserves_the_cut_and_does_not_reuse_aged_maintained_conditions ... ok
+test native_receipt_capture_does_not_stand_in_for_completion_policy ... ok
+test hold_propagates_to_shared_resources_and_preserves_independent_cells ... ok
+test native_metadata_changes_conflict_and_ack_cursor_is_part_of_t2_commit ... ok
+test one_physical_resource_is_reserved_across_cells_not_per_cell_alias ... ok
+test pausing_a_prepared_run_without_arm_does_not_fence_other_cell_work ... ok
+test part_completion_waits_for_release_and_closes_exhausted_run ... ok
+test pause_rejects_a_late_arm_acknowledgment_from_start_preparation ... ok
+test executor_submit_checks_the_whole_envelope_and_recovers_an_immutable_receipt_after_t1_loss ... ok
+test pause_after_emit_is_not_cancellation_and_late_correlated_result_is_still_recorded ... ok
+test pending_start_has_a_deadline_and_key_covers_budget_intent ... ok
+test resolved_plan_binding_and_digest_cannot_be_substituted_in_cell_configuration ... ok
+test p_commits_branch_choice_and_rejects_the_untaken_activation ... ok
+test producer_reconnect_requires_current_identity_and_cell_negotiation ... ok
+test permit_deadline_cannot_outlive_the_observation_that_supported_it ... ok
+test part_completion_requires_only_the_committed_branch_and_its_real_release_proof ... ok
+test prepared_is_not_an_authorization_ack_and_duplicate_receipts_complete_the_right_message ... ok
+test restarting_runtime_preserves_consumption_and_revokes_mandate ... ok
+test reconciliation_requests_are_durable_coalesced_and_cannot_claim_release ... ok
+test process_checkpoint_survives_runtime_restart_without_restoring_execution_authority ... ok
+test stale_observation_and_wrong_executor_do_not_reach_t1 ... ok
+test same_slot_new_key_and_lost_reply_do_not_create_another_operation ... ok
+test role_revocation_is_checked_before_cached_result_lookup ... ok
+test start_requires_all_hosts_and_cannot_be_completed_by_partial_ack ... ok
+test uncommissioned_cell_cannot_start_from_package_presence ... ok
+test unregistered_terminal_cannot_start_even_with_operator_role ... ok
+test t1_failure_rolls_back_slot_resource_permit_and_outbox_together ... ok
+test t2_commits_native_evidence_outcome_and_contiguous_cursor_atomically ... ok
+test pause_commits_reply_fence_and_unsent_sealing_atomically_without_refunding_budget ... ok
+test t2_rollback_and_lost_ack_preserve_exactly_one_recorded_result ... ok
+test wait_deadline_and_success_are_decided_by_p_and_cannot_be_reset_by_retries ... ok
+test resource_release_requires_all_current_handover_facts ... ok
+
+test result: ok. 57 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.61s
+
+     Running unittests src/lib.rs (target/debug/deps/rx_domain-7b21dd6c8bf5283a)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/cell_invariants.rs (target/debug/deps/cell_invariants-7215a20bbb1608e5)
+
+running 4 tests
+test setup_and_material_budgets_are_not_interchangeable ... ok
+test stale_vector_does_not_regress_or_partially_update_any_scope ... ok
+test duplicate_or_empty_scope_vectors_do_not_vacuously_authorize ... ok
+test last_counted_part_can_continue_but_a_new_part_cannot_be_created ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/contracts.rs (target/debug/deps/contracts-9a5baf511458511d)
+
+running 16 tests
+test quality_alone_never_proves_freshness_generation_or_unit ... ok
+test oneof_presence_and_false_are_not_missing_or_null ... ok
+test counters_preserve_full_width_and_reject_json_numbers ... ok
+test condition_schema_is_closed ... ok
+test any_uses_a_valid_witness_deadline_and_all_uses_the_earliest_deadline ... ok
+test frozen_cv02_negative_zero_and_cv03_false ... ok
+test input_rejects_unknown_duplicate_and_incompatible_fields ... ok
+test duplicate_conclusion_is_idempotent_and_empty_proof_rejected ... ok
+test source_age_not_callback_time_controls_freshness ... ok
+test strict_json_rejects_trailing_bytes_and_duplicate_escaped_keys ... ok
+test frozen_cv01_canonical_bytes_and_digest ... ok
+test three_valued_groups_and_invalid_hidden_branch ... ok
+test response_loss_and_running_poll_never_create_a_result ... ok
+test terminal_success_does_not_release_and_conflicting_result_is_preserved ... ok
+test resource_order_is_not_semantic_but_duplicates_are_invalid ... ok
+test profile_calibration_and_rule_change_identity ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/restoration.rs (target/debug/deps/restoration-4cafbca358d8f2c1)
+
+running 5 tests
+test duplicate_or_overbudget_history_is_corruption_not_a_refund ... ok
+test restoring_run_budget_never_refunds_consumption ... ok
+test restoring_reconciling_operation_preserves_unknown_and_quarantine ... ok
+test stored_state_cannot_claim_success_without_terminal_evidence ... ok
+test historical_dispute_survives_restart_without_rewriting_success ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/rx_host_client-86c2260579d7bfe9)
+
+running 1 test
+test delivery::reconciliation::tests::unavailable_read_retries_but_broken_proof_and_revoked_authority_do_not ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/network_e2e.rs (target/debug/deps/network_e2e-6e71a831a079a3dc)
+
+running 3 tests
+test application_outbox_reaches_mtls_host_and_t2_commits_the_result ... ignored, tools/test_host_e2e.sh builds the separate Host fixture and supplies its path
+test automatic_dispatcher_recovers_a_lost_authorize_reply_without_native_reexecution ... ignored, tools/test_host_e2e.sh builds the separate Host fixture and supplies its path
+test remote_executor_submission_and_host_reply_loss_preserve_one_native_effect_per_slot ... ignored, tools/test_host_e2e.sh supplies the separate Host server
+
+test result: ok. 0 passed; 0 failed; 3 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/rx_package-758c52bb7ef2d986)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/verification.rs (target/debug/deps/verification-bb209c54b62d5bbc)
+
+running 8 tests
+test canonical_set_order_is_stable_and_duplicate_json_fields_are_rejected ... ok
+test closed_paths_and_inventory_reject_traversal_aliases_and_hidden_files ... ok
+test a_dependency_verified_before_key_revocation_is_not_retrusted_implicitly ... ok
+test package_kind_target_contract_and_publisher_scope_are_checked ... ok
+test directory_verification_owns_bytes_and_rejects_links ... ok
+test signed_content_is_immutable_and_signature_is_bound_to_key_identity ... ok
+test dependency_cannot_pull_an_older_copy_of_the_root_back_into_the_bundle ... ok
+test dependency_closure_is_pinned_and_rechecked_against_current_trust ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running unittests src/lib.rs (target/debug/deps/rx_ports-0b5943d367f9baa9)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/rx_process_contract-8717bf0a5473ea1d)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/rx_protocol-d4c0fc76c3075e40)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/grpc_boundary.rs (target/debug/deps/grpc_boundary-09a1211ae3192073)
+
+running 1 test
+test malformed_wire_never_reaches_generated_service_handler ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running tests/wire.rs (target/debug/deps/wire-92e776127f67929a)
+
+running 11 tests
+test document_manifest_hashes_remain_the_negotiation_identity ... ok
+test core_enum_numbers_and_cell_union_tags_are_stable ... ok
+test nested_duplicate_singular_is_not_merged ... ok
+test unknown_enum_bad_wire_and_varint_overflow_are_rejected ... ok
+test nonfinite_numbers_rejected_in_scalar_and_packed_vector ... ok
+test prost_last_wins_and_unknown_field_behavior_is_blocked_before_decode ... ok
+test explicit_false_zero_and_optional_zero_survive_binary_roundtrip ... ok
+test json_is_rx_projection_not_protojson ... ok
+test fixed_digest_hex_and_oneof_contracts_are_checked ... ok
+test intent_crosses_json_protobuf_domain_without_changing_frozen_digest ... ok
+test numbered_fields_match_frozen_documents_independently_of_generator ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running unittests src/lib.rs (target/debug/deps/rx_protocol_adapter-c807b1886a8c7d50)
+
+running 2 tests
+test operation::tests::unknown_and_late_contradiction_preserve_distinct_result_integrity_and_release_axes ... ok
+test workflow::tests::frozen_run_view_preserves_counters_slots_and_each_run_state ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running tests/evidence.rs (target/debug/deps/evidence-75c342185bb29cb4)
+
+running 2 tests
+test projection_only_evidence_cannot_be_claimed_as_a_complete_source ... ok
+test native_result_round_trip_keeps_vendor_id_payload_and_full_width_values ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/rx_runtime-233906e20014a7d8)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/writer.rs (target/debug/deps/writer-fbc07472b49e6485)
+
+running 3 tests
+test panic_closes_admission_without_retrying_the_command ... ok
+test dropped_response_still_commits_and_shutdown_drains ... ok
+test normal_load_cannot_consume_control_reserve_and_control_is_scheduled_first ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running unittests src/lib.rs (target/debug/deps/rx_storage-4e8c77ae09a39d78)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/atomicity.rs (target/debug/deps/atomicity-439128c86717d478)
+
+running 11 tests
+test snapshot_is_a_cut_and_after_is_exclusive ... ok
+test schema_upgrade_preserves_emitted_work_and_delivered_records_never_resurrect ... ok
+test stale_revision_does_not_partially_record_an_event ... ok
+test one_transaction_commits_state_key_event_and_outbox ... ok
+test second_runtime_cannot_open_owned_database ... ok
+test request_identity_survives_reopening_and_namespace_isolated ... ok
+test control_projection_and_sequence_roll_back_together_and_ignore_audit_appends ... ok
+test online_backup_preserves_committed_state_without_copying_live_db_file ... ok
+test voided_outbox_cannot_be_resurrected_or_sent ... ok
+test pending_outbox_pages_are_exclusive_and_do_not_starve_later_ids ... ok
+test failure_at_each_commit_component_rolls_everything_back ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
+   Doc-tests rx_api
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rx_application
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rx_domain
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rx_host_client
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rx_package
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rx_ports
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rx_process_contract
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rx_protocol
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rx_protocol_adapter
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rx_runtime
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rx_storage
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

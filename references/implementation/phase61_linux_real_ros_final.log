@@ -1,0 +1,9 @@
+   Compiling rx-host v0.1.0 (/rx/rx-solutions/runtime/rx-host)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 26.32s
+     Running tests/ros_jtc.rs (/build/debug/deps/ros_jtc-a8790663a18c2278)
+
+running 1 test
+test actual_rust_host_to_cpp_bridge_to_ros_action_preserves_original_goal ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 9 filtered out; finished in 0.66s
+

@@ -1,0 +1,30 @@
+   Compiling rx-domain v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-domain)
+   Compiling rx-ports v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-ports)
+   Compiling rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-process-contract)
+   Compiling rx-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-package)
+   Compiling rx-storage v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-storage)
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 13.60s
+     Running tests/transactions.rs (target/debug/deps/transactions-2d3d144f384ba793)
+
+running 4 tests
+test native_outcomes_tests::native_outcome_table_rejects_ambiguous_unbound_and_nonterminal_policy ... ok
+test native_outcomes_tests::native_outcome_atomic_ack_loss_and_late_contradiction_preserve_first_conclusion ... ok
+test native_outcomes_tests::native_outcome_postconditions_require_current_evidence_and_no_hold ... FAILED
+test native_outcomes_tests::native_outcome_pairs_separate_terminal_meanings_and_leave_unknown_unsettled ... ok
+
+failures:
+
+---- native_outcomes_tests::native_outcome_postconditions_require_current_evidence_and_no_hold stdout ----
+
+thread 'native_outcomes_tests::native_outcome_postconditions_require_current_evidence_and_no_hold' (10396974) panicked at crates/rx-application/tests/support/native_outcomes.rs:147:18:
+called `Result::unwrap()` on an `Err` value: Invalid("invalid input: invalid UUID")
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    native_outcomes_tests::native_outcome_postconditions_require_current_evidence_and_no_hold
+
+test result: FAILED. 3 passed; 1 failed; 0 ignored; 0 measured; 153 filtered out; finished in 0.46s
+
+error: test failed, to rerun pass `-p rx-application --test transactions`

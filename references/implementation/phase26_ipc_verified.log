@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/test_bt_engine.py", line 89, in <module>
+    case('committed_wait_result_is_immutable',wait_changed)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/test_bt_engine.py", line 53, in case
+    try:run(engine)
+        ~~~^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/test_bt_engine.py", line 83, in wait_changed
+    wait=next(name for name,value in frame['nodes'].items() if name in frame['eligible'])
+StopIteration

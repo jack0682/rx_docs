@@ -1,0 +1,26 @@
+   Compiling rx-host v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-host)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3.72s
+     Running tests/melsec_service.rs (target/debug/deps/melsec_service-66b6ecb88ce83936)
+
+running 6 tests
+test physical_startup_qualification_id_does_not_authorize_arm ... ok
+test physical_metadata_requires_current_qualification_and_separate_arm_on_loopback ... ok
+test signature_content_policy_asset_release_and_binding_tampering_fail_before_initialization ... ok
+test validly_signed_wrong_release_controller_or_installation_is_rejected ... ok
+test signed_device_package_binds_release_profile_assets_and_exact_cell_without_io ... ok
+test product_composition_initializes_starts_and_stops_the_signed_melsec_package ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.41s
+
+     Running tests/service.rs (target/debug/deps/service-ea674c1d1a8c6382)
+
+running 6 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 5 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.40s
+

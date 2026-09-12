@@ -1,0 +1,11 @@
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+error[E0433]: cannot find module or crate `canonical` in this scope
+    --> crates/rx-application/tests/transactions.rs:6739:17
+     |
+6739 |                 canonical::bytes(&view).unwrap(),
+     |                 ^^^^^^^^^ use of unresolved module or unlinked crate `canonical`
+     |
+     = help: if you wanted to use a crate named `canonical`, use `cargo add canonical` to add it to your `Cargo.toml`
+
+For more information about this error, try `rustc --explain E0433`.
+error: could not compile `rx-application` (test "transactions") due to 1 previous error

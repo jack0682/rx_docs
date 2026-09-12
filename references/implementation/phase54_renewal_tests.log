@@ -1,0 +1,8 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.04s
+     Running tests/transactions.rs (target/debug/deps/transactions-bad314d419bf4f37)
+
+running 1 test
+test confirmed_new_cell_fence_advances_registration_and_allows_only_original_grant_renewal ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 146 filtered out; finished in 0.02s
+

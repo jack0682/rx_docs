@@ -1,0 +1,12 @@
+
+> @rx/operator@0.1.0 build
+> tsc --noEmit && vite build
+
+src/conditions.tsx(69,40): error TS2339: Property 'fact' does not exist on type 'Expression'.
+  Property 'fact' does not exist on type '{ op: "ALL" | "ANY"; children: Expression[]; }'.
+src/conditions.tsx(74,21): error TS2339: Property 'expected' does not exist on type '{ op: "ALL" | "ANY"; children: Expression[]; } | { op: "SET_CONTAINS"; fact: string; schema: string; unit: string; expected: string; }'.
+  Property 'expected' does not exist on type '{ op: "ALL" | "ANY"; children: Expression[]; }'.
+src/conditions.tsx(75,10): error TS2339: Property 'unit' does not exist on type 'Expression'.
+  Property 'unit' does not exist on type '{ op: "ALL" | "ANY"; children: Expression[]; }'.
+src/conditions.tsx(75,44): error TS2339: Property 'unit' does not exist on type 'Expression'.
+  Property 'unit' does not exist on type '{ op: "ALL" | "ANY"; children: Expression[]; }'.

@@ -1,0 +1,50 @@
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on build directory
+    Checking tokio-stream v0.1.19
+    Checking tonic v0.14.6
+    Checking tonic-prost v0.14.6
+    Checking rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol)
+    Checking rx-executor v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-executor)
+    Checking rx-host v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-host)
+error: this `if` statement can be collapsed
+   --> runtime/rx-executor/src/journal/lifecycle.rs:176:5
+    |
+176 | /     if next.attempts.len() > old.attempts.len() {
+177 | |         if next.attempts.len() != old.attempts.len() + 1
+178 | |             || old
+179 | |                 .attempts
+...   |
+186 | |     }
+    | |_____^
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.98.0/index.html#collapsible_if
+    = note: `-D clippy::collapsible-if` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(clippy::collapsible_if)]`
+help: collapse nested if block
+    |
+176 ~     if next.attempts.len() > old.attempts.len()
+177 ~         && (next.attempts.len() != old.attempts.len() + 1
+178 |             || old
+...
+181 |                 .is_some_and(|a| a.state != AttemptState::Rejected)
+182 ~             || next.attempts.last().unwrap().state != AttemptState::Prepared)
+183 |         {
+184 |             return invalid("new stop key without confirmed rejection");
+185 ~         }
+    |
+
+error: very complex type used. Consider factoring parts into `type` definitions
+   --> runtime/rx-executor/src/service.rs:113:16
+    |
+113 |     stop_hook: Option<Arc<dyn Fn(&StopController) + Send + Sync>>,
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.98.0/index.html#type_complexity
+    = note: `-D clippy::type-complexity` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(clippy::type_complexity)]`
+
+error: could not compile `rx-executor` (lib test) due to 2 previous errors
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `rx-executor` (lib) due to 2 previous errors

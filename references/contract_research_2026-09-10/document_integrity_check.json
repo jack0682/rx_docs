@@ -1,0 +1,8 @@
+{
+  "checked_at": "2026-09-10",
+  "scope": "Markdown links/tables/fences, scenario/decision presence, normative document SHA256, exact fixture byte hashes; no product or hardware tests",
+  "checked_documents": 10,
+  "canonical_vectors": 3,
+  "schema_hash": "66756d119140d436da477cce4331f34ef705900b83c338a870bdbe2ced78dd3b",
+  "issues": []
+}

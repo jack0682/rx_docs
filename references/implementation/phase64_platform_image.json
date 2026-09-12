@@ -1,0 +1,62 @@
+{
+  "schema": "rx.platform-image-smoke.v1",
+  "status": "PASS",
+  "image_id": "sha256:2fe24ce2f44cd29e57419a61a0a13fab389037d31a62c585db48e064c3017b67",
+  "os": "linux",
+  "architecture": "arm64",
+  "user": "10001:10001",
+  "read_only_root": true,
+  "cap_drop": [
+    "ALL"
+  ],
+  "https_health": {
+    "admission_open": true,
+    "mode": "TERMINAL_HTTPS",
+    "service": "rx-platform",
+    "start_requires_user_terminal_and_runtime_conditions": true,
+    "writer_available": true
+  },
+  "startup": {
+    "installation_id": "0ce049d3-c874-4f2d-aa3a-0668e30c475a",
+    "phase": "SOFTWARE_READY_UNCOMMISSIONED",
+    "physical_shutdown_assessed": false,
+    "qualification_authority": "NOT_CONNECTED",
+    "runtime_boot": "01a0955a-4fe5-73be-8f55-8ecf10a66d41",
+    "schema": "rx.platform-process-status.v1",
+    "stop": null
+  },
+  "stop": {
+    "installation_id": "0ce049d3-c874-4f2d-aa3a-0668e30c475a",
+    "phase": "PROCESS_STOPPED",
+    "physical_shutdown_assessed": false,
+    "qualification_authority": "NOT_CONNECTED",
+    "runtime_boot": "01a0955a-4fe5-73be-8f55-8ecf10a66d41",
+    "schema": "rx.platform-process-status.v1",
+    "stop": {
+      "attention": [],
+      "attention_count": "0",
+      "lifecycle": {
+        "phase": "STOP_COMMITTED",
+        "requested_at": {
+          "clock_id": "linux-boottime/d4c52d40-299a-4bdf-b0fd-7cdc8f476531",
+          "ticks_ns": "356670973162"
+        },
+        "runtime_boot": "01a0955a-4fe5-73be-8f55-8ecf10a66d41",
+        "stop_id": "01a0955a-5062-7317-99ab-3bc42ea08e9c",
+        "stopped_at": {
+          "clock_id": "linux-boottime/d4c52d40-299a-4bdf-b0fd-7cdc8f476531",
+          "ticks_ns": "356673458704"
+        }
+      },
+      "physical_shutdown_assessed": false,
+      "truncated": false
+    }
+  },
+  "package_intake": null,
+  "limitations": [
+    "uncommissioned draft authority",
+    "no Host/controller launch",
+    "no physical shutdown qualification",
+    "config/data volumes and test certificates were disposable"
+  ]
+}

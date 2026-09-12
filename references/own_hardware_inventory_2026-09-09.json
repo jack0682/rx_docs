@@ -1,0 +1,1250 @@
+{
+  "recorded_utc": "2026-09-09T13:41:06.391985+00:00",
+  "heads": {
+    "DynamixelSDK": "2ded684dff05a40ac78d6a16105c6ddc1b3b9930",
+    "dynamixel_hardware_interface": "6bb5f93ecad1fe3c231e3ece580344e8f0a6efc3",
+    "open_manipulator": "9187eca0920458be04d2399906388f55242f81f1",
+    "ai_worker": "2e29aae2dee9926691922fc0fa58d97ad88e068f",
+    "ai_sapiens": "7d62dff281f02b6265ebe07db6c0ae32ba8de381"
+  },
+  "xacro": [
+    {
+      "path": "/Users/ojaehong/RX_automation/open_manipulator/open_manipulator_description/ros2_control/omx_f.ros2_control.xacro",
+      "sha256": "bc60d2749c8d87c3ffd44c91acb457074b83b115de368a18d59707bb386c40ae",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"omx_f_system\" params=\"name prefix port_name:=^|/dev/ttyACM1 use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "${port_name}"
+        },
+        {
+          "name": "baud_rate",
+          "value": "1000000"
+        },
+        {
+          "name": "error_timeout_ms",
+          "value": "500"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "dynamixel_hardware_interface/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/open_manipulator/open_manipulator_description/ros2_control/omx_l.ros2_control.xacro",
+      "sha256": "e68fdf2e282eeb2d837b77f53ca606d7c161c168ce3f55faaea20069836c77a5",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"omx_l_system\" params=\"name prefix port_name:=^|/dev/ttyACM0 use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "${port_name}"
+        },
+        {
+          "name": "baud_rate",
+          "value": "1000000"
+        },
+        {
+          "name": "error_timeout_ms",
+          "value": "500"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "omx_l/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/open_manipulator/open_manipulator_description/ros2_control/omy_3m_end_unit.ros2_control.xacro",
+      "sha256": "fd1342a618c34503d8b987ce0259c2ca6c8e16681478adf1fbfaceab375de098",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"omy_3m_end_unit_system\" params=\"name prefix port_name:=^|/dev/ttyAMA4 use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "${port_name}"
+        },
+        {
+          "name": "baud_rate",
+          "value": "4000000"
+        },
+        {
+          "name": "error_timeout_ms",
+          "value": "500"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "dynamixel_hardware_interface/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/open_manipulator/open_manipulator_description/ros2_control/omy_3m_position.ros2_control.xacro",
+      "sha256": "57915e10dac11284149f75d79bca4d8651bf07402fec9df93673fc6af4ce8c03",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"omy_3m_system\" params=\"name prefix port_name:=^|/dev/ttyAMA2 use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "${port_name}"
+        },
+        {
+          "name": "baud_rate",
+          "value": "6250000"
+        },
+        {
+          "name": "error_timeout_ms",
+          "value": "500"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "dynamixel_hardware_interface/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/open_manipulator/open_manipulator_description/ros2_control/omy_f3m_current.ros2_control.xacro",
+      "sha256": "4b5c942af90a3e934d88678cc3036447be270605831e49a4eba5d87c92d3173d",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"omy_f3m_system\" params=\"name prefix port_name:=^|/dev/ttyAMA2 use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "${port_name}"
+        },
+        {
+          "name": "baud_rate",
+          "value": "6250000"
+        },
+        {
+          "name": "error_timeout_ms",
+          "value": "500"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "dynamixel_hardware_interface/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/open_manipulator/open_manipulator_description/ros2_control/omy_f3m_end_unit.ros2_control.xacro",
+      "sha256": "d24a4f51bc8752ef4e6ff94e0b5c7f2e901b5395bff67f63779c60dbb9d5f73c",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"omy_f3m_end_unit_system\" params=\"name prefix port_name:=^|/dev/ttyAMA4 use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "${port_name}"
+        },
+        {
+          "name": "baud_rate",
+          "value": "4000000"
+        },
+        {
+          "name": "error_timeout_ms",
+          "value": "500"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "dynamixel_hardware_interface/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/open_manipulator/open_manipulator_description/ros2_control/omy_f3m_position.ros2_control.xacro",
+      "sha256": "372553ccd0c25d8acff83817662ecad6c5b41c6343e32e7109da7ddd7e003a7d",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"omy_f3m_system\" params=\"name prefix port_name:=^|/dev/ttyAMA2 use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "${port_name}"
+        },
+        {
+          "name": "baud_rate",
+          "value": "6250000"
+        },
+        {
+          "name": "error_timeout_ms",
+          "value": "500"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "dynamixel_hardware_interface/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/open_manipulator/open_manipulator_description/ros2_control/omy_f3m_smooth.ros2_control.xacro",
+      "sha256": "1a3f6c24115ecf3637210ec71a639192ad0f875b31f98aef2ea48cf123a44f0a",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"omy_f3m_system\" params=\"name prefix port_name:=^|/dev/ttyAMA2 use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "${port_name}"
+        },
+        {
+          "name": "baud_rate",
+          "value": "6250000"
+        },
+        {
+          "name": "error_timeout_ms",
+          "value": "500"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "dynamixel_hardware_interface/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/open_manipulator/open_manipulator_description/ros2_control/omy_l100_current.ros2_control.xacro",
+      "sha256": "a73b0f18f016d4d63a7cef16f296458bb22905b104d3578689dd1cf163c7de9f",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"omy_l100_system\" params=\"name prefix port_name:=^|/dev/ttyUSB0 use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "${port_name}"
+        },
+        {
+          "name": "baud_rate",
+          "value": "4000000"
+        },
+        {
+          "name": "error_timeout_ms",
+          "value": "500"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "dynamixel_hardware_interface/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/open_manipulator/open_manipulator_description/ros2_control/omy_l100_position.ros2_control.xacro",
+      "sha256": "228f629395dd139a5c2b32153d9d9a4f364d523f94bf025a929d3c1648231cb1",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"omy_l100_system\" params=\"name prefix port_name:=^|/dev/ttyUSB0 use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "${port_name}"
+        },
+        {
+          "name": "baud_rate",
+          "value": "4000000"
+        },
+        {
+          "name": "error_timeout_ms",
+          "value": "500"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "dynamixel_hardware_interface/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/open_manipulator/open_manipulator_description/ros2_control/open_manipulator_x_position.ros2_control.xacro",
+      "sha256": "36ebffc325674d9e1dcf9696755d5ca2711e27c26d32e1bd2140f40826013a3a",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"open_manipulator_x_system\" params=\"name prefix port_name:=^|/dev/ttyUSB0 use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "${port_name}"
+        },
+        {
+          "name": "baud_rate",
+          "value": "1000000"
+        },
+        {
+          "name": "error_timeout_ms",
+          "value": "500"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "dynamixel_hardware_interface/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_description/ros2_control/ffw_bg2_rev2_follower/ffw_bg2_follower.ros2_control.xacro",
+      "sha256": "29834acac1a081d52c306c9ff22fde0397f8adaeb4c01fcab81fab01eeebcd61",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"ffw_bg2_follower_system\" params=\"use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "/dev/follower"
+        },
+        {
+          "name": "baud_rate",
+          "value": "4000000"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "dynamixel_hardware_interface/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_description/ros2_control/ffw_bg2_rev3_follower/ffw_bg2_follower.ros2_control.xacro",
+      "sha256": "e678f3a784c55b1626312047d2e89f23a01668b8d2d1ae2927da5ae5a262052b",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"ffw_bg2_follower_system\" params=\"use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "/dev/follower"
+        },
+        {
+          "name": "baud_rate",
+          "value": "4000000"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "dynamixel_hardware_interface/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_description/ros2_control/ffw_bg2_rev4_follower/ffw_bg2_follower.ros2_control.xacro",
+      "sha256": "ae20f82899f2dabbccbcc23e395f9269defdc84eb2638653fd3d9375342cfe6c",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"ffw_bg2_follower_system\" params=\"use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "/dev/follower"
+        },
+        {
+          "name": "baud_rate",
+          "value": "4000000"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "dynamixel_hardware_interface/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_description/ros2_control/ffw_bg2_rev4_follower/ffw_bg2_follower_smooth.ros2_control.xacro",
+      "sha256": "7cb33d03ccfcff725c68cc5f201d3c0e17f25a282a21eec0433a9e274ec04cf0",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"ffw_bg2_follower_system\" params=\"use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "/dev/follower"
+        },
+        {
+          "name": "baud_rate",
+          "value": "4000000"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "dynamixel_hardware_interface/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_description/ros2_control/ffw_bh5_rev1_follower/ffw_bh5_follower.ros2_control.xacro",
+      "sha256": "ef80acaa442deb593b682a00995f2b85a02d7f1770be7f74c409cd5868192a22",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"ffw_bh5_follower_system\" params=\"use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "/dev/follower"
+        },
+        {
+          "name": "baud_rate",
+          "value": "4000000"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "dynamixel_hardware_interface/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_description/ros2_control/ffw_f1_follower/ffw_f1_follower.ros2_control.xacro",
+      "sha256": "fc70882600c269e76a6f45e6a7d61d6ad7c8c39e85933f9455df4378a989a900",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"ffw_f1_follower_system\" params=\"use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "/dev/follower"
+        },
+        {
+          "name": "baud_rate",
+          "value": "4000000"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "dynamixel_hardware_interface/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_description/ros2_control/ffw_f1_follower/ffw_f1_follower_smooth.ros2_control.xacro",
+      "sha256": "88b61cd7baccde9e9feea23e72073e9daa4c4046c1812813dfa2ba7c308d3f5b",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"ffw_f1_follower_system\" params=\"use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "/dev/follower"
+        },
+        {
+          "name": "baud_rate",
+          "value": "4000000"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "dynamixel_hardware_interface/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_description/ros2_control/ffw_f2_follower/ffw_f2_base.ros2_control.xacro",
+      "sha256": "45182d1354f0e7c5879ba92a10b0280fe4cbff99524720fefe4db8a93fbc983e",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"ffw_f2_base_system\" params=\"use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "/dev/ttyUSB0"
+        },
+        {
+          "name": "baud_rate",
+          "value": "4000000"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "dynamixel_hardware_interface/set_dxl_torque"
+        },
+        {
+          "name": "error_timeout_ms",
+          "value": "500"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_description/ros2_control/ffw_f2_follower/ffw_f2_follower.ros2_control.xacro",
+      "sha256": "bab5abec03355a6ea5050b8795c3206e4b70219171e068c959638cbc4fea74a7",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"ffw_f2_follower_system\" params=\"use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "/dev/follower"
+        },
+        {
+          "name": "baud_rate",
+          "value": "4000000"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "dynamixel_hardware_interface/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_description/ros2_control/ffw_f2_follower/ffw_f2_follower_smooth.ros2_control.xacro",
+      "sha256": "f688ca8f9352ee2191d35e110ec7717bfe4a585d46d0e7c0a0deb3abcb5bd0fe",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"ffw_f2_follower_system\" params=\"use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "/dev/follower"
+        },
+        {
+          "name": "baud_rate",
+          "value": "4000000"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "dynamixel_hardware_interface/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_description/ros2_control/ffw_f2_follower/ffw_f2_sensor.ros2_control.xacro",
+      "sha256": "c10784fbe3872eea6794f6857b23427147276f06520435b21825a06ea7e75e66",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"ffw_f2_sensor_system\" params=\"use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "/dev/ttyUSB1"
+        },
+        {
+          "name": "baud_rate",
+          "value": "4000000"
+        },
+        {
+          "name": "error_timeout_ms",
+          "value": "500"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "ffw_sensor/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_description/ros2_control/ffw_lg2_leader/ffw_lg2_leader_left.ros2_control.xacro",
+      "sha256": "f1fa9345a566a77dc88b8e5757339bd007269fda2def6fa57a9fc8fb7eaa2633",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"ffw_lg2_leader_left_system\" params=\"use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "/dev/left_leader"
+        },
+        {
+          "name": "baud_rate",
+          "value": "4000000"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "dynamixel_hardware_interface/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_description/ros2_control/ffw_lg2_leader/ffw_lg2_leader_right.ros2_control.xacro",
+      "sha256": "f8b778bcecf82e803cc7675459c8fea7abe237738e765afd2aac674649572c11",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"ffw_lg2_leader_right_system\" params=\"use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "/dev/right_leader"
+        },
+        {
+          "name": "baud_rate",
+          "value": "4000000"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "dynamixel_hardware_interface/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_description/ros2_control/ffw_mobile_base/ffw_mobile_base.ros2_control.xacro",
+      "sha256": "660bb2ad9d2a5ef5e1726b98539965f0baa6918a9748f0deaad4886966c749a6",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"ffw_mobile_base_steer_system\" params=\"use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false port_name:=^|/dev/follower\">",
+        "<xacro:macro name=\"ffw_sg2_follower_system\" params=\"use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false port_name:=^|/dev/follower\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "${port_name}"
+        },
+        {
+          "name": "baud_rate",
+          "value": "4000000"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "ffw_mobile_base_steer/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_description/ros2_control/ffw_sg2_rev1_follower/ffw_sg2_base.ros2_control.xacro",
+      "sha256": "0867d975313d5790de6932fbc11ea2d314ca38415579ca3b5b2df951a1b40b9e",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"ffw_sg2_base_system\" params=\"use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "/dev/ttyUSB0"
+        },
+        {
+          "name": "baud_rate",
+          "value": "4000000"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "dynamixel_hardware_interface/set_dxl_torque"
+        },
+        {
+          "name": "error_timeout_ms",
+          "value": "500"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_description/ros2_control/ffw_sg2_rev1_follower/ffw_sg2_follower.ros2_control.xacro",
+      "sha256": "a07b47708f8cf7e35f42b8415afa01bd579ce7e8b85e1db68cfb595758aedc62",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"ffw_sg2_follower_system\" params=\"use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "/dev/follower"
+        },
+        {
+          "name": "baud_rate",
+          "value": "4000000"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "dynamixel_hardware_interface/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_description/ros2_control/ffw_sg2_rev1_follower/ffw_sg2_follower_smooth.ros2_control.xacro",
+      "sha256": "bbecab81443b0182fa6d2e35e09f8589b46e790806b0bf8244db45caa3c0752a",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"ffw_sg2_follower_system\" params=\"use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "/dev/follower"
+        },
+        {
+          "name": "baud_rate",
+          "value": "4000000"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "dynamixel_hardware_interface/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_description/ros2_control/ffw_sg2_rev1_follower/ffw_sg2_sensor.ros2_control.xacro",
+      "sha256": "24b0f580b5f3ae116ebc53dcba2144739f75effeb998eedb2c7f91c6aa48e89b",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"ffw_sg2_sensor_system\" params=\"use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "/dev/ttyUSB1"
+        },
+        {
+          "name": "baud_rate",
+          "value": "4000000"
+        },
+        {
+          "name": "error_timeout_ms",
+          "value": "500"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "ffw_sensor/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_description/ros2_control/ffw_sh5_rev1_follower/ffw_sh5_base.ros2_control.xacro",
+      "sha256": "a2ec08964301c177faf6d86f874b5d8a1e86fd5c05f9f88dd876ecbacfa4abce",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"ffw_sh5_base_system\" params=\"use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "/dev/ttyUSB0"
+        },
+        {
+          "name": "baud_rate",
+          "value": "4000000"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "dynamixel_hardware_interface/set_dxl_torque"
+        },
+        {
+          "name": "error_timeout_ms",
+          "value": "500"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_description/ros2_control/ffw_sh5_rev1_follower/ffw_sh5_follower.joints.xacro",
+      "sha256": "96448a505ea301f5c08952b9f75cce71b9276b74ad1b425f776c08b6f438fcd8",
+      "plugins": [],
+      "macro_declarations": [
+        "<xacro:macro name=\"ffw_sh5_follower_joints\">"
+      ],
+      "hardware_parameters": []
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_description/ros2_control/ffw_sh5_rev1_follower/ffw_sh5_follower.ros2_control.xacro",
+      "sha256": "11dd0f8e4bb5ee32831ba376d1e51836506c5c8ddc12d21af9a53e3d8ebcdbf9",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "gz_ros2_control/GazeboSimSystem",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"ffw_sh5_follower_system\" params=\"use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "/dev/follower"
+        },
+        {
+          "name": "baud_rate",
+          "value": "4000000"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "dynamixel_hardware_interface/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_description/ros2_control/ffw_sh5_rev1_follower/ffw_sh5_sensor.ros2_control.xacro",
+      "sha256": "751a6ac264342ca536a9a0233aeed9bc1ab08fc9651e497a89735b8b3a4ac698",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"ffw_sh5_sensor_system\" params=\"use_sim:=^|false use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "/dev/ttyUSB1"
+        },
+        {
+          "name": "baud_rate",
+          "value": "4000000"
+        },
+        {
+          "name": "error_timeout_ms",
+          "value": "500"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "ffw_sensor/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_sapiens/ai_sapiens_description/ros2_control/k1_rev1/k1.ros2_control.xacro",
+      "sha256": "3dea9015aa65edad0fb13ffd8a5d64574c56efca4489b35e1e2db31afe23ab4e",
+      "plugins": [],
+      "macro_declarations": [
+        "<xacro:macro name=\"k1_system\" params=\"use_mock_hardware:=^|${default_use_mock_hardware} mock_sensor_commands:=^|${default_mock_sensor_commands}\">"
+      ],
+      "hardware_parameters": []
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_sapiens/ai_sapiens_description/ros2_control/k1_rev1/k1_hat.ros2_control.xacro",
+      "sha256": "5deb450f2e231d6cf09d3b69311ca4b3655b74603e5bb7ced41faf191cecf239",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"k1_hat_system\" params=\"use_mock_hardware:=^|false mock_sensor_commands:=^|false baud_rate:=^|6000000 id:=^|201\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "e2d2udp:192.168.10.1:5006"
+        },
+        {
+          "name": "baud_rate",
+          "value": "${baud_rate}"
+        },
+        {
+          "name": "error_timeout_ms",
+          "value": "500"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_sapiens/ai_sapiens_description/ros2_control/k1_rev1/k1_imu.ros2_control.xacro",
+      "sha256": "ee5fcc2b48e1d16129d1ea464c394539eff748b5c3ee5d98ee057d00c5f2407c",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"k1_imu_system\" params=\"use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "e2d2udp:192.168.10.1:5005"
+        },
+        {
+          "name": "baud_rate",
+          "value": "6000000"
+        },
+        {
+          "name": "error_timeout_ms",
+          "value": "500"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "k1_imu/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_sapiens/ai_sapiens_description/ros2_control/k1_rev1/k1_left_arm.ros2_control.xacro",
+      "sha256": "5ac7912cebb5aec63b3fe062b949f88c5c821816a3a8f81b6ff731859fb7ffc7",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"k1_left_arm_system\" params=\"use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "e2d2udp:192.168.10.1:5002"
+        },
+        {
+          "name": "baud_rate",
+          "value": "6000000"
+        },
+        {
+          "name": "error_timeout_ms",
+          "value": "500"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "k1_left_arm/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_sapiens/ai_sapiens_description/ros2_control/k1_rev1/k1_left_leg.ros2_control.xacro",
+      "sha256": "0e196e02576888d906504573bd503d913dfbf9e9a28052f5bc34b5b75aafffab",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"k1_left_leg_system\" params=\"use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "e2d2udp:192.168.10.1:5003"
+        },
+        {
+          "name": "baud_rate",
+          "value": "6000000"
+        },
+        {
+          "name": "error_timeout_ms",
+          "value": "500"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "k1_left_leg/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_sapiens/ai_sapiens_description/ros2_control/k1_rev1/k1_right_arm.ros2_control.xacro",
+      "sha256": "02db9b3bc9da8a685a86ac8ace28cd8a72bf28261c12146560d6f7b73404b9f5",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"k1_right_arm_system\" params=\"use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "e2d2udp:192.168.10.1:5001"
+        },
+        {
+          "name": "baud_rate",
+          "value": "6000000"
+        },
+        {
+          "name": "error_timeout_ms",
+          "value": "500"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "k1_right_arm/set_dxl_torque"
+        }
+      ]
+    },
+    {
+      "path": "/Users/ojaehong/RX_automation/ai_sapiens/ai_sapiens_description/ros2_control/k1_rev1/k1_right_leg.ros2_control.xacro",
+      "sha256": "6cbca5fdc86b7aa6eb92342b44b0baa61cd53bbb8eafb148dd9e6d2680ee2267",
+      "plugins": [
+        "dynamixel_hardware_interface/DynamixelHardware",
+        "mock_components/GenericSystem"
+      ],
+      "macro_declarations": [
+        "<xacro:macro name=\"k1_right_leg_system\" params=\"use_mock_hardware:=^|false mock_sensor_commands:=^|false\">"
+      ],
+      "hardware_parameters": [
+        {
+          "name": "port_name",
+          "value": "e2d2udp:192.168.10.1:5004"
+        },
+        {
+          "name": "baud_rate",
+          "value": "6000000"
+        },
+        {
+          "name": "error_timeout_ms",
+          "value": "500"
+        },
+        {
+          "name": "disable_torque_at_init",
+          "value": "true"
+        },
+        {
+          "name": "set_dxl_torque_srv_name",
+          "value": "k1_right_leg/set_dxl_torque"
+        }
+      ]
+    }
+  ],
+  "method": "Read-only text extraction. Conditional real/mock/simulation plugins remain listed; no xacro expansion, ROS launch, build, container or hardware commands were run."
+}

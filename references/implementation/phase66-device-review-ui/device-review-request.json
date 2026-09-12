@@ -1,0 +1,18 @@
+{
+  "schema": "rx.device-review-request.v1",
+  "id": "c85913de-372b-4633-9c3b-e2c443a12d70",
+  "intake": "c70eda1a-5585-4e74-a3da-692087b8d5c0",
+  "installation": "6760044f-ba70-4d0b-928b-363c1763eb06",
+  "cell": "cell/demo",
+  "package_manifest": "7b6a794f042ec97ffd5cd70f5f748b1d2daf9edaed5038ba695105e2ecf6d7cd",
+  "package_signature": "42b86d12905b73ca1a40e48af0aff01da204bec275dc4e81d8ff219affbf927b",
+  "catalog": {
+    "sha256": "6c623d1279b9e81fb4af631688f005c067112f384d98af6014b3eef9f91d17d2",
+    "schema_id": "rx.device-operation-catalog.v1",
+    "size_bytes": "2589"
+  },
+  "configuration_digest": "2a351551850735aaed7f886e2710e7db98cb9969642504a6c91d210b2e340bfc",
+  "package_policy_fingerprint": "b7b754abd9e62624f80faedf20c55aafc1cebdd5fc4bda386080ac8ef512854f",
+  "package_policy_file_digest": "bbf0b988fbf664769a8a268dc4ce647e79d4f547872a4668e048f7f831ff610d",
+  "verification_authority_digest": "f61de0894652883fb77fd6d66565ae8d9ed6658a836306ea108142238f5e8c23"
+}

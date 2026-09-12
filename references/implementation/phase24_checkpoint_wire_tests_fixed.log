@@ -1,0 +1,10 @@
+   Compiling rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-api)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3.60s
+     Running tests/executor_ingress.rs (target/debug/deps/executor_ingress-e1afbc6ccad4d637)
+
+running 2 tests
+test branch_checkpoint_preparation_and_lost_commit_reply_use_the_frozen_wire_contract ... ok
+test wait_checkpoint_start_and_resolution_use_the_frozen_wire_contract ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 4 filtered out; finished in 0.15s
+

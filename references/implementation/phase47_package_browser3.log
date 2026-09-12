@@ -1,0 +1,46 @@
+Starting server 1/2: /Users/ojaehong/RX_automation/rx_ws/rx-platform/target/debug/rx-platform-local serve /var/folders/lb/p5jhj4751yq56zx_891wm0th0000gn/T/rx-package-browser-66mjl41t/fixture/installation 127.0.0.1:8080 http://127.0.0.1:5173
+Waiting for server on port 8080...
+Server ready on port 8080
+Starting server 2/2: npm --prefix /Users/ojaehong/RX_automation/rx_ws/rx-solutions/apps/operator run dev
+Waiting for server on port 5173...
+Server ready on port 5173
+
+All 2 server(s) ready
+Running: /Users/ojaehong/RX_automation/rx_ws/.tools/browser-python/bin/python /Users/ojaehong/RX_automation/rx_ws/rx-solutions/apps/operator/tests/browser_packages.py
+
+
+Stopping 2 server(s)...
+Server 1 stopped
+Server 2 stopped
+All servers stopped
+Exception in callback Connection.dispatch.<locals>._done_callback(<Task cancell..._page.py:294>>) at /Users/ojaehong/RX_automation/rx_ws/.tools/browser-python/lib/python3.12/site-packages/playwright/_impl/_connection.py:539
+handle: <Handle Connection.dispatch.<locals>._done_callback(<Task cancell..._page.py:294>>) at /Users/ojaehong/RX_automation/rx_ws/.tools/browser-python/lib/python3.12/site-packages/playwright/_impl/_connection.py:539>
+Traceback (most recent call last):
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/apps/operator/tests/browser_packages.py", line 34, in <module>
+    page.route('**/api/v1/process-review/decisions',lose,times=1);page.get_by_role('button',name='이 버전 승인 기록',exact=True).click();expect(page.get_by_text('요청 결과를 확인해야 합니다',exact=True)).to_be_visible();assert context.request.get(origin+f'/api/v1/process-review?cell=cell%2Fdemo&id={review}').json()['decision']['revision']=='1'
+                                                                                                                                                                                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ojaehong/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "/Users/ojaehong/RX_automation/rx_ws/.tools/browser-python/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 540, in _done_callback
+    exc = future.exception()
+          ^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/.tools/browser-python/lib/python3.12/site-packages/playwright/_impl/_page.py", line 308, in _on_route
+    handled = await route_handler.handle(route)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/.tools/browser-python/lib/python3.12/site-packages/playwright/_impl/_helper.py", line 442, in handle
+    return await self._handle_internal(route)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/.tools/browser-python/lib/python3.12/site-packages/playwright/_impl/_helper.py", line 478, in _handle_internal
+    await handler_finished_future
+asyncio.exceptions.CancelledError
+Traceback (most recent call last):
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/apps/operator/tests/browser_packages.py", line 34, in <module>
+    page.route('**/api/v1/process-review/decisions',lose,times=1);page.get_by_role('button',name='이 버전 승인 기록',exact=True).click();expect(page.get_by_text('요청 결과를 확인해야 합니다',exact=True)).to_be_visible();assert context.request.get(origin+f'/api/v1/process-review?cell=cell%2Fdemo&id={review}').json()['decision']['revision']=='1'
+                                                                                                                                                                                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+

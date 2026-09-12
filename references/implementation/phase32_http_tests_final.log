@@ -1,0 +1,13 @@
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+   Compiling rx-runtime v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-runtime)
+   Compiling rx-protocol-adapter v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-protocol-adapter)
+   Compiling rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-api)
+error[E0433]: cannot find type `Reply` in this scope
+    --> crates/rx-api/tests/http.rs:1014:9
+     |
+1014 |     let Reply::Cell(revision, cell) = f
+     |         ^^^^^ use of undeclared type `Reply`
+
+For more information about this error, try `rustc --explain E0433`.
+error: could not compile `rx-api` (test "http") due to 1 previous error
+warning: build failed, waiting for other jobs to finish...

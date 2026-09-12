@@ -1,0 +1,299 @@
+{
+  "schema": "rx.ros-jtc-bridge-test.v1",
+  "status": "PASS",
+  "cases": [
+    "catalog_and_read_only_controller_inspection",
+    "invalid_trajectory_and_implicit_tolerances_send_nothing",
+    "inactive_or_different_joint_claims_rejected",
+    "supplied_uuid_single_send_result_query_and_pending_admission",
+    "unknown_goal_with_default_success_code_is_not_success",
+    "native_rejection_abort_and_contradictory_result_preserved",
+    "exact_uuid_cancel_without_cancel_all_and_distinct_terminal_result",
+    "deadline_during_controller_preflight_has_no_native_send",
+    "stale_context_sequence_and_duplicate_json_rejected",
+    "restart_changes_bridge_identity_and_does_not_adopt_cancel_authority",
+    "lost_send_reply_is_not_retried_and_late_result_does_not_clear_admission_fault",
+    "lost_cancel_reply_is_retained_and_exact_cancel_is_not_resent",
+    "follower_controller_with_integrated_gripper_has_distinct_joint_set",
+    "leader_impedance_and_other_controller_types_not_mislabeled_as_jtc",
+    "catalog_source_pin_mismatch_rejected",
+    "all_51_catalog_jtc_declarations_select_without_sending_goals"
+  ],
+  "catalog_declarations": [
+    {
+      "support_id": "OM-01",
+      "controller": "arm_controller",
+      "joint_count": 4
+    },
+    {
+      "support_id": "OM-02",
+      "controller": "arm_controller",
+      "joint_count": 5
+    },
+    {
+      "support_id": "OM-03",
+      "controller": "arm_controller",
+      "joint_count": 6
+    },
+    {
+      "support_id": "OM-05",
+      "controller": "arm_controller",
+      "joint_count": 6
+    },
+    {
+      "support_id": "OM-06",
+      "controller": "arm_controller",
+      "joint_count": 6
+    },
+    {
+      "support_id": "OM-07",
+      "controller": "arm_controller",
+      "joint_count": 7
+    },
+    {
+      "support_id": "OM-10",
+      "controller": "arm_controller",
+      "joint_count": 7
+    },
+    {
+      "support_id": "FFW-01",
+      "controller": "arm_l_controller",
+      "joint_count": 8
+    },
+    {
+      "support_id": "FFW-01",
+      "controller": "arm_r_controller",
+      "joint_count": 8
+    },
+    {
+      "support_id": "FFW-01",
+      "controller": "head_controller",
+      "joint_count": 2
+    },
+    {
+      "support_id": "FFW-01",
+      "controller": "lift_controller",
+      "joint_count": 1
+    },
+    {
+      "support_id": "FFW-02-REV2",
+      "controller": "arm_l_controller",
+      "joint_count": 8
+    },
+    {
+      "support_id": "FFW-02-REV2",
+      "controller": "arm_r_controller",
+      "joint_count": 8
+    },
+    {
+      "support_id": "FFW-02-REV2",
+      "controller": "head_controller",
+      "joint_count": 2
+    },
+    {
+      "support_id": "FFW-02-REV2",
+      "controller": "lift_controller",
+      "joint_count": 1
+    },
+    {
+      "support_id": "FFW-02-REV3",
+      "controller": "arm_l_controller",
+      "joint_count": 8
+    },
+    {
+      "support_id": "FFW-02-REV3",
+      "controller": "arm_r_controller",
+      "joint_count": 8
+    },
+    {
+      "support_id": "FFW-02-REV3",
+      "controller": "head_controller",
+      "joint_count": 2
+    },
+    {
+      "support_id": "FFW-02-REV3",
+      "controller": "lift_controller",
+      "joint_count": 1
+    },
+    {
+      "support_id": "FFW-02-REV4",
+      "controller": "arm_l_controller",
+      "joint_count": 8
+    },
+    {
+      "support_id": "FFW-02-REV4",
+      "controller": "arm_r_controller",
+      "joint_count": 8
+    },
+    {
+      "support_id": "FFW-02-REV4",
+      "controller": "head_controller",
+      "joint_count": 2
+    },
+    {
+      "support_id": "FFW-02-REV4",
+      "controller": "lift_controller",
+      "joint_count": 1
+    },
+    {
+      "support_id": "FFW-03",
+      "controller": "arm_l_controller",
+      "joint_count": 7
+    },
+    {
+      "support_id": "FFW-03",
+      "controller": "arm_r_controller",
+      "joint_count": 7
+    },
+    {
+      "support_id": "FFW-03",
+      "controller": "head_controller",
+      "joint_count": 2
+    },
+    {
+      "support_id": "FFW-03",
+      "controller": "lift_controller",
+      "joint_count": 1
+    },
+    {
+      "support_id": "FFW-03",
+      "controller": "hand_l_controller",
+      "joint_count": 20
+    },
+    {
+      "support_id": "FFW-03",
+      "controller": "hand_r_controller",
+      "joint_count": 20
+    },
+    {
+      "support_id": "FFW-04",
+      "controller": "arm_l_controller",
+      "joint_count": 8
+    },
+    {
+      "support_id": "FFW-04",
+      "controller": "arm_r_controller",
+      "joint_count": 8
+    },
+    {
+      "support_id": "FFW-04",
+      "controller": "head_controller",
+      "joint_count": 2
+    },
+    {
+      "support_id": "FFW-04",
+      "controller": "lift_controller",
+      "joint_count": 1
+    },
+    {
+      "support_id": "FFW-04",
+      "controller": "swerve_steering_initial_position_controller",
+      "joint_count": 3
+    },
+    {
+      "support_id": "FFW-05",
+      "controller": "arm_l_controller",
+      "joint_count": 8
+    },
+    {
+      "support_id": "FFW-05",
+      "controller": "arm_r_controller",
+      "joint_count": 8
+    },
+    {
+      "support_id": "FFW-05",
+      "controller": "head_controller",
+      "joint_count": 2
+    },
+    {
+      "support_id": "FFW-05",
+      "controller": "lift_controller",
+      "joint_count": 1
+    },
+    {
+      "support_id": "FFW-05",
+      "controller": "swerve_steering_initial_position_controller",
+      "joint_count": 3
+    },
+    {
+      "support_id": "FFW-06",
+      "controller": "arm_l_controller",
+      "joint_count": 7
+    },
+    {
+      "support_id": "FFW-06",
+      "controller": "arm_r_controller",
+      "joint_count": 7
+    },
+    {
+      "support_id": "FFW-06",
+      "controller": "head_controller",
+      "joint_count": 2
+    },
+    {
+      "support_id": "FFW-06",
+      "controller": "lift_controller",
+      "joint_count": 1
+    },
+    {
+      "support_id": "FFW-06",
+      "controller": "swerve_steering_initial_position_controller",
+      "joint_count": 3
+    },
+    {
+      "support_id": "FFW-06",
+      "controller": "hand_l_controller",
+      "joint_count": 20
+    },
+    {
+      "support_id": "FFW-06",
+      "controller": "hand_r_controller",
+      "joint_count": 20
+    },
+    {
+      "support_id": "FFW-08",
+      "controller": "arm_l_controller",
+      "joint_count": 8
+    },
+    {
+      "support_id": "FFW-08",
+      "controller": "arm_r_controller",
+      "joint_count": 8
+    },
+    {
+      "support_id": "FFW-08",
+      "controller": "head_controller",
+      "joint_count": 2
+    },
+    {
+      "support_id": "FFW-08",
+      "controller": "lift_controller",
+      "joint_count": 1
+    },
+    {
+      "support_id": "FFW-08",
+      "controller": "swerve_steering_initial_position_controller",
+      "joint_count": 3
+    }
+  ],
+  "server": {
+    "received": 7,
+    "accepted": 6,
+    "cancelled": 2,
+    "list_calls": 13,
+    "goals": [
+      "50f12f70-a26f-423e-a729-247b2d156e27",
+      "176b3497-2e98-4af9-93f1-e9ca816b6084",
+      "206af142-65b5-4fc9-8b48-aeef4ffbcbfd",
+      "cf82e34a-1a2f-477e-818f-5d2c22ea42a3",
+      "47659545-14d0-43e4-843b-a232433e160f",
+      "0aff4533-d5c1-4760-a343-9a51c7f40481"
+    ],
+    "active": true,
+    "extra_claim": false,
+    "list_delay": 0,
+    "cancel_delay": 0.0
+  },
+  "physical_equipment_used": false,
+  "host_native_journal_connected": false
+}

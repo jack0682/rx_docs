@@ -1,0 +1,40 @@
+{
+  "stage": "host_mtls_rpc",
+  "recorded_at": "2026-09-10T06:48:45.147000+00:00",
+  "host_tests_passed": 16,
+  "mtls_tests_passed": 5,
+  "clippy": "passed",
+  "source_sha256": {
+    "Cargo.lock": "37977348862a2bff8e394898bd48c2cc3514dee7679d8b63a6c6e2040aa25b3d",
+    "Cargo.toml": "dff09b846d5162bd209de67477a1d7f782bfd639e62898e8cc8be56b35a9bf0b",
+    "runtime/rx-host/Cargo.toml": "1c6d56a9b645fcaffddadc33b9b8e306e93008559891758a2eef3741b7f9a9c1",
+    "runtime/rx-host/build.rs": "0ff20f4ae7dab8a009ac7e174a6d166161e719174e5bed9d8cd564144f81a226",
+    "runtime/rx-host/src/gate/dispatch.rs": "ab6a88e462e4d164219d35b05380c6ffe5c14516df26886bd9f8bf4413d689a5",
+    "runtime/rx-host/src/gate/grants.rs": "a41348f7b98d9332e6173d54a86106d9dd2aa71a181268c014a48dccd6b4263e",
+    "runtime/rx-host/src/gate/mod.rs": "9c0819a5effd05d9b6da2dac7a94553d41a6b479fe394c056603025e01feef68",
+    "runtime/rx-host/src/gate/receipts.rs": "f53a1d94c9f16e35420ced3226e47a82546651b860100ee74f404c463149de26",
+    "runtime/rx-host/src/gate/scopes.rs": "33793dc1e704907230b130c3655cfbb35f36f1a844799991d3ae0d02cca009b8",
+    "runtime/rx-host/src/gate/validation.rs": "3394275446779de96bb56ab6f6af31aee8e148ea05b2b197641baca74dd8981c",
+    "runtime/rx-host/src/journal.rs": "a3ea69b9236c3f44347d7d0d4479a34cc50ca906a744efec43a400e9fb216b43",
+    "runtime/rx-host/src/lib.rs": "29d0d8211ef04c46dd2fcc819d7cf3fa6acc1530f8f902f882ab41332b5dd54e",
+    "runtime/rx-host/src/model.rs": "2516def7d4dd87c21b1e4a4a522f7e2ecd5ce8aa34bf19cdd5ffb1ea16ad175f",
+    "runtime/rx-host/src/native.rs": "c24c0aa09153dc259b5fbacdf35db14606b46c1f232ec5b9be4a4960935251c0",
+    "runtime/rx-host/src/rpc/cell_host.rs": "a79d22cc93df611267c3893e786ce51af32d05c7468102daa2296df7f995c683",
+    "runtime/rx-host/src/rpc/host_service.rs": "8d25811a80994f5f2e2bc154da67da306b85f5adfebc1266b160ae640681f013",
+    "runtime/rx-host/src/rpc/mapping.rs": "3c1475ed7c697d12b6ecbb80e72153b1b23b91528a2b566979644f06300b8f4a",
+    "runtime/rx-host/src/rpc/mod.rs": "900cba9630dac310728b2e9ab74b485c1310291900a8a668db737102401e19f8",
+    "runtime/rx-host/src/rpc/session.rs": "cef367cdd9912bb05b7d0956b0f4e3f0fd887a08ad9a877b90426054eafaa029",
+    "runtime/rx-host/src/simulation.rs": "9e0ede5efc49f988822acb1c3d0041868e2eace41f453756a8cc212151a82c42",
+    "runtime/rx-host/tests/gate.rs": "da8abc3aa8326ec769f39a8f55054375627b88496405f38fff1ab7024f74e035",
+    "runtime/rx-host/tests/mtls.rs": "7c45ea12c6d8ced03f6b67caccd5ceddd6446cf616e57f76143450fa70ed010f",
+    "runtime/rx-host/tests/process_crash.rs": "d894911e7dfd9be35b60f2a6d870efa443d3096277b88629f3e352b960610a4e",
+    "runtime/rx-host/tests/support/crash_harness.rs": "3f5100f281acf83ac4c530bff5b8e02faa593b1c7d5589877d776da4f1df017c",
+    "sdk/source-lock.json": "bffa346f9931f0d15ecbabfc514b253c1767256e829c47eea8f717a33feb70d2"
+  },
+  "verification_output_sha256": "58209264f31d5ce8b97c095d5040a61ce8c81eed3d93e237c2ee87b9aeca6911",
+  "limits": [
+    "platform-like test client; application/outbox not connected yet",
+    "continuous Evidence.Publish and durable ack/catch-up pending",
+    "no physical hardware or product deployment validation"
+  ]
+}

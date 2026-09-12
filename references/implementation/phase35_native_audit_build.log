@@ -1,0 +1,156 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Solutions.Dockerfile
+#1 transferring dockerfile: 6.12kB done
+#1 DONE 0.0s
+
+#2 [context robotis] load .dockerignore
+#2 transferring robotis: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/ros:jazzy-ros-base@sha256:386d06ec6d4188f731bae5678e07b4cb64a4e4d4152090c0bd1f881dcf7706f5
+#3 DONE 0.0s
+
+#4 [native-dependencies 1/8] FROM docker.io/library/ros:jazzy-ros-base@sha256:386d06ec6d4188f731bae5678e07b4cb64a4e4d4152090c0bd1f881dcf7706f5
+#4 resolve docker.io/library/ros:jazzy-ros-base@sha256:386d06ec6d4188f731bae5678e07b4cb64a4e4d4152090c0bd1f881dcf7706f5 done
+#4 DONE 0.0s
+
+#5 [context robotis] load from client
+#5 transferring robotis: 45B done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 71.29kB done
+#6 DONE 0.0s
+
+#7 [context robotis] load from client
+#7 transferring robotis: 349.07kB 0.2s done
+#7 DONE 0.2s
+
+#8 [native-build 2/5] COPY --from=robotis / /workspace/src/
+#8 CACHED
+
+#9 [native-dependencies 2/8] RUN apt-get update && apt-get install -y --no-install-recommends     build-essential cmake ninja-build curl ca-certificates python3-colcon-common-extensions     python3-rosdep python3-yaml libyaml-cpp-dev libeigen3-dev     && rm -rf /var/lib/apt/lists/*
+#9 CACHED
+
+#10 [native-build 3/5] COPY tools/native_source_inventory.py /opt/rx/tools/native_source_inventory.py
+#10 CACHED
+
+#11 [native-build 1/5] WORKDIR /workspace
+#11 CACHED
+
+#12 [native-build 4/5] RUN python3 /opt/rx/tools/native_source_inventory.py /workspace/src
+#12 CACHED
+
+#13 [native-dependencies 4/8] COPY tools/materialize_package_manifests.py /opt/rx/tools/materialize_package_manifests.py
+#13 CACHED
+
+#14 [native-dependencies 7/8] RUN if [ ! -f /etc/ros/rosdep/sources.list.d/20-default.list ]; then rosdep init; fi     && rosdep update --rosdistro jazzy     && apt-get update     && rosdep install --from-paths /workspace/dependencies --ignore-src --rosdistro jazzy -y     && apt-get install -y --no-install-recommends ros-jazzy-rmw-zenoh-cpp     && mkdir -p /opt/rx/manifests     && dpkg-query -W -f='${Package}\t${Version}\t${Architecture}\n' | sort > /opt/rx/manifests/native-packages.tsv     && rm -rf /var/lib/apt/lists/*
+#14 CACHED
+
+#15 [native-dependencies 5/8] RUN python3 /opt/rx/tools/materialize_package_manifests.py /opt/rx/input/package-manifests.json /workspace/dependencies
+#15 CACHED
+
+#16 [native-dependencies 8/8] RUN case "arm64" in       arm64) ORT_ARCH=aarch64; ORT_SHA=7c63c73560ed76b1fac6cff8204ffe34fe180e70d6582b5332ec094810241e5c ;;       amd64) ORT_ARCH=x64; ORT_SHA=1fa4dcaef22f6f7d5cd81b28c2800414350c10116f5fdd46a2160082551c5f9b ;;       *) exit 1 ;;     esac     && curl --fail --location --proto '=https' --tlsv1.2 "https://github.com/microsoft/onnxruntime/releases/download/v1.23.2/onnxruntime-linux-${ORT_ARCH}-1.23.2.tgz" -o /tmp/ort.tgz     && echo "${ORT_SHA}  /tmp/ort.tgz" | sha256sum --check     && mkdir -p /opt/onnxruntime     && tar -xzf /tmp/ort.tgz --strip-components=1 -C /opt/onnxruntime     && rm /tmp/ort.tgz
+#16 CACHED
+
+#17 [native-dependencies 6/8] RUN mkdir -p /etc/ros/rosdep/sources.list.d &&     printf 'yaml https://raw.githubusercontent.com/ros/rosdistro/86ac06531559f070ce9ea5ad485714395336ec6f/rosdep/base.yaml\nyaml https://raw.githubusercontent.com/ros/rosdistro/86ac06531559f070ce9ea5ad485714395336ec6f/rosdep/python.yaml\n' > /etc/ros/rosdep/sources.list.d/20-default.list
+#17 CACHED
+
+#18 [native-dependencies 3/8] COPY --from=robotis /package-manifests.json /opt/rx/input/package-manifests.json
+#18 CACHED
+
+#19 [native-build 5/5] RUN --network=none source /opt/ros/jazzy/setup.bash     && colcon list --base-paths src --names-only | sort > /opt/rx/manifests/native-source-packages.txt     && colcon build --base-paths src --executor sequential --merge-install        --install-base /opt/rx/robotis --cmake-args -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DCMAKE_AUTOGEN_PARALLEL=1 -DONNXRUNTIME_ROOT=/opt/onnxruntime     && cp src/source-lock.json /opt/rx/manifests/native-sources.json
+#19 CACHED
+
+#20 [native-audit 1/4] COPY tools/audit_native_install.py /opt/rx/tools/audit_native_install.py
+#20 DONE 0.0s
+
+#21 [native-audit 2/4] COPY native/support/ort_inspect.cpp /tmp/ort_inspect.cpp
+#21 DONE 0.0s
+
+#22 [native-audit 3/4] COPY catalogs/robotis-support.v1.json /opt/rx/manifests/robotis-support.v1.json
+#22 DONE 0.0s
+
+#23 [native-audit 4/4] RUN --network=none g++ -std=c++17 /tmp/ort_inspect.cpp -I/opt/onnxruntime/include -L/opt/onnxruntime/lib -Wl,-rpath,/opt/onnxruntime/lib -lonnxruntime -o /opt/rx/tools/ort-inspect     && source /opt/ros/jazzy/setup.bash && source /opt/rx/robotis/setup.bash     && python3 /opt/rx/tools/audit_native_install.py --catalog /opt/rx/manifests/robotis-support.v1.json --output /opt/rx/manifests/native-install-audit.json
+#23 1.432 unresolved native dependency: /opt/rx/robotis/lib/ai_sapiens_sim2real/ai_sapiens_sim2real_node
+#23 1.432 	linux-vdso.so.1 (0x0000ffffb78cc000)
+#23 1.432 	librealtime_tools.so => /opt/ros/jazzy/lib/librealtime_tools.so (0x0000ffffb7550000)
+#23 1.432 	libai_sapiens_interfaces__rosidl_typesupport_cpp.so => /opt/rx/robotis/lib/libai_sapiens_interfaces__rosidl_typesupport_cpp.so (0x0000ffffb7520000)
+#23 1.432 	libyaml-cpp.so.0.8 => /lib/aarch64-linux-gnu/libyaml-cpp.so.0.8 (0x0000ffffb74a0000)
+#23 1.432 	libonnxruntime.so.1 => not found
+#23 1.432 	librclcpp.so => /opt/ros/jazzy/lib/librclcpp.so (0x0000ffffb7210000)
+#23 1.432 	liblibstatistics_collector.so => /opt/ros/jazzy/lib/liblibstatistics_collector.so (0x0000ffffb71e0000)
+#23 1.432 	libstatistics_msgs__rosidl_typesupport_cpp.so => /opt/ros/jazzy/lib/libstatistics_msgs__rosidl_typesupport_cpp.so (0x0000ffffb71b0000)
+#23 1.432 	librcl.so => /opt/ros/jazzy/lib/librcl.so (0x0000ffffb7140000)
+#23 1.432 	libtracetools.so => /opt/ros/jazzy/lib/libtracetools.so (0x0000ffffb7100000)
+#23 1.432 	libsensor_msgs__rosidl_typesupport_cpp.so => /opt/ros/jazzy/lib/libsensor_msgs__rosidl_typesupport_cpp.so (0x0000ffffb70d0000)
+#23 1.432 	libgeometry_msgs__rosidl_typesupport_cpp.so => /opt/ros/jazzy/lib/libgeometry_msgs__rosidl_typesupport_cpp.so (0x0000ffffb70a0000)
+#23 1.432 	libstd_msgs__rosidl_typesupport_cpp.so => /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_cpp.so (0x0000ffffb7070000)
+#23 1.432 	librmw.so => /opt/ros/jazzy/lib/librmw.so (0x0000ffffb7040000)
+#23 1.432 	libament_index_cpp.so => /opt/ros/jazzy/lib/libament_index_cpp.so (0x0000ffffb7010000)
+#23 1.432 	libclass_loader.so => /opt/ros/jazzy/lib/libclass_loader.so (0x0000ffffb6fe0000)
+#23 1.432 	librcpputils.so => /opt/ros/jazzy/lib/librcpputils.so (0x0000ffffb6fb0000)
+#23 1.432 	librcutils.so => /opt/ros/jazzy/lib/librcutils.so (0x0000ffffb6f70000)
+#23 1.432 	libconsole_bridge.so.1.0 => /lib/aarch64-linux-gnu/libconsole_bridge.so.1.0 (0x0000ffffb6f40000)
+#23 1.432 	libtinyxml2.so.10 => /lib/aarch64-linux-gnu/libtinyxml2.so.10 (0x0000ffffb6f00000)
+#23 1.432 	libstdc++.so.6 => /lib/aarch64-linux-gnu/libstdc++.so.6 (0x0000ffffb6c70000)
+#23 1.432 	libm.so.6 => /lib/aarch64-linux-gnu/libm.so.6 (0x0000ffffb6bc0000)
+#23 1.432 	libgcc_s.so.1 => /lib/aarch64-linux-gnu/libgcc_s.so.1 (0x0000ffffb6b80000)
+#23 1.432 	libc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000ffffb69c0000)
+#23 1.432 	/lib/ld-linux-aarch64.so.1 (0x0000ffffb7880000)
+#23 1.432 	libcap.so.2 => /lib/aarch64-linux-gnu/libcap.so.2 (0x0000ffffb6990000)
+#23 1.432 	libai_sapiens_interfaces__rosidl_generator_c.so => /opt/rx/robotis/lib/libai_sapiens_interfaces__rosidl_generator_c.so (0x0000ffffb6950000)
+#23 1.432 	librosidl_typesupport_cpp.so => /opt/ros/jazzy/lib/librosidl_typesupport_cpp.so (0x0000ffffb6920000)
+#23 1.432 	librcl_yaml_param_parser.so => /opt/ros/jazzy/lib/librcl_yaml_param_parser.so (0x0000ffffb68f0000)
+#23 1.432 	librosgraph_msgs__rosidl_typesupport_cpp.so => /opt/ros/jazzy/lib/librosgraph_msgs__rosidl_typesupport_cpp.so (0x0000ffffb68c0000)
+#23 1.432 	librcl_logging_interface.so => /opt/ros/jazzy/lib/librcl_logging_interface.so (0x0000ffffb6890000)
+#23 1.432 	librmw_implementation.so => /opt/ros/jazzy/lib/librmw_implementation.so (0x0000ffffb6860000)
+#23 1.432 	libtype_description_interfaces__rosidl_typesupport_c.so => /opt/ros/jazzy/lib/libtype_description_interfaces__rosidl_typesupport_c.so (0x0000ffffb6830000)
+#23 1.432 	librcl_interfaces__rosidl_typesupport_cpp.so => /opt/ros/jazzy/lib/librcl_interfaces__rosidl_typesupport_cpp.so (0x0000ffffb67f0000)
+#23 1.432 	librosidl_dynamic_typesupport.so => /opt/ros/jazzy/lib/librosidl_dynamic_typesupport.so (0x0000ffffb67b0000)
+#23 1.432 	librosidl_typesupport_introspection_cpp.so => /opt/ros/jazzy/lib/librosidl_typesupport_introspection_cpp.so (0x0000ffffb6780000)
+#23 1.432 	librosidl_runtime_c.so => /opt/ros/jazzy/lib/librosidl_runtime_c.so (0x0000ffffb6740000)
+#23 1.432 	libstatistics_msgs__rosidl_generator_c.so => /opt/ros/jazzy/lib/libstatistics_msgs__rosidl_generator_c.so (0x0000ffffb6710000)
+#23 1.432 	librcl_logging_spdlog.so => /opt/ros/jazzy/lib/librcl_logging_spdlog.so (0x0000ffffb66e0000)
+#23 1.432 	librcl_interfaces__rosidl_typesupport_c.so => /opt/ros/jazzy/lib/librcl_interfaces__rosidl_typesupport_c.so (0x0000ffffb66b0000)
+#23 1.432 	libtype_description_interfaces__rosidl_generator_c.so => /opt/ros/jazzy/lib/libtype_description_interfaces__rosidl_generator_c.so (0x0000ffffb6670000)
+#23 1.432 	libyaml-0.so.2 => /lib/aarch64-linux-gnu/libyaml-0.so.2 (0x0000ffffb6630000)
+#23 1.432 	liblttng-ust.so.1 => /lib/aarch64-linux-gnu/liblttng-ust.so.1 (0x0000ffffb6590000)
+#23 1.432 	libsensor_msgs__rosidl_generator_c.so => /opt/ros/jazzy/lib/libsensor_msgs__rosidl_generator_c.so (0x0000ffffb6520000)
+#23 1.432 	libgeometry_msgs__rosidl_generator_c.so => /opt/ros/jazzy/lib/libgeometry_msgs__rosidl_generator_c.so (0x0000ffffb64c0000)
+#23 1.432 	libstd_msgs__rosidl_generator_c.so => /opt/ros/jazzy/lib/libstd_msgs__rosidl_generator_c.so (0x0000ffffb6470000)
+#23 1.432 	libservice_msgs__rosidl_generator_c.so => /opt/ros/jazzy/lib/libservice_msgs__rosidl_generator_c.so (0x0000ffffb6440000)
+#23 1.432 	libbuiltin_interfaces__rosidl_generator_c.so => /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_generator_c.so (0x0000ffffb6410000)
+#23 1.432 	librosgraph_msgs__rosidl_generator_c.so => /opt/ros/jazzy/lib/librosgraph_msgs__rosidl_generator_c.so (0x0000ffffb63d0000)
+#23 1.432 	librosidl_typesupport_c.so => /opt/ros/jazzy/lib/librosidl_typesupport_c.so (0x0000ffffb63a0000)
+#23 1.432 	librcl_interfaces__rosidl_generator_c.so => /opt/ros/jazzy/lib/librcl_interfaces__rosidl_generator_c.so (0x0000ffffb6330000)
+#23 1.432 	libspdlog.so.1.12 => /lib/aarch64-linux-gnu/libspdlog.so.1.12 (0x0000ffffb62b0000)
+#23 1.432 	libnuma.so.1 => /lib/aarch64-linux-gnu/libnuma.so.1 (0x0000ffffb6280000)
+#23 1.432 	liblttng-ust-common.so.1 => /lib/aarch64-linux-gnu/liblttng-ust-common.so.1 (0x0000ffffb6250000)
+#23 1.432 	liblttng-ust-tracepoint.so.1 => /lib/aarch64-linux-gnu/liblttng-ust-tracepoint.so.1 (0x0000ffffb6210000)
+#23 1.432 	libfmt.so.9 => /lib/aarch64-linux-gnu/libfmt.so.9 (0x0000ffffb61d0000)
+#23 1.432 
+#23 ERROR: process "/bin/bash -o pipefail -c g++ -std=c++17 /tmp/ort_inspect.cpp -I/opt/onnxruntime/include -L/opt/onnxruntime/lib -Wl,-rpath,/opt/onnxruntime/lib -lonnxruntime -o /opt/rx/tools/ort-inspect     && source /opt/ros/jazzy/setup.bash && source /opt/rx/robotis/setup.bash     && python3 /opt/rx/tools/audit_native_install.py --catalog /opt/rx/manifests/robotis-support.v1.json --output /opt/rx/manifests/native-install-audit.json" did not complete successfully: exit code: 1
+------
+ > [native-audit 4/4] RUN --network=none g++ -std=c++17 /tmp/ort_inspect.cpp -I/opt/onnxruntime/include -L/opt/onnxruntime/lib -Wl,-rpath,/opt/onnxruntime/lib -lonnxruntime -o /opt/rx/tools/ort-inspect     && source /opt/ros/jazzy/setup.bash && source /opt/rx/robotis/setup.bash     && python3 /opt/rx/tools/audit_native_install.py --catalog /opt/rx/manifests/robotis-support.v1.json --output /opt/rx/manifests/native-install-audit.json:
+1.432 	libbuiltin_interfaces__rosidl_generator_c.so => /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_generator_c.so (0x0000ffffb6410000)
+1.432 	librosgraph_msgs__rosidl_generator_c.so => /opt/ros/jazzy/lib/librosgraph_msgs__rosidl_generator_c.so (0x0000ffffb63d0000)
+1.432 	librosidl_typesupport_c.so => /opt/ros/jazzy/lib/librosidl_typesupport_c.so (0x0000ffffb63a0000)
+1.432 	librcl_interfaces__rosidl_generator_c.so => /opt/ros/jazzy/lib/librcl_interfaces__rosidl_generator_c.so (0x0000ffffb6330000)
+1.432 	libspdlog.so.1.12 => /lib/aarch64-linux-gnu/libspdlog.so.1.12 (0x0000ffffb62b0000)
+1.432 	libnuma.so.1 => /lib/aarch64-linux-gnu/libnuma.so.1 (0x0000ffffb6280000)
+1.432 	liblttng-ust-common.so.1 => /lib/aarch64-linux-gnu/liblttng-ust-common.so.1 (0x0000ffffb6250000)
+1.432 	liblttng-ust-tracepoint.so.1 => /lib/aarch64-linux-gnu/liblttng-ust-tracepoint.so.1 (0x0000ffffb6210000)
+1.432 	libfmt.so.9 => /lib/aarch64-linux-gnu/libfmt.so.9 (0x0000ffffb61d0000)
+1.432 
+------
+Solutions.Dockerfile:49
+--------------------
+  48 |     COPY catalogs/robotis-support.v1.json /opt/rx/manifests/robotis-support.v1.json
+  49 | >>> RUN --network=none g++ -std=c++17 /tmp/ort_inspect.cpp -I/opt/onnxruntime/include -L/opt/onnxruntime/lib -Wl,-rpath,/opt/onnxruntime/lib -lonnxruntime -o /opt/rx/tools/ort-inspect \
+  50 | >>>     && source /opt/ros/jazzy/setup.bash && source /opt/rx/robotis/setup.bash \
+  51 | >>>     && python3 /opt/rx/tools/audit_native_install.py --catalog /opt/rx/manifests/robotis-support.v1.json --output /opt/rx/manifests/native-install-audit.json
+  52 |     
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/bash -o pipefail -c g++ -std=c++17 /tmp/ort_inspect.cpp -I/opt/onnxruntime/include -L/opt/onnxruntime/lib -Wl,-rpath,/opt/onnxruntime/lib -lonnxruntime -o /opt/rx/tools/ort-inspect     && source /opt/ros/jazzy/setup.bash && source /opt/rx/robotis/setup.bash     && python3 /opt/rx/tools/audit_native_install.py --catalog /opt/rx/manifests/robotis-support.v1.json --output /opt/rx/manifests/native-install-audit.json" did not complete successfully: exit code: 1

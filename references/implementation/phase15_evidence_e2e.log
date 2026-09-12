@@ -1,0 +1,18 @@
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.10s
+   Compiling rx-domain v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-domain)
+   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-protocol)
+   Compiling rx-ports v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-ports)
+   Compiling rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-process-contract)
+   Compiling rx-storage v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-storage)
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+   Compiling rx-runtime v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-runtime)
+   Compiling rx-protocol-adapter v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-protocol-adapter)
+   Compiling rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-api)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.94s
+     Running tests/evidence_ingress.rs (target/debug/deps/evidence_ingress-18a6bd744ed707c1)
+
+running 1 test
+test publisher_catches_up_over_128_records_after_lost_ack_and_preserves_cursor_on_restart ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.78s
+

@@ -1,0 +1,8 @@
+    Checking rx-domain v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-domain)
+   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol)
+   Compiling rx-host v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-host)
+    Checking rx-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-package)
+    Checking rx-ports v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-ports)
+    Checking rx-storage v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-storage)
+    Checking rx-solution-catalog v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-solution-catalog)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 3.53s

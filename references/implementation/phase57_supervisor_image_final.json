@@ -1,0 +1,52 @@
+{
+  "schema": "rx.supervisor-image-test.v1",
+  "status": "PASS",
+  "image_id": "sha256:c77350a4f6419970d3337d97271c51199364e217f7ed18c77e86788b3234897e",
+  "architecture": "arm64",
+  "non_root": true,
+  "read_only_root": true,
+  "devices": [],
+  "first_instance": "55eda075-ccc2-4873-9deb-ac3e3845c952",
+  "second_instance": "4e843d84-6b42-404d-ba66-99274e76da2d",
+  "normal_stop": {
+    "plan": "71f4b4af-c64c-4c42-ab4e-461a7436c526",
+    "plan_digest": "11c5ac43e7ffe565dc23b3562c927fa5c4e846f6caeb2014beecb787c8253e17",
+    "records": {
+      "status": {
+        "attempts": "1",
+        "error": null,
+        "exit_code": 0,
+        "id": "status",
+        "instance": "55eda075-ccc2-4873-9deb-ac3e3845c952",
+        "phase": "EXITED",
+        "pid": 22
+      }
+    },
+    "schema": "rx.supervisor-state.v1",
+    "stop_requested": true
+  },
+  "unclean_reactivation": {
+    "plan": "71f4b4af-c64c-4c42-ab4e-461a7436c526",
+    "plan_digest": "11c5ac43e7ffe565dc23b3562c927fa5c4e846f6caeb2014beecb787c8253e17",
+    "records": {
+      "status": {
+        "attempts": "1",
+        "error": "supervisor ownership lost; no PID adoption or replay",
+        "exit_code": null,
+        "id": "status",
+        "instance": "4e843d84-6b42-404d-ba66-99274e76da2d",
+        "phase": "UNKNOWN",
+        "pid": 7
+      }
+    },
+    "schema": "rx.supervisor-state.v1",
+    "stop_requested": false
+  },
+  "tampered_program_rejected": true,
+  "limitations": [
+    "only the release-owned non-actuating status service was launched",
+    "forced crash affected only disposable test containers with no devices",
+    "platform-controlled driver authority is not connected",
+    "process readiness is not control preparedness or physical shutdown proof"
+  ]
+}

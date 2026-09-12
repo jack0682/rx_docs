@@ -1,0 +1,6 @@
+{"last_https_error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1082)>", "container_logs": "", "process_status": "{\"installation_id\":\"5e92e737-6c8b-40c3-9948-4b8c03a21a67\",\"phase\":\"SOFTWARE_READY_UNCOMMISSIONED\",\"physical_shutdown_assessed\":false,\"qualification_authority\":\"NOT_CONNECTED\",\"runtime_boot\":\"01a08f47-3ecc-75f4-933a-980fc66a13c9\",\"schema\":\"rx.platform-process-status.v1\",\"stop\":null}"}
+Traceback (most recent call last):
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_platform_image.py", line 35, in <module>
+    assert health and health['writer_available'] and health['admission_open'],health
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None

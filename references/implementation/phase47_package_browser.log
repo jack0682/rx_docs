@@ -1,0 +1,40 @@
+Starting server 1/2: /Users/ojaehong/RX_automation/rx_ws/rx-platform/target/debug/rx-platform-local serve /var/folders/lb/p5jhj4751yq56zx_891wm0th0000gn/T/rx-package-browser-tam_37ur/fixture/installation 127.0.0.1:8080 http://127.0.0.1:5173
+Waiting for server on port 8080...
+Server ready on port 8080
+Starting server 2/2: npm --prefix /Users/ojaehong/RX_automation/rx_ws/rx-solutions/apps/operator run dev
+Waiting for server on port 5173...
+Server ready on port 5173
+
+All 2 server(s) ready
+Running: /Users/ojaehong/RX_automation/rx_ws/.tools/browser-python/bin/python /Users/ojaehong/RX_automation/rx_ws/rx-solutions/apps/operator/tests/browser_packages.py
+
+
+Stopping 2 server(s)...
+Server 1 stopped
+Server 2 stopped
+All servers stopped
+Traceback (most recent call last):
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/apps/operator/tests/browser_packages.py", line 18, in <module>
+    page.locator('summary').filter(has_text='새 검토 요청 만들기').click();page.get_by_label('load 작업 연결',exact=True).select_option(index=1);page.get_by_role('button',name='검토 요청 생성',exact=True).click();expect(page.get_by_role('button',name='검증 요청 내보내기')).to_be_visible()
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/.tools/browser-python/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 20069, in select_option
+    self._sync(
+  File "/Users/ojaehong/RX_automation/rx_ws/.tools/browser-python/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/.tools/browser-python/lib/python3.12/site-packages/playwright/_impl/_locator.py", line 633, in select_option
+    return await self._frame.select_option(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/.tools/browser-python/lib/python3.12/site-packages/playwright/_impl/_frame.py", line 814, in select_option
+    return await self._channel.send("selectOption", self._timeout, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/.tools/browser-python/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/.tools/browser-python/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.select_option: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_label("load 작업 연결", exact=True)
+
+

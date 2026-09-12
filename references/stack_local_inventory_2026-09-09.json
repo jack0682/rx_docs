@@ -1,0 +1,1809 @@
+{
+  "recorded_utc": "2026-09-09T13:14:54.920631+00:00",
+  "repositories": [
+    {
+      "repo": "DynamixelSDK",
+      "head": "2ded684dff05a40ac78d6a16105c6ddc1b3b9930",
+      "packages": [
+        {
+          "path": "/Users/ojaehong/RX_automation/DynamixelSDK/ros/dynamixel_sdk/package.xml",
+          "name": "dynamixel_sdk",
+          "version": "4.0.5",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake"
+            },
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake_python"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/DynamixelSDK/ros/dynamixel_sdk_custom_interfaces/package.xml",
+          "name": "dynamixel_sdk_custom_interfaces",
+          "version": "4.0.5",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake"
+            },
+            {
+              "kind": "buildtool_depend",
+              "name": "rosidl_default_generators"
+            },
+            {
+              "kind": "build_depend",
+              "name": "builtin_interfaces"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "builtin_interfaces"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "rosidl_default_runtime"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/DynamixelSDK/ros/dynamixel_sdk_examples/package.xml",
+          "name": "dynamixel_sdk_examples",
+          "version": "4.0.5",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake"
+            },
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake_python"
+            },
+            {
+              "kind": "depend",
+              "name": "rclcpp"
+            },
+            {
+              "kind": "depend",
+              "name": "rclpy"
+            },
+            {
+              "kind": "depend",
+              "name": "dynamixel_sdk"
+            },
+            {
+              "kind": "depend",
+              "name": "dynamixel_sdk_custom_interfaces"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ament_lint_auto"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ament_lint_common"
+            }
+          ]
+        }
+      ],
+      "source_files": [
+        {
+          "path": "/Users/ojaehong/RX_automation/DynamixelSDK/README.md",
+          "sha256": "19ffcdfbefb7b4518949b0a82cee7724f5125b9ee5ed6b5fcff130e75612b3c6"
+        }
+      ]
+    },
+    {
+      "repo": "dynamixel_hardware_interface",
+      "head": "6bb5f93ecad1fe3c231e3ece580344e8f0a6efc3",
+      "packages": [
+        {
+          "path": "/Users/ojaehong/RX_automation/dynamixel_hardware_interface/package.xml",
+          "name": "dynamixel_hardware_interface",
+          "version": "1.5.2",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake"
+            },
+            {
+              "kind": "depend",
+              "name": "rclcpp"
+            },
+            {
+              "kind": "depend",
+              "name": "hardware_interface"
+            },
+            {
+              "kind": "depend",
+              "name": "pluginlib"
+            },
+            {
+              "kind": "depend",
+              "name": "realtime_tools"
+            },
+            {
+              "kind": "depend",
+              "name": "dynamixel_sdk"
+            },
+            {
+              "kind": "depend",
+              "name": "std_srvs"
+            },
+            {
+              "kind": "depend",
+              "name": "dynamixel_interfaces"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ament_lint_auto"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ament_lint_common"
+            }
+          ]
+        }
+      ],
+      "source_files": [
+        {
+          "path": "/Users/ojaehong/RX_automation/dynamixel_hardware_interface/README.md",
+          "sha256": "8b3ec69c7d94c71fd3d8b67fb0d43f20bce29b36f9c9e636226f928bd411ed5c"
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/dynamixel_hardware_interface/CMakeLists.txt",
+          "sha256": "a7c95495734d666691f083c300230d12b87a1035759c1deab82be1493e5921f5"
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/dynamixel_hardware_interface/dynamixel_hardware_interface_ci.repos",
+          "sha256": "97d2560a1b286808ddf32e01ece3586d50bd5b1dd2a04a61f57d982fdc0e2991"
+        }
+      ]
+    },
+    {
+      "repo": "open_manipulator",
+      "head": "9187eca0920458be04d2399906388f55242f81f1",
+      "packages": [
+        {
+          "path": "/Users/ojaehong/RX_automation/open_manipulator/open_manipulator/package.xml",
+          "name": "open_manipulator",
+          "version": "5.1.1",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "open_manipulator_bringup"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "open_manipulator_collision"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "open_manipulator_description"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "open_manipulator_gui"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "open_manipulator_moveit_config"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "open_manipulator_playground"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "open_manipulator_teleop"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "om_gravity_compensation_controller"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "om_joint_trajectory_command_broadcaster"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "om_spring_actuator_controller"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/open_manipulator/open_manipulator_bringup/package.xml",
+          "name": "open_manipulator_bringup",
+          "version": "5.1.1",
+          "dependencies": [
+            {
+              "kind": "depend",
+              "name": "rclpy"
+            },
+            {
+              "kind": "depend",
+              "name": "dynamixel_hardware_interface"
+            },
+            {
+              "kind": "depend",
+              "name": "ros_gz_bridge"
+            },
+            {
+              "kind": "depend",
+              "name": "ros_gz_sim"
+            },
+            {
+              "kind": "depend",
+              "name": "ros_gz_image"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "robot_state_publisher"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "gz_ros2_control"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "ros2_control"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "ros2_controllers"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "rviz2"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "open_manipulator_description"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "xacro"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/open_manipulator/open_manipulator_collision/package.xml",
+          "name": "open_manipulator_collision",
+          "version": "5.1.1",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake"
+            },
+            {
+              "kind": "depend",
+              "name": "rclcpp"
+            },
+            {
+              "kind": "depend",
+              "name": "sensor_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "std_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "eigen"
+            },
+            {
+              "kind": "depend",
+              "name": "visualization_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "libfcl-dev"
+            },
+            {
+              "kind": "depend",
+              "name": "kdl_parser"
+            },
+            {
+              "kind": "depend",
+              "name": "urdf"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/open_manipulator/open_manipulator_description/package.xml",
+          "name": "open_manipulator_description",
+          "version": "5.1.1",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "joint_state_publisher"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "joint_state_publisher_gui"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "realsense2_description"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "robot_state_publisher"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "rviz2"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/open_manipulator/open_manipulator_gui/package.xml",
+          "name": "open_manipulator_gui",
+          "version": "5.1.1",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake"
+            },
+            {
+              "kind": "depend",
+              "name": "rclcpp"
+            },
+            {
+              "kind": "depend",
+              "name": "std_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "sensor_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "qtbase5-dev"
+            },
+            {
+              "kind": "depend",
+              "name": "qt5-qmake"
+            },
+            {
+              "kind": "depend",
+              "name": "libqt5-core"
+            },
+            {
+              "kind": "depend",
+              "name": "libqt5-gui"
+            },
+            {
+              "kind": "depend",
+              "name": "eigen3_cmake_module"
+            },
+            {
+              "kind": "depend",
+              "name": "moveit_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "moveit_core"
+            },
+            {
+              "kind": "depend",
+              "name": "moveit_ros_planning"
+            },
+            {
+              "kind": "depend",
+              "name": "moveit_ros_planning_interface"
+            },
+            {
+              "kind": "depend",
+              "name": "geometry_msgs"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/open_manipulator/open_manipulator_moveit_config/package.xml",
+          "name": "open_manipulator_moveit_config",
+          "version": "5.1.1",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "moveit_ros_move_group"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "moveit_kinematics"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "moveit_planners"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "moveit_simple_controller_manager"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "joint_state_publisher"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "joint_state_publisher_gui"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "tf2_ros"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "xacro"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "controller_manager"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "moveit_configs_utils"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "moveit_ros_move_group"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "moveit_ros_visualization"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "moveit_ros_warehouse"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "warehouse_ros_sqlite"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "moveit_setup_assistant"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "open_manipulator_description"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "robot_state_publisher"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "rviz2"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "rviz_common"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "rviz_default_plugins"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "tf2_ros"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "xacro"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/open_manipulator/open_manipulator_playground/package.xml",
+          "name": "open_manipulator_playground",
+          "version": "5.1.1",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake"
+            },
+            {
+              "kind": "depend",
+              "name": "moveit_ros_planning_interface"
+            },
+            {
+              "kind": "depend",
+              "name": "rclcpp"
+            },
+            {
+              "kind": "depend",
+              "name": "rclpy"
+            },
+            {
+              "kind": "depend",
+              "name": "geometry_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "trajectory_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "robotis_interfaces"
+            },
+            {
+              "kind": "depend",
+              "name": "std_msgs"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "sensor_msgs"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "ament_index_python"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "launch"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "launch_ros"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/open_manipulator/open_manipulator_teleop/package.xml",
+          "name": "open_manipulator_teleop",
+          "version": "5.1.1",
+          "dependencies": [
+            {
+              "kind": "depend",
+              "name": "rclpy"
+            },
+            {
+              "kind": "depend",
+              "name": "std_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "sensor_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "trajectory_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "control_msgs"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/open_manipulator/ros2_controller/om_gravity_compensation_controller/package.xml",
+          "name": "om_gravity_compensation_controller",
+          "version": "5.1.1",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake"
+            },
+            {
+              "kind": "depend",
+              "name": "angles"
+            },
+            {
+              "kind": "depend",
+              "name": "backward_ros"
+            },
+            {
+              "kind": "depend",
+              "name": "controller_interface"
+            },
+            {
+              "kind": "depend",
+              "name": "control_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "control_toolbox"
+            },
+            {
+              "kind": "depend",
+              "name": "generate_parameter_library"
+            },
+            {
+              "kind": "depend",
+              "name": "hardware_interface"
+            },
+            {
+              "kind": "depend",
+              "name": "pluginlib"
+            },
+            {
+              "kind": "depend",
+              "name": "rclcpp"
+            },
+            {
+              "kind": "depend",
+              "name": "rclcpp_lifecycle"
+            },
+            {
+              "kind": "depend",
+              "name": "realtime_tools"
+            },
+            {
+              "kind": "depend",
+              "name": "rsl"
+            },
+            {
+              "kind": "depend",
+              "name": "tl_expected"
+            },
+            {
+              "kind": "depend",
+              "name": "urdf"
+            },
+            {
+              "kind": "depend",
+              "name": "kdl_parser"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/open_manipulator/ros2_controller/om_joint_trajectory_command_broadcaster/package.xml",
+          "name": "om_joint_trajectory_command_broadcaster",
+          "version": "5.1.1",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake"
+            },
+            {
+              "kind": "depend",
+              "name": "backward_ros"
+            },
+            {
+              "kind": "depend",
+              "name": "builtin_interfaces"
+            },
+            {
+              "kind": "depend",
+              "name": "control_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "controller_interface"
+            },
+            {
+              "kind": "depend",
+              "name": "generate_parameter_library"
+            },
+            {
+              "kind": "depend",
+              "name": "pluginlib"
+            },
+            {
+              "kind": "depend",
+              "name": "rclcpp_lifecycle"
+            },
+            {
+              "kind": "depend",
+              "name": "rcutils"
+            },
+            {
+              "kind": "depend",
+              "name": "realtime_tools"
+            },
+            {
+              "kind": "depend",
+              "name": "sensor_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "urdf"
+            },
+            {
+              "kind": "depend",
+              "name": "trajectory_msgs"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/open_manipulator/ros2_controller/om_spring_actuator_controller/package.xml",
+          "name": "om_spring_actuator_controller",
+          "version": "5.1.1",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake"
+            },
+            {
+              "kind": "depend",
+              "name": "controller_interface"
+            },
+            {
+              "kind": "depend",
+              "name": "generate_parameter_library"
+            },
+            {
+              "kind": "depend",
+              "name": "hardware_interface"
+            },
+            {
+              "kind": "depend",
+              "name": "pluginlib"
+            },
+            {
+              "kind": "depend",
+              "name": "rclcpp"
+            },
+            {
+              "kind": "depend",
+              "name": "rclcpp_lifecycle"
+            },
+            {
+              "kind": "depend",
+              "name": "urdf"
+            }
+          ]
+        }
+      ],
+      "source_files": [
+        {
+          "path": "/Users/ojaehong/RX_automation/open_manipulator/README.md",
+          "sha256": "4362157428e023aea73e869899d7ed111963b63f077776231acd27ec06b1198d"
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/open_manipulator/open_manipulator_ci.repos",
+          "sha256": "94e38133a8d5aff5e537a54f914f2c060f5ad5bde0efe0293e372ded493b6aeb"
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/open_manipulator/docker/Dockerfile",
+          "sha256": "a1cf0a9fab64e91604ef86f3c74181264cbcb769d39bcfb0e6687188dd769874"
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/open_manipulator/docker/docker-compose.yml",
+          "sha256": "88bc5afe18e26f89a8c548e1989e0c76259f34533a61017bbfe76bc0789b852e"
+        }
+      ]
+    },
+    {
+      "repo": "ai_worker",
+      "head": "2e29aae2dee9926691922fc0fa58d97ad88e068f",
+      "packages": [
+        {
+          "path": "/Users/ojaehong/RX_automation/ai_worker/ffw/package.xml",
+          "name": "ffw",
+          "version": "2.2.5",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "ffw_bringup"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "ffw_description"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "ffw_joint_trajectory_command_broadcaster"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "ffw_joystick_controller"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "ffw_moveit_config"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "ffw_robot_manager"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "ffw_spring_actuator_controller"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "ffw_swerve_drive_controller"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "ffw_teleop"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_bringup/package.xml",
+          "name": "ffw_bringup",
+          "version": "2.2.5",
+          "dependencies": [
+            {
+              "kind": "depend",
+              "name": "rclpy"
+            },
+            {
+              "kind": "depend",
+              "name": "dynamixel_hardware_interface"
+            },
+            {
+              "kind": "depend",
+              "name": "ros_gz_bridge"
+            },
+            {
+              "kind": "depend",
+              "name": "ros_gz_sim"
+            },
+            {
+              "kind": "depend",
+              "name": "ros_gz_image"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "ffw_description"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "gz_ros2_control"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "image_transport_plugins"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "robot_state_publisher"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "ros2_control"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "ros2_controllers"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "rviz2"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "xacro"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_description/package.xml",
+          "name": "ffw_description",
+          "version": "2.2.5",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake"
+            },
+            {
+              "kind": "depend",
+              "name": "urdf"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "xacro"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "joint_state_publisher"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "joint_state_publisher_gui"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "robot_state_publisher"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "rviz2"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_joint_trajectory_command_broadcaster/package.xml",
+          "name": "ffw_joint_trajectory_command_broadcaster",
+          "version": "2.2.5",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake"
+            },
+            {
+              "kind": "depend",
+              "name": "backward_ros"
+            },
+            {
+              "kind": "depend",
+              "name": "builtin_interfaces"
+            },
+            {
+              "kind": "depend",
+              "name": "control_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "controller_interface"
+            },
+            {
+              "kind": "depend",
+              "name": "generate_parameter_library"
+            },
+            {
+              "kind": "depend",
+              "name": "pluginlib"
+            },
+            {
+              "kind": "depend",
+              "name": "rclcpp_lifecycle"
+            },
+            {
+              "kind": "depend",
+              "name": "rcutils"
+            },
+            {
+              "kind": "depend",
+              "name": "realtime_tools"
+            },
+            {
+              "kind": "depend",
+              "name": "sensor_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "urdf"
+            },
+            {
+              "kind": "depend",
+              "name": "trajectory_msgs"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ament_cmake_gmock"
+            },
+            {
+              "kind": "test_depend",
+              "name": "controller_manager"
+            },
+            {
+              "kind": "test_depend",
+              "name": "hardware_interface_testing"
+            },
+            {
+              "kind": "test_depend",
+              "name": "hardware_interface"
+            },
+            {
+              "kind": "test_depend",
+              "name": "rclcpp"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ros2_control_test_assets"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_joystick_controller/package.xml",
+          "name": "ffw_joystick_controller",
+          "version": "2.2.5",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake"
+            },
+            {
+              "kind": "depend",
+              "name": "controller_interface"
+            },
+            {
+              "kind": "depend",
+              "name": "generate_parameter_library"
+            },
+            {
+              "kind": "depend",
+              "name": "hardware_interface"
+            },
+            {
+              "kind": "depend",
+              "name": "pluginlib"
+            },
+            {
+              "kind": "depend",
+              "name": "rclcpp"
+            },
+            {
+              "kind": "depend",
+              "name": "rclcpp_lifecycle"
+            },
+            {
+              "kind": "depend",
+              "name": "std_msgs"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_moveit_config/package.xml",
+          "name": "ffw_moveit_config",
+          "version": "2.2.5",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "moveit_ros_move_group"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "moveit_kinematics"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "moveit_planners"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "moveit_simple_controller_manager"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "moveit_configs_utils"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "moveit_ros_visualization"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "moveit_setup_assistant"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "robot_state_publisher"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "joint_state_publisher"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "joint_state_publisher_gui"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "tf2_ros"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "controller_manager"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "rviz2"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "rviz_common"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "rviz_default_plugins"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "xacro"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_navigation/package.xml",
+          "name": "ffw_navigation",
+          "version": "2.2.5",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "navigation2"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "nav2_bringup"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "slam_toolbox"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "rviz2"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "nav2_simple_commander"
+            },
+            {
+              "kind": "depend",
+              "name": "rclcpp"
+            },
+            {
+              "kind": "depend",
+              "name": "nav_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "geometry_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "behaviortree_cpp"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ament_lint_auto"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ament_lint_common"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_robot_manager/package.xml",
+          "name": "ffw_robot_manager",
+          "version": "2.2.5",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake"
+            },
+            {
+              "kind": "build_depend",
+              "name": "ros2_control_cmake"
+            },
+            {
+              "kind": "depend",
+              "name": "rclcpp"
+            },
+            {
+              "kind": "depend",
+              "name": "controller_interface"
+            },
+            {
+              "kind": "depend",
+              "name": "hardware_interface"
+            },
+            {
+              "kind": "depend",
+              "name": "pluginlib"
+            },
+            {
+              "kind": "depend",
+              "name": "std_srvs"
+            },
+            {
+              "kind": "depend",
+              "name": "dynamixel_hardware_interface"
+            },
+            {
+              "kind": "depend",
+              "name": "generate_parameter_library"
+            },
+            {
+              "kind": "depend",
+              "name": "dynamixel_interfaces"
+            },
+            {
+              "kind": "depend",
+              "name": "sensor_msgs"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ament_lint_auto"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ament_lint_common"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_spring_actuator_controller/package.xml",
+          "name": "ffw_spring_actuator_controller",
+          "version": "2.2.5",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake"
+            },
+            {
+              "kind": "depend",
+              "name": "controller_interface"
+            },
+            {
+              "kind": "depend",
+              "name": "generate_parameter_library"
+            },
+            {
+              "kind": "depend",
+              "name": "hardware_interface"
+            },
+            {
+              "kind": "depend",
+              "name": "pluginlib"
+            },
+            {
+              "kind": "depend",
+              "name": "rclcpp"
+            },
+            {
+              "kind": "depend",
+              "name": "rclcpp_lifecycle"
+            },
+            {
+              "kind": "depend",
+              "name": "urdf"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_swerve_drive_controller/package.xml",
+          "name": "ffw_swerve_drive_controller",
+          "version": "2.2.5",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake_ros"
+            },
+            {
+              "kind": "build_depend",
+              "name": "generate_parameter_library"
+            },
+            {
+              "kind": "depend",
+              "name": "rclcpp"
+            },
+            {
+              "kind": "depend",
+              "name": "rclcpp_lifecycle"
+            },
+            {
+              "kind": "depend",
+              "name": "controller_interface"
+            },
+            {
+              "kind": "depend",
+              "name": "pluginlib"
+            },
+            {
+              "kind": "depend",
+              "name": "hardware_interface"
+            },
+            {
+              "kind": "depend",
+              "name": "geometry_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "control_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "nav_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "realtime_tools"
+            },
+            {
+              "kind": "depend",
+              "name": "rcpputils"
+            },
+            {
+              "kind": "depend",
+              "name": "std_srvs"
+            },
+            {
+              "kind": "depend",
+              "name": "tf2"
+            },
+            {
+              "kind": "depend",
+              "name": "tf2_geometry_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "tf2_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "sensor_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "visualization_msgs"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ament_lint_auto"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ament_lint_common"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ament_cmake_gmock"
+            },
+            {
+              "kind": "test_depend",
+              "name": "controller_manager"
+            },
+            {
+              "kind": "test_depend",
+              "name": "hardware_interface_testing"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ros2_control_test_assets"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/ai_worker/ffw_teleop/package.xml",
+          "name": "ffw_teleop",
+          "version": "2.2.5",
+          "dependencies": [
+            {
+              "kind": "depend",
+              "name": "rclpy"
+            },
+            {
+              "kind": "depend",
+              "name": "python3-tk"
+            }
+          ]
+        }
+      ],
+      "source_files": [
+        {
+          "path": "/Users/ojaehong/RX_automation/ai_worker/README.md",
+          "sha256": "5f5e86c2dd09a4dc0ee53a9b192c8c998be289b2b704cc519a97768228bfc676"
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/ai_worker/ai_worker_ci.repos",
+          "sha256": "9799c9b3ebbbb08b36990c1f2b05a2f0d61315ac0f70d99b445508ed3236caa7"
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/ai_worker/docker/Dockerfile.amd64",
+          "sha256": "4b297810b7aa8de29aaa78ae6522338d29349b0decc8c28485af10272d9d7dd3"
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/ai_worker/docker/Dockerfile.arm64",
+          "sha256": "00fa111ace7c8991f041e6c0a2a4397552e2deed84dbc4e7c0404b03db1ba426"
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/ai_worker/docker/docker-compose.yml",
+          "sha256": "1922a70d77fb589538ac910c1a9b6958ca74071a56d98393f95f0d788e70ce5a"
+        }
+      ]
+    },
+    {
+      "repo": "ai_sapiens",
+      "head": "7d62dff281f02b6265ebe07db6c0ae32ba8de381",
+      "packages": [
+        {
+          "path": "/Users/ojaehong/RX_automation/ai_sapiens/ai_sapiens/package.xml",
+          "name": "ai_sapiens",
+          "version": "0.1.2",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "ai_sapiens_bringup"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "ai_sapiens_interfaces"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "ai_sapiens_description"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "ai_sapiens_joint_group_impedance_controller"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "ai_sapiens_rc_broadcaster"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "ai_sapiens_sim2real"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/ai_sapiens/ai_sapiens_bringup/package.xml",
+          "name": "ai_sapiens_bringup",
+          "version": "0.1.2",
+          "dependencies": [
+            {
+              "kind": "exec_depend",
+              "name": "ai_sapiens_description"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "ai_sapiens_joint_group_impedance_controller"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "ai_sapiens_rc_broadcaster"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "controller_manager"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "imu_sensor_broadcaster"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "joint_state_broadcaster"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "launch"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "launch_ros"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "robot_state_publisher"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "rviz2"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "xacro"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/ai_sapiens/ai_sapiens_controllers/ai_sapiens_joint_group_impedance_controller/package.xml",
+          "name": "ai_sapiens_joint_group_impedance_controller",
+          "version": "0.1.2",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake"
+            },
+            {
+              "kind": "depend",
+              "name": "controller_interface"
+            },
+            {
+              "kind": "depend",
+              "name": "generate_parameter_library"
+            },
+            {
+              "kind": "depend",
+              "name": "ai_sapiens_interfaces"
+            },
+            {
+              "kind": "depend",
+              "name": "pluginlib"
+            },
+            {
+              "kind": "depend",
+              "name": "rclcpp"
+            },
+            {
+              "kind": "depend",
+              "name": "rclcpp_lifecycle"
+            },
+            {
+              "kind": "depend",
+              "name": "realtime_tools"
+            },
+            {
+              "kind": "depend",
+              "name": "hardware_interface"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ament_cmake_gmock"
+            },
+            {
+              "kind": "test_depend",
+              "name": "controller_manager"
+            },
+            {
+              "kind": "test_depend",
+              "name": "hardware_interface_testing"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ros2_control_test_assets"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/ai_sapiens/ai_sapiens_controllers/ai_sapiens_rc_broadcaster/package.xml",
+          "name": "ai_sapiens_rc_broadcaster",
+          "version": "0.1.2",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake"
+            },
+            {
+              "kind": "depend",
+              "name": "ai_sapiens_interfaces"
+            },
+            {
+              "kind": "depend",
+              "name": "controller_interface"
+            },
+            {
+              "kind": "depend",
+              "name": "generate_parameter_library"
+            },
+            {
+              "kind": "depend",
+              "name": "hardware_interface"
+            },
+            {
+              "kind": "depend",
+              "name": "pluginlib"
+            },
+            {
+              "kind": "depend",
+              "name": "rclcpp"
+            },
+            {
+              "kind": "depend",
+              "name": "rclcpp_lifecycle"
+            },
+            {
+              "kind": "depend",
+              "name": "realtime_tools"
+            },
+            {
+              "kind": "depend",
+              "name": "sensor_msgs"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ament_cmake_gmock"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ament_lint_auto"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ament_lint_common"
+            },
+            {
+              "kind": "test_depend",
+              "name": "controller_manager"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ros2_control_test_assets"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/ai_sapiens/ai_sapiens_description/package.xml",
+          "name": "ai_sapiens_description",
+          "version": "0.1.2",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "joint_state_publisher_gui"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "launch"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "launch_ros"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "robot_state_publisher"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "rviz2"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "xacro"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ament_cmake_pytest"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ament_lint_auto"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ament_lint_common"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/ai_sapiens/ai_sapiens_interfaces/package.xml",
+          "name": "ai_sapiens_interfaces",
+          "version": "0.1.2",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake"
+            },
+            {
+              "kind": "buildtool_depend",
+              "name": "rosidl_default_generators"
+            },
+            {
+              "kind": "depend",
+              "name": "std_msgs"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "rosidl_default_runtime"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ament_lint_auto"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ament_lint_common"
+            }
+          ]
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/ai_sapiens/ai_sapiens_sim2real/package.xml",
+          "name": "ai_sapiens_sim2real",
+          "version": "0.1.2",
+          "dependencies": [
+            {
+              "kind": "buildtool_depend",
+              "name": "ament_cmake"
+            },
+            {
+              "kind": "depend",
+              "name": "ai_sapiens_interfaces"
+            },
+            {
+              "kind": "depend",
+              "name": "rclcpp"
+            },
+            {
+              "kind": "depend",
+              "name": "realtime_tools"
+            },
+            {
+              "kind": "depend",
+              "name": "sensor_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "geometry_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "std_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "control_msgs"
+            },
+            {
+              "kind": "depend",
+              "name": "pluginlib"
+            },
+            {
+              "kind": "build_depend",
+              "name": "yaml-cpp"
+            },
+            {
+              "kind": "build_depend",
+              "name": "eigen"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "yaml-cpp"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "launch"
+            },
+            {
+              "kind": "exec_depend",
+              "name": "launch_ros"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ament_lint_auto"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ament_lint_common"
+            },
+            {
+              "kind": "test_depend",
+              "name": "ament_cmake_gtest"
+            }
+          ]
+        }
+      ],
+      "source_files": [
+        {
+          "path": "/Users/ojaehong/RX_automation/ai_sapiens/README.md",
+          "sha256": "21dd51ee6180d1e9deacb98364a3af6eb882f06b2e9e7e5e9563f523058a202d"
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/ai_sapiens/ai_sapiens_ci.repos",
+          "sha256": "81499b74d1c14afed924eb458bec9f9d92d69dddb48df2fcf7a6b8958d70d95c"
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/ai_sapiens/docker/Dockerfile",
+          "sha256": "c2e5fd1916591f79e3ca6ba74a134312e4de38b58718bb24b119884eb4223630"
+        },
+        {
+          "path": "/Users/ojaehong/RX_automation/ai_sapiens/docker/docker-compose.yml",
+          "sha256": "e42bbaaab56a343c0e2a1b68e5a8c95f9498f88e8e4047c95eba603a5db8e7e2"
+        }
+      ]
+    }
+  ],
+  "method": "Read-only manifests, Docker definitions, dependency lists and selected control configuration; no build or hardware execution."
+}

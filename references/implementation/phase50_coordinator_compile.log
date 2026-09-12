@@ -1,0 +1,86 @@
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+   Compiling rx-runtime v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-runtime)
+   Compiling rx-protocol-adapter v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-protocol-adapter)
+   Compiling rx-host-client v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-host-client)
+   Compiling rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-api)
+error[E0308]: mismatched types
+   --> crates/rx-host-client/tests/support/configuration_coordinator.rs:336:61
+    |
+336 |         app.finish_fence_delivery(&host_id, &fence.message, receipt)
+    |             ---------------------                           ^^^^^^^ expected `FenceAcknowledgment`, found `FenceReceipt`
+    |             |
+    |             arguments to this method are incorrect
+    |
+note: method defined here
+   --> crates/rx-application/src/engine/delivery.rs:5:12
+    |
+  5 |     pub fn finish_fence_delivery(
+    |            ^^^^^^^^^^^^^^^^^^^^^
+
+error[E0277]: expected an `FnOnce()` closure, found `Application<SqliteRepository, TestClock, NoQualification>`
+   --> crates/rx-host-client/tests/support/configuration_coordinator.rs:343:23
+    |
+343 |         Writer::start(Application::new(app), 64).unwrap(),
+    |         ------------- ^^^^^^^^^^^^^^^^^^^^^ expected an `FnOnce()` closure, found `Application<SqliteRepository, TestClock, NoQualification>`
+    |         |
+    |         required by a bound introduced by this call
+    |
+    = help: the trait `FnOnce()` is not implemented for `Application<SqliteRepository, TestClock, NoQualification>`
+    = note: wrap the `Application<SqliteRepository, TestClock, NoQualification>` in a closure with no arguments: `|| { /* code */ }`
+note: required by a bound in `rx_runtime::writer::Writer::<P>::start`
+   --> crates/rx-runtime/src/writer.rs:112:26
+    |
+111 |     pub async fn start(
+    |                  ----- required by a bound in this associated function
+112 |         initialize: impl FnOnce() -> Result<P, P::Error> + Send + 'static,
+    |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Writer::<P>::start`
+
+error[E0061]: this function takes 1 argument but 2 arguments were supplied
+   --> crates/rx-host-client/tests/support/configuration_coordinator.rs:343:9
+    |
+343 |         Writer::start(Application::new(app), 64).unwrap(),
+    |         ^^^^^^^^^^^^^                        -- unexpected argument #2 of type `{integer}`
+    |
+note: associated function defined here
+   --> crates/rx-runtime/src/writer.rs:111:18
+    |
+111 |     pub async fn start(
+    |                  ^^^^^
+help: remove the extra argument
+    |
+343 -         Writer::start(Application::new(app), 64).unwrap(),
+343 +         Writer::start(Application::new(app)).unwrap(),
+    |
+
+error[E0277]: expected an `FnOnce()` closure, found `Application<SqliteRepository, TestClock, NoQualification>`
+   --> crates/rx-host-client/tests/support/configuration_coordinator.rs:343:9
+    |
+343 |         Writer::start(Application::new(app), 64).unwrap(),
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected an `FnOnce()` closure, found `Application<SqliteRepository, TestClock, NoQualification>`
+    |
+    = help: the trait `FnOnce()` is not implemented for `Application<SqliteRepository, TestClock, NoQualification>`
+    = note: wrap the `Application<SqliteRepository, TestClock, NoQualification>` in a closure with no arguments: `|| { /* code */ }`
+note: required by a bound in `rx_runtime::writer::Writer::<P>::start`
+   --> crates/rx-runtime/src/writer.rs:112:26
+    |
+111 |     pub async fn start(
+    |                  ----- required by a bound in this associated function
+112 |         initialize: impl FnOnce() -> Result<P, P::Error> + Send + 'static,
+    |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Writer::<P>::start`
+
+error[E0599]: no method named `unwrap` found for opaque type `impl Future<Output = Result<Writer<_>, WriterError<...>>>` in the current scope
+   --> crates/rx-host-client/tests/support/configuration_coordinator.rs:343:50
+    |
+343 |         Writer::start(Application::new(app), 64).unwrap(),
+    |                                                  ^^^^^^ method not found in `impl Future<Output = Result<Writer<_>, WriterError<...>>>`
+    |
+    = note: the full name for the type has been written to '/Users/ojaehong/RX_automation/rx_ws/rx-platform/target/debug/deps/configuration_e2e-96cb72cf7f50cdb1.long-type-1303867501563975326.txt'
+    = note: consider using `--verbose` to print the full type name to the console
+help: consider `await`ing on the `Future` and calling the method on its `Output`
+    |
+343 |         Writer::start(Application::new(app), 64).await.unwrap(),
+    |                                                  ++++++
+
+Some errors have detailed explanations: E0061, E0277, E0308, E0599.
+For more information about an error, try `rustc --explain E0061`.
+error: could not compile `rx-host-client` (test "configuration_e2e") due to 5 previous errors

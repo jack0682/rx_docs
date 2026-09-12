@@ -1,0 +1,118 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from ExecutorValidation.Dockerfile
+#1 transferring dockerfile: 729B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/rx-solutions:protocol-validation
+#2 DONE 0.0s
+
+#3 [1/5] FROM docker.io/library/rx-solutions:protocol-validation@sha256:efb3b752bd6f7d69dadf038330511997d4e5f3013302355e76a03e15e886525d
+#3 resolve docker.io/library/rx-solutions:protocol-validation@sha256:efb3b752bd6f7d69dadf038330511997d4e5f3013302355e76a03e15e886525d done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 50.24kB done
+#4 DONE 0.0s
+
+#5 [2/5] WORKDIR /src
+#5 CACHED
+
+#6 [3/5] COPY vendor/BehaviorTree.CPP /src/vendor/BehaviorTree.CPP
+#6 CACHED
+
+#7 [4/5] COPY native/executor /src/native/executor
+#7 DONE 0.0s
+
+#8 [5/5] RUN cmake -S native/executor -B /build/executor -G Ninja -DCMAKE_BUILD_TYPE=Release -DRX_BUILD_TEST_HARNESS=ON     && cmake --build /build/executor -j2
+#8 0.163 -- The CXX compiler identification is GNU 13.3.0
+#8 0.172 -- Detecting CXX compiler ABI info
+#8 0.209 -- Detecting CXX compiler ABI info - done
+#8 0.213 -- Check for working CXX compiler: /usr/bin/c++ - skipped
+#8 0.213 -- Detecting CXX compile features
+#8 0.213 -- Detecting CXX compile features - done
+#8 0.240 -- The C compiler identification is GNU 13.3.0
+#8 0.245 -- Detecting C compiler ABI info
+#8 0.270 -- Detecting C compiler ABI info - done
+#8 0.273 -- Check for working C compiler: /usr/bin/cc - skipped
+#8 0.274 -- Detecting C compile features
+#8 0.274 -- Detecting C compile features - done
+#8 0.275 -- ------------------------------------------
+#8 0.275 -- BehaviorTree is being built without AMENT.
+#8 0.275 -- ------------------------------------------
+#8 0.276 -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+#8 0.298 -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+#8 0.298 -- Found Threads: TRUE  
+#8 0.301 -- BTCPP_EXTRA_LIBRARIES: 
+#8 0.301 -- BTCPP_LIB_DESTINATION:   lib 
+#8 0.301 -- BTCPP_INCLUDE_DESTINATION: include 
+#8 0.301 -- BUILD_TESTING:   OFF 
+#8 0.304 -- Configuring done (0.2s)
+#8 0.308 -- Generating done (0.0s)
+#8 0.309 -- Build files have been written to: /build/executor
+#8 1.774 [1/54] Building CXX object CMakeFiles/rx_bt_executor.dir/nodes.cpp.o
+#8 1.894 [2/54] Building CXX object CMakeFiles/rx_bt_executor.dir/runtime.cpp.o
+#8 2.845 [3/54] Building CXX object CMakeFiles/rx_bt_executor.dir/xml.cpp.o
+#8 5.101 [4/54] Building CXX object CMakeFiles/rx_bt_executor.dir/frame.cpp.o
+#8 5.972 [5/54] Building CXX object CMakeFiles/rx-bt-tests.dir/tests.cpp.o
+#8 6.956 [6/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/action_node.cpp.o
+#8 7.405 [7/54] Building CXX object CMakeFiles/rx-bt-request-fixture.dir/request_fixture.cpp.o
+#8 8.574 [8/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/behavior_tree.cpp.o
+#8 8.795 [9/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/basic_types.cpp.o
+#8 9.812 [10/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/blackboard.cpp.o
+#8 10.65 [11/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/decorator_node.cpp.o
+#8 11.48 [12/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/condition_node.cpp.o
+#8 12.31 [13/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/control_node.cpp.o
+#8 12.45 [14/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/shared_library.cpp.o
+#8 13.54 [15/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/tree_node.cpp.o
+#8 14.16 [16/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/bt_factory.cpp.o
+#8 15.73 [17/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/json_export.cpp.o
+#8 16.81 [18/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/script_parser.cpp.o
+#8 17.73 [19/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/actions/test_node.cpp.o
+#8 17.87 [20/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/xml_parsing.cpp.o
+#8 18.88 [21/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/actions/sleep_node.cpp.o
+#8 19.01 [22/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/actions/updated_action.cpp.o
+#8 19.77 [23/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/decorators/inverter_node.cpp.o
+#8 20.06 [24/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/decorators/delay_node.cpp.o
+#8 20.85 [25/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/decorators/repeat_node.cpp.o
+#8 21.14 [26/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/decorators/retry_node.cpp.o
+#8 21.63 [27/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/decorators/subtree_node.cpp.o
+#8 22.23 [28/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/decorators/timeout_node.cpp.o
+#8 22.79 [29/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/decorators/updated_decorator.cpp.o
+#8 22.97 [30/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/controls/if_then_else_node.cpp.o
+#8 23.55 [31/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/controls/fallback_node.cpp.o
+#8 24.09 [32/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/controls/parallel_node.cpp.o
+#8 24.61 [33/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/controls/parallel_all_node.cpp.o
+#8 24.82 [34/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/controls/reactive_sequence.cpp.o
+#8 25.34 [35/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/controls/reactive_fallback.cpp.o
+#8 25.54 [36/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/controls/sequence_node.cpp.o
+#8 26.11 [37/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/controls/sequence_with_memory_node.cpp.o
+#8 26.27 [38/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/controls/switch_node.cpp.o
+#8 26.85 [39/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/controls/while_do_else_node.cpp.o
+#8 27.42 [40/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/loggers/bt_cout_logger.cpp.o
+#8 28.12 [41/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/loggers/bt_file_logger_v2.cpp.o
+#8 28.60 [42/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/loggers/bt_minitrace_logger.cpp.o
+#8 28.75 [43/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/shared_library_UNIX.cpp.o
+#8 29.17 [44/54] Building CXX object btcpp/3rdparty/tinyxml2/CMakeFiles/tinyxml2.dir/tinyxml2.cpp.o
+#8 29.18 [45/54] Linking CXX static library btcpp/3rdparty/tinyxml2/libtinyxml2.a
+#8 29.21 [46/54] Building CXX object btcpp/3rdparty/lexy/src/CMakeFiles/lexy_file.dir/input/file.cpp.o
+#8 29.22 [47/54] Linking CXX static library btcpp/3rdparty/lexy/src/liblexy_file.a
+#8 29.27 [48/54] Building CXX object btcpp/3rdparty/minitrace/CMakeFiles/minitrace.dir/minitrace.cpp.o
+#8 29.28 [49/54] Linking CXX static library btcpp/3rdparty/minitrace/libminitrace.a
+#8 29.42 [50/54] Building CXX object btcpp/CMakeFiles/behaviortree_cpp.dir/src/loggers/bt_observer.cpp.o
+#8 29.44 [51/54] Linking CXX static library btcpp/libbehaviortree_cpp.a
+#8 29.44 [52/54] Linking CXX static library librx_bt_executor.a
+#8 29.49 [53/54] Linking CXX executable rx-bt-request-fixture
+#8 29.49 [54/54] Linking CXX executable rx-bt-tests
+#8 DONE 29.5s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.3s done
+#9 exporting manifest sha256:b275fb3706c23ccfa99ddd70e3aa7274ef854d355037e32f23d2e18b5ee96464 done
+#9 exporting config sha256:a3fb3e714f5db73b7e12b2359bed5dcdeecee9b404fdf1ba134de3a36dfa78ff done
+#9 exporting attestation manifest sha256:da3070e15ae09f467259060ad587270b51de24f38dfccdb838f05eada867ee90 done
+#9 exporting manifest list sha256:2f69929ed1d84a997efce206f7b5890a802e08b0ee826afbf900bebd8ff2918a done
+#9 naming to docker.io/library/rx-solutions:executor-validation done
+#9 unpacking to docker.io/library/rx-solutions:executor-validation 0.1s done
+#9 DONE 0.4s

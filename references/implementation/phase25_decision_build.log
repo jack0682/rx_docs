@@ -1,0 +1,5 @@
+   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol)
+   Compiling rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-process-contract)
+   Compiling rx-process v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-process)
+   Compiling rx-executor v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-executor)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 4.62s

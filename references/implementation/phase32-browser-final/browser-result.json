@@ -1,0 +1,23 @@
+{
+  "schema": "rx.browser-check.v1",
+  "status": "PASS",
+  "browser": "151.0.7922.34",
+  "checks": [
+    "real login and logout",
+    "unqualified cell display",
+    "recorded RX mode and commissioning labels",
+    "commit then HTTP response loss",
+    "same request recovery after reload; exactly one run",
+    "reviewed revision stays pinned",
+    "connection loss disables new requests",
+    "case acknowledgment preserves containment and same key after reload",
+    "mobile overflow",
+    "no page JavaScript errors"
+  ],
+  "limitations": [
+    "development loopback service",
+    "unqualified synthetic cell",
+    "no device process or physical validation",
+    "not complete UI acceptance"
+  ]
+}

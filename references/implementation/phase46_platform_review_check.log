@@ -1,0 +1,76 @@
+    Checking rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-process-contract)
+    Checking rx-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-package)
+    Checking rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+warning: fields `identity`, `key`, `boot`, and `issued` are never read
+   --> crates/rx-application/src/process_review.rs:136:16
+    |
+134 | pub struct Ticket {
+    |            ------ fields in this struct
+135 |     pub(crate) job: Job,
+136 |     pub(crate) identity: Identity,
+    |                ^^^^^^^^
+137 |     pub(crate) key: Id,
+    |                ^^^
+138 |     pub(crate) input: Submit,
+139 |     pub(crate) boot: Id,
+    |                ^^^^
+140 |     pub(crate) registration: Registration,
+141 |     pub(crate) issued: TimePoint,
+    |                ^^^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: fields `signature` and `source` are never read
+   --> crates/rx-application/src/process_review.rs:161:16
+    |
+158 | pub struct Validated {
+    |            --------- fields in this struct
+...
+161 |     pub(crate) signature: SignatureEnvelope,
+    |                ^^^^^^^^^
+162 |     pub(crate) source: Option<ProcessSource>,
+    |                ^^^^^^
+
+warning: fields `ticket` and `validated` are never read
+   --> crates/rx-application/src/process_review.rs:167:16
+    |
+166 | pub struct Prepared {
+    |            -------- fields in this struct
+167 |     pub(crate) ticket: Ticket,
+    |                ^^^^^^
+168 |     pub(crate) validated: Validated,
+    |                ^^^^^^^^^
+
+warning: fields `source`, `identity`, `key`, `boot`, `registration`, and `issued` are never read
+   --> crates/rx-application/src/process_review.rs:183:16
+    |
+180 | pub struct DecisionTicket {
+    |            -------------- fields in this struct
+...
+183 |     pub(crate) source: Option<ProcessSource>,
+    |                ^^^^^^
+184 |     pub(crate) resolved: Option<ResolvedProcess>,
+185 |     pub(crate) identity: Identity,
+    |                ^^^^^^^^
+186 |     pub(crate) key: Id,
+    |                ^^^
+187 |     pub(crate) input: Decide,
+188 |     pub(crate) boot: Id,
+    |                ^^^^
+189 |     pub(crate) registration: Option<Registration>,
+    |                ^^^^^^^^^^^^
+190 |     pub(crate) issued: TimePoint,
+    |                ^^^^^^
+
+warning: fields `ticket` and `validated` are never read
+   --> crates/rx-application/src/process_review.rs:211:16
+    |
+210 | pub struct PreparedDecision {
+    |            ---------------- fields in this struct
+211 |     pub(crate) ticket: DecisionTicket,
+    |                ^^^^^^
+212 |     pub(crate) validated: Option<Validated>,
+    |                ^^^^^^^^^
+
+warning: `rx-application` (lib) generated 5 warnings
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 3.52s

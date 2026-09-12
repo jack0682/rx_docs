@@ -1,0 +1,112 @@
+{
+  "schema": "rx.device-package-image-test.v1",
+  "status": "PASS",
+  "image_id": "sha256:8cc461de8bb1e5673a6d9ece08cb14f7393828457e7078cde1b26d99baea7f22",
+  "architecture": "arm64",
+  "binary": "/opt/rx/bin/rx-device-package",
+  "network": "none",
+  "read_only_root": true,
+  "non_root": true,
+  "device_kind": "melsec",
+  "template": {
+    "activation_authorized": false,
+    "revision": "1",
+    "status": "TEMPLATE_STRUCTURE_VALID",
+    "template": "test/melsec-chuck",
+    "template_digest": "f1626e45891021c14b286f8efb0c28244933160250232f251d58f1abd3eee3d1"
+  },
+  "candidate": {
+    "activation_authorized": false,
+    "manifest_digest": "92ff639eb45193d1c15d8b4d1ef612e37bc6a57f75c6bc58eca9572e7312af6f",
+    "status": "UNSIGNED_CANDIDATE",
+    "template_digest": "f1626e45891021c14b286f8efb0c28244933160250232f251d58f1abd3eee3d1"
+  },
+  "sealed": {
+    "activation_authorized": false,
+    "manifest_digest": "92ff639eb45193d1c15d8b4d1ef612e37bc6a57f75c6bc58eca9572e7312af6f",
+    "status": "CONTENT_VERIFIED_NOT_QUALIFIED"
+  },
+  "inspection": {
+    "activation_authorized": false,
+    "cell": "cell/one",
+    "environment": "SIMULATION",
+    "installation": "00000000-0000-4000-8000-000000000001",
+    "manifest_digest": "92ff639eb45193d1c15d8b4d1ef612e37bc6a57f75c6bc58eca9572e7312af6f",
+    "profile": {
+      "calibrations": [],
+      "cell": "cell/one",
+      "conditions": {
+        "ready": 1
+      },
+      "installation": "00000000-0000-4000-8000-000000000001",
+      "predicates": [
+        {
+          "command_m": 200,
+          "completion_bit": 6,
+          "predicate": "chuck.closed",
+          "settle_ms": "100"
+        }
+      ],
+      "resources": [
+        "resource/controller-one"
+      ],
+      "schema": "rx.melsec-predicate-profile.v1",
+      "site_config": "0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a",
+      "sources": {
+        "chuck/closed": 6
+      },
+      "status": {
+        "control_bit": 3,
+        "drop_allowed_bit": 5,
+        "first_d": 350,
+        "guard_validity_ms": 30,
+        "plc_program": "4e50037e4fb9e2e7afdd85c3008eb645de121eb45f7c16525257a22abbc2f374",
+        "publication_contract": "d87407bfef7adb332edce189f9c43d69495324ddc07f7e2ac10308d685df5374",
+        "queue_empty_bit": 2,
+        "read_budget_ms": 50,
+        "ready_bit": 1,
+        "source_max_age_ms": 30,
+        "support_bit": 4,
+        "valid_bit": 0
+      },
+      "target": "chuck/one",
+      "transport": {
+        "access": {
+          "d_last": 1000,
+          "m_last": 1000,
+          "read_d": [
+            {
+              "first": 350,
+              "last": 358
+            }
+          ],
+          "read_m": [],
+          "write_m": [
+            200
+          ]
+        },
+        "connect_timeout_ms": 50,
+        "endpoint": "127.0.0.1:5010",
+        "environment": "SIMULATION",
+        "exchange_timeout_ms": 30,
+        "monitoring_timer": 1,
+        "route": {
+          "module_io": 1023,
+          "network": 0,
+          "pc": 255,
+          "station": 0
+        }
+      }
+    },
+    "profile_digest": "bac353166ab6c842ffb8f6d11333aa0df42a19e899e1f6b9c6678f9019140783",
+    "status": "CONTENT_VERIFIED_NOT_QUALIFIED"
+  },
+  "signed_authoring_source_present": true,
+  "host_package_startup": null,
+  "signer": "external host test harness with embedded test-only key",
+  "device_connections": 0,
+  "limitations": [
+    "SIMULATION inputs only; no hardware/Host operation or physical qualification",
+    "Production signer, trust installation and deployment are not performed"
+  ]
+}

@@ -1,0 +1,168 @@
+   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol)
+   Compiling rx-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-package)
+   Compiling rx-host v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-host)
+   Compiling rx-solution-catalog v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-solution-catalog)
+   Compiling rx-device-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-device-package)
+error[E0659]: `directory` is ambiguous
+   --> runtime/rx-device-package/tests/authoring.rs:170:5
+    |
+170 |     directory::publish(&candidate, None, &out).unwrap();
+    |     ^^^^^^^^^ ambiguous name
+    |
+    = note: ambiguous because of multiple glob imports of a name in the same module
+note: `directory` could refer to the module imported here
+   --> runtime/rx-device-package/tests/authoring.rs:2:5
+    |
+  2 | use rx_device_package::*;
+    |     ^^^^^^^^^^^^^^^^^^^^
+    = help: consider adding an explicit import of `directory` to disambiguate
+note: `directory` could also refer to the module imported here
+   --> runtime/rx-device-package/tests/authoring.rs:5:5
+    |
+  5 | use rx_package::*;
+    |     ^^^^^^^^^^^^^
+    = help: consider adding an explicit import of `directory` to disambiguate
+
+error[E0659]: `directory` is ambiguous
+   --> runtime/rx-device-package/tests/authoring.rs:171:18
+    |
+171 |     let loaded = directory::candidate(&out).unwrap();
+    |                  ^^^^^^^^^ ambiguous name
+    |
+    = note: ambiguous because of multiple glob imports of a name in the same module
+note: `directory` could refer to the module imported here
+   --> runtime/rx-device-package/tests/authoring.rs:2:5
+    |
+  2 | use rx_device_package::*;
+    |     ^^^^^^^^^^^^^^^^^^^^
+    = help: consider adding an explicit import of `directory` to disambiguate
+note: `directory` could also refer to the module imported here
+   --> runtime/rx-device-package/tests/authoring.rs:5:5
+    |
+  5 | use rx_package::*;
+    |     ^^^^^^^^^^^^^
+    = help: consider adding an explicit import of `directory` to disambiguate
+
+error[E0659]: `directory` is ambiguous
+   --> runtime/rx-device-package/tests/authoring.rs:179:5
+    |
+179 |     directory::publish(&candidate, Some(&sig), &package).unwrap();
+    |     ^^^^^^^^^ ambiguous name
+    |
+    = note: ambiguous because of multiple glob imports of a name in the same module
+note: `directory` could refer to the module imported here
+   --> runtime/rx-device-package/tests/authoring.rs:2:5
+    |
+  2 | use rx_device_package::*;
+    |     ^^^^^^^^^^^^^^^^^^^^
+    = help: consider adding an explicit import of `directory` to disambiguate
+note: `directory` could also refer to the module imported here
+   --> runtime/rx-device-package/tests/authoring.rs:5:5
+    |
+  5 | use rx_package::*;
+    |     ^^^^^^^^^^^^^
+    = help: consider adding an explicit import of `directory` to disambiguate
+
+error[E0659]: `directory` is ambiguous
+   --> runtime/rx-device-package/tests/authoring.rs:187:13
+    |
+187 |     assert!(directory::publish(&candidate, None, &out).is_err());
+    |             ^^^^^^^^^ ambiguous name
+    |
+    = note: ambiguous because of multiple glob imports of a name in the same module
+note: `directory` could refer to the module imported here
+   --> runtime/rx-device-package/tests/authoring.rs:2:5
+    |
+  2 | use rx_device_package::*;
+    |     ^^^^^^^^^^^^^^^^^^^^
+    = help: consider adding an explicit import of `directory` to disambiguate
+note: `directory` could also refer to the module imported here
+   --> runtime/rx-device-package/tests/authoring.rs:5:5
+    |
+  5 | use rx_package::*;
+    |     ^^^^^^^^^^^^^
+    = help: consider adding an explicit import of `directory` to disambiguate
+
+error[E0659]: `directory` is ambiguous
+   --> runtime/rx-device-package/tests/authoring.rs:188:13
+    |
+188 |     assert!(directory::candidate(&package).is_err());
+    |             ^^^^^^^^^ ambiguous name
+    |
+    = note: ambiguous because of multiple glob imports of a name in the same module
+note: `directory` could refer to the module imported here
+   --> runtime/rx-device-package/tests/authoring.rs:2:5
+    |
+  2 | use rx_device_package::*;
+    |     ^^^^^^^^^^^^^^^^^^^^
+    = help: consider adding an explicit import of `directory` to disambiguate
+note: `directory` could also refer to the module imported here
+   --> runtime/rx-device-package/tests/authoring.rs:5:5
+    |
+  5 | use rx_package::*;
+    |     ^^^^^^^^^^^^^
+    = help: consider adding an explicit import of `directory` to disambiguate
+
+error[E0659]: `directory` is ambiguous
+   --> runtime/rx-device-package/tests/authoring.rs:274:5
+    |
+274 |     directory::publish(&c, None, &out).unwrap();
+    |     ^^^^^^^^^ ambiguous name
+    |
+    = note: ambiguous because of multiple glob imports of a name in the same module
+note: `directory` could refer to the module imported here
+   --> runtime/rx-device-package/tests/authoring.rs:2:5
+    |
+  2 | use rx_device_package::*;
+    |     ^^^^^^^^^^^^^^^^^^^^
+    = help: consider adding an explicit import of `directory` to disambiguate
+note: `directory` could also refer to the module imported here
+   --> runtime/rx-device-package/tests/authoring.rs:5:5
+    |
+  5 | use rx_package::*;
+    |     ^^^^^^^^^^^^^
+    = help: consider adding an explicit import of `directory` to disambiguate
+
+error[E0659]: `directory` is ambiguous
+   --> runtime/rx-device-package/tests/authoring.rs:277:13
+    |
+277 |     assert!(directory::candidate(&out).is_err());
+    |             ^^^^^^^^^ ambiguous name
+    |
+    = note: ambiguous because of multiple glob imports of a name in the same module
+note: `directory` could refer to the module imported here
+   --> runtime/rx-device-package/tests/authoring.rs:2:5
+    |
+  2 | use rx_device_package::*;
+    |     ^^^^^^^^^^^^^^^^^^^^
+    = help: consider adding an explicit import of `directory` to disambiguate
+note: `directory` could also refer to the module imported here
+   --> runtime/rx-device-package/tests/authoring.rs:5:5
+    |
+  5 | use rx_package::*;
+    |     ^^^^^^^^^^^^^
+    = help: consider adding an explicit import of `directory` to disambiguate
+
+error[E0659]: `directory` is ambiguous
+   --> runtime/rx-device-package/tests/authoring.rs:326:13
+    |
+326 |     let c = directory::candidate(&dir.join("candidate")).unwrap();
+    |             ^^^^^^^^^ ambiguous name
+    |
+    = note: ambiguous because of multiple glob imports of a name in the same module
+note: `directory` could refer to the module imported here
+   --> runtime/rx-device-package/tests/authoring.rs:2:5
+    |
+  2 | use rx_device_package::*;
+    |     ^^^^^^^^^^^^^^^^^^^^
+    = help: consider adding an explicit import of `directory` to disambiguate
+note: `directory` could also refer to the module imported here
+   --> runtime/rx-device-package/tests/authoring.rs:5:5
+    |
+  5 | use rx_package::*;
+    |     ^^^^^^^^^^^^^
+    = help: consider adding an explicit import of `directory` to disambiguate
+
+For more information about this error, try `rustc --explain E0659`.
+error: could not compile `rx-device-package` (test "authoring") due to 8 previous errors
+warning: build failed, waiting for other jobs to finish...

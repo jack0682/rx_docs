@@ -1,0 +1,13 @@
+    Checking rx-domain v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-domain)
+   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-protocol)
+    Checking rx-ports v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-ports)
+    Checking rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-process-contract)
+    Checking rx-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-package)
+    Checking rx-storage v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-storage)
+    Checking rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+    Checking rx-runtime v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-runtime)
+    Checking rx-protocol-adapter v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-protocol-adapter)
+    Checking rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-api)
+    Checking rx-host-client v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-host-client)
+    Checking rx-platformd v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-platformd)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 11.27s

@@ -1,0 +1,6 @@
+    Checking rx-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-package)
+   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol)
+   Compiling rx-host v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-host)
+    Checking tempfile v3.27.0
+    Checking rx-solution-catalog v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-solution-catalog)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 2.93s

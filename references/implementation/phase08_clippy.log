@@ -1,0 +1,49 @@
+    Checking serde v1.0.229
+    Checking thiserror v2.0.20
+    Checking tokio v1.53.1
+    Checking tracing v0.1.44
+    Checking zerofrom v0.1.8
+   Compiling prost-types v0.14.4
+    Checking prost v0.14.4
+    Checking pin-project v1.1.13
+    Checking yoke v0.8.3
+    Checking axum-core v0.5.6
+    Checking zerovec v0.11.8
+    Checking zerotrie v0.2.5
+    Checking serde_jcs v0.2.0
+    Checking serde_urlencoded v0.7.1
+    Checking rx-domain v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-domain)
+    Checking tinystr v0.8.4
+    Checking potential_utf v0.1.6
+    Checking icu_collections v2.3.0
+    Checking icu_locale_core v2.3.0
+   Compiling prost-build v0.14.4
+    Checking prost-reflect v0.16.5
+    Checking rx-ports v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-ports)
+    Checking icu_provider v2.3.1
+   Compiling tonic-prost-build v0.14.6
+    Checking rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+    Checking rx-storage v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-storage)
+    Checking icu_properties v2.3.0
+    Checking icu_normalizer v2.3.0
+   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-protocol)
+    Checking idna_adapter v1.2.2
+    Checking idna v1.1.0
+    Checking tokio-util v0.7.19
+    Checking tokio-stream v0.1.19
+    Checking tokio-rustls v0.26.5
+    Checking url v2.5.8
+    Checking h2 v0.4.19
+    Checking tower v0.5.3
+    Checking rx-runtime v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-runtime)
+    Checking tower-http v0.6.11
+    Checking hyper v1.11.1
+    Checking hyper-util v0.1.20
+    Checking axum v0.8.9
+    Checking hyper-timeout v0.5.2
+    Checking reqwest v0.12.28
+    Checking tonic v0.14.6
+    Checking rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-api)
+    Checking tonic-prost v0.14.6
+    Checking rx-host-client v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-host-client)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 7.85s

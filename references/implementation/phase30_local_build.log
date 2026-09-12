@@ -1,0 +1,4 @@
+    Blocking waiting for file lock on package cache
+   Compiling rx-protocol-adapter v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-protocol-adapter)
+   Compiling rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-api)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 3.98s

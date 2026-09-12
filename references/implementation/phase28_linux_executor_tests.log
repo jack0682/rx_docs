@@ -1,0 +1,46 @@
+   Compiling rx-protocol v0.1.0 (/src/sdk/crates/rx-protocol)
+   Compiling rx-process-contract v0.1.0 (/src/sdk/crates/rx-process-contract)
+   Compiling rx-process v0.1.0 (/src/runtime/rx-process)
+   Compiling rx-executor v0.1.0 (/src/runtime/rx-executor)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 22.87s
+     Running unittests src/lib.rs (/rust-build/debug/deps/rx_executor-eee14b53fcee3e23)
+
+running 8 tests
+test clock::tests::linux_clock_uses_the_shared_boot_identity_and_non_decreasing_boottime ... ok
+test pending::tests::wait_start_does_not_drop_the_only_bt_request_and_due_requests_are_fair ... ok
+test client::tests::artifact_hash_does_not_replace_size_schema_or_typed_payload_validation ... ok
+test pending::tests::full_queue_and_inflight_normal_work_do_not_block_pause_and_meaning_cannot_change ... ok
+test frame::tests::a_new_epoch_is_not_implicitly_adopted_by_an_existing_context ... ok
+test frame::tests::restored_p_snapshot_preserves_work_and_does_not_restore_admission ... ok
+test frame::tests::source_clock_expiry_blocks_a_view_even_if_the_local_steady_deadline_has_not_passed ... ok
+test engine_process::tests::verified_product_binary_uses_live_linux_clock_and_preserves_one_process ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.32s
+
+     Running unittests src/bin/service.rs (/rust-build/debug/deps/rx_executor_service-ce94a7a04be24b99)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/journal.rs (/rust-build/debug/deps/journal-3cf1f76a2d5e0312)
+
+running 9 tests
+test stop_intent_survives_commit_response_loss_and_never_becomes_a_part_request ... ok
+test stop_attempt_key_is_preserved_and_p_observation_does_not_invent_a_reply ... ok
+test only_a_confirmed_transactional_rejection_allows_new_cas_and_key ... ok
+test reconciliation_acknowledgment_is_not_a_resource_release_observation ... ok
+test pause_intent_is_scoped_to_executor_session_and_epoch_without_changing_operation_keys ... ok
+test p_observation_preserves_network_uncertainty_and_deduplicates_unchanged_identity ... ok
+test material_identity_is_observed_without_rewriting_a_lost_begin_reply ... ok
+test prepared_entered_and_reply_boundaries_survive_rollback_and_lost_commit_response ... ok
+test checkpoint_expiry_preserves_old_attempt_and_pending_projection_is_not_an_rpc_reply ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+
+   Doc-tests rx_executor
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

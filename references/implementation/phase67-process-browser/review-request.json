@@ -1,0 +1,15 @@
+{
+  "schema": "rx.process-review-request.v1",
+  "id": "b714693a-a289-4d23-862c-cf8a7f0eb35b",
+  "intake": "4d17d764-ea7c-4964-a736-71d60a5e25a9",
+  "cell": "cell/demo",
+  "package_manifest": "47693c72731948c1b248eba7beaad44e2fb69ec4d334fc7723b0423307ce7a73",
+  "package_signature": "9f58cacf69c81072ff6acb5c38a265571ac84987ef26c1a867441cf17f049f81",
+  "configuration_digest": "2a351551850735aaed7f886e2710e7db98cb9969642504a6c91d210b2e340bfc",
+  "package_policy_fingerprint": "56eb89250bf3ce6a3f9a5e124fea98772a37b1dd7277635f9fc7cd527ccb9873",
+  "package_policy_file_digest": "10fce9a061186face7d9025d3dc8a4ff204e4ae3ffc834c16160a982ea7ad23f",
+  "verification_authority_digest": "fd6e5cdb64bf35e40604507789c0ffc1f8fbc37f7dee3eeaf9b49d206ebcedad",
+  "binding_selections": {
+    "load": "step/place"
+  }
+}

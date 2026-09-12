@@ -1,0 +1,348 @@
+{
+  "plan": {
+    "id": "e663b0c1-a47c-41dd-81ae-9a0e6a9db1f8",
+    "cell": "cell/demo",
+    "revision": "2",
+    "state": "IMPACT_REVIEWED",
+    "plan_digest": "ed11c8e7c4972b2d08a8217f2f54a110226ddd5c114df4b6d3878dfbfdb42f98",
+    "definition": {
+      "input": {
+        "id": "e663b0c1-a47c-41dd-81ae-9a0e6a9db1f8",
+        "cell": "cell/demo",
+        "review": {
+          "id": "36794866-1c1f-44ed-bef2-d8eafe882d28",
+          "revision": "1",
+          "review_digest": "55929b7a30c3c054bfab7959e9c14770d2dd698dd8bcffb965c9fc4ae8e3000b",
+          "decision_revision": "1"
+        },
+        "bindings": {
+          "robot/supply": {
+            "action": "supply",
+            "host": "host/sim",
+            "conditions": {
+              "robot/ready": {
+                "op": "EQ",
+                "fact": "ready",
+                "schema": "boolean/v1",
+                "unit": "unitless",
+                "expected": {
+                  "boolean": true
+                }
+              }
+            },
+            "completion_postconditions": [],
+            "handover_max_age_ns": "100000000"
+          }
+        },
+        "reason": "Bind approved robot action; process/envelope/Host validation remains required"
+      },
+      "before": {
+        "sha256": "f85cc580093282c16e9383b3748536743b1aba6523f3ea75f71964dd17050939",
+        "schema_id": "rx.cell-configuration.v1",
+        "size_bytes": "1753"
+      },
+      "base_configuration_digest": "2a351551850735aaed7f886e2710e7db98cb9969642504a6c91d210b2e340bfc",
+      "object": {
+        "manifest": "82e724a08530f264e64657c66bd63d38cf735762ee14d99d077929450a0a83bf",
+        "signature": "dc749ad8f4d8865838e0e8254280bcbd3802d494787d09963adf1516cce622e3"
+      },
+      "catalog": {
+        "sha256": "1827914cf191361c70b8963bd152e64bf0330350ede129b2b2b50af2a0ca2485",
+        "schema_id": "rx.device-operation-catalog.v1",
+        "size_bytes": "2589"
+      },
+      "builder_digest": "2c56abe89a60739a5ab4d6634e8d42ee7ad9a4382bdab353ca2e78cd4a0425f2",
+      "candidates": {
+        "robot/supply": {
+          "action": "supply",
+          "previous_step_digest": null,
+          "step": {
+            "id": "robot/supply",
+            "host": "host/sim",
+            "intent": {
+              "kind": "FINITE_ACTION",
+              "target": "robot/arm",
+              "profile_digest": "152f53f3f90aec96a750a574c16e05ab07662056d81b60fd63a7361c5e7fcac4",
+              "site_config_digest": "0404040404040404040404040404040404040404040404040404040404040404",
+              "calibration_digests": [
+                "c93ea262d6d13767cdae4867a2a8725df715dade46d2c71d12227d6f57e05147"
+              ],
+              "resource_set": [
+                "robot/controller"
+              ],
+              "execution_timeout_ms": "1000",
+              "prepare_validity_ms": "1000",
+              "completion_rule": "rx.ros-jtc.terminal-result.v1",
+              "cancel_rule": "rx.ros-jtc.exact-cancel.v1",
+              "body": {
+                "trajectory": {
+                  "trajectory": {
+                    "sha256": "c6607acfd393eb43699324df12bd89190b8dae893ba0dad887204d1a7e3ca530",
+                    "schema_id": "rx.ros-jtc.goal.v1",
+                    "size_bytes": "1043"
+                  },
+                  "joint_group": "arm",
+                  "tool_digest": "af0727eb35b37908261e5d76c2593ad1e4d394c0d56b4b2f36ccb911df3f0ef7"
+                }
+              }
+            },
+            "predecessors": [],
+            "conditions": [
+              {
+                "op": "EQ",
+                "fact": "ready",
+                "schema": "boolean/v1",
+                "unit": "unitless",
+                "expected": {
+                  "boolean": true
+                }
+              }
+            ],
+            "completion": {
+              "kind": "NATIVE_OUTCOMES",
+              "table": {
+                "schema": "rx.native-outcome-table.v1",
+                "profile_digest": "152f53f3f90aec96a750a574c16e05ab07662056d81b60fd63a7361c5e7fcac4",
+                "completion_rule": "rx.ros-jtc.terminal-result.v1",
+                "cases": [
+                  {
+                    "status_schema": "rx.ros-jtc.succeeded.v1",
+                    "statuses": [
+                      "0"
+                    ],
+                    "conclusion": "SUCCEEDED"
+                  },
+                  {
+                    "status_schema": "rx.ros-jtc.canceled.v1",
+                    "statuses": [
+                      "-5",
+                      "-4",
+                      "-3",
+                      "-2",
+                      "-1",
+                      "0"
+                    ],
+                    "conclusion": "CANCELED"
+                  },
+                  {
+                    "status_schema": "rx.ros-jtc.aborted.v1",
+                    "statuses": [
+                      "-5",
+                      "-4",
+                      "-3",
+                      "-2",
+                      "-1",
+                      "0"
+                    ],
+                    "conclusion": "FAILED"
+                  },
+                  {
+                    "status_schema": "rx.ros-jtc.goal-rejected.v1",
+                    "statuses": [
+                      "0"
+                    ],
+                    "conclusion": "FAILED"
+                  }
+                ]
+              },
+              "postconditions": []
+            },
+            "condition_ids": [
+              "robot/ready"
+            ],
+            "condition_revision": "1",
+            "handover_max_age_ns": "100000000"
+          }
+        }
+      },
+      "issues": [],
+      "impact": {
+        "cells": [
+          {
+            "id": "cell/demo",
+            "configuration_digest": "2a351551850735aaed7f886e2710e7db98cb9969642504a6c91d210b2e340bfc",
+            "definition": {
+              "sha256": "0101010101010101010101010101010101010101010101010101010101010101",
+              "schema_id": "rx.test.v1",
+              "size_bytes": "1"
+            },
+            "envelope": {
+              "sha256": "0202020202020202020202020202020202020202020202020202020202020202",
+              "schema_id": "rx.test.v1",
+              "size_bytes": "1"
+            },
+            "recipe": {
+              "sha256": "0303030303030303030303030303030303030303030303030303030303030303",
+              "schema_id": "rx.test.v1",
+              "size_bytes": "1"
+            },
+            "hosts": [
+              "host/sim"
+            ],
+            "scopes": [
+              "zone/shared"
+            ],
+            "resources": [
+              "controller/sim",
+              "robot/controller"
+            ]
+          },
+          {
+            "id": "cell/other",
+            "configuration_digest": "2337a088639b8fe5d4c60dddc2bae48ec9c8cf3b0ce92af4cf83c5d8bf6cda64",
+            "definition": {
+              "sha256": "0101010101010101010101010101010101010101010101010101010101010101",
+              "schema_id": "rx.test.v1",
+              "size_bytes": "1"
+            },
+            "envelope": {
+              "sha256": "0202020202020202020202020202020202020202020202020202020202020202",
+              "schema_id": "rx.test.v1",
+              "size_bytes": "1"
+            },
+            "recipe": {
+              "sha256": "0303030303030303030303030303030303030303030303030303030303030303",
+              "schema_id": "rx.test.v1",
+              "size_bytes": "1"
+            },
+            "hosts": [
+              "host/sim"
+            ],
+            "scopes": [
+              "zone/shared"
+            ],
+            "resources": [
+              "controller/sim"
+            ]
+          }
+        ],
+        "scope_policy": "WHOLE_CELL_AND_SHARED_HOST_RESOURCE_SCOPE_CLOSURE",
+        "qualification_review_required": true,
+        "recovery_review_required": true,
+        "host_configuration_ack_required": true
+      },
+      "requires_process_review": true,
+      "requires_host_binding": true,
+      "requires_operating_envelope_review": true
+    },
+    "proposed_by": "admin",
+    "proposed_at": {
+      "clock_id": "local-process/918e1275-dfec-4557-ac96-f643d6e01dc7",
+      "ticks_ns": "3760795708"
+    },
+    "impact_review": {
+      "actor": "impact-reviewer",
+      "note": "Independent review of both affected cells; no configuration application",
+      "at": {
+        "clock_id": "local-process/918e1275-dfec-4557-ac96-f643d6e01dc7",
+        "ticks_ns": "3986637000"
+      }
+    }
+  },
+  "before": {
+    "id": "cell/demo",
+    "environment": "SIMULATION",
+    "definition": {
+      "sha256": "0101010101010101010101010101010101010101010101010101010101010101",
+      "schema_id": "rx.test.v1",
+      "size_bytes": "1"
+    },
+    "envelope": {
+      "sha256": "0202020202020202020202020202020202020202020202020202020202020202",
+      "schema_id": "rx.test.v1",
+      "size_bytes": "1"
+    },
+    "recipe": {
+      "sha256": "0303030303030303030303030303030303030303030303030303030303030303",
+      "schema_id": "rx.test.v1",
+      "size_bytes": "1"
+    },
+    "site_config_digest": "0404040404040404040404040404040404040404040404040404040404040404",
+    "scopes": [
+      "zone/shared"
+    ],
+    "hosts": [
+      "host/sim"
+    ],
+    "executor": "executor",
+    "maximum_budget": "10",
+    "permit_ttl_ns": "100000000",
+    "start_timeout_ns": "1000000000",
+    "start_conditions": [
+      {
+        "op": "EQ",
+        "fact": "ready",
+        "schema": "boolean/v1",
+        "unit": "unitless",
+        "expected": {
+          "boolean": true
+        }
+      }
+    ],
+    "steps": [
+      {
+        "id": "step/place",
+        "host": "host/sim",
+        "intent": {
+          "kind": "ENSURE_STATE",
+          "target": "device/sim",
+          "profile_digest": "0808080808080808080808080808080808080808080808080808080808080808",
+          "site_config_digest": "0404040404040404040404040404040404040404040404040404040404040404",
+          "calibration_digests": [],
+          "resource_set": [
+            "controller/sim"
+          ],
+          "execution_timeout_ms": "500",
+          "prepare_validity_ms": "100",
+          "completion_rule": "sim/closed",
+          "cancel_rule": "sim/stop",
+          "body": {
+            "predicate": {
+              "predicate_id": "closed",
+              "target": {
+                "boolean": true
+              },
+              "settle_ms": "0"
+            }
+          }
+        },
+        "predecessors": [],
+        "conditions": [
+          {
+            "op": "EQ",
+            "fact": "ready",
+            "schema": "boolean/v1",
+            "unit": "unitless",
+            "expected": {
+              "boolean": true
+            }
+          }
+        ],
+        "completion": {
+          "kind": "UNOBSERVABLE"
+        },
+        "condition_ids": [
+          "ready"
+        ],
+        "condition_revision": "1",
+        "handover_max_age_ns": "1000000000"
+      }
+    ],
+    "maintained_conditions": [],
+    "fact_specs": [
+      {
+        "id": "ready",
+        "host": "host/sim",
+        "schema": "boolean/v1",
+        "unit": "unitless",
+        "maximum_age_ns": "1000000000",
+        "maximum_uncertainty_ns": "0"
+      }
+    ]
+  },
+  "context_current": true,
+  "device_approval_current": true,
+  "activation_authorized": false,
+  "configuration_changed": false,
+  "application_supported": false
+}

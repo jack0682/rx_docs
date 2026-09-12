@@ -1,0 +1,41 @@
+   Compiling rx-host v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-host)
+warning: unused import: `BTreeMap`
+ --> runtime/rx-host/tests/melsec.rs:4:19
+  |
+4 |     collections::{BTreeMap, BTreeSet},
+  |                   ^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: `rx-host` (test "melsec") generated 1 warning (run `cargo fix --test "melsec" -p rx-host` to apply 1 suggestion)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3.46s
+     Running tests/melsec.rs (target/debug/deps/melsec-c202886690e46a7e)
+
+running 11 tests
+test melsec_crash_child ... ignored, executed only as an isolated child by the crash-boundary test
+test publication_generation_regression_stale_and_inconsistent_images_latch ... FAILED
+test new_or_replaced_journal_and_mismatched_profile_are_rejected_without_native_io ... ok
+test already_satisfied_state_records_evidence_without_a_native_write ... ok
+test profile_and_intent_scope_fail_before_native_writes ... ok
+test valid_support_does_not_imply_drop_permission_and_protection_does_not_release_chuck ... ok
+test ack_is_pending_and_only_later_independent_sensor_observation_captures ... ok
+test lost_reply_and_new_process_never_resubmit_or_clear_pending ... ok
+test actual_host_gate_journal_reconcile_evidence_and_stop_use_melsec_adapter ... ok
+test captured_original_session_survives_restart_but_uncaptured_ack_does_not ... ok
+test abrupt_exit_at_native_commit_and_write_boundaries_never_replays ... ok
+
+failures:
+
+---- publication_generation_regression_stale_and_inconsistent_images_latch stdout ----
+
+thread 'publication_generation_regression_stale_and_inconsistent_images_latch' (10208464) panicked at runtime/rx-host/tests/melsec.rs:244:75:
+called `Result::unwrap()` on an `Err` value: Store(Unavailable("another Runtime owns this store: lock acquisition failed because the operation would block"))
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    publication_generation_regression_stale_and_inconsistent_images_latch
+
+test result: FAILED. 9 passed; 1 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.07s
+
+error: test failed, to rerun pass `-p rx-host --test melsec`

@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "draft": "81d4ee43-8139-4f30-9362-acd00fac1bbd",
+  "checks": [
+    "registered step selection",
+    "pending selections survive navigation",
+    "same-key recovery after lost binding reply",
+    "matched source/bindings export",
+    "source change keeps old binding and blocks export",
+    "explicit review creates a new binding revision",
+    "installed cell unchanged",
+    "mobile layout"
+  ]
+}

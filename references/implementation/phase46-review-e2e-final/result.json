@@ -1,0 +1,10 @@
+{
+  "activation_authorized": false,
+  "real_s_compiler": true,
+  "same_key_recovers_decision": true,
+  "schema": "rx.process-review-e2e.v1",
+  "separate_reviewer": true,
+  "source_corruption_blocks_approval": true,
+  "status": "PASS",
+  "trusted_test_signer_only": true
+}

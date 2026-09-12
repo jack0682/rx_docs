@@ -1,0 +1,66 @@
+   Compiling uuid v1.26.1
+   Compiling rx-domain v0.1.0 (/rx/rx-solutions/sdk/crates/rx-domain)
+   Compiling tokio-rustls v0.26.5
+   Compiling tokio-stream v0.1.19
+   Compiling tonic v0.14.6
+   Compiling rx-protocol v0.1.0 (/rx/rx-solutions/sdk/crates/rx-protocol)
+   Compiling rx-package v0.1.0 (/rx/rx-solutions/sdk/crates/rx-package)
+   Compiling tonic-prost v0.14.6
+   Compiling rx-host v0.1.0 (/rx/rx-solutions/runtime/rx-host)
+   Compiling rx-ports v0.1.0 (/rx/rx-solutions/sdk/crates/rx-ports)
+   Compiling rx-storage v0.1.0 (/rx/rx-solutions/sdk/crates/rx-storage)
+   Compiling rx-solution-catalog v0.1.0 (/rx/rx-solutions/runtime/rx-solution-catalog)
+   Compiling time-core v0.1.9
+   Compiling powerfmt v0.2.0
+   Compiling deranged v0.5.8
+   Compiling num-conv v0.2.2
+   Compiling time v0.3.55
+   Compiling base64 v0.23.1
+   Compiling pem v4.0.0
+   Compiling yasna v0.6.0
+   Compiling rcgen v0.14.10
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 48.24s
+     Running unittests src/lib.rs (/rust-build/debug/deps/rx_host-8b7c0edba3c547b5)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests tests/support/crash_harness.rs (/rust-build/debug/deps/rx_host_crash_fixture-84c8b286cef876ff)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests tests/support/sim_server.rs (/rust-build/debug/deps/rx_host_sim_server-7cda4b07c95157ee)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/gate.rs (/rust-build/debug/deps/gate-dd2a2eb8ed9fa72d)
+
+running 7 tests
+test configuration_missing_quiescence_does_not_create_applied_context ... ok
+test configuration_rejects_an_old_quiescence_observation ... ok
+test configuration_commit_failure_has_no_receipt_context_or_consumed_slot ... ok
+test configuration_scope_binding_and_fence_are_not_caller_success_claims ... ok
+test configuration_does_not_treat_prepared_native_work_as_quiescent ... ok
+test configuration_cohort_is_complete_and_a_rejected_member_prevents_all_context_changes ... ok
+test configuration_context_is_durable_unqualified_and_same_request_never_reapplies ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 11 filtered out; finished in 0.03s
+
+     Running tests/mtls.rs (/rust-build/debug/deps/mtls-0f2d8684e8ef3bc7)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 5 filtered out; finished in 0.00s
+
+     Running tests/process_crash.rs (/rust-build/debug/deps/process_crash-1f0d378a8cf3f307)
+
+running 1 test
+test configuration_commit_survives_sigkill_before_reply_without_restoring_arm ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 1 filtered out; finished in 0.03s
+

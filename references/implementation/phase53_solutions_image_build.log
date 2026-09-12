@@ -1,0 +1,233 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Solutions.Dockerfile
+#1 transferring dockerfile: 7.66kB done
+#1 DONE 0.0s
+
+#2 [context btcpp] load .dockerignore
+#2 transferring btcpp: 2B done
+#2 DONE 0.0s
+
+#3 [context robotis] load .dockerignore
+#3 transferring robotis: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/rust:1.98.1-bookworm@sha256:9a73a5088750b4c95158ab26629c854c3d6fc4b173cb7bc8079ad252d8ed7bfa
+#4 DONE 0.0s
+
+#5 [internal] load metadata for docker.io/library/node:26.5.0-bookworm-slim@sha256:2d49d876e96237d76de412761cf05dbfe5aee325cc4406a4d41d5824c5bb8beb
+#5 ...
+
+#6 [auth] library/ros:pull token for registry-1.docker.io
+#6 DONE 0.0s
+
+#7 [auth] library/node:pull token for registry-1.docker.io
+#7 DONE 0.0s
+
+#8 [internal] load metadata for docker.io/library/ros:jazzy-ros-base@sha256:386d06ec6d4188f731bae5678e07b4cb64a4e4d4152090c0bd1f881dcf7706f5
+#8 ...
+
+#5 [internal] load metadata for docker.io/library/node:26.5.0-bookworm-slim@sha256:2d49d876e96237d76de412761cf05dbfe5aee325cc4406a4d41d5824c5bb8beb
+#5 DONE 1.4s
+
+#8 [internal] load metadata for docker.io/library/ros:jazzy-ros-base@sha256:386d06ec6d4188f731bae5678e07b4cb64a4e4d4152090c0bd1f881dcf7706f5
+#8 DONE 1.4s
+
+#9 [rust-build 1/8] FROM docker.io/library/rust:1.98.1-bookworm@sha256:9a73a5088750b4c95158ab26629c854c3d6fc4b173cb7bc8079ad252d8ed7bfa
+#9 resolve docker.io/library/rust:1.98.1-bookworm@sha256:9a73a5088750b4c95158ab26629c854c3d6fc4b173cb7bc8079ad252d8ed7bfa 0.0s done
+#9 DONE 0.0s
+
+#10 [ui-build 1/6] FROM docker.io/library/node:26.5.0-bookworm-slim@sha256:2d49d876e96237d76de412761cf05dbfe5aee325cc4406a4d41d5824c5bb8beb
+#10 resolve docker.io/library/node:26.5.0-bookworm-slim@sha256:2d49d876e96237d76de412761cf05dbfe5aee325cc4406a4d41d5824c5bb8beb 0.0s done
+#10 DONE 0.0s
+
+#11 [native-dependencies 1/8] FROM docker.io/library/ros:jazzy-ros-base@sha256:386d06ec6d4188f731bae5678e07b4cb64a4e4d4152090c0bd1f881dcf7706f5
+#11 resolve docker.io/library/ros:jazzy-ros-base@sha256:386d06ec6d4188f731bae5678e07b4cb64a4e4d4152090c0bd1f881dcf7706f5 0.0s done
+#11 DONE 0.0s
+
+#12 [context robotis] load from client
+#12 transferring robotis: 45B done
+#12 DONE 0.0s
+
+#13 [context btcpp] load from client
+#13 transferring btcpp: 27.43kB 0.0s done
+#13 DONE 0.0s
+
+#14 [internal] load build context
+#14 transferring context: 302.76kB 0.0s done
+#14 DONE 0.0s
+
+#15 [rust-build 2/8] WORKDIR /src
+#15 CACHED
+
+#16 [rust-build 3/8] COPY Cargo.toml Cargo.lock ./
+#16 CACHED
+
+#17 [context robotis] load from client
+#17 ...
+
+#18 [rust-build 4/8] COPY sdk ./sdk
+#18 DONE 0.0s
+
+#19 [rust-build 5/8] COPY runtime ./runtime
+#19 DONE 0.0s
+
+#20 [rust-build 6/8] COPY catalogs ./catalogs
+#20 DONE 0.0s
+
+#21 [rust-build 7/8] COPY interfaces ./interfaces
+#21 DONE 0.0s
+
+#17 [context robotis] load from client
+#17 transferring robotis: 349.07kB 0.2s done
+#17 DONE 0.3s
+
+#22 [rust-build 8/8] RUN --mount=type=cache,id=rx-solutions-registry,target=/usr/local/cargo/registry     --mount=type=cache,id=rx-solutions-release,target=/src/target     cargo build --release --locked --workspace && mkdir -p /out && cp target/release/rx-executor-service target/release/rx-process-compile target/release/rx-solutionsd target/release/rx-process-package /out/
+#22 0.336    Compiling rx-domain v0.1.0 (/src/sdk/crates/rx-domain)
+#22 2.370    Compiling rx-package v0.1.0 (/src/sdk/crates/rx-package)
+#22 6.502    Compiling rx-process-contract v0.1.0 (/src/sdk/crates/rx-process-contract)
+#22 10.10    Compiling rx-ports v0.1.0 (/src/sdk/crates/rx-ports)
+#22 10.16    Compiling rx-storage v0.1.0 (/src/sdk/crates/rx-storage)
+#22 11.29    Compiling rx-process v0.1.0 (/src/runtime/rx-process)
+#22 13.72    Compiling rx-protocol v0.1.0 (/src/sdk/crates/rx-protocol)
+#22 18.53    Compiling rx-solution-catalog v0.1.0 (/src/runtime/rx-solution-catalog)
+#22 19.94    Compiling rx-host v0.1.0 (/src/runtime/rx-host)
+#22 19.96    Compiling rx-process-package v0.1.0 (/src/runtime/rx-process-package)
+#22 22.76    Compiling rx-supervisor v0.1.0 (/src/runtime/rx-supervisor)
+#22 25.04    Compiling rx-executor v0.1.0 (/src/runtime/rx-executor)
+#22 59.72     Finished `release` profile [optimized] target(s) in 59.61s
+#22 DONE 59.8s
+
+#23 [native-dependencies 4/8] COPY tools/materialize_package_manifests.py /opt/rx/tools/materialize_package_manifests.py
+#23 CACHED
+
+#24 [runtime  2/15] COPY dependencies/native-apt-locks /opt/rx/apt-locks
+#24 CACHED
+
+#25 [native-audit 4/6] COPY native/support/ort_inspect.cpp /tmp/ort_inspect.cpp
+#25 CACHED
+
+#26 [native-dependencies 6/8] RUN mkdir -p /etc/ros/rosdep/sources.list.d &&     printf 'yaml https://raw.githubusercontent.com/ros/rosdistro/86ac06531559f070ce9ea5ad485714395336ec6f/rosdep/base.yaml\nyaml https://raw.githubusercontent.com/ros/rosdistro/86ac06531559f070ce9ea5ad485714395336ec6f/rosdep/python.yaml\n' > /etc/ros/rosdep/sources.list.d/20-default.list
+#26 CACHED
+
+#27 [native-build 3/5] COPY tools/native_source_inventory.py /opt/rx/tools/native_source_inventory.py
+#27 CACHED
+
+#28 [native-build 1/5] WORKDIR /workspace
+#28 CACHED
+
+#29 [native-dependencies 3/8] COPY --from=robotis /package-manifests.json /opt/rx/input/package-manifests.json
+#29 CACHED
+
+#30 [native-audit 5/6] COPY catalogs/robotis-support.v1.json /opt/rx/manifests/robotis-support.v1.json
+#30 CACHED
+
+#31 [native-dependencies 5/8] RUN python3 /opt/rx/tools/materialize_package_manifests.py /opt/rx/input/package-manifests.json /workspace/dependencies
+#31 CACHED
+
+#32 [native-build 5/5] RUN --network=none source /opt/ros/jazzy/setup.bash     && colcon list --base-paths src --names-only | sort > /opt/rx/manifests/native-source-packages.txt     && colcon build --base-paths src --executor sequential --merge-install        --install-base /opt/rx/robotis --cmake-args -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DCMAKE_AUTOGEN_PARALLEL=1 -DONNXRUNTIME_ROOT=/opt/onnxruntime     && cp src/source-lock.json /opt/rx/manifests/native-sources.json
+#32 CACHED
+
+#33 [native-build 4/5] RUN python3 /opt/rx/tools/native_source_inventory.py /workspace/src
+#33 CACHED
+
+#34 [native-audit 2/6] RUN ldconfig
+#34 CACHED
+
+#35 [native-dependencies 8/8] RUN case "arm64" in       arm64) ORT_ARCH=aarch64; ORT_SHA=7c63c73560ed76b1fac6cff8204ffe34fe180e70d6582b5332ec094810241e5c ;;       amd64) ORT_ARCH=x64; ORT_SHA=1fa4dcaef22f6f7d5cd81b28c2800414350c10116f5fdd46a2160082551c5f9b ;;       *) exit 1 ;;     esac     && curl --fail --location --proto '=https' --tlsv1.2 "https://github.com/microsoft/onnxruntime/releases/download/v1.23.2/onnxruntime-linux-${ORT_ARCH}-1.23.2.tgz" -o /tmp/ort.tgz     && echo "${ORT_SHA}  /tmp/ort.tgz" | sha256sum --check     && mkdir -p /opt/onnxruntime     && tar -xzf /tmp/ort.tgz --strip-components=1 -C /opt/onnxruntime     && rm /tmp/ort.tgz
+#35 CACHED
+
+#36 [native-audit 6/6] RUN --network=none g++ -std=c++17 /tmp/ort_inspect.cpp -I/opt/onnxruntime/include -L/opt/onnxruntime/lib -Wl,-rpath,/opt/onnxruntime/lib -lonnxruntime -o /opt/rx/tools/ort-inspect     && source /opt/ros/jazzy/setup.bash && source /opt/rx/robotis/setup.bash     && python3 /opt/rx/tools/audit_native_install.py --catalog /opt/rx/manifests/robotis-support.v1.json --output /opt/rx/manifests/native-install-audit.json
+#36 CACHED
+
+#37 [runtime  4/15] COPY --from=native-audit /opt/rx/robotis /opt/rx/robotis
+#37 CACHED
+
+#38 [native-build 2/5] COPY --from=robotis / /workspace/src/
+#38 CACHED
+
+#39 [native-dependencies 7/8] RUN if [ ! -f /etc/ros/rosdep/sources.list.d/20-default.list ]; then rosdep init; fi     && rosdep update --rosdistro jazzy     && apt-get update     && rosdep install --from-paths /workspace/dependencies --ignore-src --rosdistro jazzy -y     && apt-get install -y --no-install-recommends ros-jazzy-rmw-zenoh-cpp     && mkdir -p /opt/rx/manifests     && dpkg-query -W -f='${Package}\t${Version}\t${Architecture}\n' | sort > /opt/rx/manifests/native-packages.tsv     && rm -rf /var/lib/apt/lists/*
+#39 CACHED
+
+#40 [native-audit 1/6] COPY native/support/onnxruntime.conf /etc/ld.so.conf.d/rx-onnxruntime.conf
+#40 CACHED
+
+#41 [native-dependencies 2/8] RUN apt-get update && apt-get install -y --no-install-recommends     build-essential cmake ninja-build curl ca-certificates python3-colcon-common-extensions     python3-rosdep python3-yaml libyaml-cpp-dev libeigen3-dev     && rm -rf /var/lib/apt/lists/*
+#41 CACHED
+
+#42 [runtime  1/15] COPY native/support/onnxruntime.conf /etc/ld.so.conf.d/rx-onnxruntime.conf
+#42 CACHED
+
+#43 [runtime  3/15] RUN ldconfig
+#43 CACHED
+
+#44 [native-audit 3/6] COPY tools/audit_native_install.py /opt/rx/tools/audit_native_install.py
+#44 CACHED
+
+#45 [bt-build 1/3] COPY --from=btcpp / /btcpp/
+#45 CACHED
+
+#46 [bt-build 2/3] COPY native/executor /executor/
+#46 CACHED
+
+#47 [bt-build 3/3] RUN --network=none cmake -S /executor -B /bt-build -G Ninja -DCMAKE_BUILD_TYPE=Release -DBTCPP_SOURCE=/btcpp -DRX_BUILD_TEST_HARNESS=OFF     && cmake --build /bt-build --target rx-bt-engine -j1
+#47 CACHED
+
+#48 [runtime  5/15] COPY --from=native-audit /opt/rx/manifests /opt/rx/manifests
+#48 CACHED
+
+#49 [ui-build 3/6] COPY apps/operator/package.json apps/operator/package-lock.json ./
+#49 CACHED
+
+#50 [ui-build 2/6] WORKDIR /src
+#50 CACHED
+
+#51 [ui-build 4/6] RUN npm ci
+#51 CACHED
+
+#52 [ui-build 5/6] COPY apps/operator/ ./
+#52 CACHED
+
+#53 [ui-build 6/6] RUN npm run build
+#53 CACHED
+
+#54 [runtime  6/15] COPY --from=rust-build /out/ /opt/rx/bin/
+#54 DONE 0.0s
+
+#55 [runtime  7/15] COPY --from=bt-build /bt-build/rx-bt-engine /opt/rx/bin/rx-bt-engine
+#55 DONE 0.0s
+
+#56 [runtime  8/15] COPY --from=ui-build /src/dist/ /opt/rx/operator/
+#56 DONE 0.0s
+
+#57 [runtime  9/15] COPY catalogs /opt/rx/catalogs
+#57 DONE 0.0s
+
+#58 [runtime 10/15] COPY dependencies/native-stack.lock.json /opt/rx/manifests/native-stack.lock.json
+#58 DONE 0.0s
+
+#59 [runtime 11/15] COPY native/support/solutions_status.py /opt/rx/tools/solutions_status.py
+#59 DONE 0.0s
+
+#60 [runtime 12/15] COPY native/support/entrypoint.sh /opt/rx/entrypoint.sh
+#60 DONE 0.0s
+
+#61 [runtime 13/15] COPY tools/write_runtime_inventory.py /opt/rx/tools/write_runtime_inventory.py
+#61 DONE 0.0s
+
+#62 [runtime 14/15] RUN cmp /opt/rx/manifests/native-packages.tsv /opt/rx/apt-locks/arm64.tsv     && rm -rf /workspace/dependencies     && mkdir -p /var/lib/rx-solutions/ros-log /run/rx-solutions     && chown -R 10001:10001 /var/lib/rx-solutions /run/rx-solutions     && chmod 755 /opt/rx/entrypoint.sh     && python3 /opt/rx/tools/write_runtime_inventory.py
+#62 DONE 0.2s
+
+#63 [runtime 15/15] WORKDIR /var/lib/rx-solutions
+#63 DONE 0.0s
+
+#64 exporting to image
+#64 exporting layers
+#64 exporting layers 0.4s done
+#64 exporting manifest sha256:456fc8ad68efe06780a808560338054ca4286a62172ee8db07e669a224da8ba1 done
+#64 exporting config sha256:1d0b77371cd0132b6d595a347a9968446fd75b37bbbc1358c0bbdb56827ed98c done
+#64 exporting attestation manifest sha256:7709ed091c2e8d0572b8c01d101cb8e446c00d4202d5956a85593eedb5ab528c done
+#64 exporting manifest list sha256:3e8e95f3e51db5afc5150035eba793b8640eeb460526c6f86e2a04823e34e3f6 done
+#64 naming to docker.io/library/rx-solutions:runtime-draft done
+#64 unpacking to docker.io/library/rx-solutions:runtime-draft 0.1s done
+#64 DONE 0.6s

@@ -1,0 +1,144 @@
+{
+  "cell": "cell/demo",
+  "intake": "95ce3520-4dc6-47af-9f54-f68926a23187",
+  "object": {
+    "manifest": "fcdd2fee92539167d5c9254b38cfb69de132b7fbeaa410d8119cfcaa18814903",
+    "signature": "eb91dc75623db33a3f4c9cba3bb5de6c4eacd1dd505a4f3af32d231c7616749e"
+  },
+  "reference": {
+    "sha256": "033b007c2c4b6859bca0eb7e34c8b8ecf72a6168cb3daa8bb693097828acf3e4",
+    "schema_id": "rx.device-operation-catalog.v1",
+    "size_bytes": "2589"
+  },
+  "catalog": {
+    "schema": "rx.device-operation-catalog.v1",
+    "installation": "333bebe7-19b5-4285-8e69-1dd45c7c71b3",
+    "cell": "cell/demo",
+    "target": "robot/arm",
+    "environment": "SIMULATION",
+    "profile_digest": "52261a6024f2801d79b0093736f8aaeccbe68edd8865a8b5499cc35a9d7f0dff",
+    "condition_ids": [
+      "robot/ready"
+    ],
+    "operations": {
+      "supply": {
+        "target": "robot/arm",
+        "kind": "FINITE_ACTION",
+        "profile_digest": "52261a6024f2801d79b0093736f8aaeccbe68edd8865a8b5499cc35a9d7f0dff",
+        "resource_set": [
+          "robot/controller"
+        ],
+        "execution_timeout_ms": "1000",
+        "completion_rule": "rx.ros-jtc.terminal-result.v1",
+        "site_config_digest": "0101010101010101010101010101010101010101010101010101010101010101",
+        "calibration_digests": [
+          "c93ea262d6d13767cdae4867a2a8725df715dade46d2c71d12227d6f57e05147"
+        ],
+        "prepare_validity_ms": "1000",
+        "cancel_rule": "rx.ros-jtc.exact-cancel.v1",
+        "body": {
+          "trajectory": {
+            "trajectory": {
+              "sha256": "c6607acfd393eb43699324df12bd89190b8dae893ba0dad887204d1a7e3ca530",
+              "schema_id": "rx.ros-jtc.goal.v1",
+              "size_bytes": "1043"
+            },
+            "joint_group": "arm",
+            "tool_digest": "af0727eb35b37908261e5d76c2593ad1e4d394c0d56b4b2f36ccb911df3f0ef7"
+          }
+        }
+      }
+    },
+    "outcomes": {
+      "schema": "rx.native-outcome-table.v1",
+      "profile_digest": "52261a6024f2801d79b0093736f8aaeccbe68edd8865a8b5499cc35a9d7f0dff",
+      "completion_rule": "rx.ros-jtc.terminal-result.v1",
+      "cases": [
+        {
+          "status_schema": "rx.ros-jtc.succeeded.v1",
+          "statuses": [
+            "0"
+          ],
+          "conclusion": "SUCCEEDED"
+        },
+        {
+          "status_schema": "rx.ros-jtc.canceled.v1",
+          "statuses": [
+            "-5",
+            "-4",
+            "-3",
+            "-2",
+            "-1",
+            "0"
+          ],
+          "conclusion": "CANCELED"
+        },
+        {
+          "status_schema": "rx.ros-jtc.aborted.v1",
+          "statuses": [
+            "-5",
+            "-4",
+            "-3",
+            "-2",
+            "-1",
+            "0"
+          ],
+          "conclusion": "FAILED"
+        },
+        {
+          "status_schema": "rx.ros-jtc.goal-rejected.v1",
+          "statuses": [
+            "0"
+          ],
+          "conclusion": "FAILED"
+        }
+      ]
+    },
+    "documents": {
+      "adapter": {
+        "path": "adapter.json",
+        "artifact": {
+          "sha256": "ab44dcffed7c79b4cc100d149584d788aa72eec46d0f42b2bbdf37eb3c6adde4",
+          "schema_id": "rx.native-driver-reference.v1",
+          "size_bytes": "171"
+        }
+      },
+      "family": {
+        "path": "family.json",
+        "artifact": {
+          "sha256": "cbcf03dad6b7786fec4b188a364a095e5a0af0ed1853c146b9ec2f42ca6fe8d0",
+          "schema_id": "rx.robotis-jtc-family.v1",
+          "size_bytes": "126"
+        }
+      },
+      "operations": {
+        "path": "operations.json",
+        "artifact": {
+          "sha256": "729624bea699604e193371b21526bf9280268e2098765680ad291e030521074b",
+          "schema_id": "rx.device-operation-map.v1",
+          "size_bytes": "776"
+        }
+      },
+      "outcomes": {
+        "path": "outcomes.json",
+        "artifact": {
+          "sha256": "f2f925a35430c515c71ee18636dad5b20f31499a0ccad47557a9254e9ea46e28",
+          "schema_id": "rx.native-outcome-table.v1",
+          "size_bytes": "571"
+        }
+      },
+      "profile": {
+        "path": "profile.json",
+        "artifact": {
+          "sha256": "8c6ee24691be94b39299d7a38670ec9cd53b15d9b207ee4c3a45a6ede1298e9e",
+          "schema_id": "rx.robotis-jtc-profile.v1",
+          "size_bytes": "2017"
+        }
+      }
+    }
+  },
+  "review_context_current": true,
+  "content_reverification_required": true,
+  "manufacturer_validation_required": true,
+  "activation_authorized": false
+}

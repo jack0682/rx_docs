@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-09-10",
+  "scope": "document links/rendering syntax, immutable baseline/manifests, source HEAD revalidation, coverage identifiers; substantive semantics reviewed separately in review_record.md",
+  "documents_checked": 11,
+  "document_lines": 642,
+  "coverage": {
+    "scenario_ids": 28,
+    "invariants": 18,
+    "validation_obligations": 11,
+    "requirements": 6
+  },
+  "issues": [],
+  "source_repo_changes": [],
+  "base_manifest_unchanged": true,
+  "cell_manifest_hash": "e0225c1e39b179f941d98f91daa94b387a6028e4e872b4499f20d63440d270c8",
+  "product_or_hardware_tests_executed": false
+}

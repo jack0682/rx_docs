@@ -1,0 +1,18 @@
+    Checking rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-process-contract)
+   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-protocol)
+    Checking rx-storage v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-storage)
+    Checking rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+error[E0609]: no field `created_by` on type `process_draft::Summary`
+  --> crates/rx-application/src/engine/process_draft.rs:89:81
+   |
+89 |                 created_by: previous.map_or_else(|| principal.id.clone(), |p| p.created_by),
+   |                                                                                 ^^^^^^^^^^ unknown field
+   |
+help: a field with a similar name exists
+   |
+89 -                 created_by: previous.map_or_else(|| principal.id.clone(), |p| p.created_by),
+89 +                 created_by: previous.map_or_else(|| principal.id.clone(), |p| p.updated_by),
+   |
+
+For more information about this error, try `rustc --explain E0609`.
+error: could not compile `rx-application` (lib) due to 1 previous error

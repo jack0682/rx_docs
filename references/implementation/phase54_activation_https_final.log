@@ -1,0 +1,10 @@
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.16s
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.18s
+     Running tests/configuration_e2e.rs (target/debug/deps/configuration_e2e-d26966b8452c73ca)
+
+running 2 tests
+test configuration_reply_loss_recovers_same_receipt_and_restarted_host_stays_unqualified ... ok
+test configuration_coordinator_persists_request_and_recovers_real_host_reply_loss ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.69s
+

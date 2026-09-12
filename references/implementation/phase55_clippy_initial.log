@@ -1,0 +1,63 @@
+    Checking rx-host v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-host)
+error: this `if` statement can be collapsed
+   --> runtime/rx-host/src/service/mod.rs:146:13
+    |
+146 | /             if let Ok(m) = fs::symlink_metadata(&p) {
+147 | |                 if !m.is_file() || m.file_type().is_symlink() {
+148 | |                     return Err("invalid simulation state file".into());
+149 | |                 }
+150 | |             }
+    | |_____________^
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.98.0/index.html#collapsible_if
+    = note: `-D clippy::collapsible-if` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(clippy::collapsible_if)]`
+help: collapse nested if block
+    |
+146 ~             if let Ok(m) = fs::symlink_metadata(&p)
+147 ~                 && (!m.is_file() || m.file_type().is_symlink()) {
+148 |                     return Err("invalid simulation state file".into());
+149 ~                 }
+    |
+
+error: this `if` statement can be collapsed
+   --> runtime/rx-host/src/service/mod.rs:253:5
+    |
+253 | /     if let Ok(m) = fs::symlink_metadata(&lock_path) {
+254 | |         if !m.is_file() || m.file_type().is_symlink() {
+255 | |             return Err("invalid runtime lock".into());
+256 | |         }
+257 | |     }
+    | |_____^
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.98.0/index.html#collapsible_if
+help: collapse nested if block
+    |
+253 ~     if let Ok(m) = fs::symlink_metadata(&lock_path)
+254 ~         && (!m.is_file() || m.file_type().is_symlink()) {
+255 |             return Err("invalid runtime lock".into());
+256 ~         }
+    |
+
+error: this `if` statement can be collapsed
+   --> runtime/rx-host/src/service/mod.rs:425:5
+    |
+425 | /     if let Some(task) = publisher_task {
+426 | |         if let Err(e) = task.await {
+427 | |             service_error = Some(format!("publisher task: {e}"));
+428 | |         }
+429 | |     }
+    | |_____^
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.98.0/index.html#collapsible_if
+help: collapse nested if block
+    |
+425 ~     if let Some(task) = publisher_task
+426 ~         && let Err(e) = task.await {
+427 |             service_error = Some(format!("publisher task: {e}"));
+428 ~         }
+    |
+
+error: could not compile `rx-host` (lib) due to 3 previous errors
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `rx-host` (lib test) due to 3 previous errors

@@ -1,0 +1,14 @@
+   Compiling rx-domain v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-domain)
+   Compiling rx-ports v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-ports)
+   Compiling rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-process-contract)
+   Compiling rx-storage v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-storage)
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 6.47s
+     Running tests/transactions.rs (target/debug/deps/transactions-285a2e14f18af9d7)
+
+running 2 tests
+test host_bootstrap_plan_and_registration_are_durable_and_do_not_fabricate_readiness ... ok
+test host_bootstrap_rejects_wrong_incarnation_missing_sources_and_changed_context ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 77 filtered out; finished in 0.07s
+

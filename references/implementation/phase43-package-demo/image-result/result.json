@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "image_id": "sha256:26ed3916917e04121af184655b211b064458545873111a8de3bb7ad8d699aed8",
+  "user": "10001:10001",
+  "read_only_root": true,
+  "devices": [],
+  "workflow": [
+    "assemble unsigned candidate",
+    "create external signing request",
+    "verify precomputed detached test signature",
+    "seal into a new directory",
+    "verify current trust/content",
+    "recompile immutable signed bytes"
+  ],
+  "manifest_digest": "01f080700538bcd55ae22b2ecf0cd173031e9280bde5c9eae942821ec9cfd0cb",
+  "signing_message_matches_external_signer": true,
+  "revoked_permissions_rejected": true,
+  "limitations": [
+    "explicit test-only signer and local verification policy",
+    "no production trust registration, activation, native execution or qualification"
+  ]
+}

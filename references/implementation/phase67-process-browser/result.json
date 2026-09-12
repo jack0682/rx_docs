@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "review": "b714693a-a289-4d23-862c-cf8a7f0eb35b",
+  "intake": "4d17d764-ea7c-4964-a736-71d60a5e25a9",
+  "real_api": true,
+  "real_s_compiler": true,
+  "test_only_signer": true,
+  "checks": [
+    "intake",
+    "step binding selection",
+    "review request download",
+    "signed report submission",
+    "self approval denied",
+    "new report clears acknowledgement",
+    "history is read only",
+    "open approval dialog invalidated by new version",
+    "explicit target confirmation",
+    "lost decision response and same-key recovery after reload",
+    "no run or activation",
+    "mobile overflow",
+    "no JavaScript errors"
+  ]
+}

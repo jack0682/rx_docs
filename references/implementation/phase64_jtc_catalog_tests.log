@@ -1,0 +1,20 @@
+   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol)
+   Compiling rx-host v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-host)
+   Compiling rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-process-contract)
+   Compiling rx-device-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-device-package)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 7.96s
+     Running tests/jtc_authoring.rs (target/debug/deps/jtc_authoring-4330e2bb5b27e9e3)
+
+running 9 tests
+test export_image_fixture ... ignored, exports only SIMULATION inputs and a public test policy for the image authoring test
+test sign_image_request ... ignored, test-only external signer for the isolated image fixture
+test missing_alias_or_foreign_bindings_and_invalid_trajectory_are_rejected ... ok
+test signed_but_inconsistent_results_actions_model_and_release_are_rejected ... ok
+test host_package_checks_assets_and_exact_intents_but_cannot_create_control_authority ... ok
+test unordered_template_actions_have_one_digest_and_joint_order_is_preserved ... ok
+test template_reuse_and_candidate_roundtrip_preserve_bound_actions_and_result_meanings ... ok
+test host_initializes_jtc_metadata_and_refuses_run_before_creating_a_controller_client ... ok
+test actual_cli_assembles_requests_external_signature_seals_and_inspects_jtc ... ok
+
+test result: ok. 7 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 1.40s
+

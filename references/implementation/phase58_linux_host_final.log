@@ -1,0 +1,165 @@
+   Compiling rx-host v0.1.0 (/rx/rx-solutions/runtime/rx-host)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 56.10s
+     Running unittests src/lib.rs (/host-build/debug/deps/rx_host-6ef06f579a7feb50)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests tests/support/crash_harness.rs (/host-build/debug/deps/rx_host_crash_fixture-70064f55d3839ebe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests tests/support/sim_server.rs (/host-build/debug/deps/rx_host_sim_server-2e3a368a8ab68ce0)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/rx-hostd.rs (/host-build/debug/deps/rx_hostd-d38627b5304b2d32)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/gate.rs (/host-build/debug/deps/gate-23223c1289441a74)
+
+running 30 tests
+test configuration_missing_quiescence_does_not_create_applied_context ... ok
+test altered_permit_and_unapproved_intent_are_rejected_before_effect ... ok
+test cancellation_arriving_before_prepare_creates_permanent_tombstone ... ok
+test configuration_scope_binding_and_fence_are_not_caller_success_claims ... ok
+test configuration_rejects_an_old_quiescence_observation ... ok
+test configuration_commit_failure_has_no_receipt_context_or_consumed_slot ... ok
+test configuration_cohort_is_complete_and_a_rejected_member_prevents_all_context_changes ... ok
+test configuration_does_not_treat_prepared_native_work_as_quiescent ... ok
+test expiry_during_commit_does_not_enter_native_and_is_not_retried ... ok
+test late_fence_replay_cannot_remove_a_new_arm_or_rewind_epoch ... ok
+test prepare_does_not_call_device_and_authorize_duplicates_are_receipt_lookup ... ok
+test native_submission_serializes_fence_while_protection_is_independent ... ok
+test configuration_context_is_durable_unqualified_and_same_request_never_reapplies ... ok
+test prepared_rebind_retires_old_permit_permanently ... ok
+test evidence_publication_cursor_is_durable_scoped_and_never_accepts_a_foreign_ack ... ok
+test renewal_replay_does_not_extend_expiry_and_expired_grant_stays_expired ... ok
+test qualification_tests::qualification_full_cohort_is_atomic_and_a_wrong_member_cannot_be_accepted ... ok
+test qualification_tests::qualification_commit_failure_rolls_back_cohort_receipt_and_slot ... ok
+test same_grant_fence_requires_same_request_identity ... ok
+test simulated_device_has_an_independent_exclusive_owner ... ok
+test qualification_tests::qualification_arm_rejects_partial_clearance_and_any_changed_cohort_member ... ok
+test service_stop_latch_interrupts_the_pre_native_boundary_without_waiting_for_gate_lock ... ok
+test stable_handover_is_not_permission_to_drop_an_adapter ... ok
+test qualification_tests::qualification_identity_cannot_be_reused_for_different_evidence_and_empty_scope_grants_no_operations ... ok
+test service_stop_latches_before_database_access_and_preserves_uncertain_work ... ok
+test qualification_tests::qualification_acceptance_preserves_blocks_requires_explicit_arm_and_rejects_old_qualification ... ok
+test qualification_tests::qualification_restart_keeps_receipt_and_never_restores_applicability_or_arm ... ok
+test qualification_tests::qualification_same_key_same_review_and_changed_scope_cannot_replace_accepted_identity ... ok
+test qualification_tests::qualification_revalidation_does_not_hide_prepared_native_work ... ok
+test qualification_tests::qualification_requires_supported_fresh_local_quiescence ... ok
+
+test result: ok. 30 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s
+
+     Running tests/melsec.rs (/host-build/debug/deps/melsec-dc225a3a374a7957)
+
+running 15 tests
+test captured_original_session_survives_restart_but_uncaptured_ack_does_not ... ok
+test melsec_crash_child ... ignored, executed only as an isolated child by the crash-boundary test
+test actual_host_gate_journal_reconcile_evidence_and_stop_use_melsec_adapter ... ok
+test ack_is_pending_and_only_later_independent_sensor_observation_captures ... ok
+test abrupt_exit_at_native_commit_and_write_boundaries_never_replays ... ok
+test already_satisfied_state_records_evidence_without_a_native_write ... ok
+test corrupted_completion_record_is_not_adopted_as_historical_fact ... ok
+test final_native_read_after_journal_commit_rechecks_ready_without_resend ... ok
+test final_read_within_transport_budget_but_beyond_guard_lifetime_cannot_write ... ok
+test linux_real_boottime_adapter_observation_write_completion_and_drop ... ok
+test lost_reply_and_new_process_never_resubmit_or_clear_pending ... ok
+test new_or_replaced_journal_and_mismatched_profile_are_rejected_without_native_io ... ok
+test profile_and_intent_scope_fail_before_native_writes ... ok
+test publication_generation_regression_stale_and_inconsistent_images_latch ... ok
+test valid_support_does_not_imply_drop_permission_and_protection_does_not_release_chuck ... ok
+
+test result: ok. 14 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.17s
+
+     Running tests/melsec_service.rs (/host-build/debug/deps/melsec_service-4aef641557d546bd)
+
+running 7 tests
+test export_melsec_image_fixture ... ignored, exports signed, test-only loopback configuration for the product image test
+test physical_startup_qualification_id_does_not_authorize_arm ... ok
+test signed_device_package_binds_release_profile_assets_and_exact_cell_without_io ... ok
+test validly_signed_wrong_release_controller_or_installation_is_rejected ... ok
+test physical_metadata_requires_current_qualification_and_separate_arm_on_loopback ... ok
+test signature_content_policy_asset_release_and_binding_tampering_fail_before_initialization ... ok
+test product_composition_initializes_starts_and_stops_the_signed_melsec_package ... ok
+
+test result: ok. 6 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.35s
+
+     Running tests/mtls.rs (/host-build/debug/deps/mtls-065847fa8335c23e)
+
+running 5 tests
+test concurrent_hello_retries_produce_one_usable_session ... ok
+test cell_manifest_and_session_are_mandatory_before_grant ... ok
+test valid_ca_without_registered_fingerprint_cannot_impersonate_platform ... ok
+test changed_content_under_rpc_key_is_rejected_and_legacy_dispatch_cannot_bypass_cell ... ok
+test mtls_negotiation_prepare_authorize_and_evidence_roundtrip ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.13s
+
+     Running tests/process_crash.rs (/host-build/debug/deps/process_crash-8115b8c3b76f73eb)
+
+running 3 tests
+test configuration_commit_survives_sigkill_before_reply_without_restoring_arm ... ok
+test qualification_commit_survives_sigkill_before_reply_without_restoring_authority ... ok
+test sigkill_at_both_journal_native_boundaries_never_replays_device_effect ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
+     Running tests/service.rs (/host-build/debug/deps/service-3afafdcbebb98cd7)
+
+running 7 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 6 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.36s
+
+     Running unittests src/lib.rs (/host-build/debug/deps/rx_melsec_mc-1a157634c385d768)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/transport.rs (/host-build/debug/deps/transport-019a44ee1268088a)
+
+running 12 tests
+test denied_addresses_and_zero_or_oversize_reads_send_no_bytes ... ok
+test invalid_configuration_fails_before_a_connection_attempt ... ok
+test explicit_route_bytes_and_24_bit_addresses_are_preserved ... ok
+test documented_bit_read_and_word_read_vectors_over_fragmented_tcp ... ok
+test lost_write_response_preserves_uncertainty_and_never_resends ... ok
+test profile_is_explicit_bounded_and_simulation_cannot_target_the_site ... ok
+test mapped_single_bit_write_ack_does_not_claim_physical_completion ... ok
+test passive_connect_and_drop_never_send_plc_commands ... ok
+test plc_error_code_is_preserved_without_assuming_write_nonexecution ... ok
+test write_ack_payload_cannot_smuggle_a_completion_value ... ok
+test malformed_headers_lengths_end_codes_and_payloads_fault_the_connection ... ok
+test total_deadline_is_not_extended_by_a_slow_trickle ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.16s
+
+   Doc-tests rx_host
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rx_melsec_mc
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

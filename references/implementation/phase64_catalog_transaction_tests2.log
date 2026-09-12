@@ -1,0 +1,12 @@
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.63s
+     Running tests/transactions.rs (target/debug/deps/transactions-2d3d144f384ba793)
+
+running 4 tests
+test device_catalog_tests::old_packages_without_catalog_remain_readable_without_claiming_device_validation ... ok
+test device_catalog_tests::device_catalog_intake_is_atomic_preserves_source_and_never_changes_active_configuration ... ok
+test device_catalog_tests::installation_environment_and_expired_tickets_do_not_commit_a_catalog ... ok
+test device_catalog_tests::signed_catalog_mismatches_cannot_enter_the_writer_as_valid_declarations ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 157 filtered out; finished in 0.55s
+

@@ -1,0 +1,38 @@
+    Checking rx-domain v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-domain)
+   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol)
+   Compiling rx-host v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-host)
+    Checking rx-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-package)
+    Checking rx-ports v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-ports)
+error: failed to run custom build command for `rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol)`
+
+Caused by:
+  process didn't exit successfully: `/Users/ojaehong/RX_automation/rx_ws/rx-solutions/target/debug/build/rx-protocol-00c009e06ba0bf3f/build-script-build` (exit status: 1)
+  --- stdout
+  cargo:rerun-if-changed=/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol/../../crates/rx-process-contract/src/execution.rs
+  cargo:rerun-if-changed=/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol/../../crates/rx-process-contract/src/execution_validation.rs
+  cargo:rerun-if-changed=/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol/../../proto/rx/executor/v1/executor.proto
+  cargo:rerun-if-changed=/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol/../../spec/executor/v1/README.md
+  cargo:rerun-if-changed=/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol/../../spec/executor/v1/binding.json
+  cargo:rerun-if-changed=/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol/../../crates/rx-process-contract/src/checkpoint_change.rs
+  cargo:rerun-if-changed=/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol/../../crates/rx-process-contract/src/execution.rs
+  cargo:rerun-if-changed=/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol/../../crates/rx-protocol/src/checkpoint_rejection.rs
+  cargo:rerun-if-changed=/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol/../../proto/rx/executor/plan/v1/plan.proto
+  cargo:rerun-if-changed=/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol/../../spec/executor-plan/v1/README.md
+  cargo:rerun-if-changed=/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol/../../spec/executor-plan/v1/binding.json
+  cargo:rerun-if-changed=/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol/../../crates/rx-process-contract/src/execution.rs
+  cargo:rerun-if-changed=/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol/../../crates/rx-process-contract/src/production.rs
+  cargo:rerun-if-changed=/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol/../../proto/rx/executor/production/v1/production.proto
+  cargo:rerun-if-changed=/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol/../../spec/production/v1/README.md
+  cargo:rerun-if-changed=/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol/../../spec/production/v1/binding.json
+  cargo:rerun-if-changed=/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol/../../crates/rx-domain/src/host_snapshot.rs
+  cargo:rerun-if-changed=/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol/../../proto/rx/host/read/v1/read.proto
+  cargo:rerun-if-changed=/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol/../../spec/host-read/v1/README.md
+  cargo:rerun-if-changed=/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol/../../spec/host-read/v1/binding.json
+  cargo:rerun-if-changed=/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol/../../crates/rx-domain/src/host_configuration.rs
+  cargo:rerun-if-changed=/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol/../../proto/rx/host/configuration/v1/configuration.proto
+  cargo:rerun-if-changed=/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol/../../spec/host-configuration/v1/README.md
+  cargo:rerun-if-changed=/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol/../../spec/host-configuration/v1/binding.json
+
+  --- stderr
+  Error: Custom { kind: Other, error: "protoc failed: /Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol/../../proto/rx/host/configuration/v1/configuration.proto:13:3: \"cell.CellCall\" is resolved to \"rx.cell.CellCall\", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., \".cell.CellCall\") to start from the outermost scope.\n" }
+warning: build failed, waiting for other jobs to finish...

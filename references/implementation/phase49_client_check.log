@@ -1,0 +1,20 @@
+    Checking rustix v1.1.4
+    Checking sha2 v0.10.9
+    Checking tokio-rustls v0.26.5
+    Checking semver v1.0.28
+   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-protocol)
+    Checking rx-domain v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-domain)
+    Checking tonic v0.14.6
+    Checking fs-set-times v0.20.3
+    Checking cap-primitives v4.0.3
+    Checking rx-ports v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-ports)
+    Checking rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-process-contract)
+    Checking tonic-prost v0.14.6
+    Checking cap-std v4.0.3
+    Checking cap-fs-ext v4.0.3
+    Checking rx-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-package)
+    Checking rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+    Checking rx-runtime v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-runtime)
+    Checking rx-protocol-adapter v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-protocol-adapter)
+    Checking rx-host-client v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-host-client)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 9.40s

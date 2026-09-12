@@ -1,0 +1,12 @@
+<root BTCPP_format="4" main_tree_to_execute="RXMain">
+  <!-- RX resolved process: f0fa3b560c7203d2e7ea346ad02a7367891e4155a4f7cb2b221a91689b861f83 -->
+  <BehaviorTree ID="RXMain">
+    <RXSequence node_id="node/15a333047b9466faa7e19faca35826dedd89e6b96e0fdfd494ef8ea9501b6b92">
+      <RXOperation node_id="node/0e8160381396f3a7d8d8a241cc552240d8e4b47299671f90955d70ce9b7f54d7" binding="door-open"/>
+      <RXOperation node_id="node/d5624045eed08f620130bda02e43ae8d4693b64bad29e1eed411beccc0d36589" binding="place"/>
+      <RXOperation node_id="node/04f8927aea361b87116b7c12685bd85ec99f21a466b7305d118cb9fb21ef3934" binding="clamp"/>
+      <RXOperation node_id="node/3303113753443348b7aa5f6327c2aa738a511aec2475daa1248b4c10e0016d34" binding="withdraw"/>
+      <RXOperation node_id="node/24c2ebf3024746398918f8479edef4b46d295473062d68726b5e953213b89573" binding="door-close"/>
+    </RXSequence>
+  </BehaviorTree>
+</root>

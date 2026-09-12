@@ -1,0 +1,118 @@
+{
+  "objective": "셀의 운전 조건·실행 허가·작업자 개입·복구 계약을 확정시켜보자 충분한 리서칭을 바탕으로 근거를 기준으로 진행하라",
+  "completed_scope": "normative software design contract and evidence-based decisions, not commissioning or code/hardware validation",
+  "requirement_audit": [
+    {
+      "id": "N01",
+      "requirement": "운전 조건·사용 범위·첫 셀 입력",
+      "evidence": [
+        {
+          "file": "docs/cell_operations/v1.0/01_scope_conditions_functions.md",
+          "sha256": "d97d4226ae8f4e143cdb962274bd759d517ea44b921e57bc42587921d3fe0668"
+        }
+      ],
+      "inspection": [
+        "01 §1–6",
+        "CO01·07·12·20"
+      ],
+      "verdict": "design requirement covered by normative rules, trace walkthrough and reader/integration review"
+    },
+    {
+      "id": "N02",
+      "requirement": "작업자 개입·복구·SR01–03",
+      "evidence": [
+        {
+          "file": "docs/cell_operations/v1.0/03_intervention_recovery_change.md",
+          "sha256": "3cb1b7632e3d24c8a1e8aabd011919d8dc8bd50e0c19e1046864f478d6884e18"
+        },
+        {
+          "file": "docs/cell_operations/v1.0/05_validation_audit.md",
+          "sha256": "1a2f390b570e6194669ffa1a414cea5a5601d83219cd10f255e0d839c6a9276c"
+        }
+      ],
+      "inspection": [
+        "03 §1–8",
+        "CO02–12·16·19·26–28"
+      ],
+      "verdict": "design requirement covered by normative rules, trace walkthrough and reader/integration review"
+    },
+    {
+      "id": "N03",
+      "requirement": "위험·기능·책임·증거와 미확인 시 제한",
+      "evidence": [
+        {
+          "file": "docs/cell_operations/v1.0/01_scope_conditions_functions.md",
+          "sha256": "d97d4226ae8f4e143cdb962274bd759d517ea44b921e57bc42587921d3fe0668"
+        }
+      ],
+      "inspection": [
+        "01 H01–H06/SafetyFunctionSpec",
+        "조사 S01–13·OV05–09"
+      ],
+      "verdict": "design requirement covered by normative rules, trace walkthrough and reader/integration review"
+    },
+    {
+      "id": "N04",
+      "requirement": "실행 허가·무효화·정상 자동과 재시작",
+      "evidence": [
+        {
+          "file": "docs/cell_operations/v1.0/02_authorization_invalidation.md",
+          "sha256": "ba5d8bcc313f325b5d05e3c770f99b4cae7a83ad506f454cd1759f74f8ae2497"
+        },
+        {
+          "file": "docs/cell_operations/v1.0/04_protocol_integration_ui.md",
+          "sha256": "cedb3b601a262f0c8582a8a3680d81d42ef598a029b639c621a5bf99c45ede6a"
+        }
+      ],
+      "inspection": [
+        "mandate/permit/epoch/clearance/원자성",
+        "CO01–16·22·24"
+      ],
+      "verdict": "design requirement covered by normative rules, trace walkthrough and reader/integration review"
+    },
+    {
+      "id": "N05",
+      "requirement": "UI·binding·변경·자사 기본 지원",
+      "evidence": [
+        {
+          "file": "docs/cell_operations/v1.0/03_intervention_recovery_change.md",
+          "sha256": "3cb1b7632e3d24c8a1e8aabd011919d8dc8bd50e0c19e1046864f478d6884e18"
+        },
+        {
+          "file": "docs/cell_operations/v1.0/04_protocol_integration_ui.md",
+          "sha256": "cedb3b601a262f0c8582a8a3680d81d42ef598a029b639c621a5bf99c45ede6a"
+        }
+      ],
+      "inspection": [
+        "03 §7",
+        "04 §8–9",
+        "CO17–25"
+      ],
+      "verdict": "design requirement covered by normative rules, trace walkthrough and reader/integration review"
+    },
+    {
+      "id": "N06",
+      "requirement": "기존 계약 연결·반례·검증 의무",
+      "evidence": [
+        {
+          "file": "docs/cell_operations/v1.0/04_protocol_integration_ui.md",
+          "sha256": "cedb3b601a262f0c8582a8a3680d81d42ef598a029b639c621a5bf99c45ede6a"
+        },
+        {
+          "file": "docs/cell_operations/v1.0/05_validation_audit.md",
+          "sha256": "1a2f390b570e6194669ffa1a414cea5a5601d83219cd10f255e0d839c6a9276c"
+        }
+      ],
+      "inspection": [
+        "rx.cell.v1 의무 협상·우회 거부",
+        "CO01–28·OI01–18·OV01–11"
+      ],
+      "verdict": "design requirement covered by normative rules, trace walkthrough and reader/integration review"
+    }
+  ],
+  "research": "research_and_decisions.md S01–S13/O-D01–11",
+  "independent_review": "docs/cell_operations/v1.0/review_record.md; both readers reported their raised P1/P2 issues resolved",
+  "file_validation": "document_check.json",
+  "unexecuted_obligations": "OV01–OV11 remain explicit implementation/site verification obligations; no execution claim",
+  "first_site_state": "NOT_COMMISSIONED because actual model/tool/IO/safety-function data are not supplied"
+}

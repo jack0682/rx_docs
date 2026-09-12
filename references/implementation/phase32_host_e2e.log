@@ -1,0 +1,39 @@
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.33s
+   Compiling rx-protocol-adapter v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-protocol-adapter)
+   Compiling rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-api)
+   Compiling rx-host-client v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-host-client)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 6.26s
+     Running tests/network_e2e.rs (target/debug/deps/network_e2e-30d33aac76e7c53c)
+
+running 3 tests
+test application_outbox_reaches_mtls_host_and_t2_commits_the_result ... FAILED
+test automatic_dispatcher_recovers_a_lost_authorize_reply_without_native_reexecution ... FAILED
+test remote_executor_submission_and_host_reply_loss_preserve_one_native_effect_per_slot ... FAILED
+
+failures:
+
+---- application_outbox_reaches_mtls_host_and_t2_commits_the_result stdout ----
+
+thread 'application_outbox_reaches_mtls_host_and_t2_commits_the_result' (8034292) panicked at crates/rx-host-client/tests/network_e2e.rs:494:14:
+called `Result::unwrap()` on an `Err` value: Rejected(StaleRevision)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- automatic_dispatcher_recovers_a_lost_authorize_reply_without_native_reexecution stdout ----
+
+thread 'automatic_dispatcher_recovers_a_lost_authorize_reply_without_native_reexecution' (8034293) panicked at crates/rx-host-client/tests/network_e2e.rs:861:18:
+called `Result::unwrap()` on an `Err` value: Rejected(Rejected(StaleRevision))
+
+---- remote_executor_submission_and_host_reply_loss_preserve_one_native_effect_per_slot stdout ----
+
+thread 'remote_executor_submission_and_host_reply_loss_preserve_one_native_effect_per_slot' (8034294) panicked at crates/rx-host-client/tests/support/wire_executor.rs:180:14:
+called `Result::unwrap()` on an `Err` value: Status { code: Aborted, message: "STALE_REVISION", metadata: MetadataMap { headers: {"content-type": "application/grpc", "date": "Fri, 11 Sep 2026 04:54:50 GMT"} }, source: None }
+
+
+failures:
+    application_outbox_reaches_mtls_host_and_t2_commits_the_result
+    automatic_dispatcher_recovers_a_lost_authorize_reply_without_native_reexecution
+    remote_executor_submission_and_host_reply_loss_preserve_one_native_effect_per_slot
+
+test result: FAILED. 0 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.02s
+
+error: test failed, to rerun pass `-p rx-host-client --test network_e2e`

@@ -1,0 +1,61 @@
+{
+  "schema": "rx.platform-image-smoke.v1",
+  "status": "PASS",
+  "image_id": "sha256:c13e6aca5d030cafcb41fd59ae543ae56eac79e056628715322e435e6f4f063b",
+  "os": "linux",
+  "architecture": "arm64",
+  "user": "10001:10001",
+  "read_only_root": true,
+  "cap_drop": [
+    "ALL"
+  ],
+  "https_health": {
+    "admission_open": true,
+    "mode": "TERMINAL_HTTPS",
+    "service": "rx-platform",
+    "start_requires_user_terminal_and_runtime_conditions": true,
+    "writer_available": true
+  },
+  "startup": {
+    "installation_id": "4e1a028d-de42-479b-b9e6-034d0f68172b",
+    "phase": "SOFTWARE_READY_UNCOMMISSIONED",
+    "physical_shutdown_assessed": false,
+    "qualification_authority": "NOT_CONNECTED",
+    "runtime_boot": "01a090ea-5dc1-73dd-8af7-875be2f87576",
+    "schema": "rx.platform-process-status.v1",
+    "stop": null
+  },
+  "stop": {
+    "installation_id": "4e1a028d-de42-479b-b9e6-034d0f68172b",
+    "phase": "PROCESS_STOPPED",
+    "physical_shutdown_assessed": false,
+    "qualification_authority": "NOT_CONNECTED",
+    "runtime_boot": "01a090ea-5dc1-73dd-8af7-875be2f87576",
+    "schema": "rx.platform-process-status.v1",
+    "stop": {
+      "attention": [],
+      "attention_count": "0",
+      "lifecycle": {
+        "phase": "STOP_COMMITTED",
+        "requested_at": {
+          "clock_id": "linux-boottime/0d510887-f903-42ea-a4a8-d658102c95d8",
+          "ticks_ns": "130911857185"
+        },
+        "runtime_boot": "01a090ea-5dc1-73dd-8af7-875be2f87576",
+        "stop_id": "01a090ea-5e1d-75c2-98ac-9352f1b3bc91",
+        "stopped_at": {
+          "clock_id": "linux-boottime/0d510887-f903-42ea-a4a8-d658102c95d8",
+          "ticks_ns": "130914042477"
+        }
+      },
+      "physical_shutdown_assessed": false,
+      "truncated": false
+    }
+  },
+  "limitations": [
+    "uncommissioned draft authority",
+    "no Host/controller launch",
+    "no physical shutdown qualification",
+    "config/data volumes and test certificates were disposable"
+  ]
+}

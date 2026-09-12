@@ -1,0 +1,30 @@
+    Checking rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+    Checking rx-protocol-adapter v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-protocol-adapter)
+    Checking rx-runtime v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-runtime)
+    Checking rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-api)
+    Checking rx-host-client v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-host-client)
+    Checking rx-platformd v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-platformd)
+error: this `if` statement can be collapsed
+   --> crates/rx-host-client/tests/network_e2e.rs:792:13
+    |
+792 | /             if let rx_host_client::observation::ObservationStatus::Received(receipt) =
+793 | |                 &*readings.borrow()
+794 | |             {
+795 | |                 if receipt.entries[0].evidence != observed.entries[0].evidence {
+...   |
+798 | |             }
+    | |_____________^
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.98.0/index.html#collapsible_if
+    = note: `-D clippy::collapsible-if` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(clippy::collapsible_if)]`
+help: collapse nested if block
+    |
+793 ~                 &*readings.borrow()
+794 ~                 && receipt.entries[0].evidence != observed.entries[0].evidence {
+795 |                     break;
+796 ~                 }
+    |
+
+error: could not compile `rx-host-client` (test "network_e2e") due to 1 previous error
+warning: build failed, waiting for other jobs to finish...

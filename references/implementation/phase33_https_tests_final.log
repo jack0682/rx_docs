@@ -1,0 +1,12 @@
+   Compiling rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-api)
+error[E0559]: variant `rx_runtime::application::Command::PutPrincipal` has no field named `principal`
+   --> crates/rx-api/tests/terminal_https.rs:559:13
+    |
+559 |             principal: principal("alice", &[Role::Observer], &["cell/a", "cell/b"]),
+    |             ^^^^^^^^^ `rx_runtime::application::Command::PutPrincipal` does not have this field
+    |
+    = note: available fields are: `value`
+
+For more information about this error, try `rustc --explain E0559`.
+error: could not compile `rx-api` (test "terminal_https") due to 1 previous error
+warning: build failed, waiting for other jobs to finish...

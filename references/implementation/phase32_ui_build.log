@@ -1,0 +1,5 @@
+
+> @rx/operator@0.1.0 build
+> tsc --noEmit && vite build
+
+src/labels.ts(43,3): error TS1117: An object literal cannot have multiple properties with the same name.

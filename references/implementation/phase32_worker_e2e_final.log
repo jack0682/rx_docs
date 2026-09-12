@@ -1,0 +1,9 @@
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.12s
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.12s
+     Running tests/executor_ingress.rs (target/debug/deps/executor_ingress-1110f4196911f2e2)
+
+running 1 test
+test durable_s_worker_handles_real_bt_requests_and_preserves_crash_boundaries ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 5 filtered out; finished in 15.45s
+

@@ -1,0 +1,109 @@
+Name:      docker.io/library/rust:1.98.1-bookworm
+MediaType: application/vnd.oci.image.index.v1+json
+Digest:    sha256:9a73a5088750b4c95158ab26629c854c3d6fc4b173cb7bc8079ad252d8ed7bfa
+           
+Manifests: 
+  Name:        docker.io/library/rust:1.98.1-bookworm@sha256:cdb2da72943ec036bf0c731ef5ac9e5fb2b1d17d3a9256a581bad64cf6fc093d
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    linux/amd64
+  Annotations: 
+    org.opencontainers.image.source:          https://github.com/rust-lang/docker-rust.git#0fc94fa4d5bac5532a9adf8e4f8b0fe6deca7d44:stable/bookworm
+    org.opencontainers.image.url:             https://hub.docker.com/_/rust
+    org.opencontainers.image.version:         1-bookworm
+    com.docker.official-images.bashbrew.arch: amd64
+    org.opencontainers.image.base.digest:     sha256:c8e8f3d6e647f782059d933878e9a0de6889cec350149a770d51d1baa245a60e
+    org.opencontainers.image.base.name:       buildpack-deps:bookworm
+    org.opencontainers.image.created:         2026-09-09T00:08:27Z
+    org.opencontainers.image.revision:        0fc94fa4d5bac5532a9adf8e4f8b0fe6deca7d44
+               
+  Name:        docker.io/library/rust:1.98.1-bookworm@sha256:7296b208667c941eda0fad1c6aad38e54b5fc9f82461c98b31e51dcd06891272
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    unknown/unknown
+  Annotations: 
+    com.docker.official-images.bashbrew.arch: amd64
+    vnd.docker.reference.digest:              sha256:cdb2da72943ec036bf0c731ef5ac9e5fb2b1d17d3a9256a581bad64cf6fc093d
+    vnd.docker.reference.type:                attestation-manifest
+               
+  Name:        docker.io/library/rust:1.98.1-bookworm@sha256:016156fef27501052af6ec5346801f259d49ab90b8578db85192a6116c047eb2
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    linux/arm/v7
+  Annotations: 
+    org.opencontainers.image.revision:        0fc94fa4d5bac5532a9adf8e4f8b0fe6deca7d44
+    org.opencontainers.image.source:          https://github.com/rust-lang/docker-rust.git#0fc94fa4d5bac5532a9adf8e4f8b0fe6deca7d44:stable/bookworm
+    org.opencontainers.image.url:             https://hub.docker.com/_/rust
+    org.opencontainers.image.version:         1-bookworm
+    com.docker.official-images.bashbrew.arch: arm32v7
+    org.opencontainers.image.base.digest:     sha256:9a6313a56d72daad19af2c424441d8855cd3f6c9b713d95601b02b7fec4227ad
+    org.opencontainers.image.base.name:       buildpack-deps:bookworm
+    org.opencontainers.image.created:         2026-09-09T00:08:04Z
+               
+  Name:        docker.io/library/rust:1.98.1-bookworm@sha256:1e5392aedd974e57ca9f4188d137f80bae1d5932991e2b8dc13d2144751437c9
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    unknown/unknown
+  Annotations: 
+    vnd.docker.reference.type:                attestation-manifest
+    com.docker.official-images.bashbrew.arch: arm32v7
+    vnd.docker.reference.digest:              sha256:016156fef27501052af6ec5346801f259d49ab90b8578db85192a6116c047eb2
+               
+  Name:        docker.io/library/rust:1.98.1-bookworm@sha256:09e98f39fa15751de9476fefafe4be0e4ef92b292d608410595bbbde9ebdd375
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    linux/arm64/v8
+  Annotations: 
+    org.opencontainers.image.created:         2026-09-09T00:08:01Z
+    org.opencontainers.image.revision:        0fc94fa4d5bac5532a9adf8e4f8b0fe6deca7d44
+    org.opencontainers.image.source:          https://github.com/rust-lang/docker-rust.git#0fc94fa4d5bac5532a9adf8e4f8b0fe6deca7d44:stable/bookworm
+    org.opencontainers.image.url:             https://hub.docker.com/_/rust
+    org.opencontainers.image.version:         1-bookworm
+    com.docker.official-images.bashbrew.arch: arm64v8
+    org.opencontainers.image.base.digest:     sha256:d2b65563319efe6bcb62e08750efeebf61458946f43f6f26fe62f0c1e293ebad
+    org.opencontainers.image.base.name:       buildpack-deps:bookworm
+               
+  Name:        docker.io/library/rust:1.98.1-bookworm@sha256:dd5acfc238c54a7b855d2f712c28161c705095d6eba18e2ef3ce6856ef4a06a3
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    unknown/unknown
+  Annotations: 
+    com.docker.official-images.bashbrew.arch: arm64v8
+    vnd.docker.reference.digest:              sha256:09e98f39fa15751de9476fefafe4be0e4ef92b292d608410595bbbde9ebdd375
+    vnd.docker.reference.type:                attestation-manifest
+               
+  Name:        docker.io/library/rust:1.98.1-bookworm@sha256:52ee3001113f3a66874af4fed85fcbce2f8f2ef7347aa8a575074f2a81e35be1
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    linux/386
+  Annotations: 
+    org.opencontainers.image.url:             https://hub.docker.com/_/rust
+    org.opencontainers.image.version:         1-bookworm
+    com.docker.official-images.bashbrew.arch: i386
+    org.opencontainers.image.base.digest:     sha256:07ff0204d8d24c5234f52f94ea4d14841bcf042e06a197a54a5f5676c1ca0528
+    org.opencontainers.image.base.name:       buildpack-deps:bookworm
+    org.opencontainers.image.created:         2026-09-09T00:08:18Z
+    org.opencontainers.image.revision:        0fc94fa4d5bac5532a9adf8e4f8b0fe6deca7d44
+    org.opencontainers.image.source:          https://github.com/rust-lang/docker-rust.git#0fc94fa4d5bac5532a9adf8e4f8b0fe6deca7d44:stable/bookworm
+               
+  Name:        docker.io/library/rust:1.98.1-bookworm@sha256:b47838deb148a881e2d8628d5b0e3d2b0f70101f80553c4249654e056e44c6b8
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    unknown/unknown
+  Annotations: 
+    com.docker.official-images.bashbrew.arch: i386
+    vnd.docker.reference.digest:              sha256:52ee3001113f3a66874af4fed85fcbce2f8f2ef7347aa8a575074f2a81e35be1
+    vnd.docker.reference.type:                attestation-manifest
+               
+  Name:        docker.io/library/rust:1.98.1-bookworm@sha256:911ba86634f42f9d24d5a62159d5847e727e68d0463f987cb8dc350eb3f6f205
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    linux/ppc64le
+  Annotations: 
+    org.opencontainers.image.base.name:       buildpack-deps:bookworm
+    org.opencontainers.image.created:         2026-09-09T00:07:27Z
+    org.opencontainers.image.revision:        0fc94fa4d5bac5532a9adf8e4f8b0fe6deca7d44
+    org.opencontainers.image.source:          https://github.com/rust-lang/docker-rust.git#0fc94fa4d5bac5532a9adf8e4f8b0fe6deca7d44:stable/bookworm
+    org.opencontainers.image.url:             https://hub.docker.com/_/rust
+    org.opencontainers.image.version:         1-bookworm
+    com.docker.official-images.bashbrew.arch: ppc64le
+    org.opencontainers.image.base.digest:     sha256:e9d64a24a124f40c7589b9cecbef50b7df5f0f2452600df830debfb5b8e5ed29
+               
+  Name:        docker.io/library/rust:1.98.1-bookworm@sha256:20bdf992fb917849f8e3454add3aaa90003ae265eda88a7e7cee3bc0135373ee
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    unknown/unknown
+  Annotations: 
+    com.docker.official-images.bashbrew.arch: ppc64le
+    vnd.docker.reference.digest:              sha256:911ba86634f42f9d24d5a62159d5847e727e68d0463f987cb8dc350eb3f6f205
+    vnd.docker.reference.type:                attestation-manifest

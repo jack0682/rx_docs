@@ -1,0 +1,35 @@
+    Checking rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-process-contract)
+    Checking rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-protocol)
+    Checking rx-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-package)
+    Checking rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+    Checking rx-protocol-adapter v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-protocol-adapter)
+    Checking rx-runtime v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-runtime)
+    Checking rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-api)
+    Checking rx-host-client v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-host-client)
+    Checking rx-platformd v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-platformd)
+error[E0599]: no associated function or constant named `parse` found for struct `Digest` in the current scope
+  --> crates/rx-platformd/src/bin/rx-package-store.rs:63:31
+   |
+63 |             manifest: Digest::parse(&args[2])?,
+   |                               ^^^^^ associated function or constant not found in `Digest`
+   |
+note: if you're trying to build a new `Digest`, consider using `Digest::from_bytes` which returns `Digest`
+  --> crates/rx-domain/src/types.rs:83:5
+   |
+83 |     pub const fn from_bytes(bytes: [u8; 32]) -> Self {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0599]: no associated function or constant named `parse` found for struct `Digest` in the current scope
+  --> crates/rx-platformd/src/bin/rx-package-store.rs:64:32
+   |
+64 |             signature: Digest::parse(&args[3])?,
+   |                                ^^^^^ associated function or constant not found in `Digest`
+   |
+note: if you're trying to build a new `Digest`, consider using `Digest::from_bytes` which returns `Digest`
+  --> crates/rx-domain/src/types.rs:83:5
+   |
+83 |     pub const fn from_bytes(bytes: [u8; 32]) -> Self {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For more information about this error, try `rustc --explain E0599`.
+error: could not compile `rx-platformd` (bin "rx-package-store") due to 2 previous errors

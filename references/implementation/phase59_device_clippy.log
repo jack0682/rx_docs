@@ -1,0 +1,32 @@
+   Compiling rx-host v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-host)
+    Checking rx-melsec-mc v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/drivers/rx-melsec-mc)
+    Checking rx-solution-catalog v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-solution-catalog)
+error: this expression creates a reference which is immediately dereferenced by the compiler
+   --> runtime/rx-host/src/service/device_package.rs:150:31
+    |
+150 |     let family: Family = read(&package, family)?;
+    |                               ^^^^^^^^ help: change this to: `package`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.98.0/index.html#needless_borrow
+    = note: `-D clippy::needless-borrow` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(clippy::needless_borrow)]`
+
+error: this expression creates a reference which is immediately dereferenced by the compiler
+   --> runtime/rx-host/src/service/device_package.rs:151:39
+    |
+151 |     let implementation: Driver = read(&package, adapter)?;
+    |                                       ^^^^^^^^ help: change this to: `package`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.98.0/index.html#needless_borrow
+
+error: this expression creates a reference which is immediately dereferenced by the compiler
+   --> runtime/rx-host/src/service/device_package.rs:152:33
+    |
+152 |     let profile: Profile = read(&package, &profiles[0])?;
+    |                                 ^^^^^^^^ help: change this to: `package`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.98.0/index.html#needless_borrow
+
+error: could not compile `rx-host` (lib) due to 3 previous errors
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `rx-host` (lib test) due to 3 previous errors

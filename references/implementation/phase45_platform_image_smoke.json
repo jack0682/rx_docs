@@ -1,0 +1,248 @@
+{
+  "schema": "rx.platform-image-smoke.v1",
+  "status": "PASS",
+  "image_id": "sha256:b4f157f2ca8c424ea5c7748f95aa44bc24a271ee3c010a40ba0688d5afad9d49",
+  "os": "linux",
+  "architecture": "arm64",
+  "user": "10001:10001",
+  "read_only_root": true,
+  "cap_drop": [
+    "ALL"
+  ],
+  "https_health": {
+    "admission_open": true,
+    "mode": "TERMINAL_HTTPS",
+    "service": "rx-platform",
+    "start_requires_user_terminal_and_runtime_conditions": true,
+    "writer_available": true
+  },
+  "startup": {
+    "installation_id": "862a0bea-9740-487f-8d64-855da6178f04",
+    "phase": "SOFTWARE_READY_UNCOMMISSIONED",
+    "physical_shutdown_assessed": false,
+    "qualification_authority": "NOT_CONNECTED",
+    "runtime_boot": "01a092bf-ae2e-7686-8c28-0f3e0875f348",
+    "schema": "rx.platform-process-status.v1",
+    "stop": null
+  },
+  "stop": {
+    "installation_id": "862a0bea-9740-487f-8d64-855da6178f04",
+    "phase": "PROCESS_STOPPED",
+    "physical_shutdown_assessed": false,
+    "qualification_authority": "NOT_CONNECTED",
+    "runtime_boot": "01a092bf-ae2e-7686-8c28-0f3e0875f348",
+    "schema": "rx.platform-process-status.v1",
+    "stop": {
+      "attention": [],
+      "attention_count": "0",
+      "lifecycle": {
+        "phase": "STOP_COMMITTED",
+        "requested_at": {
+          "clock_id": "linux-boottime/41d39ad5-1b05-4756-a95a-d8b0f0a79c93",
+          "ticks_ns": "225031997642"
+        },
+        "runtime_boot": "01a092bf-ae2e-7686-8c28-0f3e0875f348",
+        "stop_id": "01a092bf-af01-7230-9e67-df7a72c8a7db",
+        "stopped_at": {
+          "clock_id": "linux-boottime/41d39ad5-1b05-4756-a95a-d8b0f0a79c93",
+          "ticks_ns": "225035542642"
+        }
+      },
+      "physical_shutdown_assessed": false,
+      "truncated": false
+    }
+  },
+  "package_intake": {
+    "status": "PASS",
+    "receipt": {
+      "id": "751bdc43-7287-4fea-b988-1e683eca508e",
+      "cell": "cell/a",
+      "title": "Image acceptance package",
+      "object": {
+        "manifest": "01f080700538bcd55ae22b2ecf0cd173031e9280bde5c9eae942821ec9cfd0cb",
+        "signature": "6d7a46499046a3c4fe21135ba5d43fca59ec15d20b19b01759bbea466e819dd1"
+      },
+      "configuration_digest": "cd9290731b18788a9e151e1b81d56364ae1e9ec1d40b11890fcc8db3aaa0b275",
+      "registration": {
+        "generation": "01a092bf-ae35-7716-acbb-cc6caf42fde0",
+        "store_owner": "b7a8d930-e848-4c4b-8168-6470be365fe6",
+        "policy_fingerprint": "bd1dae5e84e6ef976d357bad83b4474da425ff28cf84f80bf44d8fea1662ce59",
+        "policy_file_digest": "bc6f389f63fa9b26dbf0accc7e731ab11fe5f2f0dc2cb1a9962ea2d1c4f84c66"
+      },
+      "manifest": {
+        "schema": "rx.package.v1",
+        "package": "example/laser-material-supply",
+        "version": "0.1.0",
+        "publisher": "rx-local-test",
+        "contracts": {
+          "base": "66756d119140d436da477cce4331f34ef705900b83c338a870bdbe2ced78dd3b",
+          "cell": "e0225c1e39b179f941d98f91daa94b387a6028e4e872b4499f20d63440d270c8",
+          "package_abi": "rx.package-abi.v1"
+        },
+        "targets": [
+          {
+            "os": "LINUX",
+            "architecture": "ARM64",
+            "ros_distribution": null
+          }
+        ],
+        "entry": {
+          "kind": "PROCESS",
+          "source": "process/source.json"
+        },
+        "permissions": [
+          {
+            "kind": "ARTIFACT_READ"
+          },
+          {
+            "kind": "OPERATION_SUBMIT",
+            "operation": "load-material"
+          }
+        ],
+        "dependencies": [],
+        "assets": [],
+        "files": [
+          {
+            "path": "authoring/compile-input.json",
+            "sha256": "071c16a0510d254cca09201ec4122632091d043cfa2fddeece3b5ea398d38de7",
+            "size_bytes": "1363",
+            "executable": false
+          },
+          {
+            "path": "authoring/package-recipe.json",
+            "sha256": "536a3f687a7d310443de6706f3e318f77b4fa79d3237dccc9401ffffef3fe4c7",
+            "size_bytes": "429",
+            "executable": false
+          },
+          {
+            "path": "process/bindings.json",
+            "sha256": "72343b00238548bde3ef5fd84e384b44f0ce5435f14098f39e9e996fd2efa1ef",
+            "size_bytes": "525",
+            "executable": false
+          },
+          {
+            "path": "process/context-requirements.json",
+            "sha256": "5314b804b43a90a37636c09280f97adb7514dbf7e0c8a50c1e2fa9485cbd87c9",
+            "size_bytes": "354",
+            "executable": false
+          },
+          {
+            "path": "process/source.json",
+            "sha256": "71bb042440346050d0d79cbf2ac6142646b16516320916fa9888f5231d2bd37b",
+            "size_bytes": "404",
+            "executable": false
+          }
+        ]
+      },
+      "submitted_by": "admin",
+      "terminal": "panel/a",
+      "submitted_at": {
+        "clock_id": "linux-boottime/41d39ad5-1b05-4756-a95a-d8b0f0a79c93",
+        "ticks_ns": "224986688351"
+      },
+      "state": "AWAITING_REVIEW"
+    },
+    "view": {
+      "receipt": {
+        "id": "751bdc43-7287-4fea-b988-1e683eca508e",
+        "cell": "cell/a",
+        "title": "Image acceptance package",
+        "object": {
+          "manifest": "01f080700538bcd55ae22b2ecf0cd173031e9280bde5c9eae942821ec9cfd0cb",
+          "signature": "6d7a46499046a3c4fe21135ba5d43fca59ec15d20b19b01759bbea466e819dd1"
+        },
+        "configuration_digest": "cd9290731b18788a9e151e1b81d56364ae1e9ec1d40b11890fcc8db3aaa0b275",
+        "registration": {
+          "generation": "01a092bf-ae35-7716-acbb-cc6caf42fde0",
+          "store_owner": "b7a8d930-e848-4c4b-8168-6470be365fe6",
+          "policy_fingerprint": "bd1dae5e84e6ef976d357bad83b4474da425ff28cf84f80bf44d8fea1662ce59",
+          "policy_file_digest": "bc6f389f63fa9b26dbf0accc7e731ab11fe5f2f0dc2cb1a9962ea2d1c4f84c66"
+        },
+        "manifest": {
+          "schema": "rx.package.v1",
+          "package": "example/laser-material-supply",
+          "version": "0.1.0",
+          "publisher": "rx-local-test",
+          "contracts": {
+            "base": "66756d119140d436da477cce4331f34ef705900b83c338a870bdbe2ced78dd3b",
+            "cell": "e0225c1e39b179f941d98f91daa94b387a6028e4e872b4499f20d63440d270c8",
+            "package_abi": "rx.package-abi.v1"
+          },
+          "targets": [
+            {
+              "os": "LINUX",
+              "architecture": "ARM64",
+              "ros_distribution": null
+            }
+          ],
+          "entry": {
+            "kind": "PROCESS",
+            "source": "process/source.json"
+          },
+          "permissions": [
+            {
+              "kind": "ARTIFACT_READ"
+            },
+            {
+              "kind": "OPERATION_SUBMIT",
+              "operation": "load-material"
+            }
+          ],
+          "dependencies": [],
+          "assets": [],
+          "files": [
+            {
+              "path": "authoring/compile-input.json",
+              "sha256": "071c16a0510d254cca09201ec4122632091d043cfa2fddeece3b5ea398d38de7",
+              "size_bytes": "1363",
+              "executable": false
+            },
+            {
+              "path": "authoring/package-recipe.json",
+              "sha256": "536a3f687a7d310443de6706f3e318f77b4fa79d3237dccc9401ffffef3fe4c7",
+              "size_bytes": "429",
+              "executable": false
+            },
+            {
+              "path": "process/bindings.json",
+              "sha256": "72343b00238548bde3ef5fd84e384b44f0ce5435f14098f39e9e996fd2efa1ef",
+              "size_bytes": "525",
+              "executable": false
+            },
+            {
+              "path": "process/context-requirements.json",
+              "sha256": "5314b804b43a90a37636c09280f97adb7514dbf7e0c8a50c1e2fa9485cbd87c9",
+              "size_bytes": "354",
+              "executable": false
+            },
+            {
+              "path": "process/source.json",
+              "sha256": "71bb042440346050d0d79cbf2ac6142646b16516320916fa9888f5231d2bd37b",
+              "size_bytes": "404",
+              "executable": false
+            }
+          ]
+        },
+        "submitted_by": "admin",
+        "terminal": "panel/a",
+        "submitted_at": {
+          "clock_id": "linux-boottime/41d39ad5-1b05-4756-a95a-d8b0f0a79c93",
+          "ticks_ns": "224986688351"
+        },
+        "state": "AWAITING_REVIEW"
+      },
+      "review_context_current": true,
+      "content_reverification_required": true,
+      "activation_authorized": false
+    },
+    "repeat_returns_identical_receipt": true,
+    "no_run_or_qualification": true,
+    "policy_sha256": "bc6f389f63fa9b26dbf0accc7e731ab11fe5f2f0dc2cb1a9962ea2d1c4f84c66"
+  },
+  "limitations": [
+    "uncommissioned draft authority",
+    "no Host/controller launch",
+    "no physical shutdown qualification",
+    "config/data volumes and test certificates were disposable"
+  ]
+}

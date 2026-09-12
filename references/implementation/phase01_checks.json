@@ -1,0 +1,37 @@
+{
+  "stage": "domain_and_storage_foundation",
+  "recorded_at": "2026-09-10T03:18:01.407370+00:00",
+  "tests_passed": 27,
+  "tests_failed": 0,
+  "clippy": "passed --workspace --all-targets --locked -- -D warnings",
+  "linked_sqlite_source_version": "3.53.2",
+  "evidence_output": "phase01_checks.txt",
+  "source_sha256": {
+    "Cargo.toml": "9bdc3ca34a5296e1eef8e77850627136ea35a2b75b46d043b3fc8ef8ef7ced22",
+    "Cargo.lock": "e3144dd9b00a46548975c40e592655245feb37f1cea66676b4d1acccbb8c16ec",
+    "rust-toolchain.toml": "887f9be066a15585a2c583578e84b0fcb541126d81546276bad3d2ff00d61167",
+    "crates/rx-domain/src/budget.rs": "3f31bd65d3aa706e8088ea7ce36d3a9a2c2e9ec9f0abf0cd697bd90b07bf7f5e",
+    "crates/rx-domain/src/canonical.rs": "4a421f1c9d411a287ce20f5760abbe3fd97b3d733fc6a9e2ebd6aa79a0f903d2",
+    "crates/rx-domain/src/condition.rs": "ba8b48c2d8fef1e1fc5c1b518dded0708ad8025d023035c060b67dead8253a0c",
+    "crates/rx-domain/src/epoch.rs": "48578b60092a875179d9ca308e849af905f8348843a6a4590cdbb60cc07b1fd3",
+    "crates/rx-domain/src/intent.rs": "87627fa9cc0960f878e472f70edfe94f50f6f4ba399f9ec11b3932168ed2d0ee",
+    "crates/rx-domain/src/lib.rs": "8a1d8cce9f705b1de74a4725dad6dbbbdd7e6d1b4cd9f1c6f730c9046276067c",
+    "crates/rx-domain/src/operation.rs": "d646f201013ee8a4f6f3174f46aa054cd3ab8df37460cbd81619aa2bacee05db",
+    "crates/rx-domain/src/types.rs": "be675cba9d9737957b4ad061a30c0c669eadccc36d32afcd2704dab1143d25bb",
+    "crates/rx-domain/tests/cell_invariants.rs": "d4b400ecfba95f6f9fcad53bf1628e8342d9b65749fca1ebc5446bfafc3e12f4",
+    "crates/rx-domain/tests/contracts.rs": "fe61988d72a1f3bb4d4d36332763f12b14e52a81c82f1857ed9c562d396a904b",
+    "crates/rx-ports/src/lib.rs": "768d2be695c3fcfe5e10bc4f0bfa4b0c648818b60e41bc1b00b9462f15c45adc",
+    "crates/rx-storage/src/lib.rs": "56b6f270edfd2bbc10688443c0b337251be172735323db12f4418e9ef1a487c9",
+    "crates/rx-storage/tests/atomicity.rs": "2848a3692af8f6711e91d8ac6f294eca7092c8885ed86f0b3742c222d3120e25",
+    "crates/rx-storage/migrations/0001.sql": "47ef12435ff7c5beecc4cfd76681d8ffe1850a5a31076e570dcabfacf83a51fb",
+    "crates/rx-domain/Cargo.toml": "0e2346af63ecea51b9ee17508bc75aa7e162f94aecb57e942585446bfd35b415",
+    "crates/rx-ports/Cargo.toml": "96a4eb415a4285e16c0a888ff0818387d5c174a878af2287a205d450ef8190ac",
+    "crates/rx-storage/Cargo.toml": "0efa266a888124fa2788ecdfb71c6e81865272a408cabfcdb07bd08b3277cd16"
+  },
+  "limits": [
+    "Library tests only; not complete T1-T5/cell admission",
+    "No gRPC/C++ interoperability yet",
+    "No real device, ROS, container build or UI validation yet",
+    "No SIGKILL/power-loss fault injection yet"
+  ]
+}

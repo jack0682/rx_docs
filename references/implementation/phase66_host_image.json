@@ -1,0 +1,85 @@
+{
+  "schema": "rx.host-image-test.v1",
+  "status": "PASS",
+  "image_id": "sha256:7bcca2ed4fed3c6381e0151723c3f751b803da83c1fbb66fdb4303ab1863698c",
+  "architecture": "arm64",
+  "user": "10001:10001",
+  "read_only_root": true,
+  "devices": [],
+  "binary": "/opt/rx/bin/rx-hostd",
+  "ready": {
+    "admission_open": true,
+    "clock_id": "linux-boottime/cd1f3510-55d1-4d06-ae5c-03b8470e71ae",
+    "endpoint": "https://0.0.0.0:7444",
+    "host": "host/sim",
+    "host_boot": "8fc823ef-e70c-4632-8601-1581d0e6b5bf",
+    "installation": "a9187d1a-d55d-4c34-8848-1101a6a53517",
+    "instance": "59ccae52-3a00-413e-ac16-0625d93da30d",
+    "pending_evidence": null,
+    "phase": "SOFTWARE_READY_UNARMED",
+    "publication": "DISABLED",
+    "qualification_or_arm_restored": false,
+    "schema": "rx.host-service-status.v1",
+    "stop": null
+  },
+  "stop": {
+    "admission_open": false,
+    "clock_id": "linux-boottime/cd1f3510-55d1-4d06-ae5c-03b8470e71ae",
+    "endpoint": "https://0.0.0.0:7444",
+    "host": "host/sim",
+    "host_boot": "8fc823ef-e70c-4632-8601-1581d0e6b5bf",
+    "installation": "a9187d1a-d55d-4c34-8848-1101a6a53517",
+    "instance": "59ccae52-3a00-413e-ac16-0625d93da30d",
+    "pending_evidence": "0",
+    "phase": "STOPPED",
+    "publication": "DISABLED",
+    "qualification_or_arm_restored": false,
+    "schema": "rx.host-service-status.v1",
+    "stop": {
+      "admission_open": false,
+      "host_boot": "8fc823ef-e70c-4632-8601-1581d0e6b5bf",
+      "native": {
+        "device_session": "aa6a02e6-9755-437f-af04-2326fb2a6eb6",
+        "no_pending_commands": true,
+        "observed_at": {
+          "clock_id": "linux-boottime/cd1f3510-55d1-4d06-ae5c-03b8470e71ae",
+          "ticks_ns": "309047833305"
+        },
+        "resources": [
+          "sim/controller"
+        ],
+        "safe_to_drop": true,
+        "uncertainty_ns": "0"
+      },
+      "pending_operations": [],
+      "physical_shutdown_assessed": false,
+      "retained_evidence": "0",
+      "safe_to_drop": true
+    }
+  },
+  "restarted": {
+    "admission_open": true,
+    "clock_id": "linux-boottime/cd1f3510-55d1-4d06-ae5c-03b8470e71ae",
+    "endpoint": "https://0.0.0.0:7444",
+    "host": "host/sim",
+    "host_boot": "4f7ee50e-acae-4c36-b5d1-8ff048ad7ad0",
+    "installation": "a9187d1a-d55d-4c34-8848-1101a6a53517",
+    "instance": "36347391-72d4-495b-bd8d-dde7fb182883",
+    "pending_evidence": null,
+    "phase": "SOFTWARE_READY_UNARMED",
+    "publication": "DISABLED",
+    "qualification_or_arm_restored": false,
+    "schema": "rx.host-service-status.v1",
+    "stop": null
+  },
+  "tls_h2_client_auth": true,
+  "duplicate_owner_rejected": true,
+  "native_effects": 0,
+  "processes": "PID                 COMMAND             COMMAND\n2158                rx-hostd            /opt/rx/bin/rx-hostd run /config/startup.json",
+  "limitations": [
+    "FILE_SIMULATION backend; MELSEC package backend is verified in its separate test",
+    "TLS handshake is separate from full P-Host protocol test",
+    "no automatic driver/controller activation",
+    "signal stop uses explicit safe-to-drop proof; forced kill is not a physical safety mechanism"
+  ]
+}

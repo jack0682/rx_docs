@@ -1,0 +1,29 @@
+   Compiling rx-domain v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-domain)
+   Compiling rx-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-package)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3.33s
+     Running unittests src/lib.rs (target/debug/deps/rx_package-ddf509de07a1a268)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/verification.rs (target/debug/deps/verification-dce8d153e6fc79b9)
+
+running 8 tests
+test canonical_set_order_is_stable_and_duplicate_json_fields_are_rejected ... ok
+test directory_verification_owns_bytes_and_rejects_links ... ok
+test package_kind_target_contract_and_publisher_scope_are_checked ... ok
+test closed_paths_and_inventory_reject_traversal_aliases_and_hidden_files ... ok
+test a_dependency_verified_before_key_revocation_is_not_retrusted_implicitly ... ok
+test dependency_cannot_pull_an_older_copy_of_the_root_back_into_the_bundle ... ok
+test signed_content_is_immutable_and_signature_is_bound_to_key_identity ... ok
+test dependency_closure_is_pinned_and_rechecked_against_current_trust ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+   Doc-tests rx_package
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

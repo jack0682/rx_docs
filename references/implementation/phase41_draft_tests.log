@@ -1,0 +1,12 @@
+   Compiling rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-process-contract)
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 5.14s
+     Running tests/transactions.rs (target/debug/deps/transactions-032e6bba21efff9d)
+
+running 3 tests
+test current_engineer_role_is_required_even_when_recovering_an_existing_draft_receipt ... ok
+test draft_history_keeps_incomplete_sources_and_concurrent_updates_do_not_overwrite_them ... ok
+test draft_saves_are_atomic_recoverable_and_never_change_the_installed_cell ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 90 filtered out; finished in 0.07s
+

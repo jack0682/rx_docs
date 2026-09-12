@@ -1,0 +1,20 @@
+{
+  "schema": "rx.signed-package-compile-regression.v1",
+  "status": "PASS",
+  "image_id": "sha256:000568fa0b3f9a004009aad4fad0e4a7d463dd51c3b93092345ff66363106ce7",
+  "verification": {
+    "manifest_digest": "01f080700538bcd55ae22b2ecf0cd173031e9280bde5c9eae942821ec9cfd0cb",
+    "package_digest": "01f080700538bcd55ae22b2ecf0cd173031e9280bde5c9eae942821ec9cfd0cb",
+    "process": "process/laser-material-supply",
+    "status": "CONTENT_VERIFIED_NOT_QUALIFIED"
+  },
+  "compiled_bytes_match_phase43": true,
+  "compiled_sha256": {
+    "resolved.json": "ed265f0591e68dbb91cbb3af7b4b92e78149d8ff88eb258ca5b5cb500810531e",
+    "process.bt.xml": "f1bb01098a3114512b5eb8cc55fafe91388a94752414c34eb713f470f6ced292"
+  },
+  "revoked_policy_rejected": true,
+  "denial": "rx-process-package: untrusted publisher or package permission",
+  "network": "none",
+  "activation_executed": false
+}

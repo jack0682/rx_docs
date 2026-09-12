@@ -1,0 +1,40 @@
+{
+  "schema": "rx.implementation-evidence.v1",
+  "phase": "14-native-bt-nodes",
+  "checked_at": "2026-09-10T16:28:25.298338+00:00",
+  "status": "PASS_FOR_REPORTED_SCOPE",
+  "executor": {
+    "schema": "rx.bt-executor-check.v1",
+    "status": "PASS",
+    "btcpp_commit": "6e469c6ba133aaa842dac9b096b41f2d33ee2b0e",
+    "btcpp_version": "4.8.3",
+    "image": "sha256:1895aae6368dd995604a7ede547d746074ca0dc846e68fb2841a688511ef976e",
+    "compiled_artifacts": {
+      "resolved.json": "11400e6bea332388499dd9ec59932fab4adde86a09755399c39a96317d898ad7",
+      "compile-report.json": "a54759d930361934f9868674a8703e5fca109a7f67e1db2a07afaff0f4d84acb",
+      "process.bt.xml": "15519d03b459786e516abc400b4b2626824cbf9febde45e8768357111d2b0f4a"
+    },
+    "scope": "Actual BT.CPP node execution with synthetic validated-view fixtures; no P network client, ROS, native device or operating qualification."
+  },
+  "validation": "Actual BT.CPP factory and tick execution, four scenario groups plus the generated five-step process; warnings-as-errors C++17 Linux build",
+  "known_incomplete_boundaries": [
+    "P protocol-to-Frame client and verified eligibility/checkpoint integration are not implemented; test frames are synthetic.",
+    "Request transport persistence, idempotency/receipt recovery across executor process restarts remain separate work.",
+    "Validation Docker target is not either complete product image and has no ROS/device permissions.",
+    "No native hardware, physical stop/cancel/handover or cell qualification claim."
+  ],
+  "source_sha256": {
+    "rx-solutions/dependencies/behaviortree_cpp.repos": "62ad70774525d78cf886807986724ab5de8b7767782bf7d2c132ca04b2103772",
+    "rx-solutions/docker/ExecutorValidation.Dockerfile": "e8e850d80b03dd6d158609658d884839e30de74e8dcc103d98d93e80e21e6be3",
+    "rx-solutions/docker/ExecutorValidation.Dockerfile.dockerignore": "56de95b206992be8f5cfb23b9c6633a10308ac66453c88e6c0af8cfcd9a47acd",
+    "rx-solutions/native/executor/CMakeLists.txt": "5b068e5b9c6af9fe904c7418a4f92628054652b3ecf70e1a255352eb71e65081",
+    "rx-solutions/native/executor/README.md": "9ec260f5906343bf4662ad61593ce91bd59405152a74418c118f7009852f8f58",
+    "rx-solutions/native/executor/nodes.cpp": "38ccf5cb3b45f95e2f70dcc44d7e80ac5e720f34adf2b394657c83c4544362e9",
+    "rx-solutions/native/executor/runtime.cpp": "12c50e4cf196b5c2b033349bb6b3b2016e07801a807dfd7f6e268ab4aefec4c3",
+    "rx-solutions/native/executor/runtime.hpp": "41072536a8e7b1dcbf12deaf0d32360e57e69f620695e76ec97678f5ac1cd679",
+    "rx-solutions/native/executor/tests.cpp": "856eaf12fe72379bafae3f0216199bac4f9f065528e8f0a03dda46defb06683e",
+    "rx-solutions/native/executor/xml.cpp": "36ae5488c2107a9bc0c42247a17f4c330d6520c4aa20d15e2b74cdd8555a41f7",
+    "rx-solutions/runtime/rx-process/src/bin/rx-process-compile.rs": "170c44c3103b3402a53bf3f06d512ea764849cc6cbddcaee3ca76021b7d704f9",
+    "rx-solutions/tools/test_bt_executor.py": "d1c3a0d30466a68a04b232ccd4cc9741bd48a8b721f2014ee75f64ab411add7c"
+  }
+}

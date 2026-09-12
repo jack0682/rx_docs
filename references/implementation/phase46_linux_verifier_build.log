@@ -1,0 +1,7 @@
+   Compiling uuid v1.26.1
+   Compiling rx-domain v0.1.0 (/rx/rx-solutions/sdk/crates/rx-domain)
+   Compiling rx-package v0.1.0 (/rx/rx-solutions/sdk/crates/rx-package)
+   Compiling rx-process-contract v0.1.0 (/rx/rx-solutions/sdk/crates/rx-process-contract)
+   Compiling rx-process v0.1.0 (/rx/rx-solutions/runtime/rx-process)
+   Compiling rx-process-package v0.1.0 (/rx/rx-solutions/runtime/rx-process-package)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 7.41s

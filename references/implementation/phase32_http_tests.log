@@ -1,0 +1,21 @@
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+   Compiling rx-runtime v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-runtime)
+   Compiling rx-protocol-adapter v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-protocol-adapter)
+   Compiling rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-api)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 6.37s
+     Running tests/http.rs (target/debug/deps/http-c442f3f86b392145)
+
+running 10 tests
+test expired_session_and_stopped_writer_never_return_cached_success ... ok
+test mutations_are_durable_idempotent_and_terminal_bypass_is_rejected ... ok
+test stale_external_procedure_report_returns_its_durable_fact_ids ... ok
+test canonical_cell_inspection_uses_current_human_scope_and_frozen_json ... ok
+test checkpoint_wire_and_exact_artifact_are_scoped_to_current_user_access ... ok
+test scoped_snapshot_login_logout_and_current_revocation ... ok
+test case_acknowledgment_records_reading_without_changing_containment_or_scope ... ok
+test close_http_requires_current_lead_cohort_evidence_and_real_clearance ... ok
+test actual_tcp_listener_uses_verified_socket_origin_and_real_writer ... ok
+test strict_ingress_and_credentials_never_create_authority_from_headers ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.58s
+

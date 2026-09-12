@@ -1,0 +1,46 @@
+Name:      docker.io/library/ros:jazzy-ros-base
+MediaType: application/vnd.oci.image.index.v1+json
+Digest:    sha256:386d06ec6d4188f731bae5678e07b4cb64a4e4d4152090c0bd1f881dcf7706f5
+           
+Manifests: 
+  Name:        docker.io/library/ros:jazzy-ros-base@sha256:d4bc3d61176d0b1e67ed604d8fbcb841c55bbe8db49a54c1c1e1eeb6b7ff7e6d
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    linux/amd64
+  Annotations: 
+    com.docker.official-images.bashbrew.arch: amd64
+    org.opencontainers.image.base.digest:     sha256:a884e8d532e9ad0e467f28cad7db88d92b018b53c36b28cc7511de0abb6b26b6
+    org.opencontainers.image.base.name:       ros:jazzy-ros-core-noble
+    org.opencontainers.image.created:         2026-09-09T03:30:06Z
+    org.opencontainers.image.revision:        0038f1c3a11aa0fc573d698b39ab5c204aad5a40
+    org.opencontainers.image.source:          https://github.com/osrf/docker_images.git#0038f1c3a11aa0fc573d698b39ab5c204aad5a40:ros/jazzy/ubuntu/noble/ros-base
+    org.opencontainers.image.url:             https://hub.docker.com/_/ros
+    org.opencontainers.image.version:         jazzy-ros-base
+               
+  Name:        docker.io/library/ros:jazzy-ros-base@sha256:031ad78cfcc8bfa602875e0f0a6a1c630101de8edfbc98226c6f4c9820991f81
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    unknown/unknown
+  Annotations: 
+    com.docker.official-images.bashbrew.arch: amd64
+    vnd.docker.reference.digest:              sha256:d4bc3d61176d0b1e67ed604d8fbcb841c55bbe8db49a54c1c1e1eeb6b7ff7e6d
+    vnd.docker.reference.type:                attestation-manifest
+               
+  Name:        docker.io/library/ros:jazzy-ros-base@sha256:21d41e7d6d521b3386c1db6ea963d85a49be86ce079600226fe5f0122992f70e
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    linux/arm64/v8
+  Annotations: 
+    org.opencontainers.image.revision:        0038f1c3a11aa0fc573d698b39ab5c204aad5a40
+    org.opencontainers.image.source:          https://github.com/osrf/docker_images.git#0038f1c3a11aa0fc573d698b39ab5c204aad5a40:ros/jazzy/ubuntu/noble/ros-base
+    org.opencontainers.image.url:             https://hub.docker.com/_/ros
+    org.opencontainers.image.version:         jazzy-ros-base
+    com.docker.official-images.bashbrew.arch: arm64v8
+    org.opencontainers.image.base.digest:     sha256:bbe1658e5d31653c3828eafc7e4ad759eab2cfce81244c1351f30c15103f87cb
+    org.opencontainers.image.base.name:       ros:jazzy-ros-core-noble
+    org.opencontainers.image.created:         2026-09-09T03:41:22Z
+               
+  Name:        docker.io/library/ros:jazzy-ros-base@sha256:ea9cf7fa962e66e37609dfd525692de68ef121cf42f2b751189ad5aba6655e4a
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    unknown/unknown
+  Annotations: 
+    com.docker.official-images.bashbrew.arch: arm64v8
+    vnd.docker.reference.digest:              sha256:21d41e7d6d521b3386c1db6ea963d85a49be86ce079600226fe5f0122992f70e
+    vnd.docker.reference.type:                attestation-manifest

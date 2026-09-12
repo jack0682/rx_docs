@@ -1,0 +1,3 @@
+   Compiling rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-api)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3.01s
+  Executable tests/executor_ingress.rs (target/debug/deps/executor_ingress-1110f4196911f2e2)

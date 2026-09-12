@@ -1,0 +1,26 @@
+   Compiling rx-host v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-host)
+    Checking rx-melsec-mc v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/drivers/rx-melsec-mc)
+error[E0308]: `?` operator has incompatible types
+  --> runtime/rx-host/src/melsec/execution.rs:23:43
+   |
+23 |         let snapshot = self.snapshot(&mut self.lock()?)?;
+   |                                           ^^^^^^^^^^^^ expected `Core`, found `MutexGuard<'_, Core>`
+   |
+   = note: `?` operator cannot convert from `std::sync::MutexGuard<'_, melsec::Core>` to `melsec::Core`
+   = note: expected struct `melsec::Core`
+              found struct `std::sync::MutexGuard<'_, melsec::Core>`
+
+error[E0382]: borrow of partially moved value: `snapshot`
+  --> runtime/rx-host/src/melsec/execution.rs:94:46
+   |
+92 |             observed_at: snapshot.acquired_at,
+   |                          -------------------- value partially moved here
+93 |             uncertainty_ns: snapshot.uncertainty_ns,
+94 |             no_pending_commands: !pending && snapshot.bit(self.profile.status.queue_empty_bit),
+   |                                              ^^^^^^^^ value borrowed here after partial move
+   |
+   = note: partial move occurs because `snapshot.acquired_at` has type `rx_domain::types::TimePoint`, which does not implement the `Copy` trait
+
+Some errors have detailed explanations: E0308, E0382.
+For more information about an error, try `rustc --explain E0308`.
+error: could not compile `rx-host` (lib) due to 2 previous errors

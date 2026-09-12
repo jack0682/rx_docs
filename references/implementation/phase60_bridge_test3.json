@@ -1,0 +1,40 @@
+{
+  "schema": "rx.ros-jtc-bridge-test.v1",
+  "status": "PASS",
+  "cases": [
+    "catalog_and_read_only_controller_inspection",
+    "invalid_trajectory_and_implicit_tolerances_send_nothing",
+    "inactive_or_different_joint_claims_rejected",
+    "supplied_uuid_single_send_result_query_and_pending_admission",
+    "unknown_goal_with_default_success_code_is_not_success",
+    "native_rejection_abort_and_contradictory_result_preserved",
+    "exact_uuid_cancel_without_cancel_all_and_distinct_terminal_result",
+    "deadline_during_controller_preflight_has_no_native_send",
+    "stale_context_sequence_and_duplicate_json_rejected",
+    "restart_changes_bridge_identity_and_does_not_adopt_cancel_authority",
+    "lost_send_reply_is_not_retried_and_late_result_does_not_clear_admission_fault",
+    "lost_cancel_reply_is_retained_and_exact_cancel_is_not_resent",
+    "follower_controller_with_integrated_gripper_has_distinct_joint_set",
+    "leader_impedance_and_other_controller_types_not_mislabeled_as_jtc"
+  ],
+  "server": {
+    "received": 7,
+    "accepted": 6,
+    "cancelled": 2,
+    "list_calls": 13,
+    "goals": [
+      "446f9633-426c-42bb-9f27-a81bdb8db8b3",
+      "57194940-1797-483f-9abe-17b725157091",
+      "3bb34993-d92a-40a3-a569-402a015b2ef7",
+      "c33e365a-dc16-4df6-93f1-5e89a7173850",
+      "b8f273aa-517e-406c-a233-3b0f2bbdfefd",
+      "8573afd7-d2b1-4ff0-bd8f-75725537dda5"
+    ],
+    "active": true,
+    "extra_claim": false,
+    "list_delay": 0,
+    "cancel_delay": 0.0
+  },
+  "physical_equipment_used": false,
+  "host_native_journal_connected": false
+}

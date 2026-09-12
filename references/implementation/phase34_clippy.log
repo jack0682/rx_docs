@@ -1,0 +1,36 @@
+    Checking rx-domain v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-domain)
+   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-protocol)
+    Checking rx-ports v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-ports)
+    Checking rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-process-contract)
+    Checking rx-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-package)
+    Checking rx-storage v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-storage)
+    Checking rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+    Checking rx-protocol-adapter v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-protocol-adapter)
+    Checking rx-runtime v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-runtime)
+    Checking rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-api)
+    Checking rx-host-client v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-host-client)
+    Checking rx-platformd v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-platformd)
+error: this `if` statement can be collapsed
+   --> crates/rx-platformd/src/lib.rs:216:5
+    |
+216 | /     if let Ok(meta) = fs::symlink_metadata(&lock_path) {
+217 | |         if !meta.is_file() || meta.file_type().is_symlink() {
+218 | |             return Err("invalid runtime lock path".into());
+219 | |         }
+220 | |     }
+    | |_____^
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.98.0/index.html#collapsible_if
+    = note: `-D clippy::collapsible-if` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(clippy::collapsible_if)]`
+help: collapse nested if block
+    |
+216 ~     if let Ok(meta) = fs::symlink_metadata(&lock_path)
+217 ~         && (!meta.is_file() || meta.file_type().is_symlink()) {
+218 |             return Err("invalid runtime lock path".into());
+219 ~         }
+    |
+
+error: could not compile `rx-platformd` (lib) due to 1 previous error
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `rx-platformd` (lib test) due to 1 previous error

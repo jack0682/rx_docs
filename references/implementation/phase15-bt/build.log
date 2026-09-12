@@ -1,0 +1,38 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from ExecutorValidation.Dockerfile
+#1 transferring dockerfile: 702B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/rx-solutions:protocol-validation
+#2 DONE 0.0s
+
+#3 [1/5] FROM docker.io/library/rx-solutions:protocol-validation@sha256:efb3b752bd6f7d69dadf038330511997d4e5f3013302355e76a03e15e886525d
+#3 resolve docker.io/library/rx-solutions:protocol-validation@sha256:efb3b752bd6f7d69dadf038330511997d4e5f3013302355e76a03e15e886525d done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 37.77kB 0.0s done
+#4 DONE 0.0s
+
+#5 [3/5] COPY vendor/BehaviorTree.CPP /src/vendor/BehaviorTree.CPP
+#5 CACHED
+
+#6 [4/5] COPY native/executor /src/native/executor
+#6 CACHED
+
+#7 [2/5] WORKDIR /src
+#7 CACHED
+
+#8 [5/5] RUN cmake -S native/executor -B /build/executor -G Ninja -DCMAKE_BUILD_TYPE=Release     && cmake --build /build/executor -j2
+#8 CACHED
+
+#9 exporting to image
+#9 exporting layers done
+#9 exporting manifest sha256:ef88a470a72d4e4bac6789ffa2a47b3ea65ec75eebf3b62f446f52829a20271f done
+#9 exporting config sha256:f77c450b22de605ad29ca896def915421c108fc472d6ca95505a9148dc5244d3 done
+#9 exporting attestation manifest sha256:470735f3f683c5784248c374bff34ecbd57131084cf0751fc5734001e4b2b2da done
+#9 exporting manifest list sha256:8214d44fcdbc09d85893e6763a84a6a22606f2bdae1450f34208e39fa18f87e8 done
+#9 naming to docker.io/library/rx-solutions:executor-validation done
+#9 unpacking to docker.io/library/rx-solutions:executor-validation done
+#9 DONE 0.0s

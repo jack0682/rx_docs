@@ -1,0 +1,67 @@
+Name:      docker.io/library/node:26.5.0-bookworm-slim
+MediaType: application/vnd.oci.image.index.v1+json
+Digest:    sha256:2d49d876e96237d76de412761cf05dbfe5aee325cc4406a4d41d5824c5bb8beb
+           
+Manifests: 
+  Name:        docker.io/library/node:26.5.0-bookworm-slim@sha256:607728e8751f69809c871e2cfa65d645f51ffacb5a0e9fc60f4cb7404ee5c16a
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    linux/amd64
+  Annotations: 
+    org.opencontainers.image.revision:        defa701ab674e5a90ce5adf718bca41b91a46794
+    org.opencontainers.image.source:          https://github.com/nodejs/docker-node.git#defa701ab674e5a90ce5adf718bca41b91a46794:26/bookworm-slim
+    org.opencontainers.image.url:             https://hub.docker.com/_/node
+    org.opencontainers.image.version:         26-bookworm-slim
+    com.docker.official-images.bashbrew.arch: amd64
+    org.opencontainers.image.base.digest:     sha256:63a496b5d3b99214b39f5ed70eb71a61e590a77979c79cbee4faf991f8c0783e
+    org.opencontainers.image.base.name:       debian:bookworm-slim
+    org.opencontainers.image.created:         2026-07-14T01:47:18Z
+               
+  Name:        docker.io/library/node:26.5.0-bookworm-slim@sha256:c345b5a1b3817780f6da4fad03b14258d45438388d6d770eaf52bddd1fff6755
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    unknown/unknown
+  Annotations: 
+    com.docker.official-images.bashbrew.arch: amd64
+    vnd.docker.reference.digest:              sha256:607728e8751f69809c871e2cfa65d645f51ffacb5a0e9fc60f4cb7404ee5c16a
+    vnd.docker.reference.type:                attestation-manifest
+               
+  Name:        docker.io/library/node:26.5.0-bookworm-slim@sha256:9e5d714311940c098479ec352029af6df1d9a2dc4269b29373c616f51640dd67
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    linux/arm64/v8
+  Annotations: 
+    org.opencontainers.image.base.digest:     sha256:9b67294679b30e5d6ab257b40594feeb4a4b81f7fcf4131f4decf0d6a212a9b0
+    org.opencontainers.image.base.name:       debian:bookworm-slim
+    org.opencontainers.image.created:         2026-07-14T01:50:45Z
+    org.opencontainers.image.revision:        defa701ab674e5a90ce5adf718bca41b91a46794
+    org.opencontainers.image.source:          https://github.com/nodejs/docker-node.git#defa701ab674e5a90ce5adf718bca41b91a46794:26/bookworm-slim
+    org.opencontainers.image.url:             https://hub.docker.com/_/node
+    org.opencontainers.image.version:         26-bookworm-slim
+    com.docker.official-images.bashbrew.arch: arm64v8
+               
+  Name:        docker.io/library/node:26.5.0-bookworm-slim@sha256:29ab2d13a6c0cbf5019c50ebf40838c283b67b617fd4ca72496ed7281311f89e
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    unknown/unknown
+  Annotations: 
+    com.docker.official-images.bashbrew.arch: arm64v8
+    vnd.docker.reference.digest:              sha256:9e5d714311940c098479ec352029af6df1d9a2dc4269b29373c616f51640dd67
+    vnd.docker.reference.type:                attestation-manifest
+               
+  Name:        docker.io/library/node:26.5.0-bookworm-slim@sha256:b0b02b4e1477c074c1a098b7966f52a0d719a0ee4c7f2925216c7b23dbe260e5
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    linux/ppc64le
+  Annotations: 
+    org.opencontainers.image.revision:        defa701ab674e5a90ce5adf718bca41b91a46794
+    org.opencontainers.image.source:          https://github.com/nodejs/docker-node.git#defa701ab674e5a90ce5adf718bca41b91a46794:26/bookworm-slim
+    org.opencontainers.image.url:             https://hub.docker.com/_/node
+    org.opencontainers.image.version:         26-bookworm-slim
+    com.docker.official-images.bashbrew.arch: ppc64le
+    org.opencontainers.image.base.digest:     sha256:7ade23c2d191404b0f05b602da85fce2406a4c1016b0bab30523ece4723cce77
+    org.opencontainers.image.base.name:       debian:bookworm-slim
+    org.opencontainers.image.created:         2026-07-14T04:00:16Z
+               
+  Name:        docker.io/library/node:26.5.0-bookworm-slim@sha256:ea3ba55db7fc4afc7198e92f58a9ec5c3d186d2d8bf8df909be08c1517c0ab78
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    unknown/unknown
+  Annotations: 
+    vnd.docker.reference.digest:              sha256:b0b02b4e1477c074c1a098b7966f52a0d719a0ee4c7f2925216c7b23dbe260e5
+    vnd.docker.reference.type:                attestation-manifest
+    com.docker.official-images.bashbrew.arch: ppc64le

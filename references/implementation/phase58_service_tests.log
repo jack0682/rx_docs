@@ -1,0 +1,86 @@
+   Compiling rx-host v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-host)
+warning: unused imports: `BTreeMap` and `BTreeSet`
+ --> runtime/rx-host/tests/service.rs:9:19
+  |
+9 |     collections::{BTreeMap, BTreeSet},
+  |                   ^^^^^^^^  ^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused imports: `native::*` and `self`
+ --> runtime/rx-host/tests/support/host_service_fixture.rs:3:5
+  |
+3 |     native::*,
+  |     ^^^^^^^^^
+4 |     service::{self, config::*},
+  |               ^^^^
+
+warning: unused imports: `AtomicBool` and `Ordering`
+  --> runtime/rx-host/tests/support/host_service_fixture.rs:13:18
+   |
+13 |         atomic::{AtomicBool, AtomicU64, Ordering},
+   |                  ^^^^^^^^^^             ^^^^^^^^
+
+warning: `rx-host` (test "service") generated 3 warnings (run `cargo fix --test "service" -p rx-host` to apply 3 suggestions)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 6.72s
+     Running tests/melsec.rs (target/debug/deps/melsec-a568b1f2bf9ceee9)
+
+running 14 tests
+test melsec_crash_child ... ignored, executed only as an isolated child by the crash-boundary test
+test actual_host_gate_journal_reconcile_evidence_and_stop_use_melsec_adapter ... ok
+test corrupted_completion_record_is_not_adopted_as_historical_fact ... ok
+test already_satisfied_state_records_evidence_without_a_native_write ... ok
+test final_native_read_after_journal_commit_rechecks_ready_without_resend ... ok
+test lost_reply_and_new_process_never_resubmit_or_clear_pending ... ok
+test final_read_within_transport_budget_but_beyond_guard_lifetime_cannot_write ... ok
+test captured_original_session_survives_restart_but_uncaptured_ack_does_not ... ok
+test ack_is_pending_and_only_later_independent_sensor_observation_captures ... ok
+test new_or_replaced_journal_and_mismatched_profile_are_rejected_without_native_io ... ok
+test abrupt_exit_at_native_commit_and_write_boundaries_never_replays ... ok
+test profile_and_intent_scope_fail_before_native_writes ... ok
+test publication_generation_regression_stale_and_inconsistent_images_latch ... ok
+test valid_support_does_not_imply_drop_permission_and_protection_does_not_release_chuck ... ok
+
+test result: ok. 13 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.20s
+
+     Running tests/melsec_service.rs (target/debug/deps/melsec_service-66b6ecb88ce83936)
+
+running 4 tests
+test signature_content_policy_asset_release_and_binding_tampering_fail_before_initialization ... FAILED
+test physical_startup_qualification_id_does_not_authorize_arm ... FAILED
+test signed_device_package_binds_release_profile_assets_and_exact_cell_without_io ... FAILED
+test product_composition_initializes_starts_and_stops_the_signed_melsec_package ... FAILED
+
+failures:
+
+---- signature_content_policy_asset_release_and_binding_tampering_fail_before_initialization stdout ----
+
+thread 'signature_content_policy_asset_release_and_binding_tampering_fail_before_initialization' (10238357) panicked at runtime/rx-host/tests/melsec_service.rs:245:46:
+called `Result::unwrap()` on an `Err` value: Invalid("device profile/adapter entry")
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- physical_startup_qualification_id_does_not_authorize_arm stdout ----
+
+thread 'physical_startup_qualification_id_does_not_authorize_arm' (10238355) panicked at runtime/rx-host/tests/melsec_service.rs:322:38:
+called `Result::unwrap()` on an `Err` value: Invalid("device profile/adapter entry")
+
+---- signed_device_package_binds_release_profile_assets_and_exact_cell_without_io stdout ----
+
+thread 'signed_device_package_binds_release_profile_assets_and_exact_cell_without_io' (10238358) panicked at runtime/rx-host/tests/melsec_service.rs:190:38:
+called `Result::unwrap()` on an `Err` value: Invalid("device profile/adapter entry")
+
+---- product_composition_initializes_starts_and_stops_the_signed_melsec_package stdout ----
+
+thread 'product_composition_initializes_starts_and_stops_the_signed_melsec_package' (10238356) panicked at runtime/rx-host/tests/melsec_service.rs:369:38:
+called `Result::unwrap()` on an `Err` value: Invalid("device profile/adapter entry")
+
+
+failures:
+    physical_startup_qualification_id_does_not_authorize_arm
+    product_composition_initializes_starts_and_stops_the_signed_melsec_package
+    signature_content_policy_asset_release_and_binding_tampering_fail_before_initialization
+    signed_device_package_binds_release_profile_assets_and_exact_cell_without_io
+
+test result: FAILED. 0 passed; 4 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+error: test failed, to rerun pass `-p rx-host --test melsec_service`

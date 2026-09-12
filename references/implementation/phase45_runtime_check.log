@@ -1,0 +1,21 @@
+    Checking rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+    Checking rx-runtime v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-runtime)
+error[E0425]: cannot find function `spawn_blocking` in module `tokio::task`
+   --> crates/rx-runtime/src/package_intake.rs:56:22
+    |
+ 56 |         tokio::task::spawn_blocking(move || {
+    |                      ^^^^^^^^^^^^^^ not found in `tokio::task`
+    |
+note: found an item that was configured out
+   --> /Users/ojaehong/RX_automation/rx_ws/.tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/task/mod.rs:281:23
+    |
+281 |     pub use blocking::spawn_blocking;
+    |                       ^^^^^^^^^^^^^^
+    |
+   ::: /Users/ojaehong/RX_automation/rx_ws/.tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/macros/cfg.rs:480:19
+    |
+480 |             #[cfg(feature = "rt")]
+    |                   -------------- the item is gated behind the `rt` feature
+
+For more information about this error, try `rustc --explain E0425`.
+error: could not compile `rx-runtime` (lib) due to 1 previous error

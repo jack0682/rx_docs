@@ -1,0 +1,111 @@
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 5.38s
+     Running tests/transactions.rs (target/debug/deps/transactions-285a2e14f18af9d7)
+
+running 72 tests
+test checkpoint_artifact_requires_current_run_scope_and_exact_owned_reference ... ok
+test activation_visits_are_unique_for_the_whole_run_across_parts ... ok
+test changed_intent_under_same_key_is_a_conflict ... ok
+test an_entered_send_with_no_remote_receipt_remains_unknown_and_is_not_reissued ... ok
+test checkpoint_artifact_and_run_projection_commit_with_slot_or_roll_back_together ... ok
+test admission_receipt_is_anchored_to_the_original_control_record_and_survives_later_changes ... ok
+test changing_evidence_journal_does_not_silently_reset_sequence_history ... ok
+test a_new_contradictory_native_result_preserves_historical_outcome ... ok
+test checkpoint_preparation_loss_and_expiry_never_advance_the_run ... ok
+test conflicting_observation_is_committed_as_invalidation_even_though_api_rejects_it ... ok
+test checkpoint_commit_rejects_changed_mapping_artifact_and_stale_condition ... ok
+test device_generation_change_is_preserved_and_does_not_disappear_on_rejection ... ok
+test diagnostic_case_keeps_epoch_and_mandate_but_blocks_new_admission ... ok
+test control_journal_is_atomic_and_audit_sessions_do_not_advance_its_cursor ... ok
+test early_native_evidence_is_reapplied_when_the_receipt_establishes_correlation ... ok
+test checkpoint_wait_uses_p_time_and_success_cannot_be_committed_after_deadline ... ok
+test direct_state_puts_during_hold_are_captured_at_one_final_transaction_cut ... ok
+test checkpoint_successor_preserves_an_existing_child_slot_from_another_visit ... ok
+test checkpoint_proposal_is_not_an_applied_decision_and_commit_response_survives_loss ... ok
+test evidence_gap_is_not_skipped_and_conflicting_sequence_is_quarantined ... ok
+test hold_proves_unsent_work_not_executed_without_releasing_resource ... ok
+test handover_release_is_atomic_and_duplicate_proof_does_not_release_another_owner ... FAILED
+test executor_part_and_activation_mutations_preserve_full_request_identity_and_atomic_results ... ok
+test late_prepared_receipt_after_pause_does_not_create_an_authorization ... ok
+test false_handover_facts_are_retained_and_identity_conflicts_block_release ... ok
+test closed_case_duplicate_reports_never_replay_but_new_physical_reports_reopen_containment ... ok
+test maintained_condition_recovery_does_not_revive_an_old_mandate ... ok
+test executor_reconnect_is_idempotent_but_changed_incarnation_revokes_authority ... ok
+test native_metadata_changes_conflict_and_ack_cursor_is_part_of_t2_commit ... ok
+test live_execution_snapshot_preserves_the_cut_and_does_not_reuse_aged_maintained_conditions ... ok
+test hold_propagates_to_shared_resources_and_preserves_independent_cells ... ok
+test native_receipt_capture_does_not_stand_in_for_completion_policy ... ok
+test operator_service_reconnect_cannot_start_work_or_replace_executor_authority ... ok
+test executor_submit_checks_the_whole_envelope_and_recovers_an_immutable_receipt_after_t1_loss ... ok
+test one_physical_resource_is_reserved_across_cells_not_per_cell_alias ... ok
+test p_commits_branch_choice_and_rejects_the_untaken_activation ... ok
+test part_completion_waits_for_release_and_closes_exhausted_run ... FAILED
+test part_completion_requires_only_the_committed_branch_and_its_real_release_proof ... FAILED
+test pause_after_emit_is_not_cancellation_and_late_correlated_result_is_still_recorded ... ok
+test pausing_a_prepared_run_without_arm_does_not_fence_other_cell_work ... ok
+test pending_start_has_a_deadline_and_key_covers_budget_intent ... ok
+test pause_rejects_a_late_arm_acknowledgment_from_start_preparation ... ok
+test non_operating_close_preserves_unknown_effect_and_does_not_release_resources ... ok
+test permit_deadline_cannot_outlive_the_observation_that_supported_it ... ok
+test prepared_is_not_an_authorization_ack_and_duplicate_receipts_complete_the_right_message ... ok
+test producer_reconnect_requires_current_identity_and_cell_negotiation ... ok
+test non_operating_close_preparation_lost_reply_and_rollback_do_not_duplicate_clearances ... ok
+test production_read_before_first_part_has_complete_budget_and_detects_missing_parts ... ok
+test physical_case_open_is_atomic_and_acknowledgment_cannot_restore_authority ... ok
+test process_checkpoint_survives_runtime_restart_without_restoring_execution_authority ... ok
+test pause_commits_reply_fence_and_unsent_sealing_atomically_without_refunding_budget ... ok
+test resolved_plan_binding_and_digest_cannot_be_substituted_in_cell_configuration ... ok
+test production_completion_requires_release_and_preserves_original_reply_and_budget ... FAILED
+test reconciliation_requests_are_durable_coalesced_and_cannot_claim_release ... ok
+test recorded_cell_context_tracks_start_intervention_and_real_block_creation_revisions ... ok
+test restarting_runtime_preserves_consumption_and_revokes_mandate ... ok
+test role_revocation_is_checked_before_cached_result_lookup ... ok
+test same_slot_new_key_and_lost_reply_do_not_create_another_operation ... ok
+test stale_observation_and_wrong_executor_do_not_reach_t1 ... ok
+test start_requires_all_hosts_and_cannot_be_completed_by_partial_ack ... ok
+test stale_procedure_report_keeps_external_fact_and_latch_but_never_grants_entry ... ok
+test procedure_requires_real_fence_and_condition_evidence_then_accounts_for_every_worker ... ok
+test unregistered_terminal_cannot_start_even_with_operator_role ... ok
+test uncommissioned_cell_cannot_start_from_package_presence ... ok
+test t1_failure_rolls_back_slot_resource_permit_and_outbox_together ... ok
+test t2_commits_native_evidence_outcome_and_contiguous_cursor_atomically ... ok
+test non_operating_close_does_not_accept_missing_people_proof_or_invented_evidence ... ok
+test t2_rollback_and_lost_ack_preserve_exactly_one_recorded_result ... ok
+test non_operating_close_is_atomic_idempotent_and_retains_other_case_restrictions ... ok
+test wait_deadline_and_success_are_decided_by_p_and_cannot_be_reset_by_retries ... ok
+test resource_release_requires_all_current_handover_facts ... ok
+test non_operating_close_rechecks_time_case_epoch_evidence_and_current_actor ... ok
+
+failures:
+
+---- handover_release_is_atomic_and_duplicate_proof_does_not_release_another_owner stdout ----
+
+thread 'handover_release_is_atomic_and_duplicate_proof_does_not_release_another_owner' (8007563) panicked at crates/rx-application/tests/transactions.rs:1474:10:
+called `Result::unwrap()` on an `Err` value: Rejected(StaleRevision)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- part_completion_waits_for_release_and_closes_exhausted_run stdout ----
+
+thread 'part_completion_waits_for_release_and_closes_exhausted_run' (8007583) panicked at crates/rx-application/tests/transactions.rs:1500:10:
+called `Result::unwrap()` on an `Err` value: Rejected(StaleRevision)
+
+---- part_completion_requires_only_the_committed_branch_and_its_real_release_proof stdout ----
+
+thread 'part_completion_requires_only_the_committed_branch_and_its_real_release_proof' (8007581) panicked at crates/rx-application/tests/transactions.rs:2503:10:
+called `Result::unwrap()` on an `Err` value: Rejected(StaleRevision)
+
+---- production_completion_requires_release_and_preserves_original_reply_and_budget stdout ----
+
+thread 'production_completion_requires_release_and_preserves_original_reply_and_budget' (8007600) panicked at crates/rx-application/tests/transactions.rs:4198:10:
+called `Result::unwrap()` on an `Err` value: Rejected(StaleRevision)
+
+
+failures:
+    handover_release_is_atomic_and_duplicate_proof_does_not_release_another_owner
+    part_completion_requires_only_the_committed_branch_and_its_real_release_proof
+    part_completion_waits_for_release_and_closes_exhausted_run
+    production_completion_requires_release_and_preserves_original_reply_and_budget
+
+test result: FAILED. 68 passed; 4 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.35s
+
+error: test failed, to rerun pass `-p rx-application --test transactions`

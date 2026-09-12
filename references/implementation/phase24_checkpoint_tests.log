@@ -1,0 +1,25 @@
+   Compiling rx-domain v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-domain)
+   Compiling rx-ports v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-ports)
+   Compiling rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-process-contract)
+   Compiling rx-storage v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-storage)
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.25s
+     Running unittests src/lib.rs (target/debug/deps/rx_application-edec8a86cfc5ed94)
+
+running 1 test
+test checkpoint_artifact::tests::rejects_a_valid_older_artifact_substituted_into_a_newer_run_view ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running tests/transactions.rs (target/debug/deps/transactions-7ca78902842295b5)
+
+running 6 tests
+test checkpoint_artifact_requires_current_run_scope_and_exact_owned_reference ... ok
+test checkpoint_artifact_and_run_projection_commit_with_slot_or_roll_back_together ... ok
+test process_checkpoint_survives_runtime_restart_without_restoring_execution_authority ... ok
+test checkpoint_wait_uses_p_time_and_success_cannot_be_committed_after_deadline ... ok
+test checkpoint_commit_rejects_changed_mapping_artifact_and_stale_condition ... ok
+test checkpoint_proposal_is_not_an_applied_decision_and_commit_response_survives_loss ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 50 filtered out; finished in 0.12s
+

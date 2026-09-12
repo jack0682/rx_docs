@@ -1,0 +1,82 @@
+   Compiling uuid v1.26.1
+   Compiling rx-domain v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-domain)
+   Compiling rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-process-contract)
+   Compiling rx-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-package)
+   Compiling rx-process v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-process)
+   Compiling rx-process-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-process-package)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3.60s
+     Running unittests src/lib.rs (target/debug/deps/rx_process-59ba535c90bf2bc3)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/rx-process-compile.rs (target/debug/deps/rx_process_compile-f52806eb9ce49747)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/package.rs (target/debug/deps/package-11c915a624d643eb)
+
+running 1 test
+test verified_content_still_requires_process_semantic_validation ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/process.rs (target/debug/deps/process-5a01b5773decc340)
+
+running 10 tests
+test incomplete_history_and_recursive_subflows_do_not_create_new_work ... ok
+test sequence_waits_for_authoritative_completion_and_resource_handover ... ok
+test repeat_and_subflow_expand_into_distinct_stable_occurrences ... ok
+test waits_and_interventions_require_recorded_decisions_without_local_timeout_success ... ok
+test branches_require_a_committed_choice_and_reject_opposite_branch_history ... ok
+test unknown_and_disputed_results_never_become_failure_or_a_new_attempt ... ok
+test parallel_checks_resolved_resource_conflicts_and_suppresses_new_work_on_unknown ... ok
+test malformed_or_unbounded_source_and_partial_progress_are_rejected ... ok
+test source_link_checks_repeat_count_and_call_instantiation ... ok
+test source_link_rejects_reordered_children_and_swapped_branch_arms_with_valid_node_ids ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running unittests src/lib.rs (target/debug/deps/rx_process_package-b96bcc5e4ca76ce9)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/rx-process-package.rs (target/debug/deps/rx_process_package-1efb90ea97fd69ac)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/package.rs (target/debug/deps/package-9fba7db23063644b)
+
+running 10 tests
+test external_signer_fixture_can_sign_a_caller_selected_local_test_candidate ... ok
+test signer_scope_key_alias_and_content_changes_do_not_gain_trust ... ok
+test a_valid_signature_does_not_hide_inconsistent_packaged_compile_inputs ... ok
+test fixture_for_external_signing_demo_is_explicit_and_never_a_default_production_key ... ok
+test missing_program_artifacts_and_parallel_resource_conflicts_block_assembly ... ok
+test signed_but_inconsistent_process_produces_failure_report_without_resolved_artifact ... ok
+test deterministic_candidate_detached_signature_and_recompilation_preserve_input_identity ... ok
+test verification_report_uses_actual_signed_compilation_and_binds_request_policy ... ok
+test policy_assets_are_read_and_dependency_files_are_verified_under_current_trust ... ok
+test candidate_publication_does_not_overwrite_and_signed_directory_has_exact_inventory ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.16s
+
+   Doc-tests rx_process
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rx_process_package
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

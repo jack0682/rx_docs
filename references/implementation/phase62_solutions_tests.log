@@ -1,0 +1,429 @@
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+   Compiling rx-process v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-process)
+   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol)
+   Compiling rx-process-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-process-package)
+   Compiling rx-host v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-host)
+   Compiling rx-executor v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-executor)
+   Compiling rx-device-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-device-package)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 22.14s
+     Running unittests src/lib.rs (target/debug/deps/rx_device_package-0c08863136317918)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/rx-device-package.rs (target/debug/deps/rx_device_package-97fff6cc56aed1a6)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/authoring.rs (target/debug/deps/authoring-d3427e51e7c3c560)
+
+running 9 tests
+test export_image_fixture ... ignored, exports explicitly simulated, unsigned inputs and public test policy for container verification
+test sign_image_request ... ignored, signs only with an embedded test key for isolated container verification
+test template_hash_missing_extra_and_alias_bindings_are_rejected ... ok
+test signed_but_inconsistent_assembly_cannot_pass_the_host_resolver ... ok
+test semantically_unordered_inputs_produce_the_same_signing_message ... ok
+test one_template_resolves_two_sites_without_editing_the_shared_semantics ... ok
+test candidate_changes_permissions_keys_and_missing_assets_do_not_bypass_verification ... ok
+test candidate_roundtrip_external_signature_and_host_decoding_preserve_signed_provenance ... ok
+test cli_assembles_requests_external_signature_seals_and_verifies_without_network ... ok
+
+test result: ok. 7 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.61s
+
+     Running unittests src/lib.rs (target/debug/deps/rx_executor-6c1cacd384272aba)
+
+running 6 tests
+test pending::tests::wait_start_does_not_drop_the_only_bt_request_and_due_requests_are_fair ... ok
+test client::tests::artifact_hash_does_not_replace_size_schema_or_typed_payload_validation ... ok
+test pending::tests::full_queue_and_inflight_normal_work_do_not_block_pause_and_meaning_cannot_change ... ok
+test frame::tests::source_clock_expiry_blocks_a_view_even_if_the_local_steady_deadline_has_not_passed ... ok
+test frame::tests::restored_p_snapshot_preserves_work_and_does_not_restore_admission ... ok
+test frame::tests::a_new_epoch_is_not_implicitly_adopted_by_an_existing_context ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests tests/support/decision_fixture.rs (target/debug/deps/rx_executor_decision_fixture-9bd70f0dba32cf8f)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests tests/support/read_fixture.rs (target/debug/deps/rx_executor_read_fixture-020ba94a686187b8)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/service.rs (target/debug/deps/rx_executor_service-5de614b5e8af40bf)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests tests/support/service_fixture.rs (target/debug/deps/rx_executor_service_fixture-89f55055b4f7c1fb)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests tests/support/worker_fixture.rs (target/debug/deps/rx_executor_worker_fixture-5a8919c4125b48d3)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/journal.rs (target/debug/deps/journal-002114fc39c36b6d)
+
+running 9 tests
+test reconciliation_acknowledgment_is_not_a_resource_release_observation ... ok
+test stop_intent_survives_commit_response_loss_and_never_becomes_a_part_request ... ok
+test p_observation_preserves_network_uncertainty_and_deduplicates_unchanged_identity ... ok
+test only_a_confirmed_transactional_rejection_allows_new_cas_and_key ... ok
+test material_identity_is_observed_without_rewriting_a_lost_begin_reply ... ok
+test pause_intent_is_scoped_to_executor_session_and_epoch_without_changing_operation_keys ... ok
+test prepared_entered_and_reply_boundaries_survive_rollback_and_lost_commit_response ... ok
+test stop_attempt_key_is_preserved_and_p_observation_does_not_invent_a_reply ... ok
+test checkpoint_expiry_preserves_old_attempt_and_pending_projection_is_not_an_rpc_reply ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+     Running unittests src/lib.rs (target/debug/deps/rx_host-191b475ecae91928)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests tests/support/crash_harness.rs (target/debug/deps/rx_host_crash_fixture-b54a1bf9e45023a5)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests tests/support/sim_server.rs (target/debug/deps/rx_host_sim_server-c5c9b680cdf1f496)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/rx-hostd.rs (target/debug/deps/rx_hostd-4b139cba6149408d)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/gate.rs (target/debug/deps/gate-0292a4319472c45d)
+
+running 30 tests
+test cancellation_arriving_before_prepare_creates_permanent_tombstone ... ok
+test configuration_missing_quiescence_does_not_create_applied_context ... ok
+test configuration_rejects_an_old_quiescence_observation ... ok
+test configuration_does_not_treat_prepared_native_work_as_quiescent ... ok
+test altered_permit_and_unapproved_intent_are_rejected_before_effect ... ok
+test configuration_scope_binding_and_fence_are_not_caller_success_claims ... ok
+test configuration_commit_failure_has_no_receipt_context_or_consumed_slot ... ok
+test configuration_cohort_is_complete_and_a_rejected_member_prevents_all_context_changes ... ok
+test late_fence_replay_cannot_remove_a_new_arm_or_rewind_epoch ... ok
+test configuration_context_is_durable_unqualified_and_same_request_never_reapplies ... ok
+test expiry_during_commit_does_not_enter_native_and_is_not_retried ... ok
+test native_submission_serializes_fence_while_protection_is_independent ... ok
+test prepare_does_not_call_device_and_authorize_duplicates_are_receipt_lookup ... ok
+test prepared_rebind_retires_old_permit_permanently ... ok
+test evidence_publication_cursor_is_durable_scoped_and_never_accepts_a_foreign_ack ... ok
+test qualification_tests::qualification_commit_failure_rolls_back_cohort_receipt_and_slot ... ok
+test qualification_tests::qualification_arm_rejects_partial_clearance_and_any_changed_cohort_member ... ok
+test renewal_replay_does_not_extend_expiry_and_expired_grant_stays_expired ... ok
+test qualification_tests::qualification_full_cohort_is_atomic_and_a_wrong_member_cannot_be_accepted ... ok
+test simulated_device_has_an_independent_exclusive_owner ... ok
+test same_grant_fence_requires_same_request_identity ... ok
+test stable_handover_is_not_permission_to_drop_an_adapter ... ok
+test qualification_tests::qualification_restart_keeps_receipt_and_never_restores_applicability_or_arm ... ok
+test qualification_tests::qualification_identity_cannot_be_reused_for_different_evidence_and_empty_scope_grants_no_operations ... ok
+test service_stop_latches_before_database_access_and_preserves_uncertain_work ... ok
+test service_stop_latch_interrupts_the_pre_native_boundary_without_waiting_for_gate_lock ... ok
+test qualification_tests::qualification_acceptance_preserves_blocks_requires_explicit_arm_and_rejects_old_qualification ... ok
+test qualification_tests::qualification_revalidation_does_not_hide_prepared_native_work ... ok
+test qualification_tests::qualification_same_key_same_review_and_changed_scope_cannot_replace_accepted_identity ... ok
+test qualification_tests::qualification_requires_supported_fresh_local_quiescence ... ok
+
+test result: ok. 30 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.16s
+
+     Running tests/melsec.rs (target/debug/deps/melsec-4d6b436adf6ae900)
+
+running 14 tests
+test melsec_crash_child ... ignored, executed only as an isolated child by the crash-boundary test
+test corrupted_completion_record_is_not_adopted_as_historical_fact ... ok
+test actual_host_gate_journal_reconcile_evidence_and_stop_use_melsec_adapter ... ok
+test ack_is_pending_and_only_later_independent_sensor_observation_captures ... ok
+test final_native_read_after_journal_commit_rechecks_ready_without_resend ... ok
+test lost_reply_and_new_process_never_resubmit_or_clear_pending ... ok
+test abrupt_exit_at_native_commit_and_write_boundaries_never_replays ... ok
+test final_read_within_transport_budget_but_beyond_guard_lifetime_cannot_write ... ok
+test already_satisfied_state_records_evidence_without_a_native_write ... ok
+test captured_original_session_survives_restart_but_uncaptured_ack_does_not ... ok
+test new_or_replaced_journal_and_mismatched_profile_are_rejected_without_native_io ... ok
+test profile_and_intent_scope_fail_before_native_writes ... ok
+test publication_generation_regression_stale_and_inconsistent_images_latch ... ok
+test valid_support_does_not_imply_drop_permission_and_protection_does_not_release_chuck ... ok
+
+test result: ok. 13 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.18s
+
+     Running tests/melsec_service.rs (target/debug/deps/melsec_service-8676f0cee5bfe894)
+
+running 7 tests
+test export_melsec_image_fixture ... ignored, exports signed, test-only loopback configuration for the product image test
+test signature_content_policy_asset_release_and_binding_tampering_fail_before_initialization ... ok
+test physical_startup_qualification_id_does_not_authorize_arm ... ok
+test validly_signed_wrong_release_controller_or_installation_is_rejected ... ok
+test signed_device_package_binds_release_profile_assets_and_exact_cell_without_io ... ok
+test physical_metadata_requires_current_qualification_and_separate_arm_on_loopback ... ok
+test product_composition_initializes_starts_and_stops_the_signed_melsec_package ... ok
+
+test result: ok. 6 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.41s
+
+     Running tests/mtls.rs (target/debug/deps/mtls-b15783a6884f6f03)
+
+running 5 tests
+test cell_manifest_and_session_are_mandatory_before_grant ... ok
+test valid_ca_without_registered_fingerprint_cannot_impersonate_platform ... ok
+test concurrent_hello_retries_produce_one_usable_session ... ok
+test changed_content_under_rpc_key_is_rejected_and_legacy_dispatch_cannot_bypass_cell ... ok
+test mtls_negotiation_prepare_authorize_and_evidence_roundtrip ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+     Running tests/process_crash.rs (target/debug/deps/process_crash-472442112c6821ba)
+
+running 3 tests
+test configuration_commit_survives_sigkill_before_reply_without_restoring_arm ... ok
+test qualification_commit_survives_sigkill_before_reply_without_restoring_authority ... ok
+test sigkill_at_both_journal_native_boundaries_never_replays_device_effect ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.89s
+
+     Running tests/ros_jtc.rs (target/debug/deps/ros_jtc-60e9efeb980b6c8a)
+
+running 10 tests
+test crash_jtc_child ... ignored, child-only abrupt-exit fixture
+test bound_jtc_outcome_table_interprets_native_captures_without_code_zero_fallback ... ok
+test contradictory_result_is_stored_without_success_capture ... ok
+test journal_identity_loss_and_corrupt_capture_cannot_be_adopted ... ok
+test missing_authority_or_changed_artifact_never_dispatches ... ok
+test action_completion_does_not_close_bridge_until_support_and_child_exit_are_proven ... ok
+test host_dispatch_context_survives_native_journal_and_rejects_expiry_or_generation_change ... ok
+test independent_generation_ownership_and_drop_proof_are_required ... ok
+test native_journal_prevents_resend_and_new_id_bypass_after_reply_loss_and_reopen ... ok
+test abrupt_exit_at_each_native_boundary_preserves_entry_and_never_replays ... ok
+
+test result: ok. 9 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 1.39s
+
+     Running tests/ros_process.rs (target/debug/deps/ros_process-fa559db63db4fc8c)
+
+running 3 tests
+test executable_pin_and_configuration_are_checked_before_spawn ... ok
+test owned_executable_copy_and_bounded_pipes_preserve_context_and_close_without_kill ... ok
+test timeout_oversize_and_wrong_instance_permanently_fault_the_pipe ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.37s
+
+     Running tests/service.rs (target/debug/deps/service-41e053ef593ab59d)
+
+running 7 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 6 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.48s
+
+     Running unittests src/lib.rs (target/debug/deps/rx_melsec_mc-10ebca5779c09157)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/transport.rs (target/debug/deps/transport-9c40146f45425c4b)
+
+running 12 tests
+test invalid_configuration_fails_before_a_connection_attempt ... ok
+test profile_is_explicit_bounded_and_simulation_cannot_target_the_site ... ok
+test lost_write_response_preserves_uncertainty_and_never_resends ... ok
+test explicit_route_bytes_and_24_bit_addresses_are_preserved ... ok
+test passive_connect_and_drop_never_send_plc_commands ... ok
+test plc_error_code_is_preserved_without_assuming_write_nonexecution ... ok
+test denied_addresses_and_zero_or_oversize_reads_send_no_bytes ... ok
+test write_ack_payload_cannot_smuggle_a_completion_value ... ok
+test documented_bit_read_and_word_read_vectors_over_fragmented_tcp ... ok
+test mapped_single_bit_write_ack_does_not_claim_physical_completion ... ok
+test malformed_headers_lengths_end_codes_and_payloads_fault_the_connection ... ok
+test total_deadline_is_not_extended_by_a_slow_trickle ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.14s
+
+     Running unittests src/lib.rs (target/debug/deps/rx_process-d8c93c258413f72a)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/rx-process-compile.rs (target/debug/deps/rx_process_compile-508f8afe05f67a0f)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/package.rs (target/debug/deps/package-b176db284b2fc876)
+
+running 1 test
+test verified_content_still_requires_process_semantic_validation ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/process.rs (target/debug/deps/process-e6f056c7e7147d70)
+
+running 10 tests
+test branches_require_a_committed_choice_and_reject_opposite_branch_history ... ok
+test sequence_waits_for_authoritative_completion_and_resource_handover ... ok
+test waits_and_interventions_require_recorded_decisions_without_local_timeout_success ... ok
+test incomplete_history_and_recursive_subflows_do_not_create_new_work ... ok
+test repeat_and_subflow_expand_into_distinct_stable_occurrences ... ok
+test malformed_or_unbounded_source_and_partial_progress_are_rejected ... ok
+test parallel_checks_resolved_resource_conflicts_and_suppresses_new_work_on_unknown ... ok
+test unknown_and_disputed_results_never_become_failure_or_a_new_attempt ... ok
+test source_link_checks_repeat_count_and_call_instantiation ... ok
+test source_link_rejects_reordered_children_and_swapped_branch_arms_with_valid_node_ids ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running unittests src/lib.rs (target/debug/deps/rx_process_package-800c167f81946fb5)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/rx-process-package.rs (target/debug/deps/rx_process_package-458bcf0dd04a8e5f)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/package.rs (target/debug/deps/package-a028ca3c7b5607b3)
+
+running 10 tests
+test external_signer_fixture_can_sign_a_caller_selected_local_test_candidate ... ok
+test fixture_for_external_signing_demo_is_explicit_and_never_a_default_production_key ... ok
+test missing_program_artifacts_and_parallel_resource_conflicts_block_assembly ... ok
+test signer_scope_key_alias_and_content_changes_do_not_gain_trust ... ok
+test a_valid_signature_does_not_hide_inconsistent_packaged_compile_inputs ... ok
+test deterministic_candidate_detached_signature_and_recompilation_preserve_input_identity ... ok
+test signed_but_inconsistent_process_produces_failure_report_without_resolved_artifact ... ok
+test verification_report_uses_actual_signed_compilation_and_binds_request_policy ... ok
+test policy_assets_are_read_and_dependency_files_are_verified_under_current_trust ... ok
+test candidate_publication_does_not_overwrite_and_signed_directory_has_exact_inventory ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.13s
+
+     Running unittests src/lib.rs (target/debug/deps/rx_solution_catalog-8b8e603f67ccad07)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/builtin.rs (target/debug/deps/builtin-0e8a2f907e5bc390)
+
+running 2 tests
+test all_mandatory_sources_and_separate_model_roles_are_present ... ok
+test mandatory_inclusion_cannot_be_weakened_by_catalog_edits ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running unittests src/lib.rs (target/debug/deps/rx_supervisor-f1a8c2cca5ff5752)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/rx-solutionsd.rs (target/debug/deps/rx_solutionsd-9b08182a937422c6)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/lifecycle.rs (target/debug/deps/lifecycle-8b61fd31cb8ddfb9)
+
+running 9 tests
+test release_program_change_and_unsafe_plan_choices_are_rejected ... ok
+test uncertain_backend_result_is_not_a_known_start_failure ... ok
+test failed_stop_persistence_still_prevents_new_processes_and_exit_observation_can_be_retried ... ok
+test default_authority_does_not_start_control_owners_and_other_stores_are_not_claimed ... ok
+test supervisor_restart_keeps_live_or_uncertain_processes_unknown_and_never_signals_saved_pids ... ok
+test dependencies_start_after_readiness_and_stop_before_their_provider ... ok
+test launch_commit_boundaries_never_replay_an_uncertain_spawn ... ok
+test stop_authority_is_required_and_control_processes_are_never_force_killed ... ok
+test software_restart_budget_persists_until_an_explicit_clean_reactivation ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.29s
+
+     Running tests/os_process.rs (target/debug/deps/os_process-fe3aa1c7a54f2f03)
+
+running 2 tests
+test tampered_program_file_is_not_started ... ok
+test real_process_readiness_is_instance_correlated_and_shutdown_reaps_the_owned_process ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.74s
+
+   Doc-tests rx_device_package
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rx_executor
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rx_host
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rx_melsec_mc
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rx_process
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rx_process_package
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rx_solution_catalog
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rx_supervisor
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

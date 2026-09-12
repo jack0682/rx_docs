@@ -1,0 +1,19 @@
+{
+  "bt_xml_digest": "15519d03b459786e516abc400b4b2626824cbf9febde45e8768357111d2b0f4a",
+  "limitations": [
+    "RX custom BT executor nodes require their matching implementation",
+    "P eligibility/checkpoint integration and profile qualification are separate",
+    "No device or process is executed by compilation"
+  ],
+  "required_executor_nodes": [
+    "RXSequence",
+    "RXParallelAll",
+    "RXBranch",
+    "RXOperation",
+    "RXWait",
+    "RXIntervention"
+  ],
+  "resolved_digest": "11400e6bea332388499dd9ec59932fab4adde86a09755399c39a96317d898ad7",
+  "source_digest": "f020ac44f5921b1314d12e530677cde992b0359e4ee41c417e8db4d596ecb529",
+  "status": "COMPILED_NOT_QUALIFIED"
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="6" failures="0" disabled="0" errors="0" time="0." timestamp="2026-09-11T08:00:23.395" name="AllTests">
+  <testsuite name="GaitClock" tests="6" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-09-11T08:00:23.395">
+    <testcase name="NoGaitPhaseObservationYieldsNullopt" file="/workspace/src/ai_sapiens/ai_sapiens_sim2real/test/test_gait_clock.cpp" line="36" status="run" result="completed" time="0." timestamp="2026-09-11T08:00:23.395" classname="ai_sapiens_sim2real.GaitClock" />
+    <testcase name="MissingPeriodThrows" file="/workspace/src/ai_sapiens/ai_sapiens_sim2real/test/test_gait_clock.cpp" line="42" status="run" result="completed" time="0." timestamp="2026-09-11T08:00:23.395" classname="ai_sapiens_sim2real.GaitClock" />
+    <testcase name="NonPositivePeriodThrows" file="/workspace/src/ai_sapiens/ai_sapiens_sim2real/test/test_gait_clock.cpp" line="49" status="run" result="completed" time="0." timestamp="2026-09-11T08:00:23.396" classname="ai_sapiens_sim2real.GaitClock" />
+    <testcase name="ResetSetsPhaseToZero" file="/workspace/src/ai_sapiens/ai_sapiens_sim2real/test/test_gait_clock.cpp" line="55" status="run" result="completed" time="0." timestamp="2026-09-11T08:00:23.396" classname="ai_sapiens_sim2real.GaitClock" />
+    <testcase name="FreeRunningAdvancesByStepOverPeriod" file="/workspace/src/ai_sapiens/ai_sapiens_sim2real/test/test_gait_clock.cpp" line="64" status="run" result="completed" time="0." timestamp="2026-09-11T08:00:23.396" classname="ai_sapiens_sim2real.GaitClock" />
+    <testcase name="PhaseWrapsPastOne" file="/workspace/src/ai_sapiens/ai_sapiens_sim2real/test/test_gait_clock.cpp" line="74" status="run" result="completed" time="0." timestamp="2026-09-11T08:00:23.396" classname="ai_sapiens_sim2real.GaitClock" />
+  </testsuite>
+</testsuites>

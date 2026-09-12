@@ -1,0 +1,71 @@
+   Compiling rx-package v0.1.0 (/rx/rx-platform/crates/rx-package)
+   Compiling rx-platformd v0.1.0 (/rx/rx-platform/crates/rx-platformd)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 17.11s
+     Running unittests src/lib.rs (/rust-build/debug/deps/rx_package-77ebcccbf1692962)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/verification.rs (/rust-build/debug/deps/verification-57538b6e284df396)
+
+running 16 tests
+test canonical_set_order_is_stable_and_duplicate_json_fields_are_rejected ... ok
+test closed_paths_and_inventory_reject_traversal_aliases_and_hidden_files ... ok
+test a_dependency_verified_before_key_revocation_is_not_retrusted_implicitly ... ok
+test directory_verification_owns_bytes_and_rejects_links ... ok
+test package_kind_target_contract_and_publisher_scope_are_checked ... ok
+test dependency_cannot_pull_an_older_copy_of_the_root_back_into_the_bundle ... ok
+test dependency_closure_is_pinned_and_rechecked_against_current_trust ... ok
+test signed_content_is_immutable_and_signature_is_bound_to_key_identity ... ok
+test object_corruption_is_not_repaired_by_repeat_import ... ok
+test deeply_nested_valid_package_roundtrips_and_excess_file_inventory_is_bounded ... ok
+test store_ownership_marker_and_unpublished_objects_cannot_be_bypassed ... ok
+test signing_key_alias_has_distinct_object_and_misnamed_valid_objects_are_rejected ... ok
+test store_and_import_reject_symlinks_and_store_handles_survive_root_path_replacement ... ok
+test stored_package_dependencies_are_rechecked_after_revocation ... ok
+test object_survives_source_change_restart_and_repeat_import_without_trust_persistence ... ok
+test policy_reader_pins_exact_bytes_and_reacquires_dependencies ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+
+     Running unittests src/lib.rs (/rust-build/debug/deps/rx_platformd-87f3db21062a62e2)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/rx-package-store.rs (/rust-build/debug/deps/rx_package_store-16bfd6bc0a839bcd)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (/rust-build/debug/deps/rx_platformd-25682524b9a4eae3)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/composition.rs (/rust-build/debug/deps/composition-4364e4eee6dae818)
+
+running 4 tests
+test export_container_fixture ... ignored, tools/test_platform_image.py requests isolated temporary container inputs
+test invalid_pins_or_catalog_never_publish_a_partial_installation ... ok
+test linux_executable_uses_shared_clock_and_sigterm_commits_process_stop ... ok
+test composed_startup_restart_and_stop_preserve_store_and_never_start_a_run ... ok
+
+test result: ok. 3 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 1.94s
+
+   Doc-tests rx_package
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rx_platformd
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

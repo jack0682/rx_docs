@@ -1,0 +1,27 @@
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Checking rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-process-contract)
+   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-protocol)
+    Checking rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+error: this expression creates a reference which is immediately dereferenced by the compiler
+   --> crates/rx-application/src/engine/handover.rs:221:58
+    |
+221 |         let (_, view) = super::process::process_view(tx, &run, &cell, part.ordinal)?;
+    |                                                          ^^^^ help: change this to: `run`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.98.0/index.html#needless_borrow
+    = note: `-D clippy::needless-borrow` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(clippy::needless_borrow)]`
+
+error: this expression creates a reference which is immediately dereferenced by the compiler
+   --> crates/rx-application/src/engine/handover.rs:221:64
+    |
+221 |         let (_, view) = super::process::process_view(tx, &run, &cell, part.ordinal)?;
+    |                                                                ^^^^^ help: change this to: `cell`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.98.0/index.html#needless_borrow
+
+error: could not compile `rx-application` (lib) due to 2 previous errors
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `rx-application` (lib test) due to 2 previous errors

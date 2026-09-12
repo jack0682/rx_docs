@@ -1,0 +1,5 @@
+    Checking rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+    Checking rx-platformd v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-platformd)
+    Checking rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-api)
+    Checking rx-host-client v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-host-client)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 2.06s

@@ -1,0 +1,18 @@
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.75s
+     Running tests/transactions.rs (target/debug/deps/transactions-bad314d419bf4f37)
+
+running 10 tests
+test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::qualification_legacy_policy_can_be_reviewed_but_cannot_issue_execution_purposes ... ok
+test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::qualification_activation_rechecks_context_after_off_writer_verification ... ok
+test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::qualification_send_journal_does_not_infer_rejection_from_missing_reply ... ok
+test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::qualification_policy_replacement_revokes_active_grade_but_preserves_history ... ok
+test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::qualification_disappearing_receipt_suspends_active_cohort_without_overwriting_fact ... ok
+test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::qualification_never_clears_a_manual_hold_without_owned_provenance ... ok
+test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::qualification_restart_retires_active_authority_and_preserves_completed_batch ... ok
+test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::qualification_partial_host_receipts_never_activate_the_cell ... ok
+test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::qualification_issuance_is_atomic_and_request_loss_preserves_ids_and_clear_plan ... ok
+test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::qualification_activation_is_atomic_clears_only_owned_blocks_and_requires_separate_start ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 141 filtered out; finished in 1.22s
+

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "real_s_jtc_authoring": true,
+  "real_platform_store_and_api": true,
+  "intake": "5e46f34d-0dc3-42d8-ab30-ea39c0c816d1",
+  "checks": [
+    "DEVICE_REFERENCE receipt and catalog display",
+    "lost intake reply and same-request recovery",
+    "download equals signed package catalog",
+    "wrong cell denied",
+    "no process review action on device package",
+    "stale context displayed (injected response)",
+    "unchanged active configuration and no runs/qualification",
+    "desktop/mobile overflow",
+    "no JavaScript errors"
+  ]
+}

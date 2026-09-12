@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/test_supervisor_image.py", line 44, in <module>
+    stopped=state_from_volume();assert stopped['stop_requested'] and stopped['records']['status']['phase']=='EXITED'
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/test_supervisor_image.py", line 36, in state_from_volume
+    return json.loads(run('docker','run','--rm','--network','none','--read-only','--user','10001:10001','-v',volume+':/state:ro','--entrypoint','/usr/bin/python3',a.image,'-c',code))['value']
+                      ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/test_supervisor_image.py", line 8, in run
+    if result.returncode:raise RuntimeError(result.stdout+result.stderr)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+sqlite3.OperationalError: unable to open database file
+

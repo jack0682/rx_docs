@@ -1,0 +1,14 @@
+   Compiling rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-process-contract)
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 8.27s
+     Running tests/transactions.rs (target/debug/deps/transactions-2d3d144f384ba793)
+
+running 5 tests
+test device_review_tests::signature_validator_request_and_catalog_mismatch_cannot_be_recorded_as_verified ... ok
+test device_review_tests::failed_checks_are_recorded_but_not_approved_and_rejection_survives_policy_revocation ... ok
+test device_review_tests::independent_device_approval_requires_exact_latest_report_and_leaves_cell_unchanged ... ok
+test device_review_tests::fresh_proof_loses_applicability_when_authority_or_report_changes_before_commit ... ok
+test device_review_tests::report_and_decision_commit_faults_recover_one_original_version_and_decision ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 161 filtered out; finished in 0.35s
+

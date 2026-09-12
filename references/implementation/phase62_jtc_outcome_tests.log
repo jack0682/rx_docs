@@ -1,0 +1,20 @@
+   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol)
+   Compiling rx-host v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-host)
+   Compiling rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-process-contract)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 9.93s
+     Running tests/ros_jtc.rs (target/debug/deps/ros_jtc-ef85636eb2976e4f)
+
+running 10 tests
+test crash_jtc_child ... ignored, child-only abrupt-exit fixture
+test contradictory_result_is_stored_without_success_capture ... ok
+test host_dispatch_context_survives_native_journal_and_rejects_expiry_or_generation_change ... ok
+test abrupt_exit_at_each_native_boundary_preserves_entry_and_never_replays ... ok
+test independent_generation_ownership_and_drop_proof_are_required ... ok
+test bound_jtc_outcome_table_interprets_native_captures_without_code_zero_fallback ... ok
+test action_completion_does_not_close_bridge_until_support_and_child_exit_are_proven ... ok
+test journal_identity_loss_and_corrupt_capture_cannot_be_adopted ... ok
+test missing_authority_or_changed_artifact_never_dispatches ... ok
+test native_journal_prevents_resend_and_new_id_bypass_after_reply_loss_and_reopen ... ok
+
+test result: ok. 9 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 1.35s
+

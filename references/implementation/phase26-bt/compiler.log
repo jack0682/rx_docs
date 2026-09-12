@@ -1,0 +1,7 @@
+   Compiling rx-domain v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-domain)
+   Compiling rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-process-contract)
+   Compiling rx-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-package)
+   Compiling rx-process v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-process)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 2.28s
+     Running `target/debug/rx-process-compile examples/process/material-supply.source.json examples/process/material-supply.bindings.json /var/folders/lb/p5jhj4751yq56zx_891wm0th0000gn/T/rx-bt-fixture-dhvp7_u_/compiled`
+Compiled process artifacts. No device execution or qualification granted.

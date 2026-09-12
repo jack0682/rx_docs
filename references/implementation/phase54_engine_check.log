@@ -1,0 +1,17 @@
+    Checking rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+warning: function `suspend_changed_roots` is never used
+    --> crates/rx-application/src/engine/qualification_activation.rs:1144:15
+     |
+1144 | pub(super) fn suspend_changed_roots(tx: &mut dyn Transaction, meta: &Installation) -> Result<()> {
+     |               ^^^^^^^^^^^^^^^^^^^^^
+     |
+     = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: function `cell_change` is never used
+    --> crates/rx-application/src/engine/qualification_activation.rs:1165:15
+     |
+1165 | pub(super) fn cell_change(tx: &mut dyn Transaction, cell: &Cell) -> Result<Option<Id>> {
+     |               ^^^^^^^^^^^
+
+warning: `rx-application` (lib) generated 2 warnings
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 2.24s

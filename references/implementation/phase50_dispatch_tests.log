@@ -1,0 +1,21 @@
+   Compiling rx-domain v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-domain)
+   Compiling rx-ports v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-ports)
+   Compiling rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-process-contract)
+   Compiling rx-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-package)
+   Compiling rx-storage v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-storage)
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 8.19s
+     Running tests/transactions.rs (target/debug/deps/transactions-8b37ff6673ef4f31)
+
+running 8 tests
+test configuration_dispatch_tests::configuration_dispatch_conflicting_receipt_never_overwrites_first_fact ... ok
+test configuration_dispatch_tests::configuration_dispatch_revoked_sender_blocks_resend_but_late_fact_is_retained ... ok
+test configuration_dispatch_tests::configuration_dispatch_new_preparation_cannot_bypass_older_unknown_send ... ok
+test configuration_dispatch_tests::configuration_dispatch_receipt_survives_transport_failure_and_disappearance_latches_dispute ... ok
+test configuration_dispatch_tests::configuration_dispatch_partial_host_confirmation_is_mixed_without_platform_swap ... ok
+test configuration_dispatch_tests::configuration_dispatch_requires_fences_terminal_and_retains_one_task_after_commit_loss ... ok
+test configuration_dispatch_tests::configuration_dispatch_send_entry_is_durable_and_missing_retry_uses_exact_request ... ok
+test configuration_dispatch_tests::configuration_dispatch_changed_snapshot_cannot_authorize_missing_receipt_retry ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 120 filtered out; finished in 0.99s
+

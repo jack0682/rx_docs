@@ -1,0 +1,263 @@
+   Compiling rx-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-package)
+   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol)
+   Compiling rx-host v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-host)
+   Compiling rx-process v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-process)
+   Compiling rx-solution-catalog v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-solution-catalog)
+   Compiling rx-process-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-process-package)
+   Compiling rx-supervisor v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-supervisor)
+   Compiling rx-executor v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-executor)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 11.52s
+     Running unittests src/lib.rs (target/debug/deps/rx_executor-7cc3106b4a3b3df4)
+
+running 6 tests
+test pending::tests::wait_start_does_not_drop_the_only_bt_request_and_due_requests_are_fair ... ok
+test pending::tests::full_queue_and_inflight_normal_work_do_not_block_pause_and_meaning_cannot_change ... ok
+test client::tests::artifact_hash_does_not_replace_size_schema_or_typed_payload_validation ... ok
+test frame::tests::source_clock_expiry_blocks_a_view_even_if_the_local_steady_deadline_has_not_passed ... ok
+test frame::tests::a_new_epoch_is_not_implicitly_adopted_by_an_existing_context ... ok
+test frame::tests::restored_p_snapshot_preserves_work_and_does_not_restore_admission ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests tests/support/decision_fixture.rs (target/debug/deps/rx_executor_decision_fixture-cb480af355c3c13f)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests tests/support/read_fixture.rs (target/debug/deps/rx_executor_read_fixture-d94d07da3465b9c9)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/service.rs (target/debug/deps/rx_executor_service-e7fc8c5f2345ff55)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests tests/support/service_fixture.rs (target/debug/deps/rx_executor_service_fixture-587ed1b0ebfe633d)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests tests/support/worker_fixture.rs (target/debug/deps/rx_executor_worker_fixture-1dde35ba715b9986)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/journal.rs (target/debug/deps/journal-d7d8a05f8587beb2)
+
+running 9 tests
+test stop_intent_survives_commit_response_loss_and_never_becomes_a_part_request ... ok
+test pause_intent_is_scoped_to_executor_session_and_epoch_without_changing_operation_keys ... ok
+test stop_attempt_key_is_preserved_and_p_observation_does_not_invent_a_reply ... ok
+test p_observation_preserves_network_uncertainty_and_deduplicates_unchanged_identity ... ok
+test reconciliation_acknowledgment_is_not_a_resource_release_observation ... ok
+test only_a_confirmed_transactional_rejection_allows_new_cas_and_key ... ok
+test prepared_entered_and_reply_boundaries_survive_rollback_and_lost_commit_response ... ok
+test material_identity_is_observed_without_rewriting_a_lost_begin_reply ... ok
+test checkpoint_expiry_preserves_old_attempt_and_pending_projection_is_not_an_rpc_reply ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+
+     Running unittests src/lib.rs (target/debug/deps/rx_host-9c7668912acf45ad)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests tests/support/crash_harness.rs (target/debug/deps/rx_host_crash_fixture-59ad2f7af3b17872)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests tests/support/sim_server.rs (target/debug/deps/rx_host_sim_server-f786fbb700fb21af)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/gate.rs (target/debug/deps/gate-99a0f192fb62a312)
+
+running 11 tests
+test same_grant_fence_requires_same_request_identity ... ok
+test simulated_device_has_an_independent_exclusive_owner ... ok
+test renewal_replay_does_not_extend_expiry_and_expired_grant_stays_expired ... ok
+test cancellation_arriving_before_prepare_creates_permanent_tombstone ... ok
+test late_fence_replay_cannot_remove_a_new_arm_or_rewind_epoch ... ok
+test altered_permit_and_unapproved_intent_are_rejected_before_effect ... ok
+test expiry_during_commit_does_not_enter_native_and_is_not_retried ... ok
+test prepare_does_not_call_device_and_authorize_duplicates_are_receipt_lookup ... ok
+test native_submission_serializes_fence_while_protection_is_independent ... ok
+test prepared_rebind_retires_old_permit_permanently ... ok
+test evidence_publication_cursor_is_durable_scoped_and_never_accepts_a_foreign_ack ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+
+     Running tests/mtls.rs (target/debug/deps/mtls-92d1c8945f3f964d)
+
+running 5 tests
+test valid_ca_without_registered_fingerprint_cannot_impersonate_platform ... ok
+test cell_manifest_and_session_are_mandatory_before_grant ... ok
+test concurrent_hello_retries_produce_one_usable_session ... ok
+test changed_content_under_rpc_key_is_rejected_and_legacy_dispatch_cannot_bypass_cell ... ok
+test mtls_negotiation_prepare_authorize_and_evidence_roundtrip ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+
+     Running tests/process_crash.rs (target/debug/deps/process_crash-2cb68925c6b1e05d)
+
+running 1 test
+test sigkill_at_both_journal_native_boundaries_never_replays_device_effect ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.53s
+
+     Running unittests src/lib.rs (target/debug/deps/rx_process-d67d4cd1d3e2750f)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/rx-process-compile.rs (target/debug/deps/rx_process_compile-887b133fb838e00c)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/package.rs (target/debug/deps/package-1f10e8ad79bccd83)
+
+running 1 test
+test verified_content_still_requires_process_semantic_validation ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/process.rs (target/debug/deps/process-4c964660800c75b5)
+
+running 8 tests
+test waits_and_interventions_require_recorded_decisions_without_local_timeout_success ... ok
+test incomplete_history_and_recursive_subflows_do_not_create_new_work ... ok
+test parallel_checks_resolved_resource_conflicts_and_suppresses_new_work_on_unknown ... ok
+test branches_require_a_committed_choice_and_reject_opposite_branch_history ... ok
+test repeat_and_subflow_expand_into_distinct_stable_occurrences ... ok
+test sequence_waits_for_authoritative_completion_and_resource_handover ... ok
+test malformed_or_unbounded_source_and_partial_progress_are_rejected ... ok
+test unknown_and_disputed_results_never_become_failure_or_a_new_attempt ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running unittests src/lib.rs (target/debug/deps/rx_process_package-d1073333011eec1e)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/rx-process-package.rs (target/debug/deps/rx_process_package-4e22b3ec31d3bb27)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/package.rs (target/debug/deps/package-327970a774aaccd3)
+
+running 8 tests
+test external_signer_fixture_can_sign_a_caller_selected_local_test_candidate ... ok
+test fixture_for_external_signing_demo_is_explicit_and_never_a_default_production_key ... ok
+test signer_scope_key_alias_and_content_changes_do_not_gain_trust ... ok
+test missing_program_artifacts_and_parallel_resource_conflicts_block_assembly ... ok
+test a_valid_signature_does_not_hide_inconsistent_packaged_compile_inputs ... ok
+test deterministic_candidate_detached_signature_and_recompilation_preserve_input_identity ... ok
+test policy_assets_are_read_and_dependency_files_are_verified_under_current_trust ... ok
+test candidate_publication_does_not_overwrite_and_signed_directory_has_exact_inventory ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.11s
+
+     Running unittests src/lib.rs (target/debug/deps/rx_solution_catalog-59febe18d1bd9e4d)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/builtin.rs (target/debug/deps/builtin-72f21b6c4413e9e4)
+
+running 2 tests
+test all_mandatory_sources_and_separate_model_roles_are_present ... ok
+test mandatory_inclusion_cannot_be_weakened_by_catalog_edits ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running unittests src/lib.rs (target/debug/deps/rx_supervisor-a623c2454b5755d1)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/rx-solutionsd.rs (target/debug/deps/rx_solutionsd-c37815286f794f8e)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/lifecycle.rs (target/debug/deps/lifecycle-25e1b54ad32489fa)
+
+running 9 tests
+test release_program_change_and_unsafe_plan_choices_are_rejected ... ok
+test uncertain_backend_result_is_not_a_known_start_failure ... ok
+test supervisor_restart_keeps_live_or_uncertain_processes_unknown_and_never_signals_saved_pids ... ok
+test default_authority_does_not_start_control_owners_and_other_stores_are_not_claimed ... ok
+test failed_stop_persistence_still_prevents_new_processes_and_exit_observation_can_be_retried ... ok
+test dependencies_start_after_readiness_and_stop_before_their_provider ... ok
+test launch_commit_boundaries_never_replay_an_uncertain_spawn ... ok
+test stop_authority_is_required_and_control_processes_are_never_force_killed ... ok
+test software_restart_budget_persists_until_an_explicit_clean_reactivation ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.29s
+
+     Running tests/os_process.rs (target/debug/deps/os_process-6dab1d74b9576109)
+
+running 2 tests
+test tampered_program_file_is_not_started ... ok
+test real_process_readiness_is_instance_correlated_and_shutdown_reaps_the_owned_process ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.78s
+
+   Doc-tests rx_executor
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rx_host
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rx_process
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rx_process_package
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rx_solution_catalog
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rx_supervisor
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

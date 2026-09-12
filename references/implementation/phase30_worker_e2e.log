@@ -1,0 +1,34 @@
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.40s
+    Blocking waiting for file lock on build directory
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+   Compiling rx-protocol-adapter v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-protocol-adapter)
+   Compiling rx-runtime v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-runtime)
+   Compiling rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-api)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 9.26s
+     Running tests/executor_ingress.rs (target/debug/deps/executor_ingress-1110f4196911f2e2)
+
+running 1 test
+test durable_s_worker_handles_real_bt_requests_and_preserves_crash_boundaries ... FAILED
+
+failures:
+
+---- durable_s_worker_handles_real_bt_requests_and_preserves_crash_boundaries stdout ----
+
+thread 'durable_s_worker_handles_real_bt_requests_and_preserves_crash_boundaries' (7873411) panicked at crates/rx-api/tests/support/decision_worker.rs:18:5:
+assertion `left == right` failed: decision worker CHECKPOINT_EXPIRED: Error: "planner fault: Some(\"[json.exception.parse_error.101] parse error at line 1, column 7: syntax error while parsing value - invalid string: missing closing quote; last read: '\\\"10000'\")"
+
+  left: Some(1)
+ right: Some(0)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    durable_s_worker_handles_real_bt_requests_and_preserves_crash_boundaries
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 5 filtered out; finished in 8.96s
+
+error: test failed, to rerun pass `-p rx-api --test executor_ingress`

@@ -1,0 +1,30 @@
+   Compiling rx-executor v0.1.0 (/src/runtime/rx-executor)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 6.85s
+     Running unittests src/lib.rs (/build/debug/deps/rx_executor-152b290c470b4526)
+
+running 5 tests
+test clock::tests::linux_clock_uses_the_shared_boot_identity_and_non_decreasing_boottime ... ok
+test client::tests::artifact_hash_does_not_replace_size_schema_or_typed_payload_validation ... ok
+test frame::tests::source_clock_expiry_blocks_a_view_even_if_the_local_steady_deadline_has_not_passed ... ok
+test frame::tests::restored_p_snapshot_preserves_work_and_does_not_restore_admission ... ok
+test frame::tests::a_new_epoch_is_not_implicitly_adopted_by_an_existing_context ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/journal.rs (/build/debug/deps/journal-a8872992baa66a33)
+
+running 5 tests
+test pause_intent_is_scoped_to_executor_session_and_epoch_without_changing_operation_keys ... ok
+test p_observation_preserves_network_uncertainty_and_deduplicates_unchanged_identity ... ok
+test reconciliation_acknowledgment_is_not_a_resource_release_observation ... ok
+test only_a_confirmed_transactional_rejection_allows_new_cas_and_key ... ok
+test prepared_entered_and_reply_boundaries_survive_rollback_and_lost_commit_response ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+   Doc-tests rx_executor
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

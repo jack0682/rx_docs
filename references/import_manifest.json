@@ -1,0 +1,87 @@
+{
+  "created_utc": "2026-09-09T12:57:49.183531+00:00",
+  "workspace": "/Users/ojaehong/RX_automation/rx_ws",
+  "mode": "design_first_implementation_later",
+  "copies": [
+    {
+      "source": "/Users/ojaehong/research_RX/product_blueprint_v1.0/RX_01_definition_v1.0.md",
+      "destination": "/Users/ojaehong/RX_automation/rx_ws/docs/01_product_definition.md",
+      "source_sha256": "a14a0d4e3210de0d0bdfba4c220b3b0ec35617ecc63abf576cd4ebd09fa49aa3",
+      "design_copy_sha256": "55be6293fbb8abc8d82915c16834660349d6180766e5252599b7190caee262ec"
+    },
+    {
+      "source": "/Users/ojaehong/research_RX/product_blueprint_v1.0/RX_02_value_and_business_v1.0.md",
+      "destination": "/Users/ojaehong/RX_automation/rx_ws/docs/02_value_and_business.md",
+      "source_sha256": "1ced3a1337d25136cd38dd2bb7c93ead3dd62a477d9ef2748b5d084e3c4f5b1a",
+      "design_copy_sha256": "05309bd200896ec0c4dd2d491fccc79a2c8f4104a0ebdefe4f51284b77120fcf"
+    },
+    {
+      "source": "/Users/ojaehong/research_RX/product_blueprint_v1.0/RX_03_scope_v1.0.md",
+      "destination": "/Users/ojaehong/RX_automation/rx_ws/docs/03_product_scope.md",
+      "source_sha256": "c887dcfa3baa6df10bfb94428aa20e71c8dd97e46dd91b27b2b11675007fe3c0",
+      "design_copy_sha256": "587b518cdc895730a1f3fd6f6cf2bc277b14db366141e7cee15ee8c2d90d46d7"
+    },
+    {
+      "source": "/Users/ojaehong/research_RX/product_blueprint_v1.0/RX_04_workflows_v1.0.md",
+      "destination": "/Users/ojaehong/RX_automation/rx_ws/docs/04_user_workflows.md",
+      "source_sha256": "2bc4e5097f75f79103bc4f0fa60e58c30cf9796b0f32db9db95f066b8ada91d3",
+      "design_copy_sha256": "70faf7f9c94e50beaf644b8656513782117c88f87ed0cfb81576a26921cc7934"
+    },
+    {
+      "source": "/Users/ojaehong/research_RX/product_blueprint_v1.0/RX_05_software_architecture_v1.0.md",
+      "destination": "/Users/ojaehong/RX_automation/rx_ws/docs/05_software_architecture.md",
+      "source_sha256": "9146dd5cacf9b73f073cec6240c1ce3301cdcda0ad3a3239a7bfbb23d00f312c",
+      "design_copy_sha256": "4e56d382e7a91ab01960ab3d803bf4e555b6e7b5805034eb01316a5412c6f25a"
+    },
+    {
+      "source": "/Users/ojaehong/research_RX/product_blueprint_v1.0/RX_06_contracts_and_reliability_v1.0.md",
+      "destination": "/Users/ojaehong/RX_automation/rx_ws/docs/06_contracts_and_reliability.md",
+      "source_sha256": "77f8f643b2abcfe47b4dca677636ce438bc68e80086df7e048f21de2d29cc203",
+      "design_copy_sha256": "29d451f1c20ad8372bb58e56969c609e5e17ae3a2c4985cca2f9129b55ab201b"
+    },
+    {
+      "source": "/Users/ojaehong/research_RX/product_blueprint_v1.0/RX_07_build_and_validation_v1.0.md",
+      "destination": "/Users/ojaehong/RX_automation/rx_ws/docs/07_future_implementation_and_validation.md",
+      "source_sha256": "f76fd5242d64650964a195a9b0b3c365fa30744f1bd9975a166429823c4ada11",
+      "design_copy_sha256": "10fe7ba3a5207eebe37d6991cda14df4fcbc37566031cc10de0c921a97fba3e1"
+    },
+    {
+      "source": "/Users/ojaehong/research_RX/product_blueprint_v1.0/RX_08_delivery_and_maintenance_v1.0.md",
+      "destination": "/Users/ojaehong/RX_automation/rx_ws/docs/08_delivery_and_maintenance.md",
+      "source_sha256": "7dd6f50be206ee773a5fe13eeaea06d461c71f597cb365dfeec9d5e54441a598",
+      "design_copy_sha256": "298964a523ca2d44d667046ebb602e5b36b37010b8bc70ba738908c63fbee56e"
+    },
+    {
+      "source": "/Users/ojaehong/research_RX/product_blueprint_v1.0/RX_09_decisions_and_sources_v1.0.md",
+      "destination": "/Users/ojaehong/RX_automation/rx_ws/docs/09_decisions_and_sources.md",
+      "source_sha256": "e09b1865beefd35bde9a583dbb971bc8aeb98547135f31e7c969672f41fe1d20",
+      "design_copy_sha256": "f18add2104d35665d2ae9ce87edc49cd5185fe3c164e0cec6cf7f3ac46c311fa"
+    },
+    {
+      "source": "/Users/ojaehong/research_RX/RX_software_structure_proposal_v0.1.md",
+      "destination": "/Users/ojaehong/RX_automation/rx_ws/docs/10_structure_proposal.md",
+      "source_sha256": "dec49ca51db46bbfe9e25e971cfc63f94f4e46724542d365b15b7551f0475301",
+      "design_copy_sha256": "d40d8c746091dddfb69554f840d526dd9dddaabd6ca3ce880b99c5d29c5ee59e"
+    },
+    {
+      "source": "/Users/ojaehong/research_RX/RX_first_cell_device_contract_v0.2.md",
+      "destination": "/Users/ojaehong/RX_automation/rx_ws/docs/11_first_cell_contract.md",
+      "source_sha256": "e711d5b1c325de27dc0b74543a97b06d63582b47a4914027a5ed7e694c8655ca",
+      "design_copy_sha256": "dac12ef3d5ba3b639b7850a63588053d98c5551101d3af53a72cce7cad384f68"
+    },
+    {
+      "source": "/Users/ojaehong/research_RX/RX_laser_PLC_interface_v0.1.md",
+      "destination": "/Users/ojaehong/RX_automation/rx_ws/references/laser_plc_interface.md",
+      "source_sha256": "9e719704dfe7563a04a8f5e4e3dc6cea298bc6b710596adbd2fbb2bbd8f9423a",
+      "design_copy_sha256": "9e719704dfe7563a04a8f5e4e3dc6cea298bc6b710596adbd2fbb2bbd8f9423a"
+    },
+    {
+      "source": "/Users/ojaehong/research_RX/RX_MCT2_photo_identification_v0.1.md",
+      "destination": "/Users/ojaehong/RX_automation/rx_ws/references/mct2_photo_identification.md",
+      "source_sha256": "2805f0228658b217f8670c0bbf1d3ed7febb2e032e287538dfb5d3d8a08aed74",
+      "design_copy_sha256": "2805f0228658b217f8670c0bbf1d3ed7febb2e032e287538dfb5d3d8a08aed74"
+    }
+  ],
+  "original_files_modified": false,
+  "updated_for_design_first": true
+}

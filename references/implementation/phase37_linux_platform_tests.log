@@ -1,0 +1,177 @@
+   Compiling rx-application v0.1.0 (/rx/rx-platform/crates/rx-application)
+   Compiling rx-protocol-adapter v0.1.0 (/rx/rx-platform/crates/rx-protocol-adapter)
+   Compiling rx-runtime v0.1.0 (/rx/rx-platform/crates/rx-runtime)
+   Compiling rx-api v0.1.0 (/rx/rx-platform/crates/rx-api)
+   Compiling rx-host-client v0.1.0 (/rx/rx-platform/crates/rx-host-client)
+   Compiling rx-platformd v0.1.0 (/rx/rx-platform/crates/rx-platformd)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3m 45s
+     Running unittests src/lib.rs (/rust-build/debug/deps/rx_api-d558c3b020473cf2)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/local.rs (/rust-build/debug/deps/rx_platform_local-21e2a0b3fd129fe4)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/evidence_ingress.rs (/rust-build/debug/deps/evidence_ingress-130f0e1c5c78aea8)
+
+running 1 test
+test publisher_catches_up_over_128_records_after_lost_ack_and_preserves_cursor_on_restart ... ignored, tools/test_evidence_e2e.sh builds and supplies the separate Host publisher
+
+test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/executor_ingress.rs (/rust-build/debug/deps/executor_ingress-3ff90f4f2232b165)
+
+running 6 tests
+test durable_s_worker_handles_real_bt_requests_and_preserves_crash_boundaries ... ignored, tools/test_executor_worker_e2e.sh supplies S worker and pinned C++ request fixture
+test solutions_reader_restores_a_new_session_without_restoring_run_authority ... ignored, tools/test_executor_read_e2e.sh supplies the separate solutions reader
+test executor_run_reads_require_both_negotiations_and_the_same_registered_certificate ... ok
+test wait_checkpoint_start_and_resolution_use_the_frozen_wire_contract ... ok
+test branch_checkpoint_preparation_and_lost_commit_reply_use_the_frozen_wire_contract ... ok
+test remote_executor_allocates_and_submits_after_a_simulated_operator_start ... ok
+
+test result: ok. 4 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.51s
+
+     Running tests/http.rs (/rust-build/debug/deps/http-d848316c1baaed78)
+
+running 11 tests
+test cell_wire_projection_rejects_missing_legacy_metadata_and_impossible_creation_revision ... ok
+test expired_session_and_stopped_writer_never_return_cached_success ... ok
+test canonical_cell_inspection_uses_current_human_scope_and_frozen_json ... ok
+test mutations_are_durable_idempotent_and_terminal_bypass_is_rejected ... ok
+test stale_external_procedure_report_returns_its_durable_fact_ids ... ok
+test checkpoint_wire_and_exact_artifact_are_scoped_to_current_user_access ... ok
+test scoped_snapshot_login_logout_and_current_revocation ... ok
+test actual_tcp_listener_uses_verified_socket_origin_and_real_writer ... ok
+test close_http_requires_current_lead_cohort_evidence_and_real_clearance ... ok
+test case_acknowledgment_records_reading_without_changing_containment_or_scope ... ok
+test strict_ingress_and_credentials_never_create_authority_from_headers ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.77s
+
+     Running tests/terminal_https.rs (/rust-build/debug/deps/terminal_https-3c95013ce52df78e)
+
+running 3 tests
+test authenticated_terminal_cannot_bypass_qualification_or_current_user_role ... ok
+test terminal_bound_operator_can_prepare_start_but_revocation_blocks_cached_requests ... ok
+test tls_certificate_and_registry_are_both_required_and_cookie_is_bound_to_terminal ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.82s
+
+     Running unittests src/lib.rs (/rust-build/debug/deps/rx_application-596c928bd5615e8a)
+
+running 1 test
+test checkpoint_artifact::tests::rejects_a_valid_older_artifact_substituted_into_a_newer_run_view ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/transactions.rs (/rust-build/debug/deps/transactions-d10cf765d8f3bbd6)
+
+running 87 tests
+test cell_operating_context_rejects_competing_active_purposes ... ok
+test checkpoint_artifact_requires_current_run_scope_and_exact_owned_reference ... ok
+test activation_visits_are_unique_for_the_whole_run_across_parts ... ok
+test changed_intent_under_same_key_is_a_conflict ... ok
+test an_entered_send_with_no_remote_receipt_remains_unknown_and_is_not_reissued ... ok
+test checkpoint_artifact_and_run_projection_commit_with_slot_or_roll_back_together ... ok
+test admission_receipt_is_anchored_to_the_original_control_record_and_survives_later_changes ... ok
+test a_new_contradictory_native_result_preserves_historical_outcome ... ok
+test changing_evidence_journal_does_not_silently_reset_sequence_history ... ok
+test checkpoint_commit_rejects_changed_mapping_artifact_and_stale_condition ... ok
+test conflicting_observation_is_committed_as_invalidation_even_though_api_rejects_it ... ok
+test checkpoint_preparation_loss_and_expiry_never_advance_the_run ... ok
+test device_generation_change_is_preserved_and_does_not_disappear_on_rejection ... ok
+test control_journal_is_atomic_and_audit_sessions_do_not_advance_its_cursor ... ok
+test diagnostic_case_keeps_epoch_and_mandate_but_blocks_new_admission ... ok
+test checkpoint_wait_uses_p_time_and_success_cannot_be_committed_after_deadline ... ok
+test early_native_evidence_is_reapplied_when_the_receipt_establishes_correlation ... ok
+test checkpoint_successor_preserves_an_existing_child_slot_from_another_visit ... ok
+test checkpoint_proposal_is_not_an_applied_decision_and_commit_response_survives_loss ... ok
+test evidence_gap_is_not_skipped_and_conflicting_sequence_is_quarantined ... ok
+test direct_state_puts_during_hold_are_captured_at_one_final_transaction_cut ... ok
+test executor_part_and_activation_mutations_preserve_full_request_identity_and_atomic_results ... ok
+test hold_proves_unsent_work_not_executed_without_releasing_resource ... ok
+test false_handover_facts_are_retained_and_identity_conflicts_block_release ... ok
+test handover_release_is_atomic_and_duplicate_proof_does_not_release_another_owner ... ok
+test closed_case_duplicate_reports_never_replay_but_new_physical_reports_reopen_containment ... ok
+test host_bootstrap_plan_and_registration_are_durable_and_do_not_fabricate_readiness ... ok
+test host_bootstrap_never_reuses_a_changed_delivery_journal_in_the_same_boot ... ok
+test host_read_ingestion_checks_context_and_preserves_the_native_source_fields ... FAILED
+test executor_reconnect_is_idempotent_but_changed_incarnation_revokes_authority ... ok
+test maintained_condition_recovery_does_not_revive_an_old_mandate ... ok
+test hold_propagates_to_shared_resources_and_preserves_independent_cells ... ok
+test late_prepared_receipt_after_pause_does_not_create_an_authorization ... ok
+test executor_submit_checks_the_whole_envelope_and_recovers_an_immutable_receipt_after_t1_loss ... ok
+test maintained_watchdog_revokes_expired_facts_without_fabricating_a_negative_sample ... ok
+test native_receipt_capture_does_not_stand_in_for_completion_policy ... ok
+test host_bootstrap_rejects_wrong_incarnation_missing_sources_and_changed_context ... ok
+test native_metadata_changes_conflict_and_ack_cursor_is_part_of_t2_commit ... ok
+test live_execution_snapshot_preserves_the_cut_and_does_not_reuse_aged_maintained_conditions ... ok
+test observation_batch_rejects_bad_last_source_before_writing_any_fact ... ok
+test observation_batch_keeps_conflict_evidence_and_other_source_truth_without_repeated_revocation ... ok
+test operator_service_reconnect_cannot_start_work_or_replace_executor_authority ... ok
+test observation_generation_loss_is_latched_once_and_does_not_adopt_the_new_source ... ok
+test observation_batch_evaluates_the_complete_cut_and_recovers_commit_reply_loss ... ok
+test one_physical_resource_is_reserved_across_cells_not_per_cell_alias ... ok
+test part_completion_waits_for_release_and_closes_exhausted_run ... ok
+test pause_after_emit_is_not_cancellation_and_late_correlated_result_is_still_recorded ... ok
+test p_commits_branch_choice_and_rejects_the_untaken_activation ... ok
+test non_operating_close_preserves_unknown_effect_and_does_not_release_resources ... ok
+test pause_rejects_a_late_arm_acknowledgment_from_start_preparation ... ok
+test pausing_a_prepared_run_without_arm_does_not_fence_other_cell_work ... ok
+test part_completion_requires_only_the_committed_branch_and_its_real_release_proof ... ok
+test pending_start_has_a_deadline_and_key_covers_budget_intent ... ok
+test permit_deadline_cannot_outlive_the_observation_that_supported_it ... ok
+test non_operating_close_preparation_lost_reply_and_rollback_do_not_duplicate_clearances ... ok
+test producer_reconnect_requires_current_identity_and_cell_negotiation ... ok
+test prepared_is_not_an_authorization_ack_and_duplicate_receipts_complete_the_right_message ... ok
+test production_read_before_first_part_has_complete_budget_and_detects_missing_parts ... ok
+test pause_commits_reply_fence_and_unsent_sealing_atomically_without_refunding_budget ... ok
+test process_checkpoint_survives_runtime_restart_without_restoring_execution_authority ... ok
+test physical_case_open_is_atomic_and_acknowledgment_cannot_restore_authority ... ok
+test resolved_plan_binding_and_digest_cannot_be_substituted_in_cell_configuration ... ok
+test renewal_uses_durable_sequence_and_original_send_time_without_replaying_permission ... ok
+test reconciliation_requests_are_durable_coalesced_and_cannot_claim_release ... ok
+test recorded_cell_context_tracks_start_intervention_and_real_block_creation_revisions ... ok
+test repeated_disputed_samples_do_not_create_unbounded_latches_but_a_new_episode_does ... ok
+test production_completion_requires_release_and_preserves_original_reply_and_budget ... ok
+test restarting_runtime_preserves_consumption_and_revokes_mandate ... ok
+test role_revocation_is_checked_before_cached_result_lookup ... ok
+test service_roles_cannot_impersonate_human_procedure_reporters_or_case_leads ... ok
+test stale_observation_and_wrong_executor_do_not_reach_t1 ... ok
+test same_slot_new_key_and_lost_reply_do_not_create_another_operation ... ok
+test procedure_requires_real_fence_and_condition_evidence_then_accounts_for_every_worker ... ok
+test start_requires_all_hosts_and_cannot_be_completed_by_partial_ack ... ok
+test non_operating_close_does_not_accept_missing_people_proof_or_invented_evidence ... ok
+test uncommissioned_cell_cannot_start_from_package_presence ... ok
+test stale_procedure_report_keeps_external_fact_and_latch_but_never_grants_entry ... ok
+test unregistered_terminal_cannot_start_even_with_operator_role ... ok
+test user_session_requires_its_issued_terminal_binding_and_registry_revision ... ok
+test t1_failure_rolls_back_slot_resource_permit_and_outbox_together ... ok
+test t2_commits_native_evidence_outcome_and_contiguous_cursor_atomically ... ok
+test runtime_stop_barrier_is_atomic_blocks_new_authority_and_keeps_unknown_work ... ok
+test non_operating_close_is_atomic_idempotent_and_retains_other_case_restrictions ... ok
+test t2_rollback_and_lost_ack_preserve_exactly_one_recorded_result ... ok
+test wait_deadline_and_success_are_decided_by_p_and_cannot_be_reset_by_retries ... ok
+test resource_release_requires_all_current_handover_facts ... ok
+test non_operating_close_rechecks_time_case_epoch_evidence_and_current_actor ... ok
+
+failures:
+
+---- host_read_ingestion_checks_context_and_preserves_the_native_source_fields stdout ----
+
+thread 'host_read_ingestion_checks_context_and_preserves_the_native_source_fields' (4080) panicked at crates/rx-application/tests/transactions.rs:6486:31:
+called `Result::unwrap()` on an `Err` value: Rejected(ConditionUnknown)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    host_read_ingestion_checks_context_and_preserves_the_native_source_fields
+
+test result: FAILED. 86 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.29s
+
+error: test failed, to rerun pass `-p rx-application --test transactions`

@@ -1,0 +1,50 @@
+    Checking rx-domain v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-domain)
+    Checking rx-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-package)
+    Checking rx-ports v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-ports)
+    Checking rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-process-contract)
+    Checking rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+warning: unused import: `Issue`
+ --> crates/rx-application/src/engine/qualification_activation.rs:3:30
+  |
+3 |     configuration_dispatch::{Issue, Phase, Sender},
+  |                              ^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `rx_domain::host_qualification as host`
+ --> crates/rx-application/src/engine/qualification_activation.rs:6:5
+  |
+6 | use rx_domain::host_qualification as host;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: field `qualification_reads` is never read
+  --> crates/rx-application/src/engine/mod.rs:20:5
+   |
+14 | pub struct Engine<R, C, A> {
+   |            ------ field in this struct
+...
+20 |     qualification_reads: BTreeMap<Id, (TimePoint, Digest)>,
+   |     ^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: function `task` is never used
+  --> crates/rx-application/src/engine/qualification_activation.rs:58:4
+   |
+58 | fn task(tx: &mut dyn Transaction, id: &Id) -> Result<(Counter, a::Task)> {
+   |    ^^^^
+
+warning: function `access` is never used
+  --> crates/rx-application/src/engine/qualification_activation.rs:77:4
+   |
+77 | fn access(
+   |    ^^^^^^
+
+warning: function `pending_current` is never used
+   --> crates/rx-application/src/engine/qualification_activation.rs:194:4
+    |
+194 | fn pending_current(tx: &mut dyn Transaction, meta: &Installation, b: &a::Batch) -> Result<()> {
+    |    ^^^^^^^^^^^^^^^
+
+warning: `rx-application` (lib) generated 6 warnings (run `cargo fix --lib -p rx-application` to apply 2 suggestions)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 5.79s

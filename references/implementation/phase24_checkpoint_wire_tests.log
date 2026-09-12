@@ -1,0 +1,24 @@
+   Compiling rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-api)
+error: couldn't read `crates/rx-api/tests/support/../../../spec/executor-plan/v1/binding.json`: No such file or directory (os error 2)
+   --> crates/rx-api/tests/support/checkpoint.rs:107:32
+    |
+107 |         binding_hash: manifest(include_str!("../../../spec/executor-plan/v1/binding.json")),
+    |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+help: there is a file with the same name in a different directory
+    |
+107 |         binding_hash: manifest(include_str!("../../../../spec/executor-plan/v1/binding.json")),
+    |                                                       +++
+
+error: couldn't read `crates/rx-api/tests/support/../../../spec/executor/v1/binding.json`: No such file or directory (os error 2)
+   --> crates/rx-api/tests/support/checkpoint.rs:232:36
+    |
+232 |             binding_hash: manifest(include_str!("../../../spec/executor/v1/binding.json")),
+    |                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+help: there is a file with the same name in a different directory
+    |
+232 |             binding_hash: manifest(include_str!("../../../../spec/executor/v1/binding.json")),
+    |                                                           +++
+
+error: could not compile `rx-api` (test "executor_ingress") due to 2 previous errors

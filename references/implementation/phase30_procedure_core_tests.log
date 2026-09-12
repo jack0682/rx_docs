@@ -1,0 +1,16 @@
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.60s
+     Running unittests src/lib.rs (target/debug/deps/rx_application-bc71c4e407e19b6d)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 1 filtered out; finished in 0.00s
+
+     Running tests/transactions.rs (target/debug/deps/transactions-285a2e14f18af9d7)
+
+running 2 tests
+test stale_procedure_report_keeps_external_fact_and_latch_but_never_grants_entry ... ok
+test procedure_requires_real_fence_and_condition_evidence_then_accounts_for_every_worker ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 62 filtered out; finished in 0.09s
+

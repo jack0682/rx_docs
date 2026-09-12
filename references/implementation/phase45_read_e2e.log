@@ -1,0 +1,13 @@
+   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol)
+   Compiling rx-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-package)
+   Compiling rx-process v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-process)
+   Compiling rx-executor v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-executor)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 5.10s
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.14s
+     Running tests/executor_ingress.rs (target/debug/deps/executor_ingress-8ccda86e1961075b)
+
+running 1 test
+test solutions_reader_restores_a_new_session_without_restoring_run_authority ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 5 filtered out; finished in 1.09s
+

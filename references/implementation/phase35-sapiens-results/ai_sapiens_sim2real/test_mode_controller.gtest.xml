@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="9" failures="0" disabled="0" errors="0" time="0.038" timestamp="2026-09-11T08:00:23.507" name="AllTests">
+  <testsuite name="ModeController" tests="9" failures="0" disabled="0" skipped="0" errors="0" time="0.038" timestamp="2026-09-11T08:00:23.507">
+    <testcase name="TeleopTransitionRunsAfterStartupInputIsSafe" file="/workspace/src/ai_sapiens/ai_sapiens_sim2real/test/test_mode_controller.cpp" line="226" status="run" result="completed" time="0.018" timestamp="2026-09-11T08:00:23.507" classname="ai_sapiens_sim2real.ModeController" />
+    <testcase name="DampingRequestOverridesTeleopTransition" file="/workspace/src/ai_sapiens/ai_sapiens_sim2real/test/test_mode_controller.cpp" line="239" status="run" result="completed" time="0.002" timestamp="2026-09-11T08:00:23.526" classname="ai_sapiens_sim2real.ModeController" />
+    <testcase name="TeleopLossOverridesTheActiveState" file="/workspace/src/ai_sapiens/ai_sapiens_sim2real/test/test_mode_controller.cpp" line="255" status="run" result="completed" time="0.002" timestamp="2026-09-11T08:00:23.529" classname="ai_sapiens_sim2real.ModeController" />
+    <testcase name="ApiEntryRequiresValidHeartbeatAndFreshSwitchEdge" file="/workspace/src/ai_sapiens/ai_sapiens_sim2real/test/test_mode_controller.cpp" line="271" status="run" result="completed" time="0.002" timestamp="2026-09-11T08:00:23.532" classname="ai_sapiens_sim2real.ModeController" />
+    <testcase name="ApiEntryRejectsNonNeutralTeleopVelocity" file="/workspace/src/ai_sapiens/ai_sapiens_sim2real/test/test_mode_controller.cpp" line="292" status="run" result="completed" time="0.002" timestamp="2026-09-11T08:00:23.534" classname="ai_sapiens_sim2real.ModeController" />
+    <testcase name="ApiAcceptsMimicServiceRequest" file="/workspace/src/ai_sapiens/ai_sapiens_sim2real/test/test_mode_controller.cpp" line="305" status="run" result="completed" time="0.002" timestamp="2026-09-11T08:00:23.536" classname="ai_sapiens_sim2real.ModeController" />
+    <testcase name="MimicCompletionRequestReturnsToVelocity" file="/workspace/src/ai_sapiens/ai_sapiens_sim2real/test/test_mode_controller.cpp" line="316" status="run" result="completed" time="0.002" timestamp="2026-09-11T08:00:23.539" classname="ai_sapiens_sim2real.ModeController" />
+    <testcase name="MimicInputBlocksApiReleaseUntilNonMimicHandoff" file="/workspace/src/ai_sapiens/ai_sapiens_sim2real/test/test_mode_controller.cpp" line="328" status="run" result="completed" time="0.002" timestamp="2026-09-11T08:00:23.542" classname="ai_sapiens_sim2real.ModeController" />
+    <testcase name="HeartbeatLossWinsOverReleaseAndStopsMimic" file="/workspace/src/ai_sapiens/ai_sapiens_sim2real/test/test_mode_controller.cpp" line="348" status="run" result="completed" time="0.002" timestamp="2026-09-11T08:00:23.544" classname="ai_sapiens_sim2real.ModeController" />
+  </testsuite>
+</testsuites>

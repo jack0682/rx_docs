@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite
+  name="ai_sapiens_sim2real.cppcheck"
+  tests="87"
+  errors="0"
+  failures="0"
+  time="0.001"
+  skipped="87"
+>
+  <testcase
+    name="include/ai_sapiens_sim2real/authority.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/axis_range.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/command_publishers/joint_command_publisher.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/config/authority_config.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/config/config_utils.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/config/mimic_behavior.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/config/root_config.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/config/root_config_validator.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/config/root_sections/selectors_config.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/config/root_sections/state_behaviors_config.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/config/root_sections/state_machine_config.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/config/root_sections/teleop_conditions_config.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/config/sim2real_config.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/control_loop.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/controllers/mode_controller.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/controllers/mode_ros_interface.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/controllers/policy_controller.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/interfaces/command_publisher_base.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/interfaces/controller_base.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/interfaces/sensor_handle_base.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/mode_runtime/authority_runtime.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/mode_runtime/mode_state_machine.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/mode_runtime/operator_command_input_options.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/mode_runtime/operator_command_inputs.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/mode_runtime/realtime_request_gate.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/mode_runtime/startup_gate.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/observation/observation_manager.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/observation/observation_term_cfg.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/observation/observations.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/plugins/teleop_input/radiomaster_pocket_teleop_input_plugin.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/policy/action_pipeline.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/policy/gait_clock.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/policy/mimic_policy_runtime.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/policy/motion_playback.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/policy/motion_reference.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/policy/onnx_inference.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/policy/policy_runtime.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/policy/torso_orientation.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/sensor_handles/api_heartbeat_handle.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/sensor_handles/imu_sensor_handle.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/sensor_handles/joint_states_sensor_handle.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/sensor_handles/teleop_input_handle.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/sensor_handles/twist_command_handle.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/shared_control_data.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/sim2real_node.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/teleop_input/teleop_input_command.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/ai_sapiens_sim2real/teleop_input/teleop_input_plugin_base.hpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/command_publishers/joint_command_publisher.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/config/config_utils.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/config/root_config.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/config/root_config_validator.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/config/root_sections/selectors_config.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/config/root_sections/state_behaviors_config.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/config/root_sections/state_machine_config.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/config/root_sections/teleop_conditions_config.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/config/sim2real_config.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/control_loop.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/controllers/mode_controller.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/controllers/mode_ros_interface.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/controllers/policy_controller.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/main.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/mode_runtime/authority_runtime.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/mode_runtime/mode_state_machine.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/mode_runtime/operator_command_inputs.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/mode_runtime/startup_gate.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/observation/observation_manager.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/observation/observations.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/plugins/teleop_input/radiomaster_pocket_teleop_input_plugin.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/policy/action_pipeline.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/policy/gait_clock.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/policy/mimic_policy_runtime.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/policy/motion_reference.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/policy/onnx_inference.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/policy/policy_runtime.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/sensor_handles/api_heartbeat_handle.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/sensor_handles/imu_sensor_handle.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/sensor_handles/joint_states_sensor_handle.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/sensor_handles/teleop_input_handle.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/sensor_handles/twist_command_handle.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/sim2real_node.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="test/test_axis_range.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="test/test_gait_clock.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="test/test_mode_controller.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="test/test_motion_playback.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="test/test_request_gate.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="test/test_startup_gate.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="test/test_state_machine_config.cpp"
+    classname="ai_sapiens_sim2real.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <system-err>Tests Skipped due to cppcheck 2.13.0 performance issues</system-err>
+</testsuite>

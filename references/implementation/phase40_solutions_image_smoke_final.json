@@ -1,0 +1,41 @@
+{
+  "schema": "rx.solutions-image-smoke.v1",
+  "status": "PASS",
+  "image_id": "sha256:9a598db4badcff4697b4f9b520c3f1d995ff6c6ce1769e5f50e621bab5d5afe2",
+  "os": "linux",
+  "architecture": "arm64",
+  "user": "10001:10001",
+  "read_only_root": true,
+  "cap_drop": [
+    "ALL"
+  ],
+  "devices": [],
+  "startup": {
+    "schema": "rx.solutions-status.v1",
+    "supervisor_instance": null,
+    "phase": "SOFTWARE_READY_UNCOMMISSIONED",
+    "native_packages": 42,
+    "required_own_repositories": [
+      "DynamixelSDK",
+      "ai_sapiens",
+      "ai_worker",
+      "dynamixel_hardware_interface",
+      "open_manipulator"
+    ],
+    "support_profiles": 22,
+    "policy_assets": 11,
+    "physical_qualification": "NOT_PERFORMED",
+    "hardware_processes_started_by_entrypoint": 0,
+    "operator_api_delegation": "NOT_CONNECTED",
+    "source_tree_sha256": "4d90f154eea9d1917506d7255dab21b5c15043fda6924657396102d28ed882ba"
+  },
+  "process_list": "PID                 COMMAND             COMMAND\n2546                python3             python3 /opt/rx/tools/solutions_status.py serve",
+  "sigterm_exit": 0,
+  "tampered_policy_rejected": true,
+  "limitations": [
+    "read-only software diagnostics only",
+    "no automatic Host/driver/BT launch",
+    "no physical qualification or performance guarantee",
+    "operator API delegation not connected"
+  ]
+}

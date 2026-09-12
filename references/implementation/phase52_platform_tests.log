@@ -1,0 +1,21 @@
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+   Compiling rx-protocol-adapter v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-protocol-adapter)
+   Compiling rx-runtime v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-runtime)
+   Compiling rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-api)
+   Compiling rx-host-client v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-host-client)
+   Compiling rx-platformd v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-platformd)
+error[E0063]: missing field `qualification_policy` in initializer of `rx_platformd::config::PackageIntake`
+   --> crates/rx-platformd/tests/composition.rs:566:36
+    |
+566 |     f.config.package_intake = Some(PackageIntake {
+    |                                    ^^^^^^^^^^^^^ missing `qualification_policy`
+
+error[E0063]: missing field `qualification_policy` in initializer of `rx_platformd::config::PackageIntake`
+   --> crates/rx-platformd/tests/composition.rs:723:36
+    |
+723 |     f.config.package_intake = Some(PackageIntake {
+    |                                    ^^^^^^^^^^^^^ missing `qualification_policy`
+
+For more information about this error, try `rustc --explain E0063`.
+error: could not compile `rx-platformd` (test "composition") due to 2 previous errors
+warning: build failed, waiting for other jobs to finish...

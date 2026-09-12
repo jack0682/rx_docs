@@ -1,0 +1,78 @@
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.23s
+     Running unittests src/lib.rs (target/debug/deps/rx_application-edec8a86cfc5ed94)
+
+running 1 test
+test checkpoint_artifact::tests::rejects_a_valid_older_artifact_substituted_into_a_newer_run_view ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/transactions.rs (target/debug/deps/transactions-7ca78902842295b5)
+
+running 57 tests
+test checkpoint_artifact_requires_current_run_scope_and_exact_owned_reference ... ok
+test activation_visits_are_unique_for_the_whole_run_across_parts ... ok
+test changed_intent_under_same_key_is_a_conflict ... ok
+test an_entered_send_with_no_remote_receipt_remains_unknown_and_is_not_reissued ... ok
+test checkpoint_artifact_and_run_projection_commit_with_slot_or_roll_back_together ... ok
+test admission_receipt_is_anchored_to_the_original_control_record_and_survives_later_changes ... ok
+test checkpoint_preparation_loss_and_expiry_never_advance_the_run ... ok
+test a_new_contradictory_native_result_preserves_historical_outcome ... ok
+test changing_evidence_journal_does_not_silently_reset_sequence_history ... ok
+test conflicting_observation_is_committed_as_invalidation_even_though_api_rejects_it ... ok
+test device_generation_change_is_preserved_and_does_not_disappear_on_rejection ... ok
+test checkpoint_commit_rejects_changed_mapping_artifact_and_stale_condition ... ok
+test control_journal_is_atomic_and_audit_sessions_do_not_advance_its_cursor ... ok
+test early_native_evidence_is_reapplied_when_the_receipt_establishes_correlation ... ok
+test direct_state_puts_during_hold_are_captured_at_one_final_transaction_cut ... ok
+test checkpoint_wait_uses_p_time_and_success_cannot_be_committed_after_deadline ... ok
+test evidence_gap_is_not_skipped_and_conflicting_sequence_is_quarantined ... ok
+test checkpoint_proposal_is_not_an_applied_decision_and_commit_response_survives_loss ... ok
+test false_handover_facts_are_retained_and_identity_conflicts_block_release ... ok
+test hold_proves_unsent_work_not_executed_without_releasing_resource ... ok
+test executor_part_and_activation_mutations_preserve_full_request_identity_and_atomic_results ... ok
+test handover_release_is_atomic_and_duplicate_proof_does_not_release_another_owner ... ok
+test late_prepared_receipt_after_pause_does_not_create_an_authorization ... ok
+test maintained_condition_recovery_does_not_revive_an_old_mandate ... ok
+test executor_reconnect_is_idempotent_but_changed_incarnation_revokes_authority ... ok
+test live_execution_snapshot_preserves_the_cut_and_does_not_reuse_aged_maintained_conditions ... ok
+test hold_propagates_to_shared_resources_and_preserves_independent_cells ... ok
+test native_receipt_capture_does_not_stand_in_for_completion_policy ... ok
+test native_metadata_changes_conflict_and_ack_cursor_is_part_of_t2_commit ... ok
+test one_physical_resource_is_reserved_across_cells_not_per_cell_alias ... ok
+test executor_submit_checks_the_whole_envelope_and_recovers_an_immutable_receipt_after_t1_loss ... ok
+test pausing_a_prepared_run_without_arm_does_not_fence_other_cell_work ... ok
+test pending_start_has_a_deadline_and_key_covers_budget_intent ... ok
+test pause_rejects_a_late_arm_acknowledgment_from_start_preparation ... ok
+test part_completion_waits_for_release_and_closes_exhausted_run ... ok
+test pause_after_emit_is_not_cancellation_and_late_correlated_result_is_still_recorded ... ok
+test permit_deadline_cannot_outlive_the_observation_that_supported_it ... ok
+test p_commits_branch_choice_and_rejects_the_untaken_activation ... ok
+test producer_reconnect_requires_current_identity_and_cell_negotiation ... ok
+test resolved_plan_binding_and_digest_cannot_be_substituted_in_cell_configuration ... ok
+test part_completion_requires_only_the_committed_branch_and_its_real_release_proof ... ok
+test prepared_is_not_an_authorization_ack_and_duplicate_receipts_complete_the_right_message ... ok
+test restarting_runtime_preserves_consumption_and_revokes_mandate ... ok
+test reconciliation_requests_are_durable_coalesced_and_cannot_claim_release ... ok
+test stale_observation_and_wrong_executor_do_not_reach_t1 ... ok
+test same_slot_new_key_and_lost_reply_do_not_create_another_operation ... ok
+test process_checkpoint_survives_runtime_restart_without_restoring_execution_authority ... ok
+test role_revocation_is_checked_before_cached_result_lookup ... ok
+test start_requires_all_hosts_and_cannot_be_completed_by_partial_ack ... ok
+test uncommissioned_cell_cannot_start_from_package_presence ... ok
+test unregistered_terminal_cannot_start_even_with_operator_role ... ok
+test t1_failure_rolls_back_slot_resource_permit_and_outbox_together ... ok
+test t2_commits_native_evidence_outcome_and_contiguous_cursor_atomically ... ok
+test pause_commits_reply_fence_and_unsent_sealing_atomically_without_refunding_budget ... ok
+test wait_deadline_and_success_are_decided_by_p_and_cannot_be_reset_by_retries ... ok
+test t2_rollback_and_lost_ack_preserve_exactly_one_recorded_result ... ok
+test resource_release_requires_all_current_handover_facts ... ok
+
+test result: ok. 57 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.60s
+
+   Doc-tests rx_application
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

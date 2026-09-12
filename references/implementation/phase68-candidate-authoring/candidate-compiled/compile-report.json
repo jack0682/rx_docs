@@ -1,0 +1,40 @@
+{
+  "authoring_input": {
+    "binding_revision": "1",
+    "bindings_digest": "91b8ec4e0c2f25e7c88e541d472b5bc45099724b6e17bc2f0c5562e16498b1c1",
+    "catalog_digest": "61dbc435278233601825002b1567261fb87764c5dcdddef536b2bcfd45d5a926",
+    "cell": "cell/demo",
+    "device_sources": {
+      "load": {
+        "action_digest": "24a25df5e3d80ee32225c1b81adf00f80b9be12536aab3d54d70d56fd1a4eda4",
+        "binding": "robot/supply",
+        "plan": {
+          "id": "99880a3a-83bc-48a8-ae63-d6d7def9bb11",
+          "plan_digest": "0f87e36f76afd6fd391459cc6d92aa1bf9a21ceff5ec17bf87843a1b328e77bf",
+          "revision": "2"
+        },
+        "step_digest": "8fc4f43600f8c6b408e0e32f288978869cd6d1e3fdc3e1b0dcfe924b45ea73a9"
+      }
+    },
+    "draft": "d4b59fea-8e5c-4b86-a1a3-35db7abb8cd9",
+    "source_document_digest": "ba0f42a24c9c4ed26b171b134acb51605374fe872e994e52b00e2191d46ed198",
+    "source_revision": "1"
+  },
+  "bt_xml_digest": "c99fa510c61c1bcc757c7486d98f57cbaec42a486d9fe59b480d4355f49dd8da",
+  "limitations": [
+    "RX custom BT executor requires the matching runtime and validated P client",
+    "P eligibility/checkpoint integration and profile qualification are separate",
+    "No device or process is executed by compilation"
+  ],
+  "required_executor_nodes": [
+    "RXSequence",
+    "RXParallelAll",
+    "RXBranch",
+    "RXOperation",
+    "RXWait",
+    "RXIntervention"
+  ],
+  "resolved_digest": "6c3e3d5691cf41ee9fac37f3fcbab72f0bb9357a4c1fa25a1722e85d120e5543",
+  "source_digest": "ed2fe3ee0a79013dd99a10647c5dde07a2d8fcc933d81eacccc229eb81aba1c4",
+  "status": "COMPILED_NOT_QUALIFIED"
+}

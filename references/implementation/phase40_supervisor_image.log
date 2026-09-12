@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/test_supervisor_image.py", line 41, in <module>
+    stopped=state_from_volume();assert stopped['stop_requested'] and stopped['records']['status']['phase']=='EXITED'
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/test_supervisor_image.py", line 33, in state_from_volume
+    return json.loads(run('docker','run','--rm','--network','none','--read-only','--user','10001:10001','-v',volume+':/state:ro','--entrypoint','/usr/bin/python3',a.image,'-c',code))['value']
+                      ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/test_supervisor_image.py", line 6, in run
+    def run(*args):return subprocess.run(args,check=True,capture_output=True,text=True).stdout.strip()
+                          ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '('docker', 'run', '--rm', '--network', 'none', '--read-only', '--user', '10001:10001', '-v', 'rx-supervisor-data-796ade0976fc:/state:ro', '--entrypoint', '/usr/bin/python3', 'rx-solutions:runtime-draft', '-c', 'import sqlite3,json; c=sqlite3.connect(\'file:/state/managed/supervisor.db?mode=ro\',uri=True); print(c.execute("select document from entities where key=\'supervisor/state\'").fetchone()[0].decode())')' returned non-zero exit status 1.

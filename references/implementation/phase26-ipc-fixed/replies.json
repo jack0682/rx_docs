@@ -1,0 +1,97 @@
+{
+  "one_request_across_ticks_and_latched_halt": [
+    {
+      "fault": null,
+      "requests": [],
+      "schema": "rx.bt-reply.v1",
+      "sequence": "1",
+      "state": "READY"
+    },
+    {
+      "fault": null,
+      "requests": [
+        {
+          "argument": "ready",
+          "identity": {
+            "epoch": "1",
+            "executor_session": "01a08de2-99dd-7169-b88f-600d0510ce88",
+            "resolved_digest": "5acf12378ec2618195a77e1a2d6ea9c86dc6673b9bb4dbbff01556ac7b0eeaf8",
+            "run": "01a08de2-99c0-72b4-87ac-939d2789f9e4",
+            "visit": "1"
+          },
+          "kind": "BEGIN_WAIT",
+          "node": "node/10a7fc2ea31451b764e472aebd1da8222df160983dca118288d7829c53cb92ba",
+          "timeout_ns": "1000"
+        }
+      ],
+      "schema": "rx.bt-reply.v1",
+      "sequence": "2",
+      "state": "RUNNING"
+    },
+    {
+      "fault": null,
+      "requests": [],
+      "schema": "rx.bt-reply.v1",
+      "sequence": "3",
+      "state": "RUNNING"
+    },
+    {
+      "fault": null,
+      "requests": [
+        {
+          "argument": "",
+          "identity": {
+            "epoch": "1",
+            "executor_session": "01a08de2-99dd-7169-b88f-600d0510ce88",
+            "resolved_digest": "5acf12378ec2618195a77e1a2d6ea9c86dc6673b9bb4dbbff01556ac7b0eeaf8",
+            "run": "01a08de2-99c0-72b4-87ac-939d2789f9e4",
+            "visit": "1"
+          },
+          "kind": "PAUSE_EXECUTOR",
+          "node": "node/93c2162eb29cc7df3fb7a8dff69e68c46408bb00d5cf73afc3fb6cdebce3a4cd",
+          "timeout_ns": "0"
+        }
+      ],
+      "schema": "rx.bt-reply.v1",
+      "sequence": "4",
+      "state": "HALTED"
+    },
+    {
+      "fault": "engine not running",
+      "requests": [],
+      "schema": "rx.bt-reply.v1",
+      "sequence": "5",
+      "state": "FAULT"
+    }
+  ],
+  "expired_frame_waits_for_fresh_data": [
+    {
+      "fault": null,
+      "requests": [],
+      "schema": "rx.bt-reply.v1",
+      "sequence": "1",
+      "state": "READY"
+    },
+    {
+      "fault": "[json.exception.parse_error.101] parse error at line 1, column 7: syntax error while parsing value - invalid string: missing closing quote; last read: '\"10000'",
+      "requests": [
+        {
+          "argument": "",
+          "identity": {
+            "epoch": "1",
+            "executor_session": "01a08de2-99dd-7169-b88f-600d0510ce88",
+            "resolved_digest": "5acf12378ec2618195a77e1a2d6ea9c86dc6673b9bb4dbbff01556ac7b0eeaf8",
+            "run": "01a08de2-99c0-72b4-87ac-939d2789f9e4",
+            "visit": "1"
+          },
+          "kind": "PAUSE_EXECUTOR",
+          "node": "node/93c2162eb29cc7df3fb7a8dff69e68c46408bb00d5cf73afc3fb6cdebce3a4cd",
+          "timeout_ns": "0"
+        }
+      ],
+      "schema": "rx.bt-reply.v1",
+      "sequence": "2",
+      "state": "FAULT"
+    }
+  ]
+}

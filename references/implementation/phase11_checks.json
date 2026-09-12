@@ -1,0 +1,80 @@
+{
+  "schema": "rx.implementation-evidence.v1",
+  "phase": "11-automatic-delivery",
+  "checked_at": "2026-09-10T14:36:14.201155+00:00",
+  "status": "PASS_FOR_REPORTED_SCOPE",
+  "tests": {
+    "platform": {
+      "passed": 92,
+      "failed": 0,
+      "ignored": 3
+    },
+    "host": {
+      "passed": 17,
+      "failed": 0,
+      "ignored": 0
+    }
+  },
+  "separate_process_e2e": {
+    "manual_operation": "PASS",
+    "automatic_dispatcher": "PASS; post-native authorize reply loss, two authorization calls/two effects, automatic fence",
+    "evidence_publisher": "PASS; 131 seeded records, ack loss/restart"
+  },
+  "clippy": "both passed",
+  "normative_baselines": "8 files unchanged",
+  "known_incomplete_boundaries": [
+    "Dispatcher requires preauthenticated registered Host links; fresh grant/rebind/restart management remains incomplete.",
+    "Part/activation, physical handover proof/release and completion are explicit executor steps, not a complete autonomous workflow service.",
+    "Attention is not yet a complete recovery case/procedure UI. Reconciliation and early-evidence lookup still use scans.",
+    "Large journal delivery needs Publisher; Reconcile remains initial prefix only.",
+    "Public control-journal wire mapping/checkpoint, packages/BT/editor, own-platform image builds, deployment/restore and acceptance remain incomplete.",
+    "No physical hardware or customer commissioning verified."
+  ],
+  "source_sha256": {
+    "rx-platform/Cargo.lock": "d02a6f95f7c8d0beaefad53e3feaf014213926c76183ebae3e258d8263d3a57a",
+    "rx-platform/crates/rx-application/CONTROL_JOURNAL.md": "80f371a09eff731b3041e691ceadc6deb0c9c6fba36410aec4c9f236ac9e7c05",
+    "rx-platform/crates/rx-application/Cargo.toml": "ff8a31a8b6cca59ec90fb78fbbbd27f6a3e01a071ba4fe8ec2c814495541e400",
+    "rx-platform/crates/rx-application/README.md": "c3db09c716f83239faea30829281ab253c7618251883edc56b19e4c9b2751f11",
+    "rx-platform/crates/rx-application/src/control_journal.rs": "908bee35a08e310de0b4408a7e29a56fb08f740b4c5347299c779fb39b8c9c60",
+    "rx-platform/crates/rx-application/src/engine/access.rs": "d13e29b38accf8695d5ae6cfb30ca367761ac9f47fc28ffb68d59443d2412800",
+    "rx-platform/crates/rx-application/src/engine/admission.rs": "8f32ce8e9877cfd3a26c605cc6cc26e35691012efbc12b7faba01fe76ee142a9",
+    "rx-platform/crates/rx-application/src/engine/configuration.rs": "c2d49d0826f4b339ffba726f4db3e1829af62292e318a9ec2a58b61a611f0f31",
+    "rx-platform/crates/rx-application/src/engine/delivery.rs": "aa6cf2ae969c2678fda7d4e05be909530ff054b031a63bc3114aaa66bf2e555a",
+    "rx-platform/crates/rx-application/src/engine/dispatch.rs": "6d02516752f1a73b66cfb0e219d4b8068076f0f82ddac4d9703abb2a2a6a6cd9",
+    "rx-platform/crates/rx-application/src/engine/evidence.rs": "c6540f3eba1086cab32f1c1cd9d0c69141bb9d0219dd0f96bcba6843690337bf",
+    "rx-platform/crates/rx-application/src/engine/handover.rs": "532d410b02adc8077f7a917eb56ce2acc7e022f43c545f258fdc16e1d9c70472",
+    "rx-platform/crates/rx-application/src/engine/identity.rs": "b5dba5fbfe11378fc1f698594845825a704b6786e63336ee17e8b5c7d0ea0b00",
+    "rx-platform/crates/rx-application/src/engine/invalidation.rs": "5985c446e7f93f7a74e63cae089ab1835b1fa555561610e14814759b73482bbf",
+    "rx-platform/crates/rx-application/src/engine/mod.rs": "0548dd637c7d8d9513fdd74a239d5a520cc19f027e1e672e6c0fa135365ca0ca",
+    "rx-platform/crates/rx-application/src/engine/observation.rs": "a2627ff702922fecab6d6df4ab0598ffd38444dd11497c3b37d38633f300503b",
+    "rx-platform/crates/rx-application/src/engine/producer.rs": "915fdc0dc192caf7c1a51971e807f17c90484e73946d5120591030a5812e7a0c",
+    "rx-platform/crates/rx-application/src/engine/queries.rs": "b09f30f3c01d73f8c82e49fd9c60683e17fa24276b6c4114b8a86203ade91a59",
+    "rx-platform/crates/rx-application/src/engine/requests.rs": "3cefa11722873bb7618f23be8ef83b7cdd8f8e88d5728701bb5d7094091edfc9",
+    "rx-platform/crates/rx-application/src/engine/workflow.rs": "c3d6202a8a377e8c321b5438ee187fdbb77afb4dcb034b832bbf872309dbfb3e",
+    "rx-platform/crates/rx-application/src/lib.rs": "7d7652a394ba0bd573f5f4fb3ad102197993a144c0c3c6c0e8545d871fe78c98",
+    "rx-platform/crates/rx-application/src/model.rs": "c271e33fe06bf1f042268bdc5a03b0b4933c4cc693d12bcbf8aba859f045769e",
+    "rx-platform/crates/rx-application/src/persistence.rs": "69de1633506a9d74d944e5c6b7214e7f4fb704f98893cbafd3fe966a8d9c90ee",
+    "rx-platform/crates/rx-application/src/projection.rs": "f3e26e1f836e300be8fd294fa452e36b9cbff92ab387ad19b2597dab3e29ba95",
+    "rx-platform/crates/rx-application/tests/transactions.rs": "299981f3bd810766a5b127803251a5c2dea35c58b4f6b4242886324db86f3057",
+    "rx-platform/crates/rx-host-client/Cargo.toml": "947d7d3520f17300af63f445b5df3d57be35a6a937c1ad983cb18041fa50b559",
+    "rx-platform/crates/rx-host-client/DELIVERY.md": "827e67b51f61cb99d7a54265b111b7c9b8421193d9e77786ddcc43767f7cdd14",
+    "rx-platform/crates/rx-host-client/README.md": "f43bafbb9aa8d5df8be7d46a19c4e48dc0e9ac1a7753606c56daf44b5e775b55",
+    "rx-platform/crates/rx-host-client/src/delivery.rs": "59f4313c0d8066e8ad6808996f13520419aaf0d160285a9049fb65f66c72bc07",
+    "rx-platform/crates/rx-host-client/src/lib.rs": "dca01092f6124020c66fb52d72215242551c55855cd2e31bc6923b5ae2d75cb7",
+    "rx-platform/crates/rx-host-client/tests/network_e2e.rs": "2c7648ab585ddec1dd8f7b610373efe409a336f3728bd6d7b51072438a201e3a",
+    "rx-platform/crates/rx-ports/Cargo.toml": "96a4eb415a4285e16c0a888ff0818387d5c174a878af2287a205d450ef8190ac",
+    "rx-platform/crates/rx-ports/src/lib.rs": "73c170e6d860f08d63de9d33866d0ed1169057a32dde5a51e1b25952a9568af8",
+    "rx-platform/crates/rx-runtime/Cargo.toml": "2c0af178dc6d5213d8f17679e107ec5b9a1ac06925bf6c31ccf6c94907cd7425",
+    "rx-platform/crates/rx-runtime/src/application.rs": "cada597bf97cad57d86740e4bd4d19579929c08c88e49ec5033c5f7cf23b6c49",
+    "rx-platform/crates/rx-runtime/src/lib.rs": "b11424114f2f9bd6eb5860c8c82a413664e7edb3f2ffc2d9e1ef13ba1601a588",
+    "rx-platform/crates/rx-runtime/src/writer.rs": "9c5fb03614236a8d73f8f8e255c843716c3c72f6c316941bb1f64ee8e372cdea",
+    "rx-platform/crates/rx-runtime/tests/writer.rs": "44cc15ff5bdd03a01b999c948205f481f0dabd8be2f64d093bc09628b78b4457",
+    "rx-platform/crates/rx-storage/Cargo.toml": "0efa266a888124fa2788ecdfb71c6e81865272a408cabfcdb07bd08b3277cd16",
+    "rx-platform/crates/rx-storage/migrations/0001.sql": "47ef12435ff7c5beecc4cfd76681d8ffe1850a5a31076e570dcabfacf83a51fb",
+    "rx-platform/crates/rx-storage/migrations/0002.sql": "5b05f5eb25c8f991f0187f4730deb66bf74eb541ca9e7e5028a336be74999df0",
+    "rx-platform/crates/rx-storage/migrations/0003.sql": "d5c3ad90b12ad26356412ecdb4847e08bae39ccbf6f86f64f153012ca9d87e6c",
+    "rx-platform/crates/rx-storage/src/lib.rs": "64e064c363e2b88c094cad39638af3a967d400615afbd6966ae0b2aebbef4e39",
+    "rx-platform/crates/rx-storage/tests/atomicity.rs": "93d010d2fdbd37d9e2176cda774d7cd4c12325b344a82dd5f2e08de68d5c36e0",
+    "rx-solutions/sdk/source-lock.json": "81d4495711f36044758ce62dc57a79af737a153c6a423a79ad1ae66dba26afa0"
+  }
+}

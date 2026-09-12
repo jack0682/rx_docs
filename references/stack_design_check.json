@@ -1,0 +1,120 @@
+{
+  "checked_utc": "2026-09-09T13:32:04.122360+00:00",
+  "checks": [
+    {
+      "path": "README.md",
+      "broken_links": [],
+      "missing_footnotes": [],
+      "balanced_fences": true,
+      "sha256": "a675098983ac98b969293fef0e6a1687088710c3e0e792c51c500691e0668a25"
+    },
+    {
+      "path": "AGENTS.md",
+      "broken_links": [],
+      "missing_footnotes": [],
+      "balanced_fences": true,
+      "sha256": "a24965b7943a83659fe69ac721a7a95a344a5658317e529a9edc392c9bd8ccbd"
+    },
+    {
+      "path": "docs/00_design_roadmap.md",
+      "broken_links": [],
+      "missing_footnotes": [],
+      "balanced_fences": true,
+      "sha256": "bab622e77e569ed14816c1ab234c5b1695cf94c0d6860a4ad88be6fb16791fd4"
+    },
+    {
+      "path": "docs/01_product_definition.md",
+      "broken_links": [],
+      "missing_footnotes": [],
+      "balanced_fences": true,
+      "sha256": "9e3945d6311ee0b36861a08455e9fd44d66ec5ddc6ea94a399c0c3f32f29e9dc"
+    },
+    {
+      "path": "docs/02_value_and_business.md",
+      "broken_links": [],
+      "missing_footnotes": [],
+      "balanced_fences": true,
+      "sha256": "05309bd200896ec0c4dd2d491fccc79a2c8f4104a0ebdefe4f51284b77120fcf"
+    },
+    {
+      "path": "docs/03_product_scope.md",
+      "broken_links": [],
+      "missing_footnotes": [],
+      "balanced_fences": true,
+      "sha256": "b6adf0f61a897f90e5becdf932accbaeb2c02ba40e7d4d6366a875740bd64065"
+    },
+    {
+      "path": "docs/04_user_workflows.md",
+      "broken_links": [],
+      "missing_footnotes": [],
+      "balanced_fences": true,
+      "sha256": "70faf7f9c94e50beaf644b8656513782117c88f87ed0cfb81576a26921cc7934"
+    },
+    {
+      "path": "docs/05_software_architecture.md",
+      "broken_links": [],
+      "missing_footnotes": [],
+      "balanced_fences": true,
+      "sha256": "dfc63d5ba1693aee45ca219d726afcbe62587892d01fe3d81cda26990474ecc3"
+    },
+    {
+      "path": "docs/06_contracts_and_reliability.md",
+      "broken_links": [],
+      "missing_footnotes": [],
+      "balanced_fences": true,
+      "sha256": "29d451f1c20ad8372bb58e56969c609e5e17ae3a2c4985cca2f9129b55ab201b"
+    },
+    {
+      "path": "docs/07_future_implementation_and_validation.md",
+      "broken_links": [],
+      "missing_footnotes": [],
+      "balanced_fences": true,
+      "sha256": "a21a1156d574e47694dcc1053087483e88fd16721493fd36cc52f439bf4b734f"
+    },
+    {
+      "path": "docs/08_delivery_and_maintenance.md",
+      "broken_links": [],
+      "missing_footnotes": [],
+      "balanced_fences": true,
+      "sha256": "298964a523ca2d44d667046ebb602e5b36b37010b8bc70ba738908c63fbee56e"
+    },
+    {
+      "path": "docs/09_decisions_and_sources.md",
+      "broken_links": [],
+      "missing_footnotes": [],
+      "balanced_fences": true,
+      "sha256": "984c6da32e0467d584a51e828b80e8cc25fa1ceb821dca1da721348eea0e27b2"
+    },
+    {
+      "path": "docs/10_structure_proposal.md",
+      "broken_links": [],
+      "missing_footnotes": [],
+      "balanced_fences": true,
+      "sha256": "d8f76939a0c85e2cf329946e94999fde14a52cbd2acdc1fcd52c6ffb750abe90"
+    },
+    {
+      "path": "docs/11_first_cell_contract.md",
+      "broken_links": [],
+      "missing_footnotes": [],
+      "balanced_fences": true,
+      "sha256": "dac12ef3d5ba3b639b7850a63588053d98c5551101d3af53a72cce7cad384f68"
+    },
+    {
+      "path": "docs/12_stack_and_container_proposal.md",
+      "broken_links": [],
+      "missing_footnotes": [],
+      "balanced_fences": true,
+      "sha256": "9567aace0249415ef7f1bb55c198b4c0b4399bc1c0a42706c5265d23fe3b6251"
+    },
+    {
+      "path": "references/stack_research_2026-09-09.md",
+      "broken_links": [],
+      "missing_footnotes": [],
+      "balanced_fences": true,
+      "sha256": "53cc0fec73b1f8bf65594488665aed055b9b94dd510b8eb113fa8e6199b071aa"
+    }
+  ],
+  "reader_review": "Fresh-reader review passed after equalizing language comparison costs and making BT restart identity recovery explicit. No code, container build or hardware verification was performed.",
+  "git_initialized": false,
+  "code_or_container_files": []
+}

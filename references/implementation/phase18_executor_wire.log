@@ -1,0 +1,10 @@
+   Compiling rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-api)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.27s
+     Running tests/executor_ingress.rs (target/debug/deps/executor_ingress-d0ad422294dd99e4)
+
+running 2 tests
+test executor_run_reads_require_both_negotiations_and_the_same_registered_certificate ... ok
+test remote_executor_allocates_one_part_and_activation_after_a_simulated_operator_start ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.10s
+

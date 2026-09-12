@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "draft": "a9719175-f85a-4387-a002-e5345ecdf409",
+  "final_revision": "6",
+  "checks": [
+    "incomplete draft save",
+    "visual operation insertion",
+    "same-key recovery after lost commit response and reload",
+    "concurrent update preserves local edits",
+    "server comparison",
+    "buffers survive tab navigation",
+    "JSON and condition edits applied atomically",
+    "history preserved",
+    "historical revision comparison",
+    "copy gets a separate draft identity",
+    "installed cell unchanged",
+    "mobile overflow"
+  ]
+}

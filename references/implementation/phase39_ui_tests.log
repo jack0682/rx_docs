@@ -1,0 +1,13 @@
+
+> @rx/operator@0.1.0 test
+> vitest run
+
+
+ RUN  v4.1.11 /Users/ojaehong/RX_automation/rx_ws/rx-solutions/apps/operator
+
+
+ Test Files  3 passed (3)
+      Tests  8 passed (8)
+   Start at  21:07:12
+   Duration  124ms (transform 54ms, setup 0ms, import 136ms, tests 9ms, environment 0ms)
+

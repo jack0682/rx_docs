@@ -1,0 +1,25 @@
+   Compiling rx-host v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-host)
+warning: unused imports: `BTreeMap` and `BTreeSet`
+ --> runtime/rx-host/tests/melsec.rs:4:19
+  |
+4 |     collections::{BTreeMap, BTreeSet},
+  |                   ^^^^^^^^  ^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: `rx-host` (test "melsec") generated 1 warning (run `cargo fix --test "melsec" -p rx-host` to apply 1 suggestion)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3.89s
+     Running tests/melsec.rs (target/debug/deps/melsec-c202886690e46a7e)
+
+running 8 tests
+test new_or_replaced_journal_and_mismatched_profile_are_rejected_without_native_io ... ok
+test valid_support_does_not_imply_drop_permission_and_protection_does_not_release_chuck ... ok
+test profile_and_intent_scope_fail_before_native_writes ... ok
+test already_satisfied_state_records_evidence_without_a_native_write ... ok
+test ack_is_pending_and_only_later_independent_sensor_observation_captures ... ok
+test lost_reply_and_new_process_never_resubmit_or_clear_pending ... ok
+test publication_generation_regression_stale_and_inconsistent_images_latch ... ok
+test captured_original_session_survives_restart_but_uncaptured_ack_does_not ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+

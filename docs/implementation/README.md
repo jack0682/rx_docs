@@ -24,7 +24,7 @@
 
 ## 현재 상태
 
-구현 중이다. phase70에서 장비 변경 후보를 포함하는 공정의 소프트웨어 검토 요청·서명 보고서 접수·독립 승인을 연결했다. 현재 후보와 장비 원본·승인·구성·영향을 다시 검증하고, 장비 승인 철회 시 공정 승인의 현재성을 잃게 한다. 플랫폼298개·솔루션153개 Rust 시험과 UI25개, 새 API 통합 및 기존 공정 검토 브라우저 회귀를 확인했다. 실제 Host 설정 변경과 셀 적용·qualification은 아직 연결하지 않았으며 새 후보의 process-change는 거부한다. phase70에서는 이미지를 다시 빌드하지 않았다.
+구현 중이다. phase71에서 승인된 장비 후보 공정을 변경 제안·독립 영향 검토·스테이징으로 연결하고, Host별 Intent·조건·서명 패키지 및 다른 영향 셀 요구를 산출한다. 제품 Host CLI는 현재/제안 기동 설정과 실제 JTC 패키지를 읽기 전용으로 대조한다. 실제 Host 준비·설치 교체·P 적용·qualification은 아직 차단한다. JTC 운전 제공자는 미연결이며 설정 검사 성공이 운전 가능을 뜻하지 않는다. 최신 검증 범위는 phase71 기록을 따른다.
 
 ROBOTIS position JTC의 Rust NativeAdapter는 trajectory 원본·controller session·최종 허가 유효기간 검사, 송신 전 영속 기록, 원래 UUID 결과 조회, 분쟁 보존과 child 종료 확인을 제공한다. S가 profile에 결합한 결과 대응표를 생성하고 P는 제조사 비의존 데이터로 성공·실패·취소를 판정한다. Template/Site에서 profile·허용 Intent·결과표와 공통 작업 선언을 작성하는 서명 패키지 도구, Host의 JTC_PACKAGE 검사·metadata 초기화, P의 선언 반입·보관/API/화면까지 연결했다. 제품용 Authority/lifecycle 제공자가 없어 JTC run은 거부한다. 제조사 검증·장비 검토 승인과 실제 셀 구성 변경, controller 교체 차단 및 물리 검증은 남아 있다.
 
@@ -41,6 +41,8 @@ application outbox→Host→T2→자원 인계→두 소재 시도 완료, 로�
 - [장비 패키지 소프트웨어 검증·독립 승인 API](https://github.com/jack0682/rx-platform/blob/codex/initial-draft/crates/rx-application/DEVICE_REVIEW.md)
 - [장비 소프트웨어 검토·승인 화면](https://github.com/jack0682/rx-solutions/blob/codex/initial-draft/apps/operator/DEVICE_REVIEW_UI.md)
 - [승인된 장비 작업의 연결 변경안·영향 검토](https://github.com/jack0682/rx-platform/blob/codex/initial-draft/crates/rx-application/DEVICE_BINDING_PLAN.md)
+- [장비 변경 계획과 Host별 요구](https://github.com/jack0682/rx-platform/blob/codex/initial-draft/crates/rx-application/DEVICE_CHANGE_PLAN.md)
+- [Host 기동 설정 비교](https://github.com/jack0682/rx-solutions/blob/codex/initial-draft/runtime/rx-host/HOST_BINDING_INSPECTION.md)
 - [장비 후보 공정의 현재 원본 검토·독립 승인](https://github.com/jack0682/rx-platform/blob/codex/initial-draft/crates/rx-application/DEVICE_PROCESS_REVIEW.md)
 - [장비 변경 후보의 공정 작성·컴파일 출처 연결](https://github.com/jack0682/rx-platform/blob/codex/initial-draft/crates/rx-application/DEVICE_PLAN_AUTHORING.md)
 - [장비 Template/Site 작성·서명·검사 도구](https://github.com/jack0682/rx-solutions/blob/codex/initial-draft/runtime/rx-device-package/README.md)

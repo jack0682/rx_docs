@@ -1,0 +1,11 @@
+   Compiling rx-host v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-host)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.28s
+     Running tests/ros_process.rs (target/debug/deps/ros_process-fe54dbbb8ee36a8b)
+
+running 3 tests
+test executable_pin_and_configuration_are_checked_before_spawn ... ok
+test owned_executable_copy_and_bounded_pipes_preserve_context_and_close_without_kill ... ok
+test timeout_oversize_and_wrong_instance_permanently_fault_the_pipe ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.17s
+

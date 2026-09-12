@@ -1,0 +1,14 @@
+{
+  "schema": "rx.host-binding-inspection.v1",
+  "plan_digest": "c763471103342231d39b5320367cb8516698153f021c15439990b453d4730c60",
+  "host": "host/sim",
+  "current_installation_identity": "fe5d0cb004ffd204d6fdd336302f75a5a04c24c6b0c4ba3e0e110f15d856073b",
+  "proposed_installation_identity": "188bcafdebdd293aa6271d1e175a0382503773eba5688f4fae8c418fe03ba1a4",
+  "proposed_bindings_digest": "e5e4499d29c1b54414f33bfd351f5e887f91f86c93c4c32643efb0e87327b23c",
+  "software_matches": true,
+  "issues": [],
+  "runtime_provider_available": false,
+  "installation_changed": false,
+  "activation_authorized": false,
+  "native_processes_started": "0"
+}

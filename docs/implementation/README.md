@@ -20,21 +20,20 @@
 5. 자사 스택 lock·연동 경계, 두 이미지, 기동/종료/배포/복원 도구.
 6. 계약·프로세스·UI·복원 시험, 실제 지원 범위/미결 현장 입력 감사.
 
-순서는 구현상의 의존 순서다. 후반 항목을 목표에서 제외하지 않는다. 완료는 `requirements.md` 전체와 실제 검증 증거로 감사한다.
+순서는 구현상의 의존 순서다. 후반 항목을 목표에서 제외하지 않는다. 전체 제품의 완료는 `requirements.md` 전체와 실제 검증 증거로 감사한다. 이번 초안 종료는 [마감 감사](draft_closure_audit.md)의 인계 조건으로 판정한다.
 
-## 현재 상태
+## 현재 인계 상태
 
-phase80에서는 S 제품 실행파일에 원장을 바꾸지 않는 오프라인 복구 점검을 연결했다. 실제 미완료 E 원장 두 번 조회, 원본 파일8개 불변, P/H/native 무변경과 기존 두 컨테이너 소재2개 회귀를 검증했다. 손상된 WAL을 무시해 미완료 기록이 없는 것처럼 보이던 결함도 실제 반례로 수정했다. S 전체259개·Linux CLI/WAL 검사와 정적 검사가 통과했으며 새 등록·자원 처분·명시 재개는 후속이다. [phase80 증거](../../references/implementation/phase80_checks.json).
+**2026-09-13, 소프트웨어 구현 초안 v0.1을 마감했다.** 사용자 지시에 따라 추가 고도화를 중단하고, 검증된 phase80 코드·이미지·증거와 미결을 고정했다. 실물 운전·고객 납품 완료를 뜻하지 않는다.
 
-phase79까지 구현 중이다. 관리자 승인에 따른 Host 복구 조회 연결을 실제 API/브라우저로 검증했고, 원래 미확정 작업의 native 효과1회·결과 조회·전체 evidence 전달과 제한 보존을 별도 fixture로 확인했다. native 성공을 회수해도 후조건 연속성이 없으면 전체 작업은 UNKNOWN/NONE으로 유지한다. 실제 전송 설정 누락과 UI CSP probe를 수정했으며 P390개·S247개·UI49개 및 최신 두 컨테이너 소재2개 회귀를 통과했다. 운전 등록 rebind·새 자격/명시 재개·전체 복원·실물 지원은 후속이다. [phase79 증거](../../references/implementation/phase79_checks.json).
+- [초안 인계](draft_handoff.md): 무엇이 구현/검증됐는지, 고정 코드·이미지, 재현 방법과 종료 한계.
+- [핵심 미결](critical_open_items.md): Authority Provider를 우선으로 한 8개 후속 결정과 완료 조건.
+- [마감 감사](draft_closure_audit.md): 종료 조건과 제품 요구 R01–R30의 인계 상태.
+- [마감 manifest](../../references/draft_closure/closure_manifest.json): source/image/hash·마지막 모의 인수·별도 WIP 위치.
 
-구현 중이다. phase77에서 실제 두 제품 이미지·두 운전 컨테이너의 새 설치 → 서명 공정 반입/독립 역할 승인 → 구성 적용/재검증/자격 활성화 → 등록 단말 UI 시작 → 소재2개/작업2개 완료·인계 → 동일 실행기 Idle 복귀 → 협력 종료를 FILE_SIMULATION으로 검증했다. P 기록과 Host의 별도 파일 동작 원장을 대조했고, StartRun 응답 유실 뒤 같은 요청을 회수했다. S supervisor가 status·Host·Executor를 직접 기동하고 역순으로 종료했으며 각 guarded child의 exit0와 동일 instance/PID/원문 digest의 STOPPED가 일치했다. P 전체342개·S 전체245개, Linux supervisor27개·별도 Host/상태/실행기 경계와 양쪽 정적 검사가 통과했다. 공개 서명 보고서와 참조 자료56개도 원문·hash로 보존한다. P의 종료 코드2는 미설정 셀 차단 시험/Host fence의 잔여 attention이며 전체 현장 종료 성공을 뜻하지 않는다. 실물 셀은 NOT_COMMISSIONED다. 다음 우선순위는 실제 P/Host 재시작 후 제한을 보존한 재연결·명시 복구/재개, 설치 교체·복원이며 R01–R30의 미완료 범위를 유지한다. 상세 범위는 [phase77 기록](../../references/implementation/phase77_checks.json)에 있다.
+마지막 새 설치 인수는 두 제품 컨테이너의 서명/승인·UI 시작/응답 유실 회수·소재2/effects2·동일 E Idle·협력 종료를 통과했다. P exit2 잔여 attention을 보존한다. 기존 검증은 P390/S259/UI49와 Linux/WAL 경계 시험이며, 실물 셀은 NOT_COMMISSIONED다. 전체 제품 요구는 PARTIAL26·OPEN3·FIELD_BLOCKED1을 유지한다.
 
-ROBOTIS position JTC의 Rust NativeAdapter는 trajectory 원본·controller session·최종 허가 유효기간 검사, 송신 전 영속 기록, 원래 UUID 결과 조회, 분쟁 보존과 child 종료 확인을 제공한다. S가 profile에 결합한 결과 대응표를 생성하고 P는 제조사 비의존 데이터로 성공·실패·취소를 판정한다. Template/Site에서 profile·허용 Intent·결과표와 공통 작업 선언을 작성하는 서명 패키지 도구, Host의 JTC_PACKAGE 검사·metadata 초기화, P의 선언 반입·보관/API/화면까지 연결했다. 제품용 Authority/lifecycle 제공자가 없어 JTC run은 거부한다. 제조사 검증·장비 검토 승인과 실제 셀 구성 변경, controller 교체 차단 및 물리 검증은 남아 있다.
-
-phase78에서는 P만 같은 저장소로 재시작한 뒤 유휴 Host의 증거 세션을 회복했다. 이전 이미지에서 새 P가 로그인 요청을 처리해도 H producer가 옛 세션에 머무는 실패를 실제 재현했고, 수정 이미지에서는 같은 H instance/boot/journal로 새 session·cell 협상과 추가 빈 요청2회의 실제 처리를 확인했다. 기존 operating HostRegistration과 제한은 보존하며 native effects/evidence와 새 Run은0이다. P 전체350개·S 전체247개 및 정적 검사, 두 컨테이너의 설치→승인→소재2 처리→협력 종료 회귀도 통과했다. source 연속성·운전 등록 rebind/자격 복원은 이 결과에 포함되지 않는다. 빈 probe의 현재 감사 기록 비용과 장기 보존/부하 한계도 미완료로 기록했다. [phase78 증거](../../references/implementation/phase78_checks.json).
-
-application outbox→Host→T2→자원 인계→두 소재 시도 완료, 로컬 계정/API·운영 화면과 별도 Host 증거 전송을 연결했다. Host의 인증된 상태 조회·초기 등록·사용권 갱신도 연결했으며, 동일 boot의 원장 교체를 거부한다. 연결 등록은 장비 조건의 충족이나 운전 허가를 만들지 않는다. 공개 제어 사건의 전체 wire 매핑, 자동 운영 서비스·공정 편집/BT·복구 전체·제품 배포·자사 스택 지원은 아직 미완료다. 각 변경과 시험의 범위는 `progress.md`에 기록한다. 개발 도구는 workspace `.tools` 아래에 설치해 기존 사용자 shell 설정을 변경하지 않는다.
+phase81의 미검증 조사 처분 코드는 두 코드 저장소의 `codex/investigation-wip`에 보존하고 초안에서 제외했다. 별도 지시 없이 다시 고도화를 이어가지 않는다. 아래는 초안에 존재하는 모듈의 세부 참고다. 각 모듈 문서의 전체 목표가 구현 완료됐다는 뜻은 아니다.
 
 - [로컬 서비스와 HTTP 경계](https://github.com/jack0682/rx-platform/blob/codex/initial-draft/crates/rx-api/README.md)
 - [운영 앱과 브라우저 검증 방법](https://github.com/jack0682/rx-solutions/blob/codex/initial-draft/apps/operator/README.md)

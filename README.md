@@ -1,8 +1,14 @@
 # RX 설계·검증 문서
 
-RX의 제품 정의, 사업 목적과 범위, 소프트웨어 구조, 계약, 장비·공정·배포 설계, 구현 진행과 검증 근거를 관리한다. 현재는 구현 초안이며 첫 물리 셀은 **NOT_COMMISSIONED**다.
+RX의 제품 정의, 사업 목적과 범위, 소프트웨어 구조, 계약, 장비·공정·배포 설계, 구현 진행과 검증 근거를 관리한다. **소프트웨어 구현 초안 v0.1은 2026-09-13에 마감했다.** 첫 물리 셀은 **NOT_COMMISSIONED**이며 제품·실장비 납품 완료는 아니다.
 
-## 읽는 순서
+## 먼저 볼 인계 문서
+
+- [초안 인계](docs/implementation/draft_handoff.md)
+- [핵심 미결 8개](docs/implementation/critical_open_items.md)
+- [마감 감사](docs/implementation/draft_closure_audit.md)
+
+## 설계·근거를 읽는 순서
 
 1. [설계 로드맵](docs/00_design_roadmap.md)
 2. [제품 정의](docs/01_product_definition.md), [사업 가치](docs/02_value_and_business.md), [제품 범위](docs/03_product_scope.md)

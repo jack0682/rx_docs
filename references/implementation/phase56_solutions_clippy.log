@@ -1,8 +1,0 @@
-    Checking rx-solution-catalog v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-solution-catalog)
-   Compiling rx-host v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-host)
-    Checking rx-process v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-process)
-    Checking rx-melsec-mc v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/drivers/rx-melsec-mc)
-    Checking rx-executor v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-executor)
-    Checking rx-process-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-process-package)
-    Checking rx-supervisor v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-supervisor)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 5.34s

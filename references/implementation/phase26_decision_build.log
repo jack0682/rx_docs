@@ -1,6 +1,0 @@
-   Compiling tempfile v3.27.0
-   Compiling prost-build v0.14.4
-   Compiling tonic-prost-build v0.14.6
-   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol)
-   Compiling rx-executor v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-executor)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 6.21s

@@ -1,9 +1,0 @@
-<root BTCPP_format="4" main_tree_to_execute="RXMain">
-  <!-- RX resolved process: 5acf12378ec2618195a77e1a2d6ea9c86dc6673b9bb4dbbff01556ac7b0eeaf8 -->
-  <BehaviorTree ID="RXMain">
-    <RXSequence node_id="node/93c2162eb29cc7df3fb7a8dff69e68c46408bb00d5cf73afc3fb6cdebce3a4cd">
-      <RXWait node_id="node/10a7fc2ea31451b764e472aebd1da8222df160983dca118288d7829c53cb92ba" condition_id="ready" timeout_ns="1000"/>
-      <RXOperation node_id="node/230bf500f228008edb102802d4b54c8f36cd4e7b76d9b4d3cc166591023d2c82" binding="place"/>
-    </RXSequence>
-  </BehaviorTree>
-</root>

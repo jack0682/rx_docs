@@ -1,2 +1,0 @@
-{"cell":"cell/a","code":"Unauthenticated","event":"rx.host-connection-error.v1","host":"host/sim","read_timing":null,"stage":"BOOTSTRAP"}
-{"cell":"cell/a","code":"ContinuityUnproven","event":"rx.host-connection-error.v1","host":"host/sim","read_timing":{"configuration_age_at_error_ns":1490458,"configuration_roundtrip_ns":439417,"configuration_to_source_ns":44166,"source_age_at_error_ns":1006875,"source_capture_after_start_ns":175292},"stage":"PREPARE_LINK"}

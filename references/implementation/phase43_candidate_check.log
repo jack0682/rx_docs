@@ -1,8 +1,0 @@
-    Checking once_cell v1.21.4
-    Checking rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-process-contract)
-    Checking getrandom v0.4.3
-    Checking rx-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-package)
-    Checking tempfile v3.27.0
-    Checking rx-process v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-process)
-    Checking rx-process-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-process-package)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.52s

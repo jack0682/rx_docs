@@ -1,0 +1,45 @@
+{
+  "document_revision": "2026-09-14-neutral.1",
+  "semantic_version": "1.0.0",
+  "wire_semantics_changed": false,
+  "old_base_manifest": "66756d119140d436da477cce4331f34ef705900b83c338a870bdbe2ced78dd3b",
+  "old_cell_manifest": "e0225c1e39b179f941d98f91daa94b387a6028e4e872b4499f20d63440d270c8",
+  "artifacts": {
+    "base": {
+      "manifest_sha256": "3499dff92023509d4daaded3bb9d89a822c948a9b2c025e954262c9bef9d5afe",
+      "changed_documents": [
+        {
+          "path": "02_identity_durability_recovery.md",
+          "before": "75ae23e8b4329b005515ce00e118d9d9ab7a99044e94f34d9fdb6ae7825a4e85",
+          "after": "cf857007c6ff6247b62958af0cc09f93b383fd9d816e480afeada2e0f9631869"
+        },
+        {
+          "path": "04_binding_and_admission.md",
+          "before": "da155119d582c773bbf4c9830fdcbb2652d28beeab073911367a57aa014cd015",
+          "after": "97ddd4bb3e3224841dfe549ba50ceba087624eb36ebc3abbdb91cc8f834fb97a"
+        }
+      ]
+    },
+    "cell": {
+      "manifest_sha256": "0c167639b3d048f6717819f9cc9b92bba8c3a11a4c41c7068d3a04c44e7be0ea",
+      "changed_documents": [
+        {
+          "path": "01_scope_conditions_functions.md",
+          "before": "d97d4226ae8f4e143cdb962274bd759d517ea44b921e57bc42587921d3fe0668",
+          "after": "ee34c7da2c426a2c775e3d84a902ac1b9ce50fc09f4a140c333c7cbdf0bd561c"
+        },
+        {
+          "path": "02_authorization_invalidation.md",
+          "before": "ba5d8bcc313f325b5d05e3c770f99b4cae7a83ad506f454cd1759f74f8ae2497",
+          "after": "677a05ced54bc030ac7ee830c31e09da7aa61e910656cd4864c42b7e7fd826df"
+        },
+        {
+          "path": "04_protocol_integration_ui.md",
+          "before": "cedb3b601a262f0c8582a8a3680d81d42ef598a029b639c621a5bf99c45ede6a",
+          "after": "cdbca73743692e4c58f248f6dd5349f855dd38cfe1327371454691620ecc6910"
+        }
+      ]
+    }
+  },
+  "validation": "Document hash verification only; see per-commit CI for current software results."
+}

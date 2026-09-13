@@ -1,18 +1,27 @@
 {
-  "schema": "rx.repository-baseline.v1",
-  "recorded_at": "2026-09-12T18:53:00.599791+00:00",
-  "branch": "codex/initial-draft",
+  "schema": "rx.repository-baseline.v2",
+  "recorded_at": "2026-09-14",
+  "project": "RX personal heterogeneous robotics project",
+  "visibility": "public",
+  "branches": {
+    "default": "main",
+    "integration": "develop",
+    "workflow": "GitFlow"
+  },
   "repositories": {
     "rx-platform": {
-      "url": "https://github.com/jack0682/rx-platform.git",
-      "commit": "7e6ace7cd05966969b1aa0de68663d4135d1d0c0"
+      "url": "https://github.com/jack0682/rx-platform.git"
     },
     "rx-solutions": {
-      "url": "https://github.com/jack0682/rx-solutions.git",
-      "commit": "3aa6e85d024b6d7ab9d2e65de27e4cb316ac328d"
+      "url": "https://github.com/jack0682/rx-solutions.git"
     }
   },
-  "latest_validation": "references/implementation/phase76_checks.json",
+  "historical_validation": {
+    "docs_commit": "6111a7d1dcf33052f38c3e67c6585aec2b44df3c",
+    "index": "references/README.md",
+    "scope": "Historical v0.1 mock validation; does not validate the neutral configuration"
+  },
+  "current_validation": "Per-commit CI and separately recorded test evidence; historical tests are not rerun by documentation edits",
   "first_physical_cell": "NOT_COMMISSIONED",
-  "layout": "Docs and evidence are canonical in rx_docs; legacy rx_ws/docs and rx_ws/references are local compatibility symlinks."
+  "layout": "Documentation is standalone; each software repository carries pinned build contracts and SDK inputs."
 }

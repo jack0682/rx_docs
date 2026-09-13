@@ -1,36 +1,34 @@
-# RX 설계·검증 문서
+# RX — 이기종 로봇 협업 개인 프로젝트
 
-RX의 제품 정의, 사업 목적과 범위, 소프트웨어 구조, 계약, 장비·공정·배포 설계, 구현 진행과 검증 근거를 관리한다. **소프트웨어 구현 초안 v0.1은 2026-09-13에 마감했다.** 첫 물리 셀은 **NOT_COMMISSIONED**이며 제품·실장비 납품 완료는 아니다.
+RX는 많은 이기종 로봇과 시설을 공통 작업·권한·관측·결과·복구 계약으로 연결하는 개인 프로젝트다. **door-to-door 전체 작업과 구역·마을·도시 규모의 협업·생태계 확장**을 목표로 한다. 산업 자동화는 적용 사례 중 하나다.
 
-## 먼저 볼 인계 문서
+이 저장소는 공개 문서 원본이다. 특정 제조사나 고용주를 대표하지 않으며 특정 회사 제품을 기본 지원 조건으로 삼지 않는다. 실제 장비 지원은 profile과 검증 범위로 선언한다.
 
-- [초안 인계](docs/implementation/draft_handoff.md)
-- [핵심 미결 8개](docs/implementation/critical_open_items.md)
-- [마감 감사](docs/implementation/draft_closure_audit.md)
+## 시작하기
 
-## 설계·근거를 읽는 순서
+1. [프로젝트 목표](docs/01_product_definition.md)와 [현재 범위](docs/03_product_scope.md)를 읽는다.
+2. [아키텍처](docs/05_software_architecture.md)와 [장비 지원 정책](docs/13_device_support_matrix.md)을 확인한다.
+3. [공통 작업 계약](docs/contracts/v1.0/README.md)과 [셀 운영 계약](docs/cell_operations/v1.0/README.md)을 읽는다.
+4. [현재 구현과 과거 증거의 경계](docs/implementation/draft_handoff.md), [미결](docs/implementation/critical_open_items.md), [후속 방향](docs/00_design_roadmap.md)을 확인한다.
 
-1. [설계 로드맵](docs/00_design_roadmap.md)
-2. [제품 정의](docs/01_product_definition.md), [사업 가치](docs/02_value_and_business.md), [제품 범위](docs/03_product_scope.md)
-3. [구조 제안](docs/10_structure_proposal.md), [자사 기본 지원](docs/13_robotis_support_matrix.md), [두 이미지](docs/14_image_support_spec.md)
-4. [공통 계약 v1.0](docs/contracts/v1.0/README.md), [셀 운영 계약 v1.0](docs/cell_operations/v1.0/README.md)
-5. [상세 설계 순서](docs/19_detailed_design_sequence.md)
-6. [현재 구현 상태](docs/implementation/README.md), [요구 추적표](docs/implementation/requirements.md), [진행 기록](docs/implementation/progress.md)
+## 저장소
 
-## 저장소의 역할
-
-| 저장소 | 내용 |
+| 저장소 | 책임 |
 |---|---|
-| 이 저장소 | 전체 설계·조사·검증 문서와 증거 |
-| [rx-platform](https://github.com/jack0682/rx-platform) | ROS 비의존 Rust core/runtime, 권위 원장, API와 플랫폼 이미지 |
-| [rx-solutions](https://github.com/jack0682/rx-solutions) | ROS/native 장비 연동, 자사 필수 스택, 공정·BT, 운영 앱과 솔루션 이미지 |
+| [rx_docs](https://github.com/jack0682/rx_docs) | 목표·설계·규범 원본, 결정과 검증 근거의 출처 |
+| [rx-platform](https://github.com/jack0682/rx-platform) | ROS 비의존 Rust 코어, 권한·판정·원장·Runtime·API |
+| [rx-solutions](https://github.com/jack0682/rx-solutions) | 장비 Host·어댑터·작업 실행기·운영 앱·구성 패키지 |
 
-제품 소프트웨어는 두 레포·두 이미지 구성을 유지한다. 문서 저장소가 세 번째 제품 프로세스나 이미지를 추가하지 않는다. 소스와 함께 검토해야 하는 모듈 README 및 빌드·검증에 필요한 규범/SDK 사본은 소스 저장소에 남긴다.
+두 소프트웨어 저장소와 두 제품 이미지의 경계를 유지한다. 이 문서 저장소는 독립적으로 읽을 수 있으며 다른 저장소를 로컬에 복제할 필요가 없다. 소프트웨어 빌드·실행은 각 저장소 README를 따른다.
 
-## 자료 보존과 현재성
+## 상태와 기록
 
-`docs/`는 기존 RX 작업 공간의 설계 문서이며 `references/`는 조사와 구현 검증 기록이다. 과거 source archive와 시험 로그도 증거의 일부로 보존한다. 문서의 구현 완료 여부는 최신 진행 기록과 해당 단계의 검증 범위로 판단한다. 모의 시험은 실물 qualification을 뜻하지 않는다.
+기존 구현 초안 v0.1의 모의 인수는 2026-09-13에 마감됐다. 그때의 commit·이미지·시험 결과는 [고정 원본](references/README.md)으로 보존한다. 현재 제조사 중립 구성의 새 검증, 실물 운전 승인, door-to-door 구현이나 도시 규모 실증을 뜻하지 않는다. 실물 설치는 **NOT_COMMISSIONED**다.
 
-규범 원본 8개의 byte와 manifest hash를 유지한다. 초기 문서의 ‘코드 착수 전’ 표현은 당시 계획이며, 구현 착수 이후에는 최신 구현 기록을 함께 읽는다. 기록 속 절대 로컬 경로 및 이전 연구 공간·원본 사진에 대한 링크는 작성 당시 출처로서 남아 있으며 이 저장소가 외부 자료 전체를 포함하는 것은 아니다.
+2026-09-14 문서 개정은 제조사별 기본 포함 정책을 profile별 지원 정책으로 바꿨다. 작업 동일성·UNKNOWN·권한·증거·자원 인계 규칙을 유지하며 [규범 개정과 호환 영향](docs/contracts/v1.0/revision_2026-09-14.md)을 별도로 기록한다.
 
-로컬 작업 공간에서 세 저장소를 같은 부모 디렉토리에 두며, 기존 `rx_ws/docs`와 `rx_ws/references`는 이 저장소의 해당 디렉토리로 연결한다. 기존 도구와 증거 경로를 유지하기 위한 연결이다. 문서 본문에서 코드 저장소를 가리키는 링크는 GitHub 경로로 연결한다.
+[기여 안내](CONTRIBUTING.md) · [보안 제보](SECURITY.md) · [문서 결정 기록](docs/09_decisions_and_sources.md)
+
+## 라이선스
+
+프로젝트 원본은 [Apache License 2.0](LICENSE)을 따른다. 제삼자 소프트웨어·문서·자료는 해당 저작권과 라이선스가 유지되며 [NOTICE](NOTICE)를 함께 읽는다.

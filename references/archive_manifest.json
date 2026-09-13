@@ -1,0 +1,15 @@
+{
+  "schema": "rx.evidence-archive.v1",
+  "recorded_at": "2026-09-14",
+  "source_repository": "https://github.com/jack0682/rx_docs",
+  "historical_commit": "6111a7d1dcf33052f38c3e67c6585aec2b44df3c",
+  "historical_branch": "codex/initial-draft",
+  "history_rewritten": false,
+  "local_pre_edit_archive": {
+    "workspace_relative_path": ".archive/rx_docs-before-neutral-foundation-20260914.tar.gz",
+    "sha256": "f453220a9f8cd4e9ea7b15ca7802c0856c2ee02e8b7025822af77c33b3301826",
+    "includes_uncommitted_goal_documents": true,
+    "required_for_clone": false
+  },
+  "scope": "Historical source evidence retains original names, results and licensing; not evidence for the neutral configuration."
+}

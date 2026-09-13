@@ -1,1 +1,0 @@
-{"area":"OPERATIONS","evidence":"external harness must supply actual source-backed artifacts; exporter generates no verdict","requirement":"Actual separated accounts and independent review; main Run count and native effects remain zero before qualification activation","schema":"rx.delivery-criterion.v1"}

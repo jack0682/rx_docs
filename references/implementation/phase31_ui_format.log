@@ -1,6 +1,0 @@
-
-> @rx/operator@0.1.0 format:check
-> prettier --check src index.html vite.config.ts tsconfig.json package.json .prettierrc.json
-
-Checking formatting...
-All matched files use Prettier code style!

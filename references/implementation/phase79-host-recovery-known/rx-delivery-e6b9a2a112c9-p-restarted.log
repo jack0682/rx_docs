@@ -1,3 +1,0 @@
-{"cell":"cell/a","code":"Unauthenticated","event":"rx.host-connection-error.v1","host":"host/sim","read_timing":null,"stage":"BOOTSTRAP"}
-{"cell":"cell/a","code":"Busy","event":"rx.host-connection-error.v1","host":"host/sim","read_timing":{"configuration_age_at_error_ns":2672875,"configuration_roundtrip_ns":1063250,"configuration_to_source_ns":9250,"source_age_at_error_ns":1600375,"source_capture_after_start_ns":341667},"stage":"PREPARE_LINK"}
-{"cell":"cell/a","code":"ContinuityUnproven","event":"rx.host-connection-error.v1","host":"host/sim","read_timing":{"configuration_age_at_error_ns":3186250,"configuration_roundtrip_ns":1090750,"configuration_to_source_ns":25958,"source_age_at_error_ns":2069542,"source_capture_after_start_ns":361959},"stage":"PREPARE_LINK"}

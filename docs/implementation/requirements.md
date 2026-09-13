@@ -1,60 +1,14 @@
-# 구현 요구·검증 추적표
+# 현재 요구와 검증 경계
 
-상태: OPEN / PARTIAL / IMPLEMENTED / VERIFIED / FIELD_BLOCKED. VERIFIED에는 구체 시험과 결과가 필요하다. 파일 존재만으로 기능을 검증했다고 표시하지 않는다.
+이전 산업 초안의 R01–R30은 [원문](https://github.com/jack0682/rx_docs/blob/6111a7d1dcf33052f38c3e67c6585aec2b44df3c/docs/implementation/requirements.md)에 보존한다. 당시 PARTIAL26·OPEN3·FIELD_BLOCKED1은 그 요구·commit 범위의 판정이다. 새 개인 프로젝트 요구에 같은 ID나 통과 판정을 재사용하지 않는다.
 
-| ID | 요구 | 증거/완료 판단 | 상태 |
-|---|---|---|---|
-| R01 | 두 독립 레포·두 이미지·Rust ROS 비의존 core | 레포·의존 그래프·이미지 빌드 | PARTIAL |
-| R02 | 공통·셀 v1 schema와 strict codec, 정확한 enum/optional/정규화 | Rust/C++ golden vectors, unknown/duplicate 입력 거부 | PARTIAL |
-| R03 | intent 동일성·key/activation/slot 유일성 | 중복·충돌·재접속·동시성 및 외부 envelope 검사. S key/body 선행 commit·미확정 보존·확인된 CAS 거부 후 새 attempt 검증 | PARTIAL |
-| R04 | T1–T5, SQLite 단일 writer·WAL/FULL | commit 경계 fault injection, atomic rollback | PARTIAL |
-| R05 | Host PREPARED/SEND_ENTERED/VOIDED 및 별도 evidence journal | native 진입·restart, publisher131개/ack 유실·H cursor 보존. MELSEC native 원장의 frame/digest/작업·session·ACK/완료 snapshot·pending 원자 기록과 네 abrupt-exit 경계의 재송신 금지·capture 회수를 추가. 전체 전달/복원은 후속 ROBOTIS JTC의 송신 전 native entry·원래 UUID 결과 회수·capture 검증과 entry/send/capture 직후 프로세스 종료 시험을 추가. 응답 유실·재시작·새 ID로 재송신을 우회하지 못하며 모순 결과는 영속 분쟁으로 유지한다. | PARTIAL |
-| R06 | 결과/지식/무결성/자원 처분 분리 | UNKNOWN 왕복·후발 모순·지지 인계 및 공개 OperationView의 독립 상태 축 검증. 영속 조회 계획·false 관측 보존·실제 해제와 조회 응답 분리 추가 profile/rule에 결합한 schema/code 결과 대응표로 성공·실패·취소를 구별하며 unknown은 결론으로 바꾸지 않는다. 중복/모호 표 거부·T2 원자성·후기 상충·후조건/현재성 및 별도 자원 인계를 검증했다. | PARTIAL |
-| R07 | grant/fence/epoch/permit와 native gate | 자동 전달/응답 유실/NOT_FOUND/중복 receipt/Fence 검증. Host snapshot/초기 link/fence·grant 등록·renewal과 별도 TLS 연결을 추가. 동일 boot의 원장 교체 거부·원래 계획/요청 ID 보존도 검증. 전체 취소·rebind는 후속 최종 guard의 device session과 permit/guard 중 이른 expiry를 NativeDispatch로 전달한다. JTC/MELSEC가 native 진입 직전 다시 검사하며 Physical adapter의 기본 fallback은 거부한다. ROS 수신까지의 controller 세대 fencing은 후속이다. | PARTIAL |
-| R08 | 조건 평가·관측 age/source/단위·세대 | clock/freshness/unknown/모순 fixture. Host 관측 묶음의 원자적 기록·전체 조건 평가, 세대 상실/모순의 사실 보존·반복 차단 방지, 네트워크 독립 유지 조건 만료 감시 및 실제 TLS 반복 수집 연결 | PARTIAL |
-| R09 | RunMandate·part/operation 예산·activation/checkpoint | restart 중 사용량 보존·마지막 part 완료. PauseRun의 run/cell closure·fence·최종 응답 원자성 추가. Run/slot/artifact 동일 commit·읽기 검증; 실행기 원격 Run 조회 연결. BeginPart/ResolveActivation 전체 payload·실제 mTLS 연결. 공유 checkpoint DTO·별도 S 복원 reader/C++ Frame 전달 연결. P 후보 준비·CommitCheckpoint의 전체 상태/ID 보존·현재 조건 재계산·실제 mTLS/응답 유실을 검증. S 분기/대기 worker·후보 검증·확정 거부 후 재준비·별도 관측 복원도 검증. 직렬 소재 admission/완료/다음 context와 응답 유실도 검증. 전체 restart는 후속 | PARTIAL |
-| R10 | 개입·절차·복구·재시작·비운전 종료 | Case Open/Get·diagnostic/latch·ACK 비승격·atomic 응답 유실 및 UI 확인을 연결. typed procedure report·stale CAS 사실 보존·정책/fence/조건 진입·개인별 종료/인수 및 REVALIDATING 연결. 비운전 clearance/close의 원자성·현재 근거 재검사·기존 UNKNOWN/다른 사건 차단 보존을 추가. recovery/restart·무진입/불명 범위·전체 gRPC/화면과 CO03–12/16/26–28 전체는 후속 | PARTIAL |
-| R11 | 여러 셀의 장비·제어기·소재 지지 자원 공유 | alias·공유 JTC·양쪽 지지 해제 반례 신규 후보 host/resource까지 영향 closure에 넣고 영향 셀 접근권과 새 공유 셀 생성에 따른 무효화를 검증했다. | PARTIAL |
-| R12 | 고주기 stream latest-only·expiry·단일 consumer | 재정렬·old ticket·권한 변경·재생 금지 | OPEN |
-| R13 | 제품군+모델/모드 profile·필수 자사 지원표 | 필수5개 source·22개 구성 catalogue/source hash 검증. 자사/전이8개·ROS42개 compile, 17개 plugin 선언·69개 ELF·정책11개/ONNX4개 load 및 실제 S arm64 image 기동 추가. 미쓰비시 MC3E 제한 통신 라이브러리의 M/D 읽기·M 단일 쓰기 및 loopback 12개 시험을 추가. 제한 EnsureState NativeAdapter와 native 원장·9-word publication 전제·세대/정체/완료/인계/종료를 모의 Host로 연결. DEVICE_REFERENCE v2와 exact source pin/policy/asset/cell 검사, 제품 Melsec factory·native identity 원자 공개를 추가. 물리 binding은 현재 qualification 수용과 별도 Arm을 요구한다. MELSEC의 논리 Template/현장 Site를 분리하고 작성·외부 서명·봉인·검사 도구를 추가했다. 서명된 assembly를 Host가 재조립해 profile과 대조한다. ROBOTIS의 16개 구성/51개 position JTC 선언 선택과 실제 ROS action client bridge·모의 통신16사례를 추가했다. publication 물리 판단·실제 profile/장비 검증과 다른 자사 backend는 후속 Rust JTC NativeAdapter·pinned child IPC·trajectory 원본 검증·영속 원장과 실제 ROS mock Host 통합을 추가했다. 생산용 Authority, rx-hostd factory, 물리 검증은 미연결이다. S의 JTC outcome_table 생성과 P의 제조사 비의존 결과 대응표를 연결했으며 장비 package/구성 반입 자동화는 후속이다. JTC Template/Site에서 profile·operations·outcomes를 조립하고 서명된 원본을 Host가 재계산한다. JTC_PACKAGE는 검사/원장 초기화를 지원하나 제품 제어권 제공자가 없어 run은 거부한다. | PARTIAL |
-| R14 | 선언형 공정·현장 binding·resolved plan·BT 변환 | 원본/compiler/frontier와 C++ BT 노드 실행 시험. P 내부 checkpoint/eligibility 검증 추가. P artifact/로컬 RunView 조회 연결. 인증된 S snapshot/artifact client와 C++ Frame 경계 추가. 영속 유한 mutation worker 연결. PauseExecutor·RequestHandover와 응답 유실 후 해제 관측도 연결. P CommitCheckpoint는 연결했고, S 분기/대기 요청, 지속 C++ 엔진·private pipe·bounded pending queue도 연결. run/visit 서비스도 연결. 직렬 part coordinator도 연결. 개입 요청·병렬 소재·전체 supervisor는 후속 | PARTIAL |
-| R15 | 독립 검증 패키지·유형별 권한·변경 영향 | 서명/내용/종류·권한/전이 의존 검증. Process package 후보/외부 서명 요청·봉인·현재 trust/dependency/asset 검증·signed bytes 재컴파일 추가. P의 immutable object 보관·독점 소유·원자 공개와 오프라인 import/현재 정책 재검증 추가. 원본 변경/키 회수/저장 손상/경로 변경·재실행 거부 시험. 사용자/셀별 반입 preflight·실제 Store proof·현재 권한/정책 재검사·원자 접수/이력·HTTP/단말 mTLS 기동도 연결. 공정의 실제 S 검증 자료·서명, P 원문/결과/셀 대조, 불변 검토 버전과 별도 Verifier 계정의 승인/반려도 연결. 공정 before/after·공유 Host/resource/scope 영향 closure, 독립 영향 검토·STAGED와 단말 ReleaseManager의 epoch/fence 준비를 추가. Device/UI·절차 검증, Host의 공정 문맥/영속 receipt와 mTLS Inspect/Apply/Lookup도 구현. P의 명시적 Host Batch/전송 전 request commit·같은 ID 조회/제한 재전송·receipt 보존과 부분 확인/미확인 집계도 연결. 최근 Host 응답의 메모리 proof와 패키지 재검증 후 실제 P 구성 선택·이전 자격 보관·새 epoch/fence·APPLIED_UNQUALIFIED를 원자 기록. Run별 불변 구성과 과거 artifact/생산 조회도 연결. 정확한 구성/의존 자료·6영역의 재검증 요청, 서명/원본 검증·영속 보고서/독립 검토와 현재성도 연결. Host의 exact-cohort 자격 수용/영속 receipt·immutable ID 의미·새 epoch·device session guard와 별도 Arm도 연결. P의 v2 목적 정책·원본 재검증/자격 발급·영속 task·전체 QUALIFIED_ACTIVE·소유 block 해제/정지와 별도 StartRun도 연결. DEVICE_REFERENCE v2의 실행 불가 descriptor와 v1 실행파일 형식을 구분하고 기존 서명/권한 검사를 유지했다. 장비 후보의 deterministic assembly·서명 원문 재조립과 device-package 제품 CLI도 연결했다. 전체 취소/복원·production 물리 검증은 후속 JTC6파일 패키지와 exact asset/target/release 검증을 추가하고 유효 서명 아래의 잘못된 결과표·Intent·model도 거부한다. 공통 device-catalog 원본 연결·작업/결과표 일치와 현재 설치/셀/환경을 확인하여 반입 receipt와 정규화 선언을 원자 보관한다. 제조사 의미 검증·검토 승인과 active 구성 반영은 후속이다. Device software 검증 요청·S 실제 decoder 보고서·별도 서명·P 원본 재검사·현재 버전 독립 승인 API를 추가했다. 정책/원문/버전 변경 거부와 원자 이력을 검증했으며, 승인 UI·실제 구성 적용/물리 자격은 후속이다. 장비 검토 목록을 보고서 없는 Summary50개로 바꾸고 상세/이력은 별도 유지한다. 승인된 device 원본을 재검증해 조건/Host/인계 정책을 연결한 비실행 후보와 prospective 공유 자원 영향을 저장한다. 독립 영향 검토·현재성/권한·원자 회수를 API로 연결했으며 공정/Host/실제 적용은 후속이다. device 출처가 있는 v2 입력을 위한 별도 검토 요청·후보 snapshot과 실제 원본 재검증을 연결했다. 전체 영향 셀 접근권·독립 승인·authority 파일 변경 거부·장비 승인 철회에 따른 공정 현재성 상실을 실제 API로 검증했다. 기존 active-step v1은 출처를 승인하지 않으며, 새 후보의 변경 제안/영향 검토/staging과 Host별 요구를 연결하고 actual product Host CLI의 JTC 설정 일치를 검증했다. 실제 Host/셀 적용은 차단한다. | PARTIAL |
-| R16 | HTTP/gRPC 동일 application·mTLS/현장 계정/단말 | 인증·권한·회수 namespace·우회 거부. Executor Session/Cell/GetRun/BeginPart/ResolveActivation/유한 Submit·Operation.Get/Reconcile 실제 mTLS. 원격 E·자동 P→H 경로/응답 유실 및 PrepareCheckpoint/CommitCheckpoint 및 S 실제 BT 분기·대기/만료/응답 유실/재시작 mTLS 검증. OPERATOR_API 전송 세션/조회와 canonical Cell.Inspect HTTP·mTLS 연결. 직접 mTLS terminal HTTPS·사용자/단말 scope/등록 revision binding·폐기/재요청 거부 연결. gRPC 사용자 위임 및 제품 배포는 후속 | PARTIAL |
-| R17 | 일관 snapshot·SSE·권한별 UI projection | 권한별 overview 구현. 감사/control 저장·cursor 분리와 RunSnapshot/current execution cut 구현. 기록된 모드/자격·차단 생성 revision의 CellContext wire 조회도 연결. 동일 조회 cut의 source/Host 권한/조건 평가 진단과 현재 접근권 필터를 추가. 현재 Runtime owner의 volatile 연결·조회·전달 상태와 보고/활동 만료를 운영 view에 연결. 전체 Event wire 매핑·paging/SSE는 미완료 | PARTIAL |
-| R18 | 시각적 공정 편집·새 초안·검증·비교·변환 | 원자적 source draft/이력/index·같은 key 회수·현재 Engineer 권한·CAS 충돌을 구현. 구조 validator를 P 작성/S compiler가 공유. 실제 UI 노드·흐름 편집/비교/복사·buffer 보존·응답 유실 회수 연결. 현재 셀의 step 선택·버전/CAS/구성 digest 고정·stale 표시·matched compile input export 추가. 새 장비 binding/조건/복구 편집·compiler/package UI 통합은 후속 현재 영향 검토된 device plan을 초안 선택지에 합치는 API와 v2 plan/step/action 출처를 연결했다. stale plan export 거부·원자 save·실제 S compiler/패키지 보존을 검증하며, device-aware process review도 연결했다. 전용 plan 선택 UI와 실제 Host/셀 적용은 후속이다. | PARTIAL |
-| R19 | 운영/실적/조건/개입/복구 화면 | 로컬 운영/기록·응답 유실/동일 key 회수·stale 검토 시험. 개입 목록/ACK 및 응답 유실 회수도 연결. 운전 조건·관측 근거 페이지, 화면 판정 만료, missing/PASS/FAIL/expired와 모바일/응답 지연 표시도 연결. 실적/절차/복구 전체는 후속 | PARTIAL |
-| R20 | 구성·검증·배포·지원·계정/단말 화면 | 구성·내 접근 권한 조회 연결. 반입·검토 요청/자료·과거 버전·별도 계정 승인/반려와 응답 유실 복구 화면을 추가. 파일 전송/서명 자동화·배포/지원/계정·단말 관리 조작은 후속 DEVICE_REFERENCE 반입과 장비 선언 전용 조회/다운로드 패널을 연결했다. 선택 receipt/원본 참조 상관·현재성 경고·공정 조작 분리를 실제 S→P→브라우저 경로로 검증했다. 장비 검토 생성·요청 내보내기·보고서 등록·독립 승인/반려·과거 버전·구체 확인창을 UI에 연결했다. 새 자료/문맥의 확인 해제, 응답 유실 후 같은 요청 회수를 실제 브라우저로 검증했다. S image UI bundle을 P의 직접 단말 HTTPS에서 제공하고, 실제 등록 단말 로그인·font/CSP·응답 유실 회수를 검증했다. 구성 적용/배포 및 실제 시작/재개 화면은 후속이다. | PARTIAL |
-| R21 | 등록된 외부 UI 패널·제한된 메시지 API | origin·권한·직접 제어/기록 접근 거부 | OPEN |
-| R22 | 프로세스·권한·volume·network·variant 구성 | P 실행 파일의 pinned 설정·초기화/기동과 arm64 runtime draft image·비루트/read-only HTTPS/SIGTERM 검증. S arm64 runtime draft의 필수 stack·Rust/BT/UI 포함과 무동작 기동도 검증. S의 영속 process 계획·release-owned recipe·관리 모드 및 instance readiness를 추가. rx-hostd 제품 executable/동일 S image 포함·pinned 설치/원장·실제 Linux clock·명시적 drop proof 종료를 연결했다. FILE_SIMULATION은 실제 제품 binary로 P 통합을 검증하며 MELSEC_PACKAGE를 제품 factory에 연결하고 signed reference/자료/source pin/환경·설치와 native 원장을 검증한다. Host 기동 설정 비교에서 qualification/storage 변경·cohort 누락을 거부하고 설치/기동 없음으로 반환한다. 일반 driver lifecycle authority·전체 variant/배포/Host supervision은 후속 JTC_PACKAGE metadata 등록·원자 초기화를 연결했으며 실행 제공자 부재를 명시적으로 표시하고 ROS client 생성 전에 거부한다. P 기동 설정에 별도 pinned device-review authority를 연결했다. 기본값은 미설정이며 package 내용에서 신뢰 키를 채택하지 않는다. | PARTIAL |
-| R23 | 정상 종료·부분 장애·제한 재시작 | 지지 미정리 종료 금지·timeout kill 금지. Planner CLOSE와 run/visit 서비스·durable stop intent·시작 전 중단·응답 유실/재시작·저장 장애 중 P pause를 검증. P의 durable stop barrier와 API/writer drain·미결 보고 및 실제 프로세스 SIGTERM도 연결. S의 stop latch·dependency 종료 순서·제어 프로세스 종료 권한/강제 kill 거부와 software 재기동 예산을 추가. Host/전체 현장 종료·supervision은 후속 JTC는 독립 지지/제어권과 pending 없음 확인 후 EOF를 시작하고 실제 child 종료 전에는 drop proof를 만들지 않는다. 미해결·분쟁 작업은 정상 종료도 차단하며 강제 kill/자동 cancel은 하지 않는다. 별도 책임 인계·분쟁 복구 API는 후속이다. | PARTIAL |
-| R24 | 호스트 관리 도구·고정 작업·유지보수 journal | Host runtime/writer 소유와 실제 종료 구성/원장에 결합한 준비·조회·취소, 준비 중 기동 차단, commit 전/후 abrupt exit 회수 검증. 실제 교체·P 승인 위임·native unknown/복원은 후속 | PARTIAL |
-| R25 | 백업·복원·binary rollback 구별 | P/H 한쪽·양쪽 유실·generation·epoch 교차 시험 | PARTIAL |
-| R26 | 자사 5개 필수 source 및 전이 의존 lock | Git8개/ROS metadata/ONNX·정책 pin, APT1824개 inventory 일치 거부, ROS42개 compile·모델4개 CPU Session load. 실제 장비와 전체 variant는 후속 | PARTIAL |
-| R27 | 모의 환경과 실장비 접근 분리 | 모의 프로세스의 device/native network 권한 없음. MC 통신 SIMULATION profile의 loopback 강제와 Linux network-none 내부 시험을 추가. 물리 driver 배포 정책은 후속 | PARTIAL |
-| R28 | 통합 시험·판정·독립 oracle·증거 반출 | SC/CO/V/OV 추적, PASS와 미수행 구별 | PARTIAL |
-| R29 | 납품/운영교육/인건비·지원 공수 측정 구조 | 측정 정의·입력·근거·인수 결과 연결 | OPEN |
-| R30 | 첫 현장 미확정 값 및 실제 commissioning 경계 | Q03UDVCPU·로봇/지그/신호 미확정 차단 | FIELD_BLOCKED |
+| 요구 | 원본 | 현재 상태 |
+|---|---|---|
+| PG01–PG06 개인 프로젝트·이기종·전체 작업·규모 확장 | [프로젝트 정의](../01_product_definition.md) | 사용자 목표 확정, 서비스·규모 구현/실증 미완료 |
+| 공통 작업 의미·권한·기록·인계 | [공통 계약](../contracts/v1.0/README.md) | v1.0 문서 개정, 기존 구현의 범위는 인계와 개별 검증 근거 참조 |
+| 설치 범위·조건·허가·개입·복구 | [셀 운영 계약](../cell_operations/v1.0/README.md) | 문서 규범, 실물 설치 NOT_COMMISSIONED |
+| 제조사 중립 지원·선택 의존성 | [지원 정책](../13_device_support_matrix.md) | 현재 요구, 새 구성 검증은 별도 결과 필요 |
+| door-to-door 참조 인계 | [범위](../03_product_scope.md) | 제안, 실제 장비·최종 완료 조건 미정 |
+| 분산 운영 영역·도시 규모 | [후속 방향](../00_design_roadmap.md) | 설계·성능 요구·실증 미완료 |
 
-R30의 현장 차단은 공통 구현을 중단시키지 않는다. 이 행의 구현상 완료는 미확정 입력의 강제 검증과 정직한 상태 표시이며, 실제 운전 검증은 제공되지 않은 현장 입력·실물 시험을 요구한다.
-
-## phase77 연결 검증
-
-R01/R14/R15/R16/R19/R22/R23/R27/R28에 대해 실제 P/S 두 이미지·두 운전 컨테이너의 초기 설치, 서명/독립 역할 승인, 자격 활성화, UI 수량2 시작과 응답 유실 회수, 모의 native 효과2회/완료·인계, 상주 E Idle 복귀와 supervisor 협력 종료를 연결했다. named 다중 Host/셀 구성, 중복 Executor/경로/의존성 거부, 상태 보고 실패 시 adapter 유지, TERM 실패 재시도를 별도 반례로 확인했다. 구체 소스·이미지·시험은 [phase77 기록](../../references/implementation/phase77_checks.json)에 있다.
-
-이 연결은 FILE_SIMULATION에 한정하며 각 행의 전체 요구를 VERIFIED로 올리지 않는다. P 전체 종료 attention, 실제 재시작 rebind/복구·재개, 장기 운영·전체 지원 variant·실물 모델 지원과 현장 qualification은 아직 남아 있다. 서명된 공개 원문과 참조 자료를 보존했지만 자동화된 독립 역할 계정을 실제 사람의 검토로 표현하지 않는다.
-
-## phase78 증거 통신 재접속
-
-R05/R07/R08/R10/R23/R28에 대해 같은 저장소의 P-only 재시작 후 유휴 H evidence session/cell 협상과 반복 remote probe를 연결했다. 기존 이미지 실패와 새 이미지 성공을 실제 P/H로 대조하며 같은 Host boot/journal·operating 등록·기존 제한·through0을 보존한다. source 연속성, operating rebind·자격 복원·생산 재개는 미완료다. 빈 probe의 감사 기록 비용과 장기 보존/부하는 R17/R28에 남기며, 관련 행을 전체 VERIFIED로 승격하지 않는다. [phase78 증거](../../references/implementation/phase78_checks.json).
-
-## phase79 명시적인 Host 복구 통신
-
-R03/R04/R05/R06/R07/R08/R10/R16/R19/R23/R28에 대해 최초 연결 불변 근거, 현재 관리자/단말/CAS 승인, 원래 Fence/outbox 회수, 실제 source/configuration 검증과 제한을 보존하는 RECOVERY_ONLY 통신을 연결했다. 실제 API/브라우저 응답 유실 회수와 별도 native fixture의 원래 UNKNOWN operation 조회를 검증했다. native 성공 capture를 회수해도 후조건 연속성이 없으면 Work UNKNOWN/NONE·QUARANTINED를 유지하며 반복 조회로 native 실행·허가·part 완료를 만들지 않는다. 최초 전송 지연 및 CSP probe의 실제 결함을 수정하고 계약/정책을 보존했다.
-
-[phase79 증거](../../references/implementation/phase79_checks.json)는 실제 제품 이미지와 별도 test fixture의 범위를 분리한다. 이 단계는 operating Host/E rebind, 새 자격·명시 재개, 실제 Host/source 교체, 전체 복원/장기 운전·실물 qualification을 완료하지 않는다. 관련 행은 PARTIAL을 유지한다. E exit1의 미완료 stop intent와 P exit2의 attention도 인수 한계로 보존한다.
-
-## phase80 원장을 바꾸지 않는 실행기 점검
-
-R04/R09/R10/R23/R24/R25/R28에 대해 제품 실행파일의 오프라인 recovery-inspect, 기존 owner/header/creation/원문/history 검증, bounded copy-only DB/WAL 읽기와 원본 불변을 연결했다. 손상된 WAL이 미완료 기록을 숨기는 실제 반례를 보완하고, stale-SHM 아래 최신 committed WAL을 회수하는 대조를 추가했다. 실제 종료된 E의 PENDING/attachment를 두 번 읽어도 원문·mtime·P/H/native 상태가 그대로임을 확인했다. [phase80 증거](../../references/implementation/phase80_checks.json).
-
-이는 새 E 등록·원 정리 요청의 성공 처리·운전 등록 rebind·복원/재개를 완료한 것이 아니다. 정상 재사용/미완료 WAL tail 중 판정 불명은 명시 거부하며 전체 파일 rollback 검출도 주장하지 않는다. 각 행의 전체 요구는 PARTIAL로 유지한다.
+진행 완료를 문서 존재나 시험 개수로 판단하지 않는다. 현재 구현의 구체적 미결은 [미결 목록](critical_open_items.md)에 남긴다.

@@ -1,5 +1,7 @@
 # 구현 경계와 선행 설계 연결
 
+초안 v0.1 마감 기준은 [인계 문서](draft_handoff.md)다. 이 문서는 구현 과정의 선행 결정을 함께 보존하므로 과거 후속 계획과 현재 구현을 구별한다.
+
 ## 소유권
 
 | 구성 | 위치 | 의존 규칙 |
@@ -8,8 +10,8 @@
 | rx-ports | platform crate | 동기 원자 transaction 경계·저장용 typed envelope. SQLite 타입 노출 없음 |
 | rx-storage | platform crate | 로컬 SQLite·writer 소유 lock·CAS·key/event/outbox·snapshot/backup |
 | application/Runtime | platform crate | 요청 인증 후 key 조회→신규 요청의 상태/조건/CAS→단일 commit; 실제 Application Processor/단일 writer thread |
-| protocol/API | platform crate | frozen codec·Host mTLS client, 로컬 HTTP BFF를 같은 application에 연결. P RPC 전체·LAN 인증/SSE는 후속 |
-| host 관리 도구 | 후속 platform binary | 고정 software 작업·교체 진행 기록. 생산 권한 없음 |
+| protocol/API | platform crate | frozen codec·Host mTLS client, 로컬 HTTP BFF를 같은 application에 연결. direct terminal mTLS·HTTP/gRPC 연결. 공개 RPC 전체·SSE는 후속 |
+| host 관리 도구 | 계획상 platform 소유, 현재 S Host의 prepare/lookup/cancel·E offline 점검 일부 | 실제 설치 교체·복원·전체 조정은 후속. 생산 권한 없음 |
 | Host/native/ROS | solutions | 전달 gate·로컬 journal·실제 장비 의미. whole body outcome 쓰기 금지 |
 | 공정 원본·변환·BT | solutions | 원본 의미/단계 ID 보존. native UNKNOWN을 자동 retry로 낮추지 않음 |
 | UI | solutions | 시각적 편집·역할별 화면. 승인된 API만 요청; 판정 원장 별도 소유 금지 |
@@ -20,7 +22,7 @@ rx-ports의 Document는 저장 adapter를 도메인 schema에서 분리하는 en
 
 - D2: 단일 P, 복수 셀, bounded queue·동기 writer, 외부 I/O는 transaction 밖. H native gate는 검사/소비/SEND_ENTERED/native 진입을 fence·취소와 직렬화.
 - D3: 제품군 패키지+모델/모드 profile; 재사용 공정 원본·현장 binding·resolved plan·검증 기록 분리. case별 복구/재시작 권한은 재사용 패키지에 넣지 않음.
-- D4: Linux/systemd host agent, 두 image, s6 자식 관리. effectful driver는 software-ready에서 기동하지 않음. 지지 미확인 때 종료 신호/timeout kill 금지.
+- D4: 두 image와 종료/지지 경계는 유지한다. 선행 systemd/s6 배치안과 별도로, 실제 검증된 초안 composition은 Rust rx-solutionsd supervisor의 기동·관측·역순 협력 종료다. 전체 호스트 agent/설치 교체는 후속이다.
 - D5: LAN/현장 자체 계정/등록 단말. React 시각 편집은 RX 원본 작성; native capability는 Host 소유. scoped UI projection은 whole-site control journal과 다른 cursor.
 - D6: 계약·모의·실장비·FAT·SAT·운영/사업 인수를 구별. native 효과는 독립 관측으로 검증. 제한적 SETUP의 선행 근거로 시험 범위를 확대.
 

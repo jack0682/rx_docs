@@ -1,6 +1,6 @@
 # 02. 제품의 목적·기여·사업 가치
 
-현재 작업 단계: **설계 문서 작성·구체화**. 실제 코드·빌드 기반·저장소 구축은 설계 정리 후 후속 지시에 따라 진행한다. 진행 순서는 [설계 로드맵](/Users/ojaehong/RX_automation/rx_ws/docs/00_design_roadmap.md)을 따른다.
+현재 인계 상태: **소프트웨어 구현 초안 v0.1 마감(2026-09-13)**. 아래 내용은 선행 제품·설계 기준이며, 확인된 구현과 미결은 [초안 인계](implementation/draft_handoff.md)와 [핵심 미결](implementation/critical_open_items.md)을 기준으로 읽는다.
 
 [전체 문서 안내](/Users/ojaehong/RX_automation/rx_ws/README.md) · 고객 효과와 제품 투자에 대한 제안
 

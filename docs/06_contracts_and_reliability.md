@@ -2,7 +2,7 @@
 
 > 2026-09-10 현재 계약의 규범 기준은 [RX 계약·프로토콜 v1.0](contracts/v1.0/README.md)이다. 이 문서의 선행 제안·예시는 v1.0과 충돌하면 대체된다. 자사 기본 지원 의무·두 이미지 경계는 유지하며, 실제 구현·실물 검증은 별도다.
 
-현재 작업 단계: **설계 문서 작성·구체화**. 실제 코드·빌드 기반·저장소 구축은 설계 정리 후 후속 지시에 따라 진행한다. 진행 순서는 [설계 로드맵](/Users/ojaehong/RX_automation/rx_ws/docs/00_design_roadmap.md)을 따른다.
+현재 인계 상태: **소프트웨어 구현 초안 v0.1 마감(2026-09-13)**. 아래 내용은 선행 제품·설계 기준이며, 확인된 구현과 미결은 [초안 인계](implementation/draft_handoff.md)와 [핵심 미결](implementation/critical_open_items.md)을 기준으로 읽는다.
 
 [전체 문서 안내](/Users/ojaehong/RX_automation/rx_ws/README.md) · 상세 출발점: [첫 셀 계약 v0.2](/Users/ojaehong/RX_automation/rx_ws/docs/11_first_cell_contract.md)
 

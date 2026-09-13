@@ -1,0 +1,152 @@
+[
+  {
+    "id": "R01",
+    "requirement": "두 독립 레포·두 이미지·Rust ROS 비의존 core",
+    "product_status": "PARTIAL"
+  },
+  {
+    "id": "R02",
+    "requirement": "공통·셀 v1 schema와 strict codec, 정확한 enum/optional/정규화",
+    "product_status": "PARTIAL"
+  },
+  {
+    "id": "R03",
+    "requirement": "intent 동일성·key/activation/slot 유일성",
+    "product_status": "PARTIAL"
+  },
+  {
+    "id": "R04",
+    "requirement": "T1–T5, SQLite 단일 writer·WAL/FULL",
+    "product_status": "PARTIAL"
+  },
+  {
+    "id": "R05",
+    "requirement": "Host PREPARED/SEND_ENTERED/VOIDED 및 별도 evidence journal",
+    "product_status": "PARTIAL"
+  },
+  {
+    "id": "R06",
+    "requirement": "결과/지식/무결성/자원 처분 분리",
+    "product_status": "PARTIAL"
+  },
+  {
+    "id": "R07",
+    "requirement": "grant/fence/epoch/permit와 native gate",
+    "product_status": "PARTIAL"
+  },
+  {
+    "id": "R08",
+    "requirement": "조건 평가·관측 age/source/단위·세대",
+    "product_status": "PARTIAL"
+  },
+  {
+    "id": "R09",
+    "requirement": "RunMandate·part/operation 예산·activation/checkpoint",
+    "product_status": "PARTIAL"
+  },
+  {
+    "id": "R10",
+    "requirement": "개입·절차·복구·재시작·비운전 종료",
+    "product_status": "PARTIAL"
+  },
+  {
+    "id": "R11",
+    "requirement": "여러 셀의 장비·제어기·소재 지지 자원 공유",
+    "product_status": "PARTIAL"
+  },
+  {
+    "id": "R12",
+    "requirement": "고주기 stream latest-only·expiry·단일 consumer",
+    "product_status": "OPEN"
+  },
+  {
+    "id": "R13",
+    "requirement": "제품군+모델/모드 profile·필수 자사 지원표",
+    "product_status": "PARTIAL"
+  },
+  {
+    "id": "R14",
+    "requirement": "선언형 공정·현장 binding·resolved plan·BT 변환",
+    "product_status": "PARTIAL"
+  },
+  {
+    "id": "R15",
+    "requirement": "독립 검증 패키지·유형별 권한·변경 영향",
+    "product_status": "PARTIAL"
+  },
+  {
+    "id": "R16",
+    "requirement": "HTTP/gRPC 동일 application·mTLS/현장 계정/단말",
+    "product_status": "PARTIAL"
+  },
+  {
+    "id": "R17",
+    "requirement": "일관 snapshot·SSE·권한별 UI projection",
+    "product_status": "PARTIAL"
+  },
+  {
+    "id": "R18",
+    "requirement": "시각적 공정 편집·새 초안·검증·비교·변환",
+    "product_status": "PARTIAL"
+  },
+  {
+    "id": "R19",
+    "requirement": "운영/실적/조건/개입/복구 화면",
+    "product_status": "PARTIAL"
+  },
+  {
+    "id": "R20",
+    "requirement": "구성·검증·배포·지원·계정/단말 화면",
+    "product_status": "PARTIAL"
+  },
+  {
+    "id": "R21",
+    "requirement": "등록된 외부 UI 패널·제한된 메시지 API",
+    "product_status": "OPEN"
+  },
+  {
+    "id": "R22",
+    "requirement": "프로세스·권한·volume·network·variant 구성",
+    "product_status": "PARTIAL"
+  },
+  {
+    "id": "R23",
+    "requirement": "정상 종료·부분 장애·제한 재시작",
+    "product_status": "PARTIAL"
+  },
+  {
+    "id": "R24",
+    "requirement": "호스트 관리 도구·고정 작업·유지보수 journal",
+    "product_status": "PARTIAL"
+  },
+  {
+    "id": "R25",
+    "requirement": "백업·복원·binary rollback 구별",
+    "product_status": "PARTIAL"
+  },
+  {
+    "id": "R26",
+    "requirement": "자사 5개 필수 source 및 전이 의존 lock",
+    "product_status": "PARTIAL"
+  },
+  {
+    "id": "R27",
+    "requirement": "모의 환경과 실장비 접근 분리",
+    "product_status": "PARTIAL"
+  },
+  {
+    "id": "R28",
+    "requirement": "통합 시험·판정·독립 oracle·증거 반출",
+    "product_status": "PARTIAL"
+  },
+  {
+    "id": "R29",
+    "requirement": "납품/운영교육/인건비·지원 공수 측정 구조",
+    "product_status": "OPEN"
+  },
+  {
+    "id": "R30",
+    "requirement": "첫 현장 미확정 값 및 실제 commissioning 경계",
+    "product_status": "FIELD_BLOCKED"
+  }
+]

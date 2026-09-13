@@ -1,0 +1,21 @@
+    Blocking waiting for file lock on build directory
+   Compiling rx-executor v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-executor)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 5.37s
+     Running tests/recovery_inspect.rs (target/debug/deps/recovery_inspect-272c80e544431402)
+
+running 5 tests
+test owner_conflict_symlink_parent_and_size_limit_fail_without_source_writes ... ok
+test missing_header_wrong_identity_and_missing_writer_lock_are_never_initialized ... ok
+test preparing_never_initializes_or_attaches_and_creation_loss_is_rejected ... ok
+test current_pending_stop_is_inspected_twice_without_source_change_or_resolution ... ok
+test crash_style_wal_copy_is_included_without_touching_the_retained_source ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.10s
+
+     Running tests/recovery_wal_corruption.rs (target/debug/deps/recovery_wal_corruption-320acad13660ee6f)
+
+running 1 test
+test invalid_assignment_wal_header_cannot_hide_committed_attachment_and_pending_requests ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s
+

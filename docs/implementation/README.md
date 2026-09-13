@@ -24,6 +24,8 @@
 
 ## 현재 상태
 
+phase80에서는 S 제품 실행파일에 원장을 바꾸지 않는 오프라인 복구 점검을 연결했다. 실제 미완료 E 원장 두 번 조회, 원본 파일8개 불변, P/H/native 무변경과 기존 두 컨테이너 소재2개 회귀를 검증했다. 손상된 WAL을 무시해 미완료 기록이 없는 것처럼 보이던 결함도 실제 반례로 수정했다. S 전체259개·Linux CLI/WAL 검사와 정적 검사가 통과했으며 새 등록·자원 처분·명시 재개는 후속이다. [phase80 증거](../../references/implementation/phase80_checks.json).
+
 phase79까지 구현 중이다. 관리자 승인에 따른 Host 복구 조회 연결을 실제 API/브라우저로 검증했고, 원래 미확정 작업의 native 효과1회·결과 조회·전체 evidence 전달과 제한 보존을 별도 fixture로 확인했다. native 성공을 회수해도 후조건 연속성이 없으면 전체 작업은 UNKNOWN/NONE으로 유지한다. 실제 전송 설정 누락과 UI CSP probe를 수정했으며 P390개·S247개·UI49개 및 최신 두 컨테이너 소재2개 회귀를 통과했다. 운전 등록 rebind·새 자격/명시 재개·전체 복원·실물 지원은 후속이다. [phase79 증거](../../references/implementation/phase79_checks.json).
 
 구현 중이다. phase77에서 실제 두 제품 이미지·두 운전 컨테이너의 새 설치 → 서명 공정 반입/독립 역할 승인 → 구성 적용/재검증/자격 활성화 → 등록 단말 UI 시작 → 소재2개/작업2개 완료·인계 → 동일 실행기 Idle 복귀 → 협력 종료를 FILE_SIMULATION으로 검증했다. P 기록과 Host의 별도 파일 동작 원장을 대조했고, StartRun 응답 유실 뒤 같은 요청을 회수했다. S supervisor가 status·Host·Executor를 직접 기동하고 역순으로 종료했으며 각 guarded child의 exit0와 동일 instance/PID/원문 digest의 STOPPED가 일치했다. P 전체342개·S 전체245개, Linux supervisor27개·별도 Host/상태/실행기 경계와 양쪽 정적 검사가 통과했다. 공개 서명 보고서와 참조 자료56개도 원문·hash로 보존한다. P의 종료 코드2는 미설정 셀 차단 시험/Host fence의 잔여 attention이며 전체 현장 종료 성공을 뜻하지 않는다. 실물 셀은 NOT_COMMISSIONED다. 다음 우선순위는 실제 P/Host 재시작 후 제한을 보존한 재연결·명시 복구/재개, 설치 교체·복원이며 R01–R30의 미완료 범위를 유지한다. 상세 범위는 [phase77 기록](../../references/implementation/phase77_checks.json)에 있다.

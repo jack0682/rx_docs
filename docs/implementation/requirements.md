@@ -52,3 +52,9 @@ R05/R07/R08/R10/R23/R28에 대해 같은 저장소의 P-only 재시작 후 유�
 R03/R04/R05/R06/R07/R08/R10/R16/R19/R23/R28에 대해 최초 연결 불변 근거, 현재 관리자/단말/CAS 승인, 원래 Fence/outbox 회수, 실제 source/configuration 검증과 제한을 보존하는 RECOVERY_ONLY 통신을 연결했다. 실제 API/브라우저 응답 유실 회수와 별도 native fixture의 원래 UNKNOWN operation 조회를 검증했다. native 성공 capture를 회수해도 후조건 연속성이 없으면 Work UNKNOWN/NONE·QUARANTINED를 유지하며 반복 조회로 native 실행·허가·part 완료를 만들지 않는다. 최초 전송 지연 및 CSP probe의 실제 결함을 수정하고 계약/정책을 보존했다.
 
 [phase79 증거](../../references/implementation/phase79_checks.json)는 실제 제품 이미지와 별도 test fixture의 범위를 분리한다. 이 단계는 operating Host/E rebind, 새 자격·명시 재개, 실제 Host/source 교체, 전체 복원/장기 운전·실물 qualification을 완료하지 않는다. 관련 행은 PARTIAL을 유지한다. E exit1의 미완료 stop intent와 P exit2의 attention도 인수 한계로 보존한다.
+
+## phase80 원장을 바꾸지 않는 실행기 점검
+
+R04/R09/R10/R23/R24/R25/R28에 대해 제품 실행파일의 오프라인 recovery-inspect, 기존 owner/header/creation/원문/history 검증, bounded copy-only DB/WAL 읽기와 원본 불변을 연결했다. 손상된 WAL이 미완료 기록을 숨기는 실제 반례를 보완하고, stale-SHM 아래 최신 committed WAL을 회수하는 대조를 추가했다. 실제 종료된 E의 PENDING/attachment를 두 번 읽어도 원문·mtime·P/H/native 상태가 그대로임을 확인했다. [phase80 증거](../../references/implementation/phase80_checks.json).
+
+이는 새 E 등록·원 정리 요청의 성공 처리·운전 등록 rebind·복원/재개를 완료한 것이 아니다. 정상 재사용/미완료 WAL tail 중 판정 불명은 명시 거부하며 전체 파일 rollback 검출도 주장하지 않는다. 각 행의 전체 요구는 PARTIAL로 유지한다.

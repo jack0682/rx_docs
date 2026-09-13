@@ -1,0 +1,1 @@
+{"body":{"command":{"cell":"cell/a","change":"e4581888-b286-4e6b-8ff8-6819be70fe36","expected":"4","plan_digest":"95f800c4f2b299139ad2ee4b0ce98faab067c3b77fe60bcacc063bc3e813fb14"},"request_key":"ea4cb5b4-b475-4d60-85e1-a876a499c32e"},"path":"/api/v1/process-change/configure-hosts"}

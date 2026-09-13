@@ -1,0 +1,4 @@
+    Checking rx-executor v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-executor)
+    Checking rx-device-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-device-package)
+    Checking rx-host v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-host)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 5.26s

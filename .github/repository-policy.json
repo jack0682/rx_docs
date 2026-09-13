@@ -1,0 +1,5 @@
+{
+  "schema": "rx.repository-content-policy.v1",
+  "language": "mixed",
+  "exclude_ai_artifacts": true
+}

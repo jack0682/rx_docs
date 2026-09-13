@@ -1,1 +1,0 @@
-{"key":"delivery-package-signer","message_digest":"e4b260b12e440121b0a9b0e84bc5a8e4050c844b31ce6b63f64d87b50289dc5e","public_key":"6e32c19741f0af8260612ae99fd13d8a38944722e08964dd239738f552a6153b","report_digest":null,"schema":"rx.delivery-test-signature-metadata.v1","signature_sha256":"af0c177afba1ca2fc273b22a457ecfb90b590ffed499b7cb5341b87a341a9584","test_only":true}

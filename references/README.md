@@ -1,15 +1,16 @@
-# 기존 자료 안내
+# 근거와 이전 기록
 
-새 설계 작업본은 `/Users/ojaehong/RX_automation/rx_ws/docs`에서 관리한다. 기존 `/Users/ojaehong/research_RX` 자료는 원본·조사 근거로 유지한다.
+현재 프로젝트의 목표·규범·미결은 [문서 입구](../README.md)에서 읽는다. 2026-09-14 저장소 정비에서 과거 조사·장비 자료·소스 스냅샷·실행 로그를 현재 트리의 요구사항과 분리했다. 원문은 변경하지 않고 Git 이력의 아래 고정 위치에 보존한다.
 
-- [레이저 PLC 참고](laser_plc_interface.md): Q03UDVCPU와 CC-Link, 실제 신호·통신의 미결 사항.
-- [MCT-2 사진 참고](mct2_photo_identification.md): Siemens 구성과 FANUC HMI의 다른 장비 정정.
-- [원본 문서 대응표](import_manifest.json): 새 공간에 가져온 설계 문서의 출처.
-- [스택 선택을 위한 자사 코드 조사](stack_research_2026-09-09.md): 다섯 자사 레포의 실제 의존·컨테이너 구성과 언어 선택 근거.
-- [controller 구성 목록](own_controller_inventory_2026-09-09.json), [하드웨어 구성 목록](own_hardware_inventory_2026-09-09.json): 기본 지원표의 모델·모드·연결 근거. 코드 읽기이며 ROS 기동·실물 검증 결과는 아니다.
-- [제조사 인터페이스 심층 조사](/Users/ojaehong/research_RX/RX_first_cell_interface_research_v1.0.md).
-- [출처·주장 대장](/Users/ojaehong/research_RX/research/rx_first_cell_interfaces_2026-09-09/source_claim_ledger.md).
+| 자료 | 고정 원본 |
+|---|---|
+| 전체 조사·검증 자료 | [references 원본](https://github.com/jack0682/rx_docs/tree/6111a7d1dcf33052f38c3e67c6585aec2b44df3c/references) |
+| 초안 마감·인계 | [인계 원본](https://github.com/jack0682/rx_docs/blob/6111a7d1dcf33052f38c3e67c6585aec2b44df3c/docs/implementation/draft_handoff.md) |
+| 당시 핵심 미결 | [미결 원본](https://github.com/jack0682/rx_docs/blob/6111a7d1dcf33052f38c3e67c6585aec2b44df3c/docs/implementation/critical_open_items.md) |
+| 당시 요구 R01–R30 | [요구 추적 원본](https://github.com/jack0682/rx_docs/blob/6111a7d1dcf33052f38c3e67c6585aec2b44df3c/docs/implementation/requirements.md) |
+| 마지막 모의 인수 결과 | [결과 원본](https://github.com/jack0682/rx_docs/blob/6111a7d1dcf33052f38c3e67c6585aec2b44df3c/references/implementation/draft-v0.1-final-acceptance/result.json) |
+| 규범 작성의 조사 근거 | [공통 계약 조사](https://github.com/jack0682/rx_docs/blob/6111a7d1dcf33052f38c3e67c6585aec2b44df3c/references/contract_research_2026-09-10/research_report.md) · [셀 운영 조사](https://github.com/jack0682/rx_docs/blob/6111a7d1dcf33052f38c3e67c6585aec2b44df3c/references/cell_operation_research_2026-09-10/research_and_decisions.md) |
 
-제조사 PDF·원본 사진·코드 스냅샷의 대용량 보존본은 기존 조사 디렉토리를 참조한다. 새 작업 공간이 외부 참조까지 모두 복사한 독립 배포 묶음인 것은 아니다.
+이전 시험의 통과는 해당 commit·이미지·환경에만 적용한다. 제조사 중립 구성, 새 서비스 또는 도시 규모의 실행 결과로 이름을 바꾸거나 재사용하지 않는다. 원문에 있는 회사·장비·현장명과 저작권·라이선스 고지는 당시 자료의 출처다. 현재 프로젝트의 필수 지원 목록이나 소유권 주장이 아니다.
 
-과거 자료에 있는 코드 조기 구현 계획보다 현재의 설계 우선 지침을 적용한다. 실제 장비 지원과 동작 검증이 완료됐다는 의미로 자료를 사용하지 않는다.
+이전 원본은 `codex/initial-draft`와 위 고정 commit에 남으며 Git 역사는 다시 작성하지 않는다. 정비 직전의 미커밋 문서까지 포함한 로컬 보존 사본 정보는 [보존 기록](archive_manifest.json)에 있다. 새 검증은 실행한 commit, 구성, 명령, 결과, 한계를 기록한 새 증거로 추가한다.

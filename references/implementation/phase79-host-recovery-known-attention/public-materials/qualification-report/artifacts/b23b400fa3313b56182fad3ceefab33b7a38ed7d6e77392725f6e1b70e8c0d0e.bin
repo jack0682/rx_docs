@@ -1,1 +1,0 @@
-{"area":"SOFTWARE","evidence":"external harness must supply actual source-backed artifacts; exporter generates no verdict","requirement":"Actual signed-package S compile/review and P source verification; preserve command/output identities","schema":"rx.delivery-criterion.v1"}

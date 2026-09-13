@@ -1,1 +1,0 @@
-{"body":{"command":{"refresh":false,"target":{"cell":"cell/a","change":"a0075319-bbbd-4ec6-b3fc-1713674dbc84","expected":"3","plan_digest":"18dc4fffdea7d367eb813b10dcb54007ea634020f7e1a0cb934efe23e15ef3da"}},"request_key":"9d531cea-591c-41e5-b74f-e8782c6a4a51"},"path":"/api/v1/process-change/prepare"}

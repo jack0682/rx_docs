@@ -1,6 +1,0 @@
-   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol)
-    Checking rx-solution-catalog v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-solution-catalog)
-    Checking rx-process v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-process)
-   Compiling rx-host v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-host)
-    Checking rx-executor v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-executor)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 5.83s

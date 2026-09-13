@@ -1,5 +1,0 @@
-Traceback (most recent call last):
-  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_platform_image.py", line 33, in <module>
-    assert health and health['writer_available'] and health['admission_open'],health
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: None

@@ -1,5 +1,0 @@
-   Compiling rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-process-contract)
-   Compiling rx-process v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-process)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.02s
-     Running `target/debug/rx-process-compile examples/process/material-supply.source.json examples/process/material-supply.bindings.json /var/folders/lb/p5jhj4751yq56zx_891wm0th0000gn/T/rx-bt-fixture-e1x0pab9/compiled`
-Compiled process artifacts. No device execution or qualification granted.

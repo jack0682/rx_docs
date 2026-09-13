@@ -1,7 +1,0 @@
-{
-  "status": "PASS",
-  "fixture": "unaltered phase32 archived SDK",
-  "self_integrity": "accepted",
-  "source_sync": "correctly rejected",
-  "diagnostic": "SDK is stale relative to platform sources:\ncrates/rx-storage/migrations/0004.sql\ncrates/rx-storage/migrations/0005.sql\ncrates/rx-storage/src/lib.rs"
-}

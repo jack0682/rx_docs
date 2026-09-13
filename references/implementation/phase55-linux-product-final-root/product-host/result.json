@@ -1,1 +1,0 @@
-{"fault_injection_location":"none in raw-client case","host_runtime":"rx-hostd","native_effects":0,"real_mtls":true,"real_shared_clock":true,"reply_lost_after_commit":false,"restart_not_qualified":true,"same_request_recovered":true,"server_fault_injection":false,"status":"PASS"}

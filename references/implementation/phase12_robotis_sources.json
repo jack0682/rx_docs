@@ -1,9 +1,0 @@
-{
-  "schema": "rx.catalog-source-check.v1",
-  "status": "PASS",
-  "mandatory_repositories": 5,
-  "profiles": 22,
-  "unique_source_files": 22,
-  "catalog_sha256": "85061164b6c12055c692edd43ab12323e85ea8bbfcc00420a7edc7c55f21543a",
-  "scope": "Pinned Git commit and source file identity only; not build, control behavior, image or hardware qualification."
-}

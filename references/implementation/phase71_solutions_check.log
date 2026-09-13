@@ -1,8 +1,0 @@
-    Checking rx-process-contract v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-process-contract)
-   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol)
-   Compiling rx-host v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-host)
-    Checking rx-process v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-process)
-    Checking rx-process-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-process-package)
-    Checking rx-executor v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-executor)
-    Checking rx-device-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-device-package)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 8.53s

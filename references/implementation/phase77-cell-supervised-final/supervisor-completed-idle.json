@@ -1,1 +1,0 @@
-{"observed_idle_seconds_at_least":1,"same_executor_instance":"5b8e0913-05a5-44e9-a058-7eed4f717b16","schema":"rx.delivery-resident-idle.v1","status":{"active":null,"attachment":null,"completed_runs":"1","detail":null,"phase":"IDLE","run":null,"session":"01a0975a-4e25-72bf-a4c6-05a886bbea50"},"supervisor_alive":true}

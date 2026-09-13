@@ -1,1 +1,0 @@
-{"conditions":{},"entry":"main","flows":[{"id":"main","nodes":[{"body":{"binding":"load","kind":"OPERATION"},"id":"supply-step"}],"root":"supply-step"}],"process":"test/proposed-tending","schema":"rx.process-source.v1"}

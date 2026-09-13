@@ -1,5 +1,0 @@
-    Checking tokio v1.53.1
-    Checking rx-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-package)
-    Checking rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
-    Checking rx-runtime v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-runtime)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.50s

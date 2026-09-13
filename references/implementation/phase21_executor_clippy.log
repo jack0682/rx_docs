@@ -1,7 +1,0 @@
-    Checking tonic v0.14.6
-    Checking rx-ports v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-ports)
-    Checking rx-storage v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-storage)
-    Checking tonic-prost v0.14.6
-    Checking rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-protocol)
-    Checking rx-executor v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-executor)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 2.35s

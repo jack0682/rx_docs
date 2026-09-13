@@ -1,8 +1,0 @@
-{
-  "reference": "phase59_checks.json",
-  "changed_prior_inventory": [
-    "rx-solutions/docker/Solutions.Dockerfile"
-  ],
-  "rust_sources_sdk_and_ui_unchanged": true,
-  "rust_tests_rerun": false
-}

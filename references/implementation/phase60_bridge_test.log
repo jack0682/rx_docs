@@ -1,3 +1,0 @@
-[1/2] Building CXX object CMakeFiles/rx-ros-jtc-bridge.dir/bridge.cpp.o
-[2/2] Linking CXX executable rx-ros-jtc-bridge
-{"status": "PASS", "cases": 12}

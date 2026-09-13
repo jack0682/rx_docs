@@ -1,1 +1,0 @@
-{"body":{"command":{"expected_cells":{"cell/a":"9"},"expected_context":"116810d469b8759364b419d625cca58e44985aab4926aebc46befe522cff29c8","host":"host/sim","origin":"cell/a"},"request_key":"dcbc9a85-dc9e-40d7-9830-5cd664386962"},"path":"/api/v1/host-recoveries"}

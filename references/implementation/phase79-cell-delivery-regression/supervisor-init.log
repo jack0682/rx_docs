@@ -1,1 +1,0 @@
-{"digest":"e5f31a220b48aa2e89f209c62a5ed36d8b51d66d363e80d2ced3c6c2463edfe8","steps":[{"program":"rx/service/host","role":"HOST","instance":"9ab5a83a-8081-4b93-9b18-3b577208a162","phase":"COMPLETED","exit_code":0,"error":null},{"program":"rx/service/executor","role":"EXECUTOR","instance":"85b5f7d8-b329-413b-aec1-c37ad1242f6d","phase":"COMPLETED","exit_code":0,"error":null}]}

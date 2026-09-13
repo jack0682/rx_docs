@@ -1,1 +1,0 @@
-{"backend":"FILE_SIMULATION","condition_id":"sim/ready","dispatch_permit_validity_ns":"1000000000","dispatch_window_scope":"FILE_SIMULATION_ONLY","environment":"SIMULATION","native_result":{"schema":"rx.sim.completed.v1","success_code":"0"},"physical_device":null,"ready_source":"ready","schema":"rx.device-profile.v1"}

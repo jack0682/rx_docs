@@ -46,3 +46,9 @@ R01/R14/R15/R16/R19/R22/R23/R27/R28에 대해 실제 P/S 두 이미지·두 운�
 ## phase78 증거 통신 재접속
 
 R05/R07/R08/R10/R23/R28에 대해 같은 저장소의 P-only 재시작 후 유휴 H evidence session/cell 협상과 반복 remote probe를 연결했다. 기존 이미지 실패와 새 이미지 성공을 실제 P/H로 대조하며 같은 Host boot/journal·operating 등록·기존 제한·through0을 보존한다. source 연속성, operating rebind·자격 복원·생산 재개는 미완료다. 빈 probe의 감사 기록 비용과 장기 보존/부하는 R17/R28에 남기며, 관련 행을 전체 VERIFIED로 승격하지 않는다. [phase78 증거](../../references/implementation/phase78_checks.json).
+
+## phase79 명시적인 Host 복구 통신
+
+R03/R04/R05/R06/R07/R08/R10/R16/R19/R23/R28에 대해 최초 연결 불변 근거, 현재 관리자/단말/CAS 승인, 원래 Fence/outbox 회수, 실제 source/configuration 검증과 제한을 보존하는 RECOVERY_ONLY 통신을 연결했다. 실제 API/브라우저 응답 유실 회수와 별도 native fixture의 원래 UNKNOWN operation 조회를 검증했다. native 성공 capture를 회수해도 후조건 연속성이 없으면 Work UNKNOWN/NONE·QUARANTINED를 유지하며 반복 조회로 native 실행·허가·part 완료를 만들지 않는다. 최초 전송 지연 및 CSP probe의 실제 결함을 수정하고 계약/정책을 보존했다.
+
+[phase79 증거](../../references/implementation/phase79_checks.json)는 실제 제품 이미지와 별도 test fixture의 범위를 분리한다. 이 단계는 operating Host/E rebind, 새 자격·명시 재개, 실제 Host/source 교체, 전체 복원/장기 운전·실물 qualification을 완료하지 않는다. 관련 행은 PARTIAL을 유지한다. E exit1의 미완료 stop intent와 P exit2의 attention도 인수 한계로 보존한다.

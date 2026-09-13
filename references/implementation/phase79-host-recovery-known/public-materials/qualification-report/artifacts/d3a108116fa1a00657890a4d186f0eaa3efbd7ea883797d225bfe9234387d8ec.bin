@@ -1,0 +1,1 @@
+{"area":"RECOVERY","evidence":"external harness must supply actual source-backed artifacts; exporter generates no verdict","requirement":"Inspect exact sealed recovery test evidence and current journal continuity; no claim from empty journals alone","schema":"rx.delivery-criterion.v1"}

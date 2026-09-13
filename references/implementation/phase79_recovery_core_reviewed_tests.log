@@ -1,0 +1,49 @@
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 8.65s
+     Running tests/transactions.rs (target/debug/deps/transactions-2d3d144f384ba793)
+
+running 16 tests
+test configuration_dispatch_tests::host_recovery_tests::recovery_late_ack_survives_all_cell_cas_loss_and_never_changes_registration ... FAILED
+test configuration_dispatch_tests::host_recovery_tests::recovery_history_is_discoverable_in_bounded_host_pages_without_partial_cell_access ... FAILED
+test configuration_dispatch_tests::host_recovery_tests::recovery_external_payload_cannot_inject_transport_observations_or_operating_actions ... ok
+test configuration_dispatch_tests::host_recovery_tests::recovery_proposal_reply_is_recovered_without_fresh_host_data_and_still_checks_key_and_actor ... ok
+test configuration_dispatch_tests::host_recovery_tests::recovery_shared_host_requires_terminal_rights_for_every_affected_cell ... FAILED
+test configuration_dispatch_tests::host_recovery_tests::recovery_commit_reply_retry_cannot_hide_a_new_source_generation_after_historical_success ... ok
+test configuration_dispatch_tests::host_recovery_tests::recovery_missing_baseline_or_changed_identity_never_autogenerates_continuity ... ok
+test configuration_dispatch_tests::host_recovery_tests::recovery_sender_reapproval_keeps_original_fence_and_old_runtime_cannot_resume ... ok
+test configuration_dispatch_tests::host_recovery_tests::recovery_initial_unapplied_and_normal_renewal_preserve_dynamic_authority_while_restoring_real_false_fact ... ok
+test configuration_dispatch_tests::host_recovery_tests::recovery_stored_actor_roundtrip_retains_identifiers_without_restoring_session_authority ... ok
+test configuration_dispatch_tests::host_recovery_tests::recovery_known_unknown_allows_original_lookup_and_receipt_only_without_new_authorize_or_release ... ok
+test configuration_dispatch_tests::host_recovery_tests::recovery_ambiguous_current_fences_and_page_overflow_never_select_a_partial_candidate_set ... ok
+test configuration_dispatch_tests::host_recovery_tests::recovery_adopts_current_original_outbox_and_commits_marker_and_exact_ack_atomically ... ok
+test configuration_dispatch_tests::host_recovery_tests::recovery_lost_commits_keep_original_proposal_fence_and_ack_without_replaying_authority ... ok
+test configuration_dispatch_tests::host_recovery_tests::recovery_normal_apply_after_initial_none_uses_current_application_proof_instead_of_initial_configuration ... ok
+test configuration_dispatch_tests::host_recovery_tests::recovery_source_clock_configuration_and_unknown_pending_changes_cannot_be_promoted ... ok
+
+failures:
+
+---- configuration_dispatch_tests::host_recovery_tests::recovery_late_ack_survives_all_cell_cas_loss_and_never_changes_registration stdout ----
+
+thread 'configuration_dispatch_tests::host_recovery_tests::recovery_late_ack_survives_all_cell_cas_loss_and_never_changes_registration' (11999288) panicked at crates/rx-application/tests/support/host_recovery_tests.rs:170:41:
+called `Result::unwrap()` on an `Err` value: Integrity("link fence receipt conflict")
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- configuration_dispatch_tests::host_recovery_tests::recovery_history_is_discoverable_in_bounded_host_pages_without_partial_cell_access stdout ----
+
+thread 'configuration_dispatch_tests::host_recovery_tests::recovery_history_is_discoverable_in_bounded_host_pages_without_partial_cell_access' (11999285) panicked at crates/rx-application/tests/support/host_recovery_tests.rs:170:41:
+called `Result::unwrap()` on an `Err` value: Integrity("link fence receipt conflict")
+
+---- configuration_dispatch_tests::host_recovery_tests::recovery_shared_host_requires_terminal_rights_for_every_affected_cell stdout ----
+
+thread 'configuration_dispatch_tests::host_recovery_tests::recovery_shared_host_requires_terminal_rights_for_every_affected_cell' (11999294) panicked at crates/rx-application/tests/support/host_recovery_tests.rs:170:41:
+called `Result::unwrap()` on an `Err` value: Integrity("link fence receipt conflict")
+
+
+failures:
+    configuration_dispatch_tests::host_recovery_tests::recovery_history_is_discoverable_in_bounded_host_pages_without_partial_cell_access
+    configuration_dispatch_tests::host_recovery_tests::recovery_late_ack_survives_all_cell_cas_loss_and_never_changes_registration
+    configuration_dispatch_tests::host_recovery_tests::recovery_shared_host_requires_terminal_rights_for_every_affected_cell
+
+test result: FAILED. 13 passed; 3 failed; 0 ignored; 0 measured; 221 filtered out; finished in 0.77s
+
+error: test failed, to rerun pass `-p rx-application --test transactions`

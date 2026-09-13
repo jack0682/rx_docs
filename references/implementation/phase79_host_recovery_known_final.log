@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_host_recovery_known.py", line 628, in <module>
+    main()
+    ~~~~^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_host_recovery_known.py", line 610, in main
+    exercise(docker, materials, final, bundle, p_image, s_image, port, validator,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             args.release_evidence.resolve(), 'independent',
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             start_services=scenario.start_services, after_commissioning=scenario.after_commissioning)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/cell_delivery/installation.py", line 96, in exercise
+    run_commissioning(context)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/cell_delivery/installation.py", line 123, in run_commissioning
+    run(context)
+    ~~~^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/cell_delivery/workflow.py", line 99, in run
+    c['after_commissioning'](c,active)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_host_recovery_known.py", line 510, in after_commissioning
+    executor_exit = self.stop(c['e'], (0, 2))
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_host_recovery_known.py", line 224, in stop
+    assert state['ExitCode'] in allowed, state
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'Status': 'exited', 'Running': False, 'Paused': False, 'Restarting': False, 'OOMKilled': False, 'Dead': False, 'Pid': 0, 'ExitCode': 1, 'Error': '', 'StartedAt': '2026-09-13T00:01:08.734950547Z', 'FinishedAt': '2026-09-13T00:01:24.242668804Z'}

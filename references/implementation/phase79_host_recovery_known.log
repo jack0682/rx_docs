@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_host_recovery_known.py", line 609, in <module>
+    main()
+    ~~~~^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_host_recovery_known.py", line 591, in main
+    exercise(docker, materials, final, bundle, p_image, s_image, port, validator,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             args.release_evidence.resolve(), 'independent',
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             start_services=scenario.start_services, after_commissioning=scenario.after_commissioning)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/cell_delivery/installation.py", line 96, in exercise
+    run_commissioning(context)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/cell_delivery/installation.py", line 123, in run_commissioning
+    run(context)
+    ~~~^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/cell_delivery/workflow.py", line 99, in run
+    c['after_commissioning'](c,active)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_host_recovery_known.py", line 469, in after_commissioning
+    assert final_work['operation']['outcome'] == 'SUCCEEDED' and evidence['id'] in final_work['operation']['evidence_ids']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

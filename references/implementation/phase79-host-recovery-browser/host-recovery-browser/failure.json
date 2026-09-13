@@ -1,0 +1,1 @@
+{"message":"Locator.select_option: Timeout 20000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"region\", name=\"Host 복구 조회 연결\", exact=True).get_by_label(\"현재 셀의 Host 선택\", exact=True)\n","screenshots":["failure.png"],"status":"FAIL","type":"TimeoutError"}

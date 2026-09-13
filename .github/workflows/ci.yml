@@ -37,7 +37,7 @@ jobs:
         run: python3 tools/check_repository.py
 
   ci:
-    name: CI
+    name: ${{ github.event_name == 'pull_request' && 'CI' || 'Branch CI' }}
     if: ${{ always() }}
     needs: [repository]
     runs-on: ubuntu-24.04

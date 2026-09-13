@@ -1,0 +1,96 @@
+{
+  "schema": "rx.host-transport-timing-comparison.v1",
+  "status": "OBSERVED",
+  "simulation_only": true,
+  "before_logs": [
+    "phase79-host-recovery-timing/rx-delivery-151ed9db49f4-p-original.log"
+  ],
+  "before_samples": [
+    {
+      "configuration_age_at_error_ns": 175755667,
+      "configuration_roundtrip_ns": 91925625,
+      "configuration_to_source_ns": 42000,
+      "source_age_at_error_ns": 83788042,
+      "source_capture_after_start_ns": 41770000
+    },
+    {
+      "configuration_age_at_error_ns": 166842041,
+      "configuration_roundtrip_ns": 81830625,
+      "configuration_to_source_ns": 38875,
+      "source_age_at_error_ns": 84972541,
+      "source_capture_after_start_ns": 42188041
+    },
+    {
+      "configuration_age_at_error_ns": 173229959,
+      "configuration_roundtrip_ns": 86500251,
+      "configuration_to_source_ns": 44458,
+      "source_age_at_error_ns": 86685250,
+      "source_capture_after_start_ns": 45021542
+    },
+    {
+      "configuration_age_at_error_ns": 164290584,
+      "configuration_roundtrip_ns": 82041042,
+      "configuration_to_source_ns": 129292,
+      "source_age_at_error_ns": 82120250,
+      "source_capture_after_start_ns": 40802958
+    },
+    {
+      "configuration_age_at_error_ns": 163919041,
+      "configuration_roundtrip_ns": 81727125,
+      "configuration_to_source_ns": 74750,
+      "source_age_at_error_ns": 82117166,
+      "source_capture_after_start_ns": 40864416
+    },
+    {
+      "configuration_age_at_error_ns": 164761083,
+      "configuration_roundtrip_ns": 81529375,
+      "configuration_to_source_ns": 82083,
+      "source_age_at_error_ns": 83149625,
+      "source_capture_after_start_ns": 40945750
+    },
+    {
+      "configuration_age_at_error_ns": 171833458,
+      "configuration_roundtrip_ns": 81702167,
+      "configuration_to_source_ns": 33083,
+      "source_age_at_error_ns": 90098208,
+      "source_capture_after_start_ns": 41439625
+    },
+    {
+      "configuration_age_at_error_ns": 172011667,
+      "configuration_roundtrip_ns": 81665833,
+      "configuration_to_source_ns": 34334,
+      "source_age_at_error_ns": 90311500,
+      "source_capture_after_start_ns": 41907875
+    },
+    {
+      "configuration_age_at_error_ns": 166163000,
+      "configuration_roundtrip_ns": 83984250,
+      "configuration_to_source_ns": 36375,
+      "source_age_at_error_ns": 82142375,
+      "source_capture_after_start_ns": 40519750
+    },
+    {
+      "configuration_age_at_error_ns": 165316208,
+      "configuration_roundtrip_ns": 83185833,
+      "configuration_to_source_ns": 53417,
+      "source_age_at_error_ns": 82076958,
+      "source_capture_after_start_ns": 40939208
+    }
+  ],
+  "after_result": "phase79-host-recovery-nodelay/result.json",
+  "after_image": "sha256:b1bd68009f540e230fb082aa82d2e3ac2a3f7ad29e1212a4cb12fbbf1698cde0",
+  "after_solutions_image": "sha256:4905a3465cfc9524d55665ecf5096344cf86ce717ba0f236bdd64ded65ae4370",
+  "after_configuration_roundtrip_ns": 40791167,
+  "after_prepare_configuration_age_ns": 81770250,
+  "freshness_limit_ns": 100000000,
+  "change": "Custom pinned client explicitly sets TCP_NODELAY. Server-side incoming change is subsequent and not covered by this result.",
+  "interpretation": "Before first binding failed PREPARE_LINK/ContinuityUnproven with total age above the unchanged limit. After client change first binding and P-only recovery acceptance passed. This is one local simulation observation, not a field latency bound.",
+  "both_endpoints": {
+    "result": "phase79-host-recovery-final/result.json",
+    "platform_image": "sha256:1830a7ac22a91dd5d4b5e4dd8ea683e64e9d481f1f7b46fc7b80ae88f51e71c0",
+    "solutions_image": "sha256:7cde9c764866278a9028e3efa6b339fff172cc8331a743af8acf144803e1c780",
+    "configuration_roundtrip_ns": 642250,
+    "prepare_configuration_age_ns": 1299833,
+    "change": "Explicit TCP_NODELAY on pinned client and both P/H tonic incoming streams."
+  }
+}

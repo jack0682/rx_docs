@@ -1,0 +1,33 @@
+Traceback (most recent call last):
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/host_recovery_browser.py", line 477, in <module>
+    restart.main(exercise)
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_host_reconnect.py", line 220, in main
+    exercise(docker,materials,final,bundle,p_image,s_image,port,after_reconnect)
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_host_reconnect.py", line 178, in exercise
+    extension = after_reconnect({
+                ^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/host_recovery_browser.py", line 273, in exercise
+    panel = open_recovery()
+            ^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/host_recovery_browser.py", line 269, in open_recovery
+    panel.get_by_label("현재 셀의 Host 선택", exact=True).select_option(host)
+  File "/Users/ojaehong/RX_automation/rx_ws/.tools/browser-python/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 20069, in select_option
+    self._sync(
+  File "/Users/ojaehong/RX_automation/rx_ws/.tools/browser-python/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/.tools/browser-python/lib/python3.12/site-packages/playwright/_impl/_locator.py", line 633, in select_option
+    return await self._frame.select_option(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/.tools/browser-python/lib/python3.12/site-packages/playwright/_impl/_frame.py", line 814, in select_option
+    return await self._channel.send("selectOption", self._timeout, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/.tools/browser-python/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/.tools/browser-python/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.select_option: Timeout 20000ms exceeded.
+Call log:
+  - waiting for get_by_role("region", name="Host 복구 조회 연결", exact=True).get_by_label("현재 셀의 Host 선택", exact=True)
+

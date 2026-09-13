@@ -1,0 +1,1 @@
+{"body":{"command":{"expected_cells":{"cell/a":"4"},"expected_revision":"1","id":"01a09802-68e9-7656-a460-78597fe7d71a","proposal_digest":"c0b773cf44a3b664532a0e780b01f2dbb61d5f6957366b7949f0d2571319366a"},"request_key":"1a00c4ef-dd13-435d-9c7f-a30a3ebe0066"},"path":"/api/v1/host-recovery/approve"}

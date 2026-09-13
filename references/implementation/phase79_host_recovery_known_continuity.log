@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_host_recovery_known.py", line 625, in <module>
+    main()
+    ~~~~^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_host_recovery_known.py", line 607, in main
+    exercise(docker, materials, final, bundle, p_image, s_image, port, validator,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             args.release_evidence.resolve(), 'independent',
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             start_services=scenario.start_services, after_commissioning=scenario.after_commissioning)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/cell_delivery/installation.py", line 96, in exercise
+    run_commissioning(context)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/cell_delivery/installation.py", line 123, in run_commissioning
+    run(context)
+    ~~~^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/cell_delivery/workflow.py", line 99, in run
+    c['after_commissioning'](c,active)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_host_recovery_known.py", line 501, in after_commissioning
+    physical = main_cell(final_overview, c['delivery']['negative_cell'])['cell']['value']
+               ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/cell_delivery/workflow.py", line 13, in main_cell
+    return next(value for value in overview['cells'] if value['cell']['value']['id']==cell)
+StopIteration

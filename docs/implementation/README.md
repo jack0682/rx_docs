@@ -24,6 +24,8 @@
 
 ## 현재 상태
 
+phase79까지 구현 중이다. 관리자 승인에 따른 Host 복구 조회 연결을 실제 API/브라우저로 검증했고, 원래 미확정 작업의 native 효과1회·결과 조회·전체 evidence 전달과 제한 보존을 별도 fixture로 확인했다. native 성공을 회수해도 후조건 연속성이 없으면 전체 작업은 UNKNOWN/NONE으로 유지한다. 실제 전송 설정 누락과 UI CSP probe를 수정했으며 P390개·S247개·UI49개 및 최신 두 컨테이너 소재2개 회귀를 통과했다. 운전 등록 rebind·새 자격/명시 재개·전체 복원·실물 지원은 후속이다. [phase79 증거](../../references/implementation/phase79_checks.json).
+
 구현 중이다. phase77에서 실제 두 제품 이미지·두 운전 컨테이너의 새 설치 → 서명 공정 반입/독립 역할 승인 → 구성 적용/재검증/자격 활성화 → 등록 단말 UI 시작 → 소재2개/작업2개 완료·인계 → 동일 실행기 Idle 복귀 → 협력 종료를 FILE_SIMULATION으로 검증했다. P 기록과 Host의 별도 파일 동작 원장을 대조했고, StartRun 응답 유실 뒤 같은 요청을 회수했다. S supervisor가 status·Host·Executor를 직접 기동하고 역순으로 종료했으며 각 guarded child의 exit0와 동일 instance/PID/원문 digest의 STOPPED가 일치했다. P 전체342개·S 전체245개, Linux supervisor27개·별도 Host/상태/실행기 경계와 양쪽 정적 검사가 통과했다. 공개 서명 보고서와 참조 자료56개도 원문·hash로 보존한다. P의 종료 코드2는 미설정 셀 차단 시험/Host fence의 잔여 attention이며 전체 현장 종료 성공을 뜻하지 않는다. 실물 셀은 NOT_COMMISSIONED다. 다음 우선순위는 실제 P/Host 재시작 후 제한을 보존한 재연결·명시 복구/재개, 설치 교체·복원이며 R01–R30의 미완료 범위를 유지한다. 상세 범위는 [phase77 기록](../../references/implementation/phase77_checks.json)에 있다.
 
 ROBOTIS position JTC의 Rust NativeAdapter는 trajectory 원본·controller session·최종 허가 유효기간 검사, 송신 전 영속 기록, 원래 UUID 결과 조회, 분쟁 보존과 child 종료 확인을 제공한다. S가 profile에 결합한 결과 대응표를 생성하고 P는 제조사 비의존 데이터로 성공·실패·취소를 판정한다. Template/Site에서 profile·허용 Intent·결과표와 공통 작업 선언을 작성하는 서명 패키지 도구, Host의 JTC_PACKAGE 검사·metadata 초기화, P의 선언 반입·보관/API/화면까지 연결했다. 제품용 Authority/lifecycle 제공자가 없어 JTC run은 거부한다. 제조사 검증·장비 검토 승인과 실제 셀 구성 변경, controller 교체 차단 및 물리 검증은 남아 있다.

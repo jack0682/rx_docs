@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/host_recovery_browser.py", line 477, in <module>
+    restart.main(exercise)
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_host_reconnect.py", line 220, in main
+    exercise(docker,materials,final,bundle,p_image,s_image,port,after_reconnect)
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_host_reconnect.py", line 178, in exercise
+    extension = after_reconnect({
+                ^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/host_recovery_browser.py", line 429, in exercise
+    assert not prohibited and not page_errors and not console_errors and not security_events and not external_resources
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

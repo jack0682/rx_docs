@@ -1,0 +1,20 @@
+   Compiling rx-host-client v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-host-client)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.23s
+     Running unittests src/lib.rs (target/debug/deps/rx_host_client-f147db6a25d895f3)
+
+running 12 tests
+test delivery::reconciliation::tests::unavailable_read_retries_but_broken_proof_and_revoked_authority_do_not ... ok
+test configuration_worker::tests::configuration_worker_propagates_writer_failure_and_never_contacts_host ... ok
+test connection::tests::closed_owner_while_waiting_for_producer_stops_without_connecting ... ok
+test observation::tests::maintained_monitor_does_not_hide_writer_failure_or_run_after_owner_disappears ... ok
+test delivery::diagnostic::tests::excludes_rpc_metadata_details_structured_bodies_and_request_identifiers ... ok
+test connection::diagnostic::tests::stage_and_typed_reason_survive_without_logging_remote_text ... ok
+test service_health::tests::a_relay_cannot_label_another_services_samples_with_its_owner ... ok
+test bootstrap::provenance_tests::credential_bearing_and_non_origin_endpoints_are_rejected_before_tls ... ok
+test delivery::diagnostic::tests::suppresses_only_consecutive_identical_diagnostics_and_keeps_writer_reason ... ok
+test configuration_worker::tests::configuration_worker_stops_while_a_writer_reply_is_pending ... ok
+test delivery::diagnostic::tests::bounds_the_complete_json_line_including_unicode_escaping_and_newline ... ok
+test observation::tests::maintained_monitor_polls_independently_and_obeys_owner_stop ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+

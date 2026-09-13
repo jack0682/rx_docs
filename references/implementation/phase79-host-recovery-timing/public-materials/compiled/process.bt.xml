@@ -1,0 +1,6 @@
+<root BTCPP_format="4" main_tree_to_execute="RXMain">
+  <!-- RX resolved process: 374532ca1dac691acf8a61a3b427b3d16c2127c5b6165920017ba6dfe9a2cb84 -->
+  <BehaviorTree ID="RXMain">
+    <RXOperation node_id="node/6cb2a0057389a716fbed3fbbcb0e32e8ca3cf3db788e308eff9b991bfb558511" binding="cycle"/>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,61 @@
+    Checking rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+error: this `if` statement can be collapsed
+  --> crates/rx-application/src/engine/host_recovery/fences.rs:51:9
+   |
+51 | /         if let Some(row) = tx.outbox(id)? {
+52 | |             if matches!(row.state, OutboxState::New | OutboxState::EmitEntered)
+53 | |                 && matches(&row, host, task)?
+...  |
+57 | |         }
+   | |_________^
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.98.0/index.html#collapsible_if
+   = note: `-D clippy::collapsible-if` implied by `-D warnings`
+   = help: to override `-D warnings` add `#[allow(clippy::collapsible_if)]`
+help: collapse nested if block
+   |
+51 ~         if let Some(row) = tx.outbox(id)?
+52 ~             && matches!(row.state, OutboxState::New | OutboxState::EmitEntered)
+53 |                 && matches(&row, host, task)?
+54 |             {
+55 |                 selected.push(id.clone());
+56 ~             }
+   |
+
+error: this `if` can be collapsed into the outer `match`
+   --> crates/rx-application/src/engine/host_recovery/receipts.rs:121:25
+    |
+121 |                         if work.operation.phase() == OperationPhase::Admitted { work.operation.sent().map_err(domain_error)?; }
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.98.0/index.html#collapsible_match
+    = note: `-D clippy::collapsible-match` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(clippy::collapsible_match)]`
+help: collapse nested if block
+    |
+120 ~                     ReceiptState::SendEntered | ReceiptState::NativeAccepted | ReceiptState::NativeRejected | ReceiptState::ResultCaptured
+121 ~                         if work.operation.phase() == OperationPhase::Admitted => { work.operation.sent().map_err(domain_error)?; }
+    |
+
+error: this `if` statement can be collapsed
+   --> crates/rx-application/src/engine/host_recovery.rs:470:13
+    |
+470 | /             if let Some(old) = &f.acknowledgment {
+471 | |                 if !same(old, &ack)? {
+472 | |                     return Err(StoreError::KeyConflict);
+473 | |                 }
+474 | |             }
+    | |_____________^
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.98.0/index.html#collapsible_if
+help: collapse nested if block
+    |
+470 ~             if let Some(old) = &f.acknowledgment
+471 ~                 && !same(old, &ack)? {
+472 |                     return Err(StoreError::KeyConflict);
+473 ~                 }
+    |
+
+error: could not compile `rx-application` (lib) due to 3 previous errors
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `rx-application` (lib test) due to 3 previous errors

@@ -1,0 +1,4 @@
+   Compiling rx-protocol v0.1.0 (/rx/rx-solutions/sdk/crates/rx-protocol)
+   Compiling rx-host v0.1.0 (/rx/rx-solutions/runtime/rx-host)
+   Compiling rx-solution-catalog v0.1.0 (/rx/rx-solutions/runtime/rx-solution-catalog)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 14.98s

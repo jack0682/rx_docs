@@ -1,0 +1,20 @@
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-application)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 9.48s
+     Running tests/transactions.rs (target/debug/deps/transactions-2d3d144f384ba793)
+
+running 12 tests
+test host_binding_baseline_tests::legacy_none_and_already_bound_missing_baseline_never_backfill_on_later_provenance ... ok
+test host_binding_baseline_tests::exact_initial_applied_context_is_preserved_without_claiming_activation ... ok
+test host_binding_baseline_tests::baseline_bound_cut_uses_fence_while_pre_fence_config_and_read_keep_their_lower_epoch ... ok
+test host_binding_baseline_tests::uri_pin_accepts_only_public_https_origin_without_credentials_or_request_data ... ok
+test host_binding_baseline_tests::missing_primary_baseline_is_integrity_when_pinned_bound_history_survives ... ok
+test host_binding_baseline_tests::historical_baseline_survives_renewal_and_later_registration_epoch_changes ... ok
+test host_binding_baseline_tests::only_new_normal_commit_creates_exact_immutable_baseline_and_initial_applied_none_is_valid ... ok
+test host_binding_baseline_tests::commit_body_and_reusable_transport_pin_changes_cannot_replace_the_original_baseline ... ok
+test host_binding_baseline_tests::missing_or_tampered_original_objects_and_reference_metadata_fail_historical_read ... ok
+test host_binding_baseline_tests::known_pinned_plan_cannot_downgrade_to_none_even_after_its_expiry ... ok
+test host_binding_baseline_tests::baseline_and_bound_transition_are_atomic_across_rollback_and_commit_response_loss ... ok
+test host_binding_baseline_tests::mismatched_actual_configuration_read_scope_and_time_never_prepare_a_baseline_plan ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 209 filtered out; finished in 0.18s
+

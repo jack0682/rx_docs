@@ -1,0 +1,45 @@
+   Compiling rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-api)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.24s
+     Running unittests src/lib.rs (target/debug/deps/rx_api-0f08231a12f4b7f6)
+
+running 7 tests
+test operator_ui::tests::bounds_manifest_before_loading_asset_bytes ... ok
+test operator_ui::tests::owns_exact_verified_bytes_and_requires_a_pinned_manifest ... ok
+test operator_ui::tests::acquisition_rejects_component_links_replaced_after_inventory ... ok
+test operator_ui::tests::rejects_symlink_roots_ancestors_assets_and_manifest ... ok
+test operator_ui::tests::rejects_unlisted_missing_tampered_and_oversized_files ... ok
+test operator_ui::tests::acquisition_rejects_replaced_fifos_without_waiting_for_a_writer ... ok
+test operator_ui::tests::strict_manifest_and_asset_namespace_reject_aliases_and_unsupported_inputs ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running tests/host_recovery.rs (target/debug/deps/host_recovery-1853e6f135e8ac9a)
+
+running 7 tests
+test writer_results_keep_their_existing_codes_and_transport_errors_are_sanitized ... ok
+test context_digests_are_computed_by_the_server_and_diagnostic_queries_cannot_claim_authority ... ok
+test exact_keys_cas_and_existing_operation_ids_reach_only_the_configured_service ... ok
+test proposal_response_matches_the_original_request_and_actor_even_when_diagnostic_blockers_change ... ok
+test recovery_requests_reject_extra_authority_material_and_reuse_csrf_policy ... ok
+test recovery_discovery_requires_current_role_bounds_and_forwards_the_exact_cursor ... ok
+test absence_is_reported_only_after_current_terminal_and_release_role_authentication ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.16s
+
+     Running unittests src/lib.rs (target/debug/deps/rx_host_client-f147db6a25d895f3)
+
+running 11 tests
+test delivery::reconciliation::tests::unavailable_read_retries_but_broken_proof_and_revoked_authority_do_not ... ok
+test service_health::tests::a_relay_cannot_label_another_services_samples_with_its_owner ... ok
+test connection::tests::closed_owner_while_waiting_for_producer_stops_without_connecting ... ok
+test configuration_worker::tests::configuration_worker_propagates_writer_failure_and_never_contacts_host ... ok
+test observation::tests::maintained_monitor_does_not_hide_writer_failure_or_run_after_owner_disappears ... ok
+test delivery::diagnostic::tests::excludes_rpc_metadata_details_structured_bodies_and_request_identifiers ... ok
+test bootstrap::provenance_tests::credential_bearing_and_non_origin_endpoints_are_rejected_before_tls ... ok
+test delivery::diagnostic::tests::suppresses_only_consecutive_identical_diagnostics_and_keeps_writer_reason ... ok
+test configuration_worker::tests::configuration_worker_stops_while_a_writer_reply_is_pending ... ok
+test delivery::diagnostic::tests::bounds_the_complete_json_line_including_unicode_escaping_and_newline ... ok
+test observation::tests::maintained_monitor_polls_independently_and_obeys_owner_stop ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+

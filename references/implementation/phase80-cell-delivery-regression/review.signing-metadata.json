@@ -1,0 +1,1 @@
+{"key":"delivery-review-signer","message_digest":"f0fafe3d279fbdf15f53b5007e81bc8ee2b71fa1cca9a52a33cec8aab29bf46e","public_key":"a6d2455ea3a5771aba9fcb037924114c92f9f325049f6b4269e739d9048bb869","report_digest":null,"schema":"rx.delivery-test-signature-metadata.v1","signature_sha256":"35578b9068b90f5b6c41165d9cdfbade891eda2cf9d1c92e4b3e63df495d5bfa","test_only":true}

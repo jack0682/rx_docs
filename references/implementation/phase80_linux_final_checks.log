@@ -1,0 +1,54 @@
+   Compiling rx-executor v0.1.0 (/rx/rx-solutions/runtime/rx-executor)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 31.88s
+     Running tests/cell_cli.rs (/build/debug/deps/cell_cli-15a7b5a1379a648a)
+
+running 15 tests
+test cell_configuration_rejects_run_visit_program_arguments_and_invalid_timing ... ok
+test deployment_file_symlinks_and_private_key_permissions_are_rejected ... ok
+test changed_configuration_and_pinned_bytes_cannot_reach_session_open ... ok
+test copied_installation_cannot_silently_change_its_root ... ok
+test guarded_status_validation_fails_before_executor_peer_registration ... ok
+test duplicate_and_root_alias_are_refused_before_session_open_then_cleanup_allows_reopen ... ok
+test init_pins_expected_identity_and_normalized_defaults_without_peer_registration ... ok
+test initialized_preparing_or_attached_run_file_loss_is_detected_before_new_peer_boot_registration ... ok
+test manifest_only_partial_installation_is_not_overwritten_or_connected ... ok
+test missing_manifest_empty_journal_and_changed_header_are_refused_before_connect ... ok
+test recovery_inspect_does_not_compete_with_service_or_store_owner ... ok
+test recovery_inspect_initialized_idle_store_is_deterministic_and_does_not_connect_or_modify_files ... ok
+test recovery_inspect_missing_or_corrupt_required_files_never_repairs_them ... ok
+test recovery_inspect_missing_root_does_not_initialize_a_service_or_connect ... ok
+test recovery_inspect_rejects_alias_root_and_changed_deployment_scope ... ok
+
+test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.95s
+
+     Running tests/recovery_inspect.rs (/build/debug/deps/recovery_inspect-5e829f38d9cccfc2)
+
+running 5 tests
+test owner_conflict_symlink_parent_and_size_limit_fail_without_source_writes ... ok
+test missing_header_wrong_identity_and_missing_writer_lock_are_never_initialized ... ok
+test preparing_never_initializes_or_attaches_and_creation_loss_is_rejected ... ok
+test current_pending_stop_is_inspected_twice_without_source_change_or_resolution ... ok
+test crash_style_wal_copy_is_included_without_touching_the_retained_source ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+
+     Running tests/recovery_wal_corruption.rs (/build/debug/deps/recovery_wal_corruption-55109dbcb4f8085f)
+
+running 2 tests
+test invalid_assignment_wal_header_cannot_hide_committed_attachment_and_pending_requests ... ok
+test stale_committed_shm_cannot_hide_later_complete_wal_commits_or_change_the_original_copy ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.13s
+
+    Checking rx-executor v0.1.0 (/rx/rx-solutions/runtime/rx-executor)
+error: using `chunks_exact` with a constant chunk size
+  --> runtime/rx-executor/src/journal/recovery/wal.rs:47:23
+   |
+47 |     for pair in bytes.chunks_exact(8) {
+   |                       ^^^^^^^^^^^^^^^ help: consider using `as_chunks` instead: `as_chunks::<8>().0`
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.98.0/index.html#chunks_exact_to_as_chunks
+   = note: `-D clippy::chunks-exact-to-as-chunks` implied by `-D warnings`
+   = help: to override `-D warnings` add `#[allow(clippy::chunks_exact_to_as_chunks)]`
+
+error: could not compile `rx-executor` (lib) due to 1 previous error

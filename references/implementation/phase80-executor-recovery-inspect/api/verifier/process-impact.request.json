@@ -1,0 +1,1 @@
+{"body":{"command":{"note":"Checked the exact isolated simulation cell and Host/resource impact.","target":{"cell":"cell/a","change":"582e42fc-d9a0-4c4b-83c1-dd9fe1e3feb8","expected":"1","plan_digest":"8aa0a74fa5b937c552f8fe9d234b16f726c80b776ecb25debdeeaf7beeb54aec"}},"request_key":"26982bb9-6d52-45c7-a2a1-104f98cf869b"},"path":"/api/v1/process-change/impact-review"}

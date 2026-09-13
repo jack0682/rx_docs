@@ -1,0 +1,54 @@
+{
+  "schema": "rx.ros-jtc-bridge-test.v1",
+  "status": "PASS",
+  "cases": [
+    "catalog_and_read_only_controller_inspection",
+    "invalid_trajectory_and_implicit_tolerances_send_nothing",
+    "inactive_or_different_joint_claims_rejected",
+    "supplied_uuid_single_send_result_query_and_pending_admission",
+    "unknown_goal_with_default_success_code_is_not_success",
+    "native_rejection_abort_and_contradictory_result_preserved",
+    "exact_uuid_cancel_without_cancel_all_and_distinct_terminal_result",
+    "deadline_during_controller_preflight_has_no_native_send",
+    "stale_context_sequence_and_duplicate_json_rejected",
+    "restart_changes_bridge_identity_and_does_not_adopt_cancel_authority",
+    "lost_send_reply_is_not_retried_and_late_result_does_not_clear_admission_fault",
+    "lost_cancel_reply_is_retained_and_exact_cancel_is_not_resent",
+    "follower_controller_with_integrated_gripper_has_distinct_joint_set",
+    "leader_impedance_and_other_controller_types_not_mislabeled_as_jtc",
+    "catalog_source_pin_mismatch_rejected",
+    "all_simulation_jtc_declarations_select_without_sending_goals"
+  ],
+  "catalog_declarations": [
+    {
+      "support_id": "SIM-JTC-6DOF",
+      "controller": "arm_controller",
+      "joint_count": 6
+    },
+    {
+      "support_id": "SIM-JTC-7DOF",
+      "controller": "arm_controller",
+      "joint_count": 7
+    }
+  ],
+  "server": {
+    "received": 7,
+    "accepted": 6,
+    "cancelled": 2,
+    "list_calls": 13,
+    "goals": [
+      "29dcb122-c0d5-46f8-8f0e-9b4909a984e0",
+      "01f0b559-a000-476c-938a-392ff54d2de5",
+      "3409265b-a8e9-4979-9839-baa207a5cd31",
+      "efd2f2c8-0a61-436d-85a7-264e3a2603f2",
+      "5f0adcf2-8ef1-415c-adb3-20670bc68173",
+      "6880c5f7-d7b0-4499-8224-afb01c44178c"
+    ],
+    "active": true,
+    "extra_claim": false,
+    "list_delay": 0,
+    "cancel_delay": 0.0
+  },
+  "physical_equipment_used": false,
+  "host_native_journal_connected": false
+}

@@ -1,0 +1,44 @@
+{
+  "schema": "rx.repository-neutralization-check.v1",
+  "status": "PASS",
+  "source_commit": "e81825b2e440ded36e25c5cb8125f7d68281f6da",
+  "image_id": "sha256:56eeab577ce4c62d584d47906eb90a50b302afa9e5d7a4c586e09c0d78d7cce3",
+  "image_architecture": "arm64",
+  "catalog_sha256": "669aaf825d542bf3173ab49072350b488e2f71826dfd9492e006d059a3c2ccbd",
+  "rust": {
+    "passed": 257,
+    "failed": 0,
+    "ignored": 14,
+    "format": "PASS",
+    "clippy_all_targets_all_features": "PASS"
+  },
+  "operator": {
+    "unit_tests": 49,
+    "bundle_tests": 3,
+    "typecheck": "PASS",
+    "format": "PASS",
+    "build": "PASS"
+  },
+  "catalog_source_identity": "PASS",
+  "native_source_mutation_and_mode_drift": "PASS",
+  "repository_links": "PASS (zero unresolved external local paths)",
+  "native_bridge": {
+    "cases": 16,
+    "jtc_declarations": 2,
+    "physical_equipment_used": false
+  },
+  "image_smoke": "PASS",
+  "supervisor_lifecycle_and_tamper_smoke": "PASS",
+  "reports": [
+    "image-smoke.json",
+    "supervisor-smoke.json",
+    "ros-jtc-bridge-final.json"
+  ],
+  "limitations": [
+    "software/simulation validation only; no physical commissioning",
+    "production JTC authority provider remains unconfigured",
+    "APT package snapshot is not frozen; inventory is recorded per build",
+    "runtime image was built and tested on linux/arm64 only",
+    "14 environment-dependent Rust tests remain ignored in local workspace run"
+  ]
+}

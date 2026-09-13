@@ -1,16 +1,18 @@
-## 문제와 결과
+## Problem and resulting behavior
 
-어떤 문제를 해결하며, 변경 후 무엇이 달라지는지 설명해주세요.
+Describe the concrete problem and what changes for a user or caller.
 
-## 검증
+## Validation
 
-실제로 실행한 검사와 결과를 적어주세요. 실물·ROS·다중 저장소 시험을 하지 않았다면 그 범위를 구분해주세요.
+List checks actually run and their results. State any physical, ROS, container or cross-repository validation still needed.
 
-## 관련 변경
+## Related changes
 
-관련 이슈와 다른 RX 저장소의 PR을 연결해주세요. 계약·manifest·SDK 변경이면 영향과 동기화 방법을 적어주세요.
+Link issues and related RX pull requests. For contracts, manifests or SDK changes, describe compatibility impact and synchronization.
 
-- [ ] 대상 브랜치가 `CONTRIBUTING.md`의 GitFlow 경로와 일치합니다.
-- [ ] 실패·복구·권한 경계에 영향을 주는 변경과 검증 범위를 설명했습니다.
-- [ ] 비밀정보와 장비 접속정보를 포함하지 않았습니다.
-- [ ] 기여할 권리가 있는 코드이며 Apache-2.0과 관련 제3자 고지를 확인했습니다.
+- [ ] The target follows the GitFlow routes in CONTRIBUTING.md.
+- [ ] Every commit has the author's DCO signoff and a verified OpenPGP signature.
+- [ ] CI and DCO will be checked on the current PR revision before merging.
+- [ ] Authority, failure and recovery impacts are explained where relevant.
+- [ ] No credentials, local assistant files or equipment connection details are included.
+- [ ] Contribution rights, Apache-2.0 and relevant third-party notices are respected.

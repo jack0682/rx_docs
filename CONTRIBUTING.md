@@ -1,54 +1,67 @@
-# 기여 안내
+# Contributing
 
-RX는 이기종 로봇·시설이 공통 작업·권한·상태·결과·복구 계약으로 협업하도록 만드는 개인 프로젝트입니다. 저장소의 공개 여부와 소프트웨어의 실물 검증 수준은 별개입니다. 현재 검증 범위는 각 저장소 README와 구현 기록을 따릅니다.
+RX is a personal project for heterogeneous robots and infrastructure. Contributions use Apache-2.0. Consult the repository README and implementation records for the current validation scope.
 
-## 브랜치와 GitFlow
+## Branches and GitFlow
 
-| 브랜치 | 역할 | PR 대상 |
+| Branch | Purpose | PR target |
 |---|---|---|
-| `main` | 안정 기준과 릴리스 이력, 기본 브랜치 | 변경은 PR로만 반영 |
-| `develop` | 다음 변경의 통합과 검증 | 준비되면 `main`으로 승격 PR |
-| `feature/*`, `fix/*`, `docs/*`, `chore/*`, `codex/*` | `develop`에서 시작하는 작업 | `develop` |
-| `release/*` | `develop`에서 분기한 릴리스 준비 | `main`, 필요한 수정은 `develop`에도 반영 |
-| `hotfix/*` | `main`에서 분기한 긴급 수정 | `main`, `develop`에도 반영 |
-| `dependabot/*` | 자동 의존성 갱신 | 일반 갱신은 `develop`, 보안 갱신은 `main`도 허용 |
+| `main` | Stable baseline and release history; default branch | PRs only |
+| `develop` | Integration and validation of upcoming work | `main` when ready |
+| `feature/*`, `fix/*`, `docs/*`, `chore/*`, `codex/*` | Work created from `develop` | `develop` |
+| `release/*` | Release preparation created from `develop` | `main`, then carry fixes into `develop` |
+| `hotfix/*` | Urgent fixes created from `main` | `main`, then carry fixes into `develop` |
+| `dependabot/*` | Dependency proposals from this repository | `develop`; security fixes may target `main` |
 
-작은 개인 프로젝트에서는 별도 release 브랜치 없이 `develop` → `main` 승격 PR을 사용할 수 있습니다. main 반영 후에는 `main` → `develop` PR로 변경과 이력을 다시 합칩니다. 릴리스·긴급 수정·장기 브랜치 간 병합은 **merge commit**을 사용해 공통 조상을 유지합니다. 작업 브랜치 PR은 squash merge도 가능합니다. rebase merge는 사용하지 않습니다.
+All PRs use merge commits. Squash and rebase merges are disabled so that reviewed commits, signatures and signoffs retain their identities. A small release can use a `develop` to `main` promotion PR without a release branch. After promotion, merge `main` back to `develop` through a PR.
+
+## Signed commits and the daily workflow
+
+Every commit, including merges, needs both a matching author `Signed-off-by` trailer and a verified OpenPGP signature. Read the [Developer Certificate of Origin](https://developercertificate.org/) before signing off. The trailer records your certification of contribution rights; the cryptographic signature authenticates the commit. Neither substitutes for the other.
+
+Configure a verified GitHub email and register your public GPG key, then install the repository's local hooks. See the [repository governance guide](GOVERNANCE.md) for key setup, branch updates, merge and recovery instructions.
 
 ```sh
+python3 tools/install_git_hooks.py
 git switch develop
 git pull --ff-only origin develop
 git switch -c feature/your-change
-# 수정하고 아래 검증을 실행합니다.
+# Make the change and run the checks below.
 git add <changed-paths>
-git commit -m "Describe the behavior change"
+git commit -s -S -m "Describe the behavior change"
 git push -u origin feature/your-change
-# GitHub에서 develop 대상 PR을 만듭니다.
+# Open a PR targeting develop; wait for CI and DCO.
+python3 tools/merge_pr.py PR_NUMBER
 ```
 
-`main`과 `develop`은 삭제·강제 push를 금지하고 PR, 최신 기준 브랜치와의 CI 성공, 모든 검토 대화 해결을 요구합니다. 단독 관리자가 자기 PR을 처리할 수 있도록 필수 타인 승인 수는 0입니다. CODEOWNERS는 검토 책임자를 지정합니다. 관리자와 자동화도 병합 전 검증 결과를 확인합니다. Ruleset의 필수 check 이름은 세 저장소 모두 `CI`입니다.
+`main` and `develop` reject direct pushes, force pushes and deletion. A PR needs `CI` from GitHub Actions and `DCO` from the DCO app, an up-to-date base, verified signatures and resolved review conversations. A separate update lock permits the administrator to update these branches only through a PR; that exception does not bypass the quality rules.
 
-PR 경로 검사는 GitHub의 이벤트 JSON을 직접 읽습니다. 외부 fork의 `main`, `develop`, `release/*`, `hotfix/*` 이름으로 이 저장소의 릴리스 경로를 대신할 수 없습니다. 외부 기여는 작업 브랜치로 `develop`에 제안해주세요. CI는 공개 fork 코드에 저장소 비밀정보나 쓰기 권한을 제공하지 않습니다.
+The required number of approvals is zero while there is only one maintainer. CODEOWNERS identifies review responsibility. The maintainer still reviews the diff and validation evidence before merging. When an independent maintainer joins, raise the required approvals and enable required code-owner review together.
 
-## 변경과 검증
+External forks cannot use names such as `main`, `develop`, `release/*`, `hotfix/*` or `dependabot/*` to acquire this repository's release routes. Submit external changes from work branches to `develop`. Fork CI receives a read-only token and no repository secrets.
 
-PR에는 문제, 변경 후 동작, 실행한 검증, 미검증 범위를 적습니다. 기능과 무관한 대규모 정리 작업을 섞지 않습니다. 권한·불명 결과·정지·자원 인계·복구 의미를 바꾸면 반례와 호환성 영향을 함께 설명합니다.
+## Changes and validation
+
+Describe the problem, resulting behavior, checks actually run and unverified scope. When changing authority, unknown outcomes, stopping, resource handover or recovery semantics, explain counterexamples and compatibility impact.
 
 ```sh
 python3 .github/test_repository.py
+python3 .github/test_commit_policy.py
 python3 tools/check_repository.py
 ```
 
-문서 CI는 링크와 고정 규범의 무결성을 검사합니다. 설계의 정확성, 구현 적합성, 외부 근거 URL의 가용성, 실물 운전 가능성은 별도로 검토합니다.
+Documentation CI checks repository content, local links, contract hashes and commit policy. It does not establish design correctness, implementation conformance, external URL availability or physical operating readiness.
 
-CI는 모든 PR과 `main`, `develop`, 작업·릴리스·긴급 수정 브랜치 push에서 실행됩니다. GitHub Actions 화면에서 수동 실행할 수도 있습니다. 실패하거나 취소된 하위 검사는 종합 `CI` 성공으로 처리되지 않습니다. `tools/check_repository.py`는 Git 추적 파일과 ignore되지 않은 새 파일의 JSON 구문, 저장소 내부 Markdown 파일 링크, 규범 8개 문서의 hash와 두 manifest의 hash를 검사합니다. 외부 URL, Markdown anchor, 형제 저장소 파일의 존재는 이 검사 범위에 포함하지 않습니다.
+## Published content
 
-## 저장소 간 변경
+Keep AI assistant instructions, prompts and local state out of Git. General documentation may use Korean. Shared normative documents must stay aligned with the English platform and SDK copies, including manifests and hashes.
 
-설계·규범 원본은 [rx_docs](https://github.com/jack0682/rx_docs), 플랫폼과 규범 사본은 [rx-platform](https://github.com/jack0682/rx-platform), Host·장비·서비스와 고정 SDK는 [rx-solutions](https://github.com/jack0682/rx-solutions)에 있습니다. 계약 변경은 원본의 revision·호환성·manifest를 먼저 기록하고 플랫폼 spec과 solutions SDK를 함께 동기화합니다. 세 저장소의 PR을 서로 연결하고 호환되는 커밋 조합을 남깁니다.
+## Changes across repositories
 
-플랫폼의 `python3 tools/check_host_sdk.py ../rx-solutions/sdk`는 현재 플랫폼과 SDK의 일치까지 검사합니다. solutions의 독립 CI는 자체 SDK inventory를 검사하므로 최신 플랫폼과의 호환성을 대신 증명하지 않습니다. 두 저장소가 같이 바뀌면 이 별도 동기화 검사를 실행해야 합니다. SDK 사본을 직접 고치기보다 플랫폼 원본에서 재생성합니다.
+Original designs and contracts live in [rx_docs](https://github.com/jack0682/rx_docs), the platform and contract copies in [rx-platform](https://github.com/jack0682/rx-platform), and adapters, services and the pinned SDK in [rx-solutions](https://github.com/jack0682/rx-solutions). Record the original contract revision, compatibility impact and manifests first, then synchronize platform specs and the solutions SDK. Link related PRs and record compatible commit combinations.
 
-## 라이선스와 보안
+The platform command `python3 tools/check_host_sdk.py ../rx-solutions/sdk` checks agreement with current platform sources. Standalone solutions CI checks its SDK inventory; it does not establish compatibility with the latest platform. Regenerate SDK copies from platform sources instead of editing them directly.
 
-기여 코드는 [Apache License 2.0](LICENSE)을 따릅니다. 자신이 기여할 권리가 있는 자료만 제출하고, 제3자 코드·문서·자산의 라이선스와 고지를 보존해주세요. [NOTICE](NOTICE)는 RX의 고지이며 외부 의존성의 고지를 대체하지 않습니다. 인증정보·장비 주소·개인정보는 공개 PR이나 이슈에 넣지 않습니다. 취약점 제보는 [보안 정책](SECURITY.md)을 따릅니다.
+## License and security
+
+Contributions use the [Apache License 2.0](LICENSE). Submit only material you have the right to contribute, and preserve third-party licenses and notices. [NOTICE](NOTICE) contains RX notices and does not replace dependency notices. Do not put credentials, equipment addresses or personal information in public PRs or issues. Follow the [security policy](SECURITY.md) for vulnerability reports.

@@ -103,6 +103,8 @@ lease 만료만으로 해제하지 않는다. 인계 완료 시 보내는 제어
 | OPEN-MOBILE-SUPPORT | `BindingProfile`의 capability·resource_set·completion/cancel·timing·evidence, `OperatingEnvelope`의 조합 조건, `MaterialState`와 receiver-support 및 H03·H06 의무. [공통 04 §1·2·5](contracts/v1.0/04_binding_and_admission.md), [셀 01 §3·6–7](cell_operations/v1.0/01_scope_conditions_functions.md). | `IN-01/OUT-01` 실제 장치·버전, 소포/적재함 조합, 인계 구획·도킹·제동 범위, 식별·지지·분리 관측의 source와 신선도, 허용 하중·자세·위치, 전원·압력·통신 상실 시 유지/반응 근거를 가진 사례별 입력 카드. 지금 임의 수치나 PASS를 채우지 않는다. N2가 기존 profile 설정으로 충분한지 판정하고 N3가 지지 상실 반례를 구체화한다. |
 | OPEN-RECEIPT | `HUMAN_ATTESTATION`의 출처 필드와 일반 확인 클릭의 한계, `completion_rule` 및 operator 역할. [공통 01 §6](contracts/v1.0/01_responsibility_and_semantics.md), [셀 01 §1·5](cell_operations/v1.0/01_scope_conditions_functions.md). | `RECIPIENT-01` 식별·수령 권한·위임 확인, 실제 관찰 범위와 시각·절차 revision·유효기간, 중복/늦은 선언·소포 불일치 처리, 물리 결과와 선언을 이 인계 서비스의 완료로 묶을 규칙. N2가 기존 기록·profile/업무 구성과 추가 의미의 경계를 판정한다. 법적 소유권 이전을 선언하는 문서가 아니다. |
 
+위 두 의무의 [N2 경계 판정](22_open_items_boundary.md)은 기존 표현 수단과 남은 사례별 입력·검증·업무 의미를 구분했다. 사용한 단위와 라벨은 [77자리 측정](21_declaration_reuse_measurement.md)을 따른다. N2의 문서 판정이 끝나도 두 미결의 상태는 **open**이며, 물리 지지 자격이나 실제 수령 규칙이 확정된 것은 아니다.
+
 **범위 밖 변형 `INDEPENDENT-RUNTIMES`**: `HOST-IN`과 `HOST-OUT`의 판정 주체를
 각각 독립 Runtime으로 바꾸는 경우다. 이 문서의 `RUNTIME-01` 원장·자원 예약·epoch를
 두 원장에 그대로 적용할 수 있다고 주장하지 않는다.

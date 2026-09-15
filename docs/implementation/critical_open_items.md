@@ -11,7 +11,7 @@
 | O05 | 선택 장비의 지원·배포 조합 실증 | model/firmware/controller/SDK/OS/CPU별 source·license·교정·lifecycle·설치·정상 종료 근거. 특정 제조사 전체 지원 의무 없음 |
 | O06 | 운영·편집·관리 흐름의 미연결 구간 | 필요한 역할별 end-to-end 경로, 오류·권한·버전 변경, 고주기 stream과 외부 UI의 별도 범위 |
 | O07 | 장기 운영·저장·진단·부하·전체 종료 | 지원 기간·Host 수·보존량·장애 모델, 저장 실패·백업/복원·장시간 시험. WAL 및 rollback 검출 한계 포함 |
-| N01 | [첫 비산업 인계 서비스](../20_first_handover_case.md) | N1 정의와 [N2 문서 판정](../22_open_items_boundary.md)은 남겼으나 두 open 항목의 해소와 정상·유실·거부·미결 검증은 남는다. [선언 측정](../21_declaration_reuse_measurement.md)의 재사용 계수도 측정 불가다. 다음은 N3의 구체 반례다. |
+| N01 | [첫 비산업 인계 서비스](../20_first_handover_case.md) | N1 정의·[N2 경계 판정](../22_open_items_boundary.md)·[N3 문서 반례 검토](../23_handover_counterexamples.md)는 남겼으나 두 open 항목의 해소와 정상·유실·거부·미결의 실행 검증은 남는다. [선언 측정](../21_declaration_reuse_measurement.md)의 재사용 계수도 측정 불가다. N4의 작은 모의 경로는 후속 작업이다. |
 | N02 | 여러 운영 영역과 규모 확장 | 신뢰·권한 위임·자원 소유·단절·재연결 계약 및 측정된 성능·장애 범위 |
 
 O01에서 controller active 또는 API 가시성은 명령 소유권의 증거가 아니다. 장비 관측, 명령 배타성, 현지 상태·lifecycle, 물리 보호 책임을 각각 확인한다. qualification 서명 검증과 현지 command ownership도 다른 문제다.

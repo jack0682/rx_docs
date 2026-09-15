@@ -101,9 +101,9 @@ python3 tools/configure_github.py
 
 The commit audit above uses GitHub's verification results with the logged-in GitHub CLI account. Without `--github-repository`, verification uses your local GPG keyring; import trusted contributors' public keys, including GitHub's web-flow public key, before auditing their signatures. An unknown local public key alone does not establish that a GitHub-verified signature is invalid.
 
-The GitHub configuration command is read-only by default. It compares repository settings, Actions permissions, security settings and the complete managed rulesets with the reviewed file. To change policy, submit a PR that changes the settings and explains the effect, merge it under the existing rules, then run `python3 tools/configure_github.py --apply` with an administrator account. Re-run the read-only audit and inspect the effective branch rules. No automated job silently edits protections.
+The GitHub configuration command is read-only by default. It compares repository settings, Actions permissions, security settings, automatic security fixes, vulnerability-alert availability and the complete managed rulesets with the reviewed file. To change policy, submit a PR that changes the settings and explains the effect, merge it under the existing rules, then run `python3 tools/configure_github.py --apply` with an administrator account. Re-run the read-only audit and inspect the effective branch rules. No automated job silently edits protections.
 
-Actions use pinned action revisions, read-only tokens and no `pull_request_target` execution of contributor code. Secret scanning and push protection remain enabled. Existing dependency update tooling remains a proposal mechanism, subject to the same checks as other changes.
+Actions use pinned action revisions, read-only tokens and no `pull_request_target` execution of contributor code. Secret scanning and push protection remain enabled. Dependency updates use manually reviewed, signed contributor PRs. Vulnerability notifications remain enabled; automatic security-fix PRs are disabled.
 
 The [2026-09-14 signing migration](docs/governance/history-rewrite-2026-09-14.md) records the one-time user-authorized history rewrite, unchanged file trees, old-to-new commit correspondence and archived backup digests. Old closed PR checks are historical records; the migration does not retroactively rerun or change them. Fresh clones use the rewritten branches and tags. Keep local uncommitted work before replacing an older clone.
 
@@ -114,3 +114,30 @@ The [2026-09-14 signing migration](docs/governance/history-rewrite-2026-09-14.md
 - [GitHub rulesets REST API](https://docs.github.com/en/rest/repos/rules)
 - [DCO application configuration](https://github.com/dcoapp/app)
 - [Developer Certificate of Origin](https://developercertificate.org/)
+
+## Dependency update policy
+
+Dependency changes are maintained through the manual, signed PR procedure in [CONTRIBUTING.md](CONTRIBUTING.md#manual-dependency-updates). There is no scheduled version-update configuration on `main` or `develop`. Vulnerability alerts remain enabled so maintainers can assess and prepare security fixes themselves.
+
+`repository-settings.json` declares `dependency_updates.automated_security_fixes: false`. Applying the reviewed configuration disables automatic security-fix proposals and retains vulnerability alerts; the read-only audit also checks both states. Do not run an older configuration script that unconditionally enables automatic fixes. The regression tests exercise applying and reapplying this policy, detecting reactivation without changing remote state, and detecting a disable request that did not take effect.
+
+### Closed proposal register — 2026-09-15
+
+These ten dependency proposals were already closed without merging before this policy change. They are preserved here as one cross-repository register; no dependency upgrade is applied by this change. The observations below refer to the recorded PR revisions and their historical CI, not compatibility with future revisions.
+
+Three proposals had observed Rust compilation failures. The other seven passed their available Rust/application or Python regression checks. All ten still failed the repository commit-policy check because the signed automated commits lacked the author's DCO trailer; a successful DCO app check did not override that failure. Passing a subset of jobs did not make any proposal merge-ready.
+
+| Repository / closed PR | Proposed update | Recorded checks and disposition |
+|---|---|---|
+| [rx_docs #11](https://github.com/jack0682/rx_docs/pull/11) | actions/checkout 4.4.0 → 7.0.1 | Python repository tests (22) and commit-policy tests (14) passed before the commit audit failed. This documentation repository has no Rust/application job. Closed, not applied. |
+| [rx-platform #7](https://github.com/jack0682/rx-platform/pull/7) | actions/checkout 4.4.0 → 7.0.1; actions/cache 4.3.0 → 6.1.0 | Rust job passed; commit audit failed. Closed, not applied. |
+| [rx-platform #8](https://github.com/jack0682/rx-platform/pull/8) | sha2 0.10.9 → 0.11.0 | Rust failed with E0277: digest output no longer satisfies `LowerHex` at `crates/rx-protocol/build.rs:22`. Requires source/API migration before reconsideration. |
+| [rx-platform #9](https://github.com/jack0682/rx-platform/pull/9) | base64 0.22.1 → 0.23.1 | Rust job passed; commit audit failed. Closed, not applied. |
+| [rx-platform #10](https://github.com/jack0682/rx-platform/pull/10) | argon2 0.5.3 → 0.6.0 | Rust failed with E0432 for `argon2::password_hash::SaltString` at `crates/rx-api/src/auth.rs:3`, and E0061 at line 40. Requires source/API migration before reconsideration. |
+| [rx-solutions #7](https://github.com/jack0682/rx-solutions/pull/7) | actions/checkout 4.4.0 → 7.0.1; actions/cache 4.3.0 → 6.1.0; actions/setup-node 4.4.0 → 7.0.0 | Rust and Operator app jobs passed; commit audit failed. Closed, not applied. |
+| [rx-solutions #8](https://github.com/jack0682/rx-solutions/pull/8) | zod 4.6.1 → 4.6.2; vite 8.2.2 → 8.3.0 | Rust and Operator app jobs passed; commit audit failed. Closed, not applied. |
+| [rx-solutions #9](https://github.com/jack0682/rx-solutions/pull/9) | sha2 0.10.9 → 0.11.0 | Rust failed with E0277 / `LowerHex` at `sdk/crates/rx-protocol/build.rs:22`; Operator app passed. SDK fixes must originate in the platform export workflow. |
+| [rx-solutions #10](https://github.com/jack0682/rx-solutions/pull/10) | typescript 6.0.3 → 7.0.2 | Rust and Operator app jobs passed; commit audit failed. Closed, not applied. |
+| [rx-solutions #11](https://github.com/jack0682/rx-solutions/pull/11) | vitest 4.1.11 → 5.0.0 | Rust and Operator app jobs passed; commit audit failed. Closed, not applied. |
+
+Historical failure evidence: [platform sha2 Rust job](https://github.com/jack0682/rx-platform/actions/runs/34835709865/job/103948923280), [platform argon2 Rust job](https://github.com/jack0682/rx-platform/actions/runs/34835721220/job/103948959011), [solutions sha2 Rust job](https://github.com/jack0682/rx-solutions/actions/runs/34802005716/job/103846365214), and [documentation commit audit](https://github.com/jack0682/rx_docs/actions/runs/34823652655/job/103910676438). Re-run relevant checks on a new maintainer-authored revision before adopting any of these updates.

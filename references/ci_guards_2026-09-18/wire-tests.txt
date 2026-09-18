@@ -1,0 +1,62 @@
+Workspace absolute paths are normalized to <workspace>; command output is otherwise retained.
+
+$ cargo test -p rx-protocol --test wire --locked -- --nocapture
+   Compiling hashbrown v0.17.1
+   Compiling typenum v1.20.1
+   Compiling tokio v1.53.1
+   Compiling serde_core v1.0.229
+   Compiling tracing v0.1.44
+   Compiling pulldown-cmark v0.13.4
+   Compiling getrandom v0.4.3
+   Compiling subtle v2.6.1
+   Compiling axum-core v0.5.6
+   Compiling rustls v0.23.44
+   Compiling tempfile v3.27.0
+   Compiling indexmap v2.14.2
+   Compiling generic-array v0.14.7
+   Compiling pulldown-cmark-to-cmark v22.0.1
+   Compiling petgraph v0.8.3
+   Compiling crypto-common v0.1.7
+   Compiling block-buffer v0.10.4
+   Compiling digest v0.10.7
+   Compiling sha2 v0.10.9
+   Compiling serde_json v1.0.151
+   Compiling serde v1.0.229
+   Compiling uuid v1.26.1
+   Compiling prost-build v0.14.4
+   Compiling serde_jcs v0.2.0
+   Compiling rx-domain v0.1.0 (<workspace>/rx-platform/crates/rx-domain)
+   Compiling tonic-prost-build v0.14.6
+   Compiling tokio-util v0.7.19
+   Compiling tokio-stream v0.1.19
+   Compiling tokio-rustls v0.26.5
+   Compiling rx-protocol v0.1.0 (<workspace>/rx-platform/crates/rx-protocol)
+   Compiling h2 v0.4.19
+   Compiling tower v0.5.3
+   Compiling axum v0.8.9
+   Compiling hyper v1.11.1
+   Compiling hyper-util v0.1.20
+   Compiling hyper-timeout v0.5.2
+   Compiling tonic v0.14.6
+   Compiling tonic-prost v0.14.6
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 8.12s
+     Running tests/wire.rs (target/debug/deps/wire-b7bf9e279d2dd2aa)
+
+running 11 tests
+test document_manifest_hashes_remain_the_negotiation_identity ... ok
+test unknown_enum_bad_wire_and_varint_overflow_are_rejected ... ok
+test explicit_false_zero_and_optional_zero_survive_binary_roundtrip ... ok
+test nested_duplicate_singular_is_not_merged ... ok
+test prost_last_wins_and_unknown_field_behavior_is_blocked_before_decode ... ok
+test nonfinite_numbers_rejected_in_scalar_and_packed_vector ... ok
+test core_enum_numbers_and_cell_union_tags_are_stable ... ok
+test json_is_rx_projection_not_protojson ... ok
+test fixed_digest_hex_and_oneof_contracts_are_checked ... ok
+test intent_crosses_json_protobuf_domain_without_changing_frozen_digest ... ok
+independently matched 403 numbered source fields
+test numbered_fields_match_frozen_documents_independently_of_generator ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+
+rc=0

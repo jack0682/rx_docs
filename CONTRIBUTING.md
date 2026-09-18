@@ -59,9 +59,14 @@ Describe the problem, resulting behavior, checks actually run and unverified sco
 python3 .github/test_repository.py
 python3 .github/test_commit_policy.py
 python3 tools/check_repository.py
+python3 tools/check_document_tables.py
 ```
 
 Documentation CI checks repository content, local links, contract hashes and commit policy. It does not establish design correctness, implementation conformance, external URL availability or physical operating readiness.
+
+The required repository job also extracts and runs the unique Python block in documents 21, 22 and 23. Those documents remain the only source of their table checks. A missing, incomplete or duplicate Python fence fails the extraction; inconsistent tables fail the embedded checks.
+
+See the [guard wiring and negative-control evidence](references/ci_guards_2026-09-18/README.md) for measured failures and the separate manual-audit boundary.
 
 ## Published content
 

@@ -1,0 +1,153 @@
+Workspace absolute paths are normalized to <workspace>; command output is otherwise retained.
+
+$ [.na-wire-evidence/controls-4fre40rt/rx_docs] python3 tools/check_document_tables.py
+Checking docs/21_declaration_reuse_measurement.md
+labels {'free': 73, 'declared': 4} free_types {'이관': 64, '침묵': 9}
+sensitivity {'free': 76, 'declared': 1}
+RX_lower_bound 4
+first_matched 7
+second_generous 27
+second_strict 9
+expanded_strict 15
+Checking docs/22_open_items_boundary.md
+requirements 19 mapping {'완전매핑': 18, '부분매핑': 1} unmapped 0
+unique edges 55 slots 33 labels {'free': 32, 'declared': 1}
+free conditions compared 32 original labels unchanged 77
+Checking docs/23_handover_counterexamples.md
+cases 4 steps 24 axes 20 original questions preserved 4
+norm I 12 SC 19 used I 8 SC 5
+linked slots 17 case names 10 unknown I/SC/slot/case 0 roadmap terms covered 4
+
+rc=0
+MUTATION 21_declaration_reuse_measurement.md: first | S01 | -> | S00 |
+$ [.na-wire-evidence/controls-4fre40rt/rx_docs] python3 tools/check_document_tables.py
+Checking docs/21_declaration_reuse_measurement.md
+Traceback (most recent call last):
+  File "<string>", line 18, in <module>
+    assert [r[0] for r in table] == ids
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+21_declaration_reuse_measurement.md: embedded check failed (exit 1)
+
+rc=1
+MUTATION 22_open_items_boundary.md: first | M-01 | -> | M-02 |
+$ [.na-wire-evidence/controls-4fre40rt/rx_docs] python3 tools/check_document_tables.py
+Checking docs/21_declaration_reuse_measurement.md
+labels {'free': 73, 'declared': 4} free_types {'이관': 64, '침묵': 9}
+sensitivity {'free': 76, 'declared': 1}
+RX_lower_bound 4
+first_matched 7
+second_generous 27
+second_strict 9
+expanded_strict 15
+Checking docs/22_open_items_boundary.md
+Traceback (most recent call last):
+  File "<string>", line 18, in <module>
+    assert len(requirements) == len({r[0] for r in requirements}) == 19
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+22_open_items_boundary.md: embedded check failed (exit 1)
+
+rc=1
+MUTATION 23_handover_counterexamples.md: first | 책임 | -> | 알수없는축 |
+$ [.na-wire-evidence/controls-4fre40rt/rx_docs] python3 tools/check_document_tables.py
+Checking docs/21_declaration_reuse_measurement.md
+labels {'free': 73, 'declared': 4} free_types {'이관': 64, '침묵': 9}
+sensitivity {'free': 76, 'declared': 1}
+RX_lower_bound 4
+first_matched 7
+second_generous 27
+second_strict 9
+expanded_strict 15
+Checking docs/22_open_items_boundary.md
+requirements 19 mapping {'완전매핑': 18, '부분매핑': 1} unmapped 0
+unique edges 55 slots 33 labels {'free': 32, 'declared': 1}
+free conditions compared 32 original labels unchanged 77
+Checking docs/23_handover_counterexamples.md
+Traceback (most recent call last):
+  File "<string>", line 24, in <module>
+    assert len(rows) == 5 and {row[0] for row in rows} == axes
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+23_handover_counterexamples.md: embedded check failed (exit 1)
+
+rc=1
+MUTATION missing fence
+$ [.na-wire-evidence/controls-4fre40rt/rx_docs] python3 tools/check_document_tables.py
+21_declaration_reuse_measurement.md: expected exactly one complete Python fence
+
+rc=1
+MUTATION duplicate fence
+$ [.na-wire-evidence/controls-4fre40rt/rx_docs] python3 tools/check_document_tables.py
+21_declaration_reuse_measurement.md: expected exactly one complete Python fence
+
+rc=1
+MUTATION incomplete fence
+$ [.na-wire-evidence/controls-4fre40rt/rx_docs] python3 tools/check_document_tables.py
+21_declaration_reuse_measurement.md: expected exactly one complete Python fence
+
+rc=1
+MUTATION spec/host-read/v1/binding.json max_payload_bytes 1000000 -> 1000001; source_sha256 unchanged
+$ [.na-wire-evidence/controls-4fre40rt/rx-platform] python3 tools/update_host_read_binding.py --check
+Host read binding source mismatch
+
+rc=1
+
+Initial cargo invocation could not start: cargo absent from shell PATH. Retrying with installed workspace toolchain.
+$ [.na-wire-evidence/controls-4fre40rt/rx-platform] cargo check -p rx-protocol --locked
+   Compiling serde_core v1.0.229
+    Checking hashbrown v0.17.1
+    Checking tokio v1.53.1
+    Checking tracing v0.1.44
+   Compiling getrandom v0.4.3
+    Checking typenum v1.20.1
+    Checking sync_wrapper v1.0.2
+   Compiling prost-types v0.14.4
+    Checking subtle v2.6.1
+    Checking prost v0.14.4
+    Checking axum-core v0.5.6
+    Checking rustls v0.23.44
+    Checking pin-project v1.1.13
+   Compiling tempfile v3.27.0
+    Checking thiserror v2.0.20
+    Checking indexmap v2.14.2
+    Checking generic-array v0.14.7
+   Compiling prost-build v0.14.4
+    Checking block-buffer v0.10.4
+    Checking crypto-common v0.1.7
+    Checking digest v0.10.7
+    Checking prost-reflect v0.16.5
+    Checking sha2 v0.10.9
+   Compiling tonic-prost-build v0.14.6
+   Compiling rx-protocol v0.1.0 (<workspace>/.na-wire-evidence/controls-4fre40rt/rx-platform/crates/rx-protocol)
+    Checking tokio-util v0.7.19
+    Checking tokio-stream v0.1.19
+    Checking tokio-rustls v0.26.5
+    Checking h2 v0.4.19
+    Checking tower v0.5.3
+    Checking serde v1.0.229
+    Checking serde_json v1.0.151
+    Checking uuid v1.26.1
+    Checking axum v0.8.9
+    Checking serde_jcs v0.2.0
+    Checking rx-domain v0.1.0 (<workspace>/.na-wire-evidence/controls-4fre40rt/rx-platform/crates/rx-domain)
+    Checking hyper v1.11.1
+    Checking hyper-util v0.1.20
+    Checking hyper-timeout v0.5.2
+    Checking tonic v0.14.6
+    Checking tonic-prost v0.14.6
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 6.20s
+
+rc=0
+MUTATION SDK proto comment plus matching source-lock inventory: self-consistent but differs from current platform
+$ [rx-platform] python3 tools/check_host_sdk.py <workspace>/.na-wire-evidence/controls-4fre40rt/stale-sdk
+SDK is stale relative to platform sources:
+proto/rx/contract/v1/contract.proto
+
+rc=1
+MUTATION copied repository-settings.json topics appended na-negative-control; server untouched; default read-only invocation
+$ [.na-wire-evidence/controls-4fre40rt/rx-platform] python3 tools/configure_github.py
+DRIFT: jack0682/rx-platform: topics
+
+rc=1
+ALL NEGATIVE CONTROLS OBSERVED; scratch=<workspace>/.na-wire-evidence/controls-4fre40rt

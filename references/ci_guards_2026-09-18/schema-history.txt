@@ -1,0 +1,28 @@
+Workspace absolute paths are normalized to <workspace>; command output is otherwise retained.
+
+spec/assignment/v1/binding.json source_sha256 entries=4 normative_document_sha256 entries=0
+spec/cell_operations/v1.0/manifest_integrity.json source_sha256 entries=0 normative_document_sha256 entries=0
+spec/cell_operations/v1.0/protocol_manifest.json source_sha256 entries=0 normative_document_sha256 entries=4
+spec/contracts/v1.0/manifest_integrity.json source_sha256 entries=0 normative_document_sha256 entries=0
+spec/contracts/v1.0/protocol_manifest.json source_sha256 entries=0 normative_document_sha256 entries=4
+spec/executor/v1/binding.json source_sha256 entries=4 normative_document_sha256 entries=0
+spec/executor-plan/v1/binding.json source_sha256 entries=5 normative_document_sha256 entries=0
+spec/host-configuration/v1/binding.json source_sha256 entries=3 normative_document_sha256 entries=0
+spec/host-qualification/v1/binding.json source_sha256 entries=3 normative_document_sha256 entries=0
+spec/host-read/v1/binding.json source_sha256 entries=3 normative_document_sha256 entries=0
+spec/production/v1/binding.json source_sha256 entries=4 normative_document_sha256 entries=0
+proto/rx/contract/v1/contract.proto: source_sha256_pinned=False; SDK inventory pin matches platform bytes=True
+proto/rx/cell/v1/cell.proto: source_sha256_pinned=False; SDK inventory pin matches platform bytes=True
+$ git log --all --format=%H %s -- proto/rx/contract/v1/contract.proto proto/rx/cell/v1/cell.proto
+493a6bb1a5d2e1ac7a49675ff64c6602b1082591 Initial RX platform implementation draft
+
+rc=0
+$ git log --all -G contract.proto|cell.proto --format=%H %s -- spec/**/binding.json tools/update_*_binding.py
+
+rc=0
+$ git log --all --format=%H %s -- crates/rx-protocol/tests/wire.rs
+ec23bad3867058dc9a8ec11e0705222dc0e61d6e Publish English repository content and exclude local assistant files
+a75b3465950b82bc0727dc9303fa514db69945fa Establish vendor-neutral Apache-2.0 repository foundation
+493a6bb1a5d2e1ac7a49675ff64c6602b1082591 Initial RX platform implementation draft
+
+rc=0

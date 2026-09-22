@@ -141,3 +141,14 @@ Three proposals had observed Rust compilation failures. The other seven passed t
 | [rx-solutions #11](https://github.com/jack0682/rx-solutions/pull/11) | vitest 4.1.11 → 5.0.0 | Rust and Operator app jobs passed; commit audit failed. Closed, not applied. |
 
 Historical failure evidence: [platform sha2 Rust job](https://github.com/jack0682/rx-platform/actions/runs/34835709865/job/103948923280), [platform argon2 Rust job](https://github.com/jack0682/rx-platform/actions/runs/34835721220/job/103948959011), [solutions sha2 Rust job](https://github.com/jack0682/rx-solutions/actions/runs/34802005716/job/103846365214), and [documentation commit audit](https://github.com/jack0682/rx_docs/actions/runs/34823652655/job/103910676438). Re-run relevant checks on a new maintainer-authored revision before adopting any of these updates.
+
+
+## Recorded historical DCO incidents
+
+The byte-pinned [incident ledger](.github/historical-dco-incidents.json) records two unresolved author-signoff violations from 2026-09-16: `rx-solutions@041f4724cf3ab96debc9e8f08d25a64274d41ca0` and `rx_docs@3df96357f43f4d2e9e81e871aaa7f844fc004fd2`. This is a narrowly scoped policy exception, not a retroactive author certification. The original commit bytes and history remain unchanged. The audit permanently labels each encountered incident as **HISTORICAL DCO VIOLATION (unresolved)** even when its policy result succeeds.
+
+Only the exact repository, full commit SHA and original author tuple is admitted without a signoff. Verified OpenPGP signatures remain mandatory for those commits too. No other commit, author, merge, bot, date or branch is exempt. A missing or changed ledger fails audit. Updating both the checker pin and the ledger is an explicit reviewed governance-policy change; these writable repository files are not an external tamper-proof authority.
+
+PR and push CI both use `check_commit_policy.py --head HEAD_SHA` to audit the complete ancestry of the actual contribution head. The manual `--range` mode remains available for a deliberately limited diagnostic; it is not the CI acceptance scope. Full ancestry prevents a new violation from being hidden behind an incremental range's base. The ledger is identical in all three repositories; each entry is applied only in its named repository.
+
+Always use `tools/merge_pr.py` for a merge. A PR-head check cannot inspect a future merge message; a new merge without its author trailer is still rejected by branch CI. This policy does not add a GitHub server-side final-message rule, bypass branch protection, rewrite main, or automatically promote develop. Local signing hooks and pre-push checks remain strict for new contributions.

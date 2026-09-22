@@ -1,0 +1,14 @@
+$ gh api repos/jack0682/rx-platform/actions/jobs/105441987703/logs
+Selected output lines (other setup output omitted):
+2026-09-18T01:03:52.2413585Z 0e274e2b95e9bac3660b2b0355f9a0fc68a21f63
+2026-09-18T01:03:53.3599495Z 6c1e27ff141cbd2ba30bbd51738031145f9627f4
+2026-09-18T01:03:53.4872678Z 0e274e2b95e9bac3660b2b0355f9a0fc68a21f63
+2026-09-18T01:03:53.4889502Z 6c1e27ff141cbd2ba30bbd51738031145f9627f4
+2026-09-18T01:03:53.6396137Z SDK synchronized with platform: 107 files; authority excluded
+
+$ gh api repos/jack0682/rx-platform/actions/jobs/105441987517/logs
+Selected output lines (other setup output omitted):
+2026-09-18T01:03:51.9543596Z 0e274e2b95e9bac3660b2b0355f9a0fc68a21f63
+2026-09-18T01:03:54.9332543Z github configuration: gh: Resource not accessible by integration (HTTP 403)
+2026-09-18T01:03:54.9404201Z ##[error]Process completed with exit code 1.
+

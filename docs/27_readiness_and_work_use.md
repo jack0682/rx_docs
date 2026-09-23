@@ -2,6 +2,8 @@
 
 2026-09-23 · **지원 범위: 작성자 조건과 구성요소 자기 보고의 대조. 운영 영역의 긍정 허가 provider는 미연결·미지원이며 호스트는 허가를 발급하지 않는다.**
 
+후속 [F5](28_dependency_binding.md)는 이 자기 보고를 실제로 소비하는 별도 진단 작업과 구간별 의존 재판정을 추가한다. 아래 F4의 과거 관측 수치와 준비·허가의 의미는 그대로다.
+
 ## 두 축을 판정으로 만든 범위
 
 [F1](24_host_execution_requirements.md)의 수락, [F2](25_component_registration.md)의 등록, [F3](26_explicit_recovery_disposition.md)의 처분은 기능 준비나 업무 허가가 아니다. F4는 작성자가 선언한 용도별 조건을 실제 보고와 대조하고, 업무 판단을 별도 포트에 묻는다. `ProcessReady`를 준비 완료로 복사하지 않는다. 기존 `AliveOnly => Ok(true)`는 생존 probe로 그대로 둔다.

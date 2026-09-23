@@ -1,0 +1,27 @@
+$ cd <workspace>/rx-solutions
+$ python3 tools/registration_passage.py --image sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0 --evidence <workspace>/.f7-evidence/library-final2
+$ docker image inspect sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0
+$ docker image inspect rust:1.98.1-slim-bookworm
+$ docker run --rm --network none --read-only --cap-drop ALL --entrypoint /usr/bin/python3 sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0 /opt/rx/tools/solutions_status.py inspect
+$ docker run --rm --network none --read-only --entrypoint /usr/bin/python3 sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0 -c 'import hashlib; from pathlib import Path; print(hashlib.sha256(Path("/opt/rx/tools/solutions_status.py").read_bytes()).hexdigest())'
+$ docker run --rm -v <workspace>/rx-solutions:/source:ro -v <workspace>/.f7-evidence/library-final2:/evidence -w /source -e CARGO_HOME=/evidence/cargo-home --entrypoint cargo sha256:ff521445a372125ed4f76e1453a1f8098f2d05332d1601d30db1c1f62757e730 test -p rx-supervisor --locked --test registration_passage --no-run --target-dir /evidence/target --message-format=json
+Traceback (most recent call last):
+  File "<workspace>/rx-solutions/tools/registration_passage.py", line 78, in <module>
+    main()
+    ~~~~^^
+  File "<workspace>/rx-solutions/tools/registration_passage.py", line 54, in main
+    output = run('build', ['docker', 'run', '--rm', '-v', f'{ROOT}:/source:ro',
+        '-v', f'{evidence}:/evidence', '-w', '/source', '-e', 'CARGO_HOME=/evidence/cargo-home',
+        '--entrypoint', 'cargo', builder_id, 'test', '-p', 'rx-supervisor', '--locked',
+        '--test', 'registration_passage', '--no-run', '--target-dir', '/evidence/target',
+        '--message-format=json'])
+  File "<workspace>/rx-solutions/tools/registration_passage.py", line 32, in run
+    (evidence / (label + '.stdout')).write_text(result.stdout)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 809, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 28] No space left on device: '<workspace>/.f7-evidence/library-final2/build.stdout'

@@ -1,0 +1,4 @@
+$ cd <workspace>/rx-solutions
+$ tools/cargo clippy --workspace --all-targets --all-features --locked --target-dir <workspace>/.f7-evidence/target-baseline -- -D warnings
+    Checking rx-supervisor v0.1.0 (<workspace>/rx-solutions/runtime/rx-supervisor)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.74s

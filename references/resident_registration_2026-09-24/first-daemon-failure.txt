@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/opt/rx/tools/solutions_status.py", line 42, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/opt/rx/tools/solutions_status.py", line 25, in main
+    p=argparse.ArgumentParser();p.add_argument('mode',choices=['inspect','serve'],nargs='?',default='serve');p.add_argument('--bind',default='0.0.0.0');p.add_argument('--port',type=int,default=8081);a=p.parse_args();report=inspect()
+                                                                                                                                                                                                                               ^^^^^^^^^
+  File "/opt/rx/tools/solutions_status.py", line 13, in inspect
+    if hashlib.sha256((ROOT/path).read_bytes()).hexdigest()!=digest:raise RuntimeError('runtime file integrity differs')
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: runtime file integrity differs

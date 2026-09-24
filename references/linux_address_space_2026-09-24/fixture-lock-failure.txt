@@ -1,0 +1,17 @@
+$ cd <workspace>/rx-solutions
+$ python3 tools/resource_enforcement_passage.py --image sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0 --baseline-daemon <workspace>/.f7-evidence/resident-final/target/debug/rx-solutionsd --evidence <workspace>/.f8-evidence/resource-final
+Traceback (most recent call last):
+  File "<workspace>/rx-solutions/tools/resource_enforcement_passage.py", line 186, in <module>
+    main()
+    ~~~~^^
+  File "<workspace>/rx-solutions/tools/resource_enforcement_passage.py", line 63, in main
+    tested = run('fixture-' + name, ['docker', 'run', '--rm', '--network', 'none', '--read-only',
+        '--cap-drop', 'ALL', '--security-opt', 'no-new-privileges', '--tmpfs', '/tmp:rw',
+        '-v', f'{evidence / "resident"}:/evidence:ro', '--entrypoint', executable, runtime, '--nocapture'])
+  File "<workspace>/rx-solutions/tools/resource_enforcement_passage.py", line 39, in run
+    raise RuntimeError(f'{label} failed: {r.returncode}: {r.stderr}')
+RuntimeError: fixture-resource_enforcement failed: 101: 
+thread 'linux::saved_limit_history_never_restores_a_current_receipt_after_owner_loss' (9) panicked at runtime/rx-supervisor/tests/resource_enforcement.rs:68:60:
+called `Result::unwrap()` on an `Err` value: Unavailable("another Runtime owns this store: lock acquisition failed because the operation would block")
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+

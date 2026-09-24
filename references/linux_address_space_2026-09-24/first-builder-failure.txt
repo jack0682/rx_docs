@@ -1,0 +1,123 @@
+$ cd <workspace>/rx-solutions
+$ docker run --rm -v <workspace>/rx-solutions:/source:ro -v <workspace>/.f8-evidence:/evidence -w /source -e CARGO_HOME=/evidence/cargo-home --entrypoint cargo sha256:ff521445a372125ed4f76e1453a1f8098f2d05332d1601d30db1c1f62757e730 test --locked -p rx-supervisor --lib --test resource_enforcement --target-dir /evidence/target-linux -- --nocapture
+info: syncing channel updates for 1.98.1-aarch64-unknown-linux-gnu
+info: latest update on 2026-09-03 for version 1.98.1 (48a229cea 2026-09-01)
+info: downloading 2 components
+   Compiling typenum v1.20.1
+   Compiling cfg-if v1.0.4
+   Compiling bitflags v2.13.2
+   Compiling libc v0.2.189
+   Compiling serde_core v1.0.229
+   Compiling linux-raw-sys v0.12.1
+   Compiling zmij v1.0.23
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling ryu-js v0.2.2
+   Compiling once_cell v1.21.4
+   Compiling thiserror v2.0.20
+   Compiling io-lifetimes v3.0.1
+   Compiling io-lifetimes v2.0.4
+   Compiling rustix v1.1.4
+   Compiling io-extras v0.19.0
+   Compiling maybe-owned v0.3.4
+   Compiling ipnet v2.12.2
+   Compiling ambient-authority v0.0.2
+   Compiling generic-array v0.14.7
+   Compiling getrandom v0.4.3
+   Compiling hybrid-array v0.4.15
+   Compiling cpufeatures v0.2.17
+   Compiling cpufeatures v0.3.1
+   Compiling zeroize v1.9.0
+   Compiling subtle v2.6.1
+   Compiling crypto-common v0.1.7
+   Compiling block-buffer v0.10.4
+   Compiling serde_json v1.0.151
+   Compiling serde v1.0.229
+   Compiling uuid v1.26.1
+   Compiling foldhash v0.2.0
+   Compiling digest v0.10.7
+   Compiling crypto-common v0.2.2
+   Compiling block-buffer v0.12.1
+   Compiling signature v3.0.0
+   Compiling hashbrown v0.17.1
+   Compiling fastrand v2.5.0
+   Compiling sha2 v0.10.9
+   Compiling ed25519 v3.0.0
+   Compiling libsqlite3-sys v0.38.2
+   Compiling serde_jcs v0.2.0
+   Compiling digest v0.11.3
+   Compiling hashlink v0.12.2
+   Compiling semver v1.0.28
+   Compiling errno v0.3.14
+   Compiling rx-domain v0.1.0 (/source/sdk/crates/rx-domain)
+   Compiling curve25519-dalek v5.0.0
+   Compiling sha2 v0.11.0
+   Compiling fallible-iterator v0.3.0
+   Compiling smallvec v1.16.0
+   Compiling fallible-streaming-iterator v0.1.9
+   Compiling rustix-linux-procfs v0.1.1
+   Compiling fs-set-times v0.20.3
+   Compiling tempfile v3.27.0
+   Compiling rusqlite v0.40.2
+   Compiling signal-hook-registry v1.4.8
+   Compiling mio v1.2.3
+   Compiling cap-primitives v4.0.3
+   Compiling pin-project-lite v0.2.17
+   Compiling ed25519-dalek v3.0.0
+   Compiling tokio v1.53.1
+   Compiling cap-std v4.0.3
+   Compiling cap-fs-ext v4.0.3
+   Compiling rx-ports v0.1.0 (/source/sdk/crates/rx-ports)
+   Compiling rx-package v0.1.0 (/source/sdk/crates/rx-package)
+   Compiling rx-service-status v0.1.0 (/source/runtime/rx-service-status)
+   Compiling rx-storage v0.1.0 (/source/sdk/crates/rx-storage)
+   Compiling rx-solution-catalog v0.1.0 (/source/runtime/rx-solution-catalog)
+   Compiling rx-supervisor v0.1.0 (/source/runtime/rx-supervisor)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 13.12s
+     Running unittests src/lib.rs (/evidence/target-linux/debug/deps/rx_supervisor-8f05df49d5c144d9)
+
+running 11 tests
+
+thread 'process::linux_limits::tests::authority_change_after_application_prevents_exec_and_confirms_rollback' (1922) panicked at runtime/rx-supervisor/src/process/linux_limits.rs:358:59:
+called `Result::unwrap()` on an `Err` value: Os { code: 2, kind: NotFound, message: "No such file or directory" }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'process::linux_limits::tests::actual_kernel_permission_failure_after_lowering_rolls_back_before_target' (1921) panicked at runtime/rx-supervisor/src/process/linux_limits.rs:358:59:
+called `Result::unwrap()` on an `Err` value: Os { code: 2, kind: NotFound, message: "No such file or directory" }
+
+thread 'process::linux_limits::tests::exec_syscall_failure_is_not_an_admission' (1923) panicked at runtime/rx-supervisor/src/process/linux_limits.rs:358:59:
+called `Result::unwrap()` on an `Err` value: Os { code: 2, kind: NotFound, message: "No such file or directory" }
+test initialization::termination_tests::failed_signal_command_status_is_not_a_successful_delivery ... ok
+
+thread 'process::linux_limits::tests::observation_failure_after_application_confirms_no_remaining_child_policy' (1925) panicked at runtime/rx-supervisor/src/process/linux_limits.rs:358:59:
+called `Result::unwrap()` on an `Err` value: Os { code: 2, kind: NotFound, message: "No such file or directory" }
+
+thread 'process::linux_limits::tests::gate_death_in_exec_window_cannot_mint_a_receipt_from_eof' (1924) panicked at runtime/rx-supervisor/src/process/linux_limits.rs:358:59:
+called `Result::unwrap()` on an `Err` value: Os { code: 2, kind: NotFound, message: "No such file or directory" }
+test process::linux_limits::tests::observation_failure_after_application_confirms_no_remaining_child_policy ... FAILED
+test process::linux_limits::tests::authority_change_after_application_prevents_exec_and_confirms_rollback ... FAILED
+test process::linux_limits::tests::gate_death_in_exec_window_cannot_mint_a_receipt_from_eof ... FAILED
+test process::linux_limits::tests::actual_kernel_permission_failure_after_lowering_rolls_back_before_target ... FAILED
+test process::linux_limits::tests::exec_syscall_failure_is_not_an_admission ... FAILED
+
+thread 'initialization::termination_tests::failed_term_keeps_the_same_owned_child_retryable_until_delivery_is_confirmed' (1920) panicked at runtime/rx-supervisor/src/initialization.rs:435:10:
+called `Result::unwrap()` on an `Err` value: Io(Os { code: 2, kind: NotFound, message: "No such file or directory" })
+test process::signal_tests::failed_signal_with_live_or_unconfirmed_child_remains_error ... ok
+test process::signal_tests::signal_acceptance_does_not_claim_child_exit ... ok
+test process::signal_tests::failed_signal_keeps_control_and_unknown_effect_errors ... ok
+test process::signal_tests::failed_signal_uses_only_confirmed_owned_non_actuating_exit ... ok
+test initialization::termination_tests::failed_term_keeps_the_same_owned_child_retryable_until_delivery_is_confirmed ... FAILED
+
+failures:
+
+failures:
+    initialization::termination_tests::failed_term_keeps_the_same_owned_child_retryable_until_delivery_is_confirmed
+    process::linux_limits::tests::actual_kernel_permission_failure_after_lowering_rolls_back_before_target
+    process::linux_limits::tests::authority_change_after_application_prevents_exec_and_confirms_rollback
+    process::linux_limits::tests::exec_syscall_failure_is_not_an_admission
+    process::linux_limits::tests::gate_death_in_exec_window_cannot_mint_a_receipt_from_eof
+    process::linux_limits::tests::observation_failure_after_application_confirms_no_remaining_child_policy
+
+test result: FAILED. 5 passed; 6 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.00s
+
+error: test failed, to rerun pass `-p rx-supervisor --lib`

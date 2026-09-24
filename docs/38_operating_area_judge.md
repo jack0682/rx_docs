@@ -92,3 +92,6 @@ G1 standalone probe의 lockfile에도 새 storage→rustix 의존 edge 갱신이
 
 
 최종 코드 조합은 platform [75e19331](https://github.com/jack0682/rx-platform/commit/75e19331ec1c3bfdb275f75480188f485c86d64b) + solutions [ed3d90f9](https://github.com/jack0682/rx-solutions/commit/ed3d90f9bd1e54e78023b77ae399b4d237c8e4b4)다. 각각 [PR21](https://github.com/jack0682/rx-platform/pull/21)·[PR22](https://github.com/jack0682/rx-platform/pull/22), [PR37](https://github.com/jack0682/rx-solutions/pull/37)·[PR38](https://github.com/jack0682/rx-solutions/pull/38)의 결과이며 source/SDK115개 파일이 일치한다. exact merge CI는 platform406/0/16, solutions430/0/20으로 모두 attempt1 통과했다. macOS는405/0/16,386/0/17이며 단위시험 배치 이동은 같은 세 시험을 보존한다. 아홉 통과선 완료와 첫 manager의 미규명 빌드 실패·재현 이력을 함께 유지한다.
+
+
+최종 산출물 고정 중에는 작성자가 live-source 빌드와 checkout/pull을 동시에 실행하는 순서 결함도 있었다. 일시적인 구형 checkout과 빌드 lock 거절 시각이 겹쳤고, 고정된 원본·격리 복사본의 Cargo.lock은 같았다. 원래 E0463과 구별한다. 이후 소스를 고정하고 `--locked`로 새로 빌드했으며, 달라진 최종 daemon hash를 대상으로 실제 판단자12장면을 다시 통과했다. 원 실패·reflog·시각 대조를 근거에 보존한다.

@@ -1,0 +1,8 @@
+{
+  "tested_daemon": "506e62379dbfcf8d9d075a861943bd58bf63b10f5e7dc8508cab76f8e79c5447",
+  "final_daemon": "9144e52d45a24381d7ff580f3cc2d193f0b3c894c359a31568df4b0905d4eb8a",
+  "tested_judge": "40b29a4ec0bb419d9b6edf25088bd8031b577a06e1122a61bf3a7ac581fc07f2",
+  "final_judge": "40b29a4ec0bb419d9b6edf25088bd8031b577a06e1122a61bf3a7ac581fc07f2",
+  "daemon_equal": false,
+  "judge_equal": true
+}

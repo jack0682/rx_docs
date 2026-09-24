@@ -1,0 +1,3 @@
+# Live checkout during build — orchestration defect
+
+The final rebuild started at07:53:30.575 and failed at07:53:35.738. Reflog shows the working tree checked out the old G2 develop at07:53:35, then fast-forwarded to current G3 at07:53:36. I incorrectly ran final-state checkout and a live-source bind-mounted build concurrently. That violates stable-source acquisition and supplies a concrete interfering write interval. The later isolated resolver produced no Cargo.lock difference. This is an orchestration defect, not a new product dependency change and not the earlier unresolved E0463 incident. The exact internal read order was not traced. Current source is frozen before the separate fresh --locked build; no cleanup or code change is used as a product fix.

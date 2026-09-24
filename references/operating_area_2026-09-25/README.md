@@ -152,3 +152,14 @@ Exact final merge CI, both attempt1: platform [36068577921](https://github.com/j
 430/0/20. [Final counts](final-ci-counts.json), [platform metadata](ci-platform-final-merge.json),
 [solutions metadata](ci-solutions-final-merge.json). These CI results do not erase the
 retained initial manager E0463 or the separately corrected integration/test-harness defects.
+
+Final-artifact supplement: a validation orchestration error ran a live-source build
+concurrently with checkout/pull. Its lock refusal overlapped the temporary old G2
+checkout; a stable isolated resolver produced no Cargo.lock difference. This is
+recorded in [checkout-race.md](checkout-race.md), with [reflog](checkout-race-reflog.txt)
+and [time/hash comparison](checkout-race-lock-comparison.json), separately from E0463.
+The final source was frozen before a fresh --locked build. The unit-test layout
+change altered the daemon hash, so the exact final executable was exercised again:
+[final12 scenes](exact-final-area/result.json), [commands](exact-final-area/commands.json)
+and [known-key scan](exact-final-key-custody.json). All12 passed. This supplements,
+rather than erases, earlier failures and observations. The final judge hash is unchanged.

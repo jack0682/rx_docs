@@ -1,0 +1,16 @@
+   Compiling rx-storage v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-storage)
+   Compiling rx-supervisor v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-supervisor)
+error[E0282]: type annotations needed for `Result<_, rx_supervisor::Error>`
+  --> runtime/rx-supervisor/tests/operating_area.rs:62:78
+   |
+62 |     let guard=m.lock().unwrap();assert!(provider.commit_checkpoint(&prepared,||panic!("must refuse before use")).unwrap_err().to_str...
+   |                                                                              ^^
+   |
+help: try giving this closure an explicit return type
+   |
+62 |     let guard=m.lock().unwrap();assert!(provider.commit_checkpoint(&prepared,|| -> Result<T, _>panic!("must refuse before use")).unwrap_err().to_string().contains("mailbox-unavailable"));drop(guard);
+   |                                                                                 +++++++++++++++
+
+For more information about this error, try `rustc --explain E0282`.
+error: could not compile `rx-supervisor` (test "operating_area") due to 1 previous error
+warning: build failed, waiting for other jobs to finish...

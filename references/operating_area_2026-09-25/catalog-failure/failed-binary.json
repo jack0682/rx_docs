@@ -1,0 +1,4 @@
+{
+  "sha256": "2bfc14fb0042f81f13b356670028357bd407791f5676b860dc18eb53f35d08e3",
+  "failure": "default release catalog unexpectedly contained anchored opt-in recipe; existing assertion retained"
+}

@@ -1,0 +1,22 @@
+{
+  "rx-platform": {
+    "commits": [
+      "eb9164135fde93d637e49a4a3c8022b60223e75b",
+      "15c707b268f4702a9439e9698360daac374e360c",
+      "71ff535baeba2bb23d873e32e569b2d6780f55ce",
+      "75e19331ec1c3bfdb275f75480188f485c86d64b"
+    ],
+    "signatures": "verified",
+    "contribution_merge_trees_equal": true
+  },
+  "rx-solutions": {
+    "commits": [
+      "3c6db54a93455d7597f5dbbee476bf01ced86c2c",
+      "ea14fb375add50224e2043c608039d077c6a7366",
+      "acc955aa041819b75d479345e7cadc06eba8d1e9",
+      "ed3d90f9bd1e54e78023b77ae399b4d237c8e4b4"
+    ],
+    "signatures": "verified",
+    "contribution_merge_trees_equal": true
+  }
+}

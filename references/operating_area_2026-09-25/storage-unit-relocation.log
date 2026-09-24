@@ -1,0 +1,60 @@
+   Compiling proc-macro2 v1.0.107
+   Compiling libc v0.2.189
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.24
+   Compiling version_check v0.9.5
+   Compiling serde_core v1.0.229
+   Compiling typenum v1.20.1
+   Compiling cfg-if v1.0.4
+   Compiling zmij v1.0.23
+   Compiling getrandom v0.4.3
+   Compiling find-msvc-tools v0.1.12
+   Compiling serde v1.0.229
+   Compiling serde_json v1.0.151
+   Compiling generic-array v0.14.7
+   Compiling shlex v2.0.1
+   Compiling cc v1.4.5
+   Compiling thiserror v2.0.20
+   Compiling vcpkg v0.2.15
+   Compiling pkg-config v0.3.34
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling rustix v1.1.4
+   Compiling ryu-js v0.2.2
+   Compiling bitflags v2.13.2
+   Compiling foldhash v0.2.0
+   Compiling libsqlite3-sys v0.38.2
+   Compiling crypto-common v0.1.7
+   Compiling block-buffer v0.10.4
+   Compiling cpufeatures v0.2.17
+   Compiling hashbrown v0.17.1
+   Compiling digest v0.10.7
+   Compiling errno v0.3.14
+   Compiling syn v3.0.5
+   Compiling fallible-iterator v0.3.0
+   Compiling fastrand v2.5.0
+   Compiling once_cell v1.21.4
+   Compiling smallvec v1.16.0
+   Compiling sha2 v0.10.9
+   Compiling fallible-streaming-iterator v0.1.9
+   Compiling hashlink v0.12.2
+   Compiling uuid v1.26.1
+   Compiling tempfile v3.27.0
+   Compiling serde_derive v1.0.229
+   Compiling thiserror-impl v2.0.20
+   Compiling serde_jcs v0.2.0
+   Compiling rusqlite v0.40.2
+   Compiling rx-domain v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-domain)
+   Compiling rx-ports v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-ports)
+   Compiling rx-storage v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-storage)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 5.36s
+     Running unittests src/lib.rs (/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/storage-unit-target/debug/deps/rx_storage-83054b84b66864e8)
+
+running 4 tests
+test mailbox::tests::partial_publication_and_oversized_input_are_refused_not_erased ... ok
+test mailbox::tests::symlink_and_nonregular_payloads_are_refused_without_following ... ok
+test mailbox::tests::publication_is_immutable_and_live_cooperating_writer_excluded ... ok
+test ownership_close_tests::sqlite_close_failure_retains_ownership_until_process_exit ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+

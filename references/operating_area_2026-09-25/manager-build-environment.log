@@ -1,0 +1,22 @@
+rustc 1.98.1 (48a229cea 2026-09-01)
+binary: rustc
+commit-hash: 48a229ceaefd4985c50990b14116b6d856af0985
+commit-date: 2026-09-01
+host: aarch64-unknown-linux-gnu
+release: 1.98.1
+LLVM version: 22.1.8
+-rw-r--r-- 1 root root 2632212 Sep 24 22:15 /evidence/target/debug/deps/libcurve25519_dalek-d21e31a2e64cdc3f.rlib
+-rw-r--r-- 1 root root  740151 Sep 24 22:15 /evidence/target/debug/deps/libcurve25519_dalek-d21e31a2e64cdc3f.rmeta
+-rw-r--r-- 1 root root  253162 Sep 24 22:15 /evidence/target/debug/deps/libed25519-0c10bc87a437ace4.rlib
+-rw-r--r-- 1 root root   37563 Sep 24 22:15 /evidence/target/debug/deps/libed25519-0c10bc87a437ace4.rmeta
+-rw-r--r-- 1 root root  352476 Sep 24 22:15 /evidence/target/debug/deps/libsha2-87c2a29f79131b25.rlib
+-rw-r--r-- 1 root root  138926 Sep 24 22:15 /evidence/target/debug/deps/libsha2-87c2a29f79131b25.rmeta
+-rw-r--r-- 1 root root 1725680 Sep 24 22:15 /evidence/target/debug/deps/libsha2-9edbc87a5bc3d9a2.rlib
+-rw-r--r-- 1 root root  802649 Sep 24 22:15 /evidence/target/debug/deps/libsha2-9edbc87a5bc3d9a2.rmeta
+CARGO_HOME=/usr/local/cargo
+HOME=/root
+HOSTNAME=36c5ed5f5cc1
+PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+PWD=/
+RUSTUP_HOME=/usr/local/rustup
+RUST_VERSION=1.98.1

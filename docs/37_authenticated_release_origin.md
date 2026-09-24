@@ -46,6 +46,7 @@ rx-solutionsd의 실제 init·run·activate·investigate·resume은 부수효과
 | 통상 재기동의 바닥과 철회 재생 | 집행됨 | 온전한 기존 상태가 보존된 재기동에서 낮은 버전·낡은 철회 목록 거절 |
 | 통째 DB rollback·삭제 | `NOT_DETECTED` | OS와 상태 보존은 신뢰 기반이다. SQLite와 flock은 하드웨어 단조 counter가 아님 |
 | verifier 바이너리와 OS 자체 | 인증되지 않은 선언된 신뢰 기반 | 바이너리 교체자는 컴파일 키도 바꿀 수 있음 |
+| 운영자 공급 패키지 검증 정책 | 인증된 릴리스 밖의 가변 로컬 구성 입력 | 정책 파일은 이미지에 배포되지 않는다. 릴리스 인증은 현장이 어떤 패키지를 신뢰할지를 제약하지 않는다 |
 | 제품 릴리스 키 수탁·교체·의식 | `NOT_ESTABLISHED` | 이 키는 개발용. 실제 제품 권한을 주장하지 않음 |
 | 오프라인 철회 목록의 최신성 | `NOT_ESTABLISHED` | 전달되지 않은 새 철회를 알 수 없음 |
 | 확인과 실제 사용 사이 | `EXPLICIT_CALLER_DRIVEN_CHECKPOINTS` | 입장 시 인증과 기존 exec 직전 hash 재검사. 사이의 설치 bytes 안정성은 신뢰 |

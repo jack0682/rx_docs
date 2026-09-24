@@ -1,0 +1,18 @@
+[
+  "docker",
+  "run",
+  "--rm",
+  "--network",
+  "none",
+  "--read-only",
+  "--cap-drop",
+  "ALL",
+  "--tmpfs",
+  "/tmp:rw",
+  "-v",
+  "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence:/evidence:ro",
+  "--entrypoint",
+  "/evidence/linux-target/debug/deps/operating_area-f4c3231e9309cccc",
+  "rx-solutions:g2-authenticated",
+  "--nocapture"
+]

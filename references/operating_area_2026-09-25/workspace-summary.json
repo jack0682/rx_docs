@@ -1,0 +1,12 @@
+{
+  "platform": {
+    "passed": 405,
+    "failed": 0,
+    "ignored": 16
+  },
+  "solutions": {
+    "passed": 386,
+    "failed": 0,
+    "ignored": 17
+  }
+}

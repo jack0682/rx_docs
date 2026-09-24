@@ -1,0 +1,64 @@
+[
+  {
+    "label": "library",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/registration_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--builder",
+      "rust:1.98.1-slim-bookworm",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/library-fixed"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "release",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/release_origin_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--builder",
+      "rust:1.98.1-slim-bookworm",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/release-fixed",
+      "--unsigned-image",
+      "rx-solutions:n5-runtime",
+      "--metadata",
+      "/Users/ojaehong/RX_automation/rx_ws/.g2-evidence/metadata"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "resource",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/resource_enforcement_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--builder",
+      "rust:1.98.1-slim-bookworm",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/resource-fixed",
+      "--baseline-daemon",
+      "/Users/ojaehong/RX_automation/rx_ws/.f7-evidence/resident-final/target/debug/rx-solutionsd"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "manager",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/manager_loss_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--builder",
+      "rust:1.98.1-slim-bookworm",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/manager-fixed"
+    ],
+    "exit_code": 1
+  }
+]

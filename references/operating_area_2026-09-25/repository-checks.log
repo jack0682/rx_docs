@@ -1,0 +1,43 @@
+rx-platform: ['python3', '.github/test_repository.py']
+........................
+----------------------------------------------------------------------
+Ran 24 tests in 0.006s
+
+OK
+rx-platform: ['python3', '.github/test_commit_policy.py']
+.................
+----------------------------------------------------------------------
+Ran 17 tests in 9.084s
+
+OK
+rx-platform: ['python3', 'tools/check_repository.py']
+Checked 33 JSON files, local targets in 102 Markdown files, and two contract baselines; 0 links outside this checkout are not checked.
+Repository checks passed.
+rx-platform: ['python3', 'tools/check_contract_baselines.py']
+contracts: 4 normative files unchanged
+cell_operations: 4 normative files unchanged
+rx-platform: ['python3', 'tools/test_export_host_sdk.py']
+PASS: fresh inventory, modified destination preserved/refused, authority crate excluded
+rx-platform: ['python3', 'tools/check_host_sdk.py', '../rx-solutions/sdk']
+SDK synchronized with platform: 114 files; authority excluded
+rx-solutions: ['python3', '.github/test_repository.py']
+........................
+----------------------------------------------------------------------
+Ran 24 tests in 0.006s
+
+OK
+rx-solutions: ['python3', '.github/test_commit_policy.py']
+.................
+----------------------------------------------------------------------
+Ran 17 tests in 8.089s
+
+OK
+rx-solutions: ['python3', 'tools/check_repository.py']
+Checked 55 JSON files, local targets in 92 Markdown files, and two contract baselines; 0 links outside this checkout are not checked.
+Repository checks passed.
+rx-solutions: ['python3', 'tools/check_invariant_traceability.py']
+Invariant traceability: I=12 OI=18; declared=7 uncovered=23; test links=10. Semantic coverage not checked.
+rx-solutions: ['python3', 'tools/check_device_catalog_sources.py']
+{"schema": "rx.catalog-source-check.v1", "status": "PASS", "external_repositories": 0, "profiles": 4, "unique_source_files": 1, "catalog_sha256": "669aaf825d542bf3173ab49072350b488e2f71826dfd9492e006d059a3c2ccbd", "scope": "Source identity and declarations only; synthetic fixtures are not physical equipment qualification."}
+rx-solutions: ['python3', 'tools/test_native_inventory.py']
+Native source mutation and mode drift rejected

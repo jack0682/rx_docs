@@ -1,0 +1,1199 @@
+Rust	Set up job	﻿2026-09-24T22:38:40.9669970Z Current runner version: '2.337.0'
+Rust	Set up job	2026-09-24T22:38:40.9708761Z ##[group]Runner Image Provisioner
+Rust	Set up job	2026-09-24T22:38:40.9710158Z Hosted Compute Agent
+Rust	Set up job	2026-09-24T22:38:40.9711310Z Version: 20260828.587
+Rust	Set up job	2026-09-24T22:38:40.9712716Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+Rust	Set up job	2026-09-24T22:38:40.9713963Z Build Date: 2026-08-28T16:44:25Z
+Rust	Set up job	2026-09-24T22:38:40.9715258Z Worker ID: {02f23b4d-a7ae-40d8-af8b-e74bf7d48929}
+Rust	Set up job	2026-09-24T22:38:40.9716437Z Azure Region: eastus
+Rust	Set up job	2026-09-24T22:38:40.9717543Z ##[endgroup]
+Rust	Set up job	2026-09-24T22:38:40.9720134Z ##[group]Operating System
+Rust	Set up job	2026-09-24T22:38:40.9721220Z Ubuntu
+Rust	Set up job	2026-09-24T22:38:40.9722790Z 24.04.5
+Rust	Set up job	2026-09-24T22:38:40.9723772Z LTS
+Rust	Set up job	2026-09-24T22:38:40.9724918Z ##[endgroup]
+Rust	Set up job	2026-09-24T22:38:40.9726002Z ##[group]Runner Image
+Rust	Set up job	2026-09-24T22:38:40.9727234Z Image: ubuntu-24.04
+Rust	Set up job	2026-09-24T22:38:40.9728283Z Version: 20260920.314.1
+Rust	Set up job	2026-09-24T22:38:40.9730144Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260920.314/images/ubuntu/Ubuntu2404-Readme.md
+Rust	Set up job	2026-09-24T22:38:40.9733743Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260920.314
+Rust	Set up job	2026-09-24T22:38:40.9735683Z ##[endgroup]
+Rust	Set up job	2026-09-24T22:38:40.9737672Z ##[group]GITHUB_TOKEN Permissions
+Rust	Set up job	2026-09-24T22:38:40.9740469Z Contents: read
+Rust	Set up job	2026-09-24T22:38:40.9741577Z Metadata: read
+Rust	Set up job	2026-09-24T22:38:40.9742848Z ##[endgroup]
+Rust	Set up job	2026-09-24T22:38:40.9745882Z Secret source: Actions
+Rust	Set up job	2026-09-24T22:38:40.9747511Z Cache mode: write
+Rust	Set up job	2026-09-24T22:38:40.9748685Z Prepare workflow directory
+Rust	Set up job	2026-09-24T22:38:41.0368924Z Prepare all required actions
+Rust	Set up job	2026-09-24T22:38:41.0443702Z Getting action download info
+Rust	Set up job	2026-09-24T22:38:41.2375247Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+Rust	Set up job	2026-09-24T22:38:41.3401221Z Download action repository 'actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830' (SHA:0057852bfaa89a56745cba8c7296529d2fc39830)
+Rust	Set up job	2026-09-24T22:38:41.5337842Z Complete job name: Rust
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-09-24T22:38:41.6121366Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.6122950Z with:
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.6123499Z   persist-credentials: false
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.6124056Z   repository: jack0682/rx-platform
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.6127680Z   token: ***
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.6128137Z   ssh-strict: true
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.6128597Z   ssh-user: git
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.6129039Z   clean: true
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.6129510Z   sparse-checkout-cone-mode: true
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.6130047Z   fetch-depth: 1
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.6130496Z   fetch-tags: false
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.6130955Z   show-progress: true
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.6131426Z   lfs: false
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.6131864Z   submodules: false
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.6132503Z   set-safe-directory: true
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.6133040Z   allow-unsafe-pr-checkout: false
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.6133842Z env:
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.6134281Z   CARGO_TERM_COLOR: always
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.6134782Z   RUST_BACKTRACE: 1
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.6135237Z ##[endgroup]
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7136228Z Syncing repository: jack0682/rx-platform
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7138928Z ##[group]Getting Git version info
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7140108Z Working directory is '/home/runner/work/rx-platform/rx-platform'
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7141465Z [command]/usr/bin/git version
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7249986Z git version 2.55.0
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7279255Z ##[endgroup]
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7294335Z Temporarily overriding HOME='/home/runner/work/_temp/3ead4283-0a8d-4ecd-b6c8-8fd943376feb' before making global git config changes
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7296972Z Adding repository directory to the temporary git global config as a safe directory
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7300845Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rx-platform/rx-platform
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7364782Z Deleting the contents of '/home/runner/work/rx-platform/rx-platform'
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7373877Z ##[group]Initializing the repository
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7375821Z [command]/usr/bin/git init /home/runner/work/rx-platform/rx-platform
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7541691Z hint: Using 'master' as the name for the initial branch. This default branch name
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7543854Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7546179Z hint: to use in all of your new repositories, which will suppress this warning,
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7547437Z hint: call:
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7548118Z hint:
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7548956Z hint: 	git config --global init.defaultBranch <name>
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7550041Z hint:
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7550962Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7552792Z hint: 'development'. The just-created branch can be renamed via this command:
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7554044Z hint:
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7554887Z hint: 	git branch -m <name>
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7555792Z hint:
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7556831Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7558706Z Initialized empty Git repository in /home/runner/work/rx-platform/rx-platform/.git/
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7561717Z [command]/usr/bin/git remote add origin https://github.com/jack0682/rx-platform
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7633878Z ##[endgroup]
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7635227Z ##[group]Disabling automatic garbage collection
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7638745Z [command]/usr/bin/git config --local gc.auto 0
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7679068Z ##[endgroup]
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7680408Z ##[group]Setting up auth
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7687232Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.7721100Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.8152725Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.8189662Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.8415214Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.8451545Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.8678315Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.8719978Z ##[endgroup]
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.8720868Z ##[group]Fetching the repository
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:41.8730008Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +75e19331ec1c3bfdb275f75480188f485c86d64b:refs/remotes/origin/develop
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.1899177Z From https://github.com/jack0682/rx-platform
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.1900365Z  * [new ref]         75e19331ec1c3bfdb275f75480188f485c86d64b -> origin/develop
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.1904242Z ##[endgroup]
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.1905425Z ##[group]Determining the checkout info
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.1907337Z ##[endgroup]
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.1914115Z [command]/usr/bin/git sparse-checkout disable
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.1972323Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.2005186Z ##[group]Checking out the ref
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.2009365Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.2468687Z Switched to a new branch 'develop'
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.2473115Z branch 'develop' set up to track 'origin/develop'.
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.2482217Z ##[endgroup]
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.2530932Z [command]/usr/bin/git log -1 --format=%H
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.2558914Z 75e19331ec1c3bfdb275f75480188f485c86d64b
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.2569764Z ##[group]Removing auth
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.2574684Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.2608502Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.2835904Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.2866587Z http.https://github.com/.extraheader
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.2874376Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.2941543Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.3199395Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.3213545Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Rust	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.3462224Z ##[endgroup]
+Rust	Install repository Rust toolchain	﻿2026-09-24T22:38:42.3698124Z ##[group]Run toolchain=$(python3 -c 'import tomllib; print(tomllib.load(open("rust-toolchain.toml", "rb"))["toolchain"]["channel"])')
+Rust	Install repository Rust toolchain	2026-09-24T22:38:42.3702687Z ^[[36;1mtoolchain=$(python3 -c 'import tomllib; print(tomllib.load(open("rust-toolchain.toml", "rb"))["toolchain"]["channel"])')^[[0m
+Rust	Install repository Rust toolchain	2026-09-24T22:38:42.3706382Z ^[[36;1mrustup toolchain install "$toolchain" --profile minimal --component rustfmt --component clippy^[[0m
+Rust	Install repository Rust toolchain	2026-09-24T22:38:42.4032844Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Rust	Install repository Rust toolchain	2026-09-24T22:38:42.4034617Z env:
+Rust	Install repository Rust toolchain	2026-09-24T22:38:42.4035645Z   CARGO_TERM_COLOR: always
+Rust	Install repository Rust toolchain	2026-09-24T22:38:42.4036837Z   RUST_BACKTRACE: 1
+Rust	Install repository Rust toolchain	2026-09-24T22:38:42.4037851Z ##[endgroup]
+Rust	Install repository Rust toolchain	2026-09-24T22:38:42.5143724Z info: syncing channel updates for 1.98.1-x86_64-unknown-linux-gnu
+Rust	Install repository Rust toolchain	2026-09-24T22:38:42.7145594Z info: latest update on 2026-09-03 for version 1.98.1 (48a229cea 2026-09-01)
+Rust	Install repository Rust toolchain	2026-09-24T22:38:42.7147601Z info: downloading 5 components
+Rust	Install repository Rust toolchain	2026-09-24T22:38:50.6144281Z 
+Rust	Install repository Rust toolchain	2026-09-24T22:38:50.6217252Z   1.98.1-x86_64-unknown-linux-gnu installed - rustc 1.98.1 (48a229cea 2026-09-01)
+Rust	Install repository Rust toolchain	2026-09-24T22:38:50.6218428Z 
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	﻿2026-09-24T22:38:50.7016614Z ##[group]Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:38:50.7017105Z with:
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:38:50.7017502Z   path: ~/.cargo/registry/index
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	~/.cargo/registry/cache
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	~/.cargo/git/db
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	target
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:38:50.7018179Z   key: Linux-X64-rust-f2a3178d4ba5ae534a189969bf71e095285629a428ae82534301cc5c2d1bc24b
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:38:50.7018703Z   enableCrossOsArchive: false
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:38:50.7019032Z   fail-on-cache-miss: false
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:38:50.7019325Z   lookup-only: false
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:38:50.7019590Z   save-always: false
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:38:50.7019846Z env:
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:38:50.7020081Z   CARGO_TERM_COLOR: always
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:38:50.7020361Z   RUST_BACKTRACE: 1
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:38:50.7020613Z ##[endgroup]
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:38:50.8101292Z (node:2368) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:38:50.8102794Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:38:50.8809164Z Cache hit for: Linux-X64-rust-f2a3178d4ba5ae534a189969bf71e095285629a428ae82534301cc5c2d1bc24b
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:38:50.8928539Z (node:2368) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:38:51.9220889Z Received 255852544 of 2583030887 (9.9%), 242.5 MBs/sec
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:38:52.9393152Z Received 536870912 of 2583030887 (20.8%), 253.1 MBs/sec
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:38:53.9493226Z Received 813694976 of 2583030887 (31.5%), 256.2 MBs/sec
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:38:54.9524607Z Received 1073741824 of 2583030887 (41.6%), 253.7 MBs/sec
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:38:55.9525691Z Received 1367343104 of 2583030887 (52.9%), 258.9 MBs/sec
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:38:56.9588651Z Received 1652555776 of 2583030887 (64.0%), 260.8 MBs/sec
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:38:57.9637099Z Received 1925185536 of 2583030887 (74.5%), 260.5 MBs/sec
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:38:58.9736456Z Received 2189426688 of 2583030887 (84.8%), 259.4 MBs/sec
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:38:59.9704147Z Received 2453667840 of 2583030887 (95.0%), 258.5 MBs/sec
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:39:00.4544247Z Received 2583030887 of 2583030887 (100.0%), 258.2 MBs/sec
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:39:00.4549721Z Cache Size: ~2463 MB (2583030887 B)
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:39:00.4785562Z [command]/usr/bin/tar -xf /home/runner/work/_temp/dc7b8d25-00d3-4048-ae04-2ef2658cc77d/cache.tzst -P -C /home/runner/work/rx-platform/rx-platform --use-compress-program unzstd
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:39:24.6424761Z Cache restored successfully
+Rust	Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:39:25.1040586Z Cache restored from key: Linux-X64-rust-f2a3178d4ba5ae534a189969bf71e095285629a428ae82534301cc5c2d1bc24b
+Rust	Check Rust formatting	﻿2026-09-24T22:39:25.1607490Z ##[group]Run cargo fmt --all -- --check
+Rust	Check Rust formatting	2026-09-24T22:39:25.1607892Z ^[[36;1mcargo fmt --all -- --check^[[0m
+Rust	Check Rust formatting	2026-09-24T22:39:25.2558402Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Rust	Check Rust formatting	2026-09-24T22:39:25.2558819Z env:
+Rust	Check Rust formatting	2026-09-24T22:39:25.2559046Z   CARGO_TERM_COLOR: always
+Rust	Check Rust formatting	2026-09-24T22:39:25.2559286Z   RUST_BACKTRACE: 1
+Rust	Check Rust formatting	2026-09-24T22:39:25.2559500Z ##[endgroup]
+Rust	Check Rust lints	﻿2026-09-24T22:39:30.0675800Z ##[group]Run cargo clippy --workspace --all-targets --all-features --locked -- -D warnings
+Rust	Check Rust lints	2026-09-24T22:39:30.0676507Z ^[[36;1mcargo clippy --workspace --all-targets --all-features --locked -- -D warnings^[[0m
+Rust	Check Rust lints	2026-09-24T22:39:30.0740176Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Rust	Check Rust lints	2026-09-24T22:39:30.0740598Z env:
+Rust	Check Rust lints	2026-09-24T22:39:30.0740837Z   CARGO_TERM_COLOR: always
+Rust	Check Rust lints	2026-09-24T22:39:30.0741121Z   RUST_BACKTRACE: 1
+Rust	Check Rust lints	2026-09-24T22:39:30.0741368Z ##[endgroup]
+Rust	Check Rust lints	2026-09-24T22:39:31.6899492Z ^[[1m^[[92m    Checking^[[0m rx-domain v0.1.0 (/home/runner/work/rx-platform/rx-platform/crates/rx-domain)
+Rust	Check Rust lints	2026-09-24T22:39:31.7016278Z ^[[1m^[[92m   Compiling^[[0m rx-protocol v0.1.0 (/home/runner/work/rx-platform/rx-platform/crates/rx-protocol)
+Rust	Check Rust lints	2026-09-24T22:39:32.2854597Z ^[[1m^[[92m    Checking^[[0m rx-ports v0.1.0 (/home/runner/work/rx-platform/rx-platform/crates/rx-ports)
+Rust	Check Rust lints	2026-09-24T22:39:32.2856672Z ^[[1m^[[92m    Checking^[[0m rx-process-contract v0.1.0 (/home/runner/work/rx-platform/rx-platform/crates/rx-process-contract)
+Rust	Check Rust lints	2026-09-24T22:39:32.3853944Z ^[[1m^[[92m    Checking^[[0m rx-package v0.1.0 (/home/runner/work/rx-platform/rx-platform/crates/rx-package)
+Rust	Check Rust lints	2026-09-24T22:39:32.5123892Z ^[[1m^[[92m    Checking^[[0m rx-storage v0.1.0 (/home/runner/work/rx-platform/rx-platform/crates/rx-storage)
+Rust	Check Rust lints	2026-09-24T22:39:33.0223938Z ^[[1m^[[92m    Checking^[[0m rx-application v0.1.0 (/home/runner/work/rx-platform/rx-platform/crates/rx-application)
+Rust	Check Rust lints	2026-09-24T22:39:36.6274069Z ^[[1m^[[92m    Checking^[[0m rx-runtime v0.1.0 (/home/runner/work/rx-platform/rx-platform/crates/rx-runtime)
+Rust	Check Rust lints	2026-09-24T22:39:36.6276084Z ^[[1m^[[92m    Checking^[[0m rx-protocol-adapter v0.1.0 (/home/runner/work/rx-platform/rx-platform/crates/rx-protocol-adapter)
+Rust	Check Rust lints	2026-09-24T22:39:36.8384345Z ^[[1m^[[92m    Checking^[[0m rx-api v0.1.0 (/home/runner/work/rx-platform/rx-platform/crates/rx-api)
+Rust	Check Rust lints	2026-09-24T22:39:36.9536912Z ^[[1m^[[92m    Checking^[[0m rx-host-client v0.1.0 (/home/runner/work/rx-platform/rx-platform/crates/rx-host-client)
+Rust	Check Rust lints	2026-09-24T22:39:37.4497961Z ^[[1m^[[92m    Checking^[[0m rx-platformd v0.1.0 (/home/runner/work/rx-platform/rx-platform/crates/rx-platformd)
+Rust	Check Rust lints	2026-09-24T22:39:38.8649589Z ^[[1m^[[92m    Finished^[[0m `dev` profile [unoptimized + debuginfo] target(s) in 8.73s
+Rust	Test Rust workspace	﻿2026-09-24T22:39:38.9068668Z ##[group]Run cargo test --workspace --all-features --locked
+Rust	Test Rust workspace	2026-09-24T22:39:38.9069152Z ^[[36;1mcargo test --workspace --all-features --locked^[[0m
+Rust	Test Rust workspace	2026-09-24T22:39:38.9132667Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Rust	Test Rust workspace	2026-09-24T22:39:38.9133034Z env:
+Rust	Test Rust workspace	2026-09-24T22:39:38.9133287Z   CARGO_TERM_COLOR: always
+Rust	Test Rust workspace	2026-09-24T22:39:38.9133537Z   RUST_BACKTRACE: 1
+Rust	Test Rust workspace	2026-09-24T22:39:38.9133761Z ##[endgroup]
+Rust	Test Rust workspace	2026-09-24T22:39:39.1707807Z ^[[1m^[[92m   Compiling^[[0m rx-domain v0.1.0 (/home/runner/work/rx-platform/rx-platform/crates/rx-domain)
+Rust	Test Rust workspace	2026-09-24T22:39:39.1796989Z ^[[1m^[[92m   Compiling^[[0m rx-protocol v0.1.0 (/home/runner/work/rx-platform/rx-platform/crates/rx-protocol)
+Rust	Test Rust workspace	2026-09-24T22:39:39.5188478Z ^[[1m^[[92m   Compiling^[[0m rx-ports v0.1.0 (/home/runner/work/rx-platform/rx-platform/crates/rx-ports)
+Rust	Test Rust workspace	2026-09-24T22:39:39.6113672Z ^[[1m^[[92m   Compiling^[[0m rx-package v0.1.0 (/home/runner/work/rx-platform/rx-platform/crates/rx-package)
+Rust	Test Rust workspace	2026-09-24T22:39:39.6294022Z ^[[1m^[[92m   Compiling^[[0m rx-process-contract v0.1.0 (/home/runner/work/rx-platform/rx-platform/crates/rx-process-contract)
+Rust	Test Rust workspace	2026-09-24T22:39:39.7043798Z ^[[1m^[[92m   Compiling^[[0m rx-storage v0.1.0 (/home/runner/work/rx-platform/rx-platform/crates/rx-storage)
+Rust	Test Rust workspace	2026-09-24T22:39:40.2379357Z ^[[1m^[[92m   Compiling^[[0m rx-application v0.1.0 (/home/runner/work/rx-platform/rx-platform/crates/rx-application)
+Rust	Test Rust workspace	2026-09-24T22:39:43.2586648Z ^[[1m^[[92m   Compiling^[[0m rx-runtime v0.1.0 (/home/runner/work/rx-platform/rx-platform/crates/rx-runtime)
+Rust	Test Rust workspace	2026-09-24T22:39:43.5043825Z ^[[1m^[[92m   Compiling^[[0m rx-protocol-adapter v0.1.0 (/home/runner/work/rx-platform/rx-platform/crates/rx-protocol-adapter)
+Rust	Test Rust workspace	2026-09-24T22:39:43.6433656Z ^[[1m^[[92m   Compiling^[[0m rx-api v0.1.0 (/home/runner/work/rx-platform/rx-platform/crates/rx-api)
+Rust	Test Rust workspace	2026-09-24T22:39:43.8283889Z ^[[1m^[[92m   Compiling^[[0m rx-host-client v0.1.0 (/home/runner/work/rx-platform/rx-platform/crates/rx-host-client)
+Rust	Test Rust workspace	2026-09-24T22:39:44.5184777Z ^[[1m^[[92m   Compiling^[[0m rx-platformd v0.1.0 (/home/runner/work/rx-platform/rx-platform/crates/rx-platformd)
+Rust	Test Rust workspace	2026-09-24T22:39:58.7923794Z ^[[1m^[[92m    Finished^[[0m `test` profile [unoptimized + debuginfo] target(s) in 19.84s
+Rust	Test Rust workspace	2026-09-24T22:39:58.8202740Z ^[[1m^[[92m     Running^[[0m unittests src/lib.rs (target/debug/deps/rx_api-d5b17791be1f3db8)
+Rust	Test Rust workspace	2026-09-24T22:39:58.8215445Z 
+Rust	Test Rust workspace	2026-09-24T22:39:58.8216044Z running 7 tests
+Rust	Test Rust workspace	2026-09-24T22:39:58.8234613Z test operator_ui::tests::acquisition_rejects_component_links_replaced_after_inventory ... ok
+Rust	Test Rust workspace	2026-09-24T22:39:58.8241480Z test operator_ui::tests::bounds_manifest_before_loading_asset_bytes ... ok
+Rust	Test Rust workspace	2026-09-24T22:39:58.8263582Z test operator_ui::tests::owns_exact_verified_bytes_and_requires_a_pinned_manifest ... ok
+Rust	Test Rust workspace	2026-09-24T22:39:58.8278054Z test operator_ui::tests::rejects_unlisted_missing_tampered_and_oversized_files ... ok
+Rust	Test Rust workspace	2026-09-24T22:39:58.8279660Z test operator_ui::tests::rejects_symlink_roots_ancestors_assets_and_manifest ... ok
+Rust	Test Rust workspace	2026-09-24T22:39:58.8296273Z test operator_ui::tests::acquisition_rejects_replaced_fifos_without_waiting_for_a_writer ... ok
+Rust	Test Rust workspace	2026-09-24T22:39:58.8375371Z test operator_ui::tests::strict_manifest_and_asset_namespace_reject_aliases_and_unsupported_inputs ... ok
+Rust	Test Rust workspace	2026-09-24T22:39:58.8375840Z 
+Rust	Test Rust workspace	2026-09-24T22:39:58.8376120Z test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+Rust	Test Rust workspace	2026-09-24T22:39:58.8376506Z 
+Rust	Test Rust workspace	2026-09-24T22:39:58.8378962Z ^[[1m^[[92m     Running^[[0m unittests src/bin/local.rs (target/debug/deps/rx_platform_local-a69ae68ebeb04f53)
+Rust	Test Rust workspace	2026-09-24T22:39:58.8387817Z 
+Rust	Test Rust workspace	2026-09-24T22:39:58.8387974Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T22:39:58.8388250Z 
+Rust	Test Rust workspace	2026-09-24T22:39:58.8388539Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:39:58.8388921Z 
+Rust	Test Rust workspace	2026-09-24T22:39:58.8391064Z ^[[1m^[[92m     Running^[[0m tests/evidence_ingress.rs (target/debug/deps/evidence_ingress-6946c217e6741eb5)
+Rust	Test Rust workspace	2026-09-24T22:39:58.8409461Z 
+Rust	Test Rust workspace	2026-09-24T22:39:58.8409616Z running 1 test
+Rust	Test Rust workspace	2026-09-24T22:39:58.8410683Z test publisher_catches_up_over_128_records_after_lost_ack_and_preserves_cursor_on_restart ... ignored, tools/test_evidence_e2e.sh builds and supplies the separate Host publisher
+Rust	Test Rust workspace	2026-09-24T22:39:58.8411735Z 
+Rust	Test Rust workspace	2026-09-24T22:39:58.8412274Z test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:39:58.8412758Z 
+Rust	Test Rust workspace	2026-09-24T22:39:58.8414127Z ^[[1m^[[92m     Running^[[0m tests/executor_ingress.rs (target/debug/deps/executor_ingress-fbcd0f9dabe79020)
+Rust	Test Rust workspace	2026-09-24T22:39:58.8432215Z 
+Rust	Test Rust workspace	2026-09-24T22:39:58.8432385Z running 7 tests
+Rust	Test Rust workspace	2026-09-24T22:39:58.8436950Z test durable_s_worker_handles_real_bt_requests_and_preserves_crash_boundaries ... ignored, tools/test_executor_worker_e2e.sh supplies S worker and pinned C++ request fixture
+Rust	Test Rust workspace	2026-09-24T22:39:58.8439923Z test resident_executor_discovers_two_operator_started_runs_in_one_process_and_session ... ignored, tools/test_executor_cell_e2e.sh supplies the resident S service and pinned C++ fixture
+Rust	Test Rust workspace	2026-09-24T22:39:58.8442812Z test solutions_reader_restores_a_new_session_without_restoring_run_authority ... ignored, tools/test_executor_read_e2e.sh supplies the separate solutions reader
+Rust	Test Rust workspace	2026-09-24T22:39:59.1463436Z test executor_run_reads_require_both_negotiations_and_the_same_registered_certificate ... ok
+Rust	Test Rust workspace	2026-09-24T22:39:59.3101477Z test branch_checkpoint_preparation_and_lost_commit_reply_use_the_frozen_wire_contract ... ok
+Rust	Test Rust workspace	2026-09-24T22:39:59.3484093Z test wait_checkpoint_start_and_resolution_use_the_frozen_wire_contract ... ok
+Rust	Test Rust workspace	2026-09-24T22:39:59.4010299Z test remote_executor_allocates_and_submits_after_a_simulated_operator_start ... ok
+Rust	Test Rust workspace	2026-09-24T22:39:59.4010997Z 
+Rust	Test Rust workspace	2026-09-24T22:39:59.4011421Z test result: ok. 4 passed; 0 failed; 3 ignored; 0 measured; 0 filtered out; finished in 0.56s
+Rust	Test Rust workspace	2026-09-24T22:39:59.4012242Z 
+Rust	Test Rust workspace	2026-09-24T22:39:59.4024657Z ^[[1m^[[92m     Running^[[0m tests/host_recovery.rs (target/debug/deps/host_recovery-d44bd82e36baa936)
+Rust	Test Rust workspace	2026-09-24T22:39:59.4047290Z 
+Rust	Test Rust workspace	2026-09-24T22:39:59.4047495Z running 8 tests
+Rust	Test Rust workspace	2026-09-24T22:40:01.7193901Z test context_digests_are_computed_by_the_server_and_diagnostic_queries_cannot_claim_authority ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:01.7364911Z test exact_keys_cas_and_existing_operation_ids_reach_only_the_configured_service ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:02.5985937Z test cached_proposal_keeps_historical_actor_after_relogin_on_another_registered_terminal ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:03.4441392Z test absence_is_reported_only_after_current_terminal_and_release_role_authentication ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:03.5190844Z test proposal_response_matches_the_original_request_and_actor_even_when_diagnostic_blockers_change ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:04.2734940Z test recovery_discovery_requires_current_role_bounds_and_forwards_the_exact_cursor ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:04.3641469Z test recovery_requests_reject_extra_authority_material_and_reuse_csrf_policy ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:04.7240593Z test writer_results_keep_their_existing_codes_and_transport_errors_are_sanitized ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:04.7241445Z 
+Rust	Test Rust workspace	2026-09-24T22:40:04.7242643Z test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.32s
+Rust	Test Rust workspace	2026-09-24T22:40:04.7243553Z 
+Rust	Test Rust workspace	2026-09-24T22:40:04.7289482Z ^[[1m^[[92m     Running^[[0m tests/http.rs (target/debug/deps/http-c2f87f952d8b48d6)
+Rust	Test Rust workspace	2026-09-24T22:40:04.7313753Z 
+Rust	Test Rust workspace	2026-09-24T22:40:04.7313958Z running 22 tests
+Rust	Test Rust workspace	2026-09-24T22:40:07.1003261Z test canonical_cell_inspection_uses_current_human_scope_and_frozen_json ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:07.9334383Z test actual_tcp_listener_uses_verified_socket_origin_and_real_writer ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:07.9644638Z test binding_http_produces_a_matched_compile_input_without_cell_activation ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:07.9974478Z test case_acknowledgment_records_reading_without_changing_containment_or_scope ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:08.0149045Z test cell_wire_projection_rejects_missing_legacy_metadata_and_impossible_creation_revision ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:08.0150714Z test export_operator_package_fixture ... ignored, browser package harness requests isolated fixture files; no production keys
+Rust	Test Rust workspace	2026-09-24T22:40:09.7739075Z test expired_session_and_stopped_writer_never_return_cached_success ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:09.8339378Z test invalid_service_inventory_is_not_partially_configured_and_empty_inventory_is_explicit ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:10.6490938Z test checkpoint_wire_and_exact_artifact_are_scoped_to_current_user_access ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:10.7083219Z test close_http_requires_current_lead_cohort_evidence_and_real_clearance ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:11.6263341Z test mutations_are_durable_idempotent_and_terminal_bypass_is_rejected ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:11.6265026Z test process_review_real_compiler_report_crosses_http_and_approval_rechecks_store ... ignored, tools/test_process_review_e2e.sh supplies the separately built S verifier
+Rust	Test Rust workspace	2026-09-24T22:40:13.4271791Z test process_draft_http_preserves_versions_and_blocks_non_engineer_or_cross_cell_writes ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:13.4376180Z test operator_start_http::operator_start_context_requires_scope_and_does_not_promote_a_session_without_terminal ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:14.3263274Z test package_intake_http_verifies_real_files_scopes_receipts_and_does_not_activate ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:15.3924504Z test runtime_restriction_selection_is_scoped_read_only_and_keeps_missing_origins_null ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:15.3950379Z test sign_operator_review_fixture ... ignored, test-only signing for browser-generated process review requests
+Rust	Test Rust workspace	2026-09-24T22:40:16.1238793Z test scoped_snapshot_login_logout_and_current_revocation ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:16.5903714Z test service_diagnostics_expire_without_rejuvenating_worker_activity_and_reject_old_owners ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:17.3805482Z test service_diagnostics_are_scope_filtered_and_new_runtime_cannot_reuse_a_previous_owner ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:17.4887994Z test stale_external_procedure_report_returns_its_durable_fact_ids ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:19.4387200Z test strict_ingress_and_credentials_never_create_authority_from_headers ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:19.4387893Z 
+Rust	Test Rust workspace	2026-09-24T22:40:19.4388353Z test result: ok. 19 passed; 0 failed; 3 ignored; 0 measured; 0 filtered out; finished in 14.71s
+Rust	Test Rust workspace	2026-09-24T22:40:19.4389015Z 
+Rust	Test Rust workspace	2026-09-24T22:40:19.4443063Z ^[[1m^[[92m     Running^[[0m tests/terminal_https.rs (target/debug/deps/terminal_https-11e0178f22508978)
+Rust	Test Rust workspace	2026-09-24T22:40:19.4466195Z 
+Rust	Test Rust workspace	2026-09-24T22:40:19.4466504Z running 5 tests
+Rust	Test Rust workspace	2026-09-24T22:40:21.9723103Z test authenticated_terminal_cannot_bypass_qualification_or_current_user_role ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:22.2953165Z test terminal_bound_operator_can_prepare_start_but_revocation_blocks_cached_requests ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:22.8006328Z test operator_start_https::terminal_https_start_context_and_attempt_reads_preserve_real_start_and_identity_checks ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:23.0233546Z test operator_bundle_uses_direct_mtls_and_never_masks_api_or_missing_assets ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:25.6867614Z test tls_certificate_and_registry_are_both_required_and_cookie_is_bound_to_terminal ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:25.6868144Z 
+Rust	Test Rust workspace	2026-09-24T22:40:25.6868403Z test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 6.24s
+Rust	Test Rust workspace	2026-09-24T22:40:25.6868794Z 
+Rust	Test Rust workspace	2026-09-24T22:40:25.6914327Z ^[[1m^[[92m     Running^[[0m unittests src/lib.rs (target/debug/deps/rx_application-a31abba73750f555)
+Rust	Test Rust workspace	2026-09-24T22:40:25.6928125Z 
+Rust	Test Rust workspace	2026-09-24T22:40:25.6928294Z running 3 tests
+Rust	Test Rust workspace	2026-09-24T22:40:25.6933336Z test engine::admission::tests::current_source_identity_and_uncertainty_contract_apply_to_stored_facts ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:25.7048728Z test engine::run_configuration::tests::legacy_configuration_is_inferred_only_before_replacement_and_bound_history_never_drifts ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:25.7076642Z test checkpoint_artifact::tests::rejects_a_valid_older_artifact_substituted_into_a_newer_run_view ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:25.7077425Z 
+Rust	Test Rust workspace	2026-09-24T22:40:25.7077903Z test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+Rust	Test Rust workspace	2026-09-24T22:40:25.7078527Z 
+Rust	Test Rust workspace	2026-09-24T22:40:25.7079694Z ^[[1m^[[92m     Running^[[0m tests/transactions.rs (target/debug/deps/transactions-8e058860d2a122a4)
+Rust	Test Rust workspace	2026-09-24T22:40:25.7097181Z 
+Rust	Test Rust workspace	2026-09-24T22:40:25.7097663Z running 240 tests
+Rust	Test Rust workspace	2026-09-24T22:40:25.8581147Z test activation_visits_are_unique_for_the_whole_run_across_parts ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:25.8803561Z test an_entered_send_with_no_remote_receipt_remains_unknown_and_is_not_reissued ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:25.9108869Z test admission_receipt_is_anchored_to_the_original_control_record_and_survives_later_changes ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:25.9327063Z test a_new_contradictory_native_result_preserves_historical_outcome ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:25.9794900Z test assignment_tests::assignment_contract_rejects_false_cardinality_duplicate_witness_and_changed_cut ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:26.0412881Z test assignment_tests::ambiguous_discovery_does_not_revoke_an_already_bound_independent_run ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:26.0459324Z test assignment_tests::assignment_read_requires_current_role_cell_and_configured_executor ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:26.0562597Z test assignment_tests::assignment_read_discovers_arming_and_ambiguity_without_creating_or_selecting_work ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:26.0688643Z test assignment_tests::assignment_read_keeps_recovery_work_visible_after_its_previous_owner_is_revoked ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:26.1079859Z test binding_receipt_recovery_still_requires_current_engineer_role ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:26.1253165Z test binding_catalog_change_survives_runtime_restart_and_cannot_be_exported_as_current ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:26.1305635Z test binding_history_is_not_rebound_by_source_changes_and_title_only_changes_keep_the_same_content ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:26.1811871Z test cell_operating_context_rejects_competing_active_purposes ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:26.2588235Z test changed_intent_under_same_key_is_a_conflict ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:26.3025307Z test checkpoint_artifact_requires_current_run_scope_and_exact_owned_reference ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:26.3293970Z test checkpoint_artifact_and_run_projection_commit_with_slot_or_roll_back_together ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:26.3407962Z test changing_evidence_journal_does_not_silently_reset_sequence_history ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:26.5453367Z test checkpoint_preparation_loss_and_expiry_never_advance_the_run ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:26.5711253Z test checkpoint_commit_rejects_changed_mapping_artifact_and_stale_condition ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:26.7153377Z test checkpoint_successor_preserves_an_existing_child_slot_from_another_visit ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:26.7322934Z test checkpoint_proposal_is_not_an_applied_decision_and_commit_response_survives_loss ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:26.8676573Z test checkpoint_wait_uses_p_time_and_success_cannot_be_committed_after_deadline ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:26.9949819Z test closed_case_duplicate_reports_never_replay_but_new_physical_reports_reopen_containment ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:27.5579002Z test configuration_dispatch_tests::configuration_apply_rejects_expired_host_read_even_with_a_fresh_release_session ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:27.6583227Z test configuration_dispatch_tests::configuration_apply_cannot_use_partial_host_results_or_revoked_terminal ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:28.2914404Z test configuration_dispatch_tests::configuration_apply_requires_volatile_fresh_observations_at_both_prepare_and_commit ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:28.2988579Z test configuration_dispatch_tests::configuration_apply_keeps_completed_process_artifacts_and_new_runs_bind_new_configuration ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:28.3814278Z test configuration_dispatch_tests::configuration_apply_is_atomic_and_lost_reply_recovers_selection_epoch_and_history ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:28.8202289Z test configuration_dispatch_tests::configuration_dispatch_conflicting_receipt_never_overwrites_first_fact ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:28.9053598Z test configuration_dispatch_tests::configuration_dispatch_new_preparation_cannot_bypass_older_unknown_send ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:29.1672872Z test configuration_dispatch_tests::configuration_dispatch_partial_host_confirmation_is_mixed_without_platform_swap ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:30.7033753Z test configuration_dispatch_tests::configuration_dispatch_receipt_survives_transport_failure_and_disappearance_latches_dispute ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:31.4513614Z test configuration_dispatch_tests::configuration_dispatch_revoked_sender_blocks_resend_but_late_fact_is_retained ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:31.5018617Z test configuration_dispatch_tests::configuration_dispatch_changed_snapshot_cannot_authorize_missing_receipt_retry ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:31.9053155Z test configuration_dispatch_tests::configuration_dispatch_requires_fences_terminal_and_retains_one_task_after_commit_loss ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:32.3456340Z test configuration_dispatch_tests::host_recovery_tests::recovery_adopts_current_original_outbox_and_commits_marker_and_exact_ack_atomically ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:32.4123787Z test configuration_dispatch_tests::host_recovery_tests::recovery_commit_reply_retry_cannot_hide_a_new_source_generation_after_historical_success ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:32.4608858Z test configuration_dispatch_tests::host_recovery_tests::recovery_ambiguous_current_fences_and_page_overflow_never_select_a_partial_candidate_set ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:32.6113624Z test configuration_dispatch_tests::host_recovery_tests::recovery_external_payload_cannot_inject_transport_observations_or_operating_actions ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:32.6537922Z test configuration_dispatch_tests::configuration_dispatch_send_entry_is_durable_and_missing_retry_uses_exact_request ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:33.0661690Z test configuration_dispatch_tests::host_recovery_tests::recovery_initial_unapplied_and_normal_renewal_preserve_dynamic_authority_while_restoring_real_false_fact ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:33.0994126Z test configuration_dispatch_tests::host_recovery_tests::recovery_history_is_discoverable_in_bounded_host_pages_without_partial_cell_access ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:33.1795261Z test configuration_dispatch_tests::host_recovery_tests::recovery_late_ack_survives_all_cell_cas_loss_and_never_changes_registration ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:33.3438074Z test configuration_dispatch_tests::host_recovery_tests::recovery_known_unknown_allows_original_lookup_and_receipt_only_without_new_authorize_or_release ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:33.6746373Z test configuration_dispatch_tests::host_recovery_tests::recovery_missing_baseline_or_changed_identity_never_autogenerates_continuity ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:33.8573189Z test configuration_dispatch_tests::host_recovery_tests::recovery_proposal_reply_is_recovered_without_fresh_host_data_and_still_checks_key_and_actor ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:34.0004017Z test configuration_dispatch_tests::host_recovery_tests::recovery_permanent_void_without_invocation_preserves_known_prepare_identity_and_records_only_not_executed ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:34.0323768Z test configuration_dispatch_tests::host_recovery_tests::recovery_lost_commits_keep_original_proposal_fence_and_ack_without_replaying_authority ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:34.1613818Z test configuration_dispatch_tests::host_recovery_tests::recovery_sender_reapproval_keeps_original_fence_and_old_runtime_cannot_resume ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:34.1739758Z test configuration_dispatch_tests::host_recovery_tests::recovery_shared_host_requires_terminal_rights_for_every_affected_cell ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:34.3629181Z test configuration_dispatch_tests::host_recovery_tests::recovery_normal_apply_after_initial_none_uses_current_application_proof_instead_of_initial_configuration ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:34.3783661Z test configuration_dispatch_tests::host_recovery_tests::recovery_stored_actor_roundtrip_retains_identifiers_without_restoring_session_authority ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:35.3281758Z test configuration_dispatch_tests::process_revalidation_tests::current_revalidation_proposal_commit_loss_is_atomic_and_recoverable ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:35.4615159Z test configuration_dispatch_tests::process_revalidation_tests::current_revalidation_keeps_review_fence_host_ack_and_unqualified_apply_gates_and_reuses_applied_root ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:35.6013818Z test configuration_dispatch_tests::process_revalidation_tests::current_revalidation_requires_explicit_mode_exact_target_and_existing_compiled_process ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:35.6686043Z test configuration_dispatch_tests::process_revalidation_tests::replace_default_preserves_legacy_request_change_shape_and_plan_digest ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:36.2059460Z test configuration_dispatch_tests::host_recovery_tests::recovery_source_clock_configuration_and_unknown_pending_changes_cannot_be_promoted ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:37.1853942Z test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::qualification_activation_rechecks_context_after_off_writer_verification ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:37.2003230Z test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::qualification_disappearing_receipt_suspends_active_cohort_without_overwriting_fact ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:38.3200430Z test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::qualification_legacy_policy_can_be_reviewed_but_cannot_issue_execution_purposes ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:38.7874023Z test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::qualification_never_clears_a_manual_hold_without_owned_provenance ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:38.8952773Z test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::qualification_issuance_is_atomic_and_request_loss_preserves_ids_and_clear_plan ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:39.3413958Z test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::qualification_activation_is_atomic_clears_only_owned_blocks_and_requires_separate_start ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:40.1022792Z test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::qualification_new_session_reauthorizes_same_pending_request_without_new_ids ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:40.5088637Z test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::qualification_permits_only_the_reviewed_operating_purposes ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:40.9189678Z test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::qualification_policy_replacement_revokes_active_grade_but_preserves_history ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:40.9802932Z test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::qualification_partial_host_receipts_never_activate_the_cell ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:41.8394036Z test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::qualification_send_journal_does_not_infer_rejection_from_missing_reply ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:41.9183990Z test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::qualification_restart_retires_active_authority_and_preserves_completed_batch ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:42.2354911Z test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::runtime_requalification_tests::a_later_review_without_selection_cannot_reuse_an_earlier_runtime_adoption ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:43.4020913Z test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::runtime_requalification_tests::activated_root_after_restart_keeps_exact_origin_owner_and_can_begin_explicit_revalidation ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:43.4659993Z test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::runtime_requalification_tests::initial_runtime_restriction_is_signed_into_requalification_and_cleared_only_at_activation ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:43.5497148Z test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::runtime_requalification_tests::a_new_shared_cell_invalidates_pending_and_active_requalification_without_changing_the_original_cell ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:43.9441763Z test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::runtime_requalification_tests::restriction_binding_is_atomic_and_missing_or_wrong_origins_never_generate_authority ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:44.3443081Z test configuration_dispatch_tests::requalification_tests::qualification_activation_tests::runtime_requalification_tests::review_without_explicit_runtime_restriction_cannot_issue_a_clear_for_it ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:44.4887238Z test configuration_dispatch_tests::requalification_tests::requalification_approval_is_idempotent_and_new_report_invalidates_its_scope ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:44.5063913Z test configuration_dispatch_tests::requalification_tests::requalification_approval_requires_fences_and_independent_reviewer_and_fresh_context ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:45.3331639Z test configuration_dispatch_tests::requalification_tests::requalification_not_run_is_preserved_and_cannot_be_approved ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:45.3410458Z test configuration_dispatch_tests::requalification_tests::requalification_rejects_missing_forged_or_wrong_environment_evidence ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:45.4281800Z test confirmed_new_cell_fence_advances_registration_and_allows_only_original_grant_renewal ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:45.4844455Z test configuration_dispatch_tests::requalification_tests::requalification_begin_is_atomic_and_same_key_preserves_fences ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:45.5316338Z test conflicting_observation_is_committed_as_invalidation_even_though_api_rejects_it ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:45.5900697Z test current_engineer_role_is_required_even_when_recovering_an_existing_draft_receipt ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:45.7019194Z test control_journal_is_atomic_and_audit_sessions_do_not_advance_its_cursor ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:45.9845297Z test device_binding_tests::approved_action_produces_exact_nonexecuting_candidate_and_independent_impact_review ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:46.4435397Z test device_binding_tests::missing_mandatory_conditions_and_malformed_conditions_never_get_default_success ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:46.5134354Z test configuration_dispatch_tests::requalification_tests::requalification_large_evidence_is_chunked_atomically_and_restored_exactly ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:47.0845951Z test device_binding_tests::device_plan_authoring_exports_exact_provenance_without_changing_active_steps ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:47.0883914Z test configuration_dispatch_tests::requalification_tests::requalification_report_commit_loss_recovers_original_bytes_and_never_qualifies ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:47.1306276Z test device_binding_tests::new_shared_cell_or_new_report_invalidates_impact_review ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:47.3985192Z test device_binding_tests::proposal_and_impact_review_recover_original_records_after_commit_faults ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:47.4059913Z test device_catalog_tests::device_catalog_intake_is_atomic_preserves_source_and_never_changes_active_configuration ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:47.4468415Z test device_binding_tests::prospective_resources_expand_impact_and_uncovered_cell_scope_rejects_commit ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:47.5103700Z test device_catalog_tests::old_packages_without_catalog_remain_readable_without_claiming_device_validation ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:47.6003315Z test device_binding_tests::stale_or_incomplete_device_plans_do_not_export_or_silently_fall_back ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:47.6197957Z test device_generation_change_is_preserved_and_does_not_disappear_on_rejection ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:47.7249204Z test device_catalog_tests::installation_environment_and_expired_tickets_do_not_commit_a_catalog ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:47.7483774Z test device_provenance_cannot_pass_the_legacy_process_review_even_when_actions_match ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:47.8055629Z test device_review_tests::failed_checks_are_recorded_but_not_approved_and_rejection_survives_policy_revocation ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:48.0133622Z test device_catalog_tests::signed_catalog_mismatches_cannot_enter_the_writer_as_valid_declarations ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:48.0383127Z test device_review_tests::independent_device_approval_requires_exact_latest_report_and_leaves_cell_unchanged ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:48.1489804Z test device_review_tests::list_returns_bounded_summaries_instead_of_copying_large_reports ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:48.1903999Z test device_review_tests::fresh_proof_loses_applicability_when_authority_or_report_changes_before_commit ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:48.2284386Z test device_review_tests::signature_validator_request_and_catalog_mismatch_cannot_be_recorded_as_verified ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:48.3166300Z test diagnostic_case_keeps_epoch_and_mandate_but_blocks_new_admission ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:48.3584764Z test draft_binding_commit_loss_and_input_conflict_preserve_one_resolved_snapshot ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:48.3965513Z test draft_binding_selection_requires_current_source_catalog_and_real_registered_step ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:48.4001476Z test direct_state_puts_during_hold_are_captured_at_one_final_transaction_cut ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:48.4240202Z test draft_history_keeps_incomplete_sources_and_concurrent_updates_do_not_overwrite_them ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:48.5471256Z test draft_saves_are_atomic_recoverable_and_never_change_the_installed_cell ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:48.5602225Z test device_review_tests::report_and_decision_commit_faults_recover_one_original_version_and_decision ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:48.5748487Z test early_native_evidence_is_reapplied_when_the_receipt_establishes_correlation ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:48.6340742Z test evidence_gap_is_not_skipped_and_conflicting_sequence_is_quarantined ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:48.8820874Z test false_handover_facts_are_retained_and_identity_conflicts_block_release ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:48.8988530Z test executor_part_and_activation_mutations_preserve_full_request_identity_and_atomic_results ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:48.9554749Z test executor_reconnect_is_idempotent_but_changed_incarnation_revokes_authority ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:49.0571771Z test executor_submit_checks_the_whole_envelope_and_recovers_an_immutable_receipt_after_t1_loss ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:49.1066985Z test handover_release_is_atomic_and_duplicate_proof_does_not_release_another_owner ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:49.1154546Z test hold_proves_unsent_work_not_executed_without_releasing_resource ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:49.2008944Z test host_binding_baseline_tests::baseline_bound_cut_uses_fence_while_pre_fence_config_and_read_keep_their_lower_epoch ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:49.2456887Z test hold_propagates_to_shared_resources_and_preserves_independent_cells ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:49.2877375Z test host_binding_baseline_tests::exact_initial_applied_context_is_preserved_without_claiming_activation ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:49.3213465Z test host_binding_baseline_tests::baseline_and_bound_transition_are_atomic_across_rollback_and_commit_response_loss ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:49.3222647Z test host_binding_baseline_tests::commit_body_and_reusable_transport_pin_changes_cannot_replace_the_original_baseline ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:49.3800258Z test host_binding_baseline_tests::historical_baseline_survives_renewal_and_later_registration_epoch_changes ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:49.3861181Z test host_binding_baseline_tests::legacy_none_and_already_bound_missing_baseline_never_backfill_on_later_provenance ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:49.4787658Z test host_binding_baseline_tests::missing_primary_baseline_is_integrity_when_pinned_bound_history_survives ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:49.5984643Z test host_binding_baseline_tests::missing_or_tampered_original_objects_and_reference_metadata_fail_historical_read ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:49.5990332Z test host_binding_baseline_tests::known_pinned_plan_cannot_downgrade_to_none_even_after_its_expiry ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:49.5992547Z test host_binding_baseline_tests::only_new_normal_commit_creates_exact_immutable_baseline_and_initial_applied_none_is_valid ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:49.6058611Z test host_binding_baseline_tests::uri_pin_accepts_only_public_https_origin_without_credentials_or_request_data ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:49.7282875Z test host_bootstrap_plan_and_registration_are_durable_and_do_not_fabricate_readiness ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:49.8217259Z test host_bootstrap_never_reuses_a_changed_delivery_journal_in_the_same_boot ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:49.9000461Z test host_bootstrap_rejects_wrong_incarnation_missing_sources_and_changed_context ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:49.9640336Z test host_binding_baseline_tests::mismatched_actual_configuration_read_scope_and_time_never_prepare_a_baseline_plan ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:50.0061737Z test late_prepared_receipt_after_pause_does_not_create_an_authorization ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:50.0866639Z test maintained_condition_recovery_does_not_revive_an_old_mandate ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:50.1445225Z test maintained_watchdog_revokes_expired_facts_without_fabricating_a_negative_sample ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:50.1772856Z test host_read_ingestion_checks_context_and_preserves_the_native_source_fields ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:50.2019606Z test live_execution_snapshot_preserves_the_cut_and_does_not_reuse_aged_maintained_conditions ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:50.3033129Z test native_metadata_changes_conflict_and_ack_cursor_is_part_of_t2_commit ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:50.3643258Z test native_outcomes_tests::native_outcome_table_rejects_ambiguous_unbound_and_nonterminal_policy ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:50.5492775Z test native_receipt_capture_does_not_stand_in_for_completion_policy ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:50.6130765Z test native_outcomes_tests::native_outcome_atomic_ack_loss_and_late_contradiction_preserve_first_conclusion ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:50.8469327Z test native_outcomes_tests::native_outcome_postconditions_require_current_evidence_and_no_hold ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:51.4505947Z test non_operating_close_preparation_lost_reply_and_rollback_do_not_duplicate_clearances ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:51.6988270Z test non_operating_close_does_not_accept_missing_people_proof_or_invented_evidence ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:51.8530275Z test native_outcomes_tests::native_outcome_pairs_separate_terminal_meanings_and_leave_unknown_unsettled ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:51.8589800Z test non_operating_close_is_atomic_idempotent_and_retains_other_case_restrictions ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:51.9262285Z test non_operating_close_preserves_unknown_effect_and_does_not_release_resources ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:51.9884321Z test observation_batch_rejects_bad_last_source_before_writing_any_fact ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:52.0016655Z test observation_batch_keeps_conflict_evidence_and_other_source_truth_without_repeated_revocation ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:52.1069734Z test observation_batch_evaluates_the_complete_cut_and_recovers_commit_reply_loss ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:52.1204709Z test observation_generation_loss_is_latched_once_and_does_not_adopt_the_new_source ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:52.1620856Z test operator_diagnostic_browser_fixtures_are_real_unqualified_read_models ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:52.2207872Z test operator_diagnostics_distinguish_missing_generation_and_expression_mismatch ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:52.2438040Z test one_physical_resource_is_reserved_across_cells_not_per_cell_alias ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:52.2443550Z test operator_diagnostics_share_the_condition_evaluator_and_do_not_change_authority ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:52.3158130Z test operator_start_tests::a_valid_operator_without_terminal_gets_a_blocked_candidate_and_scope_stays_private ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:52.3453090Z test operator_service_reconnect_cannot_start_work_or_replace_executor_authority ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:52.4383261Z test operator_start_tests::lost_start_response_uses_the_original_attempt_and_deadline_read_does_not_mutate_status ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:52.4592347Z test operator_start_tests::context_is_read_only_and_the_exact_candidate_starts_only_after_explicit_mutation ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:52.5513918Z test operator_start_tests::candidate_rejections_match_start_and_old_context_cannot_override_a_new_revision ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:52.6464256Z test package_intake_commit_rejects_role_or_terminal_revoked_while_worker_runs ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:52.7632547Z test package_intake_conflicting_ids_and_stale_configuration_never_create_two_receipts ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:52.7803049Z test p_commits_branch_choice_and_rejects_the_untaken_activation ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:52.7983566Z test package_intake_commits_receipt_event_and_request_atomically_without_cell_change ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:52.8607816Z test package_intake_receipt_is_historical_after_policy_disable_and_current_role_revocation_applies_first ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:52.9090201Z test package_intake_receipts_survive_restart_but_live_policy_and_preflight_do_not ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:52.9843965Z test package_intake_rejects_unregistered_store_or_different_verification_policy ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:53.2126441Z test part_completion_waits_for_release_and_closes_exhausted_run ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:53.2263166Z test package_intake_rechecks_authority_policy_and_time_after_file_work ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:53.2968228Z test part_completion_requires_only_the_committed_branch_and_its_real_release_proof ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:53.3883543Z test pause_rejects_a_late_arm_acknowledgment_from_start_preparation ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:53.4335713Z test pause_after_emit_is_not_cancellation_and_late_correlated_result_is_still_recorded ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:53.4590418Z test pausing_a_prepared_run_without_arm_does_not_fence_other_cell_work ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:53.5149946Z test pending_start_has_a_deadline_and_key_covers_budget_intent ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:53.6006877Z test permit_deadline_cannot_outlive_the_observation_that_supported_it ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:53.7262916Z test pause_commits_reply_fence_and_unsent_sealing_atomically_without_refunding_budget ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:53.7953774Z test prepared_is_not_an_authorization_ack_and_duplicate_receipts_complete_the_right_message ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:53.8082923Z test physical_case_open_is_atomic_and_acknowledgment_cannot_restore_authority ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:54.2506253Z test process_change_fence_confirmation_is_not_configuration_application ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:54.2687848Z test procedure_requires_real_fence_and_condition_evidence_then_accounts_for_every_worker ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:54.6003391Z test non_operating_close_rechecks_time_case_epoch_evidence_and_current_actor ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:54.6883407Z test process_change_proposal_and_stage_preserve_configuration_and_all_step_guards ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:54.8916031Z test process_change_preparation_requires_current_terminal_and_serializes_overlapping_changes ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:55.0193917Z test process_change_preparation_is_atomic_preserves_unknown_work_and_requires_config_ack ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:55.2153721Z test process_change_refresh_preserves_existing_blocks_and_replaces_only_preparation_context ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:55.2637599Z test process_change_proposal_failure_is_atomic_and_lost_reply_recovers_original_plan ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:55.3090525Z test process_change_revoked_software_review_rejects_pending_stage_without_installing_target ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:55.3353087Z test process_change_shared_host_closure_requires_rights_for_every_affected_cell ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:55.4613765Z test process_checkpoint_survives_runtime_restart_without_restoring_execution_authority ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:55.5404188Z test process_review_lists_are_scoped_and_history_is_read_only_with_latest_revision_visible ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:55.6773464Z test process_review_new_report_invalidates_old_decision_and_cas_prevents_overwriting_reviews ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:55.6897029Z test process_review_authority_and_role_changes_reject_pending_approvals ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:55.6928307Z test process_review_signature_and_compiled_bytes_cannot_be_replaced_or_rebound ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:55.7287796Z test process_review_restart_preserves_software_decision_but_rejects_old_pending_ticket ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:55.7864164Z test producer_reconnect_requires_current_identity_and_cell_negotiation ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:55.8719068Z test process_review_signed_compiler_success_does_not_override_cell_binding_mismatch ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:55.9693445Z test producer_runtime_restart_tests::consecutive_p_restarts_preserve_historical_operating_session_and_each_runtime_block ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:56.1514544Z test producer_runtime_restart_tests::absent_or_wrong_boot_configuration_and_scope_coverage_cannot_suppress_invalidation ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:56.1705310Z test producer_runtime_restart_tests::changed_host_journal_authentication_or_session_validity_still_adds_device_restart ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:56.1730743Z test producer_runtime_restart_tests::current_origin_must_cover_every_registered_cell_of_the_host ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:56.2212392Z test producer_runtime_restart_tests::malformed_provenance_rolls_back_session_replacement_instead_of_claiming_runtime_only ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:56.2715421Z test process_review_signed_report_and_separate_reviewer_approval_are_atomic_and_non_actuating ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:56.3829203Z test producer_runtime_restart_tests::prior_source_generation_loss_remains_restricted_after_p_runtime_evidence_reconnect ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:56.3913443Z test producer_runtime_restart_tests::runtime_only_session_replacement_recovers_commit_loss_without_repeated_invalidation ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:56.5114220Z test production_read_before_first_part_has_complete_budget_and_detects_missing_parts ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:56.5353594Z test qualification_defaults::close_policy_admission_requires_an_explicit_qualification_capability ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:56.6073434Z test production_completion_requires_release_and_preserves_original_reply_and_budget ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:56.6503457Z test qualification_defaults::procedure_admission_requires_an_explicit_qualification_capability ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:56.7190541Z test producer_runtime_restart_tests::p_only_restart_replaces_only_evidence_session_and_preserves_all_authority_records ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:56.7398729Z test renewal_uses_durable_sequence_and_original_send_time_without_replaying_permission ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:56.7542538Z test recorded_cell_context_tracks_start_intervention_and_real_block_creation_revisions ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:56.7680781Z test reconciliation_requests_are_durable_coalesced_and_cannot_claim_release ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:56.7788881Z test resolved_plan_binding_and_digest_cannot_be_substituted_in_cell_configuration ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:56.8773201Z test repeated_disputed_samples_do_not_create_unbounded_latches_but_a_new_episode_does ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:56.9064995Z test restarting_runtime_preserves_consumption_and_revokes_mandate ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:56.9457300Z test role_revocation_is_checked_before_cached_result_lookup ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:56.9596631Z test runtime_invalidation_tests::first_runtime_restart_records_the_exact_before_and_after_boundaries ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:56.9646744Z test runtime_invalidation_tests::consecutive_restarts_keep_each_immutable_origin_and_old_block_readable ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:57.0203568Z test runtime_invalidation_tests::older_runtime_restart_reasons_and_operator_holds_do_not_acquire_origins ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:57.0381030Z test runtime_invalidation_tests::origin_lookup_rejects_wrong_identity_and_does_not_accept_a_changed_block ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:57.1078569Z test runtime_invalidation_tests::origin_recording_preserves_source_facts_and_existing_run_budget_on_restart ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:57.1374225Z test runtime_invalidation_tests::restart_origin_and_restriction_commit_together_even_when_the_reply_is_lost ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:57.2541869Z test runtime_invalidation_tests::runtime_restriction_view_checks_current_roles_cell_access_and_preserves_authority_state ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:57.2965811Z test same_slot_new_key_and_lost_reply_do_not_create_another_operation ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:57.3288617Z test service_roles_cannot_impersonate_human_procedure_reporters_or_case_leads ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:57.4314583Z test stale_observation_and_wrong_executor_do_not_reach_t1 ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:57.4831715Z test stale_procedure_report_keeps_external_fact_and_latch_but_never_grants_entry ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:57.5213413Z test runtime_stop_barrier_is_atomic_blocks_new_authority_and_keeps_unknown_work ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:57.5319766Z test start_requires_all_hosts_and_cannot_be_completed_by_partial_ack ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:57.6427516Z test t1_failure_rolls_back_slot_resource_permit_and_outbox_together ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:57.6944521Z test uncommissioned_cell_cannot_start_from_package_presence ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:57.7201695Z test t2_commits_native_evidence_outcome_and_contiguous_cursor_atomically ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:57.7517104Z test unregistered_terminal_cannot_start_even_with_operator_role ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:57.7649998Z test resource_release_requires_all_current_handover_facts ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:57.7939168Z test user_session_requires_its_issued_terminal_binding_and_registry_revision ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:57.8856548Z test t2_rollback_and_lost_ack_preserve_exactly_one_recorded_result ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0422793Z test wait_deadline_and_success_are_decided_by_p_and_cannot_be_reset_by_retries ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0423386Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0423957Z test result: ok. 240 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 32.33s
+Rust	Test Rust workspace	2026-09-24T22:40:58.0424345Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0436087Z ^[[1m^[[92m     Running^[[0m unittests src/lib.rs (target/debug/deps/rx_domain-cf4c45d8f28ba785)
+Rust	Test Rust workspace	2026-09-24T22:40:58.0446835Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0447050Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T22:40:58.0449101Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0449758Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:40:58.0450473Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0451432Z ^[[1m^[[92m     Running^[[0m tests/cell_invariants.rs (target/debug/deps/cell_invariants-d0c73cf87a5e96a3)
+Rust	Test Rust workspace	2026-09-24T22:40:58.0460437Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0460599Z running 4 tests
+Rust	Test Rust workspace	2026-09-24T22:40:58.0464615Z test duplicate_or_empty_scope_vectors_do_not_vacuously_authorize ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0465316Z test setup_and_material_budgets_are_not_interchangeable ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0466004Z test last_counted_part_can_continue_but_a_new_part_cannot_be_created ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0466774Z test stale_vector_does_not_regress_or_partially_update_any_scope ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0468017Z ^[[1m^[[92m     Running^[[0m tests/contracts.rs (target/debug/deps/contracts-fc939fca5713cae6)
+Rust	Test Rust workspace	2026-09-24T22:40:58.0468649Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0469082Z test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:40:58.0469499Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0478565Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0478778Z running 16 tests
+Rust	Test Rust workspace	2026-09-24T22:40:58.0483108Z test counters_preserve_full_width_and_reject_json_numbers ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0484243Z test any_uses_a_valid_witness_deadline_and_all_uses_the_earliest_deadline ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0485505Z test condition_schema_is_closed ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0488453Z test duplicate_conclusion_is_idempotent_and_empty_proof_rejected ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0489368Z test input_rejects_unknown_duplicate_and_incompatible_fields ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0490103Z test frozen_cv02_negative_zero_and_cv03_false ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0490600Z test frozen_cv01_canonical_bytes_and_digest ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0491025Z test oneof_presence_and_false_are_not_missing_or_null ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0498546Z test response_loss_and_running_poll_never_create_a_result ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0499434Z test source_age_not_callback_time_controls_freshness ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0500375Z test strict_json_rejects_trailing_bytes_and_duplicate_escaped_keys ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0501359Z test resource_order_is_not_semantic_but_duplicates_are_invalid ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0502816Z test three_valued_groups_and_invalid_hidden_branch ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0503322Z test terminal_success_does_not_release_and_conflicting_result_is_preserved ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0503816Z test profile_calibration_and_rule_change_identity ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0505491Z test quality_alone_never_proves_freshness_generation_or_unit ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0506033Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0506307Z test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:40:58.0506684Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0507318Z ^[[1m^[[92m     Running^[[0m tests/restoration.rs (target/debug/deps/restoration-5be3e192e86975f1)
+Rust	Test Rust workspace	2026-09-24T22:40:58.0516583Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0516742Z running 5 tests
+Rust	Test Rust workspace	2026-09-24T22:40:58.0522188Z test duplicate_or_overbudget_history_is_corruption_not_a_refund ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0523174Z test restoring_reconciling_operation_preserves_unknown_and_quarantine ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0524490Z test historical_dispute_survives_restart_without_rewriting_success ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0525322Z test restoring_run_budget_never_refunds_consumption ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0526104Z test stored_state_cannot_claim_success_without_terminal_evidence ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0526680Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0527106Z test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:40:58.0527717Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0530420Z ^[[1m^[[92m     Running^[[0m unittests src/lib.rs (target/debug/deps/rx_host_client-5d340ccb410a79d2)
+Rust	Test Rust workspace	2026-09-24T22:40:58.0543599Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0543793Z running 13 tests
+Rust	Test Rust workspace	2026-09-24T22:40:58.0551116Z test configuration_worker::tests::configuration_worker_propagates_writer_failure_and_never_contacts_host ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0552773Z test connection::diagnostic::tests::stage_and_typed_reason_survive_without_logging_remote_text ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0556843Z test bootstrap::provenance_tests::credential_bearing_and_non_origin_endpoints_are_rejected_before_tls ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0560063Z test connection::diagnostic::tests::varying_timing_does_not_repeat_the_same_failure ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0561214Z test connection::tests::closed_owner_while_waiting_for_producer_stops_without_connecting ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0562915Z test delivery::diagnostic::tests::excludes_rpc_metadata_details_structured_bodies_and_request_identifiers ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0564361Z test delivery::reconciliation::tests::unavailable_read_retries_but_broken_proof_and_revoked_authority_do_not ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0567195Z test delivery::diagnostic::tests::suppresses_only_consecutive_identical_diagnostics_and_keeps_writer_reason ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0568759Z test configuration_worker::tests::configuration_worker_stops_while_a_writer_reply_is_pending ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0570200Z test service_health::tests::a_relay_cannot_label_another_services_samples_with_its_owner ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0571665Z test observation::tests::maintained_monitor_does_not_hide_writer_failure_or_run_after_owner_disappears ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0725461Z test delivery::diagnostic::tests::bounds_the_complete_json_line_including_unicode_escaping_and_newline ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0824001Z test observation::tests::maintained_monitor_polls_independently_and_obeys_owner_stop ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0824509Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0824783Z test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+Rust	Test Rust workspace	2026-09-24T22:40:58.0825159Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0829737Z ^[[1m^[[92m     Running^[[0m tests/configuration_e2e.rs (target/debug/deps/configuration_e2e-6ffde22abfa2b64a)
+Rust	Test Rust workspace	2026-09-24T22:40:58.0853586Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0853781Z running 2 tests
+Rust	Test Rust workspace	2026-09-24T22:40:58.0855013Z test configuration_coordinator_persists_request_and_recovers_real_host_reply_loss ... ignored, tools/test_host_configuration_e2e.sh supplies S simulation server
+Rust	Test Rust workspace	2026-09-24T22:40:58.0857047Z test configuration_reply_loss_recovers_same_receipt_and_restarted_host_stays_unqualified ... ignored, tools/test_host_configuration_e2e.sh supplies S simulation server
+Rust	Test Rust workspace	2026-09-24T22:40:58.0858180Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0858600Z test result: ok. 0 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:40:58.0859208Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0859828Z ^[[1m^[[92m     Running^[[0m tests/network_e2e.rs (target/debug/deps/network_e2e-8cee081d422037a8)
+Rust	Test Rust workspace	2026-09-24T22:40:58.0877187Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0877377Z running 3 tests
+Rust	Test Rust workspace	2026-09-24T22:40:58.0878544Z test application_outbox_reaches_mtls_host_and_t2_commits_the_result ... ignored, tools/test_host_e2e.sh builds the separate Host fixture and supplies its path
+Rust	Test Rust workspace	2026-09-24T22:40:58.0880714Z test automatic_dispatcher_recovers_a_lost_authorize_reply_without_native_reexecution ... ignored, tools/test_host_e2e.sh builds the separate Host fixture and supplies its path
+Rust	Test Rust workspace	2026-09-24T22:40:58.0882914Z test remote_executor_submission_and_host_reply_loss_preserve_one_native_effect_per_slot ... ignored, tools/test_host_e2e.sh supplies the separate Host server
+Rust	Test Rust workspace	2026-09-24T22:40:58.0884376Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0884751Z test result: ok. 0 passed; 0 failed; 3 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:40:58.0885106Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0885473Z ^[[1m^[[92m     Running^[[0m unittests src/lib.rs (target/debug/deps/rx_package-09a7e62a4ef4d03f)
+Rust	Test Rust workspace	2026-09-24T22:40:58.0890628Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0891314Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T22:40:58.0891567Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0892169Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:40:58.0892819Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0893482Z ^[[1m^[[92m     Running^[[0m tests/operating_area.rs (target/debug/deps/operating_area-bfedab5cdeaf6f01)
+Rust	Test Rust workspace	2026-09-24T22:40:58.0903793Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0903984Z running 1 test
+Rust	Test Rust workspace	2026-09-24T22:40:58.0908949Z test judge_approves_only_its_bounded_nonactuating_report_rule ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.0909553Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0910029Z test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:40:58.0910478Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0911131Z ^[[1m^[[92m     Running^[[0m tests/release.rs (target/debug/deps/release-753c160ac7f0594e)
+Rust	Test Rust workspace	2026-09-24T22:40:58.0922210Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.0922671Z running 3 tests
+Rust	Test Rust workspace	2026-09-24T22:40:58.1688362Z test compiled_root_distinguishes_unsigned_signature_key_and_content_refusals ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.2661702Z test revocation_survives_denied_candidate_restart_and_replayed_or_shrunk_lists ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.3086304Z test durable_floor_rejects_restart_downgrade_and_same_version_equivocation ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.3087021Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.3087455Z test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.22s
+Rust	Test Rust workspace	2026-09-24T22:40:58.3088090Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.3090774Z ^[[1m^[[92m     Running^[[0m tests/verification.rs (target/debug/deps/verification-ed38e3354ae76546)
+Rust	Test Rust workspace	2026-09-24T22:40:58.3102886Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.3103079Z running 21 tests
+Rust	Test Rust workspace	2026-09-24T22:40:58.3162763Z test canonical_set_order_is_stable_and_duplicate_json_fields_are_rejected ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.3255689Z test closed_paths_and_inventory_reject_traversal_aliases_and_hidden_files ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.3403942Z test a_dependency_verified_before_key_revocation_is_not_retrusted_implicitly ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.3515110Z test deeply_nested_valid_package_roundtrips_and_excess_file_inventory_is_bounded ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.3592715Z test dependency_cannot_pull_an_older_copy_of_the_root_back_into_the_bundle ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.3762941Z test device_reference_v2_has_explicit_version_and_no_executable_payload ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.3786984Z test directory_verification_owns_bytes_and_rejects_links ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.3938388Z test dependency_closure_is_pinned_and_rechecked_against_current_trust ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.4112270Z test object_corruption_is_not_repaired_by_repeat_import ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.4113296Z test package_kind_target_contract_and_publisher_scope_are_checked ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.4142890Z test policy_document_requires_explicit_v2_schema_for_additional_abis ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.4144474Z test relative_review_artifact_reads_are_bounded_and_reject_link_components ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.4192774Z test object_survives_source_change_restart_and_repeat_import_without_trust_persistence ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.4384925Z test explicit_multi_abi_policy_preserves_manifest_kind_target_and_trust_checks ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.4405375Z test policy_reader_pins_exact_bytes_and_reacquires_dependencies ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.4538815Z test signed_content_is_immutable_and_signature_is_bound_to_key_identity ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.4643205Z test signing_key_alias_has_distinct_object_and_misnamed_valid_objects_are_rejected ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.4673025Z test verification_policy_fingerprint_preserves_all_u64_limits ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.4708013Z test store_and_import_reject_symlinks_and_store_handles_survive_root_path_replacement ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.4709508Z test store_ownership_marker_and_unpublished_objects_cannot_be_bypassed ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.5109193Z test stored_package_dependencies_are_rechecked_after_revocation ... ok
+Rust	Test Rust workspace	2026-09-24T22:40:58.5110043Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.5110634Z test result: ok. 21 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.20s
+Rust	Test Rust workspace	2026-09-24T22:40:58.5111508Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.5114438Z ^[[1m^[[92m     Running^[[0m unittests src/lib.rs (target/debug/deps/rx_platformd-b30bfceb3e731eab)
+Rust	Test Rust workspace	2026-09-24T22:40:58.5127302Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.5127667Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T22:40:58.5127904Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.5128354Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:40:58.5128999Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.5129808Z ^[[1m^[[92m     Running^[[0m unittests src/bin/rx-package-store.rs (target/debug/deps/rx_package_store-19e87b926dd658ae)
+Rust	Test Rust workspace	2026-09-24T22:40:58.5139838Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.5140250Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T22:40:58.5140522Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.5141002Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:40:58.5141705Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.5142771Z ^[[1m^[[92m     Running^[[0m unittests src/main.rs (target/debug/deps/rx_platformd-359236fa9fd9abbe)
+Rust	Test Rust workspace	2026-09-24T22:40:58.5153593Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.5154005Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T22:40:58.5154267Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.5154742Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:40:58.5155465Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.5156221Z ^[[1m^[[92m     Running^[[0m tests/composition.rs (target/debug/deps/composition-c5e0e20bc272a536)
+Rust	Test Rust workspace	2026-09-24T22:40:58.5183092Z 
+Rust	Test Rust workspace	2026-09-24T22:40:58.5183416Z running 10 tests
+Rust	Test Rust workspace	2026-09-24T22:41:00.2273849Z test configured_operator_ui_is_verified_before_installation_and_rejects_mutable_roots ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:02.0818135Z test configured_operator_ui_serves_over_terminal_https_without_creating_runs_or_qualification ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:02.0873321Z test export_container_fixture ... ignored, tools/test_platform_image.py requests isolated temporary container inputs
+Rust	Test Rust workspace	2026-09-24T22:41:03.0533165Z test invalid_pins_or_catalog_never_publish_a_partial_installation ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:04.6774364Z test configured_package_intake_uses_real_terminal_https_and_retains_history_across_restart ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:05.3083262Z test composed_startup_restart_and_stop_preserve_store_and_never_start_a_run ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:05.6385516Z test configured_process_review_records_separate_account_approval_over_terminal_https ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:05.9186066Z test operator_ui_compares_resolved_aliases_with_missing_directory_suffixes ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:06.1908903Z test operator_ui_rejects_parent_traversal_in_mutable_directory_locations ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.0092646Z test linux_executable_uses_shared_clock_and_sigterm_commits_process_stop ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.0093151Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.0093788Z test result: ok. 9 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 8.49s
+Rust	Test Rust workspace	2026-09-24T22:41:07.0094491Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.0146850Z ^[[1m^[[92m     Running^[[0m tests/delivery_fixture.rs (target/debug/deps/delivery_fixture-d36f1332f2816026)
+Rust	Test Rust workspace	2026-09-24T22:41:07.0160443Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.0160739Z running 3 tests
+Rust	Test Rust workspace	2026-09-24T22:41:07.0161711Z test export_delivery_final ... ignored, explicit phase77 final export; requires actual S product compiler/package outputs
+Rust	Test Rust workspace	2026-09-24T22:41:07.0163366Z test export_delivery_seed ... ignored, explicit phase77 seed export; requires a fresh output directory
+Rust	Test Rust workspace	2026-09-24T22:41:07.0164689Z test sign_delivery ... ignored, explicit external test-only signer; never a product signing service
+Rust	Test Rust workspace	2026-09-24T22:41:07.0166090Z ^[[1m^[[92m     Running^[[0m unittests src/lib.rs (target/debug/deps/rx_ports-c834cce2dddbde46)
+Rust	Test Rust workspace	2026-09-24T22:41:07.0166706Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.0167363Z test result: ok. 0 passed; 0 failed; 3 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:41:07.0170349Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.0176510Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.0176739Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T22:41:07.0176993Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.0177452Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:41:07.0178073Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.0180400Z ^[[1m^[[92m     Running^[[0m unittests src/lib.rs (target/debug/deps/rx_process_contract-cd8724eef0ab0226)
+Rust	Test Rust workspace	2026-09-24T22:41:07.0188363Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.0188594Z running 5 tests
+Rust	Test Rust workspace	2026-09-24T22:41:07.0194694Z test device_catalog::tests::duplicate_conditions_are_rejected_instead_of_normalized_away ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.0217297Z test compile_input::tests::altered_bundle_source_is_not_accepted_under_the_original_digest ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.0218288Z test source_validation::tests::a_full_error_budget_does_not_attempt_to_follow_missing_nodes ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.0268032Z test source_validation::tests::source_validation_does_not_claim_binding_or_package_approval ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.0289856Z test source_validation::tests::recursive_calls_unreachable_nodes_and_expansion_overflow_are_invalid ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.0290796Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.0291494Z test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+Rust	Test Rust workspace	2026-09-24T22:41:07.0293131Z ^[[1m^[[92m     Running^[[0m tests/native_outcome.rs (target/debug/deps/native_outcome-dc878e1a99df7601)
+Rust	Test Rust workspace	2026-09-24T22:41:07.0294026Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.0301837Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.0302427Z running 2 tests
+Rust	Test Rust workspace	2026-09-24T22:41:07.0310729Z test table_is_strict_data_and_missing_pair_cannot_resolve ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.0311676Z test table_rejects_duplicates_conflicts_and_oversized_code_sets ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.0312503Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.0312932Z test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:41:07.0313575Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.0322868Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.0323172Z running 1 test
+Rust	Test Rust workspace	2026-09-24T22:41:07.0325303Z ^[[1m^[[92m     Running^[[0m unittests src/lib.rs (target/debug/deps/rx_protocol-8e600f775fe2c348)
+Rust	Test Rust workspace	2026-09-24T22:41:07.0474453Z test checkpoint_rejection::tests::text_transport_errors_and_malformed_or_duplicated_details_do_not_prove_rejection ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.0475385Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.0475828Z test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+Rust	Test Rust workspace	2026-09-24T22:41:07.0476491Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.0480072Z ^[[1m^[[92m     Running^[[0m tests/grpc_boundary.rs (target/debug/deps/grpc_boundary-cbfdad1df6ab9d49)
+Rust	Test Rust workspace	2026-09-24T22:41:07.0494054Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.0494308Z running 1 test
+Rust	Test Rust workspace	2026-09-24T22:41:07.0683740Z test malformed_wire_never_reaches_generated_service_handler ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.0684312Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.0684746Z test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+Rust	Test Rust workspace	2026-09-24T22:41:07.0685373Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.0690725Z ^[[1m^[[92m     Running^[[0m tests/wire.rs (target/debug/deps/wire-6f1fcf181e910857)
+Rust	Test Rust workspace	2026-09-24T22:41:07.0704025Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.0704271Z running 11 tests
+Rust	Test Rust workspace	2026-09-24T22:41:07.0730501Z test document_manifest_hashes_remain_the_negotiation_identity ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.0856057Z test core_enum_numbers_and_cell_union_tags_are_stable ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.0858661Z test explicit_false_zero_and_optional_zero_survive_binary_roundtrip ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.0892707Z test nested_duplicate_singular_is_not_merged ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.0893473Z test nonfinite_numbers_rejected_in_scalar_and_packed_vector ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.0903194Z test fixed_digest_hex_and_oneof_contracts_are_checked ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.0913038Z test json_is_rx_projection_not_protojson ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.0913841Z test intent_crosses_json_protobuf_domain_without_changing_frozen_digest ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.0914773Z test unknown_enum_bad_wire_and_varint_overflow_are_rejected ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.0915633Z test prost_last_wins_and_unknown_field_behavior_is_blocked_before_decode ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.0916694Z test numbered_fields_match_frozen_documents_independently_of_generator ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.0917728Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.0918400Z test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+Rust	Test Rust workspace	2026-09-24T22:41:07.0919025Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.0921527Z ^[[1m^[[92m     Running^[[0m unittests src/lib.rs (target/debug/deps/rx_protocol_adapter-f29592df5d00300b)
+Rust	Test Rust workspace	2026-09-24T22:41:07.0933688Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.0934011Z running 2 tests
+Rust	Test Rust workspace	2026-09-24T22:41:07.1104168Z test operation::tests::unknown_and_late_contradiction_preserve_distinct_result_integrity_and_release_axes ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.1130699Z test workflow::tests::frozen_run_view_preserves_counters_slots_and_each_run_state ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.1131106Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.1131677Z test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+Rust	Test Rust workspace	2026-09-24T22:41:07.1132424Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.1137345Z ^[[1m^[[92m     Running^[[0m tests/evidence.rs (target/debug/deps/evidence-958198b27fc807d2)
+Rust	Test Rust workspace	2026-09-24T22:41:07.1147447Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.1147623Z running 2 tests
+Rust	Test Rust workspace	2026-09-24T22:41:07.1151500Z test native_result_round_trip_keeps_vendor_id_payload_and_full_width_values ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.1152678Z test projection_only_evidence_cannot_be_claimed_as_a_complete_source ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.1153908Z ^[[1m^[[92m     Running^[[0m unittests src/lib.rs (target/debug/deps/rx_runtime-636d92de1d7b2ad2)
+Rust	Test Rust workspace	2026-09-24T22:41:07.1154572Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.1155103Z test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:41:07.1155773Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.1164625Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.1164815Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T22:41:07.1165054Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.1167054Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:41:07.1167680Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.1168325Z ^[[1m^[[92m     Running^[[0m tests/writer.rs (target/debug/deps/writer-8ec0e6359f61aa2e)
+Rust	Test Rust workspace	2026-09-24T22:41:07.1181167Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.1181418Z running 3 tests
+Rust	Test Rust workspace	2026-09-24T22:41:07.1333872Z test dropped_response_still_commits_and_shutdown_drains ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.1479959Z test normal_load_cannot_consume_control_reserve_and_control_is_scheduled_first ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.2096385Z test panic_closes_admission_without_retrying_the_command ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.2096914Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.2097175Z test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s
+Rust	Test Rust workspace	2026-09-24T22:41:07.2097549Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.2163676Z ^[[1m^[[92m     Running^[[0m unittests src/lib.rs (target/debug/deps/rx_storage-fec7a6b8d46d6510)
+Rust	Test Rust workspace	2026-09-24T22:41:07.2176019Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.2176261Z running 4 tests
+Rust	Test Rust workspace	2026-09-24T22:41:07.2182882Z test mailbox::tests::partial_publication_and_oversized_input_are_refused_not_erased ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.2191315Z test mailbox::tests::symlink_and_nonregular_payloads_are_refused_without_following ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.2198885Z test mailbox::tests::publication_is_immutable_and_live_cooperating_writer_excluded ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.2332330Z test ownership_close_tests::sqlite_close_failure_retains_ownership_until_process_exit ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.2333133Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.2333666Z test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+Rust	Test Rust workspace	2026-09-24T22:41:07.2334291Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.2337110Z ^[[1m^[[92m     Running^[[0m tests/atomicity.rs (target/debug/deps/atomicity-1dce903a317d5277)
+Rust	Test Rust workspace	2026-09-24T22:41:07.2347360Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.2347666Z running 12 tests
+Rust	Test Rust workspace	2026-09-24T22:41:07.2509051Z test one_transaction_commits_state_key_event_and_outbox ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.2538323Z test control_projection_and_sequence_roll_back_together_and_ignore_audit_appends ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.2649328Z test metadata_compatibility_upgrade_preserves_record_bytes_and_rejects_future_stores ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.2673521Z test online_backup_preserves_committed_state_without_copying_live_db_file ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.2789913Z test request_identity_survives_reopening_and_namespace_isolated ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.2828460Z test pending_outbox_pages_are_exclusive_and_do_not_starve_later_ids ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.2855884Z test schema_upgrade_preserves_emitted_work_and_delivered_records_never_resurrect ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.2902934Z test failure_at_each_commit_component_rolls_everything_back ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.2979221Z test second_runtime_cannot_open_owned_database ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.3009312Z test stale_revision_does_not_partially_record_an_event ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.3018253Z test snapshot_is_a_cut_and_after_is_exclusive ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.3030180Z test voided_outbox_cannot_be_resurrected_or_sent ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.3030711Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.3031261Z test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+Rust	Test Rust workspace	2026-09-24T22:41:07.3032091Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.3035429Z ^[[1m^[[92m     Running^[[0m tests/ownership.rs (target/debug/deps/ownership-347b8487e114d1f4)
+Rust	Test Rust workspace	2026-09-24T22:41:07.3048173Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.3048395Z running 3 tests
+Rust	Test Rust workspace	2026-09-24T22:41:07.3097639Z test failed_initialization_releases_its_own_lock_but_failed_acquisition_never_releases_another ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.3208363Z test live_writer_failed_contenders_and_rollback_preserve_exclusion_then_close_reopens_history ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.3348582Z test unwinding_transaction_does_not_release_live_owner ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:07.3349059Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.3349581Z test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+Rust	Test Rust workspace	2026-09-24T22:41:07.3349997Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.3366146Z ^[[1m^[[92m   Doc-tests^[[0m rx_api
+Rust	Test Rust workspace	2026-09-24T22:41:07.5555790Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.5556300Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T22:41:07.5556637Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.5558044Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:41:07.5558423Z 
+Rust	Test Rust workspace	2026-09-24T22:41:07.5593148Z ^[[1m^[[92m   Doc-tests^[[0m rx_application
+Rust	Test Rust workspace	2026-09-24T22:41:08.6616019Z 
+Rust	Test Rust workspace	2026-09-24T22:41:08.6616604Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T22:41:08.6617007Z 
+Rust	Test Rust workspace	2026-09-24T22:41:08.6617692Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:41:08.6618312Z 
+Rust	Test Rust workspace	2026-09-24T22:41:08.6652793Z ^[[1m^[[92m   Doc-tests^[[0m rx_domain
+Rust	Test Rust workspace	2026-09-24T22:41:08.8399622Z 
+Rust	Test Rust workspace	2026-09-24T22:41:08.8400203Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T22:41:08.8400543Z 
+Rust	Test Rust workspace	2026-09-24T22:41:08.8401160Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:41:08.8429183Z ^[[1m^[[92m   Doc-tests^[[0m rx_host_client
+Rust	Test Rust workspace	2026-09-24T22:41:08.8429456Z 
+Rust	Test Rust workspace	2026-09-24T22:41:08.9374323Z 
+Rust	Test Rust workspace	2026-09-24T22:41:08.9374943Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T22:41:08.9375329Z 
+Rust	Test Rust workspace	2026-09-24T22:41:08.9376029Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:41:08.9376654Z 
+Rust	Test Rust workspace	2026-09-24T22:41:08.9406198Z ^[[1m^[[92m   Doc-tests^[[0m rx_package
+Rust	Test Rust workspace	2026-09-24T22:41:09.0782896Z 
+Rust	Test Rust workspace	2026-09-24T22:41:09.0783426Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T22:41:09.0783849Z 
+Rust	Test Rust workspace	2026-09-24T22:41:09.0784544Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:41:09.0785238Z 
+Rust	Test Rust workspace	2026-09-24T22:41:09.0812736Z ^[[1m^[[92m   Doc-tests^[[0m rx_platformd
+Rust	Test Rust workspace	2026-09-24T22:41:09.1554814Z 
+Rust	Test Rust workspace	2026-09-24T22:41:09.1555681Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T22:41:09.1556288Z 
+Rust	Test Rust workspace	2026-09-24T22:41:09.1556916Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:41:09.1557568Z 
+Rust	Test Rust workspace	2026-09-24T22:41:09.1595900Z ^[[1m^[[92m   Doc-tests^[[0m rx_ports
+Rust	Test Rust workspace	2026-09-24T22:41:09.1948250Z 
+Rust	Test Rust workspace	2026-09-24T22:41:09.1948752Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T22:41:09.1949028Z 
+Rust	Test Rust workspace	2026-09-24T22:41:09.1949625Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:41:09.1950302Z 
+Rust	Test Rust workspace	2026-09-24T22:41:09.1977102Z ^[[1m^[[92m   Doc-tests^[[0m rx_process_contract
+Rust	Test Rust workspace	2026-09-24T22:41:09.4355747Z 
+Rust	Test Rust workspace	2026-09-24T22:41:09.4356268Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T22:41:09.4356678Z 
+Rust	Test Rust workspace	2026-09-24T22:41:09.4357386Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:41:09.4358382Z 
+Rust	Test Rust workspace	2026-09-24T22:41:09.4388009Z ^[[1m^[[92m   Doc-tests^[[0m rx_protocol
+Rust	Test Rust workspace	2026-09-24T22:41:09.8993882Z 
+Rust	Test Rust workspace	2026-09-24T22:41:09.8994401Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T22:41:09.8994787Z 
+Rust	Test Rust workspace	2026-09-24T22:41:09.8995496Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:41:09.8996203Z 
+Rust	Test Rust workspace	2026-09-24T22:41:09.9028982Z ^[[1m^[[92m   Doc-tests^[[0m rx_protocol_adapter
+Rust	Test Rust workspace	2026-09-24T22:41:09.9370683Z 
+Rust	Test Rust workspace	2026-09-24T22:41:09.9371574Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T22:41:09.9372387Z 
+Rust	Test Rust workspace	2026-09-24T22:41:09.9373179Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:41:09.9373817Z 
+Rust	Test Rust workspace	2026-09-24T22:41:09.9400279Z ^[[1m^[[92m   Doc-tests^[[0m rx_runtime
+Rust	Test Rust workspace	2026-09-24T22:41:09.9855013Z 
+Rust	Test Rust workspace	2026-09-24T22:41:09.9855648Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T22:41:09.9856379Z 
+Rust	Test Rust workspace	2026-09-24T22:41:09.9857031Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T22:41:09.9857713Z 
+Rust	Test Rust workspace	2026-09-24T22:41:09.9883586Z ^[[1m^[[92m   Doc-tests^[[0m rx_storage
+Rust	Test Rust workspace	2026-09-24T22:41:10.0189725Z 
+Rust	Test Rust workspace	2026-09-24T22:41:10.0190481Z running 2 tests
+Rust	Test Rust workspace	2026-09-24T22:41:10.0721815Z test crates/rx-storage/src/ownership.rs - ownership::ExclusiveFileLock (line 15) - compile fail ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:10.0943844Z test crates/rx-storage/src/ownership.rs - ownership::ExclusiveFileLock (line 11) - compile fail ... ok
+Rust	Test Rust workspace	2026-09-24T22:41:10.0944693Z 
+Rust	Test Rust workspace	2026-09-24T22:41:10.0945154Z test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+Rust	Test Rust workspace	2026-09-24T22:41:10.0945816Z 
+Rust	Post Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	﻿2026-09-24T22:41:10.3669185Z Post job cleanup.
+Rust	Post Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:41:10.6953487Z Cache hit occurred on the primary key Linux-X64-rust-f2a3178d4ba5ae534a189969bf71e095285629a428ae82534301cc5c2d1bc24b, not saving cache.
+Rust	Post Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:41:10.6955269Z (node:11378) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Rust	Post Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830	2026-09-24T22:41:10.6962995Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Rust	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-09-24T22:41:10.7130465Z Post job cleanup.
+Rust	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:41:10.8129309Z [command]/usr/bin/git version
+Rust	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:41:10.8185859Z git version 2.55.0
+Rust	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:41:10.8234508Z Temporarily overriding HOME='/home/runner/work/_temp/79d6b131-965f-4b74-bc0a-e34bfc6d6d37' before making global git config changes
+Rust	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:41:10.8236079Z Adding repository directory to the temporary git global config as a safe directory
+Rust	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:41:10.8242353Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rx-platform/rx-platform
+Rust	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:41:10.8291076Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Rust	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:41:10.8338368Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Rust	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:41:10.8669791Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Rust	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:41:10.8724983Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Rust	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:41:10.9016757Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Rust	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:41:10.9078105Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Rust	Complete job	﻿2026-09-24T22:41:10.9715518Z Cleaning up orphan processes
+Rust	Complete job	2026-09-24T22:41:11.0066034Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830, actions/checkout@11d5960a326750d5838078e36cf38b85af677262. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+Repository and GitFlow	Set up job	﻿2026-09-24T22:38:41.4553870Z Current runner version: '2.337.0'
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.4572617Z ##[group]Runner Image Provisioner
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.4573434Z Hosted Compute Agent
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.4573942Z Version: 20260828.587
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.4574482Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.4575344Z Build Date: 2026-08-28T16:44:25Z
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.4575930Z Worker ID: {4821aa28-01bf-4846-9745-82de7e3637d0}
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.4576847Z Azure Region: centralus
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.4577371Z ##[endgroup]
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.4578515Z ##[group]Operating System
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.4579036Z Ubuntu
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.4579459Z 24.04.5
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.4579871Z LTS
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.4580323Z ##[endgroup]
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.4580783Z ##[group]Runner Image
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.4581265Z Image: ubuntu-24.04
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.4581772Z Version: 20260920.314.1
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.4582667Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260920.314/images/ubuntu/Ubuntu2404-Readme.md
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.4584074Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260920.314
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.4584839Z ##[endgroup]
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.4586063Z ##[group]GITHUB_TOKEN Permissions
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.4587767Z Contents: read
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.4588259Z Metadata: read
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.4588701Z ##[endgroup]
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.4590300Z Secret source: Actions
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.4591022Z Cache mode: write
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.4591622Z Prepare workflow directory
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.5671510Z Prepare all required actions
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.5731774Z Getting action download info
+Repository and GitFlow	Set up job	2026-09-24T22:38:41.8071719Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+Repository and GitFlow	Set up job	2026-09-24T22:38:42.3557894Z Complete job name: Repository and GitFlow
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-09-24T22:38:42.4240497Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.4242064Z with:
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.4242732Z   persist-credentials: false
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.4243553Z   fetch-depth: 0
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.4244248Z   repository: jack0682/rx-platform
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.4249792Z   token: ***
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.4250522Z   ssh-strict: true
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.4251247Z   ssh-user: git
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.4251867Z   clean: true
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.4252558Z   sparse-checkout-cone-mode: true
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.4253382Z   fetch-tags: false
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.4254129Z   show-progress: true
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.4254838Z   lfs: false
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.4255724Z   submodules: false
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.4256431Z   set-safe-directory: true
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.4257135Z   allow-unsafe-pr-checkout: false
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.4258578Z ##[endgroup]
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.5215899Z Syncing repository: jack0682/rx-platform
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.5217932Z ##[group]Getting Git version info
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.5219151Z Working directory is '/home/runner/work/rx-platform/rx-platform'
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.5220274Z [command]/usr/bin/git version
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.5279277Z git version 2.55.0
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.5298935Z ##[endgroup]
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.5306713Z Temporarily overriding HOME='/home/runner/work/_temp/e112b2b7-6b65-46a9-ba54-1c4b6290a50b' before making global git config changes
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.5310351Z Adding repository directory to the temporary git global config as a safe directory
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.5312256Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rx-platform/rx-platform
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.5592794Z Deleting the contents of '/home/runner/work/rx-platform/rx-platform'
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.5594163Z ##[group]Initializing the repository
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.5603817Z [command]/usr/bin/git init /home/runner/work/rx-platform/rx-platform
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.6819322Z hint: Using 'master' as the name for the initial branch. This default branch name
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.6820527Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.6821576Z hint: to use in all of your new repositories, which will suppress this warning,
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.6822583Z hint: call:
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.6823264Z hint:
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.6824038Z hint: 	git config --global init.defaultBranch <name>
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.6824658Z hint:
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.6825566Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.6826601Z hint: 'development'. The just-created branch can be renamed via this command:
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.6827592Z hint:
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.6828347Z hint: 	git branch -m <name>
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.6829000Z hint:
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.6829928Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.6831265Z Initialized empty Git repository in /home/runner/work/rx-platform/rx-platform/.git/
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.6833764Z [command]/usr/bin/git remote add origin https://github.com/jack0682/rx-platform
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.7418634Z ##[endgroup]
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.7419552Z ##[group]Disabling automatic garbage collection
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.7422162Z [command]/usr/bin/git config --local gc.auto 0
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.7783950Z ##[endgroup]
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.7784852Z ##[group]Setting up auth
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.7789337Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.7815310Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.8091876Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.8118518Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.8278252Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.8304172Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.8463922Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.8494348Z ##[endgroup]
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.8495757Z ##[group]Fetching the repository
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:42.8503348Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.5546728Z From https://github.com/jack0682/rx-platform
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.5548596Z  * [new branch]      develop                 -> origin/develop
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.5549993Z  * [new branch]      main                    -> origin/main
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.5551701Z  * [new tag]         archive/initial-draft-2026-09-14 -> archive/initial-draft-2026-09-14
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.5554128Z  * [new tag]         archive/investigation-wip-2026-09-14 -> archive/investigation-wip-2026-09-14
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.5556466Z  * [new tag]         codex/initial-draft     -> codex/initial-draft
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.5558234Z  * [new tag]         codex/investigation-wip -> codex/investigation-wip
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.5559657Z  * [new tag]         draft-v0.1              -> draft-v0.1
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.5562816Z [command]/usr/bin/git branch --list --remote origin/develop
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.5577907Z   origin/develop
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.5585671Z [command]/usr/bin/git rev-parse refs/remotes/origin/develop
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.5605739Z 75e19331ec1c3bfdb275f75480188f485c86d64b
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.5611886Z ##[endgroup]
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.5614287Z ##[group]Determining the checkout info
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.5617408Z ##[endgroup]
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.5619006Z [command]/usr/bin/git sparse-checkout disable
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.5662094Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.5687304Z ##[group]Checking out the ref
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.5689310Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.5978345Z Switched to a new branch 'develop'
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.5981207Z branch 'develop' set up to track 'origin/develop'.
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.5986614Z ##[endgroup]
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.6015908Z [command]/usr/bin/git log -1 --format=%H
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.6035325Z 75e19331ec1c3bfdb275f75480188f485c86d64b
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.6042004Z ##[group]Removing auth
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.6046093Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.6068996Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.6226331Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.6244689Z http.https://github.com/.extraheader
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.6250620Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.6276100Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.6430137Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.6453903Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Repository and GitFlow	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:38:43.6606285Z ##[endgroup]
+Repository and GitFlow	Test repository checks	﻿2026-09-24T22:38:43.6807586Z ##[group]Run python3 .github/test_repository.py
+Repository and GitFlow	Test repository checks	2026-09-24T22:38:43.6809141Z ^[[36;1mpython3 .github/test_repository.py^[[0m
+Repository and GitFlow	Test repository checks	2026-09-24T22:38:43.6810422Z ^[[36;1mpython3 .github/test_commit_policy.py^[[0m
+Repository and GitFlow	Test repository checks	2026-09-24T22:38:43.6994312Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Repository and GitFlow	Test repository checks	2026-09-24T22:38:43.6996082Z ##[endgroup]
+Repository and GitFlow	Test repository checks	2026-09-24T22:38:43.9967119Z ........................
+Repository and GitFlow	Test repository checks	2026-09-24T22:38:43.9969219Z ----------------------------------------------------------------------
+Repository and GitFlow	Test repository checks	2026-09-24T22:38:43.9971164Z Ran 24 tests in 0.008s
+Repository and GitFlow	Test repository checks	2026-09-24T22:38:43.9971939Z 
+Repository and GitFlow	Test repository checks	2026-09-24T22:38:43.9972468Z OK
+Repository and GitFlow	Test repository checks	2026-09-24T22:38:47.1670331Z .................
+Repository and GitFlow	Test repository checks	2026-09-24T22:38:47.1671045Z ----------------------------------------------------------------------
+Repository and GitFlow	Test repository checks	2026-09-24T22:38:47.1671699Z Ran 17 tests in 3.097s
+Repository and GitFlow	Test repository checks	2026-09-24T22:38:47.1671896Z 
+Repository and GitFlow	Test repository checks	2026-09-24T22:38:47.1672043Z OK
+Repository and GitFlow	Check DCO and verified OpenPGP signatures	﻿2026-09-24T22:38:47.1849534Z ##[group]Run python3 tools/check_commit_policy.py --head "$HEAD_SHA" --github-repository "$GITHUB_REPOSITORY"
+Repository and GitFlow	Check DCO and verified OpenPGP signatures	2026-09-24T22:38:47.1850249Z ^[[36;1mpython3 tools/check_commit_policy.py --head "$HEAD_SHA" --github-repository "$GITHUB_REPOSITORY"^[[0m
+Repository and GitFlow	Check DCO and verified OpenPGP signatures	2026-09-24T22:38:47.1885998Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Repository and GitFlow	Check DCO and verified OpenPGP signatures	2026-09-24T22:38:47.1886498Z env:
+Repository and GitFlow	Check DCO and verified OpenPGP signatures	2026-09-24T22:38:47.1888932Z   GH_TOKEN: ***
+Repository and GitFlow	Check DCO and verified OpenPGP signatures	2026-09-24T22:38:47.1889256Z   HEAD_SHA: 75e19331ec1c3bfdb275f75480188f485c86d64b
+Repository and GitFlow	Check DCO and verified OpenPGP signatures	2026-09-24T22:38:47.1889625Z ##[endgroup]
+Repository and GitFlow	Check DCO and verified OpenPGP signatures	2026-09-24T22:39:08.8196522Z OK: 48 commits audited; 48 author sign-offs; 0 recorded historical DCO violations; all signatures verified OpenPGP
+Repository and GitFlow	Validate JSON, local links and contract integrity	﻿2026-09-24T22:39:08.8312276Z ##[group]Run python3 tools/check_repository.py
+Repository and GitFlow	Validate JSON, local links and contract integrity	2026-09-24T22:39:08.8312695Z ^[[36;1mpython3 tools/check_repository.py^[[0m
+Repository and GitFlow	Validate JSON, local links and contract integrity	2026-09-24T22:39:08.8347044Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Repository and GitFlow	Validate JSON, local links and contract integrity	2026-09-24T22:39:08.8347511Z ##[endgroup]
+Repository and GitFlow	Validate JSON, local links and contract integrity	2026-09-24T22:39:08.9374097Z Checked 33 JSON files, local targets in 102 Markdown files, and two contract baselines; 0 links outside this checkout are not checked.
+Repository and GitFlow	Validate JSON, local links and contract integrity	2026-09-24T22:39:08.9374991Z Repository checks passed.
+Repository and GitFlow	Check invariant traceability	﻿2026-09-24T22:39:08.9448306Z ##[group]Run python3 tools/check_invariant_traceability.py
+Repository and GitFlow	Check invariant traceability	2026-09-24T22:39:08.9448744Z ^[[36;1mpython3 tools/check_invariant_traceability.py^[[0m
+Repository and GitFlow	Check invariant traceability	2026-09-24T22:39:08.9479987Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Repository and GitFlow	Check invariant traceability	2026-09-24T22:39:08.9480417Z ##[endgroup]
+Repository and GitFlow	Check invariant traceability	2026-09-24T22:39:09.0902863Z Invariant traceability: I=12 OI=18; declared=10 uncovered=20; test links=16. Semantic coverage not checked.
+Repository and GitFlow	Check contract baselines and SDK export regressions	﻿2026-09-24T22:39:09.0969672Z ##[group]Run python3 tools/check_contract_baselines.py
+Repository and GitFlow	Check contract baselines and SDK export regressions	2026-09-24T22:39:09.0970118Z ^[[36;1mpython3 tools/check_contract_baselines.py^[[0m
+Repository and GitFlow	Check contract baselines and SDK export regressions	2026-09-24T22:39:09.0970476Z ^[[36;1mpython3 tools/test_export_host_sdk.py^[[0m
+Repository and GitFlow	Check contract baselines and SDK export regressions	2026-09-24T22:39:09.1002948Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Repository and GitFlow	Check contract baselines and SDK export regressions	2026-09-24T22:39:09.1003344Z ##[endgroup]
+Repository and GitFlow	Check contract baselines and SDK export regressions	2026-09-24T22:39:09.1263477Z contracts: 4 normative files unchanged
+Repository and GitFlow	Check contract baselines and SDK export regressions	2026-09-24T22:39:09.1264126Z cell_operations: 4 normative files unchanged
+Repository and GitFlow	Check contract baselines and SDK export regressions	2026-09-24T22:39:09.3018272Z PASS: fresh inventory, modified destination preserved/refused, authority crate excluded
+Repository and GitFlow	Check optional binding manifests without rewriting them	﻿2026-09-24T22:39:09.3114119Z ##[group]Run for checker in tools/update_*_binding.py; do
+Repository and GitFlow	Check optional binding manifests without rewriting them	2026-09-24T22:39:09.3114561Z ^[[36;1mfor checker in tools/update_*_binding.py; do^[[0m
+Repository and GitFlow	Check optional binding manifests without rewriting them	2026-09-24T22:39:09.3114904Z ^[[36;1m  python3 "$checker" --check^[[0m
+Repository and GitFlow	Check optional binding manifests without rewriting them	2026-09-24T22:39:09.3115439Z ^[[36;1mdone^[[0m
+Repository and GitFlow	Check optional binding manifests without rewriting them	2026-09-24T22:39:09.3149264Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Repository and GitFlow	Check optional binding manifests without rewriting them	2026-09-24T22:39:09.3149657Z ##[endgroup]
+Repository and GitFlow	Check optional binding manifests without rewriting them	2026-09-24T22:39:09.3457254Z Assignment binding sources unchanged
+Repository and GitFlow	Check optional binding manifests without rewriting them	2026-09-24T22:39:09.3737034Z Executor plan binding sources unchanged
+Repository and GitFlow	Check optional binding manifests without rewriting them	2026-09-24T22:39:09.4009784Z Executor read binding sources unchanged
+Repository and GitFlow	Check optional binding manifests without rewriting them	2026-09-24T22:39:09.4282241Z Host configuration binding unchanged
+Repository and GitFlow	Check optional binding manifests without rewriting them	2026-09-24T22:39:09.4557213Z Host qualification binding unchanged
+Repository and GitFlow	Check optional binding manifests without rewriting them	2026-09-24T22:39:09.4831560Z Host read binding unchanged
+Repository and GitFlow	Check optional binding manifests without rewriting them	2026-09-24T22:39:09.5108479Z Production binding sources unchanged
+Repository and GitFlow	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-09-24T22:39:09.5246008Z Post job cleanup.
+Repository and GitFlow	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:39:09.5946730Z [command]/usr/bin/git version
+Repository and GitFlow	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:39:09.5975130Z git version 2.55.0
+Repository and GitFlow	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:39:09.6009876Z Temporarily overriding HOME='/home/runner/work/_temp/8b97b9b4-5926-4e0c-af7c-f671495a51ae' before making global git config changes
+Repository and GitFlow	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:39:09.6011395Z Adding repository directory to the temporary git global config as a safe directory
+Repository and GitFlow	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:39:09.6012719Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rx-platform/rx-platform
+Repository and GitFlow	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:39:09.6102923Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Repository and GitFlow	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:39:09.6130398Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Repository and GitFlow	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:39:09.6301485Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Repository and GitFlow	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:39:09.6326149Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Repository and GitFlow	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:39:09.6508630Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Repository and GitFlow	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-09-24T22:39:09.6531927Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Repository and GitFlow	Complete job	﻿2026-09-24T22:39:09.6892702Z Cleaning up orphan processes
+Repository and GitFlow	Complete job	2026-09-24T22:39:09.7109730Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+Branch CI	Set up job	﻿2026-09-24T22:41:26.0268892Z Current runner version: '2.337.0'
+Branch CI	Set up job	2026-09-24T22:41:26.0298722Z ##[group]Runner Image Provisioner
+Branch CI	Set up job	2026-09-24T22:41:26.0299682Z Hosted Compute Agent
+Branch CI	Set up job	2026-09-24T22:41:26.0300275Z Version: 20260828.587
+Branch CI	Set up job	2026-09-24T22:41:26.0301104Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+Branch CI	Set up job	2026-09-24T22:41:26.0302115Z Build Date: 2026-08-28T16:44:25Z
+Branch CI	Set up job	2026-09-24T22:41:26.0303263Z Worker ID: {5dad3eb6-bb61-4da6-972e-56275bb02d9f}
+Branch CI	Set up job	2026-09-24T22:41:26.0304189Z Azure Region: northcentralus
+Branch CI	Set up job	2026-09-24T22:41:26.0305133Z ##[endgroup]
+Branch CI	Set up job	2026-09-24T22:41:26.0306947Z ##[group]Operating System
+Branch CI	Set up job	2026-09-24T22:41:26.0307615Z Ubuntu
+Branch CI	Set up job	2026-09-24T22:41:26.0308121Z 24.04.5
+Branch CI	Set up job	2026-09-24T22:41:26.0308747Z LTS
+Branch CI	Set up job	2026-09-24T22:41:26.0309361Z ##[endgroup]
+Branch CI	Set up job	2026-09-24T22:41:26.0309952Z ##[group]Runner Image
+Branch CI	Set up job	2026-09-24T22:41:26.0310574Z Image: ubuntu-24.04
+Branch CI	Set up job	2026-09-24T22:41:26.0311195Z Version: 20260920.314.1
+Branch CI	Set up job	2026-09-24T22:41:26.0312355Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260920.314/images/ubuntu/Ubuntu2404-Readme.md
+Branch CI	Set up job	2026-09-24T22:41:26.0314564Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260920.314
+Branch CI	Set up job	2026-09-24T22:41:26.0316091Z ##[endgroup]
+Branch CI	Set up job	2026-09-24T22:41:26.0317276Z ##[group]GITHUB_TOKEN Permissions
+Branch CI	Set up job	2026-09-24T22:41:26.0319863Z Contents: read
+Branch CI	Set up job	2026-09-24T22:41:26.0320888Z Metadata: read
+Branch CI	Set up job	2026-09-24T22:41:26.0322011Z ##[endgroup]
+Branch CI	Set up job	2026-09-24T22:41:26.0325325Z Secret source: Actions
+Branch CI	Set up job	2026-09-24T22:41:26.0327117Z Cache mode: write
+Branch CI	Set up job	2026-09-24T22:41:26.0328583Z Prepare workflow directory
+Branch CI	Set up job	2026-09-24T22:41:26.0797650Z Prepare all required actions
+Branch CI	Set up job	2026-09-24T22:41:26.0863389Z Complete job name: Branch CI
+Branch CI	Require every validation job to pass	﻿2026-09-24T22:41:26.1667287Z ##[group]Run python3 - <<'PYTHON'
+Branch CI	Require every validation job to pass	2026-09-24T22:41:26.1668127Z ^[[36;1mpython3 - <<'PYTHON'^[[0m
+Branch CI	Require every validation job to pass	2026-09-24T22:41:26.1668866Z ^[[36;1mimport json, os, sys^[[0m
+Branch CI	Require every validation job to pass	2026-09-24T22:41:26.1669601Z ^[[36;1mresults = json.loads(os.environ["NEEDS"])^[[0m
+Branch CI	Require every validation job to pass	2026-09-24T22:41:26.1670860Z ^[[36;1mfailed = {name: value["result"] for name, value in results.items() if value["result"] != "success"}^[[0m
+Branch CI	Require every validation job to pass	2026-09-24T22:41:26.1671946Z ^[[36;1mif failed:^[[0m
+Branch CI	Require every validation job to pass	2026-09-24T22:41:26.1672653Z ^[[36;1m    sys.exit(f"Required validation jobs did not pass: {failed}")^[[0m
+Branch CI	Require every validation job to pass	2026-09-24T22:41:26.1673702Z ^[[36;1mprint("All required validation jobs passed.")^[[0m
+Branch CI	Require every validation job to pass	2026-09-24T22:41:26.1674454Z ^[[36;1mPYTHON^[[0m
+Branch CI	Require every validation job to pass	2026-09-24T22:41:26.2245911Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Branch CI	Require every validation job to pass	2026-09-24T22:41:26.2247897Z env:
+Branch CI	Require every validation job to pass	2026-09-24T22:41:26.2249757Z   NEEDS: {
+Branch CI	Require every validation job to pass	  "repository": {
+Branch CI	Require every validation job to pass	    "result": "success",
+Branch CI	Require every validation job to pass	    "outputs": {}
+Branch CI	Require every validation job to pass	  },
+Branch CI	Require every validation job to pass	  "rust": {
+Branch CI	Require every validation job to pass	    "result": "success",
+Branch CI	Require every validation job to pass	    "outputs": {}
+Branch CI	Require every validation job to pass	  }
+Branch CI	Require every validation job to pass	}
+Branch CI	Require every validation job to pass	2026-09-24T22:41:26.2251776Z ##[endgroup]
+Branch CI	Require every validation job to pass	2026-09-24T22:41:26.2658371Z All required validation jobs passed.
+Branch CI	Complete job	﻿2026-09-24T22:41:26.2836081Z Cleaning up orphan processes

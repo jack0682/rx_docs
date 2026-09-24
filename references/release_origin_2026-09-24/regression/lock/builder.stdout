@@ -1,0 +1,53 @@
+[
+    {
+        "Id": "sha256:ff521445a372125ed4f76e1453a1f8098f2d05332d1601d30db1c1f62757e730",
+        "RepoTags": [
+            "rust:1.98.1-slim-bookworm"
+        ],
+        "RepoDigests": [
+            "rust@sha256:ff521445a372125ed4f76e1453a1f8098f2d05332d1601d30db1c1f62757e730"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-09-19T01:15:32.407942199Z",
+        "Config": {
+            "Env": [
+                "PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "RUSTUP_HOME=/usr/local/rustup",
+                "CARGO_HOME=/usr/local/cargo",
+                "RUST_VERSION=1.98.1"
+            ],
+            "Cmd": [
+                "bash"
+            ],
+            "Labels": {
+                "org.opencontainers.image.source": "https://github.com/rust-lang/docker-rust"
+            }
+        },
+        "Architecture": "arm64",
+        "Variant": "v8",
+        "Os": "linux",
+        "Size": 276122615,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:055ab12bd547e17a0630037f06a186cf405e3f61bb03a614562ca8f5ab52a8be",
+                "sha256:3f42c559e1af4cb6b331c082581fb0fc2c947b9d59bc6e719afb228bbd407fb6"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-09-23T02:04:11.504651303Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:ff521445a372125ed4f76e1453a1f8098f2d05332d1601d30db1c1f62757e730",
+            "size": 6521
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "docker.io/library/rust"
+                }
+            ]
+        }
+    }
+]

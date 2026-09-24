@@ -2,6 +2,8 @@
 
 2026-09-24. 정상 해제와 단일 writer 거절 보존을 함께 검증한다. SIGKILL/abort의 잔존 descriptor 창은 제거했다고 주장하지 않는다. 인증된 배포 출처·운영 영역 판단자·물리 인계는 이번 수정에 포함하지 않는다.
 
+[F12 분류와 당시 실패 기록](35_open_items_and_support_limits.md)의 저장소 락 행은 이 문서의 정상 해제 수정으로 갱신한다. F12의 원 관측과 G1의 SIGKILL 잔여는 각각 보존한다.
+
 ## 출발점과 먼저 반증한 구현
 
 부모의 필드 선언은 이미 `connection` 다음 `_ownership`이었다. 부모가 연결을 먼저 닫는 순서는 결함이 아니었다. 결함은 close만으로는 fork 자식이 가진 같은 open file description의 복제가 사라지지 않는다는 점이었다.

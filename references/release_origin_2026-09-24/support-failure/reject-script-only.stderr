@@ -1,0 +1,2 @@
+{"schema":"rx.support-refusal.v1","condition":"storage/ownership-acquisition-failed","decision":"REFUSED","owner_identity":"NOT_ESTABLISHED","detail":"Read-only file system (os error 30)","recovery":"REVIEW_ACQUISITION_ERROR_BEFORE_EXPLICIT_OPEN; NO_OWNER_INFERRED"}
+Error: "storage/ownership-acquisition-failed"

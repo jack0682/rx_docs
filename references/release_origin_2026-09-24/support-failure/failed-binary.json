@@ -1,0 +1,7 @@
+{
+  "source_commit": "194b20976919726243bfec6388fb0219ebdecbc5",
+  "sha256": "92ee52a32bd69a6ae94dff634759d284b9d6938a68da08749a5d05d15432c273",
+  "retained_at": "/Users/ojaehong/RX_automation/rx_ws/.g2-evidence/support-final/rx-solutionsd-failed-order",
+  "failure": "source integrity refusal masked by read-only release store acquisition",
+  "host_stress": "50/50 clean; not attributed to lock-lifetime flake"
+}

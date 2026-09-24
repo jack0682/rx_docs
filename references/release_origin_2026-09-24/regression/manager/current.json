@@ -1,0 +1,27 @@
+{
+  "schema": "rx.solutions-startup.v1",
+  "state_subdirectory": "managed",
+  "plan": {
+    "schema": "rx.solutions-process-plan.v1",
+    "id": "b26c235a-86b6-49ee-95c4-d0dd2484e90a",
+    "environment": "SIMULATION",
+    "profiles": [
+      "SIM-JTC-6DOF"
+    ],
+    "processes": [
+      {
+        "id": "status",
+        "program": "rx/status-http",
+        "parameters": {
+          "bind": "127.0.0.1",
+          "port": "8081"
+        },
+        "depends_on": [],
+        "startup_timeout_ms": "10000",
+        "shutdown_timeout_ms": "5000",
+        "restart_limit": "0",
+        "restart_backoff_ms": "500"
+      }
+    ]
+  }
+}

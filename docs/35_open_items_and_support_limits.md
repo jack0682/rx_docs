@@ -11,13 +11,13 @@
 | 이월 항목 | 첫 기준선 경로 | 분류와 실제 동작 | 진단 및 실행 근거 |
 |---|---|---|---|
 | status script와 inventory 동시 교체 | 모든 resident 명령 → release_programs | 지원 제한 집행. 설치 script/catalog가 컴파일에 포함된 원본 내용과 다르면 거절 | `release/source-pin-mismatch`; 기존 0/1/0 반례가 정상0/script변조1/함께변조1로 바뀜 |
-| 인증된 불변 릴리스 출처 | 같은 기동 경로의 신뢰 전제 | 해결 아님. 현재 계약은 설치된 Rust 바이너리와 OS를 명시적으로 신뢰함. 이 전제보다 강한 인증 출처는 **AUTHENTICATED_RELEASE_ORIGIN** 별도 칸이 닫아야 함 | `release_boundary.trust`, `authenticated_immutable_provenance: NOT_ESTABLISHED`; source 고정이 배포 서명/OS 진실 인증이라는 주장을 거절 |
+| 인증된 불변 릴리스 출처 | 같은 기동 경로의 신뢰 전제 | F12 시점에는 미해결. [G2](37_authenticated_release_origin.md)가 개발 루트에 대한 내용 인증과 보존 상태의 rollback·철회 거절을 추가함. 현재도 verifier/OS, 통째 상태 복원, offline 최신성, 제품 키 수탁은 명시적인 신뢰·미확립 경계 | `release_boundary.trust`, `authenticated_immutable_provenance: NOT_ESTABLISHED`; F12 source 고정을 배포 서명으로 부르지 않음. G2 개발 서명도 verifier/OS 자체 인증이나 제품 권한 수탁으로 승격하지 않음 |
 | guarded 종료 신호 실패/종료 관측 경합 | GuardedServices → terminate → tick → guarded final report | 지원 제한 집행. 실패한 전달은 완료가 아니며 소유 핸들을 유지. 이후 같은 자식의 실제 종료와 현재 final report가 둘 다 있어야 confirmed | 실제 Linux 자식 + 명시적 실패 주입에서 StopRequested 유지; final report 없음은 guarded_shutdown_confirmed=false, 유효 보고+exit0만 true |
 | 강제 종료와 물리 lifecycle 권한 | guarded service stop 및 RequiresPlatformAuthority 입구 | 지원 제한 집행. guarded force 거절, 직접 물리 lifecycle 권한은 GuardedServices가 발급하지 않음 | 실제 guarded_os 시험에서 force 거절 및 leader에만 TERM; platform-authority recipe는 기존 admission 시험에서 거절 |
 | Host 런타임 소유 락 실패 | Host run / maintenance stopped_store | 지원 제한 집행. 서비스 진입 거절, 소유자 신원 추정 금지 | `host/runtime-ownership-unavailable`; 별도 Linux 프로세스가 실제 락을 보유한 장면에서 DB/상태 불변, 홀더 종료를 관측한 뒤 명시적 재시도 성공 |
-| 저장소 writer 락 실패 / F9 flake | resident·Host·Executor의 SQLite open | 지원 제한 집행. 기존 배타 락 거절을 유지하고 세 기존 데몬이 이름 붙은 거절을 출력. **락 수명 문제 해결 아님** | `rx.support-refusal.v1`, `storage/exclusive-writer-not-established`, owner_identity=NOT_ESTABLISHED. 두 resident writer 락의 실제 거절 장면. 실패 원인을 다른 Runtime의 존재로 단정하지 않음 |
+| 저장소 writer 락 실패 / F9 flake | resident·Host·Executor의 SQLite open | 지원 제한 집행. 기존 배타 락 거절을 유지하고 세 기존 데몬이 이름 붙은 거절을 출력. **F12 시점에는 락 수명 미해결; G1의 정상 해제 수정과 abrupt-loss 잔여는 [후속 검증](36_storage_lock_lifetime.md) 참조** | `rx.support-refusal.v1`, `storage/exclusive-writer-not-established`, owner_identity=NOT_ESTABLISHED. 두 resident writer 락의 실제 거절 장면. 실패 원인을 다른 Runtime의 존재로 단정하지 않음 |
 | exec 후 자식의 저장소 FD 상속 | 실제 resident spawn → status 자식 → 관리자 SIGKILL | 관측 범위에서 장기 FD 누출 없음. 이를 모든 fork 구간의 해결로 확대하지 않음 | 두 실제 자식의 FD에 DB/writer 락 없음. 자식들이 살아 있는 채 관리자 종료 후 두 락 재획득 |
-| fork 후 exec 전 락 잔존 | 다중 스레드 프로세스의 spawn과 store drop 중첩 | 미결 원인이 재현됨. 런타임은 락 미획득을 거절하되 지연 없는 재개를 보장하지 않음. **STORAGE_LOCK_LIFETIME** 후속 칸에서 원본 platform 수정과 SDK 재생성 필요 | 변경하지 않은 product SqliteRepository + 실제 Command::spawn pre_exec barrier에서 drop 후 재열기 거절. 명시적 unlock 대조 원형은 격리 사본에만 있음 |
+| fork 후 exec 전 락 잔존 | 다중 스레드 프로세스의 spawn과 store drop 중첩 | F12에서 미결 원인을 재현함. 이후 [G1](36_storage_lock_lifetime.md)이 원본·SDK의 정상 close/Drop 해제를 수정하고 live writer 거절을 보존함. SIGKILL/abort 뒤 상속 description 잔존은 계속 이름 붙은 거절 | F12 역사: 변경 전 product SqliteRepository + 실제 Command::spawn pre_exec barrier에서 drop 후 재열기 거절. 당시 원형은 격리 사본. G1은 생성자·연결 종료·borrowed transaction 검사까지 별도 구현 및 검증 |
 | 저장 실패와 응답 유실 | registration/execution/recovery/work/replacement의 원자 저장 경계 | 지원 제한 및 이미 해결된 원자성. 성공 기록을 만들지 못하면 새로운 실행/산출물을 성공으로 승격하지 않음. 성공 commit 뒤 응답 유실은 이력 조회 | 기존 lifecycle·recovery·work·replacement 저장 실패 시험과 실제 passage. 결과·소비·경로의 부분 성공을 만들지 않음 |
 | guarded 초기화 Entered/부분 완료와 재기동 | init/run/activate → initialization journal | 지원 제한 집행. Entered는 재실행하지 않으며 부분/변경 목록은 run 불가. guarded 자동 재시작과 software rearm도 거절 | 기존 실제 initializer subprocess 시험과 초기화 거절 검사를 runtime에서 실행. 별도 조사/처분 없이 새 ID로 우회하지 않음 |
 | 기록·로그 보존과 자동 rotation 부재 | diagnostic track/replace 및 journal/log 쓰기 | 지원 계약 내 보존 의미 및 지원 제한. 결속64개 한도, 저장 불가 시 전이/산출물 보류. 무한 용량이나 자동 archival 보증 없음 | 기존 binding-capacity 거절 및 storage-failure latch/CAS 시험. 호스트 디스크 부족을 성공으로 전환하지 않음 |
@@ -35,13 +35,15 @@
 | 다중 호스트·분산 소유권 | 첫 기준선은 로컬 Repository와 로컬 owned Child | 해당 실행 경로 없음. 로컬 PID/namespace 증거를 원격 소유권으로 재사용하는 API를 제공하지 않음 | F9 scope 비교와 local-only backend. 여러 로컬 Host/Executor 프로세스 지원과 다중 호스트 실증을 혼동하지 않음 |
 | 실제 장비 안전·품질·생산 승인 | 진단·software boot·보고 결과 계산 | 물리 적격 판정 경로 없음. 첫 기준선의 긍정으로 확대하지 않음 | NOT_PERFORMED / NOT_COMMISSIONED. 실제 장비 운전은 이번 검증에 없음 |
 
-## 신뢰 근원의 정확한 변화
+## 신뢰 근원의 정확한 변화 (F12 시점)
 
 기존 inventory는 자신을 인증하지 않으면서 뒤의 digest 검사의 근원으로 쓰였다. 무해한 comment를 status script에 추가하면 기존 inventory로는 거절됐지만, inventory의 해당 hash까지 바꾸면 통과했다. 실제 runtime에서 재현한 우회다.
 
 이제 status script와 device catalog의 **원본 bytes를 컴파일할 때 바이너리에 포함**하고 그 bytes의 digest와 설치 파일·inventory 항목을 대조한다. inventory에서 기대값을 생성하지 않는다. 새 release의 source와 런타임 bytes가 일치해야 하므로 inventory 동시 변경으로 통과하지 못한다. Rust 이미지 빌드 단계에도 해당 원본을 복사한다.
 
 이것은 설치된 Rust 바이너리와 OS를 신뢰한다는 F6 경계 안의 content 고정이다. Python OS 실행 파일과 설치된 Host/Executor Rust 실행 파일의 digest는 여전히 inventory 대조를 사용한다. 그 실행 주체 자체의 악의적 교체를 인증하는 체계는 없다. AUTHENTICATED_RELEASE_ORIGIN은 배포된 바이너리·OS·manifest의 독립 인증, 갱신/철회/롤백과 변경 불가성의 실제 근거를 닫아야 한다. 이 미결을 “기준선에 영향 없음”으로 지우지 않는다.
+
+후속 [G2](37_authenticated_release_origin.md)는 컴파일된 개발 공개키에 대한 signed release 내용 인증과 통상 재기동의 rollback·철회 재생 거절을 추가한다. verifier/OS 인증, 통째 상태 rollback 탐지, offline 철회 최신성, 실제 제품 릴리스 권한 수탁·교체는 각각 이름 붙은 한계로 유지한다. 아래 F12 관측을 현재 전체 구현의 미해결 목록으로 읽지 않는다.
 
 ## 락 오류: 관측과 귀속을 분리한다
 
@@ -51,7 +53,7 @@ F9의 단일 CI 실패는 당시 기전 미규명이었다. F12에서 macOS 병�
 
 격리된 사본의 explicit-unlock 원형은 connection을 먼저 닫고 소유 guard를 해제한다. 원래 crash-child 시험을 포함한 동일 병렬 suite50회가 통과했다. 이것은 원인 가설을 지지하는 대조이며 제품 수정도, 역사적 F9 실패 한 건의 확정 귀속도 아니다. 원형·실패·대조 로그를 보존한다.
 
-F12는 platform/SDK를 수정하지 않는다. 현재 세 데몬은 락을 얻지 못하면 `storage/exclusive-writer-not-established`로 거절하고 소유자 신원을 단정하지 않는다. 이 진단은 pinned SDK의 옛 비정형 오류 접두사에 대한 좁은 호환 adapter이며 정책 우회나 새 권한이 아니다. 기존 오류 자체가 API 사용자에게서 사라졌다고 주장하지 않는다. STORAGE_LOCK_LIFETIME은 원본 storage의 명시적 lock lifetime/typed error, 연결이 완전히 닫힌 뒤 해제 순서, 상속 구간, SDK 재생성 및 Host guard를 별도 검증해야 한다.
+F12 당시에는 platform/SDK를 수정하지 않았다. 당시 세 데몬은 락을 얻지 못하면 `storage/exclusive-writer-not-established`로 거절하고 소유자 신원을 단정하지 않는다. 당시 진단은 pinned SDK의 옛 비정형 오류 접두사에 대한 좁은 호환 adapter였으며 정책 우회나 새 권한이 아니다. 기존 오류 자체가 API 사용자에게서 사라졌다고 주장하지 않는다. 이후 [G1 STORAGE_LOCK_LIFETIME](36_storage_lock_lifetime.md)은 원본 storage의 명시적 lock lifetime/typed error, 연결 close 확인 후 해제, 상속 repository·transaction 거절, SDK 재생성 및 Host guard를 별도 검증했다. 문자열 adapter는 제거됐고 현재 진단은 typed OwnershipError에서 만들어진다. 정상 해제와 달리 SIGKILL/abort 뒤 상속 description이 남는 동안에는 계속 거절하며, G1도 이 창을 없앴다고 주장하지 않는다.
 
 락 파일을 삭제하거나 모르는 PID를 종료하지 않는다. 현재 소유 또는 상속 descriptor가 실제로 해제됐는지 확인한 뒤 명시적으로 재시도한다. 잠깐의 false refusal도 이번 칸에서 fixed라고 부르지 않는다.
 

@@ -1,0 +1,8 @@
+
+running 3 tests
+test failed_initialization_releases_its_own_lock_but_failed_acquisition_never_releases_another ... ok
+test unwinding_transaction_does_not_release_live_owner ... ok
+test live_writer_failed_contenders_and_rollback_preserve_exclusion_then_close_reopens_history ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+

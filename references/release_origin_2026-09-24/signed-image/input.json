@@ -1,0 +1,19 @@
+{
+  "base_image": "sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0",
+  "base_tag": "rx-solutions:n5-runtime",
+  "sign_argv": [
+    "python3",
+    "tools/sign_release.py",
+    "--key",
+    ".tools/release-keys/development-release.pem",
+    "--inventory",
+    "/Users/ojaehong/RX_automation/rx_ws/.g2-evidence/signed-image/inventory.json",
+    "--version",
+    "1",
+    "--revocation-version",
+    "1",
+    "--output",
+    "/Users/ojaehong/RX_automation/rx_ws/.g2-evidence/signed-image"
+  ],
+  "private_key_shipped": false
+}

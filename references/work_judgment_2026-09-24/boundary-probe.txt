@@ -1,0 +1,26 @@
+$ cd <workspace>
+$ docker run --rm --network none --read-only --cap-drop ALL --security-opt no-new-privileges --entrypoint /usr/bin/python3 -v <workspace>/.f10-evidence/use_boundary_probe.py:/probe.py:ro sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0 -I -B /probe.py
+{
+  "scope": "release status endpoint boundary probe only; not work-gate acceptance",
+  "first": {
+    "schema": "rx.solutions-status.v1",
+    "supervisor_instance": null,
+    "phase": "SOFTWARE_READY_UNCOMMISSIONED",
+    "native_packages": 675,
+    "external_device_repositories": 0,
+    "support_profiles": 4,
+    "simulation_profiles": 4,
+    "physical_qualification": "NOT_PERFORMED",
+    "hardware_processes_started_by_entrypoint": 0,
+    "operator_api_delegation": "NOT_CONNECTED"
+  },
+  "second_equal": true,
+  "observation_interval_ns": 50363500,
+  "post": {
+    "status": 503,
+    "body": {
+      "code": "CONTROL_NOT_EXPOSED",
+      "outcome_unknown": false
+    }
+  }
+}

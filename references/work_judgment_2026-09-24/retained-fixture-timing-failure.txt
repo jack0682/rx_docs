@@ -1,0 +1,121 @@
+   Compiling typenum v1.20.1
+   Compiling cfg-if v1.0.4
+   Compiling bitflags v2.13.2
+   Compiling libc v0.2.189
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling ryu-js v0.2.2
+   Compiling io-lifetimes v3.0.1
+   Compiling thiserror v2.0.20
+   Compiling io-lifetimes v2.0.4
+   Compiling io-extras v0.19.0
+   Compiling maybe-owned v0.3.4
+   Compiling ipnet v2.12.2
+   Compiling ambient-authority v0.0.2
+   Compiling foldhash v0.2.0
+   Compiling subtle v2.6.1
+   Compiling zeroize v1.9.0
+   Compiling signature v3.0.0
+   Compiling hashbrown v0.17.1
+   Compiling fastrand v2.5.0
+   Compiling once_cell v1.21.4
+   Compiling libsqlite3-sys v0.38.2
+   Compiling ed25519 v3.0.0
+   Compiling fallible-streaming-iterator v0.1.9
+   Compiling errno v0.3.14
+   Compiling getrandom v0.4.3
+   Compiling cpufeatures v0.2.17
+   Compiling cpufeatures v0.3.1
+   Compiling fallible-iterator v0.3.0
+   Compiling smallvec v1.16.0
+   Compiling rustix v1.1.4
+   Compiling signal-hook-registry v1.4.8
+   Compiling mio v1.2.3
+   Compiling pin-project-lite v0.2.17
+   Compiling generic-array v0.14.7
+   Compiling hybrid-array v0.4.15
+   Compiling hashlink v0.12.2
+   Compiling tokio v1.53.1
+   Compiling rusqlite v0.40.2
+   Compiling crypto-common v0.2.2
+   Compiling block-buffer v0.12.1
+   Compiling crypto-common v0.1.7
+   Compiling block-buffer v0.10.4
+   Compiling digest v0.10.7
+   Compiling sha2 v0.10.9
+   Compiling serde v1.0.229
+   Compiling serde_json v1.0.151
+   Compiling uuid v1.26.1
+   Compiling semver v1.0.28
+   Compiling digest v0.11.3
+   Compiling fs-set-times v0.20.3
+   Compiling curve25519-dalek v5.0.0
+   Compiling cap-primitives v4.0.3
+   Compiling sha2 v0.11.0
+   Compiling tempfile v3.27.0
+   Compiling cap-std v4.0.3
+   Compiling cap-fs-ext v4.0.3
+   Compiling ed25519-dalek v3.0.0
+   Compiling serde_jcs v0.2.0
+   Compiling rx-domain v0.1.0 (<workspace>/rx-solutions/sdk/crates/rx-domain)
+   Compiling rx-package v0.1.0 (<workspace>/rx-solutions/sdk/crates/rx-package)
+   Compiling rx-ports v0.1.0 (<workspace>/rx-solutions/sdk/crates/rx-ports)
+   Compiling rx-service-status v0.1.0 (<workspace>/rx-solutions/runtime/rx-service-status)
+   Compiling rx-storage v0.1.0 (<workspace>/rx-solutions/sdk/crates/rx-storage)
+   Compiling rx-solution-catalog v0.1.0 (<workspace>/rx-solutions/runtime/rx-solution-catalog)
+   Compiling rx-supervisor v0.1.0 (<workspace>/rx-solutions/runtime/rx-supervisor)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 6.33s
+     Running tests/work_use.rs (../.f10-evidence/target-macos/debug/deps/work_use-0cda9b8a713c5494)
+
+running 8 tests
+
+thread 'absent_authority_blocks_work_without_blocking_f5_diagnostics' (15954070) panicked at runtime/rx-supervisor/tests/support/work_fixture.rs:300:10:
+called `Result::unwrap()` on an `Err` value: Invalid("dependency/timing/restart policy")
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test absent_authority_blocks_work_without_blocking_f5_diagnostics ... FAILED
+
+thread 'changed_report_and_registration_between_judgment_and_cut_refuse_commit' (15954071) panicked at runtime/rx-supervisor/tests/support/work_fixture.rs:300:10:
+called `Result::unwrap()` on an `Err` value: Invalid("dependency/timing/restart policy")
+test changed_report_and_registration_between_judgment_and_cut_refuse_commit ... FAILED
+
+thread 'revocation_waits_for_whole_transaction_and_does_not_rewrite_completed_work' (15954076) panicked at runtime/rx-supervisor/tests/support/work_fixture.rs:300:10:
+called `Result::unwrap()` on an `Err` value: Invalid("dependency/timing/restart policy")
+test revocation_waits_for_whole_transaction_and_does_not_rewrite_completed_work ... FAILED
+
+thread 'derived_support_gap_is_actual_work_and_history_is_not_current_permission' (15954072) panicked at runtime/rx-supervisor/tests/support/work_fixture.rs:300:10:
+called `Result::unwrap()` on an `Err` value: Invalid("dependency/timing/restart policy")
+test derived_support_gap_is_actual_work_and_history_is_not_current_permission ... FAILED
+
+thread 'expiry_after_logical_cut_during_commit_io_preserves_inert_result' (15954073) panicked at runtime/rx-supervisor/tests/support/work_fixture.rs:300:10:
+called `Result::unwrap()` on an `Err` value: Invalid("dependency/timing/restart policy")
+test expiry_after_logical_cut_during_commit_io_preserves_inert_result ... FAILED
+
+thread 'rollback_spends_nothing_and_response_loss_is_resolved_by_query_not_replay' (15954077) panicked at runtime/rx-supervisor/tests/support/work_fixture.rs:300:10:
+called `Result::unwrap()` on an `Err` value: Invalid("dependency/timing/restart policy")
+test rollback_spends_nothing_and_response_loss_is_resolved_by_query_not_replay ... FAILED
+
+thread 'receiver_restart_keeps_history_but_invalidates_retained_permission' (15954075) panicked at runtime/rx-supervisor/tests/support/work_fixture.rs:300:10:
+called `Result::unwrap()` on an `Err` value: Invalid("dependency/timing/restart policy")
+test receiver_restart_keeps_history_but_invalidates_retained_permission ... FAILED
+
+thread 'expiry_and_revocation_before_cut_do_not_commit_or_spend' (15954074) panicked at runtime/rx-supervisor/tests/support/work_fixture.rs:300:10:
+called `Result::unwrap()` on an `Err` value: Invalid("dependency/timing/restart policy")
+test expiry_and_revocation_before_cut_do_not_commit_or_spend ... FAILED
+
+failures:
+
+failures:
+    absent_authority_blocks_work_without_blocking_f5_diagnostics
+    changed_report_and_registration_between_judgment_and_cut_refuse_commit
+    derived_support_gap_is_actual_work_and_history_is_not_current_permission
+    expiry_after_logical_cut_during_commit_io_preserves_inert_result
+    expiry_and_revocation_before_cut_do_not_commit_or_spend
+    receiver_restart_keeps_history_but_invalidates_retained_permission
+    revocation_waits_for_whole_transaction_and_does_not_rewrite_completed_work
+    rollback_spends_nothing_and_response_loss_is_resolved_by_query_not_replay
+
+test result: FAILED. 0 passed; 8 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.17s
+
+error: test failed, to rerun pass `-p rx-supervisor --test work_use`

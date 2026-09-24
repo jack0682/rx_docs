@@ -20,7 +20,7 @@ F7의 빈 요구 선언이 바뀌므로 **catalog digest도 바뀐다.** 기존 
 
 ## 적용·관측·실행의 한 경계
 
-초기 지원은 release hash로 확인한 `/usr/bin/python3` 비구동 프로그램이다. 실행 관리자 하나가 실제 Child를 소유하고, 그 자식은 고정된 내장 bootstrap에서 private Unix socket을 기다린다. 새 데몬·설치형 helper·서비스·네트워크 API는 없다.
+초기 지원은 release hash로 확인한 `/usr/bin/python3` 비구동 프로그램이다. 실행 관리자 하나가 실제 Child를 소유하고, 그 자식은 고정된 내장 bootstrap에서 private Unix socket을 기다린다. 새 데몬·설치형 helper·서비스·네트워크 API는 없다. Bootstrap은 Python `-I -B`로 실행해 현재 디렉터리·user-site 모듈이 제한 적용 전에 끼어들지 못하게 한다. 로컬 `json.py`를 둔 별도 프로세스 반례도 거절했다. [Python 격리 모드 원본](https://docs.python.org/3/using/cmdline.html#cmdoption-I)을 따른다.
 
 부모는 안전한 `rustix::process::prlimit` API로 그 Child의 soft·hard 상한을 적용하고 `/proc/PID/limits`를 읽는다. 그 뒤 등록과 lifecycle 권한을 다시 확인해야 EXEC를 보낸다. 자식은 같은 PID에서 최종 프로그램으로 exec하고 제어 소켓은 close-on-exec된다. 부모는 EOF만 믿지 않고 커널 명령행이 최종 argv인지, 같은 PID의 제한이 맞는지, 소유 Child가 아직 관측 가능한지 확인한다. 이 확인 뒤에만 영수증이 나온다. 프로젝트의 `unsafe_code = forbid`는 그대로다.
 
@@ -51,7 +51,7 @@ F7의 빈 요구 선언이 바뀌므로 **catalog digest도 바뀐다.** 기존 
 
 ## 실제 검증과 호환성
 
-구현 원본은 [rx-solutions `37cb8d7e`](https://github.com/jack0682/rx-solutions/commit/37cb8d7e797a985a2527f061e9da49d62da6ee60)에 고정된다.
+구현 원본은 [rx-solutions `fa8ea7e5`](https://github.com/jack0682/rx-solutions/commit/fa8ea7e53076ede4bf76a838c7c26a70ffaa7647)에 고정된다.
 
 `tools/resource_enforcement_passage.py`는 기존 resident 통과선을 먼저 실행한다. 그 뒤 실제 새 데몬의 자식 제한을 **supervisor 밖의 별도 프로세스**가 읽는다. 부모는 unlimited이고 자식은 256MiB이며, Docker Memory·NanoCpus·Ulimits 옵션에 자원 제한을 주지 않았음을 함께 기록한다. 설정 성공 출력만으로 수락하지 않는다.
 

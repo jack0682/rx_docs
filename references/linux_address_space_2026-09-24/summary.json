@@ -1,5 +1,5 @@
 {
-  "source_commit": "37cb8d7e797a985a2527f061e9da49d62da6ee60",
+  "source_commit": "fa8ea7e53076ede4bf76a838c7c26a70ffaa7647",
   "source_pr": "https://github.com/jack0682/rx-solutions/pull/30",
   "macos": [
     344,
@@ -7,7 +7,7 @@
     17
   ],
   "runtime_lib_tests": [
-    11,
+    12,
     0,
     0
   ],
@@ -16,7 +16,7 @@
     0,
     0
   ],
-  "new_linux_tests": 9,
+  "new_linux_tests": 10,
   "new_macos_tests": 2,
   "unchanged_protected_files": 159,
   "protected_categories": [
@@ -62,11 +62,17 @@
   ],
   "resident_passage": "PASS",
   "resource_passage": "PASS",
-  "macos_source_note": "Final change is confined to a Linux cfg(test) cleanup wait; macOS source and production bodies unchanged.",
-  "linux_ci": [
+  "macos_source_note": "Final changes are in cfg(target_os=linux) source and tests; macOS compiled source is unchanged.",
+  "prior_linux_ci": [
     377,
     0,
     20
   ],
-  "linux_ci_run": "https://github.com/jack0682/rx-solutions/actions/runs/35937258244"
+  "prior_linux_ci_run": "https://github.com/jack0682/rx-solutions/actions/runs/35937258244",
+  "linux_ci": [
+    378,
+    0,
+    20
+  ],
+  "linux_ci_run": "https://github.com/jack0682/rx-solutions/actions/runs/35938374535"
 }

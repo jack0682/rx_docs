@@ -2,10 +2,10 @@
   "result": "PASS",
   "runtime_image": "sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0",
   "builder_image": "sha256:ff521445a372125ed4f76e1453a1f8098f2d05332d1601d30db1c1f62757e730",
-  "daemon_sha256": "dbe09159c02a8f73de131e05e38436740f7ad3aba60de49cea6253f9c51df22d",
+  "daemon_sha256": "3829c6e1b7fb5bd9a401f9926a7fae3fb8bec7ee865cca376708f0e2c7fc7ca8",
   "registration_ids": {
-    "first": "40e9ae5e-6189-4878-884f-851c10a198a2",
-    "second": "4c176808-a273-4894-999f-fc1212b5d12b"
+    "first": "40140ad8-9856-460b-b57f-dc87a1d6f0e9",
+    "second": "a2adc206-6c28-43f2-a378-4f39e4624525"
   },
   "state_files": [
     "logs",
@@ -84,7 +84,7 @@
               },
               "label": "first"
             },
-            "id": "40e9ae5e-6189-4878-884f-851c10a198a2",
+            "id": "40140ad8-9856-460b-b57f-dc87a1d6f0e9",
             "state": "ACCEPTED"
           },
           "revision": "1"
@@ -145,7 +145,7 @@
               },
               "label": "second"
             },
-            "id": "4c176808-a273-4894-999f-fc1212b5d12b",
+            "id": "a2adc206-6c28-43f2-a378-4f39e4624525",
             "state": "ACCEPTED"
           },
           "revision": "1"
@@ -170,8 +170,8 @@
     },
     "schema": "rx.resident-reconciliation.v1",
     "state": {
-      "plan": "d59020c6-439c-4d40-b8cb-77a5e92a0190",
-      "plan_digest": "0904a04769987d3d2eeff80b7574a991b20bc6b42495686d02dfe57f5320e571",
+      "plan": "b0c0de2e-c247-46ca-bce7-6c7dbe507008",
+      "plan_digest": "25e5585be65f570e2f37cd9c44c8a6f892d53132d6e46104d012218b5ec9a79b",
       "records": {
         "first": {
           "attempts": "0",
@@ -238,16 +238,16 @@
                 "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
                 "program": "rx/status-http"
               },
-              "instance": "b3d6db73-94f6-422c-97d4-8119f69d8e8b",
-              "registration": "40e9ae5e-6189-4878-884f-851c10a198a2",
+              "instance": "fabeb993-de5f-4963-8f83-0010e97d0bc1",
+              "registration": "40140ad8-9856-460b-b57f-dc87a1d6f0e9",
               "registration_revision": "1",
-              "run": "d59020c6-439c-4d40-b8cb-77a5e92a0190",
+              "run": "b0c0de2e-c247-46ca-bce7-6c7dbe507008",
               "selection": "first"
             },
             "last_observed": {
               "detail": "supervisor phase Exited; no additional lifecycle error; functional readiness and work-use permission are not assessed",
               "exit_code": 0,
-              "pid": 26,
+              "pid": 31,
               "state": "EXITED"
             }
           }
@@ -288,7 +288,7 @@
               },
               "label": "first"
             },
-            "id": "40e9ae5e-6189-4878-884f-851c10a198a2",
+            "id": "40140ad8-9856-460b-b57f-dc87a1d6f0e9",
             "state": "ACCEPTED"
           },
           "revision": "1"
@@ -319,16 +319,16 @@
                 "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
                 "program": "rx/status-http"
               },
-              "instance": "a9c29caa-e2b3-4b03-996c-1bf13aab5aa7",
-              "registration": "4c176808-a273-4894-999f-fc1212b5d12b",
+              "instance": "2aa3dcf7-a8dd-4a6c-9c2a-38d93fd73b74",
+              "registration": "a2adc206-6c28-43f2-a378-4f39e4624525",
               "registration_revision": "1",
-              "run": "d59020c6-439c-4d40-b8cb-77a5e92a0190",
+              "run": "b0c0de2e-c247-46ca-bce7-6c7dbe507008",
               "selection": "second"
             },
             "last_observed": {
               "detail": "supervisor phase Exited; no additional lifecycle error; functional readiness and work-use permission are not assessed",
               "exit_code": 0,
-              "pid": 39,
+              "pid": 38,
               "state": "EXITED"
             }
           }
@@ -369,7 +369,7 @@
               },
               "label": "second"
             },
-            "id": "4c176808-a273-4894-999f-fc1212b5d12b",
+            "id": "a2adc206-6c28-43f2-a378-4f39e4624525",
             "state": "ACCEPTED"
           },
           "revision": "1"
@@ -394,26 +394,26 @@
     },
     "schema": "rx.resident-reconciliation.v1",
     "state": {
-      "plan": "d59020c6-439c-4d40-b8cb-77a5e92a0190",
-      "plan_digest": "0904a04769987d3d2eeff80b7574a991b20bc6b42495686d02dfe57f5320e571",
+      "plan": "b0c0de2e-c247-46ca-bce7-6c7dbe507008",
+      "plan_digest": "25e5585be65f570e2f37cd9c44c8a6f892d53132d6e46104d012218b5ec9a79b",
       "records": {
         "first": {
           "attempts": "1",
           "error": null,
           "exit_code": 0,
           "id": "first",
-          "instance": "b3d6db73-94f6-422c-97d4-8119f69d8e8b",
+          "instance": "fabeb993-de5f-4963-8f83-0010e97d0bc1",
           "phase": "EXITED",
-          "pid": 26,
+          "pid": 31,
           "resources": {
             "capacity_reservation": "NONE_CREATED",
             "current_enforcement": "NOT_ESTABLISHED_BY_HISTORY",
             "last_observed": {
               "capacity_reservation": "NONE_CREATED",
               "hard_bytes": "268435456",
-              "instance": "b3d6db73-94f6-422c-97d4-8119f69d8e8b",
+              "instance": "fabeb993-de5f-4963-8f83-0010e97d0bc1",
               "physical_handover": "NOT_ASSESSED",
-              "pid": 26,
+              "pid": 31,
               "requirement": "status/address-space",
               "scope": "PER_PROCESS_VIRTUAL_ADDRESS_SPACE_UPPER_BOUND",
               "soft_bytes": "268435456"
@@ -427,18 +427,18 @@
           "error": null,
           "exit_code": 0,
           "id": "second",
-          "instance": "a9c29caa-e2b3-4b03-996c-1bf13aab5aa7",
+          "instance": "2aa3dcf7-a8dd-4a6c-9c2a-38d93fd73b74",
           "phase": "EXITED",
-          "pid": 39,
+          "pid": 38,
           "resources": {
             "capacity_reservation": "NONE_CREATED",
             "current_enforcement": "NOT_ESTABLISHED_BY_HISTORY",
             "last_observed": {
               "capacity_reservation": "NONE_CREATED",
               "hard_bytes": "268435456",
-              "instance": "a9c29caa-e2b3-4b03-996c-1bf13aab5aa7",
+              "instance": "2aa3dcf7-a8dd-4a6c-9c2a-38d93fd73b74",
               "physical_handover": "NOT_ASSESSED",
-              "pid": 39,
+              "pid": 38,
               "requirement": "status/address-space",
               "scope": "PER_PROCESS_VIRTUAL_ADDRESS_SPACE_UPPER_BOUND",
               "soft_bytes": "268435456"
@@ -494,10 +494,10 @@
                 "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
                 "program": "rx/status-http"
               },
-              "instance": "5eaed027-e127-41b8-8daa-6bf0e1ba340c",
-              "registration": "40e9ae5e-6189-4878-884f-851c10a198a2",
+              "instance": "ecc11a1a-4530-4254-97c6-3917fef8999f",
+              "registration": "40140ad8-9856-460b-b57f-dc87a1d6f0e9",
               "registration_revision": "1",
-              "run": "d59020c6-439c-4d40-b8cb-77a5e92a0190",
+              "run": "b0c0de2e-c247-46ca-bce7-6c7dbe507008",
               "selection": "first"
             },
             "last_observed": {
@@ -513,16 +513,16 @@
                 "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
                 "program": "rx/status-http"
               },
-              "instance": "b3d6db73-94f6-422c-97d4-8119f69d8e8b",
-              "registration": "40e9ae5e-6189-4878-884f-851c10a198a2",
+              "instance": "fabeb993-de5f-4963-8f83-0010e97d0bc1",
+              "registration": "40140ad8-9856-460b-b57f-dc87a1d6f0e9",
               "registration_revision": "1",
-              "run": "d59020c6-439c-4d40-b8cb-77a5e92a0190",
+              "run": "b0c0de2e-c247-46ca-bce7-6c7dbe507008",
               "selection": "first"
             },
             "last_observed": {
               "detail": "supervisor phase Exited; no additional lifecycle error; functional readiness and work-use permission are not assessed",
               "exit_code": 0,
-              "pid": 26,
+              "pid": 31,
               "state": "EXITED"
             }
           }
@@ -563,7 +563,7 @@
               },
               "label": "first"
             },
-            "id": "40e9ae5e-6189-4878-884f-851c10a198a2",
+            "id": "40140ad8-9856-460b-b57f-dc87a1d6f0e9",
             "state": "ACCEPTED"
           },
           "revision": "1"
@@ -594,17 +594,17 @@
                 "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
                 "program": "rx/status-http"
               },
-              "instance": "2c99e53e-bf88-46c8-85aa-1cffc52cc527",
-              "registration": "4c176808-a273-4894-999f-fc1212b5d12b",
+              "instance": "2aa3dcf7-a8dd-4a6c-9c2a-38d93fd73b74",
+              "registration": "a2adc206-6c28-43f2-a378-4f39e4624525",
               "registration_revision": "1",
-              "run": "d59020c6-439c-4d40-b8cb-77a5e92a0190",
+              "run": "b0c0de2e-c247-46ca-bce7-6c7dbe507008",
               "selection": "second"
             },
             "last_observed": {
-              "detail": "supervisor phase Unknown; supervisor ownership lost; no PID adoption or replay; functional readiness and work-use permission are not assessed",
-              "exit_code": null,
+              "detail": "supervisor phase Exited; no additional lifecycle error; functional readiness and work-use permission are not assessed",
+              "exit_code": 0,
               "pid": 38,
-              "state": "UNKNOWN"
+              "state": "EXITED"
             }
           },
           {
@@ -613,17 +613,17 @@
                 "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
                 "program": "rx/status-http"
               },
-              "instance": "a9c29caa-e2b3-4b03-996c-1bf13aab5aa7",
-              "registration": "4c176808-a273-4894-999f-fc1212b5d12b",
+              "instance": "f2eafd3d-a6d2-4b01-a9b1-5eb604131d0c",
+              "registration": "a2adc206-6c28-43f2-a378-4f39e4624525",
               "registration_revision": "1",
-              "run": "d59020c6-439c-4d40-b8cb-77a5e92a0190",
+              "run": "b0c0de2e-c247-46ca-bce7-6c7dbe507008",
               "selection": "second"
             },
             "last_observed": {
-              "detail": "supervisor phase Exited; no additional lifecycle error; functional readiness and work-use permission are not assessed",
-              "exit_code": 0,
-              "pid": 39,
-              "state": "EXITED"
+              "detail": "supervisor phase Unknown; supervisor ownership lost; no PID adoption or replay; functional readiness and work-use permission are not assessed",
+              "exit_code": null,
+              "pid": 43,
+              "state": "UNKNOWN"
             }
           }
         ],
@@ -663,7 +663,7 @@
               },
               "label": "second"
             },
-            "id": "4c176808-a273-4894-999f-fc1212b5d12b",
+            "id": "a2adc206-6c28-43f2-a378-4f39e4624525",
             "state": "ACCEPTED"
           },
           "revision": "1"
@@ -688,15 +688,15 @@
     },
     "schema": "rx.resident-reconciliation.v1",
     "state": {
-      "plan": "d59020c6-439c-4d40-b8cb-77a5e92a0190",
-      "plan_digest": "0904a04769987d3d2eeff80b7574a991b20bc6b42495686d02dfe57f5320e571",
+      "plan": "b0c0de2e-c247-46ca-bce7-6c7dbe507008",
+      "plan_digest": "25e5585be65f570e2f37cd9c44c8a6f892d53132d6e46104d012218b5ec9a79b",
       "records": {
         "first": {
           "attempts": "1",
           "error": "supervisor ownership lost; no PID adoption or replay",
           "exit_code": null,
           "id": "first",
-          "instance": "5eaed027-e127-41b8-8daa-6bf0e1ba340c",
+          "instance": "ecc11a1a-4530-4254-97c6-3917fef8999f",
           "phase": "UNKNOWN",
           "pid": 31,
           "resources": {
@@ -705,7 +705,7 @@
             "last_observed": {
               "capacity_reservation": "NONE_CREATED",
               "hard_bytes": "268435456",
-              "instance": "5eaed027-e127-41b8-8daa-6bf0e1ba340c",
+              "instance": "ecc11a1a-4530-4254-97c6-3917fef8999f",
               "physical_handover": "NOT_ASSESSED",
               "pid": 31,
               "requirement": "status/address-space",
@@ -721,18 +721,18 @@
           "error": "supervisor ownership lost; no PID adoption or replay",
           "exit_code": null,
           "id": "second",
-          "instance": "2c99e53e-bf88-46c8-85aa-1cffc52cc527",
+          "instance": "f2eafd3d-a6d2-4b01-a9b1-5eb604131d0c",
           "phase": "UNKNOWN",
-          "pid": 38,
+          "pid": 43,
           "resources": {
             "capacity_reservation": "NONE_CREATED",
             "current_enforcement": "NOT_ESTABLISHED_BY_HISTORY",
             "last_observed": {
               "capacity_reservation": "NONE_CREATED",
               "hard_bytes": "268435456",
-              "instance": "2c99e53e-bf88-46c8-85aa-1cffc52cc527",
+              "instance": "f2eafd3d-a6d2-4b01-a9b1-5eb604131d0c",
               "physical_handover": "NOT_ASSESSED",
-              "pid": 38,
+              "pid": 43,
               "requirement": "status/address-space",
               "scope": "PER_PROCESS_VIRTUAL_ADDRESS_SPACE_UPPER_BOUND",
               "soft_bytes": "268435456"

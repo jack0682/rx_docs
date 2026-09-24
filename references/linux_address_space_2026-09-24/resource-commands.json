@@ -9,7 +9,7 @@
       "--builder",
       "rust:1.98.1-slim-bookworm",
       "--evidence",
-      "<workspace>/.f8-evidence/resource-final3/resident"
+      "<workspace>/.f8-evidence/resource-final4/resident"
     ],
     "exit_code": 0
   },
@@ -22,7 +22,7 @@
       "-v",
       "<workspace>/rx-solutions:/source:ro",
       "-v",
-      "<workspace>/.f8-evidence/resource-final3/resident:/evidence",
+      "<workspace>/.f8-evidence/resource-final4/resident:/evidence",
       "-w",
       "/source",
       "-e",
@@ -60,7 +60,7 @@
       "--tmpfs",
       "/tmp:rw",
       "-v",
-      "<workspace>/.f8-evidence/resource-final3/resident:/evidence:ro",
+      "<workspace>/.f8-evidence/resource-final4/resident:/evidence:ro",
       "--entrypoint",
       "/evidence/target/debug/deps/resource_enforcement-21097e811c4f7af4",
       "sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0",
@@ -84,7 +84,7 @@
       "--tmpfs",
       "/tmp:rw",
       "-v",
-      "<workspace>/.f8-evidence/resource-final3/resident:/evidence:ro",
+      "<workspace>/.f8-evidence/resource-final4/resident:/evidence:ro",
       "--entrypoint",
       "/evidence/target/debug/deps/rx_supervisor-8f05df49d5c144d9",
       "sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0",
@@ -99,7 +99,7 @@
       "run",
       "-d",
       "--name",
-      "rx-resources-current-bbcbc5094e",
+      "rx-resources-current-1ee99e187b",
       "--network",
       "none",
       "--read-only",
@@ -110,11 +110,11 @@
       "--tmpfs",
       "/tmp:rw",
       "-v",
-      "<workspace>/.f8-evidence/resource-final3/fresh-state:/var/lib/rx-solutions",
+      "<workspace>/.f8-evidence/resource-final4/fresh-state:/var/lib/rx-solutions",
       "-v",
-      "<workspace>/.f8-evidence/resource-final3/startup.json:/config/startup.json:ro",
+      "<workspace>/.f8-evidence/resource-final4/startup.json:/config/startup.json:ro",
       "-v",
-      "<workspace>/.f8-evidence/resource-final3/resident/target/debug/rx-solutionsd:/test/rx-solutionsd:ro",
+      "<workspace>/.f8-evidence/resource-final4/resident/target/debug/rx-solutionsd:/test/rx-solutionsd:ro",
       "--entrypoint",
       "/test/rx-solutionsd",
       "sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0",
@@ -128,7 +128,7 @@
     "argv": [
       "docker",
       "exec",
-      "rx-resources-current-bbcbc5094e",
+      "rx-resources-current-1ee99e187b",
       "/usr/bin/python3",
       "-c",
       "import os,json,sqlite3; c=sqlite3.connect('file:/var/lib/rx-solutions/managed/supervisor.db?mode=ro',uri=True); s=json.loads(c.execute(\"select document from entities where key='supervisor/state'\").fetchone()[0])['value']; p=s['records']['status']['pid']; print(json.dumps({'observer_pid':os.getpid(),'supervisor_pid':1,'child_pid':p,'child_limits':open('/proc/%s/limits'%p).read(),'supervisor_limits':open('/proc/1/limits').read(),'child_cmdline':open('/proc/%s/cmdline'%p,'rb').read().decode().split(chr(0)),'resource_history':s['records']['status']['resources']}))"
@@ -142,7 +142,7 @@
       "stop",
       "--timeout",
       "15",
-      "rx-resources-current-bbcbc5094e"
+      "rx-resources-current-1ee99e187b"
     ],
     "exit_code": 0
   },
@@ -153,7 +153,7 @@
       "run",
       "-d",
       "--name",
-      "rx-resources-baseline-bbcbc5094e",
+      "rx-resources-baseline-1ee99e187b",
       "--network",
       "none",
       "--read-only",
@@ -164,9 +164,9 @@
       "--tmpfs",
       "/tmp:rw",
       "-v",
-      "<workspace>/.f8-evidence/resource-final3/existing-state:/var/lib/rx-solutions",
+      "<workspace>/.f8-evidence/resource-final4/existing-state:/var/lib/rx-solutions",
       "-v",
-      "<workspace>/.f8-evidence/resource-final3/startup.json:/config/startup.json:ro",
+      "<workspace>/.f8-evidence/resource-final4/startup.json:/config/startup.json:ro",
       "-v",
       "<workspace>/.f7-evidence/resident-final/target/debug/rx-solutionsd:/test/rx-solutionsd:ro",
       "--entrypoint",
@@ -184,7 +184,7 @@
       "stop",
       "--timeout",
       "15",
-      "rx-resources-baseline-bbcbc5094e"
+      "rx-resources-baseline-1ee99e187b"
     ],
     "exit_code": 0
   },
@@ -195,7 +195,7 @@
       "run",
       "-d",
       "--name",
-      "rx-resources-changed-catalog-bbcbc5094e",
+      "rx-resources-changed-catalog-1ee99e187b",
       "--network",
       "none",
       "--read-only",
@@ -206,11 +206,11 @@
       "--tmpfs",
       "/tmp:rw",
       "-v",
-      "<workspace>/.f8-evidence/resource-final3/existing-state:/var/lib/rx-solutions",
+      "<workspace>/.f8-evidence/resource-final4/existing-state:/var/lib/rx-solutions",
       "-v",
-      "<workspace>/.f8-evidence/resource-final3/startup.json:/config/startup.json:ro",
+      "<workspace>/.f8-evidence/resource-final4/startup.json:/config/startup.json:ro",
       "-v",
-      "<workspace>/.f8-evidence/resource-final3/resident/target/debug/rx-solutionsd:/test/rx-solutionsd:ro",
+      "<workspace>/.f8-evidence/resource-final4/resident/target/debug/rx-solutionsd:/test/rx-solutionsd:ro",
       "--entrypoint",
       "/test/rx-solutionsd",
       "sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0",
@@ -224,61 +224,61 @@
     "argv": [
       "docker",
       "logs",
-      "rx-resources-changed-catalog-bbcbc5094e"
+      "rx-resources-changed-catalog-1ee99e187b"
     ],
     "exit_code": 0
   },
   {
-    "label": "retained-rx-resources-current-bbcbc5094e",
+    "label": "retained-rx-resources-current-1ee99e187b",
     "argv": [
       "docker",
       "logs",
-      "rx-resources-current-bbcbc5094e"
+      "rx-resources-current-1ee99e187b"
     ],
     "exit_code": 0
   },
   {
-    "label": "cleanup-remove-rx-resources-current-bbcbc5094e",
+    "label": "cleanup-remove-rx-resources-current-1ee99e187b",
     "argv": [
       "docker",
       "rm",
-      "rx-resources-current-bbcbc5094e"
+      "rx-resources-current-1ee99e187b"
     ],
     "exit_code": 0
   },
   {
-    "label": "retained-rx-resources-baseline-bbcbc5094e",
+    "label": "retained-rx-resources-baseline-1ee99e187b",
     "argv": [
       "docker",
       "logs",
-      "rx-resources-baseline-bbcbc5094e"
+      "rx-resources-baseline-1ee99e187b"
     ],
     "exit_code": 0
   },
   {
-    "label": "cleanup-remove-rx-resources-baseline-bbcbc5094e",
+    "label": "cleanup-remove-rx-resources-baseline-1ee99e187b",
     "argv": [
       "docker",
       "rm",
-      "rx-resources-baseline-bbcbc5094e"
+      "rx-resources-baseline-1ee99e187b"
     ],
     "exit_code": 0
   },
   {
-    "label": "retained-rx-resources-changed-catalog-bbcbc5094e",
+    "label": "retained-rx-resources-changed-catalog-1ee99e187b",
     "argv": [
       "docker",
       "logs",
-      "rx-resources-changed-catalog-bbcbc5094e"
+      "rx-resources-changed-catalog-1ee99e187b"
     ],
     "exit_code": 0
   },
   {
-    "label": "cleanup-remove-rx-resources-changed-catalog-bbcbc5094e",
+    "label": "cleanup-remove-rx-resources-changed-catalog-1ee99e187b",
     "argv": [
       "docker",
       "rm",
-      "rx-resources-changed-catalog-bbcbc5094e"
+      "rx-resources-changed-catalog-1ee99e187b"
     ],
     "exit_code": 0
   }

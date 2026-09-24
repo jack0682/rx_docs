@@ -62,5 +62,11 @@
   ],
   "resident_passage": "PASS",
   "resource_passage": "PASS",
-  "macos_source_note": "Final change is confined to a Linux cfg(test) cleanup wait; macOS source and production bodies unchanged."
+  "macos_source_note": "Final change is confined to a Linux cfg(test) cleanup wait; macOS source and production bodies unchanged.",
+  "linux_ci": [
+    377,
+    0,
+    20
+  ],
+  "linux_ci_run": "https://github.com/jack0682/rx-solutions/actions/runs/35937258244"
 }

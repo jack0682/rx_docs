@@ -32,7 +32,7 @@ The procedure first calls the existing resident passage, builds the Linux tests 
 
 ## Regression scope
 
-[Summary](summary.json), [macOS workspace output](macos-tests.txt), [macOS clippy](macos-clippy.txt), and [Linux clippy](linux-clippy.txt) record 344/0/17 on macOS and warnings-denied checks. Non-Linux enforcement is an explicit rejection test, not an ignored test. There are two new macOS cases and nine new Linux cases because the kernel-specific tests compile only on Linux.
+[Summary](summary.json), [macOS workspace output](macos-tests.txt), [macOS clippy](macos-clippy.txt), and [Linux clippy](linux-clippy.txt) record 344/0/17 on macOS and warnings-denied checks. [Linux workspace CI](linux-ci-tests.txt) at the final contribution reports **377 passed, 0 failed, 20 ignored** ([run](https://github.com/jack0682/rx-solutions/actions/runs/35937258244)). Non-Linux enforcement is an explicit rejection test, not an ignored test. There are two new macOS cases and nine new Linux cases because the kernel-specific tests compile only on Linux.
 
 [The ordinary library passage](library-passage.txt), with [commands and exit codes](library-commands.json), completed parent 1 / worker 7 / observed stages 32. These are not 32 independent tests or a substitute for actual-daemon evidence. Its former NO_REQUIREMENTS assertion is strengthened to LINUX_RLIMIT plus exact soft/hard values; existing registration/recovery/readiness/dependency/decision assertions remain. The test wrapper now forwards the requirement-bearing path to the real OS backend.
 
@@ -45,6 +45,8 @@ The summary also records 159 unchanged tracked files across SDK, interfaces, cat
 - [One fixture reopen failure](fixture-lock-failure.txt) encountered writer-lock contention while process-lifecycle tests ran concurrently. The new lifecycle probes are serialized within that test process; no product lock retry or weaker writer ownership was added. Temporary inheritance of open lock descriptors across concurrent fork/exec is the inferred mechanism, consistent with [flock semantics](https://man7.org/linux/man-pages/man2/flock.2.html); the failure log alone does not identify the inheriting process. Final isolated probes passed.
 
 [Initial CI](first-ci-failure.txt) also rejected a test cleanup assumption that socket EOF makes child exit immediately waitable. Production already returned Uncertain and retained the Child; the test now requires bounded observation of actual exit before forgetting it, retaining the no-admission assertion. This final commit changes only that Linux test cleanup, not production behavior or macOS code.
+
+[An unchanged rx-host fixture](host-ci-timeout.txt) also exceeded its existing two-second wait in one branch CI run. Its source is unchanged from F7 and the initial F8 CI had passed that Host test before reaching the new gate cleanup failure. This distinct timing observation is retained; no Host timeout or assertion was weakened in this change.
 
 Multiple kernel policies' partial application is **not** established. Direct-child exit does not establish descendant reclamation. Stored policy observations do not restore ownership or receipts. Real Host/Executor integration, total-manager-loss recovery, operating-area work decisions, dependency replacement and physical equipment remain outside this qualification.
 

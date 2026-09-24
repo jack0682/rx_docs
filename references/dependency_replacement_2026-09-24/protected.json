@@ -1,0 +1,14 @@
+{
+  "rx-solutions": {
+    "baseline": "3afa0ec8afcd6c04e113fb6fdfa066d9000d482d",
+    "changed_baseline_tracked_files": [
+      "runtime/rx-supervisor/README.md",
+      "runtime/rx-supervisor/src/registration/diagnostic.rs",
+      "runtime/rx-supervisor/src/registration/diagnostic/store.rs"
+    ]
+  },
+  "rx_docs": {
+    "baseline": "bc9bae5798fdbe7adf9d296622fca423b1119dfb",
+    "changed_baseline_tracked_files": []
+  }
+}

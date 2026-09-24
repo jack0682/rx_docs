@@ -1,0 +1,17 @@
+   Compiling rx-supervisor v0.1.0 (<workspace>/rx-solutions/runtime/rx-supervisor)
+error[E0599]: no method named `revise` found for struct `Registry<R>` in the current scope
+   --> runtime/rx-supervisor/tests/replacement.rs:594:10
+    |
+593 | /     registry
+594 | |         .revise(
+    | |_________-^^^^^^
+    |
+help: there is a method `retire` with a similar name, but with different arguments
+   --> runtime/rx-supervisor/src/registration.rs:247:5
+    |
+247 |     pub fn retire(&mut self, id: &Id, expected: Counter) -> Result<VersionedRegistration> {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For more information about this error, try `rustc --explain E0599`.
+error: could not compile `rx-supervisor` (test "replacement") due to 1 previous error
+warning: build failed, waiting for other jobs to finish...

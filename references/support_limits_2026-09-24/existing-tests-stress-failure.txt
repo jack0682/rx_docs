@@ -1,0 +1,43 @@
+$ cd <workspace>
+$ docker run --rm --network none --read-only --cap-drop ALL --security-opt no-new-privileges --tmpfs /tmp:rw -v <workspace>/.f12-evidence:/evidence:ro --entrypoint /usr/bin/python3 sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0 -c 'import subprocess,sys,json
+rows=[]
+for i in range(50):
+ r=subprocess.run([sys.argv[1],'"'"'--test-threads=16'"'"','"'"'--skip'"'"','"'"'unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner'"'"'],capture_output=True,text=True)
+ rows.append({'"'"'round'"'"':i,'"'"'exit_code'"'"':r.returncode})
+ if r.returncode:print(r.stdout+r.stderr);break
+print('"'"'host_linux_stress='"'"'+json.dumps(rows));raise SystemExit(any(r['"'"'exit_code'"'"'] for r in rows))
+' /evidence/target-linux/debug/deps/service-270dcf89bda3bcec
+
+running 15 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... FAILED
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+failures:
+
+---- operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal stdout ----
+
+thread 'operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal' (67) panicked at runtime/rx-host/tests/service.rs:542:90:
+called `Result::unwrap()` on an `Err` value: Unavailable("another Runtime owns this store: lock acquisition failed because the operation would block")
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal
+
+test result: FAILED. 12 passed; 1 failed; 2 ignored; 0 measured; 1 filtered out; finished in 0.40s
+
+
+host_linux_stress=[{"round": 0, "exit_code": 0}, {"round": 1, "exit_code": 0}, {"round": 2, "exit_code": 101}]

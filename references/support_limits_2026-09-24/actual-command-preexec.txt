@@ -1,0 +1,1 @@
+RX_ACTUAL_COMMAND_PRE_EXEC_WINDOW: parent dropped unmodified product SqliteRepository; reopen refused before child exec: store unavailable: another Runtime owns this store: lock acquisition failed because the operation would block; after child exec/exit reopen succeeded; no intentional pass_fd or stdin clone

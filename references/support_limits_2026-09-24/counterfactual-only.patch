@@ -1,0 +1,85 @@
+diff --git a/runtime/rx-host/src/service/maintenance.rs b/runtime/rx-host/src/service/maintenance.rs
+index 083d7b5..e306929 100644
+--- a/runtime/rx-host/src/service/maintenance.rs
++++ b/runtime/rx-host/src/service/maintenance.rs
+@@ -152,7 +152,7 @@ pub(crate) fn seal_stop(
+ }
+ 
+ /// Acquire the same runtime owner and existing journal as the service; no missing database is initialized.
+-fn stopped_store(loaded: &Loaded) -> Result<(std::fs::File, SqliteRepository)> {
++fn stopped_store(loaded: &Loaded) -> Result<(super::RuntimeOwner, SqliteRepository)> {
+     super::validate_state_files(&loaded.config.data_directory)?;
+     if !loaded.config.data_directory.join("host.db").is_file() {
+         return Err("Host journal missing".into());
+diff --git a/runtime/rx-host/src/service/mod.rs b/runtime/rx-host/src/service/mod.rs
+index 945eb8a..2c9f006 100644
+--- a/runtime/rx-host/src/service/mod.rs
++++ b/runtime/rx-host/src/service/mod.rs
+@@ -309,7 +309,9 @@ fn publish_installation(parent: &Path, stage: &Path, target: &Path) -> Result<()
+     }
+ }
+ 
+-fn runtime_owner(directory: &Path) -> Result<std::fs::File> {
++struct RuntimeOwner(std::fs::File);
++impl Drop for RuntimeOwner { fn drop(&mut self) { let _ = self.0.unlock(); } }
++fn runtime_owner(directory: &Path) -> Result<RuntimeOwner> {
+     real_directory(directory)?;
+     let lock_path = directory.join("host.lock");
+     if let Ok(m) = fs::symlink_metadata(&lock_path)
+@@ -328,7 +330,7 @@ fn runtime_owner(directory: &Path) -> Result<std::fs::File> {
+     owner
+         .try_lock()
+         .map_err(|_| "another process owns this Host runtime")?;
+-    Ok(owner)
++    Ok(RuntimeOwner(owner))
+ }
+ pub async fn run_with<C: Clock + Clone + Send + Sync + 'static, F: AdapterFactory<C>>(
+     loaded: Loaded,
+diff --git a/sdk/crates/rx-storage/src/lib.rs b/sdk/crates/rx-storage/src/lib.rs
+index c2fd328..ccc8a92 100644
+--- a/sdk/crates/rx-storage/src/lib.rs
++++ b/sdk/crates/rx-storage/src/lib.rs
+@@ -12,8 +12,10 @@ use std::{
+ 
+ pub struct SqliteRepository {
+     connection: Connection,
+-    _ownership: File,
++    _ownership: WriterOwnership,
+ }
++struct WriterOwnership(File);
++impl Drop for WriterOwnership { fn drop(&mut self) { let _ = self.0.unlock(); } }
+ fn unavailable(e: impl std::fmt::Display) -> StoreError {
+     StoreError::Unavailable(e.to_string())
+ }
+@@ -56,6 +58,7 @@ impl SqliteRepository {
+         ownership.try_lock().map_err(|e| {
+             StoreError::Unavailable(format!("another Runtime owns this store: {e}"))
+         })?;
++        let ownership = WriterOwnership(ownership);
+         // Version pin alone is insufficient; check the SQLite library actually linked.
+         if rusqlite::version_number() < 3_051_003 {
+             return Err(StoreError::Unavailable(
+@@ -599,3 +602,23 @@ fn read_events(
+     })
+     .collect()
+ }
++
++#[cfg(all(test, target_os="linux"))]
++mod f12_inherited_lock_probe {
++    #[test]
++    fn dropped_rx_repository_can_remain_locked_by_inherited_descriptor() {
++        use std::io::BufRead;
++        let dir=tempfile::tempdir().unwrap();let path=dir.path().join("probe.db");
++        let store=super::SqliteRepository::open(&path).unwrap();
++        let inherited=store._ownership.0.try_clone().unwrap();
++        let mut child=std::process::Command::new("/usr/bin/python3").args(["-c","import time; print('descriptor-held',flush=True); time.sleep(.5)"])
++            .stdin(inherited).stdout(std::process::Stdio::piped()).spawn().unwrap();
++        let mut line=String::new();std::io::BufReader::new(child.stdout.take().unwrap()).read_line(&mut line).unwrap();assert!(line.contains("descriptor-held"));
++        drop(store);
++        let next=super::SqliteRepository::open(&path).expect("explicit unlock must release inherited description");drop(next);
++        let refused="counterfactual explicit unlock permits reacquisition while inherited fd lives";
++        assert!(child.wait().unwrap().success());
++        assert!(super::SqliteRepository::open(&path).is_ok());
++        println!("RX_REPOSITORY_INHERITED_FD_RETENTION: parent repository dropped; {refused}; reacquired after child exit; controlled descriptor-inheritance counterexample, not historical CI attribution");
++    }
++}

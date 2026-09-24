@@ -1,0 +1,252 @@
+[
+  {
+    "round": 0,
+    "exit_code": 0,
+    "elapsed": 1.3258343340130523
+  },
+  {
+    "round": 1,
+    "exit_code": 0,
+    "elapsed": 0.4797934999805875
+  },
+  {
+    "round": 2,
+    "exit_code": 0,
+    "elapsed": 0.46145249996334314
+  },
+  {
+    "round": 3,
+    "exit_code": 0,
+    "elapsed": 0.46984858298674226
+  },
+  {
+    "round": 4,
+    "exit_code": 0,
+    "elapsed": 0.47532070899615064
+  },
+  {
+    "round": 5,
+    "exit_code": 0,
+    "elapsed": 0.4634186659823172
+  },
+  {
+    "round": 6,
+    "exit_code": 0,
+    "elapsed": 0.46532195899635553
+  },
+  {
+    "round": 7,
+    "exit_code": 0,
+    "elapsed": 0.49492091697175056
+  },
+  {
+    "round": 8,
+    "exit_code": 0,
+    "elapsed": 0.4788685840321705
+  },
+  {
+    "round": 9,
+    "exit_code": 0,
+    "elapsed": 0.4939907919615507
+  },
+  {
+    "round": 10,
+    "exit_code": 0,
+    "elapsed": 0.4576057500089519
+  },
+  {
+    "round": 11,
+    "exit_code": 0,
+    "elapsed": 0.4632408330217004
+  },
+  {
+    "round": 12,
+    "exit_code": 0,
+    "elapsed": 0.47486004198435694
+  },
+  {
+    "round": 13,
+    "exit_code": 0,
+    "elapsed": 0.3914133749785833
+  },
+  {
+    "round": 14,
+    "exit_code": 0,
+    "elapsed": 0.42697229102486745
+  },
+  {
+    "round": 15,
+    "exit_code": 0,
+    "elapsed": 0.41084462497383356
+  },
+  {
+    "round": 16,
+    "exit_code": 0,
+    "elapsed": 0.41233904199907556
+  },
+  {
+    "round": 17,
+    "exit_code": 0,
+    "elapsed": 0.474810375017114
+  },
+  {
+    "round": 18,
+    "exit_code": 0,
+    "elapsed": 0.5039616670110263
+  },
+  {
+    "round": 19,
+    "exit_code": 0,
+    "elapsed": 0.49675250001018867
+  },
+  {
+    "round": 20,
+    "exit_code": 0,
+    "elapsed": 0.48124891601037234
+  },
+  {
+    "round": 21,
+    "exit_code": 0,
+    "elapsed": 0.4995668329647742
+  },
+  {
+    "round": 22,
+    "exit_code": 0,
+    "elapsed": 0.491108666989021
+  },
+  {
+    "round": 23,
+    "exit_code": 0,
+    "elapsed": 0.4994093750137836
+  },
+  {
+    "round": 24,
+    "exit_code": 0,
+    "elapsed": 0.47304337500827387
+  },
+  {
+    "round": 25,
+    "exit_code": 0,
+    "elapsed": 0.5009243749664165
+  },
+  {
+    "round": 26,
+    "exit_code": 0,
+    "elapsed": 0.4854598329984583
+  },
+  {
+    "round": 27,
+    "exit_code": 0,
+    "elapsed": 0.46183329197810963
+  },
+  {
+    "round": 28,
+    "exit_code": 0,
+    "elapsed": 0.47250458295457065
+  },
+  {
+    "round": 29,
+    "exit_code": 0,
+    "elapsed": 0.4786969579872675
+  },
+  {
+    "round": 30,
+    "exit_code": 0,
+    "elapsed": 0.48737641697516665
+  },
+  {
+    "round": 31,
+    "exit_code": 0,
+    "elapsed": 0.4696570410160348
+  },
+  {
+    "round": 32,
+    "exit_code": 0,
+    "elapsed": 0.4698908750433475
+  },
+  {
+    "round": 33,
+    "exit_code": 0,
+    "elapsed": 0.47147275001043454
+  },
+  {
+    "round": 34,
+    "exit_code": 0,
+    "elapsed": 0.49312450003344566
+  },
+  {
+    "round": 35,
+    "exit_code": 0,
+    "elapsed": 0.48080641601700336
+  },
+  {
+    "round": 36,
+    "exit_code": 0,
+    "elapsed": 0.4928535829531029
+  },
+  {
+    "round": 37,
+    "exit_code": 0,
+    "elapsed": 0.47478858300019056
+  },
+  {
+    "round": 38,
+    "exit_code": 0,
+    "elapsed": 0.46981433301698416
+  },
+  {
+    "round": 39,
+    "exit_code": 0,
+    "elapsed": 0.4979792080121115
+  },
+  {
+    "round": 40,
+    "exit_code": 0,
+    "elapsed": 0.4690505840117112
+  },
+  {
+    "round": 41,
+    "exit_code": 0,
+    "elapsed": 0.48869104200275615
+  },
+  {
+    "round": 42,
+    "exit_code": 0,
+    "elapsed": 0.49073141597909853
+  },
+  {
+    "round": 43,
+    "exit_code": 0,
+    "elapsed": 0.4683851249865256
+  },
+  {
+    "round": 44,
+    "exit_code": 0,
+    "elapsed": 0.4453080830280669
+  },
+  {
+    "round": 45,
+    "exit_code": 0,
+    "elapsed": 0.4656298340414651
+  },
+  {
+    "round": 46,
+    "exit_code": 0,
+    "elapsed": 0.475550250033848
+  },
+  {
+    "round": 47,
+    "exit_code": 0,
+    "elapsed": 0.4717979169799946
+  },
+  {
+    "round": 48,
+    "exit_code": 0,
+    "elapsed": 0.4838628750294447
+  },
+  {
+    "round": 49,
+    "exit_code": 0,
+    "elapsed": 0.4568772920174524
+  }
+]

@@ -1,0 +1,949 @@
+{
+  "result": "PASS",
+  "runtime_image": "sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0",
+  "builder_image": "sha256:ff521445a372125ed4f76e1453a1f8098f2d05332d1601d30db1c1f62757e730",
+  "daemon_sha256": "3b014991225abc131bb9a0bd9100e08ab0364b751bc642ff35fcceaf531bd708",
+  "registration_ids": {
+    "first": "bcc96a8f-fba5-41d6-a84f-6ad0c4af842f",
+    "second": "b7c28fd8-3fdf-4455-9104-cb99b3938a94"
+  },
+  "state_files": [
+    "logs",
+    "registration.db",
+    "registration.writer.lock",
+    "supervisor.db",
+    "supervisor.writer.lock"
+  ],
+  "first": {
+    "execution_admission": {
+      "first": {
+        "application": {
+          "state": "NOT_APPLIED"
+        },
+        "not_applied_reasons": [],
+        "requested": {
+          "status/address-space": {
+            "amount": "268435456",
+            "meaning": "UPPER_BOUND",
+            "resource": "ADDRESS_SPACE_BYTES"
+          }
+        }
+      },
+      "second": {
+        "application": {
+          "state": "NOT_APPLIED"
+        },
+        "not_applied_reasons": [],
+        "requested": {
+          "status/address-space": {
+            "amount": "268435456",
+            "meaning": "UPPER_BOUND",
+            "resource": "ADDRESS_SPACE_BYTES"
+          }
+        }
+      }
+    },
+    "physical_qualification": "NOT_PERFORMED",
+    "registrations": {
+      "first": {
+        "execution_ownership": "NOT_ESTABLISHED_BY_PERSISTENT_RECORDS",
+        "executions": [],
+        "functional_readiness": {
+          "conditions": [
+            {
+              "name": "readiness/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no current-owner assessment has been requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "evidence": null,
+          "meaning": "catalog conditions over a component self-report; not independent functional or physical qualification",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        },
+        "recovery": {
+          "dispositions": [],
+          "limitations": [
+            "cold investigation supports only recorded Linux scoped birth identity; legacy records without it cannot be backfilled",
+            "scope mismatch, zombie and read races remain unverifiable; historical outcome remains unresolved",
+            "recovery disposition supplies neither a functional-readiness assessment nor work-use permission",
+            "resource recovery, F1 receipt restoration and physical outcome confirmation not claimed"
+          ],
+          "new_execution": "NO_RECOVERY_BLOCK",
+          "resume_requests": []
+        },
+        "registration": {
+          "registration": {
+            "declaration": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "label": "first"
+            },
+            "id": "bcc96a8f-fba5-41d6-a84f-6ad0c4af842f",
+            "state": "ACCEPTED"
+          },
+          "revision": "1"
+        },
+        "work_use_permission": {
+          "conditions": [
+            {
+              "name": "work-use/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no scoped operating-area work-use assessment requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "decision_reference": null,
+          "positive_provider": "UNSUPPORTED: operating-area positive permission provider connection",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        }
+      },
+      "second": {
+        "execution_ownership": "NOT_ESTABLISHED_BY_PERSISTENT_RECORDS",
+        "executions": [],
+        "functional_readiness": {
+          "conditions": [
+            {
+              "name": "readiness/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no current-owner assessment has been requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "evidence": null,
+          "meaning": "catalog conditions over a component self-report; not independent functional or physical qualification",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        },
+        "recovery": {
+          "dispositions": [],
+          "limitations": [
+            "cold investigation supports only recorded Linux scoped birth identity; legacy records without it cannot be backfilled",
+            "scope mismatch, zombie and read races remain unverifiable; historical outcome remains unresolved",
+            "recovery disposition supplies neither a functional-readiness assessment nor work-use permission",
+            "resource recovery, F1 receipt restoration and physical outcome confirmation not claimed"
+          ],
+          "new_execution": "NO_RECOVERY_BLOCK",
+          "resume_requests": []
+        },
+        "registration": {
+          "registration": {
+            "declaration": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "label": "second"
+            },
+            "id": "b7c28fd8-3fdf-4455-9104-cb99b3938a94",
+            "state": "ACCEPTED"
+          },
+          "revision": "1"
+        },
+        "work_use_permission": {
+          "conditions": [
+            {
+              "name": "work-use/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no scoped operating-area work-use assessment requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "decision_reference": null,
+          "positive_provider": "UNSUPPORTED: operating-area positive permission provider connection",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        }
+      }
+    },
+    "release_boundary": {
+      "authenticated_immutable_provenance": "NOT_ESTABLISHED; SEPARATE_AUTHENTICATED_RELEASE_ORIGIN_SLICE",
+      "inventory": "CONSISTENCY_INDEX_NOT_AUTHENTICATED_ROOT",
+      "remaining_inventory_pins": [
+        "/usr/bin/python3",
+        "installed Host/Executor Rust binaries"
+      ],
+      "source_assets": "STATUS_SCRIPT_AND_DEVICE_CATALOG_MATCH_COMPILED_SOURCE_CONTENT",
+      "trust": "TRUSTED_INSTALLED_RUST_BINARIES_AND_OS"
+    },
+    "schema": "rx.resident-reconciliation.v1",
+    "state": {
+      "plan": "e6001b51-cbdd-4019-9a61-1bfb528b9d82",
+      "plan_digest": "aec55aef1f8f85b02ad2b91b810425933eabff44fdc8c06032dbc19d25413c5d",
+      "records": {
+        "first": {
+          "attempts": "0",
+          "error": null,
+          "exit_code": null,
+          "id": "first",
+          "instance": null,
+          "phase": "PENDING",
+          "pid": null
+        },
+        "second": {
+          "attempts": "0",
+          "error": null,
+          "exit_code": null,
+          "id": "second",
+          "instance": null,
+          "phase": "PENDING",
+          "pid": null
+        }
+      },
+      "schema": "rx.supervisor-state.v1",
+      "stop_requested": false
+    }
+  },
+  "reopened": {
+    "execution_admission": {
+      "first": {
+        "application": {
+          "reason": "no current-owner application receipt; no resource recovery is inferred",
+          "state": "UNCONFIRMED"
+        },
+        "not_applied_reasons": [],
+        "requested": {
+          "status/address-space": {
+            "amount": "268435456",
+            "meaning": "UPPER_BOUND",
+            "resource": "ADDRESS_SPACE_BYTES"
+          }
+        }
+      },
+      "second": {
+        "application": {
+          "reason": "no current-owner application receipt; no resource recovery is inferred",
+          "state": "UNCONFIRMED"
+        },
+        "not_applied_reasons": [],
+        "requested": {
+          "status/address-space": {
+            "amount": "268435456",
+            "meaning": "UPPER_BOUND",
+            "resource": "ADDRESS_SPACE_BYTES"
+          }
+        }
+      }
+    },
+    "physical_qualification": "NOT_PERFORMED",
+    "registrations": {
+      "first": {
+        "execution_ownership": "NOT_ESTABLISHED_BY_PERSISTENT_RECORDS",
+        "executions": [
+          {
+            "binding": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "instance": "d8a65973-fa0f-4ac5-bbf6-d2f14f1be715",
+              "registration": "bcc96a8f-fba5-41d6-a84f-6ad0c4af842f",
+              "registration_revision": "1",
+              "run": "e6001b51-cbdd-4019-9a61-1bfb528b9d82",
+              "selection": "first"
+            },
+            "last_observed": {
+              "detail": "supervisor phase Exited; no additional lifecycle error; functional readiness and work-use permission are not assessed",
+              "exit_code": 0,
+              "pid": 35,
+              "process_identity": {
+                "pid": 35,
+                "scope": {
+                  "boot": "0f1a5dcb-c915-432c-91e9-fe69ef310d66",
+                  "euid": 10001,
+                  "init_start_ticks": 321121,
+                  "mount_namespace": "mnt:[4026532827]",
+                  "pid_namespace": "pid:[4026532830]",
+                  "proc_mount": "220 218 0:100 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw",
+                  "time_namespace": "time:[4026532960]",
+                  "time_offsets": "monotonic           0         0\nboottime            0         0\n",
+                  "uid": 10001,
+                  "user_namespace": "user:[4026531837]"
+                },
+                "start_ticks": 321557
+              },
+              "state": "EXITED"
+            }
+          }
+        ],
+        "functional_readiness": {
+          "conditions": [
+            {
+              "name": "readiness/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no current-owner assessment has been requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "evidence": null,
+          "meaning": "catalog conditions over a component self-report; not independent functional or physical qualification",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        },
+        "recovery": {
+          "dispositions": [],
+          "limitations": [
+            "cold investigation supports only recorded Linux scoped birth identity; legacy records without it cannot be backfilled",
+            "scope mismatch, zombie and read races remain unverifiable; historical outcome remains unresolved",
+            "recovery disposition supplies neither a functional-readiness assessment nor work-use permission",
+            "resource recovery, F1 receipt restoration and physical outcome confirmation not claimed"
+          ],
+          "new_execution": "NO_RECOVERY_BLOCK",
+          "resume_requests": []
+        },
+        "registration": {
+          "registration": {
+            "declaration": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "label": "first"
+            },
+            "id": "bcc96a8f-fba5-41d6-a84f-6ad0c4af842f",
+            "state": "ACCEPTED"
+          },
+          "revision": "1"
+        },
+        "work_use_permission": {
+          "conditions": [
+            {
+              "name": "work-use/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no scoped operating-area work-use assessment requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "decision_reference": null,
+          "positive_provider": "UNSUPPORTED: operating-area positive permission provider connection",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        }
+      },
+      "second": {
+        "execution_ownership": "NOT_ESTABLISHED_BY_PERSISTENT_RECORDS",
+        "executions": [
+          {
+            "binding": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "instance": "b4a319d6-e16a-4c6b-a415-c311a712ac5b",
+              "registration": "b7c28fd8-3fdf-4455-9104-cb99b3938a94",
+              "registration_revision": "1",
+              "run": "e6001b51-cbdd-4019-9a61-1bfb528b9d82",
+              "selection": "second"
+            },
+            "last_observed": {
+              "detail": "supervisor phase Exited; no additional lifecycle error; functional readiness and work-use permission are not assessed",
+              "exit_code": 0,
+              "pid": 48,
+              "process_identity": {
+                "pid": 48,
+                "scope": {
+                  "boot": "0f1a5dcb-c915-432c-91e9-fe69ef310d66",
+                  "euid": 10001,
+                  "init_start_ticks": 321121,
+                  "mount_namespace": "mnt:[4026532827]",
+                  "pid_namespace": "pid:[4026532830]",
+                  "proc_mount": "220 218 0:100 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw",
+                  "time_namespace": "time:[4026532960]",
+                  "time_offsets": "monotonic           0         0\nboottime            0         0\n",
+                  "uid": 10001,
+                  "user_namespace": "user:[4026531837]"
+                },
+                "start_ticks": 321764
+              },
+              "state": "EXITED"
+            }
+          }
+        ],
+        "functional_readiness": {
+          "conditions": [
+            {
+              "name": "readiness/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no current-owner assessment has been requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "evidence": null,
+          "meaning": "catalog conditions over a component self-report; not independent functional or physical qualification",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        },
+        "recovery": {
+          "dispositions": [],
+          "limitations": [
+            "cold investigation supports only recorded Linux scoped birth identity; legacy records without it cannot be backfilled",
+            "scope mismatch, zombie and read races remain unverifiable; historical outcome remains unresolved",
+            "recovery disposition supplies neither a functional-readiness assessment nor work-use permission",
+            "resource recovery, F1 receipt restoration and physical outcome confirmation not claimed"
+          ],
+          "new_execution": "NO_RECOVERY_BLOCK",
+          "resume_requests": []
+        },
+        "registration": {
+          "registration": {
+            "declaration": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "label": "second"
+            },
+            "id": "b7c28fd8-3fdf-4455-9104-cb99b3938a94",
+            "state": "ACCEPTED"
+          },
+          "revision": "1"
+        },
+        "work_use_permission": {
+          "conditions": [
+            {
+              "name": "work-use/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no scoped operating-area work-use assessment requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "decision_reference": null,
+          "positive_provider": "UNSUPPORTED: operating-area positive permission provider connection",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        }
+      }
+    },
+    "release_boundary": {
+      "authenticated_immutable_provenance": "NOT_ESTABLISHED; SEPARATE_AUTHENTICATED_RELEASE_ORIGIN_SLICE",
+      "inventory": "CONSISTENCY_INDEX_NOT_AUTHENTICATED_ROOT",
+      "remaining_inventory_pins": [
+        "/usr/bin/python3",
+        "installed Host/Executor Rust binaries"
+      ],
+      "source_assets": "STATUS_SCRIPT_AND_DEVICE_CATALOG_MATCH_COMPILED_SOURCE_CONTENT",
+      "trust": "TRUSTED_INSTALLED_RUST_BINARIES_AND_OS"
+    },
+    "schema": "rx.resident-reconciliation.v1",
+    "state": {
+      "plan": "e6001b51-cbdd-4019-9a61-1bfb528b9d82",
+      "plan_digest": "aec55aef1f8f85b02ad2b91b810425933eabff44fdc8c06032dbc19d25413c5d",
+      "records": {
+        "first": {
+          "attempts": "1",
+          "error": null,
+          "exit_code": 0,
+          "id": "first",
+          "instance": "d8a65973-fa0f-4ac5-bbf6-d2f14f1be715",
+          "phase": "EXITED",
+          "pid": 35,
+          "process_identity": {
+            "pid": 35,
+            "scope": {
+              "boot": "0f1a5dcb-c915-432c-91e9-fe69ef310d66",
+              "euid": 10001,
+              "init_start_ticks": 321121,
+              "mount_namespace": "mnt:[4026532827]",
+              "pid_namespace": "pid:[4026532830]",
+              "proc_mount": "220 218 0:100 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw",
+              "time_namespace": "time:[4026532960]",
+              "time_offsets": "monotonic           0         0\nboottime            0         0\n",
+              "uid": 10001,
+              "user_namespace": "user:[4026531837]"
+            },
+            "start_ticks": 321557
+          },
+          "resources": {
+            "capacity_reservation": "NONE_CREATED",
+            "current_enforcement": "NOT_ESTABLISHED_BY_HISTORY",
+            "last_observed": {
+              "capacity_reservation": "NONE_CREATED",
+              "hard_bytes": "268435456",
+              "instance": "d8a65973-fa0f-4ac5-bbf6-d2f14f1be715",
+              "physical_handover": "NOT_ASSESSED",
+              "pid": 35,
+              "requirement": "status/address-space",
+              "scope": "PER_PROCESS_VIRTUAL_ADDRESS_SPACE_UPPER_BOUND",
+              "soft_bytes": "268435456"
+            },
+            "lifetime": "DIRECT_CHILD_EXITED_DESCENDANTS_UNASSESSED",
+            "physical_handover": "NOT_ASSESSED"
+          }
+        },
+        "second": {
+          "attempts": "1",
+          "error": null,
+          "exit_code": 0,
+          "id": "second",
+          "instance": "b4a319d6-e16a-4c6b-a415-c311a712ac5b",
+          "phase": "EXITED",
+          "pid": 48,
+          "process_identity": {
+            "pid": 48,
+            "scope": {
+              "boot": "0f1a5dcb-c915-432c-91e9-fe69ef310d66",
+              "euid": 10001,
+              "init_start_ticks": 321121,
+              "mount_namespace": "mnt:[4026532827]",
+              "pid_namespace": "pid:[4026532830]",
+              "proc_mount": "220 218 0:100 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw",
+              "time_namespace": "time:[4026532960]",
+              "time_offsets": "monotonic           0         0\nboottime            0         0\n",
+              "uid": 10001,
+              "user_namespace": "user:[4026531837]"
+            },
+            "start_ticks": 321764
+          },
+          "resources": {
+            "capacity_reservation": "NONE_CREATED",
+            "current_enforcement": "NOT_ESTABLISHED_BY_HISTORY",
+            "last_observed": {
+              "capacity_reservation": "NONE_CREATED",
+              "hard_bytes": "268435456",
+              "instance": "b4a319d6-e16a-4c6b-a415-c311a712ac5b",
+              "physical_handover": "NOT_ASSESSED",
+              "pid": 48,
+              "requirement": "status/address-space",
+              "scope": "PER_PROCESS_VIRTUAL_ADDRESS_SPACE_UPPER_BOUND",
+              "soft_bytes": "268435456"
+            },
+            "lifetime": "DIRECT_CHILD_EXITED_DESCENDANTS_UNASSESSED",
+            "physical_handover": "NOT_ASSESSED"
+          }
+        }
+      },
+      "schema": "rx.supervisor-state.v1",
+      "stop_requested": true
+    }
+  },
+  "unclean_reopen": {
+    "execution_admission": {
+      "first": {
+        "application": {
+          "reason": "no current-owner application receipt; no resource recovery is inferred",
+          "state": "UNCONFIRMED"
+        },
+        "not_applied_reasons": [],
+        "requested": {
+          "status/address-space": {
+            "amount": "268435456",
+            "meaning": "UPPER_BOUND",
+            "resource": "ADDRESS_SPACE_BYTES"
+          }
+        }
+      },
+      "second": {
+        "application": {
+          "reason": "no current-owner application receipt; no resource recovery is inferred",
+          "state": "UNCONFIRMED"
+        },
+        "not_applied_reasons": [],
+        "requested": {
+          "status/address-space": {
+            "amount": "268435456",
+            "meaning": "UPPER_BOUND",
+            "resource": "ADDRESS_SPACE_BYTES"
+          }
+        }
+      }
+    },
+    "physical_qualification": "NOT_PERFORMED",
+    "registrations": {
+      "first": {
+        "execution_ownership": "NOT_ESTABLISHED_BY_PERSISTENT_RECORDS",
+        "executions": [
+          {
+            "binding": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "instance": "d8a65973-fa0f-4ac5-bbf6-d2f14f1be715",
+              "registration": "bcc96a8f-fba5-41d6-a84f-6ad0c4af842f",
+              "registration_revision": "1",
+              "run": "e6001b51-cbdd-4019-9a61-1bfb528b9d82",
+              "selection": "first"
+            },
+            "last_observed": {
+              "detail": "supervisor phase Exited; no additional lifecycle error; functional readiness and work-use permission are not assessed",
+              "exit_code": 0,
+              "pid": 35,
+              "process_identity": {
+                "pid": 35,
+                "scope": {
+                  "boot": "0f1a5dcb-c915-432c-91e9-fe69ef310d66",
+                  "euid": 10001,
+                  "init_start_ticks": 321121,
+                  "mount_namespace": "mnt:[4026532827]",
+                  "pid_namespace": "pid:[4026532830]",
+                  "proc_mount": "220 218 0:100 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw",
+                  "time_namespace": "time:[4026532960]",
+                  "time_offsets": "monotonic           0         0\nboottime            0         0\n",
+                  "uid": 10001,
+                  "user_namespace": "user:[4026531837]"
+                },
+                "start_ticks": 321557
+              },
+              "state": "EXITED"
+            }
+          },
+          {
+            "binding": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "instance": "f7eae3c8-58c4-4131-bcd4-969f788b6cd7",
+              "registration": "bcc96a8f-fba5-41d6-a84f-6ad0c4af842f",
+              "registration_revision": "1",
+              "run": "e6001b51-cbdd-4019-9a61-1bfb528b9d82",
+              "selection": "first"
+            },
+            "last_observed": {
+              "detail": "supervisor phase Unknown; supervisor ownership lost; no PID adoption or replay; functional readiness and work-use permission are not assessed",
+              "exit_code": null,
+              "pid": 35,
+              "process_identity": {
+                "pid": 35,
+                "scope": {
+                  "boot": "0f1a5dcb-c915-432c-91e9-fe69ef310d66",
+                  "euid": 10001,
+                  "init_start_ticks": 322338,
+                  "mount_namespace": "mnt:[4026532827]",
+                  "pid_namespace": "pid:[4026532830]",
+                  "proc_mount": "271 269 0:86 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw",
+                  "time_namespace": "time:[4026532960]",
+                  "time_offsets": "monotonic           0         0\nboottime            0         0\n",
+                  "uid": 10001,
+                  "user_namespace": "user:[4026531837]"
+                },
+                "start_ticks": 322623
+              },
+              "state": "UNKNOWN"
+            }
+          }
+        ],
+        "functional_readiness": {
+          "conditions": [
+            {
+              "name": "readiness/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no current-owner assessment has been requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "evidence": null,
+          "meaning": "catalog conditions over a component self-report; not independent functional or physical qualification",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        },
+        "recovery": {
+          "dispositions": [],
+          "limitations": [
+            "cold investigation supports only recorded Linux scoped birth identity; legacy records without it cannot be backfilled",
+            "scope mismatch, zombie and read races remain unverifiable; historical outcome remains unresolved",
+            "recovery disposition supplies neither a functional-readiness assessment nor work-use permission",
+            "resource recovery, F1 receipt restoration and physical outcome confirmation not claimed"
+          ],
+          "new_execution": "BLOCKED_UNRESOLVED",
+          "resume_requests": []
+        },
+        "registration": {
+          "registration": {
+            "declaration": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "label": "first"
+            },
+            "id": "bcc96a8f-fba5-41d6-a84f-6ad0c4af842f",
+            "state": "ACCEPTED"
+          },
+          "revision": "1"
+        },
+        "work_use_permission": {
+          "conditions": [
+            {
+              "name": "work-use/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no scoped operating-area work-use assessment requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "decision_reference": null,
+          "positive_provider": "UNSUPPORTED: operating-area positive permission provider connection",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        }
+      },
+      "second": {
+        "execution_ownership": "NOT_ESTABLISHED_BY_PERSISTENT_RECORDS",
+        "executions": [
+          {
+            "binding": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "instance": "0210f499-d54b-49bb-9869-b0628093acc4",
+              "registration": "b7c28fd8-3fdf-4455-9104-cb99b3938a94",
+              "registration_revision": "1",
+              "run": "e6001b51-cbdd-4019-9a61-1bfb528b9d82",
+              "selection": "second"
+            },
+            "last_observed": {
+              "detail": "supervisor phase Unknown; supervisor ownership lost; no PID adoption or replay; functional readiness and work-use permission are not assessed",
+              "exit_code": null,
+              "pid": 48,
+              "process_identity": {
+                "pid": 48,
+                "scope": {
+                  "boot": "0f1a5dcb-c915-432c-91e9-fe69ef310d66",
+                  "euid": 10001,
+                  "init_start_ticks": 322338,
+                  "mount_namespace": "mnt:[4026532827]",
+                  "pid_namespace": "pid:[4026532830]",
+                  "proc_mount": "271 269 0:86 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw",
+                  "time_namespace": "time:[4026532960]",
+                  "time_offsets": "monotonic           0         0\nboottime            0         0\n",
+                  "uid": 10001,
+                  "user_namespace": "user:[4026531837]"
+                },
+                "start_ticks": 322772
+              },
+              "state": "UNKNOWN"
+            }
+          },
+          {
+            "binding": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "instance": "b4a319d6-e16a-4c6b-a415-c311a712ac5b",
+              "registration": "b7c28fd8-3fdf-4455-9104-cb99b3938a94",
+              "registration_revision": "1",
+              "run": "e6001b51-cbdd-4019-9a61-1bfb528b9d82",
+              "selection": "second"
+            },
+            "last_observed": {
+              "detail": "supervisor phase Exited; no additional lifecycle error; functional readiness and work-use permission are not assessed",
+              "exit_code": 0,
+              "pid": 48,
+              "process_identity": {
+                "pid": 48,
+                "scope": {
+                  "boot": "0f1a5dcb-c915-432c-91e9-fe69ef310d66",
+                  "euid": 10001,
+                  "init_start_ticks": 321121,
+                  "mount_namespace": "mnt:[4026532827]",
+                  "pid_namespace": "pid:[4026532830]",
+                  "proc_mount": "220 218 0:100 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw",
+                  "time_namespace": "time:[4026532960]",
+                  "time_offsets": "monotonic           0         0\nboottime            0         0\n",
+                  "uid": 10001,
+                  "user_namespace": "user:[4026531837]"
+                },
+                "start_ticks": 321764
+              },
+              "state": "EXITED"
+            }
+          }
+        ],
+        "functional_readiness": {
+          "conditions": [
+            {
+              "name": "readiness/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no current-owner assessment has been requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "evidence": null,
+          "meaning": "catalog conditions over a component self-report; not independent functional or physical qualification",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        },
+        "recovery": {
+          "dispositions": [],
+          "limitations": [
+            "cold investigation supports only recorded Linux scoped birth identity; legacy records without it cannot be backfilled",
+            "scope mismatch, zombie and read races remain unverifiable; historical outcome remains unresolved",
+            "recovery disposition supplies neither a functional-readiness assessment nor work-use permission",
+            "resource recovery, F1 receipt restoration and physical outcome confirmation not claimed"
+          ],
+          "new_execution": "BLOCKED_UNRESOLVED",
+          "resume_requests": []
+        },
+        "registration": {
+          "registration": {
+            "declaration": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "label": "second"
+            },
+            "id": "b7c28fd8-3fdf-4455-9104-cb99b3938a94",
+            "state": "ACCEPTED"
+          },
+          "revision": "1"
+        },
+        "work_use_permission": {
+          "conditions": [
+            {
+              "name": "work-use/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no scoped operating-area work-use assessment requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "decision_reference": null,
+          "positive_provider": "UNSUPPORTED: operating-area positive permission provider connection",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        }
+      }
+    },
+    "release_boundary": {
+      "authenticated_immutable_provenance": "NOT_ESTABLISHED; SEPARATE_AUTHENTICATED_RELEASE_ORIGIN_SLICE",
+      "inventory": "CONSISTENCY_INDEX_NOT_AUTHENTICATED_ROOT",
+      "remaining_inventory_pins": [
+        "/usr/bin/python3",
+        "installed Host/Executor Rust binaries"
+      ],
+      "source_assets": "STATUS_SCRIPT_AND_DEVICE_CATALOG_MATCH_COMPILED_SOURCE_CONTENT",
+      "trust": "TRUSTED_INSTALLED_RUST_BINARIES_AND_OS"
+    },
+    "schema": "rx.resident-reconciliation.v1",
+    "state": {
+      "plan": "e6001b51-cbdd-4019-9a61-1bfb528b9d82",
+      "plan_digest": "aec55aef1f8f85b02ad2b91b810425933eabff44fdc8c06032dbc19d25413c5d",
+      "records": {
+        "first": {
+          "attempts": "1",
+          "error": "supervisor ownership lost; no PID adoption or replay",
+          "exit_code": null,
+          "id": "first",
+          "instance": "f7eae3c8-58c4-4131-bcd4-969f788b6cd7",
+          "phase": "UNKNOWN",
+          "pid": 35,
+          "process_identity": {
+            "pid": 35,
+            "scope": {
+              "boot": "0f1a5dcb-c915-432c-91e9-fe69ef310d66",
+              "euid": 10001,
+              "init_start_ticks": 322338,
+              "mount_namespace": "mnt:[4026532827]",
+              "pid_namespace": "pid:[4026532830]",
+              "proc_mount": "271 269 0:86 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw",
+              "time_namespace": "time:[4026532960]",
+              "time_offsets": "monotonic           0         0\nboottime            0         0\n",
+              "uid": 10001,
+              "user_namespace": "user:[4026531837]"
+            },
+            "start_ticks": 322623
+          },
+          "resources": {
+            "capacity_reservation": "NONE_CREATED",
+            "current_enforcement": "NOT_ESTABLISHED_BY_HISTORY",
+            "last_observed": {
+              "capacity_reservation": "NONE_CREATED",
+              "hard_bytes": "268435456",
+              "instance": "f7eae3c8-58c4-4131-bcd4-969f788b6cd7",
+              "physical_handover": "NOT_ASSESSED",
+              "pid": 35,
+              "requirement": "status/address-space",
+              "scope": "PER_PROCESS_VIRTUAL_ADDRESS_SPACE_UPPER_BOUND",
+              "soft_bytes": "268435456"
+            },
+            "lifetime": "UNCONFIRMED",
+            "physical_handover": "NOT_ASSESSED"
+          }
+        },
+        "second": {
+          "attempts": "1",
+          "error": "supervisor ownership lost; no PID adoption or replay",
+          "exit_code": null,
+          "id": "second",
+          "instance": "0210f499-d54b-49bb-9869-b0628093acc4",
+          "phase": "UNKNOWN",
+          "pid": 48,
+          "process_identity": {
+            "pid": 48,
+            "scope": {
+              "boot": "0f1a5dcb-c915-432c-91e9-fe69ef310d66",
+              "euid": 10001,
+              "init_start_ticks": 322338,
+              "mount_namespace": "mnt:[4026532827]",
+              "pid_namespace": "pid:[4026532830]",
+              "proc_mount": "271 269 0:86 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw",
+              "time_namespace": "time:[4026532960]",
+              "time_offsets": "monotonic           0         0\nboottime            0         0\n",
+              "uid": 10001,
+              "user_namespace": "user:[4026531837]"
+            },
+            "start_ticks": 322772
+          },
+          "resources": {
+            "capacity_reservation": "NONE_CREATED",
+            "current_enforcement": "NOT_ESTABLISHED_BY_HISTORY",
+            "last_observed": {
+              "capacity_reservation": "NONE_CREATED",
+              "hard_bytes": "268435456",
+              "instance": "0210f499-d54b-49bb-9869-b0628093acc4",
+              "physical_handover": "NOT_ASSESSED",
+              "pid": 48,
+              "requirement": "status/address-space",
+              "scope": "PER_PROCESS_VIRTUAL_ADDRESS_SPACE_UPPER_BOUND",
+              "soft_bytes": "268435456"
+            },
+            "lifetime": "UNCONFIRMED",
+            "physical_handover": "NOT_ASSESSED"
+          }
+        }
+      },
+      "schema": "rx.supervisor-state.v1",
+      "stop_requested": false
+    }
+  },
+  "scope": "actual Linux resident daemon; two release-owned non-actuating services; launcher exits before observations; same registration across normal restart and crash; no PID adoption",
+  "not_established": [
+    "physical qualification",
+    "resource enforcement",
+    "functional readiness",
+    "work-use decisions",
+    "dependency replacement",
+    "manager-total-loss recovery",
+    "actual guarded Host/Executor process integration"
+  ]
+}

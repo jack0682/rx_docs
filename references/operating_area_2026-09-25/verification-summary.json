@@ -1,0 +1,48 @@
+{
+  "result": "ALL_NINE_BOUNDARIES_COMPLETED_WITH_RETAINED_FAILURES",
+  "qualification": "initial manager cold build failed with unresolved E0463; same-target diagnostic and one fresh full replication passed; not a product fix",
+  "boundaries": {
+    "registration": {
+      "result_file": "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/library-fixed.log",
+      "reported_result": "PASS"
+    },
+    "release": {
+      "result_file": "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/release-fixed/result.json",
+      "reported_result": "DEVELOPMENT_RELEASE_AUTHENTICATION_PASS"
+    },
+    "resource": {
+      "result_file": "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/resource-fixed/result.json",
+      "reported_result": "PASS"
+    },
+    "resident": {
+      "result_file": "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/resource-fixed/resident/result.json",
+      "reported_result": "PASS"
+    },
+    "manager": {
+      "result_file": "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/manager-replication/result.json",
+      "reported_result": "PASS"
+    },
+    "work": {
+      "result_file": "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/work-complete/result.json",
+      "reported_result": "PASS"
+    },
+    "replacement": {
+      "result_file": "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/replacement-complete/result.json",
+      "reported_result": "PASS"
+    },
+    "support": {
+      "result_file": "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/support-complete/result.json",
+      "reported_result": "ENFORCEMENT_PASS_LOCK_LIFETIME_UNRESOLVED"
+    },
+    "lock": {
+      "result_file": "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/lock-final2/result.json",
+      "reported_result": "PASS_NORMAL_RELEASE_AND_LIVE_WRITER_EXCLUSION"
+    }
+  },
+  "identified_corrections": [
+    "default catalog anchored opt-in leakage",
+    "standalone G1 Cargo.lock missing rustix edge",
+    "new integration-test executable incompatible with unchanged G1 test-target assertion"
+  ],
+  "unresolved_incident": "UNRESOLVED_COLD_BUILD_METADATA_LOOKUP"
+}

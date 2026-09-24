@@ -1,0 +1,63 @@
+[
+  {
+    "label": "sdk-check",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/check_host_sdk.py",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "runtime",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "rx-solutions:g2-authenticated"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "builder",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "rust:1.98.1-slim-bookworm"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "fork-probe-build",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform:/platform:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions:/solutions:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/lock-complete:/evidence",
+      "-e",
+      "CARGO_HOME=/evidence/cargo-home",
+      "-e",
+      "CARGO_BUILD_JOBS=1",
+      "-w",
+      "/platform/tools/lock_lifetime_probe",
+      "--entrypoint",
+      "cargo",
+      "sha256:ff521445a372125ed4f76e1453a1f8098f2d05332d1601d30db1c1f62757e730",
+      "build",
+      "--locked",
+      "--target-dir",
+      "/evidence/probe-target"
+    ],
+    "exit_code": 101,
+    "expected": 0
+  }
+]

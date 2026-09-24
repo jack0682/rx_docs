@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/storage_lock_passage.py", line 92, in <module>
+    main()
+    ~~~~^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/storage_lock_passage.py", line 44, in main
+    build('fork-probe-build', '/platform/tools/lock_lifetime_probe', ['build', '--locked', '--target-dir', '/evidence/probe-target'])
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/storage_lock_passage.py", line 43, in build
+    return run(label, builds + ['-w', cwd, '--entrypoint', 'cargo', builder] + args)
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/storage_lock_passage.py", line 34, in run
+    raise RuntimeError(f'{label}: {r.returncode}, expected {expect}; evidence retained')
+RuntimeError: fork-probe-build: 101, expected 0; evidence retained

@@ -1,0 +1,34 @@
+[
+  {
+    "label": "release",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/release_origin_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--builder",
+      "rust:1.98.1-slim-bookworm",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/release-final",
+      "--unsigned-image",
+      "rx-solutions:n5-runtime",
+      "--metadata",
+      "/Users/ojaehong/RX_automation/rx_ws/.g2-evidence/metadata"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "library",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/registration_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--builder",
+      "rust:1.98.1-slim-bookworm",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/library-final"
+    ],
+    "exit_code": 1
+  }
+]

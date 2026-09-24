@@ -1,0 +1,160 @@
+{
+  "result": "PASS",
+  "runtime_image": "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+  "builder_image": "sha256:ff521445a372125ed4f76e1453a1f8098f2d05332d1601d30db1c1f62757e730",
+  "daemon_sha256": "506e62379dbfcf8d9d075a861943bd58bf63b10f5e7dc8508cab76f8e79c5447",
+  "derived_work": {
+    "externally_observed_counts": [
+      675,
+      4
+    ],
+    "first": {
+      "current_permission": "NONE; HISTORICAL_WORK_RESULT_ONLY",
+      "decision": {
+        "challenge": "0dac72c7-a30b-49d2-896e-cbb93a202750",
+        "context_digest": "72b95447b0ff88cb261e5d688138c96e3b606d0440f96380e10577d79ff9255f",
+        "decision": "51e6b9ed-9bdd-477e-96c3-695e3f588e07",
+        "epoch": "03960192-d132-495b-beec-d5a20257fe68",
+        "issuer": "test/operating-area-issuer",
+        "key": "test/external-key",
+        "kind": "WORK_USE",
+        "owner": {
+          "catalog": "15a01833ef5cdd473d89c6d7cf4c9812062f7a8357d9a86bd7b4905899f81782",
+          "program": "rx/status-http",
+          "registration": "56e64d54-7db5-4e41-acfb-ccc728e3c38c",
+          "revision": "1"
+        },
+        "policy_digest": "5cea7028087fbd4f4fc0e3a08b487e85411abaab54afd51df4d556a3a9753f5a",
+        "signed_digest": "10a851e541a5e4e9c08b5c03bafe304872d2ad5d4c51f386ff407ad9820b3ddc",
+        "ttl_ms": "30000"
+      },
+      "input_digest": "2fa885898e6cefc003ea499a16d9c5b776cad9786db93e23debdf7e4f8e6b073",
+      "instance": "6497292c-675c-4e17-b270-11928f571b03",
+      "native_packages": {
+        "observed": "675",
+        "required": "677",
+        "shortfall": "2"
+      },
+      "observation_origin": {
+        "basis": "COMPONENT_SELF_REPORT",
+        "native_packages": "STARTUP_AUDIT_DERIVED",
+        "support_profiles": "STARTUP_CATALOG_DERIVED"
+      },
+      "observed_at": {
+        "clock_id": "unix-utc-ns",
+        "ticks_ns": "1790288725355008255"
+      },
+      "operating_area_policy": "EXTERNAL_ISSUER_DECISION; NOT_EVALUATED_BY_HOST; PHYSICAL_POLICY_NOT_ATTESTED",
+      "physical_qualification": "NOT_PERFORMED",
+      "readiness_semantics": "0a10d3d54e8f86461196a3a4c74d7de3fd4f37794e0930c6fc47fa86d39dcd49",
+      "registration": "56e64d54-7db5-4e41-acfb-ccc728e3c38c",
+      "registration_revision": "1",
+      "run": "6a96e412-6354-496d-83a1-d70a43534d84",
+      "signature_verification": "EXTERNAL_SIGNATURE_AND_CONTEXT_VERIFIED_AT_LOGICAL_CUT",
+      "source_digest": "7930593b5c8770a6f5a6947cbb807a1961507f5bf5b6ff33105866e977d11cc2",
+      "support_profiles": {
+        "observed": "4",
+        "required": "6",
+        "shortfall": "2"
+      },
+      "task": {
+        "operating_area": "test/diagnostics",
+        "operation": "220bfaa3-6ad8-4817-b8d8-b78f5f3a8a80",
+        "required_native_packages": "677",
+        "required_support_profiles": "6",
+        "selection": "status"
+      }
+    },
+    "installed_release": true,
+    "issuer_scope": "TEST_ONLY_NOT_OPERATING_APPROVAL",
+    "second": {
+      "current_permission": "NONE; HISTORICAL_WORK_RESULT_ONLY",
+      "decision": {
+        "challenge": "0224ab88-f0fd-4b1a-914e-b4ad8c8206ce",
+        "context_digest": "85702f5a56d2aadf4e16700bca87b5b09a641a39d5b01d356bd21e852ac41522",
+        "decision": "91feb1dc-a399-4275-bbcc-d78ec41833b8",
+        "epoch": "03960192-d132-495b-beec-d5a20257fe68",
+        "issuer": "test/operating-area-issuer",
+        "key": "test/external-key",
+        "kind": "WORK_USE",
+        "owner": {
+          "catalog": "15a01833ef5cdd473d89c6d7cf4c9812062f7a8357d9a86bd7b4905899f81782",
+          "program": "rx/status-http",
+          "registration": "56e64d54-7db5-4e41-acfb-ccc728e3c38c",
+          "revision": "1"
+        },
+        "policy_digest": "5cea7028087fbd4f4fc0e3a08b487e85411abaab54afd51df4d556a3a9753f5a",
+        "signed_digest": "30b09d34ad955b8fa3f3b0fd4542eb9f3fa4ef60b21bc0b8fe45cc574023b7d6",
+        "ttl_ms": "30000"
+      },
+      "input_digest": "db0de9d3779344420dd7f129d63b364f313027ac1515f7c5edc9cd2d5009fbde",
+      "instance": "6497292c-675c-4e17-b270-11928f571b03",
+      "native_packages": {
+        "observed": "675",
+        "required": "675",
+        "shortfall": "0"
+      },
+      "observation_origin": {
+        "basis": "COMPONENT_SELF_REPORT",
+        "native_packages": "STARTUP_AUDIT_DERIVED",
+        "support_profiles": "STARTUP_CATALOG_DERIVED"
+      },
+      "observed_at": {
+        "clock_id": "unix-utc-ns",
+        "ticks_ns": "1790288725361052672"
+      },
+      "operating_area_policy": "EXTERNAL_ISSUER_DECISION; NOT_EVALUATED_BY_HOST; PHYSICAL_POLICY_NOT_ATTESTED",
+      "physical_qualification": "NOT_PERFORMED",
+      "readiness_semantics": "0a10d3d54e8f86461196a3a4c74d7de3fd4f37794e0930c6fc47fa86d39dcd49",
+      "registration": "56e64d54-7db5-4e41-acfb-ccc728e3c38c",
+      "registration_revision": "1",
+      "run": "6a96e412-6354-496d-83a1-d70a43534d84",
+      "signature_verification": "EXTERNAL_SIGNATURE_AND_CONTEXT_VERIFIED_AT_LOGICAL_CUT",
+      "source_digest": "7930593b5c8770a6f5a6947cbb807a1961507f5bf5b6ff33105866e977d11cc2",
+      "support_profiles": {
+        "observed": "4",
+        "required": "4",
+        "shortfall": "0"
+      },
+      "task": {
+        "operating_area": "test/diagnostics",
+        "operation": "c37f144e-6c08-4933-b1ad-b53e1f22760b",
+        "required_native_packages": "675",
+        "required_support_profiles": "4",
+        "selection": "status"
+      }
+    }
+  },
+  "shipping_daemon_denial": {
+    "current_permission": "NONE",
+    "gate": "DENIED",
+    "operating_area_provider": "NOT_CONNECTED",
+    "operation": "56ec3842-50e9-4e87-9c20-15e831cab9a5",
+    "reason": "invalid supervisor input: work-use/author-policy-absent; operating-area provider is not connected",
+    "schema": "rx.work-use-result.v1",
+    "selection": "status"
+  },
+  "outside_observation": {
+    "observer_pid": 8,
+    "health": {
+      "schema": "rx.solutions-status.v1",
+      "supervisor_instance": "14e75c0c-e398-46a0-9179-b264d9d8e560",
+      "phase": "SOFTWARE_READY_UNCOMMISSIONED",
+      "native_packages": 675,
+      "external_device_repositories": 0,
+      "support_profiles": 4,
+      "simulation_profiles": 4,
+      "physical_qualification": "NOT_PERFORMED",
+      "hardware_processes_started_by_entrypoint": 0,
+      "operator_api_delegation": "NOT_CONNECTED"
+    },
+    "work_rows": 0
+  },
+  "scope": "actual Linux receiving gate and derived repository work; explicitly test-authored external issuer only",
+  "not_established": [
+    "operating-area policy integration",
+    "physical operation",
+    "HTTP observation atomicity with SQL commit",
+    "TTL validity after logical cut during commit IO"
+  ]
+}

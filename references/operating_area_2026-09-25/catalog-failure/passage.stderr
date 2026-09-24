@@ -1,0 +1,8 @@
+
+thread 'passage_worker' (37) panicked at runtime/rx-supervisor/tests/support/decision_passage.rs:69:5:
+assertion failed: programs.values().all(|p| p.decision_policy.is_none())
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'real_registration_passage' (7) panicked at runtime/rx-supervisor/tests/registration_passage.rs:705:9:
+stage decisions failed
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace

@@ -1,0 +1,8 @@
+[package]
+name = "rx-preexec-lock-probe"
+version = "0.0.0"
+edition = "2024"
+[workspace]
+[dependencies]
+rx-storage = { path = "../../rx-solutions/sdk/crates/rx-storage" }
+tempfile = "3"

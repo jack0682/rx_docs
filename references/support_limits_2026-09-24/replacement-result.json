@@ -1,0 +1,890 @@
+{
+  "replacement_midflight": {
+    "active": {
+      "active": {
+        "consumer": {
+          "catalog": {
+            "digest": "d29b76a84d5295b0ed08f844350ebbd7710e3719e6925f68ad498d2c9034eb0c",
+            "program": "rx/diagnostic-consumer"
+          },
+          "registration": "26677260-493d-452d-923b-b238da694968",
+          "revision": "1"
+        },
+        "generation": {
+          "configuration": "4e4366249afb844617ee4128703c31731b7b1418aef7299af4f9aeaf934e651e",
+          "instance": "2ca4b9e9-143f-4198-969b-54cba467e38c",
+          "pid": 17,
+          "run": "a2945124-9226-4794-8ea0-3ac79d3b4095"
+        },
+        "id": "3abac4f2-1291-478d-9052-fb68efa99e0b",
+        "operating_area": "test/diagnostics",
+        "profile": "snapshot-at-generation",
+        "provider": {
+          "catalog": {
+            "digest": "a640da503cfc81d316e01894d759f4200f0e59e3a52f257d2c67b326deabd243",
+            "program": "test/decision-provider"
+          },
+          "registration": "06eabf17-5fd0-47f9-97c6-4935dea7f0ff",
+          "revision": "1"
+        },
+        "purpose": "DIAGNOSTIC_ONLY"
+      },
+      "checkpoints": {
+        "cadence": "EXPLICIT_CALLER_DRIVEN_CHECKPOINTS; NO_TIMER_OR_BACKGROUND_MONITOR",
+        "failure_detection": "at the next required observation: known loss/changed identity/report is NOT_MET; unavailable evidence is NOT_EVALUATED",
+        "follow_up": "withhold the affected transition/result consumption; preserve runs/results; no automatic stop, replay, replacement or physical handover",
+        "maximum_detection_delay_ms": null,
+        "observations": "PREPARATION_ONLY captures at ASSIGN then reuses captured input; RESULT_GENERATION captures at FINISH; CONTINUOUS observes at ASSIGN/BEGIN/POLL/FINISH; INSPECT explicitly observes dependent providers; replacement APPLY probes its candidate"
+      },
+      "generation": "2",
+      "meaning": "ONE_FUTURE_ASSIGNMENT_ROUTE; NOT_CURRENT_SOURCE_AVAILABILITY_OR_WORK_PERMISSION",
+      "revision": "2",
+      "root": "0f76581c-ae2e-4ed4-a91d-e9ebbfb96b78"
+    },
+    "application": {
+      "application": "3003b415-1776-4baa-8ff7-2910c5916ae0",
+      "application_effect": "EXPLICIT_SWITCH_FOR_FUTURE_DIAGNOSTIC_ASSIGNMENTS",
+      "candidate_observation": {
+        "generation": {
+          "configuration": "0163422f1e85592ca9be66f00702a9e884b04c0515c9952a8f83f6ff47a29d25",
+          "instance": "e6c51676-ae8f-4d3c-932f-0a29d8ec9322",
+          "pid": 18,
+          "run": "ac5ab66d-67e2-4132-b3df-604735c2e197"
+        },
+        "observed_at": {
+          "clock_id": "unix-utc-ns",
+          "ticks_ns": "1790237926006155669"
+        },
+        "provider": {
+          "catalog": {
+            "digest": "7fc830c899551d16ca4457fa924e3d0ea358c30c387c6310ee3bb92c5e5d6ea1",
+            "program": "test/decision-provider"
+          },
+          "registration": "9ca51f25-7a83-4f2b-b011-dd9e3abfe7ff",
+          "revision": "1"
+        },
+        "reference": "09762119-f407-4558-b215-f217c427ff78",
+        "report": {
+          "conditions": [
+            {
+              "name": "report/instance",
+              "observed": "e6c51676-ae8f-4d3c-932f-0a29d8ec9322",
+              "origin": "INSTANCE_ENVIRONMENT",
+              "reason": "compare reported RX_PROCESS_INSTANCE_ID with the current execution instance",
+              "state": "SATISFIED"
+            },
+            {
+              "name": "report/schema",
+              "observed": "rx.solutions-status.v1",
+              "origin": "RELEASE_DECLARATION",
+              "reason": "component-reported schema compared with authored Text(\"rx.solutions-status.v1\"); provenance ReleaseDeclaration",
+              "state": "SATISFIED"
+            }
+          ],
+          "evidence": {
+            "basis": "COMPONENT_SELF_REPORT",
+            "endpoint": "SUPPORT_SUMMARY",
+            "observed_at": {
+              "clock_id": "unix-utc-ns",
+              "ticks_ns": "1790237926006155669"
+            },
+            "payload_digest": "ae3dab245d0a5446948fea3b2e03682fda6609088c3838dba3ebe51967438de1",
+            "request_id": "09762119-f407-4558-b215-f217c427ff78"
+          },
+          "meaning": "assessment compares authored self-report conditions; even SATISFIED is not proof of functional operation, calibration, physical readiness or work-use permission",
+          "scope": {
+            "operating_area": "test/diagnostics",
+            "role": "diagnostics/support-summary"
+          },
+          "state": "SATISFIED",
+          "subject": {
+            "catalog_digest": "7fc830c899551d16ca4457fa924e3d0ea358c30c387c6310ee3bb92c5e5d6ea1",
+            "instance": "e6c51676-ae8f-4d3c-932f-0a29d8ec9322",
+            "pid": 18,
+            "program": "test/decision-provider",
+            "registration": "9ca51f25-7a83-4f2b-b011-dd9e3abfe7ff",
+            "registration_revision": "1",
+            "run": "ac5ab66d-67e2-4132-b3df-604735c2e197",
+            "selection": "provider"
+          }
+        },
+        "report_digest": "ae3dab245d0a5446948fea3b2e03682fda6609088c3838dba3ebe51967438de1",
+        "request": "bc606c35-6090-4157-a025-b7c0d3e46630"
+      },
+      "checkpoints": {
+        "cadence": "EXPLICIT_CALLER_DRIVEN_CHECKPOINTS; NO_TIMER_OR_BACKGROUND_MONITOR",
+        "failure_detection": "at the next required observation: known loss/changed identity/report is NOT_MET; unavailable evidence is NOT_EVALUATED",
+        "follow_up": "withhold the affected transition/result consumption; preserve runs/results; no automatic stop, replay, replacement or physical handover",
+        "maximum_detection_delay_ms": null,
+        "observations": "PREPARATION_ONLY captures at ASSIGN then reuses captured input; RESULT_GENERATION captures at FINISH; CONTINUOUS observes at ASSIGN/BEGIN/POLL/FINISH; INSPECT explicitly observes dependent providers; replacement APPLY probes its candidate"
+      },
+      "current_authority": "NONE; HISTORICAL_APPLICATION_ONLY",
+      "decision": {
+        "challenge": "09319b08-88af-4517-a1c5-790afb75a9b5",
+        "context_digest": "dbb17018d7a87817fd3a6a2ac2ca937d6c8ac59a9df4c76f55c7552f5b4f9824",
+        "decision": "ab5eccf2-918d-4698-91a2-6940e6a71b74",
+        "epoch": "d1b04e94-ceb9-4bdf-929f-320a119d57e8",
+        "issuer": "test/operating-area-issuer",
+        "key": "test/external-key",
+        "kind": "REPLACEMENT_BINDING",
+        "owner": {
+          "catalog": "d29b76a84d5295b0ed08f844350ebbd7710e3719e6925f68ad498d2c9034eb0c",
+          "program": "rx/diagnostic-consumer",
+          "registration": "26677260-493d-452d-923b-b238da694968",
+          "revision": "1"
+        },
+        "policy_digest": "d0dd2642d70685f761642410c829e6fcbe61059f7e4ca263c2a23bf2106aa423",
+        "signed_digest": "e4ffdf336aa8385ad2573c654ac98c650c4d011200ee50dddae14cab7e7510f9",
+        "ttl_ms": "30000"
+      },
+      "generation": "1",
+      "next": {
+        "consumer": {
+          "catalog": {
+            "digest": "d29b76a84d5295b0ed08f844350ebbd7710e3719e6925f68ad498d2c9034eb0c",
+            "program": "rx/diagnostic-consumer"
+          },
+          "registration": "26677260-493d-452d-923b-b238da694968",
+          "revision": "1"
+        },
+        "generation": {
+          "configuration": "0163422f1e85592ca9be66f00702a9e884b04c0515c9952a8f83f6ff47a29d25",
+          "instance": "e6c51676-ae8f-4d3c-932f-0a29d8ec9322",
+          "pid": 18,
+          "run": "ac5ab66d-67e2-4132-b3df-604735c2e197"
+        },
+        "id": "a2e407c7-f399-4dba-9099-8d7f0c7a6ac6",
+        "operating_area": "test/diagnostics",
+        "profile": "snapshot-at-generation",
+        "provider": {
+          "catalog": {
+            "digest": "7fc830c899551d16ca4457fa924e3d0ea358c30c387c6310ee3bb92c5e5d6ea1",
+            "program": "test/decision-provider"
+          },
+          "registration": "9ca51f25-7a83-4f2b-b011-dd9e3abfe7ff",
+          "revision": "1"
+        },
+        "purpose": "DIAGNOSTIC_ONLY"
+      },
+      "operating_area_policy": "NOT_EVALUATED_BY_HOST; PRODUCTION_PROVIDER_NOT_CONNECTED",
+      "physical_handover": "NOT_ASSESSED",
+      "previous": {
+        "consumer": {
+          "catalog": {
+            "digest": "d29b76a84d5295b0ed08f844350ebbd7710e3719e6925f68ad498d2c9034eb0c",
+            "program": "rx/diagnostic-consumer"
+          },
+          "registration": "26677260-493d-452d-923b-b238da694968",
+          "revision": "1"
+        },
+        "generation": {
+          "configuration": "4e4366249afb844617ee4128703c31731b7b1418aef7299af4f9aeaf934e651e",
+          "instance": "2ca4b9e9-143f-4198-969b-54cba467e38c",
+          "pid": 17,
+          "run": "a2945124-9226-4794-8ea0-3ac79d3b4095"
+        },
+        "id": "0f76581c-ae2e-4ed4-a91d-e9ebbfb96b78",
+        "operating_area": "test/diagnostics",
+        "profile": "snapshot-at-generation",
+        "provider": {
+          "catalog": {
+            "digest": "a640da503cfc81d316e01894d759f4200f0e59e3a52f257d2c67b326deabd243",
+            "program": "test/decision-provider"
+          },
+          "registration": "06eabf17-5fd0-47f9-97c6-4935dea7f0ff",
+          "revision": "1"
+        },
+        "purpose": "DIAGNOSTIC_ONLY"
+      },
+      "process_ownership": "UNCHANGED; NO_PID_ADOPTION",
+      "root": "0f76581c-ae2e-4ed4-a91d-e9ebbfb96b78",
+      "signature_verification": "EXTERNAL_SIGNATURE_AND_CONTEXT_VERIFIED_AT_LOGICAL_CUT",
+      "work_use": "UNSUPPORTED"
+    },
+    "new_run": {
+      "binding": "a2e407c7-f399-4dba-9099-8d7f0c7a6ac6",
+      "body": {
+        "catalog": {
+          "digest": "d29b76a84d5295b0ed08f844350ebbd7710e3719e6925f68ad498d2c9034eb0c",
+          "program": "rx/diagnostic-consumer"
+        },
+        "declaration": {
+          "declaration": "REQUIRED",
+          "interpretation": "reported-support-summary.v1",
+          "provider_role": "diagnostics/support-summary",
+          "window": "RESULT_GENERATION"
+        },
+        "local_catalog_summary": null,
+        "meaning": "diagnostic report consumption only; not work permission or physical qualification",
+        "profile": "snapshot-at-generation",
+        "sample_count": 1,
+        "samples": [
+          {
+            "generation": {
+              "configuration": "0163422f1e85592ca9be66f00702a9e884b04c0515c9952a8f83f6ff47a29d25",
+              "instance": "e6c51676-ae8f-4d3c-932f-0a29d8ec9322",
+              "pid": 18,
+              "run": "ac5ab66d-67e2-4132-b3df-604735c2e197"
+            },
+            "observed_at": {
+              "clock_id": "unix-utc-ns",
+              "ticks_ns": "1790237926025333794"
+            },
+            "provider": {
+              "catalog": {
+                "digest": "7fc830c899551d16ca4457fa924e3d0ea358c30c387c6310ee3bb92c5e5d6ea1",
+                "program": "test/decision-provider"
+              },
+              "registration": "9ca51f25-7a83-4f2b-b011-dd9e3abfe7ff",
+              "revision": "1"
+            },
+            "reference": "5452ef6a-b511-4813-8283-91367a626776",
+            "report": {
+              "conditions": [
+                {
+                  "name": "report/instance",
+                  "observed": "e6c51676-ae8f-4d3c-932f-0a29d8ec9322",
+                  "origin": "INSTANCE_ENVIRONMENT",
+                  "reason": "compare reported RX_PROCESS_INSTANCE_ID with the current execution instance",
+                  "state": "SATISFIED"
+                },
+                {
+                  "name": "report/schema",
+                  "observed": "rx.solutions-status.v1",
+                  "origin": "RELEASE_DECLARATION",
+                  "reason": "component-reported schema compared with authored Text(\"rx.solutions-status.v1\"); provenance ReleaseDeclaration",
+                  "state": "SATISFIED"
+                }
+              ],
+              "evidence": {
+                "basis": "COMPONENT_SELF_REPORT",
+                "endpoint": "SUPPORT_SUMMARY",
+                "observed_at": {
+                  "clock_id": "unix-utc-ns",
+                  "ticks_ns": "1790237926025333794"
+                },
+                "payload_digest": "ae3dab245d0a5446948fea3b2e03682fda6609088c3838dba3ebe51967438de1",
+                "request_id": "5452ef6a-b511-4813-8283-91367a626776"
+              },
+              "meaning": "assessment compares authored self-report conditions; even SATISFIED is not proof of functional operation, calibration, physical readiness or work-use permission",
+              "scope": {
+                "operating_area": "test/diagnostics",
+                "role": "diagnostics/support-summary"
+              },
+              "state": "SATISFIED",
+              "subject": {
+                "catalog_digest": "7fc830c899551d16ca4457fa924e3d0ea358c30c387c6310ee3bb92c5e5d6ea1",
+                "instance": "e6c51676-ae8f-4d3c-932f-0a29d8ec9322",
+                "pid": 18,
+                "program": "test/decision-provider",
+                "registration": "9ca51f25-7a83-4f2b-b011-dd9e3abfe7ff",
+                "registration_revision": "1",
+                "run": "ac5ab66d-67e2-4132-b3df-604735c2e197",
+                "selection": "provider"
+              }
+            },
+            "report_digest": "ae3dab245d0a5446948fea3b2e03682fda6609088c3838dba3ebe51967438de1",
+            "request": "b2746ef0-32d5-4e74-967f-3a12ab9542ff"
+          }
+        ]
+      },
+      "consumer": {
+        "catalog": {
+          "digest": "d29b76a84d5295b0ed08f844350ebbd7710e3719e6925f68ad498d2c9034eb0c",
+          "program": "rx/diagnostic-consumer"
+        },
+        "registration": "26677260-493d-452d-923b-b238da694968",
+        "revision": "1"
+      },
+      "digest": "c6adbd590e4270454f0e2df3f86df5c02b9b95a1bcebe017d6f9c8cfd899acff",
+      "id": "f94f3810-af55-46a1-b9ed-1a64189a899c",
+      "profile": "snapshot-at-generation",
+      "purpose": "DIAGNOSTIC_ONLY",
+      "run": "07f2219a-1a03-4a8b-94ab-b2f6e4653b3c",
+      "work_use": "UNSUPPORTED"
+    },
+    "old_run": {
+      "binding": "0f76581c-ae2e-4ed4-a91d-e9ebbfb96b78",
+      "body": {
+        "catalog": {
+          "digest": "d29b76a84d5295b0ed08f844350ebbd7710e3719e6925f68ad498d2c9034eb0c",
+          "program": "rx/diagnostic-consumer"
+        },
+        "declaration": {
+          "declaration": "REQUIRED",
+          "interpretation": "reported-support-summary.v1",
+          "provider_role": "diagnostics/support-summary",
+          "window": "RESULT_GENERATION"
+        },
+        "local_catalog_summary": null,
+        "meaning": "diagnostic report consumption only; not work permission or physical qualification",
+        "profile": "snapshot-at-generation",
+        "sample_count": 1,
+        "samples": [
+          {
+            "generation": {
+              "configuration": "4e4366249afb844617ee4128703c31731b7b1418aef7299af4f9aeaf934e651e",
+              "instance": "2ca4b9e9-143f-4198-969b-54cba467e38c",
+              "pid": 17,
+              "run": "a2945124-9226-4794-8ea0-3ac79d3b4095"
+            },
+            "observed_at": {
+              "clock_id": "unix-utc-ns",
+              "ticks_ns": "1790237926018865669"
+            },
+            "provider": {
+              "catalog": {
+                "digest": "a640da503cfc81d316e01894d759f4200f0e59e3a52f257d2c67b326deabd243",
+                "program": "test/decision-provider"
+              },
+              "registration": "06eabf17-5fd0-47f9-97c6-4935dea7f0ff",
+              "revision": "1"
+            },
+            "reference": "9162b644-1173-4482-b01c-e6779972865d",
+            "report": {
+              "conditions": [
+                {
+                  "name": "report/instance",
+                  "observed": "2ca4b9e9-143f-4198-969b-54cba467e38c",
+                  "origin": "INSTANCE_ENVIRONMENT",
+                  "reason": "compare reported RX_PROCESS_INSTANCE_ID with the current execution instance",
+                  "state": "SATISFIED"
+                },
+                {
+                  "name": "report/schema",
+                  "observed": "rx.solutions-status.v1",
+                  "origin": "RELEASE_DECLARATION",
+                  "reason": "component-reported schema compared with authored Text(\"rx.solutions-status.v1\"); provenance ReleaseDeclaration",
+                  "state": "SATISFIED"
+                }
+              ],
+              "evidence": {
+                "basis": "COMPONENT_SELF_REPORT",
+                "endpoint": "SUPPORT_SUMMARY",
+                "observed_at": {
+                  "clock_id": "unix-utc-ns",
+                  "ticks_ns": "1790237926018865669"
+                },
+                "payload_digest": "8f46cc70dac1c1ffcff9a77be86c0c9e7a3b766a80dc1d609dec75d815601bc7",
+                "request_id": "9162b644-1173-4482-b01c-e6779972865d"
+              },
+              "meaning": "assessment compares authored self-report conditions; even SATISFIED is not proof of functional operation, calibration, physical readiness or work-use permission",
+              "scope": {
+                "operating_area": "test/diagnostics",
+                "role": "diagnostics/support-summary"
+              },
+              "state": "SATISFIED",
+              "subject": {
+                "catalog_digest": "a640da503cfc81d316e01894d759f4200f0e59e3a52f257d2c67b326deabd243",
+                "instance": "2ca4b9e9-143f-4198-969b-54cba467e38c",
+                "pid": 17,
+                "program": "test/decision-provider",
+                "registration": "06eabf17-5fd0-47f9-97c6-4935dea7f0ff",
+                "registration_revision": "1",
+                "run": "a2945124-9226-4794-8ea0-3ac79d3b4095",
+                "selection": "provider"
+              }
+            },
+            "report_digest": "8f46cc70dac1c1ffcff9a77be86c0c9e7a3b766a80dc1d609dec75d815601bc7",
+            "request": "d2fecb37-361f-42b8-a1fd-e802f8049306"
+          }
+        ]
+      },
+      "consumer": {
+        "catalog": {
+          "digest": "d29b76a84d5295b0ed08f844350ebbd7710e3719e6925f68ad498d2c9034eb0c",
+          "program": "rx/diagnostic-consumer"
+        },
+        "registration": "26677260-493d-452d-923b-b238da694968",
+        "revision": "1"
+      },
+      "digest": "6d6bdeea300edcf9d3cef6ef941c0da8f79b5b6165f45b8dc5c92f7012aa71d5",
+      "id": "1e7a28c8-5bb0-41e8-86ab-54c0e8d705d6",
+      "profile": "snapshot-at-generation",
+      "purpose": "DIAGNOSTIC_ONLY",
+      "run": "091ff622-a1c0-44eb-ae93-1115bfb9cc71",
+      "work_use": "UNSUPPORTED"
+    },
+    "original": "0f76581c-ae2e-4ed4-a91d-e9ebbfb96b78",
+    "return": {
+      "application": "ddda387a-6106-4747-b4da-eef8d5c741bd",
+      "application_effect": "EXPLICIT_SWITCH_FOR_FUTURE_DIAGNOSTIC_ASSIGNMENTS",
+      "candidate_observation": {
+        "generation": {
+          "configuration": "4e4366249afb844617ee4128703c31731b7b1418aef7299af4f9aeaf934e651e",
+          "instance": "2ca4b9e9-143f-4198-969b-54cba467e38c",
+          "pid": 17,
+          "run": "a2945124-9226-4794-8ea0-3ac79d3b4095"
+        },
+        "observed_at": {
+          "clock_id": "unix-utc-ns",
+          "ticks_ns": "1790237926060671919"
+        },
+        "provider": {
+          "catalog": {
+            "digest": "a640da503cfc81d316e01894d759f4200f0e59e3a52f257d2c67b326deabd243",
+            "program": "test/decision-provider"
+          },
+          "registration": "06eabf17-5fd0-47f9-97c6-4935dea7f0ff",
+          "revision": "1"
+        },
+        "reference": "c9deee47-7aea-49ac-8842-3178843ddcc2",
+        "report": {
+          "conditions": [
+            {
+              "name": "report/instance",
+              "observed": "2ca4b9e9-143f-4198-969b-54cba467e38c",
+              "origin": "INSTANCE_ENVIRONMENT",
+              "reason": "compare reported RX_PROCESS_INSTANCE_ID with the current execution instance",
+              "state": "SATISFIED"
+            },
+            {
+              "name": "report/schema",
+              "observed": "rx.solutions-status.v1",
+              "origin": "RELEASE_DECLARATION",
+              "reason": "component-reported schema compared with authored Text(\"rx.solutions-status.v1\"); provenance ReleaseDeclaration",
+              "state": "SATISFIED"
+            }
+          ],
+          "evidence": {
+            "basis": "COMPONENT_SELF_REPORT",
+            "endpoint": "SUPPORT_SUMMARY",
+            "observed_at": {
+              "clock_id": "unix-utc-ns",
+              "ticks_ns": "1790237926060671919"
+            },
+            "payload_digest": "8f46cc70dac1c1ffcff9a77be86c0c9e7a3b766a80dc1d609dec75d815601bc7",
+            "request_id": "c9deee47-7aea-49ac-8842-3178843ddcc2"
+          },
+          "meaning": "assessment compares authored self-report conditions; even SATISFIED is not proof of functional operation, calibration, physical readiness or work-use permission",
+          "scope": {
+            "operating_area": "test/diagnostics",
+            "role": "diagnostics/support-summary"
+          },
+          "state": "SATISFIED",
+          "subject": {
+            "catalog_digest": "a640da503cfc81d316e01894d759f4200f0e59e3a52f257d2c67b326deabd243",
+            "instance": "2ca4b9e9-143f-4198-969b-54cba467e38c",
+            "pid": 17,
+            "program": "test/decision-provider",
+            "registration": "06eabf17-5fd0-47f9-97c6-4935dea7f0ff",
+            "registration_revision": "1",
+            "run": "a2945124-9226-4794-8ea0-3ac79d3b4095",
+            "selection": "provider"
+          }
+        },
+        "report_digest": "8f46cc70dac1c1ffcff9a77be86c0c9e7a3b766a80dc1d609dec75d815601bc7",
+        "request": "157fdfcb-a779-4676-8a48-0c08bd5857f8"
+      },
+      "checkpoints": {
+        "cadence": "EXPLICIT_CALLER_DRIVEN_CHECKPOINTS; NO_TIMER_OR_BACKGROUND_MONITOR",
+        "failure_detection": "at the next required observation: known loss/changed identity/report is NOT_MET; unavailable evidence is NOT_EVALUATED",
+        "follow_up": "withhold the affected transition/result consumption; preserve runs/results; no automatic stop, replay, replacement or physical handover",
+        "maximum_detection_delay_ms": null,
+        "observations": "PREPARATION_ONLY captures at ASSIGN then reuses captured input; RESULT_GENERATION captures at FINISH; CONTINUOUS observes at ASSIGN/BEGIN/POLL/FINISH; INSPECT explicitly observes dependent providers; replacement APPLY probes its candidate"
+      },
+      "current_authority": "NONE; HISTORICAL_APPLICATION_ONLY",
+      "decision": {
+        "challenge": "2edf1b98-a16b-4740-95f1-95a84c77601d",
+        "context_digest": "ae42327e8fd7f59efadb504c50cd06bdcc88bb017093c8ea75357ef245987809",
+        "decision": "c7e3e658-a12e-479e-be15-81bddc27a9a2",
+        "epoch": "d1b04e94-ceb9-4bdf-929f-320a119d57e8",
+        "issuer": "test/operating-area-issuer",
+        "key": "test/external-key",
+        "kind": "REPLACEMENT_BINDING",
+        "owner": {
+          "catalog": "d29b76a84d5295b0ed08f844350ebbd7710e3719e6925f68ad498d2c9034eb0c",
+          "program": "rx/diagnostic-consumer",
+          "registration": "26677260-493d-452d-923b-b238da694968",
+          "revision": "1"
+        },
+        "policy_digest": "d0dd2642d70685f761642410c829e6fcbe61059f7e4ca263c2a23bf2106aa423",
+        "signed_digest": "be6ba7f10ed1742a7e8e5fba352121c5844f602c4ca83aef6df043ce4f26dff0",
+        "ttl_ms": "30000"
+      },
+      "generation": "2",
+      "next": {
+        "consumer": {
+          "catalog": {
+            "digest": "d29b76a84d5295b0ed08f844350ebbd7710e3719e6925f68ad498d2c9034eb0c",
+            "program": "rx/diagnostic-consumer"
+          },
+          "registration": "26677260-493d-452d-923b-b238da694968",
+          "revision": "1"
+        },
+        "generation": {
+          "configuration": "4e4366249afb844617ee4128703c31731b7b1418aef7299af4f9aeaf934e651e",
+          "instance": "2ca4b9e9-143f-4198-969b-54cba467e38c",
+          "pid": 17,
+          "run": "a2945124-9226-4794-8ea0-3ac79d3b4095"
+        },
+        "id": "3abac4f2-1291-478d-9052-fb68efa99e0b",
+        "operating_area": "test/diagnostics",
+        "profile": "snapshot-at-generation",
+        "provider": {
+          "catalog": {
+            "digest": "a640da503cfc81d316e01894d759f4200f0e59e3a52f257d2c67b326deabd243",
+            "program": "test/decision-provider"
+          },
+          "registration": "06eabf17-5fd0-47f9-97c6-4935dea7f0ff",
+          "revision": "1"
+        },
+        "purpose": "DIAGNOSTIC_ONLY"
+      },
+      "operating_area_policy": "NOT_EVALUATED_BY_HOST; PRODUCTION_PROVIDER_NOT_CONNECTED",
+      "physical_handover": "NOT_ASSESSED",
+      "previous": {
+        "consumer": {
+          "catalog": {
+            "digest": "d29b76a84d5295b0ed08f844350ebbd7710e3719e6925f68ad498d2c9034eb0c",
+            "program": "rx/diagnostic-consumer"
+          },
+          "registration": "26677260-493d-452d-923b-b238da694968",
+          "revision": "1"
+        },
+        "generation": {
+          "configuration": "0163422f1e85592ca9be66f00702a9e884b04c0515c9952a8f83f6ff47a29d25",
+          "instance": "e6c51676-ae8f-4d3c-932f-0a29d8ec9322",
+          "pid": 18,
+          "run": "ac5ab66d-67e2-4132-b3df-604735c2e197"
+        },
+        "id": "a2e407c7-f399-4dba-9099-8d7f0c7a6ac6",
+        "operating_area": "test/diagnostics",
+        "profile": "snapshot-at-generation",
+        "provider": {
+          "catalog": {
+            "digest": "7fc830c899551d16ca4457fa924e3d0ea358c30c387c6310ee3bb92c5e5d6ea1",
+            "program": "test/decision-provider"
+          },
+          "registration": "9ca51f25-7a83-4f2b-b011-dd9e3abfe7ff",
+          "revision": "1"
+        },
+        "purpose": "DIAGNOSTIC_ONLY"
+      },
+      "process_ownership": "UNCHANGED; NO_PID_ADOPTION",
+      "root": "0f76581c-ae2e-4ed4-a91d-e9ebbfb96b78",
+      "signature_verification": "EXTERNAL_SIGNATURE_AND_CONTEXT_VERIFIED_AT_LOGICAL_CUT",
+      "work_use": "UNSUPPORTED"
+    }
+  },
+  "replacement_faults": {
+    "active_routes": 1,
+    "lost_reply_recovered": {
+      "application": "02aa6c9b-f8ef-4a2f-a9c6-412dddc3933f",
+      "application_effect": "EXPLICIT_SWITCH_FOR_FUTURE_DIAGNOSTIC_ASSIGNMENTS",
+      "candidate_observation": {
+        "generation": {
+          "configuration": "93e695bf97158bdb4f208478d512fa3c7c53430affcaa3d82dd9d989f8297b97",
+          "instance": "7c7ad85a-57e6-40cc-99c1-f234855bc45e",
+          "pid": 60,
+          "run": "65176c8b-48f3-4438-b673-116b9f35b1ef"
+        },
+        "observed_at": {
+          "clock_id": "unix-utc-ns",
+          "ticks_ns": "1790237939194251717"
+        },
+        "provider": {
+          "catalog": {
+            "digest": "22040486c758838b293423df9da3137a9dac147954d8eebadbc5304c5361d3ac",
+            "program": "test/decision-provider"
+          },
+          "registration": "5346d8b0-9b52-438e-a842-f7f79f63f3aa",
+          "revision": "1"
+        },
+        "reference": "1bb1424d-5f7a-407a-8d1c-0bf63664aab3",
+        "report": {
+          "conditions": [
+            {
+              "name": "report/instance",
+              "observed": "7c7ad85a-57e6-40cc-99c1-f234855bc45e",
+              "origin": "INSTANCE_ENVIRONMENT",
+              "reason": "compare reported RX_PROCESS_INSTANCE_ID with the current execution instance",
+              "state": "SATISFIED"
+            },
+            {
+              "name": "report/schema",
+              "observed": "rx.solutions-status.v1",
+              "origin": "RELEASE_DECLARATION",
+              "reason": "component-reported schema compared with authored Text(\"rx.solutions-status.v1\"); provenance ReleaseDeclaration",
+              "state": "SATISFIED"
+            }
+          ],
+          "evidence": {
+            "basis": "COMPONENT_SELF_REPORT",
+            "endpoint": "SUPPORT_SUMMARY",
+            "observed_at": {
+              "clock_id": "unix-utc-ns",
+              "ticks_ns": "1790237939194251717"
+            },
+            "payload_digest": "7562c427211da9aa052cd7b912e3fdbe61e62e2b3101d17cdb5dd8ced13c6fca",
+            "request_id": "1bb1424d-5f7a-407a-8d1c-0bf63664aab3"
+          },
+          "meaning": "assessment compares authored self-report conditions; even SATISFIED is not proof of functional operation, calibration, physical readiness or work-use permission",
+          "scope": {
+            "operating_area": "test/diagnostics",
+            "role": "diagnostics/support-summary"
+          },
+          "state": "SATISFIED",
+          "subject": {
+            "catalog_digest": "22040486c758838b293423df9da3137a9dac147954d8eebadbc5304c5361d3ac",
+            "instance": "7c7ad85a-57e6-40cc-99c1-f234855bc45e",
+            "pid": 60,
+            "program": "test/decision-provider",
+            "registration": "5346d8b0-9b52-438e-a842-f7f79f63f3aa",
+            "registration_revision": "1",
+            "run": "65176c8b-48f3-4438-b673-116b9f35b1ef",
+            "selection": "provider"
+          }
+        },
+        "report_digest": "7562c427211da9aa052cd7b912e3fdbe61e62e2b3101d17cdb5dd8ced13c6fca",
+        "request": "b2889c07-8b1c-4fda-8200-c01156863ae2"
+      },
+      "checkpoints": {
+        "cadence": "EXPLICIT_CALLER_DRIVEN_CHECKPOINTS; NO_TIMER_OR_BACKGROUND_MONITOR",
+        "failure_detection": "at the next required observation: known loss/changed identity/report is NOT_MET; unavailable evidence is NOT_EVALUATED",
+        "follow_up": "withhold the affected transition/result consumption; preserve runs/results; no automatic stop, replay, replacement or physical handover",
+        "maximum_detection_delay_ms": null,
+        "observations": "PREPARATION_ONLY captures at ASSIGN then reuses captured input; RESULT_GENERATION captures at FINISH; CONTINUOUS observes at ASSIGN/BEGIN/POLL/FINISH; INSPECT explicitly observes dependent providers; replacement APPLY probes its candidate"
+      },
+      "current_authority": "NONE; HISTORICAL_APPLICATION_ONLY",
+      "decision": {
+        "challenge": "a4f0e37e-1f2f-4d61-9106-db6f2ecfbaff",
+        "context_digest": "d5480805cbf77c5d55bc7ce9410d0c2e5237f07c67d84d9588aa7aed4685b2f6",
+        "decision": "2e3da765-94ce-4bdc-8824-5116c338e2ba",
+        "epoch": "2a7db0f0-4435-4182-bb76-dca9020e1f37",
+        "issuer": "test/operating-area-issuer",
+        "key": "test/external-key",
+        "kind": "REPLACEMENT_BINDING",
+        "owner": {
+          "catalog": "839130dc094a5a22461dce1fa65f1b0a8d2a7b939f249bbca382a05b6a9aeac4",
+          "program": "rx/diagnostic-consumer",
+          "registration": "800468d2-568f-4391-b865-e1da3795afb9",
+          "revision": "1"
+        },
+        "policy_digest": "9b2e232cafda61dc6e7e8ba0b97aecd87c8534fb81b5f5bbb9e06db51f69f95b",
+        "signed_digest": "5befef072c56bfb08b8e60444b1c18d43e19212f0e10774200a7914bd7ff27be",
+        "ttl_ms": "30000"
+      },
+      "generation": "1",
+      "next": {
+        "consumer": {
+          "catalog": {
+            "digest": "839130dc094a5a22461dce1fa65f1b0a8d2a7b939f249bbca382a05b6a9aeac4",
+            "program": "rx/diagnostic-consumer"
+          },
+          "registration": "800468d2-568f-4391-b865-e1da3795afb9",
+          "revision": "1"
+        },
+        "generation": {
+          "configuration": "93e695bf97158bdb4f208478d512fa3c7c53430affcaa3d82dd9d989f8297b97",
+          "instance": "7c7ad85a-57e6-40cc-99c1-f234855bc45e",
+          "pid": 60,
+          "run": "65176c8b-48f3-4438-b673-116b9f35b1ef"
+        },
+        "id": "17133039-f1d4-40c6-a1a6-fe2f01f3b17b",
+        "operating_area": "test/diagnostics",
+        "profile": "current-report-collection",
+        "provider": {
+          "catalog": {
+            "digest": "22040486c758838b293423df9da3137a9dac147954d8eebadbc5304c5361d3ac",
+            "program": "test/decision-provider"
+          },
+          "registration": "5346d8b0-9b52-438e-a842-f7f79f63f3aa",
+          "revision": "1"
+        },
+        "purpose": "DIAGNOSTIC_ONLY"
+      },
+      "operating_area_policy": "NOT_EVALUATED_BY_HOST; PRODUCTION_PROVIDER_NOT_CONNECTED",
+      "physical_handover": "NOT_ASSESSED",
+      "previous": {
+        "consumer": {
+          "catalog": {
+            "digest": "839130dc094a5a22461dce1fa65f1b0a8d2a7b939f249bbca382a05b6a9aeac4",
+            "program": "rx/diagnostic-consumer"
+          },
+          "registration": "800468d2-568f-4391-b865-e1da3795afb9",
+          "revision": "1"
+        },
+        "generation": {
+          "configuration": "2af47786e1d7f60dde110e2bcdd3c5734e048add85fe03bf42f0a9bfed59255d",
+          "instance": "303c889a-4864-4ab8-8e42-b458a178859a",
+          "pid": 59,
+          "run": "783731f4-36bf-4b09-8e60-ef3b810b82f1"
+        },
+        "id": "6ae4cb92-9283-42fa-bbb9-b7ecff5ee168",
+        "operating_area": "test/diagnostics",
+        "profile": "current-report-collection",
+        "provider": {
+          "catalog": {
+            "digest": "86ae802fd22703bc52b97d714079f5548218d6f0a3141675b24fb4401d5c51b8",
+            "program": "test/decision-provider"
+          },
+          "registration": "a66e81e6-556a-4a21-80c8-2795cb52fb0a",
+          "revision": "1"
+        },
+        "purpose": "DIAGNOSTIC_ONLY"
+      },
+      "process_ownership": "UNCHANGED; NO_PID_ADOPTION",
+      "root": "6ae4cb92-9283-42fa-bbb9-b7ecff5ee168",
+      "signature_verification": "EXTERNAL_SIGNATURE_AND_CONTEXT_VERIFIED_AT_LOGICAL_CUT",
+      "work_use": "UNSUPPORTED"
+    },
+    "rollback_unchanged": true
+  },
+  "concurrent_replacement_single_winner": {
+    "root": "2aff392f-2ec9-4419-95ec-058f53eff616",
+    "revision": "1",
+    "generation": "1",
+    "active": {
+      "id": "38c23c4a-fdd6-4f47-b0d5-40b6b5b7f82d",
+      "consumer": {
+        "registration": "78e0673b-b32c-4011-b0be-b4059bc2e4ca",
+        "revision": "1",
+        "catalog": {
+          "program": "rx/diagnostic-consumer",
+          "digest": "2aca7c2df916db36379aa3ea8cef0af6e8406f4811c7a78f0f9ffd4112794643"
+        }
+      },
+      "profile": "current-report-collection",
+      "operating_area": "test/diagnostics",
+      "provider": {
+        "registration": "85f44bad-11ae-434e-934d-7d52d9bb2677",
+        "revision": "1",
+        "catalog": {
+          "program": "test/decision-provider",
+          "digest": "8936dea59d113d7ed9c57da34f33cc6129459ad3e5f9a86afa2d11bc62d20891"
+        }
+      },
+      "generation": {
+        "run": "81fa574a-54b5-4c6f-8d1b-abfa5974ded3",
+        "instance": "df7ae614-3126-4299-89c8-e205e279e817",
+        "pid": 50,
+        "configuration": "0e2464eaf51ff21daae40310d680191bd11d49c3554664a2380b19b0753f98a8"
+      },
+      "purpose": "DIAGNOSTIC_ONLY"
+    },
+    "meaning": "ONE_FUTURE_ASSIGNMENT_ROUTE; NOT_CURRENT_SOURCE_AVAILABILITY_OR_WORK_PERMISSION",
+    "checkpoints": {
+      "cadence": "EXPLICIT_CALLER_DRIVEN_CHECKPOINTS; NO_TIMER_OR_BACKGROUND_MONITOR",
+      "maximum_detection_delay_ms": null,
+      "observations": "PREPARATION_ONLY captures at ASSIGN then reuses captured input; RESULT_GENERATION captures at FINISH; CONTINUOUS observes at ASSIGN/BEGIN/POLL/FINISH; INSPECT explicitly observes dependent providers; replacement APPLY probes its candidate",
+      "failure_detection": "at the next required observation: known loss/changed identity/report is NOT_MET; unavailable evidence is NOT_EVALUATED",
+      "follow_up": "withhold the affected transition/result consumption; preserve runs/results; no automatic stop, replay, replacement or physical handover"
+    }
+  },
+  "replacement_manager_loss": {
+    "physical_handover": "NOT_ASSESSED",
+    "scenes": [
+      {
+        "killed_manager_pid": 78,
+        "observer_pid": 1,
+        "old_run": "890d2c04-e4e1-480b-85c8-64ea0393db24",
+        "phase": "before",
+        "route": {
+          "active": {
+            "consumer": {
+              "catalog": {
+                "digest": "cb259e502bc84d6b6e77a66b7a836b48337845d17a799bcc7b39f0587664c6f9",
+                "program": "rx/diagnostic-consumer"
+              },
+              "registration": "f5af4cb9-a145-4be8-9d0b-fcc3610020b9",
+              "revision": "1"
+            },
+            "generation": {
+              "configuration": "3b0031e7817ea7b888e01aaae7b0eb9f5c25c1ba940c580185484b59181c84a5",
+              "instance": "1ab803ec-1aee-4ad0-9559-9a5cb4fd36d7",
+              "pid": 82,
+              "run": "8a17e47e-386c-43dc-843f-750e928cbd4a"
+            },
+            "id": "91be6781-1acc-4bc3-96c4-c21d76609042",
+            "operating_area": "test/diagnostics",
+            "profile": "current-report-collection",
+            "provider": {
+              "catalog": {
+                "digest": "165e2f4ae38efd93a1d3ae4299ac0f81a70ecf286b02e0a53e18f2223267a8ea",
+                "program": "test/decision-provider"
+              },
+              "registration": "a6031d17-ff12-4b0b-b3ef-5f21da63454c",
+              "revision": "1"
+            },
+            "purpose": "DIAGNOSTIC_ONLY"
+          },
+          "checkpoints": {
+            "cadence": "EXPLICIT_CALLER_DRIVEN_CHECKPOINTS; NO_TIMER_OR_BACKGROUND_MONITOR",
+            "failure_detection": "at the next required observation: known loss/changed identity/report is NOT_MET; unavailable evidence is NOT_EVALUATED",
+            "follow_up": "withhold the affected transition/result consumption; preserve runs/results; no automatic stop, replay, replacement or physical handover",
+            "maximum_detection_delay_ms": null,
+            "observations": "PREPARATION_ONLY captures at ASSIGN then reuses captured input; RESULT_GENERATION captures at FINISH; CONTINUOUS observes at ASSIGN/BEGIN/POLL/FINISH; INSPECT explicitly observes dependent providers; replacement APPLY probes its candidate"
+          },
+          "generation": "0",
+          "meaning": "ONE_FUTURE_ASSIGNMENT_ROUTE; NOT_CURRENT_SOURCE_AVAILABILITY_OR_WORK_PERMISSION",
+          "revision": null,
+          "root": "91be6781-1acc-4bc3-96c4-c21d76609042"
+        },
+        "source_ownership": "NOT_RESTORED"
+      },
+      {
+        "killed_manager_pid": 87,
+        "observer_pid": 1,
+        "old_run": "cdcd75b8-9575-4d11-acd2-0349bf487198",
+        "phase": "after",
+        "route": {
+          "active": {
+            "consumer": {
+              "catalog": {
+                "digest": "9f9ab7976f4aacdc12c6d8d91638a037f4ddf03df0c2171ab39f82599a9f149a",
+                "program": "rx/diagnostic-consumer"
+              },
+              "registration": "1ea17a75-2430-4fc0-a86d-3109d0b70d71",
+              "revision": "1"
+            },
+            "generation": {
+              "configuration": "1ff63915b1631364fc36d72cf0e44adc13cb9a2d98d61995f381f98632e1db4c",
+              "instance": "9e8013d7-4a6f-4421-a192-84f9fc69fdd9",
+              "pid": 92,
+              "run": "ccb72d93-dc2c-41e3-b480-19662d404170"
+            },
+            "id": "55d7b849-7104-4a6c-88a6-d9efe81676b9",
+            "operating_area": "test/diagnostics",
+            "profile": "current-report-collection",
+            "provider": {
+              "catalog": {
+                "digest": "d4c1e936b1e8a959de41f53ee719934f2cdfd000f1953fdb234fad3986ccc170",
+                "program": "test/decision-provider"
+              },
+              "registration": "a1e17925-61aa-4652-a896-3f8796f40c1c",
+              "revision": "1"
+            },
+            "purpose": "DIAGNOSTIC_ONLY"
+          },
+          "checkpoints": {
+            "cadence": "EXPLICIT_CALLER_DRIVEN_CHECKPOINTS; NO_TIMER_OR_BACKGROUND_MONITOR",
+            "failure_detection": "at the next required observation: known loss/changed identity/report is NOT_MET; unavailable evidence is NOT_EVALUATED",
+            "follow_up": "withhold the affected transition/result consumption; preserve runs/results; no automatic stop, replay, replacement or physical handover",
+            "maximum_detection_delay_ms": null,
+            "observations": "PREPARATION_ONLY captures at ASSIGN then reuses captured input; RESULT_GENERATION captures at FINISH; CONTINUOUS observes at ASSIGN/BEGIN/POLL/FINISH; INSPECT explicitly observes dependent providers; replacement APPLY probes its candidate"
+          },
+          "generation": "1",
+          "meaning": "ONE_FUTURE_ASSIGNMENT_ROUTE; NOT_CURRENT_SOURCE_AVAILABILITY_OR_WORK_PERMISSION",
+          "revision": "1",
+          "root": "8e44ae89-3967-47a7-a4ec-68be4ef3af33"
+        },
+        "source_ownership": "NOT_RESTORED"
+      }
+    ]
+  },
+  "replacement_loss_impact": {
+    "detection": "ONLY_AT_EXPLICIT_REQUIRED_CHECKPOINT",
+    "independent_completed": "075ef0d7-020c-42f4-b119-c9dd0bea8674",
+    "new_completed": "f21ff104-7f4a-4534-ba95-74b9c8a28be4",
+    "old_result_preserved": "0173bf64-b6aa-4ad8-a8fa-de5465ea542d",
+    "old_withheld": true
+  },
+  "result": "PASS",
+  "runtime_image": "sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0",
+  "builder_image": "sha256:ff521445a372125ed4f76e1453a1f8098f2d05332d1601d30db1c1f62757e730",
+  "test_binary_sha256": "af7eb703ab3d5ea9e78059ae92ffa7285839cea90112f151929777afb9bb6622",
+  "scope": "diagnostic Consumer application API with real Linux processes; explicit test issuer only; no resident routing CLI or operating-area provider integration",
+  "monitoring": "explicit caller checkpoints; no fixed period or bounded detection delay; no monitor added",
+  "ownership": "one future-assignment route per relationship and one binding version per run; no physical/process/resource ownership transfer"
+}

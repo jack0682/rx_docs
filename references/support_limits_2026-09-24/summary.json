@@ -1,0 +1,32 @@
+{
+  "source_sha": "bfd66e7a0433340fc1d7e900989475fb4b2abb1f",
+  "macos_workspace": {
+    "passed": 375,
+    "failed": 0,
+    "ignored": 17
+  },
+  "checks": {
+    "fmt": 0,
+    "repository-tests": 0,
+    "commit-policy-tests": 0,
+    "repository-check": 0,
+    "invariant-check": 0,
+    "catalog-check": 0,
+    "native-tests": 0
+  },
+  "six_passages": "PASS; library32/resident/resource/manager-loss/work/replacement",
+  "support_enforcement": "ENFORCEMENT_PASS_LOCK_LIFETIME_UNRESOLVED",
+  "final_parallel_stress": [
+    {
+      "round": 0,
+      "exit_code": 101
+    }
+  ],
+  "classification": "resolved / enforced refusal / permitted supported semantics / no first-baseline path; unsupported classification is not forced",
+  "successor_slices": [
+    "AUTHENTICATED_RELEASE_ORIGIN",
+    "STORAGE_LOCK_LIFETIME"
+  ],
+  "product_sdk_platform_changes": false,
+  "lock_findings": "no post-exec storage lock FD in measured product children; pre-exec inheritance reproduced with actual Command and unmodified RX repository; historical F9 failure not definitively attributed"
+}

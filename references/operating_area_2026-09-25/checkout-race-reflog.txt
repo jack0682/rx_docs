@@ -1,0 +1,5 @@
+ed3d90f HEAD@{2026-09-25 07:53:36 +0900}: pull --ff-only origin develop: Fast-forward
+1430e1b HEAD@{2026-09-25 07:53:35 +0900}: checkout: moving from fix/g3-sdk-storage-test-layout to develop
+acc955a HEAD@{2026-09-25 07:36:02 +0900}: commit: Regenerate SDK with mailbox cases in the existing unit-test target
+ea14fb3 HEAD@{2026-09-25 07:35:01 +0900}: checkout: moving from feature/g3-operating-area-judge to fix/g3-sdk-storage-test-layout
+3c6db54 HEAD@{2026-09-25 07:14:36 +0900}: commit: Connect opt-in offline work judgment while preserving sealed receiving gates

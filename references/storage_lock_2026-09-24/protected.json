@@ -1,0 +1,31 @@
+{
+  "rx-platform": {
+    "baseline": "725064c31e7500018ec99c07f283b873cec7f6a9",
+    "changed_baseline_tracked_files": [
+      "crates/rx-api/src/error.rs",
+      "crates/rx-api/src/grpc/mod.rs",
+      "crates/rx-host-client/src/connection/diagnostic.rs",
+      "crates/rx-host-client/src/delivery/diagnostic.rs",
+      "crates/rx-ports/src/lib.rs",
+      "crates/rx-storage/src/lib.rs"
+    ]
+  },
+  "rx-solutions": {
+    "baseline": "39ae54b77eb82a3292f4e8f99b51cb3e455dc917",
+    "changed_baseline_tracked_files": [
+      "Cargo.lock",
+      "runtime/rx-host/src/service/maintenance.rs",
+      "runtime/rx-host/src/service/mod.rs",
+      "runtime/rx-service-status/Cargo.toml",
+      "runtime/rx-service-status/src/support.rs",
+      "runtime/rx-supervisor/README.md",
+      "sdk/crates/rx-ports/src/lib.rs",
+      "sdk/crates/rx-storage/src/lib.rs",
+      "sdk/source-lock.json"
+    ]
+  },
+  "rx_docs": {
+    "baseline": "8bc626a92353da92389f725ff6b1cc6fc5f2c895",
+    "changed_baseline_tracked_files": []
+  }
+}

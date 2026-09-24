@@ -1,0 +1,14 @@
+{
+  "rx-platform": {
+    "commit": "95fbba235bd0c28ffcf51a7fe71717c8ab17d41f",
+    "main": "3dbf1b4067ffeef0d2ab9dff5dff1a79ed8c4c31",
+    "signature": "verified",
+    "DCO": "Jaehong Oh <jaehongoh1554@gmail.com>"
+  },
+  "rx-solutions": {
+    "commit": "194b20976919726243bfec6388fb0219ebdecbc5",
+    "main": "d4d38f6901ced41079af0d76daa273ee3b83bbf0",
+    "signature": "verified",
+    "DCO": "Jaehong Oh <jaehongoh1554@gmail.com>"
+  }
+}

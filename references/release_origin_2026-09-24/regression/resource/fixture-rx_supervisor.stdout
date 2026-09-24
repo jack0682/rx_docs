@@ -1,0 +1,30 @@
+
+running 21 tests
+test initialization::termination_tests::failed_signal_command_status_is_not_a_successful_delivery ... ok
+test execution_store::tests::unknown_run_does_not_create_nested_execution_store ... ok
+test initialization::termination_tests::failed_term_keeps_the_same_owned_child_retryable_until_delivery_is_confirmed ... ok
+test process::signal_tests::failed_signal_uses_only_confirmed_owned_non_actuating_exit ... ok
+test process::signal_tests::failed_signal_keeps_control_and_unknown_effect_errors ... ok
+test process::signal_tests::failed_signal_with_live_or_unconfirmed_child_remains_error ... ok
+test process::signal_tests::signal_acceptance_does_not_claim_child_exit ... ok
+test process_identity::linux::tests::stat_comm_parentheses_do_not_shift_starttime ... ok
+test process_identity::linux::tests::zombie_and_read_race_are_distinct_unverifiable_findings ... ok
+test registration::recovery::investigation_tests::legacy_string_summary_decodes_only_as_history ... ok
+test process_identity::linux::tests::namespace_lifetime_read_race_has_its_own_rejection ... ok
+test process_identity::linux::tests::foreign_namespace_neither_matches_nor_proves_absence ... ok
+test process_identity::linux::tests::every_saved_scope_dimension_is_required_before_absence ... ok
+test registration::recovery::investigation_tests::registry_reads_original_identity_and_does_not_backfill_legacy_records ... ok
+test registration::recovery::investigation_tests::real_zombie_is_unverifiable_then_reaped_absence_can_confirm_without_changing_unknown ... ok
+normal: startup authority changed after application, before EXEC; gated child exit confirmed, no policy remains from this attempt
+test process::linux_limits::tests::authority_change_after_application_prevents_exec_and_confirms_rollback ... ok
+permission: kernel application failed: process: Operation not permitted (os error 1); gated child exit confirmed, no policy remains from this attempt
+test process::linux_limits::tests::actual_kernel_permission_failure_after_lowering_rolls_back_before_target ... ok
+test process::linux_limits::tests::gate_death_in_exec_window_cannot_mint_a_receipt_from_eof ... ok
+exec: EXEC_ERROR:2; gated child exit confirmed, no policy remains from this attempt
+test process::linux_limits::tests::exec_syscall_failure_is_not_an_admission ... ok
+observation: parent kernel observation did not confirm the complete policy; gated child exit confirmed, no policy remains from this attempt
+test process::linux_limits::tests::observation_failure_after_application_confirms_no_remaining_child_policy ... ok
+test process::linux_limits::tests::gate_excludes_current_directory_python_module_shadowing ... ok
+
+test result: ok. 21 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.65s
+

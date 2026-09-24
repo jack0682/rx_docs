@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/release_origin_passage.py", line 152, in <module>
+    main()
+    ~~~~^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/release_origin_passage.py", line 71, in main
+    refuse('unsigned-original', [], 'release/unsigned', selected=original)
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/release_origin_passage.py", line 69, in refuse
+    assert reason in err, (label, err)
+           ^^^^^^^^^^^^^
+AssertionError: ('unsigned-original', 'Error: Release(Unsigned)\n')

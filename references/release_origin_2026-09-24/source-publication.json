@@ -1,0 +1,30 @@
+{
+  "repositories": {
+    "rx-platform": {
+      "merge": "1966319fbb9b17d840c930915235f7744ccde595",
+      "contribution": "95fbba235bd0c28ffcf51a7fe71717c8ab17d41f",
+      "trees_equal": true,
+      "signatures": "verified",
+      "main": "3dbf1b4067ffeef0d2ab9dff5dff1a79ed8c4c31"
+    },
+    "rx-solutions": {
+      "merge": "1430e1b1e8f813a6e86405a04e16039e83861909",
+      "contribution": "1f9cc7def3f1aa30c7a32472f0220f16fe9b508d",
+      "trees_equal": true,
+      "signatures": "verified",
+      "main": "d4d38f6901ced41079af0d76daa273ee3b83bbf0"
+    }
+  },
+  "merge_ci_rust": {
+    "platform": {
+      "passed": 402,
+      "failed": 0,
+      "ignored": 16
+    },
+    "solutions": {
+      "passed": 420,
+      "failed": 0,
+      "ignored": 20
+    }
+  }
+}

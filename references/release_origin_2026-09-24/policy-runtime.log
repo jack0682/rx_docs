@@ -1,0 +1,2 @@
+before_disk_key_injection=UNTRUSTED
+after_disk_key_injection=ACCEPTED; changed=policy.json; binary_unchanged=true; fixture_key_not_release_authority=true

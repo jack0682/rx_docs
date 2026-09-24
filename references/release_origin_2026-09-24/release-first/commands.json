@@ -1,0 +1,52 @@
+[
+  {
+    "label": "image",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "rx-solutions:g2-authenticated"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "unsigned-image",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "rx-solutions:n5-runtime"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "unsigned-original",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g2-evidence/release-runtime-first:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g2-evidence/release-runtime-first/state:/var/lib/rx-solutions",
+      "--entrypoint",
+      "/evidence/rx-solutionsd",
+      "sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0",
+      "run",
+      "/evidence/config.json"
+    ],
+    "exit_code": 1,
+    "expected": 1
+  }
+]

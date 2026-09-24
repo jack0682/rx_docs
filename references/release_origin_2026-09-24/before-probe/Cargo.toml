@@ -1,0 +1,10 @@
+[package]
+name="g2-policy-probe"
+version="0.0.0"
+edition="2024"
+[workspace]
+[dependencies]
+rx-domain={path="/platform/crates/rx-domain"}
+rx-package={path="/platform/crates/rx-package"}
+ed25519-dalek="3"
+serde_json="1"

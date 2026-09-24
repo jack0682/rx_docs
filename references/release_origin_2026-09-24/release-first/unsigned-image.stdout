@@ -1,0 +1,107 @@
+[
+    {
+        "Id": "sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0",
+        "RepoTags": [
+            "rx-solutions:n5-runtime"
+        ],
+        "RepoDigests": [
+            "rx-solutions@sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-09-15T22:22:45.174687879Z",
+        "Config": {
+            "User": "10001:10001",
+            "ExposedPorts": {
+                "8081/tcp": {}
+            },
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "LC_ALL=C.UTF-8",
+                "ROS_DISTRO=jazzy",
+                "DEBIAN_FRONTEND=noninteractive",
+                "CMAKE_BUILD_PARALLEL_LEVEL=1",
+                "MAKEFLAGS=-j1 -l1",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "ROS_LOG_DIR=/var/lib/rx-solutions/ros-log"
+            ],
+            "Entrypoint": [
+                "/opt/rx/entrypoint.sh"
+            ],
+            "Cmd": [
+                "serve"
+            ],
+            "WorkingDir": "/var/lib/rx-solutions",
+            "Labels": {
+                "org.opencontainers.image.version": "24.04"
+            },
+            "StopSignal": "SIGTERM",
+            "ArgsEscaped": true,
+            "Shell": [
+                "/bin/bash",
+                "-o",
+                "pipefail",
+                "-c"
+            ]
+        },
+        "Architecture": "arm64",
+        "Os": "linux",
+        "Size": 385715882,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:01c818468a75d080ea22eed90a9fa08caeb68931c680c3023b01a0b0427a8641",
+                "sha256:06af3119d673520bd8af5eb75fec5cbbddccdb0e2cdbdbcecf5d3551b6a34ea6",
+                "sha256:1eea149228d29006b8e431811d671714ca0194d69d70e703f6b09cb46d3fb39c",
+                "sha256:aa0eb6e04245be9b2b65814c6407b699b8203deaf123e3a253c891a31ddf4fc5",
+                "sha256:f926712dca8593835bfa7e5fb42196b0e973a7aae8bf9d2c0b686e01858b91a9",
+                "sha256:a04ac671bc39acb5f93f421856ae8614a370534a69d809d467cb03d80b21a0ae",
+                "sha256:bdee3d5b4746fcecb01cb87cf9c54e2f4a7118c8058bda7de0d2f48e8a8fac31",
+                "sha256:f41829652fba36a7c63b3a0226c37fbab765a3bd02a0c548b8a45b774b0937eb",
+                "sha256:c52ce66c8a4248fbc1b8a761b3efe510b74a5bead075dcd48fb7d99a89db487d",
+                "sha256:a9864f50c82aa2d8ff35e244564933c7cac84b9fd7da52e535232f1e933e60b3",
+                "sha256:1824ca06666faae1d5ea51b766976b65fd2be1069aa0af2b2408730b3d5195fa",
+                "sha256:316cced3bd91e4f180674b6f312ee57fcf5942957635d7deabbd626d02294c92",
+                "sha256:13839b880a92219c9e1a7ae796344f7381c31b6a943ef14a024f6eb1f26dd304",
+                "sha256:3573f118defdde7c6e436448089a6f630a0ae7d9cce3eb118e4482d051a46fdc",
+                "sha256:2084b2ba996edfae1a5e195962076622f212e3fabd81bc01c5030b2bffc53864",
+                "sha256:3e95a0dba945b402aa5e784916203cc248afd36a7eb24f10de0bf01c1e4ed408",
+                "sha256:9660a769b4719b4c1d62f64aef442f3cf43f1467446766a884ad3bc828c31b5a",
+                "sha256:2ed45242802befd7caa9dee49605dfda30cc48943eea12529534b7970003e365",
+                "sha256:6bbee69b6071fd13e17dc82ce3f91f67a754a772e432d1b5d8e3808f5bbe560c",
+                "sha256:ea0691229ae56e0e1130c75459912bde36054ac3bea97298d83f81c2f2947808",
+                "sha256:fdc060f93a2df621a14e3691dbd4ad019c23f32f1efab92cf310dd7cbf93300b",
+                "sha256:05f18fb022083e34bd9db8b6738989f8bc1053a6bbe4ebc5c4c5853a552e35e9",
+                "sha256:95fb8900feb2390da0a954965039ce88df55f7b5cbe3b711dd41b58f73bb7875",
+                "sha256:abdcfbfaa2c4614e9cf514c469ebae05fd2d1862164ae9893bdaa257490a60f7",
+                "sha256:d5b095bb22a5213383ba2e7bf16e4c76b16f8c73619acd87fad3a58254c08e73",
+                "sha256:019fd62a1dbe8a72e498310abba8e110c1fb8b749fd7d1feb91a9a870f0c3c8b",
+                "sha256:9a25ad649fb0a0c07176b901e52901f1942e411d6cc037d9c50da3f6c4a7aff7",
+                "sha256:e382a2c704d140d783548880410eca42fc2633f9013fd0e57f3d9f85998eaee6",
+                "sha256:0ac77618dd250e2aece40d8d6279436c64d7ac2dda055dc659860e16a1812c27",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-09-15T22:22:46.022455587Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0",
+            "size": 856
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "docker.io/library/rx-solutions"
+                }
+            ],
+            "Build": [
+                {
+                    "Ref": "misrp2pwvrhteey3djhsu3vi9",
+                    "CreatedAt": "2026-09-15T22:22:46.290294004Z"
+                }
+            ]
+        }
+    }
+]

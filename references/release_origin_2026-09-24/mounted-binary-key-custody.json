@@ -1,0 +1,5 @@
+{
+  "result": "PRIVATE_KEY_ABSENT_FROM_EXECUTED_VERIFIER",
+  "binary_sha256": "f55af0c0f37e58bf7ab0d3aa9871d6caf69b3ac767ef98502663a2bb65b52f8d",
+  "patterns": "PEM/base64/DER/raw-seed/hex-seed; scoped check, not arbitrary encoding analysis"
+}

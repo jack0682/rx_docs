@@ -1,0 +1,210 @@
+   Compiling typenum v1.20.1
+   Compiling cfg-if v1.0.4
+   Compiling bitflags v2.13.2
+   Compiling libc v0.2.189
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling ryu-js v0.2.2
+   Compiling thiserror v2.0.20
+   Compiling io-lifetimes v2.0.4
+   Compiling io-lifetimes v3.0.1
+   Compiling maybe-owned v0.3.4
+   Compiling io-extras v0.19.0
+   Compiling ambient-authority v0.0.2
+   Compiling ipnet v2.12.2
+   Compiling signature v3.0.0
+   Compiling subtle v2.6.1
+   Compiling zeroize v1.9.0
+   Compiling foldhash v0.2.0
+   Compiling ed25519 v3.0.0
+   Compiling once_cell v1.21.4
+   Compiling fastrand v2.5.0
+   Compiling libsqlite3-sys v0.38.2
+   Compiling errno v0.3.14
+   Compiling getrandom v0.4.3
+   Compiling cpufeatures v0.2.17
+   Compiling cpufeatures v0.3.1
+   Compiling rustix v1.1.4
+   Compiling hashbrown v0.17.1
+   Compiling fallible-streaming-iterator v0.1.9
+   Compiling smallvec v1.16.0
+   Compiling fallible-iterator v0.3.0
+   Compiling signal-hook-registry v1.4.8
+   Compiling mio v1.2.3
+   Compiling pin-project-lite v0.2.17
+   Compiling generic-array v0.14.7
+   Compiling hybrid-array v0.4.15
+   Compiling tokio v1.53.1
+   Compiling hashlink v0.12.2
+   Compiling block-buffer v0.10.4
+   Compiling crypto-common v0.1.7
+   Compiling rusqlite v0.40.2
+   Compiling block-buffer v0.12.1
+   Compiling crypto-common v0.2.2
+   Compiling digest v0.10.7
+   Compiling sha2 v0.10.9
+   Compiling serde_json v1.0.151
+   Compiling serde v1.0.229
+   Compiling uuid v1.26.1
+   Compiling semver v1.0.28
+   Compiling fs-set-times v0.20.3
+   Compiling digest v0.11.3
+   Compiling cap-primitives v4.0.3
+   Compiling curve25519-dalek v5.0.0
+   Compiling sha2 v0.11.0
+   Compiling tempfile v3.27.0
+   Compiling cap-std v4.0.3
+   Compiling cap-fs-ext v4.0.3
+   Compiling ed25519-dalek v3.0.0
+   Compiling serde_jcs v0.2.0
+   Compiling rx-domain v0.1.0 (<workspace>/rx-solutions/sdk/crates/rx-domain)
+   Compiling rx-package v0.1.0 (<workspace>/rx-solutions/sdk/crates/rx-package)
+   Compiling rx-ports v0.1.0 (<workspace>/rx-solutions/sdk/crates/rx-ports)
+   Compiling rx-service-status v0.1.0 (<workspace>/rx-solutions/runtime/rx-service-status)
+   Compiling rx-storage v0.1.0 (<workspace>/rx-solutions/sdk/crates/rx-storage)
+   Compiling rx-solution-catalog v0.1.0 (<workspace>/rx-solutions/runtime/rx-solution-catalog)
+   Compiling rx-supervisor v0.1.0 (<workspace>/rx-solutions/runtime/rx-supervisor)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 9.06s
+     Running unittests src/lib.rs (../.f9-evidence/target-macos/debug/deps/rx_supervisor-8928ae21b2474f1e)
+
+running 7 tests
+test initialization::termination_tests::failed_signal_command_status_is_not_a_successful_delivery ... ok
+test execution_store::tests::unknown_run_does_not_create_nested_execution_store ... ok
+test process::signal_tests::failed_signal_with_live_or_unconfirmed_child_remains_error ... ok
+test process::signal_tests::signal_acceptance_does_not_claim_child_exit ... ok
+test process::signal_tests::failed_signal_uses_only_confirmed_owned_non_actuating_exit ... ok
+test process::signal_tests::failed_signal_keeps_control_and_unknown_effect_errors ... ok
+test initialization::termination_tests::failed_term_keeps_the_same_owned_child_retryable_until_delivery_is_confirmed ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/rx-solutionsd.rs (../.f9-evidence/target-macos/debug/deps/rx_solutionsd-79c761e1ce008d84)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/decision_anchors.rs (../.f9-evidence/target-macos/debug/deps/decision_anchors-43af011cf0ea0aab)
+
+running 1 test
+test author_anchors_are_pinned_and_site_data_cannot_override_them ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/dependency_binding.rs (../.f9-evidence/target-macos/debug/deps/dependency_binding-5d400925a68972e4)
+
+running 10 tests
+test bounded_collection_keeps_a_finish_slot_and_cannot_overwrite_result ... ok
+test captured_response_cannot_be_replayed_for_another_diagnostic_request ... ok
+test absent_and_malformed_sources_and_explicit_denial_have_named_distinct_states ... ok
+test author_scope_cannot_be_replaced_and_unknown_is_not_independent ... ok
+test generation_window_defers_input_until_finish_and_preserves_completed_snapshot ... ok
+test current_report_change_and_consumer_retirement_do_not_rewrite_historical_result ... ok
+test preparation_input_outlives_provider_and_result_is_durable_without_permission ... ok
+test continuous_loss_blocks_only_dependent_progress_and_current_result_consumption ... ok
+test result_run_and_history_commit_atomically_on_storage_failure ... ok
+test same_format_registration_and_same_registration_new_execution_do_not_inherit_binding ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.86s
+
+     Running tests/execution_admission.rs (../.f9-evidence/target-macos/debug/deps/execution_admission-af20d8a97624345a)
+
+running 12 tests
+test diagnostic_query_does_not_enter_admission_or_spawn ... ok
+test authority_recheck_precedes_any_simulated_resource_application ... ok
+test malformed_rejection_is_not_falsely_reported_as_confirmed_non_application ... ok
+test site_overrides_and_lowered_catalog_are_rejected_in_three_distinct_paths ... ok
+test reopening_does_not_restore_application_evidence_or_resource_ownership ... ok
+test unknown_is_rejected_even_by_a_capable_backend_and_not_required_is_distinct ... ok
+test legacy_serialization_is_unchanged_and_explicit_empty_has_its_own_identity ... ok
+test real_backend_rejects_required_policies_before_exec_and_reports_no_application ... ok
+test stale_receipts_and_lost_application_responses_remain_unknown_without_retry ... ok
+test whole_bundle_all_available_all_unavailable_and_mixed_have_no_partial_application ... ok
+test upper_bounds_do_not_reserve_but_reserved_capacity_and_access_conflicts_are_atomic ... ok
+test real_backend_keeps_legacy_and_explicit_no_policy_startup_working ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+
+     Running tests/guarded.rs (../.f9-evidence/target-macos/debug/deps/guarded-403feb96912376e0)
+
+running 7 tests
+test guarded_paths_are_per_instance_and_scope_is_preserved ... ok
+test guarded_recipe_cannot_use_alive_only_parameters_restart_or_physical_authority_fallback ... ok
+test nonzero_guarded_exit_is_unconfirmed_even_with_stopped_report ... ok
+test failed_first_term_retries_the_same_owned_service_without_waiting_for_timeout ... ok
+test lost_protocol_readiness_latches_cooperative_shutdown_instead_of_restart ... ok
+test guarded_readiness_requires_protocol_and_exit_zero_requires_terminal_report ... ok
+test held_guarded_service_is_not_forced_after_timeout ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.14s
+
+     Running tests/guarded_os.rs (../.f9-evidence/target-macos/debug/deps/guarded_os-969ac8d29b690084)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/initialization.rs (../.f9-evidence/target-macos/debug/deps/initialization-679c5a32c096ae47)
+
+running 2 tests
+test required_composition_initialization_rejects_missing_partial_changed_list_and_wrong_digest ... ok
+test four_named_initializer_successes_are_recorded_once_and_entered_is_never_replayed ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.38s
+
+     Running tests/lifecycle.rs (../.f9-evidence/target-macos/debug/deps/lifecycle-03328a920efc6342)
+
+running 10 tests
+test release_program_change_and_unsafe_plan_choices_are_rejected ... ok
+test supervisor_restart_keeps_live_or_uncertain_processes_unknown_and_never_signals_saved_pids ... ok
+test uncertain_backend_result_is_not_a_known_start_failure ... ok
+test default_authority_does_not_start_control_owners_and_other_stores_are_not_claimed ... ok
+test failed_stop_persistence_still_prevents_new_processes_and_exit_observation_can_be_retried ... ok
+test dependencies_start_after_readiness_and_stop_before_their_provider ... ok
+test launch_commit_boundaries_never_replay_an_uncertain_spawn ... ok
+test execution_retry::previous_application_observation_does_not_cover_a_new_prepared_instance ... ok
+test stop_authority_is_required_and_control_processes_are_never_force_killed ... ok
+test software_restart_budget_persists_until_an_explicit_clean_reactivation ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.28s
+
+     Running tests/os_process.rs (../.f9-evidence/target-macos/debug/deps/os_process-fbfbc69baeca9360)
+
+running 2 tests
+test tampered_program_file_is_not_started ... ok
+test real_process_readiness_is_instance_correlated_and_shutdown_reaps_the_owned_process ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.74s
+
+     Running tests/recovery.rs (../.f9-evidence/target-macos/debug/deps/recovery-05052d4359d2cd49)
+
+running 9 tests
+test confirmed_disposition_preserves_unknown_and_does_not_automatically_open_assignment ... ok
+test missing_original_pid_binding_requires_another_provider_not_an_inferred_closure ... ok
+test old_run_prepared_instance_and_automatic_restart_budget_are_not_recovery_routes ... ok
+test witness_scope_time_target_actor_and_stale_revision_are_checked ... ok
+test unable_to_resolve_is_not_success_or_permission_to_resume ... FAILED
+test explicit_resume_consumes_once_and_uses_new_instance_without_restoring_receipts ... ok
+test disposed_observation_cannot_be_overwritten_by_an_old_supervisor ... ok
+test disposition_and_resume_consumption_rollback_without_half_records ... ok
+test weak_observations_and_default_authority_cannot_dispose ... ok
+
+failures:
+
+---- unable_to_resolve_is_not_success_or_permission_to_resume stdout ----
+negative investigation labeled confirmed: invalid document: disposition requires supported positive evidence or an explicit unresolved investigation; timeout/idle/absence/time alone is insufficient
+
+thread 'unable_to_resolve_is_not_success_or_permission_to_resume' (15388617) panicked at runtime/rx-supervisor/tests/recovery.rs:611:5:
+assertion failed: v.recovery.limitations.iter().any(|s|
+        s.contains("total manager-process/Child-handle loss"))
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    unable_to_resolve_is_not_success_or_permission_to_resume
+
+test result: FAILED. 8 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.68s
+
+error: test failed, to rerun pass `-p rx-supervisor --test recovery`

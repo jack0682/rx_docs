@@ -1,0 +1,33 @@
+$ cd <workspace>/rx-solutions
+$ docker run --rm --network none --read-only --cap-drop ALL --security-opt no-new-privileges --tmpfs /tmp:rw -v <workspace>/.f9-evidence/reuse_probe.py:/probe.py:ro --entrypoint /usr/bin/python3 --user 0 --cap-add CHECKPOINT_RESTORE --security-opt seccomp=unconfined sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0 /probe.py
+{
+  "scope": "actual forced PID reuse inside one disposable namespace; fixture capability only, not product permission",
+  "rows": [
+    {
+      "pid": 100,
+      "start_ticks": 4545,
+      "boot_id": "b75caaa4-95f8-4e05-a77b-586b322d9a5f",
+      "pid_namespace": "pid:[4026532560]",
+      "cmdline": [
+        "/usr/bin/python3",
+        "-c",
+        "import time; time.sleep(60)",
+        ""
+      ]
+    },
+    {
+      "pid": 100,
+      "start_ticks": 4556,
+      "boot_id": "b75caaa4-95f8-4e05-a77b-586b322d9a5f",
+      "pid_namespace": "pid:[4026532560]",
+      "cmdline": [
+        "/usr/bin/python3",
+        "-c",
+        "import time; time.sleep(60)",
+        ""
+      ]
+    }
+  ],
+  "uid": 0,
+  "cap_eff": "CapEff:\t0000010000000000"
+}

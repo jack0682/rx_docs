@@ -109,3 +109,14 @@ Exact merge CI, both attempt1: platform [36017648598](https://github.com/jack068
 OpenPGP signatures and author DCO were checked. SDK111 files equal a fresh export.
 No CI rerun hid a failure: initial and corrected source revisions have separate
 first-attempt CI records, while both local implementation failures remain above.
+
+Supplemental attribution control: [exact-ID attacker result](exact-id-attack/result.json)
+uses a cryptographically valid attacker signature **for the exact compiled key ID**,
+not merely an envelope edited after signing. OpenSSL independently verifies it
+under the attacker public key. A complete mutable Policy document binds that same
+ID to the attacker key, and policy/key files plus environment variables are
+installed. The current RX verifier still refuses it as release/invalid-signature.
+[Command](exact-id-attack/command.json), [policy](exact-id-attack/policy.json),
+[public key](exact-id-attack/attacker-public.pem), [raw refusal](exact-id-attack/stderr).
+This separates wrong-root refusal from a mere signed-key-ID binding failure.
+No development private key is included.

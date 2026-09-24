@@ -1,0 +1,61 @@
+{
+  "scope": "same PID namespace, direct non-actuating process; original outcome remains unresolved",
+  "macos_workspace": {
+    "passed": 348,
+    "failed": 0,
+    "ignored": 17,
+    "note": "Includes three initial doctests; latest four-doctest run separately passed. Unique current cases: 349."
+  },
+  "linux_supervisor_units": {
+    "passed": 21,
+    "failed": 0,
+    "ignored": 0
+  },
+  "compile_rejections": 4,
+  "checks": {
+    "repository-tests": 0,
+    "native-tests": 0,
+    "fmt": 0,
+    "commit-policy-tests": 0,
+    "doc-tests": 0,
+    "repository-check": 0,
+    "invariant-check": 0,
+    "catalog-check": 0
+  },
+  "manager": "PASS",
+  "actual_pid_reuse_fixture": "PASS",
+  "library_stages": 32,
+  "resident": "PASS",
+  "resource": "PASS",
+  "retained_initial_manager_passage": "FAIL sequential namespace reused inodes; never counted as complete acceptance",
+  "namespace_replacement": "PERMANENTLY_UNVERIFIABLE_BY_THIS_PROVIDER",
+  "pre_f9_missing_identity": "PERMANENT_NO_BACKFILL",
+  "source_sha": "f3a7d08c53f71d481a9a06ecbe9597cf2e9e1274",
+  "protected_files": 159,
+  "changed": [],
+  "production_binaries": [
+    "runtime/rx-supervisor/src/bin/rx-solutionsd.rs"
+  ],
+  "linux_workspace_ci": {
+    "passed": 391,
+    "failed": 0,
+    "ignored": 20,
+    "run": 35944730637,
+    "source_sha": "f3a7d08c53f71d481a9a06ecbe9597cf2e9e1274"
+  },
+  "source_merge_first_attempt": {
+    "run": 35945013197,
+    "result": "FAIL",
+    "test": "rx-host::preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup",
+    "observed": "writer lock unavailable",
+    "rx_host_source_changed": false
+  },
+  "source_merge_rerun": {
+    "run": 35945013197,
+    "attempt": 2,
+    "sha": "50be6058be8bc7e60b1c44733014f7f9c7c1d087",
+    "passed": 391,
+    "failed": 0,
+    "ignored": 20
+  }
+}

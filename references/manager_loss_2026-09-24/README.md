@@ -40,4 +40,6 @@ The observer is a test fixture, not an added product daemon. No image was publis
 
 Strings, deserialized ProcessInvestigation, stored legacy references converted to proof, and caller-supplied fingerprints cannot compile into live evidence. The stored journal and OS remain trusted: this does not cryptographically authenticate truth against malicious DB/OS authors. Pre-F9 records without birth identity cannot be backfilled.
 
+[The first source-merge CI attempt](retained-host-lock-failure.txt) failed an unchanged rx-host maintenance test at service.rs:715 with `another process owns this Host runtime`. The exact contribution CI had passed it; no rx-host source changed. This is retained as an intermittent lock observation, not evidence of a diagnosed cause, and no lock rule, timeout or assertion was weakened. [The same merge commit rerun](linux-merge-ci-rerun.txt) passed 391/0/20 before document merge ([run 35945013197, attempt 2](https://github.com/jack0682/rx-solutions/actions/runs/35945013197)). This does not diagnose or fix the earlier intermittent Host lock condition.
+
 Only local path prefixes are normalized to `<workspace>`/`<user-home>`; substantive outputs are preserved. Full raw local logs and DBs remain retained; spent regenerable build folders are separate.

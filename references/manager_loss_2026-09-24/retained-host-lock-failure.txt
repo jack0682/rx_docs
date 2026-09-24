@@ -1,0 +1,537 @@
+Rust	Test Rust workspace	﻿2026-09-24T01:57:01.7474466Z ##[group]Run cargo test --workspace --all-features --locked
+Rust	Test Rust workspace	2026-09-24T01:57:01.7474734Z ^[[36;1mcargo test --workspace --all-features --locked^[[0m
+Rust	Test Rust workspace	2026-09-24T01:57:01.7525139Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Rust	Test Rust workspace	2026-09-24T01:57:01.7525337Z env:
+Rust	Test Rust workspace	2026-09-24T01:57:01.7525448Z   CARGO_TERM_COLOR: always
+Rust	Test Rust workspace	2026-09-24T01:57:01.7525570Z   RUST_BACKTRACE: 1
+Rust	Test Rust workspace	2026-09-24T01:57:01.7525685Z ##[endgroup]
+Rust	Test Rust workspace	2026-09-24T01:57:01.9393849Z ^[[1m^[[92m   Compiling^[[0m rx-domain v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/sdk/crates/rx-domain)
+Rust	Test Rust workspace	2026-09-24T01:57:01.9431924Z ^[[1m^[[92m   Compiling^[[0m rx-protocol v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/sdk/crates/rx-protocol)
+Rust	Test Rust workspace	2026-09-24T01:57:01.9433897Z ^[[1m^[[92m   Compiling^[[0m rx-melsec-mc v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/drivers/rx-melsec-mc)
+Rust	Test Rust workspace	2026-09-24T01:57:01.9434459Z ^[[1m^[[92m   Compiling^[[0m rx-host v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/runtime/rx-host)
+Rust	Test Rust workspace	2026-09-24T01:57:02.2924517Z ^[[1m^[[92m   Compiling^[[0m rx-package v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/sdk/crates/rx-package)
+Rust	Test Rust workspace	2026-09-24T01:57:02.3405589Z ^[[1m^[[92m   Compiling^[[0m rx-ports v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/sdk/crates/rx-ports)
+Rust	Test Rust workspace	2026-09-24T01:57:02.4793684Z ^[[1m^[[92m   Compiling^[[0m rx-service-status v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/runtime/rx-service-status)
+Rust	Test Rust workspace	2026-09-24T01:57:02.4795887Z ^[[1m^[[92m   Compiling^[[0m rx-process-contract v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/sdk/crates/rx-process-contract)
+Rust	Test Rust workspace	2026-09-24T01:57:02.6472297Z ^[[1m^[[92m   Compiling^[[0m rx-storage v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/sdk/crates/rx-storage)
+Rust	Test Rust workspace	2026-09-24T01:57:02.7623754Z ^[[1m^[[92m   Compiling^[[0m rx-solution-catalog v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/runtime/rx-solution-catalog)
+Rust	Test Rust workspace	2026-09-24T01:57:02.9357037Z ^[[1m^[[92m   Compiling^[[0m rx-process v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/runtime/rx-process)
+Rust	Test Rust workspace	2026-09-24T01:57:03.1454377Z ^[[1m^[[92m   Compiling^[[0m rx-supervisor v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/runtime/rx-supervisor)
+Rust	Test Rust workspace	2026-09-24T01:57:03.1951359Z ^[[1m^[[92m   Compiling^[[0m rx-process-package v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/runtime/rx-process-package)
+Rust	Test Rust workspace	2026-09-24T01:57:04.2743215Z ^[[1m^[[92m   Compiling^[[0m rx-executor v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/runtime/rx-executor)
+Rust	Test Rust workspace	2026-09-24T01:57:04.8610750Z ^[[1m^[[92m   Compiling^[[0m rx-device-package v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/runtime/rx-device-package)
+Rust	Test Rust workspace	2026-09-24T01:57:45.3725066Z ^[[1m^[[92m    Finished^[[0m `test` profile [unoptimized + debuginfo] target(s) in 43.55s
+Rust	Test Rust workspace	2026-09-24T01:57:45.4223244Z ^[[1m^[[92m     Running^[[0m unittests src/lib.rs (target/debug/deps/rx_device_package-672da030c1299ccd)
+Rust	Test Rust workspace	2026-09-24T01:57:45.4234068Z 
+Rust	Test Rust workspace	2026-09-24T01:57:45.4234197Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T01:57:45.4234324Z 
+Rust	Test Rust workspace	2026-09-24T01:57:45.4234495Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T01:57:45.4234727Z 
+Rust	Test Rust workspace	2026-09-24T01:57:45.4237356Z ^[[1m^[[92m     Running^[[0m unittests src/bin/rx-device-package.rs (target/debug/deps/rx_device_package-60323d20bf85a4b3)
+Rust	Test Rust workspace	2026-09-24T01:57:45.4244147Z 
+Rust	Test Rust workspace	2026-09-24T01:57:45.4244234Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T01:57:45.4244485Z 
+Rust	Test Rust workspace	2026-09-24T01:57:45.4244878Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T01:57:45.4245214Z 
+Rust	Test Rust workspace	2026-09-24T01:57:45.4246430Z ^[[1m^[[92m     Running^[[0m tests/authoring.rs (target/debug/deps/authoring-fa93ac26528e8a57)
+Rust	Test Rust workspace	2026-09-24T01:57:45.4255985Z 
+Rust	Test Rust workspace	2026-09-24T01:57:45.4256079Z running 9 tests
+Rust	Test Rust workspace	2026-09-24T01:57:45.4259509Z test export_image_fixture ... ignored, exports explicitly simulated, unsigned inputs and public test policy for container verification
+Rust	Test Rust workspace	2026-09-24T01:57:45.4296582Z test one_template_resolves_two_sites_without_editing_the_shared_semantics ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:45.4331765Z test semantically_unordered_inputs_produce_the_same_signing_message ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:45.4332801Z test sign_image_request ... ignored, signs only with an embedded test key for isolated container verification
+Rust	Test Rust workspace	2026-09-24T01:57:45.4429778Z test signed_but_inconsistent_assembly_cannot_pass_the_host_resolver ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:45.4439256Z test template_hash_missing_extra_and_alias_bindings_are_rejected ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:45.5073206Z test candidate_changes_permissions_keys_and_missing_assets_do_not_bypass_verification ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:45.5842965Z test candidate_roundtrip_external_signature_and_host_decoding_preserve_signed_provenance ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:45.6039992Z test cli_assembles_requests_external_signature_seals_and_verifies_without_network ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:45.6040332Z 
+Rust	Test Rust workspace	2026-09-24T01:57:45.6040541Z test result: ok. 7 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.18s
+Rust	Test Rust workspace	2026-09-24T01:57:45.6040811Z 
+Rust	Test Rust workspace	2026-09-24T01:57:45.6044702Z ^[[1m^[[92m     Running^[[0m tests/jtc_authoring.rs (target/debug/deps/jtc_authoring-5eca697705b40944)
+Rust	Test Rust workspace	2026-09-24T01:57:45.6058914Z 
+Rust	Test Rust workspace	2026-09-24T01:57:45.6059007Z running 14 tests
+Rust	Test Rust workspace	2026-09-24T01:57:45.6064222Z test export_device_review_authority ... ignored, exports a public device verifier trust fixture, never a production key
+Rust	Test Rust workspace	2026-09-24T01:57:45.6065128Z test export_image_fixture ... ignored, exports only SIMULATION inputs and a public test policy for the image authoring test
+Rust	Test Rust workspace	2026-09-24T01:57:45.7068708Z test device_software_report_uses_real_decoder_and_cannot_claim_physical_validation ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:45.9983532Z test actual_cli_generates_a_report_and_a_separate_signing_request ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:46.0133349Z test missing_alias_or_foreign_bindings_and_invalid_trajectory_are_rejected ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:46.0134028Z test sign_device_report ... ignored, external test-only device report signer for real API integration
+Rust	Test Rust workspace	2026-09-24T01:57:46.0134591Z test sign_image_request ... ignored, test-only external signer for the isolated image fixture
+Rust	Test Rust workspace	2026-09-24T01:57:46.1119519Z test signed_but_inconsistent_results_actions_model_and_release_are_rejected ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:46.1157993Z test simulation_catalog_cannot_be_promoted_to_a_physical_site ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:46.5483545Z test host_package_checks_assets_and_exact_intents_but_cannot_create_control_authority ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:46.5702891Z test template_reuse_and_candidate_roundtrip_preserve_bound_actions_and_result_meanings ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:46.6443712Z test unordered_template_actions_have_one_digest_and_joint_order_is_preserved ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:46.6444319Z test actual_cli_assembles_requests_external_signature_seals_and_inspects_jtc ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:46.7671740Z test host_initializes_jtc_metadata_and_refuses_run_before_creating_a_controller_client ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:46.7671998Z 
+Rust	Test Rust workspace	2026-09-24T01:57:46.7672138Z test result: ok. 10 passed; 0 failed; 4 ignored; 0 measured; 0 filtered out; finished in 1.16s
+Rust	Test Rust workspace	2026-09-24T01:57:46.7672320Z 
+Rust	Test Rust workspace	2026-09-24T01:57:46.7680562Z ^[[1m^[[92m     Running^[[0m unittests src/lib.rs (target/debug/deps/rx_executor-40450a0fa06765ec)
+Rust	Test Rust workspace	2026-09-24T01:57:46.7697823Z 
+Rust	Test Rust workspace	2026-09-24T01:57:46.7697916Z running 40 tests
+Rust	Test Rust workspace	2026-09-24T01:57:46.7786250Z test cell_service::tests::discovery_does_not_hide_old_owner_expired_attempt_or_restricted_work ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:46.7786838Z test cell_service::tests::historical_session_runtime_and_paused_attachment_cannot_resume ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:46.7787192Z test cell_service::tests::completion_requires_structured_cleanup_exact_stop_and_actual_completed_state ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:46.7787595Z test cell_service::tests::none_and_arming_are_observation_only_and_ambiguity_has_no_winner ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:46.7788012Z test cell_service::tests::observation_shutdown_preserves_preparing_attached_and_known_arming_as_attention ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:47.0241752Z test cell_service::tests::actual_production_cut_must_revalidate_discovery_before_any_reservation ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:47.0251230Z test client::assignment::tests::accepted_read_expires_or_loses_currency_when_the_trusted_clock_changes ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:47.0264323Z test client::assignment::tests::assignment_shares_runtime_sequence_and_time_regression_guards ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:47.0352872Z test client::assignment::tests::cardinalities_retain_old_sessions_expired_attempts_and_restricted_work ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:47.0363689Z test client::assignment::tests::expired_response_does_not_advance_the_shared_cut ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:47.0432962Z test client::assignment::tests::forged_cut_cardinality_and_duplicate_witnesses_fail_closed ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:47.0434131Z test client::assignment::tests::forged_identity_is_rejected_even_with_a_matching_payload_hash ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:47.0463396Z test client::assignment::tests::payload_digest_size_schema_and_strict_json_are_independent_checks ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:47.0481669Z test client::assignment::tests::ttl_and_clock_interval_are_checked_before_accepting_a_view ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:47.0482818Z test client::tests::artifact_hash_does_not_replace_size_schema_or_typed_payload_validation ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:47.0483892Z test clock::tests::linux_clock_uses_the_shared_boot_identity_and_non_decreasing_boottime ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:47.0484806Z test engine_process::tests::verified_product_binary_uses_live_linux_clock_and_preserves_one_process ... ignored, Linux validation image supplies RX_BT_ENGINE_BINARY
+Rust	Test Rust workspace	2026-09-24T01:57:47.0493399Z test frame::tests::a_new_epoch_is_not_implicitly_adopted_by_an_existing_context ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:47.0500913Z test frame::tests::restored_p_snapshot_preserves_work_and_does_not_restore_admission ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:47.0508831Z test frame::tests::source_clock_expiry_blocks_a_view_even_if_the_local_steady_deadline_has_not_passed ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:47.4945430Z test journal::recovery::wal::tests::absent_empty_header_only_and_complete_commits_are_distinct_valid_shapes ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:47.4946126Z test journal::recovery::wal::tests::checksum_word_order_and_accumulation_have_independent_known_values ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:47.9015502Z test journal::recovery::wal::tests::header_fields_and_header_checksum_cannot_silently_drop_the_wal ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:48.2043668Z test journal::recovery::wal::tests::invalid_page_numbers_commit_sizes_and_oversize_files_fail_before_unbounded_reads ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:48.2217382Z test cell_service::tests::missing_file_after_creation_entered_never_becomes_fresh_initialization ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:48.2243665Z test pending::tests::full_queue_and_inflight_normal_work_do_not_block_pause_and_meaning_cannot_change ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:48.2244499Z test pending::tests::wait_start_does_not_drop_the_only_bt_request_and_due_requests_are_fair ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:48.2246928Z test service::tests::cancelled_serial_retirement_cannot_become_confirmation_for_an_empty_engine_slot ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:48.2248527Z test service::tests::cleanup_confirmation_distinguishes_no_spawn_and_local_close_from_uncertainty ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:48.2249325Z test service::tests::each_serial_planner_requires_its_own_confirmed_cleanup ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:48.2250323Z test service::tests::failed_close_is_sticky_after_a_later_successful_cleanup ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:48.2254702Z test service::tests::production_expiry::expired_waiting_cannot_republish_an_old_admission_flag ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:48.3005507Z test journal::recovery::wal::tests::page_data_checksums_salts_partial_and_uncommitted_tails_are_rejected ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:48.3006249Z test service::tests::spawn_attempts_are_uncertain_until_cleanup_and_failures_remain_latched ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:48.3323153Z test service_owner::tests::explicit_release_does_not_wait_for_an_inherited_open_file_description ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:48.3324152Z test worker::production::tests::serial_selection_preserves_zero_or_one_active_part_without_rewriting_completed_parts ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:48.3329414Z test worker::production::tests::valid_platform_views_with_multiple_active_parts_require_serial_attention ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:48.3990812Z test cell_service::tests::preparing_recovery_keeps_original_ids_and_cannot_switch_to_new_candidate ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:48.5593711Z test cell_service::tests::closing_a_preserves_its_stop_and_frees_only_the_next_attachment ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:48.7063273Z test service::tests::production_expiry::journal_observation_expiry_retries_completed_read_instead_of_stopping_context ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:48.7063746Z 
+Rust	Test Rust workspace	2026-09-24T01:57:48.7063963Z test result: ok. 39 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 1.94s
+Rust	Test Rust workspace	2026-09-24T01:57:48.7064233Z 
+Rust	Test Rust workspace	2026-09-24T01:57:48.7069414Z ^[[1m^[[92m     Running^[[0m unittests tests/support/cell_service_fixture.rs (target/debug/deps/rx_executor_cell_service_fixture-977d98ddfb44802c)
+Rust	Test Rust workspace	2026-09-24T01:57:48.7079864Z 
+Rust	Test Rust workspace	2026-09-24T01:57:48.7080135Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T01:57:48.7080370Z 
+Rust	Test Rust workspace	2026-09-24T01:57:48.7080646Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T01:57:48.7080950Z 
+Rust	Test Rust workspace	2026-09-24T01:57:48.7082147Z ^[[1m^[[92m     Running^[[0m unittests tests/support/decision_fixture.rs (target/debug/deps/rx_executor_decision_fixture-68cc80e77f3a2492)
+Rust	Test Rust workspace	2026-09-24T01:57:48.7089482Z 
+Rust	Test Rust workspace	2026-09-24T01:57:48.7089636Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T01:57:48.7089765Z 
+Rust	Test Rust workspace	2026-09-24T01:57:48.7089995Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T01:57:48.7090285Z 
+Rust	Test Rust workspace	2026-09-24T01:57:48.7092321Z ^[[1m^[[92m     Running^[[0m unittests tests/support/read_fixture.rs (target/debug/deps/rx_executor_read_fixture-96c7d510f64fff49)
+Rust	Test Rust workspace	2026-09-24T01:57:48.7098821Z 
+Rust	Test Rust workspace	2026-09-24T01:57:48.7098965Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T01:57:48.7099091Z 
+Rust	Test Rust workspace	2026-09-24T01:57:48.7099293Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T01:57:48.7099581Z 
+Rust	Test Rust workspace	2026-09-24T01:57:48.7101114Z ^[[1m^[[92m     Running^[[0m unittests src/bin/service.rs (target/debug/deps/rx_executor_service-85b9efdfabdfc703)
+Rust	Test Rust workspace	2026-09-24T01:57:48.7109514Z 
+Rust	Test Rust workspace	2026-09-24T01:57:48.7109604Z running 4 tests
+Rust	Test Rust workspace	2026-09-24T01:57:48.7112542Z test cell_cli::guarded_tests::executor_final_state_preserves_attention_and_rejects_incomplete_stop ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:48.7117815Z test cell_cli::guarded_tests::completed_run_retirement_keeps_the_resident_executor_protocol_ready ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:48.7118546Z test cell_cli::guarded_tests::live_executor_status_never_claims_terminal_cleanup_or_p_admission ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:48.7665965Z test cell_cli::guarded_tests::executor_report_failure_signals_existing_cooperative_shutdown ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:48.7666292Z 
+Rust	Test Rust workspace	2026-09-24T01:57:48.7666446Z test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+Rust	Test Rust workspace	2026-09-24T01:57:48.7666650Z 
+Rust	Test Rust workspace	2026-09-24T01:57:48.7669953Z ^[[1m^[[92m     Running^[[0m unittests tests/support/service_fixture.rs (target/debug/deps/rx_executor_service_fixture-df73a17bc3811b4d)
+Rust	Test Rust workspace	2026-09-24T01:57:48.7682098Z 
+Rust	Test Rust workspace	2026-09-24T01:57:48.7682207Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T01:57:48.7682467Z 
+Rust	Test Rust workspace	2026-09-24T01:57:48.7682710Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T01:57:48.7683032Z 
+Rust	Test Rust workspace	2026-09-24T01:57:48.7684817Z ^[[1m^[[92m     Running^[[0m unittests tests/support/worker_fixture.rs (target/debug/deps/rx_executor_worker_fixture-dfb24df924cd94c7)
+Rust	Test Rust workspace	2026-09-24T01:57:48.7692896Z 
+Rust	Test Rust workspace	2026-09-24T01:57:48.7693036Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T01:57:48.7693194Z 
+Rust	Test Rust workspace	2026-09-24T01:57:48.7694898Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T01:57:48.7695615Z ^[[1m^[[92m     Running^[[0m tests/assignment_journal.rs (target/debug/deps/assignment_journal-9e5881b3da46e642)
+Rust	Test Rust workspace	2026-09-24T01:57:48.7695959Z 
+Rust	Test Rust workspace	2026-09-24T01:57:48.7706247Z 
+Rust	Test Rust workspace	2026-09-24T01:57:48.7706387Z running 21 tests
+Rust	Test Rust workspace	2026-09-24T01:57:50.6336575Z test attach_rollback_and_lost_reply_are_recovered_without_a_second_transition ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:51.6543558Z test a_crash_before_header_commit_leaves_an_error_instead_of_reinitializing_the_file ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:51.9516017Z test a_run_store_from_another_service_identity_cannot_be_attached ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:53.3265500Z test changed_scope_or_run_journal_identity_is_never_repaired ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:53.3318818Z test creation_marker_committed_before_filesystem_failure_forbids_later_retry ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:53.3343089Z test close_rollback_and_lost_reply_clear_current_atomically_and_preserve_stop_and_pending_requests ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:53.3406386Z test initialized_header_survives_a_lost_initialization_reply ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:53.3431210Z test completion_rejects_paused_recovery_abandoned_wrong_identity_and_incomplete_parts ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:53.3563207Z test creation_marker_rollback_permits_the_first_initialization_without_changing_phase ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:53.3611466Z test lost_creation_marker_reply_stops_before_file_reservation_and_survives_reopen ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:53.3692904Z test old_header_without_creation_history_is_not_silently_upgraded ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:53.3699516Z test malformed_current_pointer_fails_required_open_instead_of_hiding_the_attached_run ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:53.3777625Z test lost_run_initialization_reply_recovers_binding_without_reinitializing ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:53.3932130Z test preparing_rollback_and_lost_reply_preserve_exact_reservation_and_single_current ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:53.4900237Z test required_open_never_initializes_missing_empty_or_foreign_service_metadata ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:53.4988021Z test preparing_cannot_close_and_closed_history_cannot_rebind_the_same_run ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:53.5007383Z test required_run_file_does_not_follow_symlinks ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:53.5054275Z test preparing_missing_run_is_explicit_but_partial_or_attached_missing_run_is_an_error ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:53.5056568Z test initialized_preparing_run_file_loss_never_reuses_either_initializer ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:53.5169529Z test run_creation_marker_cannot_change_after_header_initialization ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:53.5189872Z test unbound_legacy_journal_is_not_adopted_or_modified ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:53.5190101Z 
+Rust	Test Rust workspace	2026-09-24T01:57:53.5190321Z test result: ok. 21 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.75s
+Rust	Test Rust workspace	2026-09-24T01:57:53.5190598Z 
+Rust	Test Rust workspace	2026-09-24T01:57:53.5195192Z ^[[1m^[[92m     Running^[[0m tests/cell_cli.rs (target/debug/deps/cell_cli-71747f592fcc9bcc)
+Rust	Test Rust workspace	2026-09-24T01:57:53.5206690Z 
+Rust	Test Rust workspace	2026-09-24T01:57:53.5206851Z running 15 tests
+Rust	Test Rust workspace	2026-09-24T01:57:53.6064284Z test changed_configuration_and_pinned_bytes_cannot_reach_session_open ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:53.7154601Z test cell_configuration_rejects_run_visit_program_arguments_and_invalid_timing ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:53.7371387Z test copied_installation_cannot_silently_change_its_root ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:53.7585172Z test deployment_file_symlinks_and_private_key_permissions_are_rejected ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:53.8005845Z test duplicate_and_root_alias_are_refused_before_session_open_then_cleanup_allows_reopen ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:53.8320757Z test guarded_status_validation_fails_before_executor_peer_registration ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:53.8854870Z test init_pins_expected_identity_and_normalized_defaults_without_peer_registration ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:53.9774105Z test initialized_preparing_or_attached_run_file_loss_is_detected_before_new_peer_boot_registration ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:54.0085849Z test manifest_only_partial_installation_is_not_overwritten_or_connected ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:54.1652985Z test missing_manifest_empty_journal_and_changed_header_are_refused_before_connect ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:54.5045314Z test recovery_inspect_does_not_compete_with_service_or_store_owner ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:54.5390230Z test recovery_inspect_initialized_idle_store_is_deterministic_and_does_not_connect_or_modify_files ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:54.7646467Z test recovery_inspect_missing_or_corrupt_required_files_never_repairs_them ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:54.7751233Z test recovery_inspect_missing_root_does_not_initialize_a_service_or_connect ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:54.9528205Z test recovery_inspect_rejects_alias_root_and_changed_deployment_scope ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:54.9528762Z 
+Rust	Test Rust workspace	2026-09-24T01:57:54.9528955Z test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.43s
+Rust	Test Rust workspace	2026-09-24T01:57:54.9529140Z 
+Rust	Test Rust workspace	2026-09-24T01:57:54.9532144Z ^[[1m^[[92m     Running^[[0m tests/journal.rs (target/debug/deps/journal-d79c18c01338d856)
+Rust	Test Rust workspace	2026-09-24T01:57:54.9541167Z 
+Rust	Test Rust workspace	2026-09-24T01:57:54.9541246Z running 9 tests
+Rust	Test Rust workspace	2026-09-24T01:57:54.9706291Z test p_observation_preserves_network_uncertainty_and_deduplicates_unchanged_identity ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:54.9710268Z test only_a_confirmed_transactional_rejection_allows_new_cas_and_key ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:54.9767363Z test material_identity_is_observed_without_rewriting_a_lost_begin_reply ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:54.9798062Z test checkpoint_expiry_preserves_old_attempt_and_pending_projection_is_not_an_rpc_reply ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:54.9840933Z test pause_intent_is_scoped_to_executor_session_and_epoch_without_changing_operation_keys ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:54.9901462Z test prepared_entered_and_reply_boundaries_survive_rollback_and_lost_commit_response ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:54.9916493Z test stop_attempt_key_is_preserved_and_p_observation_does_not_invent_a_reply ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:55.0295987Z test reconciliation_acknowledgment_is_not_a_resource_release_observation ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:55.0333106Z test stop_intent_survives_commit_response_loss_and_never_becomes_a_part_request ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:55.0333395Z 
+Rust	Test Rust workspace	2026-09-24T01:57:55.0333538Z test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+Rust	Test Rust workspace	2026-09-24T01:57:55.0333718Z 
+Rust	Test Rust workspace	2026-09-24T01:57:55.0338033Z ^[[1m^[[92m     Running^[[0m tests/recovery_inspect.rs (target/debug/deps/recovery_inspect-236b156d35cc0801)
+Rust	Test Rust workspace	2026-09-24T01:57:55.0349902Z 
+Rust	Test Rust workspace	2026-09-24T01:57:55.0350041Z running 5 tests
+Rust	Test Rust workspace	2026-09-24T01:57:55.1189786Z test owner_conflict_symlink_parent_and_size_limit_fail_without_source_writes ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:55.2462684Z test missing_header_wrong_identity_and_missing_writer_lock_are_never_initialized ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:55.2507686Z test preparing_never_initializes_or_attaches_and_creation_loss_is_rejected ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:55.2645733Z test current_pending_stop_is_inspected_twice_without_source_change_or_resolution ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:55.2871928Z test crash_style_wal_copy_is_included_without_touching_the_retained_source ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:55.2872225Z 
+Rust	Test Rust workspace	2026-09-24T01:57:55.2872564Z test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.25s
+Rust	Test Rust workspace	2026-09-24T01:57:55.2872842Z 
+Rust	Test Rust workspace	2026-09-24T01:57:55.2876584Z ^[[1m^[[92m     Running^[[0m tests/recovery_wal_corruption.rs (target/debug/deps/recovery_wal_corruption-c927d19fd83cce36)
+Rust	Test Rust workspace	2026-09-24T01:57:55.2888255Z 
+Rust	Test Rust workspace	2026-09-24T01:57:55.2888351Z running 2 tests
+Rust	Test Rust workspace	2026-09-24T01:57:55.5192981Z test invalid_assignment_wal_header_cannot_hide_committed_attachment_and_pending_requests ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:55.5444882Z test stale_committed_shm_cannot_hide_later_complete_wal_commits_or_change_the_original_copy ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:55.5445194Z 
+Rust	Test Rust workspace	2026-09-24T01:57:55.5445365Z test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.26s
+Rust	Test Rust workspace	2026-09-24T01:57:55.5445542Z 
+Rust	Test Rust workspace	2026-09-24T01:57:55.5449347Z ^[[1m^[[92m     Running^[[0m tests/service_owner.rs (target/debug/deps/service_owner-3b90606ac07fc14f)
+Rust	Test Rust workspace	2026-09-24T01:57:55.5459565Z 
+Rust	Test Rust workspace	2026-09-24T01:57:55.5459641Z running 8 tests
+Rust	Test Rust workspace	2026-09-24T01:57:55.5465209Z test invalid_journal_path_cannot_overwrite_the_ownership_file ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:55.5465759Z test directory_alias_cannot_bypass_the_service_owner ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:55.5466380Z test different_service_roots_do_not_impose_a_global_cell_owner ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:55.5469625Z test one_root_cannot_register_two_services_with_different_run_journals ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:55.5469990Z test ownership_symlink_is_rejected_without_touching_its_target ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:55.5472568Z test startup_failure_releases_ownership_without_removing_the_lock_file ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:55.5486991Z test ownership_special_files_are_rejected ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:55.5776027Z test entrypoint::competing_product_process_never_reaches_connect_and_failure_unlocks_root ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:55.5776313Z 
+Rust	Test Rust workspace	2026-09-24T01:57:55.5776453Z test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+Rust	Test Rust workspace	2026-09-24T01:57:55.5776655Z 
+Rust	Test Rust workspace	2026-09-24T01:57:55.5778415Z ^[[1m^[[92m     Running^[[0m unittests src/lib.rs (target/debug/deps/rx_host-f91524cec54a1edc)
+Rust	Test Rust workspace	2026-09-24T01:57:55.5790361Z 
+Rust	Test Rust workspace	2026-09-24T01:57:55.5790446Z running 5 tests
+Rust	Test Rust workspace	2026-09-24T01:57:55.5797624Z test service::guarded_tests::guarded_host_stopped_requires_final_adapter_proof_and_closed_admission ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:55.5798593Z test publication::tests::local_idle_ticks_do_not_extend_the_one_second_remote_probe_deadline ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:55.6611150Z test service::guarded_tests::host_report_failure_requests_stop_and_cannot_become_stopped_later ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:55.6818045Z test publication::tests::idle_remote_probe_detects_expired_session_without_new_evidence_or_native_effects ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.1618176Z test service::guarded_tests::unchanged_host_status_heartbeats_and_stays_terminal_after_finish ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.1618477Z 
+Rust	Test Rust workspace	2026-09-24T01:57:56.1618655Z test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.58s
+Rust	Test Rust workspace	2026-09-24T01:57:56.1618849Z 
+Rust	Test Rust workspace	2026-09-24T01:57:56.1625760Z ^[[1m^[[92m     Running^[[0m unittests tests/support/crash_harness.rs (target/debug/deps/rx_host_crash_fixture-9fdb37aa338401c1)
+Rust	Test Rust workspace	2026-09-24T01:57:56.1635861Z 
+Rust	Test Rust workspace	2026-09-24T01:57:56.1635951Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T01:57:56.1636135Z 
+Rust	Test Rust workspace	2026-09-24T01:57:56.1636441Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T01:57:56.1636738Z 
+Rust	Test Rust workspace	2026-09-24T01:57:56.1638124Z ^[[1m^[[92m     Running^[[0m unittests tests/support/recovery_native_fixture.rs (target/debug/deps/rx_host_recovery_fixture-9b97862bb22097cf)
+Rust	Test Rust workspace	2026-09-24T01:57:56.1645008Z 
+Rust	Test Rust workspace	2026-09-24T01:57:56.1645089Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T01:57:56.1645255Z 
+Rust	Test Rust workspace	2026-09-24T01:57:56.1645614Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T01:57:56.1645911Z 
+Rust	Test Rust workspace	2026-09-24T01:57:56.1647141Z ^[[1m^[[92m     Running^[[0m unittests tests/support/sim_server.rs (target/debug/deps/rx_host_sim_server-9738e97a18da66aa)
+Rust	Test Rust workspace	2026-09-24T01:57:56.1654451Z 
+Rust	Test Rust workspace	2026-09-24T01:57:56.1654534Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T01:57:56.1654666Z 
+Rust	Test Rust workspace	2026-09-24T01:57:56.1654960Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T01:57:56.1655224Z 
+Rust	Test Rust workspace	2026-09-24T01:57:56.1656493Z ^[[1m^[[92m     Running^[[0m unittests src/bin/rx-hostd.rs (target/debug/deps/rx_hostd-9a39f2a768f9513c)
+Rust	Test Rust workspace	2026-09-24T01:57:56.1663627Z 
+Rust	Test Rust workspace	2026-09-24T01:57:56.1663802Z running 0 tests
+Rust	Test Rust workspace	2026-09-24T01:57:56.1663937Z 
+Rust	Test Rust workspace	2026-09-24T01:57:56.1664091Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+Rust	Test Rust workspace	2026-09-24T01:57:56.1664274Z 
+Rust	Test Rust workspace	2026-09-24T01:57:56.1665661Z ^[[1m^[[92m     Running^[[0m tests/gate.rs (target/debug/deps/gate-b3923ec06af150a3)
+Rust	Test Rust workspace	2026-09-24T01:57:56.1674392Z 
+Rust	Test Rust workspace	2026-09-24T01:57:56.1674469Z running 30 tests
+Rust	Test Rust workspace	2026-09-24T01:57:56.3893020Z test configuration_commit_failure_has_no_receipt_context_or_consumed_slot ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.3899449Z test cancellation_arriving_before_prepare_creates_permanent_tombstone ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.3906413Z test altered_permit_and_unapproved_intent_are_rejected_before_effect ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.3963931Z test configuration_cohort_is_complete_and_a_rejected_member_prevents_all_context_changes ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.4105715Z test configuration_rejects_an_old_quiescence_observation ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.4109561Z test configuration_missing_quiescence_does_not_create_applied_context ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.4125555Z test configuration_does_not_treat_prepared_native_work_as_quiescent ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.4164027Z test configuration_context_is_durable_unqualified_and_same_request_never_reapplies ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.4257690Z test configuration_scope_binding_and_fence_are_not_caller_success_claims ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.4806543Z test expiry_during_commit_does_not_enter_native_and_is_not_retried ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.4809235Z test late_fence_replay_cannot_remove_a_new_arm_or_rewind_epoch ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.4950962Z test evidence_publication_cursor_is_durable_scoped_and_never_accepts_a_foreign_ack ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.6423987Z test native_submission_serializes_fence_while_protection_is_independent ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.6443506Z test prepared_rebind_retires_old_permit_permanently ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.6443876Z test prepare_does_not_call_device_and_authorize_duplicates_are_receipt_lookup ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.6711428Z test qualification_tests::qualification_commit_failure_rolls_back_cohort_receipt_and_slot ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.6719002Z test qualification_tests::qualification_full_cohort_is_atomic_and_a_wrong_member_cannot_be_accepted ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.6788318Z test qualification_tests::qualification_arm_rejects_partial_clearance_and_any_changed_cohort_member ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.6876915Z test qualification_tests::qualification_acceptance_preserves_blocks_requires_explicit_arm_and_rejects_old_qualification ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.7047794Z test qualification_tests::qualification_restart_keeps_receipt_and_never_restores_applicability_or_arm ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.7210486Z test qualification_tests::qualification_identity_cannot_be_reused_for_different_evidence_and_empty_scope_grants_no_operations ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.7230083Z test qualification_tests::qualification_revalidation_does_not_hide_prepared_native_work ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.7315184Z test same_grant_fence_requires_same_request_identity ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.7339520Z test renewal_replay_does_not_extend_expiry_and_expired_grant_stays_expired ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.9347451Z test qualification_tests::qualification_same_key_same_review_and_changed_scope_cannot_replace_accepted_identity ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.9349607Z test simulated_device_has_an_independent_exclusive_owner ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.9398728Z test service_stop_latches_before_database_access_and_preserves_uncertain_work ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.9418099Z test service_stop_latch_interrupts_the_pre_native_boundary_without_waiting_for_gate_lock ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:56.9440890Z test stable_handover_is_not_permission_to_drop_an_adapter ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:57.0064667Z test qualification_tests::qualification_requires_supported_fresh_local_quiescence ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:57.0065006Z 
+Rust	Test Rust workspace	2026-09-24T01:57:57.0065153Z test result: ok. 30 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.84s
+Rust	Test Rust workspace	2026-09-24T01:57:57.0065337Z 
+Rust	Test Rust workspace	2026-09-24T01:57:57.0069166Z ^[[1m^[[92m     Running^[[0m tests/guarded_status.rs (target/debug/deps/guarded_status-a40fa49ecdbfdbc0)
+Rust	Test Rust workspace	2026-09-24T01:57:57.0085215Z 
+Rust	Test Rust workspace	2026-09-24T01:57:57.0085308Z running 3 tests
+Rust	Test Rust workspace	2026-09-24T01:57:57.0089815Z test held_adapter_startup_status_failure_fixture ... ignored, isolated environment fixture invoked by the bounded parent test
+Rust	Test Rust workspace	2026-09-24T01:57:57.1937546Z test invalid_guarded_writer_fails_before_passive_native_open_or_rpc_admission ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:58.8837137Z test reporter_failure_after_native_open_waits_for_explicit_adapter_drop_permission ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:58.8845408Z 
+Rust	Test Rust workspace	2026-09-24T01:57:58.8845564Z test result: ok. 2 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 1.88s
+Rust	Test Rust workspace	2026-09-24T01:57:58.8845752Z 
+Rust	Test Rust workspace	2026-09-24T01:57:58.8846139Z ^[[1m^[[92m     Running^[[0m tests/melsec.rs (target/debug/deps/melsec-f5ad7d75eec2aa12)
+Rust	Test Rust workspace	2026-09-24T01:57:58.8853907Z 
+Rust	Test Rust workspace	2026-09-24T01:57:58.8853980Z running 15 tests
+Rust	Test Rust workspace	2026-09-24T01:57:59.1143894Z test abrupt_exit_at_native_commit_and_write_boundaries_never_replays ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:59.1305256Z test ack_is_pending_and_only_later_independent_sensor_observation_captures ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:59.1598933Z test actual_host_gate_journal_reconcile_evidence_and_stop_use_melsec_adapter ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:59.1728549Z test already_satisfied_state_records_evidence_without_a_native_write ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:59.2041158Z test captured_original_session_survives_restart_but_uncaptured_ack_does_not ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:59.2192938Z test corrupted_completion_record_is_not_adopted_as_historical_fact ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:59.2312295Z test final_native_read_after_journal_commit_rechecks_ready_without_resend ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:59.2312915Z test melsec_crash_child ... ignored, executed only as an isolated child by the crash-boundary test
+Rust	Test Rust workspace	2026-09-24T01:57:59.2579141Z test final_read_within_transport_budget_but_beyond_guard_lifetime_cannot_write ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:59.2731010Z test linux_real_boottime_adapter_observation_write_completion_and_drop ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:59.2903945Z test lost_reply_and_new_process_never_resubmit_or_clear_pending ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:59.3086215Z test new_or_replaced_journal_and_mismatched_profile_are_rejected_without_native_io ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:59.3173459Z test profile_and_intent_scope_fail_before_native_writes ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:59.3519174Z test publication_generation_regression_stale_and_inconsistent_images_latch ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:59.4527060Z test valid_support_does_not_imply_drop_permission_and_protection_does_not_release_chuck ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:59.4527533Z 
+Rust	Test Rust workspace	2026-09-24T01:57:59.4527752Z test result: ok. 14 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.57s
+Rust	Test Rust workspace	2026-09-24T01:57:59.4528037Z 
+Rust	Test Rust workspace	2026-09-24T01:57:59.4531274Z ^[[1m^[[92m     Running^[[0m tests/melsec_service.rs (target/debug/deps/melsec_service-35892b3c5fa8f706)
+Rust	Test Rust workspace	2026-09-24T01:57:59.4547756Z 
+Rust	Test Rust workspace	2026-09-24T01:57:59.4547866Z running 7 tests
+Rust	Test Rust workspace	2026-09-24T01:57:59.4553716Z test export_melsec_image_fixture ... ignored, exports signed, test-only loopback configuration for the product image test
+Rust	Test Rust workspace	2026-09-24T01:57:59.5154929Z test physical_startup_qualification_id_does_not_authorize_arm ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:59.6030065Z test physical_metadata_requires_current_qualification_and_separate_arm_on_loopback ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:59.7390208Z test signature_content_policy_asset_release_and_binding_tampering_fail_before_initialization ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:59.8118707Z test signed_device_package_binds_release_profile_assets_and_exact_cell_without_io ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:59.8820015Z test product_composition_initializes_starts_and_stops_the_signed_melsec_package ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:59.9068351Z test validly_signed_wrong_release_controller_or_installation_is_rejected ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:59.9068652Z 
+Rust	Test Rust workspace	2026-09-24T01:57:59.9068859Z test result: ok. 6 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.45s
+Rust	Test Rust workspace	2026-09-24T01:57:59.9069123Z 
+Rust	Test Rust workspace	2026-09-24T01:57:59.9075894Z ^[[1m^[[92m     Running^[[0m tests/mtls.rs (target/debug/deps/mtls-1b441f63d7b4aa9c)
+Rust	Test Rust workspace	2026-09-24T01:57:59.9090882Z 
+Rust	Test Rust workspace	2026-09-24T01:57:59.9090952Z running 5 tests
+Rust	Test Rust workspace	2026-09-24T01:57:59.9496893Z test cell_manifest_and_session_are_mandatory_before_grant ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:59.9579969Z test concurrent_hello_retries_produce_one_usable_session ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:59.9622912Z test changed_content_under_rpc_key_is_rejected_and_legacy_dispatch_cannot_bypass_cell ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:59.9680624Z test valid_ca_without_registered_fingerprint_cannot_impersonate_platform ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:59.9705236Z test mtls_negotiation_prepare_authorize_and_evidence_roundtrip ... ok
+Rust	Test Rust workspace	2026-09-24T01:57:59.9705474Z 
+Rust	Test Rust workspace	2026-09-24T01:57:59.9705683Z test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+Rust	Test Rust workspace	2026-09-24T01:57:59.9705958Z 
+Rust	Test Rust workspace	2026-09-24T01:57:59.9716068Z ^[[1m^[[92m     Running^[[0m tests/process_crash.rs (target/debug/deps/process_crash-f6645b137554c429)
+Rust	Test Rust workspace	2026-09-24T01:57:59.9725937Z 
+Rust	Test Rust workspace	2026-09-24T01:57:59.9726020Z running 3 tests
+Rust	Test Rust workspace	2026-09-24T01:57:59.9998939Z test qualification_commit_survives_sigkill_before_reply_without_restoring_authority ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:00.0189503Z test configuration_commit_survives_sigkill_before_reply_without_restoring_arm ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:00.0356149Z test sigkill_at_both_journal_native_boundaries_never_replays_device_effect ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:00.0356741Z 
+Rust	Test Rust workspace	2026-09-24T01:58:00.0356963Z test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+Rust	Test Rust workspace	2026-09-24T01:58:00.0357266Z 
+Rust	Test Rust workspace	2026-09-24T01:58:00.0358485Z ^[[1m^[[92m     Running^[[0m tests/ros_jtc.rs (target/debug/deps/ros_jtc-6fe957f0bc1aa7cc)
+Rust	Test Rust workspace	2026-09-24T01:58:00.0368773Z 
+Rust	Test Rust workspace	2026-09-24T01:58:00.0368861Z running 12 tests
+Rust	Test Rust workspace	2026-09-24T01:58:00.0383344Z test actual_rust_host_to_cpp_bridge_to_ros_action_preserves_original_goal ... ignored, requires the isolated real ROS simulator and shipped bridge binary
+Rust	Test Rust workspace	2026-09-24T01:58:00.1684652Z test abrupt_exit_at_each_native_boundary_preserves_entry_and_never_replays ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:00.1685222Z test crash_jtc_child ... ignored, child-only abrupt-exit fixture
+Rust	Test Rust workspace	2026-09-24T01:58:00.1891442Z test action_completion_does_not_close_bridge_until_support_and_child_exit_are_proven ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:00.3235702Z test bound_jtc_outcome_table_interprets_native_captures_without_code_zero_fallback ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:00.3419385Z test contradictory_result_is_stored_without_success_capture ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:00.3710890Z test host_dispatch_context_survives_native_journal_and_rejects_expiry_or_generation_change ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:00.3945267Z test independent_generation_ownership_and_drop_proof_are_required ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:00.3977257Z test simulation_fixture_profile_cannot_claim_physical_equipment ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:00.4192662Z test journal_identity_loss_and_corrupt_capture_cannot_be_adopted ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:00.4338098Z test missing_authority_or_changed_artifact_never_dispatches ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:00.4935756Z test native_journal_prevents_resend_and_new_id_bypass_after_reply_loss_and_reopen ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:00.4936085Z 
+Rust	Test Rust workspace	2026-09-24T01:58:00.4936300Z test result: ok. 10 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.46s
+Rust	Test Rust workspace	2026-09-24T01:58:00.4936494Z 
+Rust	Test Rust workspace	2026-09-24T01:58:00.4940077Z ^[[1m^[[92m     Running^[[0m tests/ros_process.rs (target/debug/deps/ros_process-7b3e56bb2a0debb0)
+Rust	Test Rust workspace	2026-09-24T01:58:00.4950620Z 
+Rust	Test Rust workspace	2026-09-24T01:58:00.4950753Z running 3 tests
+Rust	Test Rust workspace	2026-09-24T01:58:00.4963602Z test executable_pin_and_configuration_are_checked_before_spawn ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:00.5941404Z test owned_executable_copy_and_bounded_pipes_preserve_context_and_close_without_kill ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:00.8541595Z test timeout_oversize_and_wrong_instance_permanently_fault_the_pipe ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:00.8541982Z 
+Rust	Test Rust workspace	2026-09-24T01:58:00.8542200Z test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.36s
+Rust	Test Rust workspace	2026-09-24T01:58:00.8542630Z 
+Rust	Test Rust workspace	2026-09-24T01:58:00.8547936Z ^[[1m^[[92m     Running^[[0m tests/service.rs (target/debug/deps/service-9d151558d3c8c37a)
+Rust	Test Rust workspace	2026-09-24T01:58:00.8566176Z 
+Rust	Test Rust workspace	2026-09-24T01:58:00.8566448Z running 15 tests
+Rust	Test Rust workspace	2026-09-24T01:58:00.8592962Z test export_host_image_fixture ... ignored, exports isolated container fixture
+Rust	Test Rust workspace	2026-09-24T01:58:00.8813807Z test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:00.8942136Z test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:00.8942858Z test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+Rust	Test Rust workspace	2026-09-24T01:58:00.8992569Z test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:01.0304264Z test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:01.1427788Z test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:01.1528275Z test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:01.1625670Z test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:01.2557926Z test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:01.2649977Z test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:01.2693636Z test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:01.3220558Z test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... FAILED
+Rust	Test Rust workspace	2026-09-24T01:58:01.3590971Z test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:01.5211891Z test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+Rust	Test Rust workspace	2026-09-24T01:58:01.5212164Z 
+Rust	Test Rust workspace	2026-09-24T01:58:01.5212214Z failures:
+Rust	Test Rust workspace	2026-09-24T01:58:01.5212282Z 
+Rust	Test Rust workspace	2026-09-24T01:58:01.5212619Z ---- preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup stdout ----
+Rust	Test Rust workspace	2026-09-24T01:58:01.5212847Z 
+Rust	Test Rust workspace	2026-09-24T01:58:01.5213095Z thread 'preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup' (16041) panicked at runtime/rx-host/tests/service.rs:715:18:
+Rust	Test Rust workspace	2026-09-24T01:58:01.5213564Z called `Result::unwrap()` on an `Err` value: "another process owns this Host runtime"
+Rust	Test Rust workspace	2026-09-24T01:58:01.5213771Z stack backtrace:
+Rust	Test Rust workspace	2026-09-24T01:58:01.5213897Z    0: __rustc::rust_begin_unwind
+Rust	Test Rust workspace	2026-09-24T01:58:01.5214136Z              at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/panicking.rs:679:5
+Rust	Test Rust workspace	2026-09-24T01:58:01.5214370Z    1: core::panicking::panic_fmt
+Rust	Test Rust workspace	2026-09-24T01:58:01.5214587Z              at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/panicking.rs:80:14
+Rust	Test Rust workspace	2026-09-24T01:58:01.5214823Z    2: core::result::unwrap_failed
+Rust	Test Rust workspace	2026-09-24T01:58:01.5215037Z              at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/result.rs:1870:5
+Rust	Test Rust workspace	2026-09-24T01:58:01.5215510Z    3: <core::result::Result<core::option::Option<rx_host::service::maintenance::Preparation>, alloc::boxed::Box<dyn core::error::Error + core::marker::Send + core::marker::Sync>>>::unwrap
+Rust	Test Rust workspace	2026-09-24T01:58:01.5215970Z              at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/result.rs:1231:23
+Rust	Test Rust workspace	2026-09-24T01:58:01.5216322Z    4: service::preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup::{closure#0}
+Rust	Test Rust workspace	2026-09-24T01:58:01.5216587Z              at ./tests/service.rs:715:18
+Rust	Test Rust workspace	2026-09-24T01:58:01.5216931Z    5: <core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>> as core::future::future::Future>::poll
+Rust	Test Rust workspace	2026-09-24T01:58:01.5217268Z              at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/future/future.rs:133:9
+Rust	Test Rust workspace	2026-09-24T01:58:01.5217628Z    6: <core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>> as core::future::future::Future>::poll
+Rust	Test Rust workspace	2026-09-24T01:58:01.5217987Z              at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/future/future.rs:133:9
+Rust	Test Rust workspace	2026-09-24T01:58:01.5218461Z    7: <tokio::runtime::scheduler::current_thread::CoreGuard>::block_on::<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>::{closure#0}::{closure#0}::{closure#0}
+Rust	Test Rust workspace	2026-09-24T01:58:01.5219022Z              at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/scheduler/current_thread/mod.rs:830:70
+Rust	Test Rust workspace	2026-09-24T01:58:01.5219869Z    8: tokio::task::coop::with_budget::<core::task::poll::Poll<()>, <tokio::runtime::scheduler::current_thread::CoreGuard>::block_on<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>::{closure#0}::{closure#0}::{closure#0}>
+Rust	Test Rust workspace	2026-09-24T01:58:01.5220472Z              at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/task/coop/mod.rs:167:5
+Rust	Test Rust workspace	2026-09-24T01:58:01.5221053Z    9: tokio::task::coop::budget::<core::task::poll::Poll<()>, <tokio::runtime::scheduler::current_thread::CoreGuard>::block_on<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>::{closure#0}::{closure#0}::{closure#0}>
+Rust	Test Rust workspace	2026-09-24T01:58:01.5221629Z              at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/task/coop/mod.rs:133:5
+Rust	Test Rust workspace	2026-09-24T01:58:01.5222216Z   10: <tokio::runtime::scheduler::current_thread::CoreGuard>::block_on::<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>::{closure#0}::{closure#0}
+Rust	Test Rust workspace	2026-09-24T01:58:01.5222874Z              at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/scheduler/current_thread/mod.rs:830:25
+Rust	Test Rust workspace	2026-09-24T01:58:01.5223519Z   11: <tokio::runtime::scheduler::current_thread::Context>::enter::<core::task::poll::Poll<()>, <tokio::runtime::scheduler::current_thread::CoreGuard>::block_on<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>::{closure#0}::{closure#0}>
+Rust	Test Rust workspace	2026-09-24T01:58:01.5224185Z              at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/scheduler/current_thread/mod.rs:488:19
+Rust	Test Rust workspace	2026-09-24T01:58:01.5224680Z   12: <tokio::runtime::scheduler::current_thread::CoreGuard>::block_on::<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>::{closure#0}
+Rust	Test Rust workspace	2026-09-24T01:58:01.5225178Z              at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/scheduler/current_thread/mod.rs:829:44
+Rust	Test Rust workspace	2026-09-24T01:58:01.5225851Z   13: <tokio::runtime::scheduler::current_thread::CoreGuard>::enter::<<tokio::runtime::scheduler::current_thread::CoreGuard>::block_on<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>::{closure#0}, core::option::Option<()>>::{closure#0}
+Rust	Test Rust workspace	2026-09-24T01:58:01.5226502Z              at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/scheduler/current_thread/mod.rs:906:68
+Rust	Test Rust workspace	2026-09-24T01:58:01.5227425Z   14: <tokio::runtime::context::scoped::Scoped<tokio::runtime::scheduler::Context>>::set::<<tokio::runtime::scheduler::current_thread::CoreGuard>::enter<<tokio::runtime::scheduler::current_thread::CoreGuard>::block_on<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>::{closure#0}, core::option::Option<()>>::{closure#0}, (alloc::boxed::Box<tokio::runtime::scheduler::current_thread::Core>, core::option::Option<()>)>
+Rust	Test Rust workspace	2026-09-24T01:58:01.5228334Z              at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/context/scoped.rs:40:9
+Rust	Test Rust workspace	2026-09-24T01:58:01.5229186Z   15: tokio::runtime::context::set_scheduler::<(alloc::boxed::Box<tokio::runtime::scheduler::current_thread::Core>, core::option::Option<()>), <tokio::runtime::scheduler::current_thread::CoreGuard>::enter<<tokio::runtime::scheduler::current_thread::CoreGuard>::block_on<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>::{closure#0}, core::option::Option<()>>::{closure#0}>::{closure#0}
+Rust	Test Rust workspace	2026-09-24T01:58:01.5230024Z              at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/context.rs:187:38
+Rust	Test Rust workspace	2026-09-24T01:58:01.5231121Z   16: <std::thread::local::LocalKey<tokio::runtime::context::Context>>::try_with::<tokio::runtime::context::set_scheduler<(alloc::boxed::Box<tokio::runtime::scheduler::current_thread::Core>, core::option::Option<()>), <tokio::runtime::scheduler::current_thread::CoreGuard>::enter<<tokio::runtime::scheduler::current_thread::CoreGuard>::block_on<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>::{closure#0}, core::option::Option<()>>::{closure#0}>::{closure#0}, (alloc::boxed::Box<tokio::runtime::scheduler::current_thread::Core>, core::option::Option<()>)>
+Rust	Test Rust workspace	2026-09-24T01:58:01.5232279Z              at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/thread/local.rs:463:12
+Rust	Test Rust workspace	2026-09-24T01:58:01.5233520Z   17: <std::thread::local::LocalKey<tokio::runtime::context::Context>>::with::<tokio::runtime::context::set_scheduler<(alloc::boxed::Box<tokio::runtime::scheduler::current_thread::Core>, core::option::Option<()>), <tokio::runtime::scheduler::current_thread::CoreGuard>::enter<<tokio::runtime::scheduler::current_thread::CoreGuard>::block_on<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>::{closure#0}, core::option::Option<()>>::{closure#0}>::{closure#0}, (alloc::boxed::Box<tokio::runtime::scheduler::current_thread::Core>, core::option::Option<()>)>
+Rust	Test Rust workspace	2026-09-24T01:58:01.5234665Z              at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/std/src/thread/local.rs:427:20
+Rust	Test Rust workspace	2026-09-24T01:58:01.5235451Z   18: tokio::runtime::context::set_scheduler::<(alloc::boxed::Box<tokio::runtime::scheduler::current_thread::Core>, core::option::Option<()>), <tokio::runtime::scheduler::current_thread::CoreGuard>::enter<<tokio::runtime::scheduler::current_thread::CoreGuard>::block_on<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>::{closure#0}, core::option::Option<()>>::{closure#0}>
+Rust	Test Rust workspace	2026-09-24T01:58:01.5236278Z              at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/context.rs:187:17
+Rust	Test Rust workspace	2026-09-24T01:58:01.5236879Z   19: <tokio::runtime::scheduler::current_thread::CoreGuard>::enter::<<tokio::runtime::scheduler::current_thread::CoreGuard>::block_on<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>::{closure#0}, core::option::Option<()>>
+Rust	Test Rust workspace	2026-09-24T01:58:01.5237542Z              at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/scheduler/current_thread/mod.rs:906:27
+Rust	Test Rust workspace	2026-09-24T01:58:01.5238019Z   20: <tokio::runtime::scheduler::current_thread::CoreGuard>::block_on::<core::pin::Pin<&mut core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>>
+Rust	Test Rust workspace	2026-09-24T01:58:01.5238496Z              at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/scheduler/current_thread/mod.rs:817:24
+Rust	Test Rust workspace	2026-09-24T01:58:01.5238988Z   21: <tokio::runtime::scheduler::current_thread::CurrentThread>::block_on::<core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>::{closure#0}
+Rust	Test Rust workspace	2026-09-24T01:58:01.5239469Z              at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/scheduler/current_thread/mod.rs:218:33
+Rust	Test Rust workspace	2026-09-24T01:58:01.5240026Z   22: tokio::runtime::context::runtime::enter_runtime::<<tokio::runtime::scheduler::current_thread::CurrentThread>::block_on<core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>::{closure#0}, ()>
+Rust	Test Rust workspace	2026-09-24T01:58:01.5240570Z              at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/context/runtime.rs:65:16
+Rust	Test Rust workspace	2026-09-24T01:58:01.5241010Z   23: <tokio::runtime::scheduler::current_thread::CurrentThread>::block_on::<core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>
+Rust	Test Rust workspace	2026-09-24T01:58:01.5241466Z              at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/scheduler/current_thread/mod.rs:206:9
+Rust	Test Rust workspace	2026-09-24T01:58:01.5241890Z   24: <tokio::runtime::runtime::Runtime>::block_on_inner::<core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>
+Rust	Test Rust workspace	2026-09-24T01:58:01.5242283Z              at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/runtime.rs:374:52
+Rust	Test Rust workspace	2026-09-24T01:58:01.5243040Z   25: <tokio::runtime::runtime::Runtime>::block_on::<core::pin::Pin<&mut dyn core::future::future::Future<Output = ()>>>
+Rust	Test Rust workspace	2026-09-24T01:58:01.5243577Z              at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.1/src/runtime/runtime.rs:343:18
+Rust	Test Rust workspace	2026-09-24T01:58:01.5243942Z   26: service::preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup
+Rust	Test Rust workspace	2026-09-24T01:58:01.5244189Z              at ./tests/service.rs:719:83
+Rust	Test Rust workspace	2026-09-24T01:58:01.5244475Z   27: service::preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup::{closure#0}
+Rust	Test Rust workspace	2026-09-24T01:58:01.5244812Z              at ./tests/service.rs:682:95
+Rust	Test Rust workspace	2026-09-24T01:58:01.5245146Z   28: <service::preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup::{closure#0} as core::ops::function::FnOnce<()>>::call_once
+Rust	Test Rust workspace	2026-09-24T01:58:01.5245653Z              at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/ops/function.rs:250:5
+Rust	Test Rust workspace	2026-09-24T01:58:01.5245988Z   29: <fn() -> core::result::Result<(), alloc::string::String> as core::ops::function::FnOnce<()>>::call_once
+Rust	Test Rust workspace	2026-09-24T01:58:01.5246313Z              at /rustc/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/ops/function.rs:250:5
+Rust	Test Rust workspace	2026-09-24T01:58:01.5246616Z note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+Rust	Test Rust workspace	2026-09-24T01:58:01.5246787Z 
+Rust	Test Rust workspace	2026-09-24T01:58:01.5246789Z 
+Rust	Test Rust workspace	2026-09-24T01:58:01.5246833Z failures:
+Rust	Test Rust workspace	2026-09-24T01:58:01.5247013Z     preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup
+Rust	Test Rust workspace	2026-09-24T01:58:01.5247188Z 
+Rust	Test Rust workspace	2026-09-24T01:58:01.5247325Z test result: FAILED. 12 passed; 1 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.66s
+Rust	Test Rust workspace	2026-09-24T01:58:01.5247509Z 
+Rust	Test Rust workspace	2026-09-24T01:58:01.5268907Z ^[[1m^[[91merror^[[0m: test failed, to rerun pass `-p rx-host --test service`
+Rust	Test Rust workspace	2026-09-24T01:58:01.5367058Z ##[error]Process completed with exit code 101.
+Branch CI	Require every validation job to pass	﻿2026-09-24T01:58:08.3496909Z ##[group]Run python3 - <<'PYTHON'
+Branch CI	Require every validation job to pass	2026-09-24T01:58:08.3498111Z ^[[36;1mpython3 - <<'PYTHON'^[[0m
+Branch CI	Require every validation job to pass	2026-09-24T01:58:08.3498796Z ^[[36;1mimport json, os, sys^[[0m
+Branch CI	Require every validation job to pass	2026-09-24T01:58:08.3499578Z ^[[36;1mresults = json.loads(os.environ["NEEDS"])^[[0m
+Branch CI	Require every validation job to pass	2026-09-24T01:58:08.3500892Z ^[[36;1mfailed = {name: value["result"] for name, value in results.items() if value["result"] != "success"}^[[0m
+Branch CI	Require every validation job to pass	2026-09-24T01:58:08.3501975Z ^[[36;1mif failed:^[[0m
+Branch CI	Require every validation job to pass	2026-09-24T01:58:08.3502720Z ^[[36;1m    sys.exit(f"Required validation jobs did not pass: {failed}")^[[0m
+Branch CI	Require every validation job to pass	2026-09-24T01:58:08.3503651Z ^[[36;1mprint("All required validation jobs passed.")^[[0m
+Branch CI	Require every validation job to pass	2026-09-24T01:58:08.3504445Z ^[[36;1mPYTHON^[[0m
+Branch CI	Require every validation job to pass	2026-09-24T01:58:08.4197662Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Branch CI	Require every validation job to pass	2026-09-24T01:58:08.4199283Z env:
+Branch CI	Require every validation job to pass	2026-09-24T01:58:08.4200604Z   NEEDS: {
+Branch CI	Require every validation job to pass	  "repository": {
+Branch CI	Require every validation job to pass	    "result": "success",
+Branch CI	Require every validation job to pass	    "outputs": {}
+Branch CI	Require every validation job to pass	  },
+Branch CI	Require every validation job to pass	  "rust": {
+Branch CI	Require every validation job to pass	    "result": "failure",
+Branch CI	Require every validation job to pass	    "outputs": {}
+Branch CI	Require every validation job to pass	  },
+Branch CI	Require every validation job to pass	  "operator": {
+Branch CI	Require every validation job to pass	    "result": "success",
+Branch CI	Require every validation job to pass	    "outputs": {}
+Branch CI	Require every validation job to pass	  }
+Branch CI	Require every validation job to pass	}
+Branch CI	Require every validation job to pass	2026-09-24T01:58:08.4203061Z ##[endgroup]
+Branch CI	Require every validation job to pass	2026-09-24T01:58:08.4652216Z Required validation jobs did not pass: {'rust': 'failure'}
+Branch CI	Require every validation job to pass	2026-09-24T01:58:08.4694656Z ##[error]Process completed with exit code 1.

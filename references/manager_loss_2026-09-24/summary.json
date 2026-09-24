@@ -42,5 +42,20 @@
     "ignored": 20,
     "run": 35944730637,
     "source_sha": "f3a7d08c53f71d481a9a06ecbe9597cf2e9e1274"
+  },
+  "source_merge_first_attempt": {
+    "run": 35945013197,
+    "result": "FAIL",
+    "test": "rx-host::preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup",
+    "observed": "writer lock unavailable",
+    "rx_host_source_changed": false
+  },
+  "source_merge_rerun": {
+    "run": 35945013197,
+    "attempt": 2,
+    "sha": "50be6058be8bc7e60b1c44733014f7f9c7c1d087",
+    "passed": 391,
+    "failed": 0,
+    "ignored": 20
   }
 }

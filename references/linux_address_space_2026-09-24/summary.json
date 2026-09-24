@@ -1,0 +1,78 @@
+{
+  "source_commit": "fa8ea7e53076ede4bf76a838c7c26a70ffaa7647",
+  "source_pr": "https://github.com/jack0682/rx-solutions/pull/30",
+  "macos": [
+    344,
+    0,
+    17
+  ],
+  "runtime_lib_tests": [
+    12,
+    0,
+    0
+  ],
+  "runtime_resource_tests": [
+    4,
+    0,
+    0
+  ],
+  "new_linux_tests": 10,
+  "new_macos_tests": 2,
+  "unchanged_protected_files": 159,
+  "protected_categories": [
+    "sdk",
+    "interfaces",
+    "catalogs",
+    "manifests",
+    "native"
+  ],
+  "library_stages": [
+    "registered",
+    "admitted-and-observed",
+    "process-ready-but-use-conditions-not-met",
+    "reported-conditions-met-but-work-use-unavailable",
+    "terminated",
+    "reopened-in-new-manager-process",
+    "abnormal-child-exit",
+    "lost-manager-ownership",
+    "explicit-disposition",
+    "disposition-alone-rejected",
+    "explicitly-resumed-new-instance",
+    "resumed-child-terminated",
+    "second-resume-request-rejected",
+    "consumed-permit-rejected",
+    "dependency-registered-without-execution",
+    "diagnostic-assigned",
+    "diagnostic-in-progress",
+    "diagnostic-result-recorded",
+    "preparation-only-provider-loss",
+    "continuous-and-generation-provider-loss",
+    "unrelated-diagnostic-completed",
+    "same-format-replacement-not-inherited",
+    "diagnostic-history-reopened",
+    "unverified-decision-rejected",
+    "external-work-decision-verified",
+    "initial-binding-verified-without-work-promotion",
+    "replacement-decision-verified-without-automatic-rebind",
+    "decision-reuse-rejected",
+    "expired-decision-rejected",
+    "revoked-decision-rejected-with-history-preserved",
+    "decision-record-does-not-restore-live-proof",
+    "passage-complete"
+  ],
+  "resident_passage": "PASS",
+  "resource_passage": "PASS",
+  "macos_source_note": "Final changes are in cfg(target_os=linux) source and tests; macOS compiled source is unchanged.",
+  "prior_linux_ci": [
+    377,
+    0,
+    20
+  ],
+  "prior_linux_ci_run": "https://github.com/jack0682/rx-solutions/actions/runs/35937258244",
+  "linux_ci": [
+    378,
+    0,
+    20
+  ],
+  "linux_ci_run": "https://github.com/jack0682/rx-solutions/actions/runs/35938374535"
+}

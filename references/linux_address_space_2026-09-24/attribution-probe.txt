@@ -1,0 +1,47 @@
+$ cd <workspace>/rx-solutions
+$ docker run --rm --network none --read-only --cap-drop ALL --security-opt no-new-privileges --tmpfs /tmp:rw -v <workspace>/.f8-evidence/attribution_probe.py:/probe.py:ro --entrypoint /usr/bin/python3 sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0 /probe.py
+{
+  "kind": "boundary probe, not production RX enforcement",
+  "uid": 10001,
+  "parent_limits": "Limit                     Soft Limit           Hard Limit           Units     \nMax cpu time              unlimited            unlimited            seconds   \nMax file size             unlimited            unlimited            bytes     \nMax data size             unlimited            unlimited            bytes     \nMax stack size            8388608              unlimited            bytes     \nMax core file size        0                    unlimited            bytes     \nMax resident set          unlimited            unlimited            bytes     \nMax processes             unlimited            unlimited            processes \nMax open files            1048576              1048576              files     \nMax locked memory         unlimited            unlimited            bytes     \nMax address space         unlimited            unlimited            bytes     \nMax file locks            unlimited            unlimited            locks     \nMax pending signals       23687                23687                signals   \nMax msgqueue size         819200               819200               bytes     \nMax nice priority         0                    0                    \nMax realtime priority     0                    0                    \nMax realtime timeout      unlimited            unlimited            us        \n",
+  "parent_status": {
+    "CapEff": "0000000000000000",
+    "NoNewPrivs": "1"
+  },
+  "cgroup_mount": [
+    "148 147 0:40 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup rw"
+  ],
+  "cgroup_writable": false,
+  "prlimit": "/usr/bin/prlimit",
+  "cgroup_child_creation": {
+    "created": false,
+    "errno": 30,
+    "message": "[Errno 30] Read-only file system: '/sys/fs/cgroup/rx-f8-probe-b9b440788fcf4f40ae8e30ba2048c405'"
+  },
+  "trials": {
+    "baseline": {
+      "pid": 7,
+      "outside_child_limits": "Limit                     Soft Limit           Hard Limit           Units     \nMax cpu time              unlimited            unlimited            seconds   \nMax file size             unlimited            unlimited            bytes     \nMax data size             unlimited            unlimited            bytes     \nMax stack size            8388608              unlimited            bytes     \nMax core file size        0                    unlimited            bytes     \nMax resident set          unlimited            unlimited            bytes     \nMax processes             unlimited            unlimited            processes \nMax open files            1048576              1048576              files     \nMax locked memory         unlimited            unlimited            bytes     \nMax address space         unlimited            unlimited            bytes     \nMax file locks            unlimited            unlimited            locks     \nMax pending signals       23687                23687                signals   \nMax msgqueue size         819200               819200               bytes     \nMax nice priority         0                    0                    \nMax realtime priority     0                    0                    \nMax realtime timeout      unlimited            unlimited            us        \n",
+      "result": {
+        "allocation": "succeeded",
+        "bytes": 134217728
+      },
+      "stderr": "",
+      "exit_code": 0,
+      "after_wait_proc_exists": false
+    },
+    "child-setrlimit": {
+      "pid": 8,
+      "outside_child_limits": "Limit                     Soft Limit           Hard Limit           Units     \nMax cpu time              unlimited            unlimited            seconds   \nMax file size             unlimited            unlimited            bytes     \nMax data size             unlimited            unlimited            bytes     \nMax stack size            8388608              unlimited            bytes     \nMax core file size        0                    unlimited            bytes     \nMax resident set          unlimited            unlimited            bytes     \nMax processes             unlimited            unlimited            processes \nMax open files            1048576              1048576              files     \nMax locked memory         unlimited            unlimited            bytes     \nMax address space         67108864             67108864             bytes     \nMax file locks            unlimited            unlimited            locks     \nMax pending signals       23687                23687                signals   \nMax msgqueue size         819200               819200               bytes     \nMax nice priority         0                    0                    \nMax realtime priority     0                    0                    \nMax realtime timeout      unlimited            unlimited            us        \n",
+      "result": {
+        "allocation": "rejected",
+        "errno": 12,
+        "message": "[Errno 12] Cannot allocate memory"
+      },
+      "stderr": "",
+      "exit_code": 0,
+      "after_wait_proc_exists": false
+    }
+  },
+  "parent_limits_unchanged": true
+}

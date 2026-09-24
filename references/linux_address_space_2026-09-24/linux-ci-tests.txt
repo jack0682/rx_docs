@@ -1,0 +1,1084 @@
+﻿2026-09-24T00:25:48.2328903Z Current runner version: '2.337.0'
+2026-09-24T00:25:48.2355528Z ##[group]Runner Image Provisioner
+2026-09-24T00:25:48.2356705Z Hosted Compute Agent
+2026-09-24T00:25:48.2357307Z Version: 20260828.587
+2026-09-24T00:25:48.2358079Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+2026-09-24T00:25:48.2358822Z Build Date: 2026-08-28T16:44:25Z
+2026-09-24T00:25:48.2359556Z Worker ID: {fa4e03d7-2056-458c-8b33-71e603ac8f6e}
+2026-09-24T00:25:48.2360296Z Azure Region: westus
+2026-09-24T00:25:48.2360876Z ##[endgroup]
+2026-09-24T00:25:48.2362531Z ##[group]Operating System
+2026-09-24T00:25:48.2363171Z Ubuntu
+2026-09-24T00:25:48.2363761Z 24.04.5
+2026-09-24T00:25:48.2364302Z LTS
+2026-09-24T00:25:48.2364826Z ##[endgroup]
+2026-09-24T00:25:48.2365463Z ##[group]Runner Image
+2026-09-24T00:25:48.2366266Z Image: ubuntu-24.04
+2026-09-24T00:25:48.2366835Z Version: 20260920.314.1
+2026-09-24T00:25:48.2368196Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260920.314/images/ubuntu/Ubuntu2404-Readme.md
+2026-09-24T00:25:48.2369876Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260920.314
+2026-09-24T00:25:48.2370863Z ##[endgroup]
+2026-09-24T00:25:48.2372018Z ##[group]GITHUB_TOKEN Permissions
+2026-09-24T00:25:48.2373913Z Contents: read
+2026-09-24T00:25:48.2374543Z Metadata: read
+2026-09-24T00:25:48.2375297Z ##[endgroup]
+2026-09-24T00:25:48.2377847Z Secret source: Actions
+2026-09-24T00:25:48.2378871Z Cache mode: write
+2026-09-24T00:25:48.2379581Z Prepare workflow directory
+2026-09-24T00:25:48.2858270Z Prepare all required actions
+2026-09-24T00:25:48.2907319Z Getting action download info
+2026-09-24T00:25:48.6813062Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-09-24T00:25:48.7790929Z Download action repository 'actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830' (SHA:0057852bfaa89a56745cba8c7296529d2fc39830)
+2026-09-24T00:25:48.9824835Z Complete job name: Rust
+2026-09-24T00:25:49.0634742Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-09-24T00:25:49.0635861Z with:
+2026-09-24T00:25:49.0636538Z   persist-credentials: false
+2026-09-24T00:25:49.0637076Z   repository: jack0682/rx-solutions
+2026-09-24T00:25:49.0641309Z   token: ***
+2026-09-24T00:25:49.0641743Z   ssh-strict: true
+2026-09-24T00:25:49.0642187Z   ssh-user: git
+2026-09-24T00:25:49.0642609Z   clean: true
+2026-09-24T00:25:49.0643055Z   sparse-checkout-cone-mode: true
+2026-09-24T00:25:49.0643702Z   fetch-depth: 1
+2026-09-24T00:25:49.0644402Z   fetch-tags: false
+2026-09-24T00:25:49.0645078Z   show-progress: true
+2026-09-24T00:25:49.0645751Z   lfs: false
+2026-09-24T00:25:49.0646751Z   submodules: false
+2026-09-24T00:25:49.0647421Z   set-safe-directory: true
+2026-09-24T00:25:49.0648330Z   allow-unsafe-pr-checkout: false
+2026-09-24T00:25:49.0649727Z env:
+2026-09-24T00:25:49.0650438Z   CARGO_TERM_COLOR: always
+2026-09-24T00:25:49.0651337Z   RUST_BACKTRACE: 1
+2026-09-24T00:25:49.0652115Z ##[endgroup]
+2026-09-24T00:25:49.1727222Z Syncing repository: jack0682/rx-solutions
+2026-09-24T00:25:49.1730427Z ##[group]Getting Git version info
+2026-09-24T00:25:49.1731662Z Working directory is '/home/runner/work/rx-solutions/rx-solutions'
+2026-09-24T00:25:49.1733461Z [command]/usr/bin/git version
+2026-09-24T00:25:49.1833060Z git version 2.55.0
+2026-09-24T00:25:49.1868811Z ##[endgroup]
+2026-09-24T00:25:49.1877439Z Temporarily overriding HOME='/home/runner/work/_temp/52bac1aa-9b29-43b2-9aa0-12f7078e53c4' before making global git config changes
+2026-09-24T00:25:49.1879674Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-24T00:25:49.1882576Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rx-solutions/rx-solutions
+2026-09-24T00:25:49.1946506Z Deleting the contents of '/home/runner/work/rx-solutions/rx-solutions'
+2026-09-24T00:25:49.1951232Z ##[group]Initializing the repository
+2026-09-24T00:25:49.1955717Z [command]/usr/bin/git init /home/runner/work/rx-solutions/rx-solutions
+2026-09-24T00:25:49.2123043Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-24T00:25:49.2125029Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-24T00:25:49.2127088Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-24T00:25:49.2128453Z hint: call:
+2026-09-24T00:25:49.2129256Z hint:
+2026-09-24T00:25:49.2130214Z hint: 	git config --global init.defaultBranch <name>
+2026-09-24T00:25:49.2131406Z hint:
+2026-09-24T00:25:49.2132500Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-24T00:25:49.2134209Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-24T00:25:49.2135581Z hint:
+2026-09-24T00:25:49.2136615Z hint: 	git branch -m <name>
+2026-09-24T00:25:49.2137863Z hint:
+2026-09-24T00:25:49.2139103Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-24T00:25:49.2141065Z Initialized empty Git repository in /home/runner/work/rx-solutions/rx-solutions/.git/
+2026-09-24T00:25:49.2149130Z [command]/usr/bin/git remote add origin https://github.com/jack0682/rx-solutions
+2026-09-24T00:25:49.2205819Z ##[endgroup]
+2026-09-24T00:25:49.2207490Z ##[group]Disabling automatic garbage collection
+2026-09-24T00:25:49.2209909Z [command]/usr/bin/git config --local gc.auto 0
+2026-09-24T00:25:49.2245239Z ##[endgroup]
+2026-09-24T00:25:49.2246895Z ##[group]Setting up auth
+2026-09-24T00:25:49.2252931Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-24T00:25:49.2292755Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-24T00:25:49.2728715Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-24T00:25:49.2768303Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-24T00:25:49.3009487Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-24T00:25:49.3051959Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-24T00:25:49.3307911Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-24T00:25:49.3355721Z ##[endgroup]
+2026-09-24T00:25:49.3357476Z ##[group]Fetching the repository
+2026-09-24T00:25:49.3368294Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +89e15306c8234e3b5d64bc81528ddabb8ede03a2:refs/remotes/pull/30/merge
+2026-09-24T00:25:49.9679393Z From https://github.com/jack0682/rx-solutions
+2026-09-24T00:25:49.9681742Z  * [new ref]         89e15306c8234e3b5d64bc81528ddabb8ede03a2 -> pull/30/merge
+2026-09-24T00:25:49.9688594Z ##[endgroup]
+2026-09-24T00:25:49.9690951Z ##[group]Determining the checkout info
+2026-09-24T00:25:49.9693459Z ##[endgroup]
+2026-09-24T00:25:49.9698673Z [command]/usr/bin/git sparse-checkout disable
+2026-09-24T00:25:49.9766988Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-09-24T00:25:49.9818922Z ##[group]Checking out the ref
+2026-09-24T00:25:49.9824099Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/30/merge
+2026-09-24T00:25:50.0304387Z Note: switching to 'refs/remotes/pull/30/merge'.
+2026-09-24T00:25:50.0305680Z 
+2026-09-24T00:25:50.0306865Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-09-24T00:25:50.0308777Z changes and commit them, and you can discard any commits you make in this
+2026-09-24T00:25:50.0310086Z state without impacting any branches by switching back to a branch.
+2026-09-24T00:25:50.0310843Z 
+2026-09-24T00:25:50.0311730Z If you want to create a new branch to retain commits you create, you may
+2026-09-24T00:25:50.0313967Z do so (now or later) by using -c with the switch command. Example:
+2026-09-24T00:25:50.0314720Z 
+2026-09-24T00:25:50.0315085Z   git switch -c <new-branch-name>
+2026-09-24T00:25:50.0315632Z 
+2026-09-24T00:25:50.0316361Z Or undo this operation with:
+2026-09-24T00:25:50.0317217Z 
+2026-09-24T00:25:50.0317628Z   git switch -
+2026-09-24T00:25:50.0318067Z 
+2026-09-24T00:25:50.0318722Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-09-24T00:25:50.0319656Z 
+2026-09-24T00:25:50.0320764Z HEAD is now at 89e1530 Merge fa8ea7e53076ede4bf76a838c7c26a70ffaa7647 into aa60baf96b8d4e3651ccf0e3ff37a883457b73fe
+2026-09-24T00:25:50.0324402Z ##[endgroup]
+2026-09-24T00:25:50.0363461Z [command]/usr/bin/git log -1 --format=%H
+2026-09-24T00:25:50.0392694Z 89e15306c8234e3b5d64bc81528ddabb8ede03a2
+2026-09-24T00:25:50.0403372Z ##[group]Removing auth
+2026-09-24T00:25:50.0407629Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-24T00:25:50.0446432Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-24T00:25:50.0686492Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-24T00:25:50.0718949Z http.https://github.com/.extraheader
+2026-09-24T00:25:50.0727273Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-09-24T00:25:50.0765235Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-24T00:25:50.0996641Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-24T00:25:50.1033032Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-24T00:25:50.1266335Z ##[endgroup]
+2026-09-24T00:25:50.1527088Z ##[group]Run toolchain=$(python3 -c 'import tomllib; print(tomllib.load(open("rust-toolchain.toml", "rb"))["toolchain"]["channel"])')
+2026-09-24T00:25:50.1530711Z [36;1mtoolchain=$(python3 -c 'import tomllib; print(tomllib.load(open("rust-toolchain.toml", "rb"))["toolchain"]["channel"])')[0m
+2026-09-24T00:25:50.1533810Z [36;1mrustup toolchain install "$toolchain" --profile minimal --component rustfmt --component clippy[0m
+2026-09-24T00:25:50.1910781Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-24T00:25:50.1912611Z env:
+2026-09-24T00:25:50.1913757Z   CARGO_TERM_COLOR: always
+2026-09-24T00:25:50.1915083Z   RUST_BACKTRACE: 1
+2026-09-24T00:25:50.1916478Z ##[endgroup]
+2026-09-24T00:25:50.2916816Z info: syncing channel updates for 1.98.1-x86_64-unknown-linux-gnu
+2026-09-24T00:25:50.4074692Z info: latest update on 2026-09-03 for version 1.98.1 (48a229cea 2026-09-01)
+2026-09-24T00:25:50.4077699Z info: downloading 5 components
+2026-09-24T00:25:58.5303255Z 
+2026-09-24T00:25:58.5379374Z   1.98.1-x86_64-unknown-linux-gnu installed - rustc 1.98.1 (48a229cea 2026-09-01)
+2026-09-24T00:25:58.5380239Z 
+2026-09-24T00:25:58.6156305Z ##[group]Run actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830
+2026-09-24T00:25:58.6156937Z with:
+2026-09-24T00:25:58.6157431Z   path: ~/.cargo/registry/index
+~/.cargo/registry/cache
+~/.cargo/git/db
+target
+
+2026-09-24T00:25:58.6158295Z   key: Linux-X64-rust-0766539683ae475fbbde23177660c1a631bbaf80e146af3e0ad076bc920ad8d9
+2026-09-24T00:25:58.6158876Z   enableCrossOsArchive: false
+2026-09-24T00:25:58.6159197Z   fail-on-cache-miss: false
+2026-09-24T00:25:58.6159501Z   lookup-only: false
+2026-09-24T00:25:58.6159778Z   save-always: false
+2026-09-24T00:25:58.6160048Z env:
+2026-09-24T00:25:58.6160304Z   CARGO_TERM_COLOR: always
+2026-09-24T00:25:58.6160603Z   RUST_BACKTRACE: 1
+2026-09-24T00:25:58.6160874Z ##[endgroup]
+2026-09-24T00:25:58.7264481Z (node:2392) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-24T00:25:58.7266491Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-24T00:25:58.9759277Z Cache hit for: Linux-X64-rust-0766539683ae475fbbde23177660c1a631bbaf80e146af3e0ad076bc920ad8d9
+2026-09-24T00:25:58.9866357Z (node:2392) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-09-24T00:26:00.2470354Z Received 4194304 of 2891972745 (0.1%), 4.0 MBs/sec
+2026-09-24T00:26:01.2644288Z Received 134217728 of 2891972745 (4.6%), 63.4 MBs/sec
+2026-09-24T00:26:02.2642493Z Received 293601280 of 2891972745 (10.2%), 92.7 MBs/sec
+2026-09-24T00:26:03.2651217Z Received 490733568 of 2891972745 (17.0%), 116.4 MBs/sec
+2026-09-24T00:26:04.2652373Z Received 671088640 of 2891972745 (23.2%), 127.5 MBs/sec
+2026-09-24T00:26:05.2716713Z Received 872415232 of 2891972745 (30.2%), 138.2 MBs/sec
+2026-09-24T00:26:06.2673196Z Received 1069547520 of 2891972745 (37.0%), 145.3 MBs/sec
+2026-09-24T00:26:07.2734708Z Received 1207959552 of 2891972745 (41.8%), 143.5 MBs/sec
+2026-09-24T00:26:08.2745143Z Received 1409286144 of 2891972745 (48.7%), 148.9 MBs/sec
+2026-09-24T00:26:09.2747510Z Received 1577058304 of 2891972745 (54.5%), 150.0 MBs/sec
+2026-09-24T00:26:10.2757477Z Received 1744830464 of 2891972745 (60.3%), 150.9 MBs/sec
+2026-09-24T00:26:11.2762353Z Received 1950351360 of 2891972745 (67.4%), 154.6 MBs/sec
+2026-09-24T00:26:12.2772155Z Received 2139095040 of 2891972745 (74.0%), 156.5 MBs/sec
+2026-09-24T00:26:13.2778418Z Received 2319450112 of 2891972745 (80.2%), 157.6 MBs/sec
+2026-09-24T00:26:14.2779834Z Received 2533359616 of 2891972745 (87.6%), 160.7 MBs/sec
+2026-09-24T00:26:15.2792093Z Received 2717908992 of 2891972745 (94.0%), 161.7 MBs/sec
+2026-09-24T00:26:16.1200389Z Received 2891972745 of 2891972745 (100.0%), 163.4 MBs/sec
+2026-09-24T00:26:16.1203059Z Cache Size: ~2758 MB (2891972745 B)
+2026-09-24T00:26:16.1326604Z [command]/usr/bin/tar -xf /home/runner/work/_temp/ebbad943-4cfd-484b-a1ba-1269b8b808ae/cache.tzst -P -C /home/runner/work/rx-solutions/rx-solutions --use-compress-program unzstd
+2026-09-24T00:26:44.1017131Z Cache restored successfully
+2026-09-24T00:26:44.4680146Z Cache restored from key: Linux-X64-rust-0766539683ae475fbbde23177660c1a631bbaf80e146af3e0ad076bc920ad8d9
+2026-09-24T00:26:44.5579170Z ##[group]Run cargo fmt --all -- --check
+2026-09-24T00:26:44.5579761Z [36;1mcargo fmt --all -- --check[0m
+2026-09-24T00:26:44.7634035Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-24T00:26:44.7634524Z env:
+2026-09-24T00:26:44.7634760Z   CARGO_TERM_COLOR: always
+2026-09-24T00:26:44.7635015Z   RUST_BACKTRACE: 1
+2026-09-24T00:26:44.7635239Z ##[endgroup]
+2026-09-24T00:26:49.5000845Z ##[group]Run cargo clippy --workspace --all-targets --all-features --locked -- -D warnings
+2026-09-24T00:26:49.5001550Z [36;1mcargo clippy --workspace --all-targets --all-features --locked -- -D warnings[0m
+2026-09-24T00:26:49.5064716Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-24T00:26:49.5065147Z env:
+2026-09-24T00:26:49.5065386Z   CARGO_TERM_COLOR: always
+2026-09-24T00:26:49.5065674Z   RUST_BACKTRACE: 1
+2026-09-24T00:26:49.5066118Z ##[endgroup]
+2026-09-24T00:26:50.9893546Z [1m[92m    Checking[0m rx-domain v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/sdk/crates/rx-domain)
+2026-09-24T00:26:50.9985616Z [1m[92m   Compiling[0m rx-protocol v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/sdk/crates/rx-protocol)
+2026-09-24T00:26:50.9990563Z [1m[92m   Compiling[0m rx-host v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/runtime/rx-host)
+2026-09-24T00:26:50.9992287Z [1m[92m    Checking[0m rx-melsec-mc v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/drivers/rx-melsec-mc)
+2026-09-24T00:26:51.4208736Z [1m[92m    Checking[0m rx-package v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/sdk/crates/rx-package)
+2026-09-24T00:26:51.4210910Z [1m[92m    Checking[0m rx-ports v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/sdk/crates/rx-ports)
+2026-09-24T00:26:51.5019620Z [1m[92m    Checking[0m rx-storage v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/sdk/crates/rx-storage)
+2026-09-24T00:26:51.5107586Z [1m[92m    Checking[0m rx-service-status v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/runtime/rx-service-status)
+2026-09-24T00:26:51.5438694Z [1m[92m    Checking[0m rx-process-contract v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/sdk/crates/rx-process-contract)
+2026-09-24T00:26:51.6248079Z [1m[92m    Checking[0m rx-solution-catalog v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/runtime/rx-solution-catalog)
+2026-09-24T00:26:51.7720101Z [1m[92m    Checking[0m rx-supervisor v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/runtime/rx-supervisor)
+2026-09-24T00:26:52.0680841Z [1m[92m    Checking[0m rx-process v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/runtime/rx-process)
+2026-09-24T00:26:52.1465014Z [1m[92m    Checking[0m rx-process-package v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/runtime/rx-process-package)
+2026-09-24T00:26:53.7104404Z [1m[92m    Checking[0m rx-executor v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/runtime/rx-executor)
+2026-09-24T00:26:55.4677416Z [1m[92m    Checking[0m rx-device-package v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/runtime/rx-device-package)
+2026-09-24T00:26:56.5753227Z [1m[92m    Finished[0m `dev` profile [unoptimized + debuginfo] target(s) in 7.00s
+2026-09-24T00:26:56.6199975Z ##[group]Run cargo test --workspace --all-features --locked
+2026-09-24T00:26:56.6200497Z [36;1mcargo test --workspace --all-features --locked[0m
+2026-09-24T00:26:56.6335823Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-24T00:26:56.6336470Z env:
+2026-09-24T00:26:56.6336724Z   CARGO_TERM_COLOR: always
+2026-09-24T00:26:56.6337041Z   RUST_BACKTRACE: 1
+2026-09-24T00:26:56.6337316Z ##[endgroup]
+2026-09-24T00:26:56.9467336Z [1m[92m   Compiling[0m rx-domain v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/sdk/crates/rx-domain)
+2026-09-24T00:26:56.9564590Z [1m[92m   Compiling[0m rx-protocol v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/sdk/crates/rx-protocol)
+2026-09-24T00:26:56.9566540Z [1m[92m   Compiling[0m rx-melsec-mc v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/drivers/rx-melsec-mc)
+2026-09-24T00:26:56.9568073Z [1m[92m   Compiling[0m rx-host v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/runtime/rx-host)
+2026-09-24T00:26:57.4668657Z [1m[92m   Compiling[0m rx-package v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/sdk/crates/rx-package)
+2026-09-24T00:26:57.4768111Z [1m[92m   Compiling[0m rx-service-status v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/runtime/rx-service-status)
+2026-09-24T00:26:57.5818247Z [1m[92m   Compiling[0m rx-ports v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/sdk/crates/rx-ports)
+2026-09-24T00:26:57.6748204Z [1m[92m   Compiling[0m rx-storage v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/sdk/crates/rx-storage)
+2026-09-24T00:26:57.7081886Z [1m[92m   Compiling[0m rx-process-contract v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/sdk/crates/rx-process-contract)
+2026-09-24T00:26:57.8212026Z [1m[92m   Compiling[0m rx-solution-catalog v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/runtime/rx-solution-catalog)
+2026-09-24T00:26:58.0377141Z [1m[92m   Compiling[0m rx-supervisor v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/runtime/rx-supervisor)
+2026-09-24T00:26:58.4707883Z [1m[92m   Compiling[0m rx-process v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/runtime/rx-process)
+2026-09-24T00:26:58.5997711Z [1m[92m   Compiling[0m rx-process-package v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/runtime/rx-process-package)
+2026-09-24T00:27:00.0090935Z [1m[92m   Compiling[0m rx-executor v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/runtime/rx-executor)
+2026-09-24T00:27:01.1173986Z [1m[92m   Compiling[0m rx-device-package v0.1.0 (/home/runner/work/rx-solutions/rx-solutions/runtime/rx-device-package)
+2026-09-24T00:27:21.6257828Z [1m[92m    Finished[0m `test` profile [unoptimized + debuginfo] target(s) in 24.95s
+2026-09-24T00:27:21.6552035Z [1m[92m     Running[0m unittests src/lib.rs (target/debug/deps/rx_device_package-672da030c1299ccd)
+2026-09-24T00:27:21.6564133Z 
+2026-09-24T00:27:21.6564413Z running 0 tests
+2026-09-24T00:27:21.6564705Z 
+2026-09-24T00:27:21.6565432Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:27:21.6566416Z 
+2026-09-24T00:27:21.6568467Z [1m[92m     Running[0m unittests src/bin/rx-device-package.rs (target/debug/deps/rx_device_package-60323d20bf85a4b3)
+2026-09-24T00:27:21.6578080Z 
+2026-09-24T00:27:21.6578333Z running 0 tests
+2026-09-24T00:27:21.6578567Z 
+2026-09-24T00:27:21.6578954Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:27:21.6579512Z 
+2026-09-24T00:27:21.6581176Z [1m[92m     Running[0m tests/authoring.rs (target/debug/deps/authoring-fa93ac26528e8a57)
+2026-09-24T00:27:21.6593794Z 
+2026-09-24T00:27:21.6594489Z running 9 tests
+2026-09-24T00:27:21.6610072Z test export_image_fixture ... ignored, exports explicitly simulated, unsigned inputs and public test policy for container verification
+2026-09-24T00:27:21.6661203Z test one_template_resolves_two_sites_without_editing_the_shared_semantics ... ok
+2026-09-24T00:27:21.6745704Z test semantically_unordered_inputs_produce_the_same_signing_message ... ok
+2026-09-24T00:27:21.6747494Z test sign_image_request ... ignored, signs only with an embedded test key for isolated container verification
+2026-09-24T00:27:21.6890574Z test candidate_changes_permissions_keys_and_missing_assets_do_not_bypass_verification ... ok
+2026-09-24T00:27:21.6924191Z test template_hash_missing_extra_and_alias_bindings_are_rejected ... ok
+2026-09-24T00:27:21.6955410Z test signed_but_inconsistent_assembly_cannot_pass_the_host_resolver ... ok
+2026-09-24T00:27:21.7168240Z test candidate_roundtrip_external_signature_and_host_decoding_preserve_signed_provenance ... ok
+2026-09-24T00:27:21.7514079Z test cli_assembles_requests_external_signature_seals_and_verifies_without_network ... ok
+2026-09-24T00:27:21.7514808Z 
+2026-09-24T00:27:21.7515310Z test result: ok. 7 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.09s
+2026-09-24T00:27:21.7516193Z 
+2026-09-24T00:27:21.7518221Z [1m[92m     Running[0m tests/jtc_authoring.rs (target/debug/deps/jtc_authoring-5eca697705b40944)
+2026-09-24T00:27:21.7538449Z 
+2026-09-24T00:27:21.7538719Z running 14 tests
+2026-09-24T00:27:21.7557201Z test export_device_review_authority ... ignored, exports a public device verifier trust fixture, never a production key
+2026-09-24T00:27:21.7559060Z test export_image_fixture ... ignored, exports only SIMULATION inputs and a public test policy for the image authoring test
+2026-09-24T00:27:21.9157398Z test actual_cli_generates_a_report_and_a_separate_signing_request ... ok
+2026-09-24T00:27:22.0057243Z test device_software_report_uses_real_decoder_and_cannot_claim_physical_validation ... ok
+2026-09-24T00:27:22.0365825Z test missing_alias_or_foreign_bindings_and_invalid_trajectory_are_rejected ... ok
+2026-09-24T00:27:22.0367808Z test sign_device_report ... ignored, external test-only device report signer for real API integration
+2026-09-24T00:27:22.0369227Z test sign_image_request ... ignored, test-only external signer for the isolated image fixture
+2026-09-24T00:27:22.1299920Z test host_package_checks_assets_and_exact_intents_but_cannot_create_control_authority ... ok
+2026-09-24T00:27:22.1438080Z test simulation_catalog_cannot_be_promoted_to_a_physical_site ... ok
+2026-09-24T00:27:22.2557674Z test actual_cli_assembles_requests_external_signature_seals_and_inspects_jtc ... ok
+2026-09-24T00:27:22.3247656Z test signed_but_inconsistent_results_actions_model_and_release_are_rejected ... ok
+2026-09-24T00:27:22.4317516Z test unordered_template_actions_have_one_digest_and_joint_order_is_preserved ... ok
+2026-09-24T00:27:22.4459471Z test host_initializes_jtc_metadata_and_refuses_run_before_creating_a_controller_client ... ok
+2026-09-24T00:27:22.4480158Z test template_reuse_and_candidate_roundtrip_preserve_bound_actions_and_result_meanings ... ok
+2026-09-24T00:27:22.4480890Z 
+2026-09-24T00:27:22.4481334Z test result: ok. 10 passed; 0 failed; 4 ignored; 0 measured; 0 filtered out; finished in 0.69s
+2026-09-24T00:27:22.4481981Z 
+2026-09-24T00:27:22.4488293Z [1m[92m     Running[0m unittests src/lib.rs (target/debug/deps/rx_executor-40450a0fa06765ec)
+2026-09-24T00:27:22.4505380Z 
+2026-09-24T00:27:22.4505563Z running 40 tests
+2026-09-24T00:27:22.4530999Z test cell_service::tests::discovery_does_not_hide_old_owner_expired_attempt_or_restricted_work ... ok
+2026-09-24T00:27:22.4532892Z test cell_service::tests::historical_session_runtime_and_paused_attachment_cannot_resume ... ok
+2026-09-24T00:27:22.4533976Z test cell_service::tests::completion_requires_structured_cleanup_exact_stop_and_actual_completed_state ... ok
+2026-09-24T00:27:22.4535332Z test cell_service::tests::none_and_arming_are_observation_only_and_ambiguity_has_no_winner ... ok
+2026-09-24T00:27:22.4537176Z test cell_service::tests::observation_shutdown_preserves_preparing_attached_and_known_arming_as_attention ... ok
+2026-09-24T00:27:22.4725136Z test cell_service::tests::actual_production_cut_must_revalidate_discovery_before_any_reservation ... ok
+2026-09-24T00:27:22.4742424Z test client::assignment::tests::accepted_read_expires_or_loses_currency_when_the_trusted_clock_changes ... ok
+2026-09-24T00:27:22.4778905Z test client::assignment::tests::assignment_shares_runtime_sequence_and_time_regression_guards ... ok
+2026-09-24T00:27:22.5047632Z test client::assignment::tests::cardinalities_retain_old_sessions_expired_attempts_and_restricted_work ... ok
+2026-09-24T00:27:22.5077344Z test cell_service::tests::missing_file_after_creation_entered_never_becomes_fresh_initialization ... ok
+2026-09-24T00:27:22.5107217Z test client::assignment::tests::expired_response_does_not_advance_the_shared_cut ... ok
+2026-09-24T00:27:22.5137054Z test client::assignment::tests::forged_identity_is_rejected_even_with_a_matching_payload_hash ... ok
+2026-09-24T00:27:22.5167030Z test client::assignment::tests::forged_cut_cardinality_and_duplicate_witnesses_fail_closed ... ok
+2026-09-24T00:27:22.5183119Z test client::assignment::tests::payload_digest_size_schema_and_strict_json_are_independent_checks ... ok
+2026-09-24T00:27:22.5217603Z test client::tests::artifact_hash_does_not_replace_size_schema_or_typed_payload_validation ... ok
+2026-09-24T00:27:22.5219334Z test clock::tests::linux_clock_uses_the_shared_boot_identity_and_non_decreasing_boottime ... ok
+2026-09-24T00:27:22.5221384Z test engine_process::tests::verified_product_binary_uses_live_linux_clock_and_preserves_one_process ... ignored, Linux validation image supplies RX_BT_ENGINE_BINARY
+2026-09-24T00:27:22.5234158Z test client::assignment::tests::ttl_and_clock_interval_are_checked_before_accepting_a_view ... ok
+2026-09-24T00:27:22.5235373Z test frame::tests::a_new_epoch_is_not_implicitly_adopted_by_an_existing_context ... ok
+2026-09-24T00:27:22.5237017Z test frame::tests::restored_p_snapshot_preserves_work_and_does_not_restore_admission ... ok
+2026-09-24T00:27:22.5238604Z test frame::tests::source_clock_expiry_blocks_a_view_even_if_the_local_steady_deadline_has_not_passed ... ok
+2026-09-24T00:27:22.5240290Z test journal::recovery::wal::tests::checksum_word_order_and_accumulation_have_independent_known_values ... ok
+2026-09-24T00:27:22.5261759Z test journal::recovery::wal::tests::header_fields_and_header_checksum_cannot_silently_drop_the_wal ... ok
+2026-09-24T00:27:22.5278119Z test journal::recovery::wal::tests::invalid_page_numbers_commit_sizes_and_oversize_files_fail_before_unbounded_reads ... ok
+2026-09-24T00:27:22.5282699Z test cell_service::tests::preparing_recovery_keeps_original_ids_and_cannot_switch_to_new_candidate ... ok
+2026-09-24T00:27:22.5289079Z test pending::tests::full_queue_and_inflight_normal_work_do_not_block_pause_and_meaning_cannot_change ... ok
+2026-09-24T00:27:22.5294474Z test cell_service::tests::closing_a_preserves_its_stop_and_frees_only_the_next_attachment ... ok
+2026-09-24T00:27:22.5295678Z test pending::tests::wait_start_does_not_drop_the_only_bt_request_and_due_requests_are_fair ... ok
+2026-09-24T00:27:22.5297174Z test service::tests::cleanup_confirmation_distinguishes_no_spawn_and_local_close_from_uncertainty ... ok
+2026-09-24T00:27:22.5302274Z test service::tests::each_serial_planner_requires_its_own_confirmed_cleanup ... ok
+2026-09-24T00:27:22.5306886Z test service::tests::cancelled_serial_retirement_cannot_become_confirmation_for_an_empty_engine_slot ... ok
+2026-09-24T00:27:22.5308428Z test service::tests::failed_close_is_sticky_after_a_later_successful_cleanup ... ok
+2026-09-24T00:27:22.5318872Z test service::tests::production_expiry::expired_waiting_cannot_republish_an_old_admission_flag ... ok
+2026-09-24T00:27:22.5320461Z test journal::recovery::wal::tests::page_data_checksums_salts_partial_and_uncommitted_tails_are_rejected ... ok
+2026-09-24T00:27:22.5321810Z test service::tests::spawn_attempts_are_uncertain_until_cleanup_and_failures_remain_latched ... ok
+2026-09-24T00:27:22.5323197Z test service_owner::tests::explicit_release_does_not_wait_for_an_inherited_open_file_description ... ok
+2026-09-24T00:27:22.5324502Z test worker::production::tests::valid_platform_views_with_multiple_active_parts_require_serial_attention ... ok
+2026-09-24T00:27:22.5327386Z test worker::production::tests::serial_selection_preserves_zero_or_one_active_part_without_rewriting_completed_parts ... ok
+2026-09-24T00:27:22.5354078Z test journal::recovery::wal::tests::absent_empty_header_only_and_complete_commits_are_distinct_valid_shapes ... ok
+2026-09-24T00:27:22.5482381Z test service::tests::production_expiry::journal_observation_expiry_retries_completed_read_instead_of_stopping_context ... ok
+2026-09-24T00:27:22.5484546Z [1m[92m     Running[0m unittests tests/support/cell_service_fixture.rs (target/debug/deps/rx_executor_cell_service_fixture-977d98ddfb44802c)
+2026-09-24T00:27:22.5487643Z [1m[92m     Running[0m unittests tests/support/decision_fixture.rs (target/debug/deps/rx_executor_decision_fixture-68cc80e77f3a2492)
+2026-09-24T00:27:22.5488574Z 
+2026-09-24T00:27:22.5489027Z test result: ok. 39 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.09s
+2026-09-24T00:27:22.5489660Z 
+2026-09-24T00:27:22.5490384Z [1m[92m     Running[0m unittests tests/support/read_fixture.rs (target/debug/deps/rx_executor_read_fixture-96c7d510f64fff49)
+2026-09-24T00:27:22.5491030Z 
+2026-09-24T00:27:22.5491127Z running 0 tests
+2026-09-24T00:27:22.5491252Z 
+2026-09-24T00:27:22.5491515Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:27:22.5491892Z 
+2026-09-24T00:27:22.5491896Z 
+2026-09-24T00:27:22.5491981Z running 0 tests
+2026-09-24T00:27:22.5492110Z 
+2026-09-24T00:27:22.5492360Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:27:22.5492705Z 
+2026-09-24T00:27:22.5493833Z 
+2026-09-24T00:27:22.5494048Z running 0 tests
+2026-09-24T00:27:22.5494429Z 
+2026-09-24T00:27:22.5494849Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:27:22.5495470Z 
+2026-09-24T00:27:22.5497336Z [1m[92m     Running[0m unittests src/bin/service.rs (target/debug/deps/rx_executor_service-85b9efdfabdfc703)
+2026-09-24T00:27:22.5508709Z 
+2026-09-24T00:27:22.5508892Z running 4 tests
+2026-09-24T00:27:22.5514179Z test cell_cli::guarded_tests::completed_run_retirement_keeps_the_resident_executor_protocol_ready ... ok
+2026-09-24T00:27:22.5515540Z test cell_cli::guarded_tests::executor_final_state_preserves_attention_and_rejects_incomplete_stop ... ok
+2026-09-24T00:27:22.5517139Z test cell_cli::guarded_tests::live_executor_status_never_claims_terminal_cleanup_or_p_admission ... ok
+2026-09-24T00:27:22.5548597Z test cell_cli::guarded_tests::executor_report_failure_signals_existing_cooperative_shutdown ... ok
+2026-09-24T00:27:22.5549536Z 
+2026-09-24T00:27:22.5549826Z test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:27:22.5550203Z 
+2026-09-24T00:27:22.5551867Z [1m[92m     Running[0m unittests tests/support/service_fixture.rs (target/debug/deps/rx_executor_service_fixture-df73a17bc3811b4d)
+2026-09-24T00:27:22.5561440Z 
+2026-09-24T00:27:22.5561622Z running 0 tests
+2026-09-24T00:27:22.5563599Z 
+2026-09-24T00:27:22.5564139Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:27:22.5564738Z 
+2026-09-24T00:27:22.5566423Z [1m[92m     Running[0m unittests tests/support/worker_fixture.rs (target/debug/deps/rx_executor_worker_fixture-dfb24df924cd94c7)
+2026-09-24T00:27:22.5574189Z 
+2026-09-24T00:27:22.5574361Z running 0 tests
+2026-09-24T00:27:22.5576259Z 
+2026-09-24T00:27:22.5576717Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:27:22.5577344Z 
+2026-09-24T00:27:22.5577888Z [1m[92m     Running[0m tests/assignment_journal.rs (target/debug/deps/assignment_journal-9e5881b3da46e642)
+2026-09-24T00:27:22.5589187Z 
+2026-09-24T00:27:22.5589389Z running 21 tests
+2026-09-24T00:27:22.6229096Z test a_run_store_from_another_service_identity_cannot_be_attached ... ok
+2026-09-24T00:27:22.6372688Z test changed_scope_or_run_journal_identity_is_never_repaired ... ok
+2026-09-24T00:27:22.6374991Z test a_crash_before_header_commit_leaves_an_error_instead_of_reinitializing_the_file ... ok
+2026-09-24T00:27:22.6396927Z test attach_rollback_and_lost_reply_are_recovered_without_a_second_transition ... ok
+2026-09-24T00:27:22.6770657Z test creation_marker_committed_before_filesystem_failure_forbids_later_retry ... ok
+2026-09-24T00:27:22.6881331Z test creation_marker_rollback_permits_the_first_initialization_without_changing_phase ... ok
+2026-09-24T00:27:22.6932106Z test initialized_header_survives_a_lost_initialization_reply ... ok
+2026-09-24T00:27:22.7014376Z test completion_rejects_paused_recovery_abandoned_wrong_identity_and_incomplete_parts ... ok
+2026-09-24T00:27:22.7097555Z test close_rollback_and_lost_reply_clear_current_atomically_and_preserve_stop_and_pending_requests ... ok
+2026-09-24T00:27:22.7287653Z test malformed_current_pointer_fails_required_open_instead_of_hiding_the_attached_run ... ok
+2026-09-24T00:27:22.7315731Z test lost_creation_marker_reply_stops_before_file_reservation_and_survives_reopen ... ok
+2026-09-24T00:27:22.7404344Z test old_header_without_creation_history_is_not_silently_upgraded ... ok
+2026-09-24T00:27:22.7595652Z test lost_run_initialization_reply_recovers_binding_without_reinitializing ... ok
+2026-09-24T00:27:22.7879600Z test preparing_rollback_and_lost_reply_preserve_exact_reservation_and_single_current ... ok
+2026-09-24T00:27:22.8094382Z test required_open_never_initializes_missing_empty_or_foreign_service_metadata ... ok
+2026-09-24T00:27:22.8307409Z test required_run_file_does_not_follow_symlinks ... ok
+2026-09-24T00:27:22.8399818Z test preparing_missing_run_is_explicit_but_partial_or_attached_missing_run_is_an_error ... ok
+2026-09-24T00:27:22.8499522Z test initialized_preparing_run_file_loss_never_reuses_either_initializer ... ok
+2026-09-24T00:27:22.8543352Z test preparing_cannot_close_and_closed_history_cannot_rebind_the_same_run ... ok
+2026-09-24T00:27:22.8639225Z test run_creation_marker_cannot_change_after_header_initialization ... ok
+2026-09-24T00:27:22.8715222Z test unbound_legacy_journal_is_not_adopted_or_modified ... ok
+2026-09-24T00:27:22.8716297Z 
+2026-09-24T00:27:22.8716947Z test result: ok. 21 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.31s
+2026-09-24T00:27:22.8718009Z 
+2026-09-24T00:27:22.8722393Z [1m[92m     Running[0m tests/cell_cli.rs (target/debug/deps/cell_cli-71747f592fcc9bcc)
+2026-09-24T00:27:22.8735558Z 
+2026-09-24T00:27:22.8735777Z running 15 tests
+2026-09-24T00:27:23.0021957Z test changed_configuration_and_pinned_bytes_cannot_reach_session_open ... ok
+2026-09-24T00:27:23.1097375Z test cell_configuration_rejects_run_visit_program_arguments_and_invalid_timing ... ok
+2026-09-24T00:27:23.1419846Z test copied_installation_cannot_silently_change_its_root ... ok
+2026-09-24T00:27:23.1642194Z test deployment_file_symlinks_and_private_key_permissions_are_rejected ... ok
+2026-09-24T00:27:23.2177305Z test duplicate_and_root_alias_are_refused_before_session_open_then_cleanup_allows_reopen ... ok
+2026-09-24T00:27:23.2602635Z test guarded_status_validation_fails_before_executor_peer_registration ... ok
+2026-09-24T00:27:23.3259830Z test init_pins_expected_identity_and_normalized_defaults_without_peer_registration ... ok
+2026-09-24T00:27:23.4537372Z test initialized_preparing_or_attached_run_file_loss_is_detected_before_new_peer_boot_registration ... ok
+2026-09-24T00:27:23.4856271Z test manifest_only_partial_installation_is_not_overwritten_or_connected ... ok
+2026-09-24T00:27:23.6146281Z test missing_manifest_empty_journal_and_changed_header_are_refused_before_connect ... ok
+2026-09-24T00:27:23.6673822Z test recovery_inspect_does_not_compete_with_service_or_store_owner ... ok
+2026-09-24T00:27:23.7357378Z test recovery_inspect_initialized_idle_store_is_deterministic_and_does_not_connect_or_modify_files ... ok
+2026-09-24T00:27:23.9194156Z test recovery_inspect_missing_or_corrupt_required_files_never_repairs_them ... ok
+2026-09-24T00:27:23.9304564Z test recovery_inspect_missing_root_does_not_initialize_a_service_or_connect ... ok
+2026-09-24T00:27:24.0227194Z test recovery_inspect_rejects_alias_root_and_changed_deployment_scope ... ok
+2026-09-24T00:27:24.0227857Z 
+2026-09-24T00:27:24.0228335Z test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.15s
+2026-09-24T00:27:24.0229055Z 
+2026-09-24T00:27:24.0231725Z [1m[92m     Running[0m tests/journal.rs (target/debug/deps/journal-d79c18c01338d856)
+2026-09-24T00:27:24.0245775Z 
+2026-09-24T00:27:24.0246134Z running 9 tests
+2026-09-24T00:27:24.0507926Z test only_a_confirmed_transactional_rejection_allows_new_cas_and_key ... ok
+2026-09-24T00:27:24.0508676Z test p_observation_preserves_network_uncertainty_and_deduplicates_unchanged_identity ... ok
+2026-09-24T00:27:24.0625734Z test material_identity_is_observed_without_rewriting_a_lost_begin_reply ... ok
+2026-09-24T00:27:24.0716652Z test pause_intent_is_scoped_to_executor_session_and_epoch_without_changing_operation_keys ... ok
+2026-09-24T00:27:24.0732731Z test checkpoint_expiry_preserves_old_attempt_and_pending_projection_is_not_an_rpc_reply ... ok
+2026-09-24T00:27:24.0842248Z test prepared_entered_and_reply_boundaries_survive_rollback_and_lost_commit_response ... ok
+2026-09-24T00:27:24.0862515Z test reconciliation_acknowledgment_is_not_a_resource_release_observation ... ok
+2026-09-24T00:27:24.0883221Z test stop_intent_survives_commit_response_loss_and_never_becomes_a_part_request ... ok
+2026-09-24T00:27:24.0932516Z test stop_attempt_key_is_preserved_and_p_observation_does_not_invent_a_reply ... ok
+2026-09-24T00:27:24.0933089Z 
+2026-09-24T00:27:24.0933401Z test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+2026-09-24T00:27:24.0933791Z 
+2026-09-24T00:27:24.0938564Z [1m[92m     Running[0m tests/recovery_inspect.rs (target/debug/deps/recovery_inspect-236b156d35cc0801)
+2026-09-24T00:27:24.0952079Z 
+2026-09-24T00:27:24.0952378Z running 5 tests
+2026-09-24T00:27:24.1107388Z test owner_conflict_symlink_parent_and_size_limit_fail_without_source_writes ... ok
+2026-09-24T00:27:24.1868012Z test missing_header_wrong_identity_and_missing_writer_lock_are_never_initialized ... ok
+2026-09-24T00:27:24.2081375Z test current_pending_stop_is_inspected_twice_without_source_change_or_resolution ... ok
+2026-09-24T00:27:24.2100540Z test preparing_never_initializes_or_attaches_and_creation_loss_is_rejected ... ok
+2026-09-24T00:27:24.2279902Z test crash_style_wal_copy_is_included_without_touching_the_retained_source ... ok
+2026-09-24T00:27:24.2280428Z 
+2026-09-24T00:27:24.2280755Z test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.13s
+2026-09-24T00:27:24.2281528Z 
+2026-09-24T00:27:24.2284953Z [1m[92m     Running[0m tests/recovery_wal_corruption.rs (target/debug/deps/recovery_wal_corruption-c927d19fd83cce36)
+2026-09-24T00:27:24.2299481Z 
+2026-09-24T00:27:24.2299679Z running 2 tests
+2026-09-24T00:27:24.3255594Z test invalid_assignment_wal_header_cannot_hide_committed_attachment_and_pending_requests ... ok
+2026-09-24T00:27:24.3729116Z test stale_committed_shm_cannot_hide_later_complete_wal_commits_or_change_the_original_copy ... ok
+2026-09-24T00:27:24.3729965Z 
+2026-09-24T00:27:24.3730379Z test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.14s
+2026-09-24T00:27:24.3730998Z 
+2026-09-24T00:27:24.3733364Z [1m[92m     Running[0m tests/service_owner.rs (target/debug/deps/service_owner-3b90606ac07fc14f)
+2026-09-24T00:27:24.3744719Z 
+2026-09-24T00:27:24.3744905Z running 8 tests
+2026-09-24T00:27:24.3753604Z test invalid_journal_path_cannot_overwrite_the_ownership_file ... ok
+2026-09-24T00:27:24.3767245Z test directory_alias_cannot_bypass_the_service_owner ... ok
+2026-09-24T00:27:24.3774598Z test different_service_roots_do_not_impose_a_global_cell_owner ... ok
+2026-09-24T00:27:24.3776691Z test one_root_cannot_register_two_services_with_different_run_journals ... ok
+2026-09-24T00:27:24.3777572Z test ownership_symlink_is_rejected_without_touching_its_target ... ok
+2026-09-24T00:27:24.3786726Z test startup_failure_releases_ownership_without_removing_the_lock_file ... ok
+2026-09-24T00:27:24.3788005Z test ownership_special_files_are_rejected ... ok
+2026-09-24T00:27:24.4069479Z test entrypoint::competing_product_process_never_reaches_connect_and_failure_unlocks_root ... ok
+2026-09-24T00:27:24.4070245Z 
+2026-09-24T00:27:24.4070663Z test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+2026-09-24T00:27:24.4071315Z 
+2026-09-24T00:27:24.4072248Z [1m[92m     Running[0m unittests src/lib.rs (target/debug/deps/rx_host-f91524cec54a1edc)
+2026-09-24T00:27:24.4089746Z 
+2026-09-24T00:27:24.4089954Z running 5 tests
+2026-09-24T00:27:24.4099957Z test service::guarded_tests::guarded_host_stopped_requires_final_adapter_proof_and_closed_admission ... ok
+2026-09-24T00:27:24.4105329Z test publication::tests::local_idle_ticks_do_not_extend_the_one_second_remote_probe_deadline ... ok
+2026-09-24T00:27:24.4237664Z test service::guarded_tests::host_report_failure_requests_stop_and_cannot_become_stopped_later ... ok
+2026-09-24T00:27:24.4473032Z test publication::tests::idle_remote_probe_detects_expired_session_without_new_evidence_or_native_effects ... ok
+2026-09-24T00:27:24.8680577Z test service::guarded_tests::unchanged_host_status_heartbeats_and_stays_terminal_after_finish ... ok
+2026-09-24T00:27:24.8681330Z 
+2026-09-24T00:27:24.8681766Z test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.46s
+2026-09-24T00:27:24.8682375Z 
+2026-09-24T00:27:24.8693216Z [1m[92m     Running[0m unittests tests/support/crash_harness.rs (target/debug/deps/rx_host_crash_fixture-9fdb37aa338401c1)
+2026-09-24T00:27:24.8703868Z 
+2026-09-24T00:27:24.8704116Z running 0 tests
+2026-09-24T00:27:24.8704378Z 
+2026-09-24T00:27:24.8704813Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:27:24.8705429Z 
+2026-09-24T00:27:24.8708161Z [1m[92m     Running[0m unittests tests/support/recovery_native_fixture.rs (target/debug/deps/rx_host_recovery_fixture-9b97862bb22097cf)
+2026-09-24T00:27:24.8716936Z 
+2026-09-24T00:27:24.8717132Z running 0 tests
+2026-09-24T00:27:24.8717459Z 
+2026-09-24T00:27:24.8717881Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:27:24.8718486Z 
+2026-09-24T00:27:24.8720591Z [1m[92m     Running[0m unittests tests/support/sim_server.rs (target/debug/deps/rx_host_sim_server-9738e97a18da66aa)
+2026-09-24T00:27:24.8729556Z 
+2026-09-24T00:27:24.8729803Z running 0 tests
+2026-09-24T00:27:24.8730024Z 
+2026-09-24T00:27:24.8730406Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:27:24.8731430Z 
+2026-09-24T00:27:24.8732817Z [1m[92m     Running[0m unittests src/bin/rx-hostd.rs (target/debug/deps/rx_hostd-9a39f2a768f9513c)
+2026-09-24T00:27:24.8741552Z 
+2026-09-24T00:27:24.8741815Z running 0 tests
+2026-09-24T00:27:24.8742039Z 
+2026-09-24T00:27:24.8742459Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:27:24.8743127Z 
+2026-09-24T00:27:24.8744668Z [1m[92m     Running[0m tests/gate.rs (target/debug/deps/gate-b3923ec06af150a3)
+2026-09-24T00:27:24.8756274Z 
+2026-09-24T00:27:24.8756462Z running 30 tests
+2026-09-24T00:27:24.8997442Z test cancellation_arriving_before_prepare_creates_permanent_tombstone ... ok
+2026-09-24T00:27:24.9040529Z test configuration_commit_failure_has_no_receipt_context_or_consumed_slot ... ok
+2026-09-24T00:27:24.9100090Z test altered_permit_and_unapproved_intent_are_rejected_before_effect ... ok
+2026-09-24T00:27:24.9242635Z test configuration_cohort_is_complete_and_a_rejected_member_prevents_all_context_changes ... ok
+2026-09-24T00:27:24.9314221Z test configuration_missing_quiescence_does_not_create_applied_context ... ok
+2026-09-24T00:27:24.9317489Z test configuration_does_not_treat_prepared_native_work_as_quiescent ... ok
+2026-09-24T00:27:24.9466689Z test configuration_rejects_an_old_quiescence_observation ... ok
+2026-09-24T00:27:24.9500225Z test configuration_context_is_durable_unqualified_and_same_request_never_reapplies ... ok
+2026-09-24T00:27:24.9604972Z test configuration_scope_binding_and_fence_are_not_caller_success_claims ... ok
+2026-09-24T00:27:24.9777434Z test late_fence_replay_cannot_remove_a_new_arm_or_rewind_epoch ... ok
+2026-09-24T00:27:24.9794656Z test expiry_during_commit_does_not_enter_native_and_is_not_retried ... ok
+2026-09-24T00:27:24.9977727Z test native_submission_serializes_fence_while_protection_is_independent ... ok
+2026-09-24T00:27:25.0028474Z test evidence_publication_cursor_is_durable_scoped_and_never_accepts_a_foreign_ack ... ok
+2026-09-24T00:27:25.0127268Z test prepare_does_not_call_device_and_authorize_duplicates_are_receipt_lookup ... ok
+2026-09-24T00:27:25.0191683Z test prepared_rebind_retires_old_permit_permanently ... ok
+2026-09-24T00:27:25.0597565Z test qualification_tests::qualification_commit_failure_rolls_back_cohort_receipt_and_slot ... ok
+2026-09-24T00:27:25.0683175Z test qualification_tests::qualification_arm_rejects_partial_clearance_and_any_changed_cohort_member ... ok
+2026-09-24T00:27:25.0739381Z test qualification_tests::qualification_full_cohort_is_atomic_and_a_wrong_member_cannot_be_accepted ... ok
+2026-09-24T00:27:25.0987318Z test qualification_tests::qualification_acceptance_preserves_blocks_requires_explicit_arm_and_rejects_old_qualification ... ok
+2026-09-24T00:27:25.1187655Z test qualification_tests::qualification_restart_keeps_receipt_and_never_restores_applicability_or_arm ... ok
+2026-09-24T00:27:25.1305898Z test qualification_tests::qualification_identity_cannot_be_reused_for_different_evidence_and_empty_scope_grants_no_operations ... ok
+2026-09-24T00:27:25.1460244Z test renewal_replay_does_not_extend_expiry_and_expired_grant_stays_expired ... ok
+2026-09-24T00:27:25.1659177Z test same_grant_fence_requires_same_request_identity ... ok
+2026-09-24T00:27:25.1661196Z test qualification_tests::qualification_revalidation_does_not_hide_prepared_native_work ... ok
+2026-09-24T00:27:25.1772048Z test qualification_tests::qualification_same_key_same_review_and_changed_scope_cannot_replace_accepted_identity ... ok
+2026-09-24T00:27:25.1778212Z test simulated_device_has_an_independent_exclusive_owner ... ok
+2026-09-24T00:27:25.1916504Z test stable_handover_is_not_permission_to_drop_an_adapter ... ok
+2026-09-24T00:27:25.1938867Z test service_stop_latch_interrupts_the_pre_native_boundary_without_waiting_for_gate_lock ... ok
+2026-09-24T00:27:25.1958437Z test service_stop_latches_before_database_access_and_preserves_uncertain_work ... ok
+2026-09-24T00:27:25.2285084Z test qualification_tests::qualification_requires_supported_fresh_local_quiescence ... ok
+2026-09-24T00:27:25.2286413Z 
+2026-09-24T00:27:25.2286692Z test result: ok. 30 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.35s
+2026-09-24T00:27:25.2287044Z 
+2026-09-24T00:27:25.2291829Z [1m[92m     Running[0m tests/guarded_status.rs (target/debug/deps/guarded_status-a40fa49ecdbfdbc0)
+2026-09-24T00:27:25.2311929Z 
+2026-09-24T00:27:25.2312073Z running 3 tests
+2026-09-24T00:27:25.2318121Z test held_adapter_startup_status_failure_fixture ... ignored, isolated environment fixture invoked by the bounded parent test
+2026-09-24T00:27:25.2676836Z test invalid_guarded_writer_fails_before_passive_native_open_or_rpc_admission ... ok
+2026-09-24T00:27:27.2641616Z test reporter_failure_after_native_open_waits_for_explicit_adapter_drop_permission ... ok
+2026-09-24T00:27:27.2642693Z 
+2026-09-24T00:27:27.2643377Z test result: ok. 2 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 2.03s
+2026-09-24T00:27:27.2644408Z 
+2026-09-24T00:27:27.2647599Z [1m[92m     Running[0m tests/melsec.rs (target/debug/deps/melsec-f5ad7d75eec2aa12)
+2026-09-24T00:27:27.2661960Z 
+2026-09-24T00:27:27.2662165Z running 15 tests
+2026-09-24T00:27:27.7514011Z test abrupt_exit_at_native_commit_and_write_boundaries_never_replays ... ok
+2026-09-24T00:27:27.7753307Z test ack_is_pending_and_only_later_independent_sensor_observation_captures ... ok
+2026-09-24T00:27:27.8219783Z test actual_host_gate_journal_reconcile_evidence_and_stop_use_melsec_adapter ... ok
+2026-09-24T00:27:27.8406724Z test already_satisfied_state_records_evidence_without_a_native_write ... ok
+2026-09-24T00:27:27.8845309Z test captured_original_session_survives_restart_but_uncaptured_ack_does_not ... ok
+2026-09-24T00:27:27.9042110Z test corrupted_completion_record_is_not_adopted_as_historical_fact ... ok
+2026-09-24T00:27:27.9228579Z test final_native_read_after_journal_commit_rechecks_ready_without_resend ... ok
+2026-09-24T00:27:27.9229285Z test melsec_crash_child ... ignored, executed only as an isolated child by the crash-boundary test
+2026-09-24T00:27:27.9382336Z test final_read_within_transport_budget_but_beyond_guard_lifetime_cannot_write ... ok
+2026-09-24T00:27:27.9591208Z test linux_real_boottime_adapter_observation_write_completion_and_drop ... ok
+2026-09-24T00:27:27.9823303Z test lost_reply_and_new_process_never_resubmit_or_clear_pending ... ok
+2026-09-24T00:27:27.9933811Z test new_or_replaced_journal_and_mismatched_profile_are_rejected_without_native_io ... ok
+2026-09-24T00:27:28.0055825Z test profile_and_intent_scope_fail_before_native_writes ... ok
+2026-09-24T00:27:28.0527344Z test publication_generation_regression_stale_and_inconsistent_images_latch ... ok
+2026-09-24T00:27:28.0660259Z test valid_support_does_not_imply_drop_permission_and_protection_does_not_release_chuck ... ok
+2026-09-24T00:27:28.0660754Z 
+2026-09-24T00:27:28.0661048Z test result: ok. 14 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.80s
+2026-09-24T00:27:28.0661439Z 
+2026-09-24T00:27:28.0666396Z [1m[92m     Running[0m tests/melsec_service.rs (target/debug/deps/melsec_service-35892b3c5fa8f706)
+2026-09-24T00:27:28.0686840Z 
+2026-09-24T00:27:28.0687074Z running 7 tests
+2026-09-24T00:27:28.0697521Z test export_melsec_image_fixture ... ignored, exports signed, test-only loopback configuration for the product image test
+2026-09-24T00:27:28.2409416Z test physical_metadata_requires_current_qualification_and_separate_arm_on_loopback ... ok
+2026-09-24T00:27:28.3315630Z test physical_startup_qualification_id_does_not_authorize_arm ... ok
+2026-09-24T00:27:28.5051304Z test signature_content_policy_asset_release_and_binding_tampering_fail_before_initialization ... ok
+2026-09-24T00:27:28.5217707Z test product_composition_initializes_starts_and_stops_the_signed_melsec_package ... ok
+2026-09-24T00:27:28.6285897Z test signed_device_package_binds_release_profile_assets_and_exact_cell_without_io ... ok
+2026-09-24T00:27:28.7460796Z test validly_signed_wrong_release_controller_or_installation_is_rejected ... ok
+2026-09-24T00:27:28.7461897Z 
+2026-09-24T00:27:28.7462392Z test result: ok. 6 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.68s
+2026-09-24T00:27:28.7463083Z 
+2026-09-24T00:27:28.7469614Z [1m[92m     Running[0m tests/mtls.rs (target/debug/deps/mtls-1b441f63d7b4aa9c)
+2026-09-24T00:27:28.7488417Z 
+2026-09-24T00:27:28.7489111Z running 5 tests
+2026-09-24T00:27:28.7977422Z test cell_manifest_and_session_are_mandatory_before_grant ... ok
+2026-09-24T00:27:28.8308368Z test valid_ca_without_registered_fingerprint_cannot_impersonate_platform ... ok
+2026-09-24T00:27:28.8327280Z test concurrent_hello_retries_produce_one_usable_session ... ok
+2026-09-24T00:27:28.8328424Z test changed_content_under_rpc_key_is_rejected_and_legacy_dispatch_cannot_bypass_cell ... ok
+2026-09-24T00:27:28.8461595Z test mtls_negotiation_prepare_authorize_and_evidence_roundtrip ... ok
+2026-09-24T00:27:28.8462366Z 
+2026-09-24T00:27:28.8462956Z test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.10s
+2026-09-24T00:27:28.8463876Z 
+2026-09-24T00:27:28.8474109Z [1m[92m     Running[0m tests/process_crash.rs (target/debug/deps/process_crash-f6645b137554c429)
+2026-09-24T00:27:28.8485858Z 
+2026-09-24T00:27:28.8486344Z running 3 tests
+2026-09-24T00:27:28.8791987Z test configuration_commit_survives_sigkill_before_reply_without_restoring_arm ... ok
+2026-09-24T00:27:28.8878757Z test qualification_commit_survives_sigkill_before_reply_without_restoring_authority ... ok
+2026-09-24T00:27:28.9145107Z test sigkill_at_both_journal_native_boundaries_never_replays_device_effect ... ok
+2026-09-24T00:27:28.9145854Z 
+2026-09-24T00:27:28.9146500Z test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+2026-09-24T00:27:28.9146900Z 
+2026-09-24T00:27:28.9147896Z [1m[92m     Running[0m tests/ros_jtc.rs (target/debug/deps/ros_jtc-6fe957f0bc1aa7cc)
+2026-09-24T00:27:28.9160628Z 
+2026-09-24T00:27:28.9160783Z running 12 tests
+2026-09-24T00:27:28.9164293Z test actual_rust_host_to_cpp_bridge_to_ros_action_preserves_original_goal ... ignored, requires the isolated real ROS simulator and shipped bridge binary
+2026-09-24T00:27:29.0661323Z test abrupt_exit_at_each_native_boundary_preserves_entry_and_never_replays ... ok
+2026-09-24T00:27:29.0661948Z test crash_jtc_child ... ignored, child-only abrupt-exit fixture
+2026-09-24T00:27:29.1029902Z test action_completion_does_not_close_bridge_until_support_and_child_exit_are_proven ... ok
+2026-09-24T00:27:29.3325924Z test bound_jtc_outcome_table_interprets_native_captures_without_code_zero_fallback ... ok
+2026-09-24T00:27:29.3635029Z test contradictory_result_is_stored_without_success_capture ... ok
+2026-09-24T00:27:29.4124169Z test host_dispatch_context_survives_native_journal_and_rejects_expiry_or_generation_change ... ok
+2026-09-24T00:27:29.4514541Z test independent_generation_ownership_and_drop_proof_are_required ... ok
+2026-09-24T00:27:29.4604030Z test simulation_fixture_profile_cannot_claim_physical_equipment ... ok
+2026-09-24T00:27:29.4982865Z test journal_identity_loss_and_corrupt_capture_cannot_be_adopted ... ok
+2026-09-24T00:27:29.5231140Z test missing_authority_or_changed_artifact_never_dispatches ... ok
+2026-09-24T00:27:29.5826321Z test native_journal_prevents_resend_and_new_id_bypass_after_reply_loss_and_reopen ... ok
+2026-09-24T00:27:29.5827093Z 
+2026-09-24T00:27:29.5827599Z test result: ok. 10 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.67s
+2026-09-24T00:27:29.5828261Z 
+2026-09-24T00:27:29.5831027Z [1m[92m     Running[0m tests/ros_process.rs (target/debug/deps/ros_process-7b3e56bb2a0debb0)
+2026-09-24T00:27:29.5842731Z 
+2026-09-24T00:27:29.5842931Z running 3 tests
+2026-09-24T00:27:29.5868162Z test executable_pin_and_configuration_are_checked_before_spawn ... ok
+2026-09-24T00:27:29.6427363Z test owned_executable_copy_and_bounded_pipes_preserve_context_and_close_without_kill ... ok
+2026-09-24T00:27:29.9183904Z test timeout_oversize_and_wrong_instance_permanently_fault_the_pipe ... ok
+2026-09-24T00:27:29.9185394Z 
+2026-09-24T00:27:29.9186646Z test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.33s
+2026-09-24T00:27:29.9187525Z 
+2026-09-24T00:27:29.9202423Z [1m[92m     Running[0m tests/service.rs (target/debug/deps/service-9d151558d3c8c37a)
+2026-09-24T00:27:29.9227774Z 
+2026-09-24T00:27:29.9228286Z running 15 tests
+2026-09-24T00:27:29.9247894Z test export_host_image_fixture ... ignored, exports isolated container fixture
+2026-09-24T00:27:29.9481049Z test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+2026-09-24T00:27:29.9687726Z test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+2026-09-24T00:27:29.9689415Z test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+2026-09-24T00:27:29.9699527Z test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+2026-09-24T00:27:30.1060685Z test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+2026-09-24T00:27:30.1937758Z test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+2026-09-24T00:27:30.2457708Z test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+2026-09-24T00:27:30.2508832Z test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+2026-09-24T00:27:30.3085376Z test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+2026-09-24T00:27:30.3216577Z test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+2026-09-24T00:27:30.3290131Z test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+2026-09-24T00:27:30.3473747Z test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+2026-09-24T00:27:30.3832795Z test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+2026-09-24T00:27:30.5437679Z test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+2026-09-24T00:27:30.5439086Z 
+2026-09-24T00:27:30.5439904Z test result: ok. 13 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.62s
+2026-09-24T00:27:30.5441100Z 
+2026-09-24T00:27:30.5449207Z [1m[92m     Running[0m unittests src/lib.rs (target/debug/deps/rx_melsec_mc-77986d4f92d89cf4)
+2026-09-24T00:27:30.5460451Z 
+2026-09-24T00:27:30.5460657Z running 0 tests
+2026-09-24T00:27:30.5460950Z 
+2026-09-24T00:27:30.5463179Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:27:30.5463966Z 
+2026-09-24T00:27:30.5464757Z [1m[92m     Running[0m tests/transport.rs (target/debug/deps/transport-5b7a848e485e449c)
+2026-09-24T00:27:30.5473189Z 
+2026-09-24T00:27:30.5473393Z running 12 tests
+2026-09-24T00:27:30.5481206Z test invalid_configuration_fails_before_a_connection_attempt ... ok
+2026-09-24T00:27:30.5482537Z test denied_addresses_and_zero_or_oversize_reads_send_no_bytes ... ok
+2026-09-24T00:27:30.5484713Z test explicit_route_bytes_and_24_bit_addresses_are_preserved ... ok
+2026-09-24T00:27:30.5488818Z test documented_bit_read_and_word_read_vectors_over_fragmented_tcp ... ok
+2026-09-24T00:27:30.5491669Z test lost_write_response_preserves_uncertainty_and_never_resends ... ok
+2026-09-24T00:27:30.5492581Z test mapped_single_bit_write_ack_does_not_claim_physical_completion ... ok
+2026-09-24T00:27:30.5497203Z test passive_connect_and_drop_never_send_plc_commands ... ok
+2026-09-24T00:27:30.5498337Z test profile_is_explicit_bounded_and_simulation_cannot_target_the_site ... ok
+2026-09-24T00:27:30.5499613Z test plc_error_code_is_preserved_without_assuming_write_nonexecution ... ok
+2026-09-24T00:27:30.5500498Z test write_ack_payload_cannot_smuggle_a_completion_value ... ok
+2026-09-24T00:27:30.5511373Z test malformed_headers_lengths_end_codes_and_payloads_fault_the_connection ... ok
+2026-09-24T00:27:30.7006923Z test total_deadline_is_not_extended_by_a_slow_trickle ... ok
+2026-09-24T00:27:30.7008117Z 
+2026-09-24T00:27:30.7008651Z test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.15s
+2026-09-24T00:27:30.7009354Z 
+2026-09-24T00:27:30.7010703Z [1m[92m     Running[0m unittests src/lib.rs (target/debug/deps/rx_process-7ab94e35d5f529e8)
+2026-09-24T00:27:30.7022128Z 
+2026-09-24T00:27:30.7022383Z running 0 tests
+2026-09-24T00:27:30.7022727Z 
+2026-09-24T00:27:30.7023300Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:27:30.7023904Z 
+2026-09-24T00:27:30.7025814Z [1m[92m     Running[0m unittests src/bin/rx-process-compile.rs (target/debug/deps/rx_process_compile-75ef01f53c6c84b4)
+2026-09-24T00:27:30.7034280Z 
+2026-09-24T00:27:30.7034536Z running 0 tests
+2026-09-24T00:27:30.7034870Z 
+2026-09-24T00:27:30.7035424Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:27:30.7036173Z 
+2026-09-24T00:27:30.7037770Z [1m[92m     Running[0m tests/n1_handover.rs (target/debug/deps/n1_handover-e9009e15ea82bb14)
+2026-09-24T00:27:30.7047238Z 
+2026-09-24T00:27:30.7047457Z running 2 tests
+2026-09-24T00:27:30.7092264Z test n1_cross_host_support_collision_is_not_hidden_by_controller_names ... ok
+2026-09-24T00:27:30.7573366Z test n1_command_handover_and_lost_response_trace ... ok
+2026-09-24T00:27:30.7574272Z 
+2026-09-24T00:27:30.7575207Z test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+2026-09-24T00:27:30.7577147Z 
+2026-09-24T00:27:30.7578705Z [1m[92m     Running[0m tests/package.rs (target/debug/deps/package-253ba865ab7542fd)
+2026-09-24T00:27:30.7591497Z 
+2026-09-24T00:27:30.7591799Z running 1 test
+2026-09-24T00:27:30.7849953Z test verified_content_still_requires_process_semantic_validation ... ok
+2026-09-24T00:27:30.7851275Z 
+2026-09-24T00:27:30.7852220Z test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+2026-09-24T00:27:30.7853641Z 
+2026-09-24T00:27:30.7854919Z [1m[92m     Running[0m tests/process.rs (target/debug/deps/process-11033d06b65c5739)
+2026-09-24T00:27:30.7864970Z 
+2026-09-24T00:27:30.7865242Z running 10 tests
+2026-09-24T00:27:30.7937572Z test branches_require_a_committed_choice_and_reject_opposite_branch_history ... ok
+2026-09-24T00:27:30.7939039Z test incomplete_history_and_recursive_subflows_do_not_create_new_work ... ok
+2026-09-24T00:27:30.7955211Z test malformed_or_unbounded_source_and_partial_progress_are_rejected ... ok
+2026-09-24T00:27:30.7967699Z test parallel_checks_resolved_resource_conflicts_and_suppresses_new_work_on_unknown ... ok
+2026-09-24T00:27:30.7988677Z test sequence_waits_for_authoritative_completion_and_resource_handover ... ok
+2026-09-24T00:27:30.8004429Z test repeat_and_subflow_expand_into_distinct_stable_occurrences ... ok
+2026-09-24T00:27:30.8064337Z test waits_and_interventions_require_recorded_decisions_without_local_timeout_success ... ok
+2026-09-24T00:27:30.8065594Z test unknown_and_disputed_results_never_become_failure_or_a_new_attempt ... ok
+2026-09-24T00:27:30.8118095Z test source_link_checks_repeat_count_and_call_instantiation ... ok
+2026-09-24T00:27:30.8135201Z test source_link_rejects_reordered_children_and_swapped_branch_arms_with_valid_node_ids ... ok
+2026-09-24T00:27:30.8135926Z 
+2026-09-24T00:27:30.8136588Z test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+2026-09-24T00:27:30.8137278Z 
+2026-09-24T00:27:30.8139290Z [1m[92m     Running[0m unittests src/lib.rs (target/debug/deps/rx_process_package-5f16024e03af5e7e)
+2026-09-24T00:27:30.8151040Z 
+2026-09-24T00:27:30.8151213Z running 0 tests
+2026-09-24T00:27:30.8151447Z 
+2026-09-24T00:27:30.8153531Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:27:30.8154130Z 
+2026-09-24T00:27:30.8155316Z [1m[92m     Running[0m unittests src/bin/rx-process-package.rs (target/debug/deps/rx_process_package-8c2911ae86b85053)
+2026-09-24T00:27:30.8163497Z 
+2026-09-24T00:27:30.8163660Z running 0 tests
+2026-09-24T00:27:30.8165300Z 
+2026-09-24T00:27:30.8165748Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:27:30.8166620Z 
+2026-09-24T00:27:30.8167225Z [1m[92m     Running[0m tests/package.rs (target/debug/deps/package-fba9ef785629f345)
+2026-09-24T00:27:30.8177929Z 
+2026-09-24T00:27:30.8178094Z running 15 tests
+2026-09-24T00:27:30.8447370Z test a_valid_signature_does_not_hide_inconsistent_packaged_compile_inputs ... ok
+2026-09-24T00:27:30.8456876Z test export_device_process_review_authority ... ignored
+2026-09-24T00:27:30.8479055Z test export_process_authoring_key ... ignored, exports a test-only public PROCESS signing key for mixed ABI policy integration
+2026-09-24T00:27:30.8480271Z test external_signer_fixture_can_sign_a_caller_selected_local_test_candidate ... ok
+2026-09-24T00:27:30.8487081Z test device_provenance_survives_signed_package_and_actual_recompilation ... ok
+2026-09-24T00:27:30.8488255Z test deterministic_candidate_detached_signature_and_recompilation_preserve_input_identity ... ok
+2026-09-24T00:27:30.8597280Z test missing_program_artifacts_and_parallel_resource_conflicts_block_assembly ... ok
+2026-09-24T00:27:30.8636835Z test sign_device_process_review ... ignored
+2026-09-24T00:27:30.8637820Z test sign_mixed_process_request ... ignored, test-only external package signer for the isolated mixed-policy harness
+2026-09-24T00:27:30.8639429Z test fixture_for_external_signing_demo_is_explicit_and_never_a_default_production_key ... ok
+2026-09-24T00:27:30.8725498Z test candidate_publication_does_not_overwrite_and_signed_directory_has_exact_inventory ... ok
+2026-09-24T00:27:30.8758539Z test policy_assets_are_read_and_dependency_files_are_verified_under_current_trust ... ok
+2026-09-24T00:27:30.8886852Z test signed_but_inconsistent_process_produces_failure_report_without_resolved_artifact ... ok
+2026-09-24T00:27:30.8968370Z test signer_scope_key_alias_and_content_changes_do_not_gain_trust ... ok
+2026-09-24T00:27:30.9113498Z test verification_report_uses_actual_signed_compilation_and_binds_request_policy ... ok
+2026-09-24T00:27:30.9114238Z 
+2026-09-24T00:27:30.9114749Z test result: ok. 11 passed; 0 failed; 4 ignored; 0 measured; 0 filtered out; finished in 0.09s
+2026-09-24T00:27:30.9115418Z 
+2026-09-24T00:27:30.9117979Z [1m[92m     Running[0m unittests src/lib.rs (target/debug/deps/rx_service_status-67d07c1593341ad2)
+2026-09-24T00:27:30.9130631Z 
+2026-09-24T00:27:30.9130858Z running 13 tests
+2026-09-24T00:27:30.9155965Z test tests::executor_cell_journal_and_configuration_are_exact_scope ... ok
+2026-09-24T00:27:30.9160024Z test tests::host_role_installation_identity_instance_and_pid_are_exact ... ok
+2026-09-24T00:27:30.9162345Z test tests::atomic_publication_keeps_old_readers_on_a_complete_old_file ... ok
+2026-09-24T00:27:30.9179996Z test tests::product_reader_and_reporter_clock_use_linux_boottime ... ok
+2026-09-24T00:27:30.9184364Z test tests::malformed_or_removed_owned_status_cannot_be_silently_recreated ... ok
+2026-09-24T00:27:30.9199075Z test tests::lifecycle_publication_preserves_exact_source_time_and_owner ... ok
+2026-09-24T00:27:30.9203596Z test tests::reader_preserves_same_sequence_content_changes_for_supervisor_comparison ... ok
+2026-09-24T00:27:30.9208708Z test tests::one_writer_rejects_foreign_owner_and_content_replacement ... ok
+2026-09-24T00:27:30.9210099Z test tests::status_path_opts_in_without_breaking_legacy_instance_id_only_environment ... ok
+2026-09-24T00:27:30.9217810Z test tests::reporter_clock_regression_and_sequence_overflow_do_not_replace_last_state ... ok
+2026-09-24T00:27:30.9225785Z test tests::stale_future_and_other_clock_observations_are_rejected_without_refresh ... ok
+2026-09-24T00:27:30.9239246Z test tests::symlinks_special_files_and_missing_parent_are_errors_not_absence ... ok
+2026-09-24T00:27:30.9259117Z test tests::schema_zero_sequence_and_strict_payload_shape_are_enforced ... ok
+2026-09-24T00:27:30.9259549Z 
+2026-09-24T00:27:30.9259834Z test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+2026-09-24T00:27:30.9260565Z 
+2026-09-24T00:27:30.9262871Z [1m[92m     Running[0m unittests src/lib.rs (target/debug/deps/rx_solution_catalog-a7bee5d2b3914d8a)
+2026-09-24T00:27:30.9273707Z 
+2026-09-24T00:27:30.9273854Z running 0 tests
+2026-09-24T00:27:30.9275881Z 
+2026-09-24T00:27:30.9276594Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:27:30.9277209Z 
+2026-09-24T00:27:30.9277815Z [1m[92m     Running[0m tests/builtin.rs (target/debug/deps/builtin-6aad7fddc55e4a50)
+2026-09-24T00:27:30.9287107Z 
+2026-09-24T00:27:30.9287273Z running 3 tests
+2026-09-24T00:27:30.9298799Z test external_sources_are_vendor_neutral_and_still_revision_bound ... ok
+2026-09-24T00:27:30.9301051Z test builtin_is_explicit_simulation_with_independent_joint_sets ... ok
+2026-09-24T00:27:30.9321115Z test provenance_and_commissioning_cannot_be_erased_or_relabeled ... ok
+2026-09-24T00:27:30.9321689Z 
+2026-09-24T00:27:30.9322178Z test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:27:30.9322693Z 
+2026-09-24T00:27:30.9323941Z [1m[92m     Running[0m unittests src/lib.rs (target/debug/deps/rx_supervisor-599f899611ca37e5)
+2026-09-24T00:27:30.9333824Z 
+2026-09-24T00:27:30.9333973Z running 12 tests
+2026-09-24T00:27:30.9338683Z test initialization::termination_tests::failed_signal_command_status_is_not_a_successful_delivery ... ok
+2026-09-24T00:27:30.9399423Z test initialization::termination_tests::failed_term_keeps_the_same_owned_child_retryable_until_delivery_is_confirmed ... ok
+2026-09-24T00:27:31.6608838Z test process::linux_limits::tests::exec_syscall_failure_is_not_an_admission ... ok
+2026-09-24T00:27:31.6644774Z test process::linux_limits::tests::actual_kernel_permission_failure_after_lowering_rolls_back_before_target ... ok
+2026-09-24T00:27:31.6646538Z test process::linux_limits::tests::gate_death_in_exec_window_cannot_mint_a_receipt_from_eof ... ok
+2026-09-24T00:27:31.6657680Z test process::linux_limits::tests::authority_change_after_application_prevents_exec_and_confirms_rollback ... ok
+2026-09-24T00:27:31.6684627Z test process::signal_tests::failed_signal_keeps_control_and_unknown_effect_errors ... ok
+2026-09-24T00:27:31.6686265Z test process::signal_tests::failed_signal_uses_only_confirmed_owned_non_actuating_exit ... ok
+2026-09-24T00:27:31.6687430Z test process::signal_tests::failed_signal_with_live_or_unconfirmed_child_remains_error ... ok
+2026-09-24T00:27:31.6688485Z test process::signal_tests::signal_acceptance_does_not_claim_child_exit ... ok
+2026-09-24T00:27:32.1468845Z test process::linux_limits::tests::observation_failure_after_application_confirms_no_remaining_child_policy ... ok
+2026-09-24T00:27:32.1830348Z test process::linux_limits::tests::gate_excludes_current_directory_python_module_shadowing ... ok
+2026-09-24T00:27:32.1831422Z 
+2026-09-24T00:27:32.1832055Z test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.25s
+2026-09-24T00:27:32.1832990Z 
+2026-09-24T00:27:32.1848467Z [1m[92m     Running[0m unittests src/bin/rx-solutionsd.rs (target/debug/deps/rx_solutionsd-58bd3b1b059af25a)
+2026-09-24T00:27:32.1859074Z 
+2026-09-24T00:27:32.1859262Z running 0 tests
+2026-09-24T00:27:32.1859580Z 
+2026-09-24T00:27:32.1860011Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:27:32.1860617Z 
+2026-09-24T00:27:32.1862083Z [1m[92m     Running[0m tests/decision_anchors.rs (target/debug/deps/decision_anchors-55f4238e460b1754)
+2026-09-24T00:27:32.1873903Z 
+2026-09-24T00:27:32.1874096Z running 1 test
+2026-09-24T00:27:32.1971437Z test author_anchors_are_pinned_and_site_data_cannot_override_them ... ok
+2026-09-24T00:27:32.1972039Z 
+2026-09-24T00:27:32.1972478Z test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+2026-09-24T00:27:32.1973112Z 
+2026-09-24T00:27:32.1974973Z [1m[92m     Running[0m tests/dependency_binding.rs (target/debug/deps/dependency_binding-a6e2070b38468f1c)
+2026-09-24T00:27:32.1989066Z 
+2026-09-24T00:27:32.1989274Z running 10 tests
+2026-09-24T00:27:32.4586906Z test absent_and_malformed_sources_and_explicit_denial_have_named_distinct_states ... ok
+2026-09-24T00:27:32.7143198Z test author_scope_cannot_be_replaced_and_unknown_is_not_independent ... ok
+2026-09-24T00:27:33.6705241Z test bounded_collection_keeps_a_finish_slot_and_cannot_overwrite_result ... ok
+2026-09-24T00:27:34.2163408Z test captured_response_cannot_be_replayed_for_another_diagnostic_request ... ok
+2026-09-24T00:27:34.8380373Z test continuous_loss_blocks_only_dependent_progress_and_current_result_consumption ... ok
+2026-09-24T00:27:35.4307942Z test current_report_change_and_consumer_retirement_do_not_rewrite_historical_result ... ok
+2026-09-24T00:27:35.9918958Z test generation_window_defers_input_until_finish_and_preserves_completed_snapshot ... ok
+2026-09-24T00:27:36.5894011Z test preparation_input_outlives_provider_and_result_is_durable_without_permission ... ok
+2026-09-24T00:27:36.6079498Z test result_run_and_history_commit_atomically_on_storage_failure ... ok
+2026-09-24T00:27:38.0061052Z test same_format_registration_and_same_registration_new_execution_do_not_inherit_binding ... ok
+2026-09-24T00:27:38.0062101Z 
+2026-09-24T00:27:38.0062732Z test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.81s
+2026-09-24T00:27:38.0063485Z 
+2026-09-24T00:27:38.0087502Z [1m[92m     Running[0m tests/execution_admission.rs (target/debug/deps/execution_admission-444a6ff5fab157a9)
+2026-09-24T00:27:38.0103128Z 
+2026-09-24T00:27:38.0103371Z running 12 tests
+2026-09-24T00:27:38.0330688Z test authority_recheck_precedes_any_simulated_resource_application ... ok
+2026-09-24T00:27:38.0338309Z test malformed_rejection_is_not_falsely_reported_as_confirmed_non_application ... ok
+2026-09-24T00:27:38.0392540Z test diagnostic_query_does_not_enter_admission_or_spawn ... ok
+2026-09-24T00:27:38.0548450Z test legacy_serialization_is_unchanged_and_explicit_empty_has_its_own_identity ... ok
+2026-09-24T00:27:38.0722210Z test reopening_does_not_restore_application_evidence_or_resource_ownership ... ok
+2026-09-24T00:27:38.0730182Z test site_overrides_and_lowered_catalog_are_rejected_in_three_distinct_paths ... ok
+2026-09-24T00:27:38.0817134Z test real_backend_rejects_required_policies_before_exec_and_reports_no_application ... ok
+2026-09-24T00:27:38.1113883Z test unknown_is_rejected_even_by_a_capable_backend_and_not_required_is_distinct ... ok
+2026-09-24T00:27:38.1177148Z test real_backend_keeps_legacy_and_explicit_no_policy_startup_working ... ok
+2026-09-24T00:27:38.1311579Z test stale_receipts_and_lost_application_responses_remain_unknown_without_retry ... ok
+2026-09-24T00:27:38.1568373Z test whole_bundle_all_available_all_unavailable_and_mixed_have_no_partial_application ... ok
+2026-09-24T00:27:38.1767294Z test upper_bounds_do_not_reserve_but_reserved_capacity_and_access_conflicts_are_atomic ... ok
+2026-09-24T00:27:38.1767733Z 
+2026-09-24T00:27:38.1768063Z test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.17s
+2026-09-24T00:27:38.1768421Z 
+2026-09-24T00:27:38.1772151Z [1m[92m     Running[0m tests/guarded.rs (target/debug/deps/guarded-d86d729acab8f393)
+2026-09-24T00:27:38.1786268Z 
+2026-09-24T00:27:38.1786418Z running 7 tests
+2026-09-24T00:27:38.1792984Z test guarded_paths_are_per_instance_and_scope_is_preserved ... ok
+2026-09-24T00:27:38.1817026Z test guarded_recipe_cannot_use_alive_only_parameters_restart_or_physical_authority_fallback ... ok
+2026-09-24T00:27:38.2071935Z test failed_first_term_retries_the_same_owned_service_without_waiting_for_timeout ... ok
+2026-09-24T00:27:38.2109402Z test lost_protocol_readiness_latches_cooperative_shutdown_instead_of_restart ... ok
+2026-09-24T00:27:38.2237339Z test nonzero_guarded_exit_is_unconfirmed_even_with_stopped_report ... ok
+2026-09-24T00:27:38.2443183Z test guarded_readiness_requires_protocol_and_exit_zero_requires_terminal_report ... ok
+2026-09-24T00:27:38.3270037Z test held_guarded_service_is_not_forced_after_timeout ... ok
+2026-09-24T00:27:38.3270783Z 
+2026-09-24T00:27:38.3271261Z test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.15s
+2026-09-24T00:27:38.3271988Z 
+2026-09-24T00:27:38.3274974Z [1m[92m     Running[0m tests/guarded_os.rs (target/debug/deps/guarded_os-5b15c9434af93d3a)
+2026-09-24T00:27:38.3289325Z 
+2026-09-24T00:27:38.3289563Z running 1 test
+2026-09-24T00:27:38.9627159Z test guarded_term_targets_only_the_owned_leader_and_force_is_rejected ... ok
+2026-09-24T00:27:38.9627850Z 
+2026-09-24T00:27:38.9628336Z test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.63s
+2026-09-24T00:27:38.9629011Z 
+2026-09-24T00:27:38.9636493Z [1m[92m     Running[0m tests/initialization.rs (target/debug/deps/initialization-9dd0046e10b3db42)
+2026-09-24T00:27:38.9650399Z 
+2026-09-24T00:27:38.9650574Z running 2 tests
+2026-09-24T00:27:38.9739193Z test required_composition_initialization_rejects_missing_partial_changed_list_and_wrong_digest ... ok
+2026-09-24T00:27:41.0249972Z test four_named_initializer_successes_are_recorded_once_and_entered_is_never_replayed ... ok
+2026-09-24T00:27:41.0250993Z 
+2026-09-24T00:27:41.0251639Z test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.06s
+2026-09-24T00:27:41.0252627Z 
+2026-09-24T00:27:41.0261163Z [1m[92m     Running[0m tests/lifecycle.rs (target/debug/deps/lifecycle-2602b03c0eb1028a)
+2026-09-24T00:27:41.0274826Z 
+2026-09-24T00:27:41.0275028Z running 10 tests
+2026-09-24T00:27:41.0612784Z test default_authority_does_not_start_control_owners_and_other_stores_are_not_claimed ... ok
+2026-09-24T00:27:41.0689562Z test dependencies_start_after_readiness_and_stop_before_their_provider ... ok
+2026-09-24T00:27:41.0697951Z test failed_stop_persistence_still_prevents_new_processes_and_exit_observation_can_be_retried ... ok
+2026-09-24T00:27:41.0722563Z test release_program_change_and_unsafe_plan_choices_are_rejected ... ok
+2026-09-24T00:27:41.1325866Z test launch_commit_boundaries_never_replay_an_uncertain_spawn ... ok
+2026-09-24T00:27:41.1498752Z test supervisor_restart_keeps_live_or_uncertain_processes_unknown_and_never_signals_saved_pids ... ok
+2026-09-24T00:27:41.1618384Z test uncertain_backend_result_is_not_a_known_start_failure ... ok
+2026-09-24T00:27:41.1779893Z test execution_retry::previous_application_observation_does_not_cover_a_new_prepared_instance ... ok
+2026-09-24T00:27:41.2168206Z test stop_authority_is_required_and_control_processes_are_never_force_killed ... ok
+2026-09-24T00:27:41.3396898Z test software_restart_budget_persists_until_an_explicit_clean_reactivation ... ok
+2026-09-24T00:27:41.3397517Z 
+2026-09-24T00:27:41.3397862Z test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.31s
+2026-09-24T00:27:41.3398364Z 
+2026-09-24T00:27:41.3401339Z [1m[92m     Running[0m tests/os_process.rs (target/debug/deps/os_process-bca21824eca1e20c)
+2026-09-24T00:27:41.3415700Z 
+2026-09-24T00:27:41.3415917Z running 2 tests
+2026-09-24T00:27:41.8251593Z test tampered_program_file_is_not_started ... ok
+2026-09-24T00:27:42.8991691Z test real_process_readiness_is_instance_correlated_and_shutdown_reaps_the_owned_process ... ok
+2026-09-24T00:27:42.8992470Z 
+2026-09-24T00:27:42.8992899Z test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.56s
+2026-09-24T00:27:42.8993517Z 
+2026-09-24T00:27:42.8999686Z [1m[92m     Running[0m tests/recovery.rs (target/debug/deps/recovery-371a7bdfd35ae3d7)
+2026-09-24T00:27:42.9014308Z 
+2026-09-24T00:27:42.9014593Z running 9 tests
+2026-09-24T00:27:42.9737770Z test confirmed_disposition_preserves_unknown_and_does_not_automatically_open_assignment ... ok
+2026-09-24T00:27:43.0288860Z test disposed_observation_cannot_be_overwritten_by_an_old_supervisor ... ok
+2026-09-24T00:27:43.1329262Z test disposition_and_resume_consumption_rollback_without_half_records ... ok
+2026-09-24T00:27:43.2412853Z test explicit_resume_consumes_once_and_uses_new_instance_without_restoring_receipts ... ok
+2026-09-24T00:27:43.2892010Z test missing_original_pid_binding_requires_another_provider_not_an_inferred_closure ... ok
+2026-09-24T00:27:43.3582351Z test old_run_prepared_instance_and_automatic_restart_budget_are_not_recovery_routes ... ok
+2026-09-24T00:27:43.4101042Z test unable_to_resolve_is_not_success_or_permission_to_resume ... ok
+2026-09-24T00:27:43.4565308Z test weak_observations_and_default_authority_cannot_dispose ... ok
+2026-09-24T00:27:43.5063649Z test witness_scope_time_target_actor_and_stale_revision_are_checked ... ok
+2026-09-24T00:27:43.5064174Z 
+2026-09-24T00:27:43.5064468Z test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.60s
+2026-09-24T00:27:43.5064858Z 
+2026-09-24T00:27:43.5070695Z [1m[92m     Running[0m tests/registration.rs (target/debug/deps/registration-f7dc3cb7fdd57eb0)
+2026-09-24T00:27:43.5088086Z 
+2026-09-24T00:27:43.5088278Z running 11 tests
+2026-09-24T00:27:43.5263808Z test failed_transaction_commits_neither_revision_nor_control_event_or_projection ... ok
+2026-09-24T00:27:43.5291104Z test competing_updates_and_retired_reactivation_fail_without_erasing_history ... ok
+2026-09-24T00:27:43.5973559Z test historical_assignment_revision_survives_a_label_review_after_exit ... ok
+2026-09-24T00:27:43.6063514Z test failure_between_assignment_and_observation_is_unconfirmed_and_cannot_replay ... ok
+2026-09-24T00:27:43.6122893Z test different_plan_same_name_pid_and_port_make_distinct_executions_of_one_registration ... ok
+2026-09-24T00:27:43.6147243Z test catalog_weakening_and_legacy_reopen_are_explained_and_leave_old_records_readable ... ok
+2026-09-24T00:27:43.6311706Z test registration_exists_without_execution_or_plan_and_survives_repository_reopen ... ok
+2026-09-24T00:27:43.6427007Z test missing_executable_does_not_deregister_the_component ... ok
+2026-09-24T00:27:43.6460861Z test registration_never_replaces_lifecycle_authority ... ok
+2026-09-24T00:27:43.7250770Z test retirement_blocks_new_assignment_but_keeps_running_history_and_unresolved_obligations ... ok
+2026-09-24T00:27:43.7587655Z test normal_exit_unexpected_handle_loss_and_restart_preserve_registration ... ok
+2026-09-24T00:27:43.7588287Z 
+2026-09-24T00:27:43.7588716Z test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.25s
+2026-09-24T00:27:43.7589371Z 
+2026-09-24T00:27:43.7592499Z [1m[92m     Running[0m tests/registration_passage.rs (target/debug/deps/registration_passage-2bf88401bf356c67)
+2026-09-24T00:27:43.7606992Z 
+2026-09-24T00:27:43.7607237Z running 2 tests
+2026-09-24T00:27:43.7608065Z test passage_worker ... ignored, worker invoked only by the real registration passage
+2026-09-24T00:27:43.7609260Z test real_registration_passage ... ignored, requires validated /opt/rx release; run tools/registration_passage.py
+2026-09-24T00:27:43.7610269Z 
+2026-09-24T00:27:43.7610724Z test result: ok. 0 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:27:43.7611522Z 
+2026-09-24T00:27:43.7612687Z [1m[92m     Running[0m tests/resident_registration.rs (target/debug/deps/resident_registration-94c1d918783cdd64)
+2026-09-24T00:27:43.7623761Z 
+2026-09-24T00:27:43.7623942Z running 12 tests
+2026-09-24T00:27:43.8000081Z test resident_catalog_change_does_not_rewrite_accepted_history ... ok
+2026-09-24T00:27:43.8017643Z test resident_duplicate_registration_mapping_is_refused ... ok
+2026-09-24T00:27:43.8085244Z test resident_duplicate_selection_mapping_is_refused ... ok
+2026-09-24T00:27:43.8355197Z test resident_cross_selection_assignment_cannot_satisfy_reconciliation ... ok
+2026-09-24T00:27:43.8392099Z test resident_failure_between_registration_and_index_rolls_back_every_record ... ok
+2026-09-24T00:27:43.8421194Z test resident_failed_assignment_never_reaches_the_os_backend ... ok
+2026-09-24T00:27:43.8758569Z test resident_legacy_store_cannot_be_adopted_by_creating_registration ... ok
+2026-09-24T00:27:43.8781676Z test resident_missing_selection_is_not_automatically_registered ... ok
+2026-09-24T00:27:43.9076186Z test resident_retirement_does_not_register_a_replacement ... ok
+2026-09-24T00:27:43.9124177Z test resident_reopen_keeps_distinct_ids_and_unknown_without_pid_adoption ... ok
+2026-09-24T00:27:43.9243609Z test resident_swapped_index_cannot_adopt_another_components_execution ... ok
+2026-09-24T00:27:44.0153427Z test resident_guarded_legacy_retains_dependency_stop_order_and_never_forces ... ok
+2026-09-24T00:27:44.0154073Z 
+2026-09-24T00:27:44.0154504Z test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.25s
+2026-09-24T00:27:44.0155149Z 
+2026-09-24T00:27:44.0159563Z [1m[92m     Running[0m tests/resource_enforcement.rs (target/debug/deps/resource_enforcement-cb98170c30890b86)
+2026-09-24T00:27:44.0173413Z 
+2026-09-24T00:27:44.0173630Z running 4 tests
+2026-09-24T00:27:44.4915043Z test linux::executable_integrity_failure_is_a_named_no_application_rejection ... ok
+2026-09-24T00:27:45.0237473Z test linux::actual_rx_child_limit_is_observed_by_a_separate_process_and_binds_allocations ... ok
+2026-09-24T00:27:45.5176993Z test linux::saved_limit_history_never_restores_a_current_receipt_after_owner_loss ... ok
+2026-09-24T00:27:45.7563099Z test unsupported_reserved_capacity_rejects_the_entire_bundle ... ok
+2026-09-24T00:27:45.7563629Z 
+2026-09-24T00:27:45.7564027Z test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.74s
+2026-09-24T00:27:45.7564595Z 
+2026-09-24T00:27:45.7584620Z [1m[92m     Running[0m tests/service_catalog.rs (target/debug/deps/service_catalog-7c1fe19113e3efe4)
+2026-09-24T00:27:45.7597267Z 
+2026-09-24T00:27:45.7597466Z running 4 tests
+2026-09-24T00:27:45.7653297Z test service_names_cannot_be_paths_or_choose_programs ... ok
+2026-09-24T00:27:45.7654163Z test distinct_executor_principals_cannot_compete_for_the_same_installation_cell ... ok
+2026-09-24T00:27:45.7654841Z test two_hosts_and_two_cells_resolve_fixed_binaries_and_independent_dependency_order ... ok
+2026-09-24T00:27:45.7655913Z test each_executor_requires_matching_host_edges_and_definitions_without_cross_cell_shortcuts ... ok
+2026-09-24T00:27:45.7656877Z 
+2026-09-24T00:27:45.7657301Z test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+2026-09-24T00:27:45.7657937Z 
+2026-09-24T00:27:45.7658750Z [1m[92m     Running[0m tests/use_assessment.rs (target/debug/deps/use_assessment-ef394004b6f60a6a)
+2026-09-24T00:27:45.7670771Z 
+2026-09-24T00:27:45.7670956Z running 9 tests
+2026-09-24T00:27:46.7561823Z test alive_only_and_undeclared_programs_stay_unsupported ... ok
+2026-09-24T00:27:47.2923455Z test another_instance_and_previous_assessment_response_cannot_be_promoted ... ok
+2026-09-24T00:27:47.5474331Z test declared_conditions_cannot_be_lowered_through_site_or_existing_catalog_pin ... ok
+2026-09-24T00:27:48.0879016Z test new_owner_does_not_restore_a_readiness_assessment_or_permission ... ok
+2026-09-24T00:27:48.6732043Z test not_evaluated_not_met_and_unsupported_have_named_conditions ... ok
+2026-09-24T00:27:49.7322104Z test omitted_declaration_preserves_legacy_serialization_and_closed_child_cannot_report_ready ... ok
+2026-09-24T00:27:50.2693917Z test registration_and_f1_admission_do_not_evaluate_or_grant_use ... ok
+2026-09-24T00:27:50.8174252Z test reported_area_denial_differs_from_unconnected_or_invalid_provider ... ok
+2026-09-24T00:27:51.3567790Z test reported_conditions_and_work_use_are_separate_and_read_only ... ok
+2026-09-24T00:27:51.3568519Z 
+2026-09-24T00:27:51.3569051Z test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.59s
+2026-09-24T00:27:51.3569822Z 
+2026-09-24T00:27:51.3586892Z [1m[92m     Running[0m tests/verified_decision.rs (target/debug/deps/verified_decision-3034407ab8047010)
+2026-09-24T00:27:51.3602943Z 
+2026-09-24T00:27:51.3603146Z running 9 tests
+2026-09-24T00:27:51.9822223Z test a_signed_decision_id_cannot_be_redefined_or_extended ... ok
+2026-09-24T00:27:54.4630916Z test exact_registration_scope_generation_and_binding_are_required ... ok
+2026-09-24T00:27:54.7304569Z test changed_program_anchor_cannot_reopen_an_existing_registration ... ok
+2026-09-24T00:27:55.6342862Z test expiry_is_anchored_to_challenge_and_ttl_cannot_exceed_author_policy ... ok
+2026-09-24T00:27:56.2116797Z test external_work_decision_does_not_promote_readiness_execution_or_binding ... ok
+2026-09-24T00:27:57.3878535Z test initial_and_replacement_acceptance_are_distinct_and_do_not_grant_work_or_apply_binding ... ok
+2026-09-24T00:27:58.5006495Z test receiver_loss_and_unconfigured_catalogs_cannot_restore_permission ... ok
+2026-09-24T00:27:59.0893950Z test signature_key_context_and_wire_shape_attacks_are_rejected ... ok
+2026-09-24T00:27:59.7068684Z test signed_revocation_blocks_clones_and_reimport_without_rewriting_history ... ok
+2026-09-24T00:27:59.7069630Z 
+2026-09-24T00:27:59.7070269Z test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.35s
+2026-09-24T00:27:59.7071247Z 
+2026-09-24T00:27:59.7093354Z [1m[92m   Doc-tests[0m rx_device_package
+2026-09-24T00:27:59.7811382Z 
+2026-09-24T00:27:59.7811960Z running 0 tests
+2026-09-24T00:27:59.7812277Z 
+2026-09-24T00:27:59.7813407Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:27:59.7814080Z 
+2026-09-24T00:27:59.7851031Z [1m[92m   Doc-tests[0m rx_executor
+2026-09-24T00:28:00.0341887Z 
+2026-09-24T00:28:00.0342171Z running 0 tests
+2026-09-24T00:28:00.0342470Z 
+2026-09-24T00:28:00.0342947Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:28:00.0343527Z 
+2026-09-24T00:28:00.0378977Z [1m[92m   Doc-tests[0m rx_host
+2026-09-24T00:28:00.5022468Z 
+2026-09-24T00:28:00.5022964Z running 0 tests
+2026-09-24T00:28:00.5023256Z 
+2026-09-24T00:28:00.5023626Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:28:00.5024024Z 
+2026-09-24T00:28:00.5060416Z [1m[92m   Doc-tests[0m rx_melsec_mc
+2026-09-24T00:28:00.5464835Z 
+2026-09-24T00:28:00.5465319Z running 0 tests
+2026-09-24T00:28:00.5465535Z 
+2026-09-24T00:28:00.5465869Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:28:00.5466469Z 
+2026-09-24T00:28:00.5497367Z [1m[92m   Doc-tests[0m rx_process
+2026-09-24T00:28:00.5769923Z 
+2026-09-24T00:28:00.5770394Z running 0 tests
+2026-09-24T00:28:00.5770682Z 
+2026-09-24T00:28:00.5771052Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:28:00.5771494Z 
+2026-09-24T00:28:00.5803069Z [1m[92m   Doc-tests[0m rx_process_package
+2026-09-24T00:28:00.6218766Z 
+2026-09-24T00:28:00.6219245Z running 0 tests
+2026-09-24T00:28:00.6219529Z 
+2026-09-24T00:28:00.6219950Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:28:00.6220363Z 
+2026-09-24T00:28:00.6254519Z [1m[92m   Doc-tests[0m rx_service_status
+2026-09-24T00:28:00.6751582Z 
+2026-09-24T00:28:00.6752202Z running 0 tests
+2026-09-24T00:28:00.6752504Z 
+2026-09-24T00:28:00.6752900Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:28:00.6753367Z 
+2026-09-24T00:28:00.6788142Z [1m[92m   Doc-tests[0m rx_solution_catalog
+2026-09-24T00:28:00.7300109Z 
+2026-09-24T00:28:00.7300634Z running 0 tests
+2026-09-24T00:28:00.7300875Z 
+2026-09-24T00:28:00.7301201Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:28:00.7301627Z 
+2026-09-24T00:28:00.7333585Z [1m[92m   Doc-tests[0m rx_supervisor
+2026-09-24T00:28:01.0396099Z 
+2026-09-24T00:28:01.0397120Z running 0 tests
+2026-09-24T00:28:01.0397379Z 
+2026-09-24T00:28:01.0397731Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-24T00:28:01.0398201Z 
+2026-09-24T00:28:01.2786394Z Post job cleanup.
+2026-09-24T00:28:01.5610283Z Cache hit occurred on the primary key Linux-X64-rust-0766539683ae475fbbde23177660c1a631bbaf80e146af3e0ad076bc920ad8d9, not saving cache.
+2026-09-24T00:28:01.5612100Z (node:16691) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-24T00:28:01.5613870Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-24T00:28:01.5781382Z Post job cleanup.
+2026-09-24T00:28:01.6792711Z [command]/usr/bin/git version
+2026-09-24T00:28:01.6849662Z git version 2.55.0
+2026-09-24T00:28:01.6901554Z Temporarily overriding HOME='/home/runner/work/_temp/63c200a1-b9ee-47dc-b092-2ba52d60dfdb' before making global git config changes
+2026-09-24T00:28:01.6903271Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-24T00:28:01.6910791Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rx-solutions/rx-solutions
+2026-09-24T00:28:01.6960760Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-24T00:28:01.7005801Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-24T00:28:01.7309627Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-24T00:28:01.7354220Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-24T00:28:01.7681122Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-24T00:28:01.7725585Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-24T00:28:01.8274502Z Cleaning up orphan processes
+2026-09-24T00:28:01.8805588Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830, actions/checkout@11d5960a326750d5838078e36cf38b85af677262. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

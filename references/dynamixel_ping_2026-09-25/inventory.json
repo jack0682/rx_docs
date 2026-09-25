@@ -142,8 +142,8 @@
       "size_bytes": 2949
     },
     "incidents.md": {
-      "sha256": "5a8b5132c9ad890c9a4c5c128089a3312c05fdac1b1cc54130572b6d15130789",
-      "size_bytes": 2788
+      "sha256": "de8876f50f9c2c9a86aaad5c0c0ffc2b7370b16b65677c5ded1bbe8057f5f444",
+      "size_bytes": 3311
     },
     "client-driver-absence.json": {
       "sha256": "8ba25cc020ab5e6e75e45e5b123b54b02f4c805b4ab08e381c1cd080f6865b0b",
@@ -401,7 +401,7 @@
       "sha256": "c59d1de02b9ca2243a454cad61f751a6a9175000b5a49c8abc4cb3fedd4c924c",
       "size_bytes": 159
     },
-    "product-helper-refusals.json": {
+    "product-helper-refusals.stdout": {
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "size_bytes": 0
     },
@@ -414,8 +414,8 @@
       "size_bytes": 0
     },
     "docs-check-final.log": {
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "size_bytes": 0
+      "sha256": "083720ef6222ab7b61f9081394f7f9c6899444891e2cdaf5bede33c73561aa4e",
+      "size_bytes": 246
     },
     "sign-runtime.stderr": {
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -460,6 +460,14 @@
     "final-build-2-command.json": {
       "sha256": "5252ce64daabff0089cacef2c50af2167663185653d8a8ec820e15b171bf0376",
       "size_bytes": 625
+    },
+    "docs-tables-final.log": {
+      "sha256": "e486672a201bc1fc149cf61481fb148524eb586b31e62f2cb696f6f55f4f9c32",
+      "size_bytes": 693
+    },
+    "docs-check-tests-final.log": {
+      "sha256": "3e9ba7017ab56c0cdf70617436529d33ec5d47b7f345c40da7888be2ce2067e5",
+      "size_bytes": 123
     },
     "runtime-batch-final.json": {
       "sha256": "4ebab10e9aca7564fb22c3510eed6ce5274e5a7d2b467373d43ace74d79abe64",

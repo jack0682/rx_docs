@@ -1,0 +1,27 @@
+[  8%] Generating generated/rx/host/read/v1/read.pb.cc, generated/rx/host/read/v1/read.pb.h
+[  8%] Generating generated/rx/cell/v1/cell.pb.cc, generated/rx/cell/v1/cell.pb.h
+[ 12%] Generating generated/rx/contract/v1/contract.pb.cc, generated/rx/contract/v1/contract.pb.h
+[ 16%] Generating generated/rx/executor/assignment/v1/assignment.pb.cc, generated/rx/executor/assignment/v1/assignment.pb.h
+[ 20%] Generating generated/rx/executor/plan/v1/plan.pb.cc, generated/rx/executor/plan/v1/plan.pb.h
+[ 24%] Generating generated/rx/executor/production/v1/production.pb.cc, generated/rx/executor/production/v1/production.pb.h
+[ 28%] Generating generated/rx/executor/v1/executor.pb.cc, generated/rx/executor/v1/executor.pb.h
+[ 32%] Generating generated/rx/host/configuration/v1/configuration.pb.cc, generated/rx/host/configuration/v1/configuration.pb.h
+[ 36%] Generating generated/rx/host/qualification/v1/qualification.pb.cc, generated/rx/host/qualification/v1/qualification.pb.h
+[ 44%] Building CXX object CMakeFiles/rxclcpp.dir/src/wire.cpp.o
+[ 44%] Building CXX object CMakeFiles/rxclcpp.dir/src/client.cpp.o
+[ 48%] Building CXX object CMakeFiles/rxclcpp.dir/generated/rx/cell/v1/cell.pb.cc.o
+[ 52%] Building CXX object CMakeFiles/rxclcpp.dir/generated/rx/contract/v1/contract.pb.cc.o
+[ 56%] Building CXX object CMakeFiles/rxclcpp.dir/generated/rx/executor/assignment/v1/assignment.pb.cc.o
+[ 60%] Building CXX object CMakeFiles/rxclcpp.dir/generated/rx/executor/plan/v1/plan.pb.cc.o
+[ 64%] Building CXX object CMakeFiles/rxclcpp.dir/generated/rx/executor/production/v1/production.pb.cc.o
+[ 68%] Building CXX object CMakeFiles/rxclcpp.dir/generated/rx/executor/v1/executor.pb.cc.o
+[ 72%] Building CXX object CMakeFiles/rxclcpp.dir/generated/rx/host/configuration/v1/configuration.pb.cc.o
+[ 76%] Building CXX object CMakeFiles/rxclcpp.dir/generated/rx/host/qualification/v1/qualification.pb.cc.o
+[ 80%] Building CXX object CMakeFiles/rxclcpp.dir/generated/rx/host/read/v1/read.pb.cc.o
+[ 84%] Linking CXX shared library librxclcpp.so
+[ 84%] Built target rxclcpp
+[ 88%] Generating generated/strict-wire-v1/probe.pb.cc, generated/strict-wire-v1/probe.pb.h
+[ 92%] Building CXX object CMakeFiles/rxclcpp-conformance.dir/tests/conformance.cpp.o
+[ 96%] Building CXX object CMakeFiles/rxclcpp-conformance.dir/generated/strict-wire-v1/probe.pb.cc.o
+[100%] Linking CXX executable rxclcpp-conformance
+[100%] Built target rxclcpp-conformance

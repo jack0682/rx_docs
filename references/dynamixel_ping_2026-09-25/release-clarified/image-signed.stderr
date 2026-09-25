@@ -1,0 +1,33 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Signed.Dockerfile
+#1 transferring dockerfile: 132B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/rx-g5-2-clarified-unsigned:latest
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 820B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/2] FROM docker.io/library/rx-g5-2-clarified-unsigned:latest@sha256:e3c8c1507484b817f8330dbaef453dbbadbee62b76dfd7762c5a83a70c5e8a87
+#5 resolve docker.io/library/rx-g5-2-clarified-unsigned:latest@sha256:e3c8c1507484b817f8330dbaef453dbbadbee62b76dfd7762c5a83a70c5e8a87 0.0s done
+#5 DONE 0.3s
+
+#6 [2/2] COPY signed/ /opt/rx/manifests/
+#6 DONE 0.0s
+
+#7 exporting to image
+#7 exporting layers 0.0s done
+#7 exporting manifest sha256:923a83dbc1c65f995a1e3fb73481dffb5a76fdfc5f34af8b18dbf628024d1df2 done
+#7 exporting config sha256:0fc9d1b50913ad6aea662d310b0bcfad0a84045d5a05e235935523d1ef230ca4 done
+#7 exporting attestation manifest sha256:5f4eb24c4ac45f4252905b8067a06d54949edf629e989933cf8c3f49e8c89f1e done
+#7 exporting manifest list sha256:a386c0bd244de50a31886e08703fa4b5c1ac24f566fdf9ebd8677d2f4e34a105 done
+#7 naming to docker.io/library/rx-g5-2-clarified-runtime:latest done
+#7 unpacking to docker.io/library/rx-g5-2-clarified-runtime:latest 0.0s done
+#7 DONE 0.1s

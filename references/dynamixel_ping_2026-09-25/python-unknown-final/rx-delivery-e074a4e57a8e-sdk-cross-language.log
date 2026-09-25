@@ -1,0 +1,5 @@
+{"code":"UNAUTHENTICATED","detail":"UNAUTHENTICATED","id":1,"ok":false}
+{"id":2,"ok":true,"response":{"boot_id":"e2c134c5-a609-4acc-87d9-d40f2d7b654f","limits":{"max_batch_records":128,"max_inflight":32,"max_message_bytes":1048576,"subscriber_buffer_bytes":4194304},"peer_id":"executor","required_features":["rx.cell.v1","strict-wire-v1"],"selected_version":{"major":1,"schema_hash":"0yUZ/9M8wC9eb4JAatL+JTQhUn3AR7gHwRvrEaj3WDw="},"session_id":"01a0d773-5593-77d0-8d31-b3d307c2eb84"}}
+{"id":3,"ok":true,"response":{"base_session_id":"01a0d773-5593-77d0-8d31-b3d307c2eb84","manifest_hash":"XnWrTT1y1LIgggA9vsXiylRWLMQwLS4wawfOZNIV1xs=","peer_id":"executor","session_id":"a4f3f4af-7328-8792-bcc6-f22a70b8ab86"}}
+{"id":4,"ok":true,"response":{"disposition":"DISPOSITION_QUARANTINED","execution_knowledge":"KNOWLEDGE_UNKNOWN","integrity":"INTEGRITY_VALID","intent_digest":"93bJVHTJrrWWReinwv1YhekoV+oIYL1JLRWUI6NYRvE=","operation_id":"01a0d773-49ae-7172-832b-806303ab1a0b","outcome":"OUTCOME_NONE","phase":"PHASE_RECONCILING","reason":{"code":"REASON_CODE_UNKNOWN_OUTCOME"},"revision":"6"}}
+{"id":5,"ok":true,"operation_outcome":"NOT_INFERRED","transport":"CLOSED"}

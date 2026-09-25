@@ -1,0 +1,180 @@
+info: syncing channel updates for 1.98.1-aarch64-unknown-linux-gnu
+info: latest update on 2026-09-03 for version 1.98.1 (48a229cea 2026-09-01)
+info: downloading 2 components
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.24
+   Compiling libc v0.2.189
+   Compiling cfg-if v1.0.4
+   Compiling syn v3.0.5
+   Compiling itoa v1.0.18
+   Compiling version_check v0.9.5
+   Compiling generic-array v0.14.7
+   Compiling memchr v2.8.3
+   Compiling bitflags v2.13.2
+   Compiling typenum v1.20.1
+   Compiling once_cell v1.21.4
+   Compiling syn v2.0.119
+   Compiling serde_core v1.0.229
+   Compiling getrandom v0.4.3
+   Compiling zmij v1.0.23
+   Compiling bytes v1.12.1
+   Compiling pin-project-lite v0.2.17
+   Compiling find-msvc-tools v0.1.12
+   Compiling serde v1.0.229
+   Compiling shlex v2.0.1
+   Compiling rustix v1.1.4
+   Compiling cc v1.4.5
+   Compiling serde_derive v1.0.229
+   Compiling serde_json v1.0.151
+   Compiling thiserror v2.0.20
+   Compiling zeroize v1.9.0
+   Compiling linux-raw-sys v0.12.1
+   Compiling block-buffer v0.10.4
+   Compiling crypto-common v0.1.7
+   Compiling thiserror-impl v2.0.20
+   Compiling errno v0.3.14
+   Compiling foldhash v0.2.0
+   Compiling equivalent v1.0.2
+   Compiling hashbrown v0.17.1
+   Compiling signal-hook-registry v1.4.8
+   Compiling digest v0.10.7
+   Compiling tokio-macros v2.7.2
+   Compiling cpufeatures v0.2.17
+   Compiling socket2 v0.6.5
+   Compiling mio v1.2.3
+   Compiling ryu-js v0.2.2
+   Compiling fastrand v2.5.0
+   Compiling futures-core v0.3.34
+   Compiling subtle v2.6.1
+   Compiling serde_jcs v0.2.0
+   Compiling tokio v1.53.1
+   Compiling sha2 v0.10.9
+   Compiling uuid v1.26.1
+   Compiling hybrid-array v0.4.15
+   Compiling io-lifetimes v2.0.4
+   Compiling anyhow v1.0.104
+   Compiling io-lifetimes v3.0.1
+   Compiling rx-domain v0.1.0 (/source/sdk/crates/rx-domain)
+   Compiling semver v1.0.28
+   Compiling io-extras v0.19.0
+   Compiling either v1.18.0
+   Compiling itertools v0.14.0
+   Compiling rustc_version v0.4.1
+   Compiling block-buffer v0.12.1
+   Compiling crypto-common v0.2.2
+   Compiling cap-primitives v4.0.3
+   Compiling prost-derive v0.14.4
+   Compiling digest v0.11.3
+   Compiling fs-set-times v0.20.3
+   Compiling curve25519-dalek v5.0.0
+   Compiling rustix-linux-procfs v0.1.1
+   Compiling http v1.5.0
+   Compiling cap-std v4.0.3
+   Compiling maybe-owned v0.3.4
+   Compiling ambient-authority v0.0.2
+   Compiling ipnet v2.12.2
+   Compiling rx-ports v0.1.0 (/source/sdk/crates/rx-ports)
+   Compiling tracing-attributes v0.1.31
+   Compiling tracing-core v0.1.36
+   Compiling cpufeatures v0.3.1
+   Compiling smallvec v1.16.0
+   Compiling cap-fs-ext v4.0.3
+   Compiling slab v0.4.12
+   Compiling futures-sink v0.3.34
+   Compiling signature v3.0.0
+   Compiling ed25519 v3.0.0
+   Compiling tokio-util v0.7.19
+   Compiling tracing v0.1.44
+   Compiling sha2 v0.11.0
+   Compiling http-body v1.1.0
+   Compiling indexmap v2.14.2
+   Compiling ring v0.17.14
+   Compiling log v0.4.34
+   Compiling ed25519-dalek v3.0.0
+   Compiling tempfile v3.27.0
+   Compiling prettyplease v0.2.37
+   Compiling pulldown-cmark v0.13.4
+   Compiling futures-task v0.3.34
+   Compiling httparse v1.10.1
+   Compiling tower-service v0.3.3
+   Compiling futures-util v0.3.34
+   Compiling rx-package v0.1.0 (/source/sdk/crates/rx-package)
+   Compiling getrandom v0.2.17
+   Compiling regex-syntax v0.8.11
+   Compiling try-lock v0.2.5
+   Compiling atomic-waker v1.1.2
+   Compiling fnv v1.0.7
+   Compiling foldhash v0.1.5
+   Compiling unicase v2.9.0
+   Compiling pkg-config v0.3.34
+   Compiling untrusted v0.9.0
+   Compiling vcpkg v0.2.15
+   Compiling libsqlite3-sys v0.38.2
+   Compiling prost v0.14.4
+   Compiling hashbrown v0.15.5
+   Compiling h2 v0.4.19
+   Compiling want v0.3.1
+   Compiling regex-automata v0.4.18
+   Compiling futures-channel v0.3.34
+   Compiling rustls-pki-types v1.15.1
+   Compiling sync_wrapper v1.0.2
+   Compiling httpdate v1.0.3
+   Compiling fixedbitset v0.5.7
+   Compiling rustls v0.23.44
+   Compiling tower-layer v0.3.3
+   Compiling petgraph v0.8.3
+   Compiling hyper v1.11.1
+   Compiling rustls-webpki v0.103.15
+   Compiling regex v1.13.1
+   Compiling pulldown-cmark-to-cmark v22.0.1
+   Compiling prost-types v0.14.4
+   Compiling http-body-util v0.1.5
+   Compiling multimap v0.10.1
+   Compiling mime v0.3.17
+   Compiling heck v0.5.0
+   Compiling prost-build v0.14.4
+   Compiling axum-core v0.5.6
+   Compiling hyper-util v0.1.20
+   Compiling tower v0.5.3
+   Compiling tonic-build v0.14.6
+   Compiling rx-process-contract v0.1.0 (/source/sdk/crates/rx-process-contract)
+   Compiling hashlink v0.12.2
+   Compiling pin-project-internal v1.1.13
+   Compiling fallible-iterator v0.3.0
+   Compiling protoc-bin-vendored-linux-ppcle_64 v3.2.0
+   Compiling fallible-streaming-iterator v0.1.9
+   Compiling protoc-bin-vendored-macos-aarch_64 v3.2.0
+   Compiling matchit v0.8.4
+   Compiling protoc-bin-vendored-linux-aarch_64 v3.2.0
+   Compiling percent-encoding v2.3.2
+   Compiling protoc-bin-vendored-linux-s390_64 v3.2.0
+   Compiling protoc-bin-vendored-win32 v3.2.0
+   Compiling protoc-bin-vendored-linux-x86_32 v3.2.0
+   Compiling protoc-bin-vendored-linux-x86_64 v3.2.0
+   Compiling protoc-bin-vendored-macos-x86_64 v3.2.0
+   Compiling protoc-bin-vendored v3.2.0
+   Compiling axum v0.8.9
+   Compiling rusqlite v0.40.2
+   Compiling pin-project v1.1.13
+   Compiling tonic-prost-build v0.14.6
+   Compiling tokio-rustls v0.26.5
+   Compiling hyper-timeout v0.5.2
+   Compiling tokio-stream v0.1.19
+   Compiling async-trait v0.1.92
+   Compiling base64 v0.22.1
+   Compiling rx-protocol v0.1.0 (/source/sdk/crates/rx-protocol)
+   Compiling tonic v0.14.6
+   Compiling rx-storage v0.1.0 (/source/sdk/crates/rx-storage)
+   Compiling rx-service-status v0.1.0 (/source/runtime/rx-service-status)
+   Compiling prost-reflect v0.16.5
+   Compiling tonic-prost v0.14.6
+   Compiling rx-solution-catalog v0.1.0 (/source/runtime/rx-solution-catalog)
+   Compiling rx-process v0.1.0 (/source/runtime/rx-process)
+   Compiling rx-host v0.1.0 (/source/runtime/rx-host)
+   Compiling rx-melsec-mc v0.1.0 (/source/drivers/rx-melsec-mc)
+   Compiling rx-process-package v0.1.0 (/source/runtime/rx-process-package)
+   Compiling rx-supervisor v0.1.0 (/source/runtime/rx-supervisor)
+   Compiling rx-executor v0.1.0 (/source/runtime/rx-executor)
+   Compiling rx-device-package v0.1.0 (/source/runtime/rx-device-package)
+    Finished `dev` profile [unoptimized] target(s) in 45.19s

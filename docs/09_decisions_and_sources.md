@@ -8,6 +8,7 @@
 | 2026-09-13–14 | 제조사 색채 제거와 세 저장소 기반 정비 | 특정 회사의 필수 지원 의무 제거, profile별 지원과 검증 |
 | 2026-09-14 | 세 GitHub 저장소를 공개로 전환 | 공개 문서·코드 입구로 정리 |
 | 2026-09-14 | 세 저장소 Apache License 2.0 적용 | 프로젝트 원본에 적용, 제삼자 고지는 보존 |
+| 2026-09-25 | rxclcpp/rxclpy와 ROBOTIS 다섯 프로젝트 전체 개발 번들 | 제조사 중립 계약 유지, 선정 버전·필수 의존성·단일 실행 책임·검증 범위를 순차 통합; G5.2는 모의 Ping만 연결 |
 | 현재 요청 | CI·GitHub 규칙·main/develop GitFlow 구축 | 구현 저장소와 문서의 기여·검증·릴리스 경로 정비 |
 
 Rust 코어와 platform/solutions 경계는 유지한다. 제조사별 driver·설치 정책의 변경과 작업 계약의 wire 의미 변경을 구별한다. 이번 문서 개정은 [공통 revision](contracts/v1.0/revision_2026-09-14.md), [셀 revision](cell_operations/v1.0/revision_2026-09-14.md)에 기록한다.

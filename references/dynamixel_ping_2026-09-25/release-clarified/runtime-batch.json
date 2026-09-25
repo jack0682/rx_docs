@@ -1,0 +1,98 @@
+[
+  {
+    "label": "python-loss",
+    "exit": 0,
+    "command": [
+      "python3",
+      "tools/test_clients.py",
+      "--language",
+      "python",
+      "--mode",
+      "loss",
+      "--platform-image",
+      "rx-g5-platform-runtime:latest",
+      "--solutions-image",
+      "rx-g5-2-clarified-runtime:latest",
+      "--client-image",
+      "rx-g5-client-runtime-final:latest",
+      "--adapter-descriptor",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/release-clarified/dynamixel-driver.json",
+      "--release-evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/release-clarified/release-evidence.json",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/release-clarified/python-loss"
+    ]
+  },
+  {
+    "label": "cpp-loss",
+    "exit": 0,
+    "command": [
+      "python3",
+      "tools/test_clients.py",
+      "--language",
+      "cpp",
+      "--mode",
+      "loss",
+      "--platform-image",
+      "rx-g5-platform-runtime:latest",
+      "--solutions-image",
+      "rx-g5-2-clarified-runtime:latest",
+      "--client-image",
+      "rx-g5-client-runtime-final:latest",
+      "--adapter-descriptor",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/release-clarified/dynamixel-driver.json",
+      "--release-evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/release-clarified/release-evidence.json",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/release-clarified/cpp-loss"
+    ]
+  },
+  {
+    "label": "python-unknown",
+    "exit": 0,
+    "command": [
+      "python3",
+      "tools/test_clients.py",
+      "--language",
+      "python",
+      "--mode",
+      "unknown",
+      "--platform-image",
+      "rx-g5-platform-runtime:latest",
+      "--solutions-image",
+      "rx-g5-2-clarified-runtime:latest",
+      "--client-image",
+      "rx-g5-client-runtime-final:latest",
+      "--adapter-descriptor",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/release-clarified/dynamixel-driver.json",
+      "--release-evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/release-clarified/release-evidence.json",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/release-clarified/python-unknown"
+    ]
+  },
+  {
+    "label": "cpp-unknown",
+    "exit": 0,
+    "command": [
+      "python3",
+      "tools/test_clients.py",
+      "--language",
+      "cpp",
+      "--mode",
+      "unknown",
+      "--platform-image",
+      "rx-g5-platform-runtime:latest",
+      "--solutions-image",
+      "rx-g5-2-clarified-runtime:latest",
+      "--client-image",
+      "rx-g5-client-runtime-final:latest",
+      "--adapter-descriptor",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/release-clarified/dynamixel-driver.json",
+      "--release-evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/release-clarified/release-evidence.json",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/release-clarified/cpp-unknown"
+    ]
+  }
+]

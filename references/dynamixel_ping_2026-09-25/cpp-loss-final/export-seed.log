@@ -1,0 +1,12 @@
+
+running 1 test
+test export_delivery_seed ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 2 filtered out; finished in 0.10s
+
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on build directory
+    Finished `test` profile [unoptimized] target(s) in 0.51s
+     Running tests/delivery_fixture.rs (/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/platform-mac-target/debug/deps/delivery_fixture-8f799f9cbd850e36)

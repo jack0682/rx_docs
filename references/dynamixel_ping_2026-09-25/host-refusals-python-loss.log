@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_clients.py", line 270, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_clients.py", line 264, in main
+    exercise(d,materials,final,bundle,p,s,port,identity,a.release_evidence.resolve(),'independent',start_services=scenario.start_services,after_commissioning=scenario.after_commissioning,expected_backend="VALIDATED_DRIVER" if scenario.adapter else "FILE_SIMULATION")
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/cell_delivery/installation.py", line 88, in exercise
+    context.update(start_services(context))
+                   ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_clients.py", line 88, in start_services
+    if self.adapter:self.adapter_refusals(c,hm)
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_clients.py", line 120, in adapter_refusals
+    refuse('host-wrong-ping-artifact',config,'DXL_PING_CONTRACT_REQUIRED',[str(bad)+':/negative-bindings.json:ro'])
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_clients.py", line 114, in refuse
+    assert r.returncode!=0 and expected in r.stdout+r.stderr,rows[-1]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'label': 'host-wrong-ping-artifact', 'argv': ['docker', 'run', '--rm', '--read-only', '--network', 'none', '--cap-drop', 'ALL', '--security-opt', 'no-new-privileges', '--user', '10001:10001', '-v', 'rx-delivery-3458df559523-h-config:/config/host:ro', '-v', 'rx-delivery-3458df559523-h-data:/data:rw', '-v', 'rx-delivery-3458df559523-h-runtime:/run/rx-host:rw', '-v', '/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/host-refusals-python-loss/private-01inihrh/adapter-refusals/host-wrong-ping-artifact.json:/negative.json:ro', '-v', '/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/host-refusals-python-loss/private-01inihrh/adapter-refusals/bindings.json:/negative-bindings.json:ro', '--entrypoint', '/opt/rx/bin/rx-hostd', 'sha256:d836370eabed9aed11b14d8aee71a13b4077934b900964b0f60c9d88badf76e7', 'inspect', '/negative.json'], 'exit': 1, 'stdout': '', 'stderr': 'Error: Invalid("named package directory required")\n'}

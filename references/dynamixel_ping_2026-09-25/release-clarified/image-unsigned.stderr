@@ -1,0 +1,51 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 674B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/rx-g5-solutions-runtime:latest
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/rx-g5-solutions-runtime:latest@sha256:4a1f371db678dd6ed04521b0eeafa48984c03bb982b67d5ae53c8c73e0ce9cd4
+#4 resolve docker.io/library/rx-g5-solutions-runtime:latest@sha256:4a1f371db678dd6ed04521b0eeafa48984c03bb982b67d5ae53c8c73e0ce9cd4 done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 123.26MB 0.7s done
+#5 DONE 0.7s
+
+#4 [1/6] FROM docker.io/library/rx-g5-solutions-runtime:latest@sha256:4a1f371db678dd6ed04521b0eeafa48984c03bb982b67d5ae53c8c73e0ce9cd4
+#4 CACHED
+
+#6 [2/6] COPY bin/ /opt/rx/bin/
+#6 DONE 0.1s
+
+#7 [3/6] COPY NOTICE /opt/rx/NOTICE
+#7 DONE 0.0s
+
+#8 [4/6] COPY audit_native_install.py write_runtime_inventory.py /opt/rx/tools/
+#8 DONE 0.0s
+
+#9 [5/6] COPY DynamixelSDK-LICENSE /opt/rx/licenses/DynamixelSDK/LICENSE
+#9 DONE 0.0s
+
+#10 [6/6] RUN rm /opt/rx/manifests/release.json /opt/rx/manifests/revocations.json && . /opt/ros/jazzy/setup.sh && /opt/rx/bin/rx-hostd drivers dynamixel > /opt/rx/manifests/dynamixel-driver.json && python3 /opt/rx/tools/audit_native_install.py --catalog /opt/rx/catalogs/device-support.v1.json --output /opt/rx/manifests/native-install-audit.json && python3 /opt/rx/tools/write_runtime_inventory.py
+#10 0.537 {"status": "PASS", "executables": 9}
+#10 DONE 0.7s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 1.9s done
+#11 exporting manifest sha256:4e68e5fbfa39f3ca0f769fe64e36d79972785bd97424245c0290a922a1b9947e done
+#11 exporting config sha256:c31eac13d9046c1ba30617c10e980eef5185c1c80c8b77d5ddefbd4eb0adcb6c done
+#11 exporting attestation manifest sha256:701591483c76edb6e4413f591ae1df2d6258316e52e0eb9694ff97a372d25fd9 done
+#11 exporting manifest list sha256:e3c8c1507484b817f8330dbaef453dbbadbee62b76dfd7762c5a83a70c5e8a87 done
+#11 naming to docker.io/library/rx-g5-2-clarified-unsigned:latest done
+#11 unpacking to docker.io/library/rx-g5-2-clarified-unsigned:latest
+#11 unpacking to docker.io/library/rx-g5-2-clarified-unsigned:latest 0.3s done
+#11 DONE 2.2s

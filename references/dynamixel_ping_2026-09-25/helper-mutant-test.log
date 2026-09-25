@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/tests/test_dynamixel_helper.py", line 25, in <module>
+    assert r.returncode==21 and expected in r.stderr and 'helper_entered' not in r.stderr,rows[-1]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'language': 'python', 'mode': 'socket', 'exit': 0, 'stdout': '', 'stderr': '{"deadline_ns":"18446744073709551615","event":"helper_entered","instance":"33333333-3333-4333-8333-333333333333","invocation":"22222222-2222-4222-8222-222222222222","operation":"11111111-1111-4111-8111-111111111111","parent_pid":1,"pid":8}\n'}

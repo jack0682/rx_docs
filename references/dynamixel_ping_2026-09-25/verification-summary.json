@@ -1,0 +1,166 @@
+{
+  "scope": "Actual Linux execution against one fictional simulated DYNAMIXEL model per scene; no physical device",
+  "robot_connected": false,
+  "simulated_adapter_connected": true,
+  "physical_qualification": "NOT_PERFORMED",
+  "sdk_baseline_complete": false,
+  "robotis_bundle_complete": false,
+  "runtime_scenes": [
+    {
+      "label": "release-clarified/python-loss",
+      "result": "CLIENT_RUNTIME_PASS",
+      "knowledge": "KNOWLEDGE_ENDED",
+      "outcome": "OUTCOME_SUCCEEDED",
+      "helper_calls": 1,
+      "native_entries": 1,
+      "instance": "d4b26f3e-35ec-41c8-955f-5ebc4e7d02e4"
+    },
+    {
+      "label": "release-clarified/cpp-loss",
+      "result": "CLIENT_RUNTIME_PASS",
+      "knowledge": "KNOWLEDGE_ENDED",
+      "outcome": "OUTCOME_SUCCEEDED",
+      "helper_calls": 1,
+      "native_entries": 1,
+      "instance": "843e6fdb-6c2f-46e5-af01-55dede6c95f7"
+    },
+    {
+      "label": "release-clarified/python-unknown",
+      "result": "CLIENT_RUNTIME_PASS",
+      "knowledge": "KNOWLEDGE_UNKNOWN",
+      "outcome": "OUTCOME_NONE",
+      "helper_calls": 1,
+      "native_entries": 1,
+      "instance": "d4f756cc-4544-451a-bc4b-b41d5e827bf3"
+    },
+    {
+      "label": "release-clarified/cpp-unknown",
+      "result": "CLIENT_RUNTIME_PASS",
+      "knowledge": "KNOWLEDGE_UNKNOWN",
+      "outcome": "OUTCOME_NONE",
+      "helper_calls": 1,
+      "native_entries": 1,
+      "instance": "34189b26-48d9-4b17-8d87-7bd784f6e6ba"
+    }
+  ],
+  "macos": {
+    "platform": {
+      "passed": 408,
+      "failed": 0,
+      "ignored": 16
+    },
+    "solutions": {
+      "passed": 393,
+      "failed": 0,
+      "ignored": 17
+    }
+  },
+  "wire_vectors": 82,
+  "host_refusals": 6,
+  "helper_direct_refusals": 6,
+  "helper_endpoint_refusals": 4,
+  "parent_check_mutant_detected": true,
+  "legacy_installation_reopened": true,
+  "existing_native_record_roundtrip": true,
+  "nine_passages": {
+    "library": 0,
+    "release": 0,
+    "resource": 0,
+    "manager": 0,
+    "work": 0,
+    "replacement": 0,
+    "support": 0,
+    "lock": 0
+  },
+  "g3_scenes": 12,
+  "g4_scenes": 22,
+  "host_self_issuance_refusals": 3,
+  "g1_failed_rounds": [],
+  "independent_acceptance": "IMPLEMENTER_EVIDENCE_ONLY; INDEPENDENT_RECEIPT_IS_SEPARATE",
+  "public_prs": {
+    "platform": "https://github.com/jack0682/rx-platform/pull/25",
+    "solutions": "https://github.com/jack0682/rx-solutions/pull/42 (with feature PR41)",
+    "documentation": "Accompanying rx_docs commit; see cross-repository reference comments"
+  },
+  "source_commits": {
+    "rx-platform": "b145366992c36b1227efbab7e7a776fae6d9c62f",
+    "rx-solutions": "71aec7e7f1e2d6723884e30e97b9dd4ba97fb502"
+  },
+  "selected_runtime_images": {
+    "platform": "sha256:31b46ae19b7512c71fcf6581dd1bca10131be0cbd6cd32fc4d870e1c7949ddb9",
+    "solutions": "sha256:a386c0bd244de50a31886e08703fa4b5c1ac24f566fdf9ebd8677d2f4e34a105"
+  },
+  "linux_pr_ci": {
+    "rx-platform": {
+      "run": 36107662073,
+      "attempt": 1,
+      "head": "b145366992c36b1227efbab7e7a776fae6d9c62f",
+      "conclusion": "success",
+      "passed_failed_ignored": [
+        409,
+        0,
+        16
+      ]
+    },
+    "rx-solutions": {
+      "run": 36107754317,
+      "attempt": 1,
+      "head": "039aa0d0459b8087e708ec77fdccfbd48fadc1d0",
+      "conclusion": "success",
+      "passed_failed_ignored": [
+        437,
+        0,
+        20
+      ]
+    }
+  },
+  "code_publication": {
+    "rx-platform": {
+      "headRefOid": "b145366992c36b1227efbab7e7a776fae6d9c62f",
+      "mergeCommit": {
+        "oid": "7a825b346a02d5283498ebab8f8288a28357e32c"
+      },
+      "number": 25,
+      "state": "MERGED",
+      "url": "https://github.com/jack0682/rx-platform/pull/25",
+      "source_merge_tree_equal": true,
+      "tree": "0e73652531e24f9d65bd87e77e3edcf7497f5167",
+      "main": "3dbf1b4067ffeef0d2ab9dff5dff1a79ed8c4c31"
+    },
+    "rx-solutions": {
+      "headRefOid": "71aec7e7f1e2d6723884e30e97b9dd4ba97fb502",
+      "mergeCommit": {
+        "oid": "0996f0f5ac7b66a76388983e5c100a386458ba29"
+      },
+      "number": 42,
+      "state": "MERGED",
+      "url": "https://github.com/jack0682/rx-solutions/pull/42",
+      "feature_pr": {
+        "headRefOid": "039aa0d0459b8087e708ec77fdccfbd48fadc1d0",
+        "mergeCommit": {
+          "oid": "fccc996ae60062ea4ef42acf88bc594bc698d20c"
+        },
+        "number": 41,
+        "state": "MERGED",
+        "url": "https://github.com/jack0682/rx-solutions/pull/41",
+        "source_merge_tree_equal": true,
+        "tree": "dede741621bf26d8f9bfe74466baa610e465eeb1",
+        "main": "d4d38f6901ced41079af0d76daa273ee3b83bbf0"
+      },
+      "source_merge_tree_equal": true,
+      "tree": "2507bab67d0f1e0aa068b74e3f3522e18e3da6f7",
+      "main": "d4d38f6901ced41079af0d76daa273ee3b83bbf0"
+    }
+  },
+  "final_source_pin_ci": {
+    "run": "36108618125",
+    "head": "71aec7e7f1e2d6723884e30e97b9dd4ba97fb502",
+    "attempt": 1,
+    "result": "success",
+    "passed_failed_ignored": [
+      437,
+      0,
+      20
+    ]
+  }
+}

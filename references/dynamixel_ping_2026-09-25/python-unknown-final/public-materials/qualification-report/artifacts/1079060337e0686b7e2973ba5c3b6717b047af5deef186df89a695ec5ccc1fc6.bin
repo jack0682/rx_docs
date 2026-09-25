@@ -1,0 +1,1 @@
+{"area":"PROTECTION","evidence":"external harness must supply actual source-backed artifacts; exporter generates no verdict","requirement":"Actual unconfigured PHYSICAL negative-cell start denial and authorization denial; no physical endpoints","schema":"rx.delivery-criterion.v1"}

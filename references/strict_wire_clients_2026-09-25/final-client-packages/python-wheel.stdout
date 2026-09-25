@@ -1,0 +1,314 @@
+running egg_info
+creating src/rxclpy.egg-info
+writing src/rxclpy.egg-info/PKG-INFO
+writing dependency_links to src/rxclpy.egg-info/dependency_links.txt
+writing requirements to src/rxclpy.egg-info/requires.txt
+writing top-level names to src/rxclpy.egg-info/top_level.txt
+writing manifest file 'src/rxclpy.egg-info/SOURCES.txt'
+reading manifest file 'src/rxclpy.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+adding license file 'NOTICE'
+writing manifest file 'src/rxclpy.egg-info/SOURCES.txt'
+running bdist_wheel
+running build
+running build_py
+creating build/lib/rxclpy
+copying src/rxclpy/client.py -> build/lib/rxclpy
+copying src/rxclpy/__init__.py -> build/lib/rxclpy
+copying src/rxclpy/wire.py -> build/lib/rxclpy
+copying src/rxclpy/conformance.py -> build/lib/rxclpy
+creating build/lib/rxclpy/_generated
+copying src/rxclpy/_generated/__init__.py -> build/lib/rxclpy/_generated
+creating build/lib/rxclpy/_generated/strict_wire_v1
+copying src/rxclpy/_generated/strict_wire_v1/__init__.py -> build/lib/rxclpy/_generated/strict_wire_v1
+copying src/rxclpy/_generated/strict_wire_v1/probe_pb2.py -> build/lib/rxclpy/_generated/strict_wire_v1
+creating build/lib/rxclpy/_generated/rx
+copying src/rxclpy/_generated/rx/__init__.py -> build/lib/rxclpy/_generated/rx
+creating build/lib/rxclpy/_generated/rx/contract
+copying src/rxclpy/_generated/rx/contract/__init__.py -> build/lib/rxclpy/_generated/rx/contract
+creating build/lib/rxclpy/_generated/rx/host
+copying src/rxclpy/_generated/rx/host/__init__.py -> build/lib/rxclpy/_generated/rx/host
+creating build/lib/rxclpy/_generated/rx/cell
+copying src/rxclpy/_generated/rx/cell/__init__.py -> build/lib/rxclpy/_generated/rx/cell
+creating build/lib/rxclpy/_generated/rx/executor
+copying src/rxclpy/_generated/rx/executor/__init__.py -> build/lib/rxclpy/_generated/rx/executor
+creating build/lib/rxclpy/_generated/rx/contract/v1
+copying src/rxclpy/_generated/rx/contract/v1/__init__.py -> build/lib/rxclpy/_generated/rx/contract/v1
+copying src/rxclpy/_generated/rx/contract/v1/contract_pb2.py -> build/lib/rxclpy/_generated/rx/contract/v1
+creating build/lib/rxclpy/_generated/rx/host/configuration
+copying src/rxclpy/_generated/rx/host/configuration/__init__.py -> build/lib/rxclpy/_generated/rx/host/configuration
+creating build/lib/rxclpy/_generated/rx/host/read
+copying src/rxclpy/_generated/rx/host/read/__init__.py -> build/lib/rxclpy/_generated/rx/host/read
+creating build/lib/rxclpy/_generated/rx/host/qualification
+copying src/rxclpy/_generated/rx/host/qualification/__init__.py -> build/lib/rxclpy/_generated/rx/host/qualification
+creating build/lib/rxclpy/_generated/rx/host/configuration/v1
+copying src/rxclpy/_generated/rx/host/configuration/v1/__init__.py -> build/lib/rxclpy/_generated/rx/host/configuration/v1
+copying src/rxclpy/_generated/rx/host/configuration/v1/configuration_pb2.py -> build/lib/rxclpy/_generated/rx/host/configuration/v1
+creating build/lib/rxclpy/_generated/rx/host/read/v1
+copying src/rxclpy/_generated/rx/host/read/v1/read_pb2.py -> build/lib/rxclpy/_generated/rx/host/read/v1
+copying src/rxclpy/_generated/rx/host/read/v1/__init__.py -> build/lib/rxclpy/_generated/rx/host/read/v1
+creating build/lib/rxclpy/_generated/rx/host/qualification/v1
+copying src/rxclpy/_generated/rx/host/qualification/v1/__init__.py -> build/lib/rxclpy/_generated/rx/host/qualification/v1
+copying src/rxclpy/_generated/rx/host/qualification/v1/qualification_pb2.py -> build/lib/rxclpy/_generated/rx/host/qualification/v1
+creating build/lib/rxclpy/_generated/rx/cell/v1
+copying src/rxclpy/_generated/rx/cell/v1/cell_pb2.py -> build/lib/rxclpy/_generated/rx/cell/v1
+copying src/rxclpy/_generated/rx/cell/v1/__init__.py -> build/lib/rxclpy/_generated/rx/cell/v1
+creating build/lib/rxclpy/_generated/rx/executor/v1
+copying src/rxclpy/_generated/rx/executor/v1/executor_pb2.py -> build/lib/rxclpy/_generated/rx/executor/v1
+copying src/rxclpy/_generated/rx/executor/v1/__init__.py -> build/lib/rxclpy/_generated/rx/executor/v1
+creating build/lib/rxclpy/_generated/rx/executor/plan
+copying src/rxclpy/_generated/rx/executor/plan/__init__.py -> build/lib/rxclpy/_generated/rx/executor/plan
+creating build/lib/rxclpy/_generated/rx/executor/assignment
+copying src/rxclpy/_generated/rx/executor/assignment/__init__.py -> build/lib/rxclpy/_generated/rx/executor/assignment
+creating build/lib/rxclpy/_generated/rx/executor/production
+copying src/rxclpy/_generated/rx/executor/production/__init__.py -> build/lib/rxclpy/_generated/rx/executor/production
+creating build/lib/rxclpy/_generated/rx/executor/plan/v1
+copying src/rxclpy/_generated/rx/executor/plan/v1/plan_pb2.py -> build/lib/rxclpy/_generated/rx/executor/plan/v1
+copying src/rxclpy/_generated/rx/executor/plan/v1/__init__.py -> build/lib/rxclpy/_generated/rx/executor/plan/v1
+creating build/lib/rxclpy/_generated/rx/executor/assignment/v1
+copying src/rxclpy/_generated/rx/executor/assignment/v1/assignment_pb2.py -> build/lib/rxclpy/_generated/rx/executor/assignment/v1
+copying src/rxclpy/_generated/rx/executor/assignment/v1/__init__.py -> build/lib/rxclpy/_generated/rx/executor/assignment/v1
+creating build/lib/rxclpy/_generated/rx/executor/production/v1
+copying src/rxclpy/_generated/rx/executor/production/v1/production_pb2.py -> build/lib/rxclpy/_generated/rx/executor/production/v1
+copying src/rxclpy/_generated/rx/executor/production/v1/__init__.py -> build/lib/rxclpy/_generated/rx/executor/production/v1
+running egg_info
+writing src/rxclpy.egg-info/PKG-INFO
+writing dependency_links to src/rxclpy.egg-info/dependency_links.txt
+writing requirements to src/rxclpy.egg-info/requires.txt
+writing top-level names to src/rxclpy.egg-info/top_level.txt
+reading manifest file 'src/rxclpy.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+adding license file 'NOTICE'
+writing manifest file 'src/rxclpy.egg-info/SOURCES.txt'
+copying src/rxclpy/_build.json -> build/lib/rxclpy
+copying src/rxclpy/py.typed -> build/lib/rxclpy
+creating build/lib/rxclpy/_bundle
+copying src/rxclpy/_bundle/semantic_fields.json -> build/lib/rxclpy/_bundle
+copying src/rxclpy/_bundle/cell_operations_manifest.json -> build/lib/rxclpy/_bundle
+copying src/rxclpy/_bundle/bundle.json -> build/lib/rxclpy/_bundle
+copying src/rxclpy/_bundle/README.md -> build/lib/rxclpy/_bundle
+copying src/rxclpy/_bundle/contracts_manifest.json -> build/lib/rxclpy/_bundle
+creating build/lib/rxclpy/_bundle/strict-wire-v1
+copying src/rxclpy/_bundle/strict-wire-v1/README.md -> build/lib/rxclpy/_bundle/strict-wire-v1
+copying src/rxclpy/_bundle/strict-wire-v1/vectors.json -> build/lib/rxclpy/_bundle/strict-wire-v1
+copying src/rxclpy/_bundle/strict-wire-v1/probe.proto -> build/lib/rxclpy/_bundle/strict-wire-v1
+creating build/lib/rxclpy/_bundle/rx/contract/v1
+copying src/rxclpy/_bundle/rx/contract/v1/contract.proto -> build/lib/rxclpy/_bundle/rx/contract/v1
+creating build/lib/rxclpy/_bundle/rx/host/configuration/v1
+copying src/rxclpy/_bundle/rx/host/configuration/v1/configuration.proto -> build/lib/rxclpy/_bundle/rx/host/configuration/v1
+creating build/lib/rxclpy/_bundle/rx/host/read/v1
+copying src/rxclpy/_bundle/rx/host/read/v1/read.proto -> build/lib/rxclpy/_bundle/rx/host/read/v1
+creating build/lib/rxclpy/_bundle/rx/host/qualification/v1
+copying src/rxclpy/_bundle/rx/host/qualification/v1/qualification.proto -> build/lib/rxclpy/_bundle/rx/host/qualification/v1
+creating build/lib/rxclpy/_bundle/rx/cell/v1
+copying src/rxclpy/_bundle/rx/cell/v1/cell.proto -> build/lib/rxclpy/_bundle/rx/cell/v1
+creating build/lib/rxclpy/_bundle/rx/executor/v1
+copying src/rxclpy/_bundle/rx/executor/v1/executor.proto -> build/lib/rxclpy/_bundle/rx/executor/v1
+creating build/lib/rxclpy/_bundle/rx/executor/plan/v1
+copying src/rxclpy/_bundle/rx/executor/plan/v1/plan.proto -> build/lib/rxclpy/_bundle/rx/executor/plan/v1
+creating build/lib/rxclpy/_bundle/rx/executor/assignment/v1
+copying src/rxclpy/_bundle/rx/executor/assignment/v1/assignment.proto -> build/lib/rxclpy/_bundle/rx/executor/assignment/v1
+creating build/lib/rxclpy/_bundle/rx/executor/production/v1
+copying src/rxclpy/_bundle/rx/executor/production/v1/production.proto -> build/lib/rxclpy/_bundle/rx/executor/production/v1
+copying src/rxclpy/_generated/strict_wire_v1/probe_pb2.pyi -> build/lib/rxclpy/_generated/strict_wire_v1
+copying src/rxclpy/_generated/rx/contract/v1/contract_pb2.pyi -> build/lib/rxclpy/_generated/rx/contract/v1
+copying src/rxclpy/_generated/rx/host/configuration/v1/configuration_pb2.pyi -> build/lib/rxclpy/_generated/rx/host/configuration/v1
+copying src/rxclpy/_generated/rx/host/read/v1/read_pb2.pyi -> build/lib/rxclpy/_generated/rx/host/read/v1
+copying src/rxclpy/_generated/rx/host/qualification/v1/qualification_pb2.pyi -> build/lib/rxclpy/_generated/rx/host/qualification/v1
+copying src/rxclpy/_generated/rx/cell/v1/cell_pb2.pyi -> build/lib/rxclpy/_generated/rx/cell/v1
+copying src/rxclpy/_generated/rx/executor/v1/executor_pb2.pyi -> build/lib/rxclpy/_generated/rx/executor/v1
+copying src/rxclpy/_generated/rx/executor/plan/v1/plan_pb2.pyi -> build/lib/rxclpy/_generated/rx/executor/plan/v1
+copying src/rxclpy/_generated/rx/executor/assignment/v1/assignment_pb2.pyi -> build/lib/rxclpy/_generated/rx/executor/assignment/v1
+copying src/rxclpy/_generated/rx/executor/production/v1/production_pb2.pyi -> build/lib/rxclpy/_generated/rx/executor/production/v1
+installing to build/bdist.linux-aarch64/wheel
+running install
+running install_lib
+creating build/bdist.linux-aarch64/wheel
+creating build/bdist.linux-aarch64/wheel/rxclpy
+copying build/lib/rxclpy/client.py -> build/bdist.linux-aarch64/wheel/./rxclpy
+copying build/lib/rxclpy/__init__.py -> build/bdist.linux-aarch64/wheel/./rxclpy
+copying build/lib/rxclpy/wire.py -> build/bdist.linux-aarch64/wheel/./rxclpy
+creating build/bdist.linux-aarch64/wheel/rxclpy/_bundle
+copying build/lib/rxclpy/_bundle/semantic_fields.json -> build/bdist.linux-aarch64/wheel/./rxclpy/_bundle
+copying build/lib/rxclpy/_bundle/cell_operations_manifest.json -> build/bdist.linux-aarch64/wheel/./rxclpy/_bundle
+creating build/bdist.linux-aarch64/wheel/rxclpy/_bundle/strict-wire-v1
+copying build/lib/rxclpy/_bundle/strict-wire-v1/README.md -> build/bdist.linux-aarch64/wheel/./rxclpy/_bundle/strict-wire-v1
+copying build/lib/rxclpy/_bundle/strict-wire-v1/vectors.json -> build/bdist.linux-aarch64/wheel/./rxclpy/_bundle/strict-wire-v1
+copying build/lib/rxclpy/_bundle/strict-wire-v1/probe.proto -> build/bdist.linux-aarch64/wheel/./rxclpy/_bundle/strict-wire-v1
+copying build/lib/rxclpy/_bundle/bundle.json -> build/bdist.linux-aarch64/wheel/./rxclpy/_bundle
+copying build/lib/rxclpy/_bundle/README.md -> build/bdist.linux-aarch64/wheel/./rxclpy/_bundle
+copying build/lib/rxclpy/_bundle/contracts_manifest.json -> build/bdist.linux-aarch64/wheel/./rxclpy/_bundle
+creating build/bdist.linux-aarch64/wheel/rxclpy/_bundle/rx
+creating build/bdist.linux-aarch64/wheel/rxclpy/_bundle/rx/contract
+creating build/bdist.linux-aarch64/wheel/rxclpy/_bundle/rx/contract/v1
+copying build/lib/rxclpy/_bundle/rx/contract/v1/contract.proto -> build/bdist.linux-aarch64/wheel/./rxclpy/_bundle/rx/contract/v1
+creating build/bdist.linux-aarch64/wheel/rxclpy/_bundle/rx/host
+creating build/bdist.linux-aarch64/wheel/rxclpy/_bundle/rx/host/configuration
+creating build/bdist.linux-aarch64/wheel/rxclpy/_bundle/rx/host/configuration/v1
+copying build/lib/rxclpy/_bundle/rx/host/configuration/v1/configuration.proto -> build/bdist.linux-aarch64/wheel/./rxclpy/_bundle/rx/host/configuration/v1
+creating build/bdist.linux-aarch64/wheel/rxclpy/_bundle/rx/host/read
+creating build/bdist.linux-aarch64/wheel/rxclpy/_bundle/rx/host/read/v1
+copying build/lib/rxclpy/_bundle/rx/host/read/v1/read.proto -> build/bdist.linux-aarch64/wheel/./rxclpy/_bundle/rx/host/read/v1
+creating build/bdist.linux-aarch64/wheel/rxclpy/_bundle/rx/host/qualification
+creating build/bdist.linux-aarch64/wheel/rxclpy/_bundle/rx/host/qualification/v1
+copying build/lib/rxclpy/_bundle/rx/host/qualification/v1/qualification.proto -> build/bdist.linux-aarch64/wheel/./rxclpy/_bundle/rx/host/qualification/v1
+creating build/bdist.linux-aarch64/wheel/rxclpy/_bundle/rx/cell
+creating build/bdist.linux-aarch64/wheel/rxclpy/_bundle/rx/cell/v1
+copying build/lib/rxclpy/_bundle/rx/cell/v1/cell.proto -> build/bdist.linux-aarch64/wheel/./rxclpy/_bundle/rx/cell/v1
+creating build/bdist.linux-aarch64/wheel/rxclpy/_bundle/rx/executor
+creating build/bdist.linux-aarch64/wheel/rxclpy/_bundle/rx/executor/v1
+copying build/lib/rxclpy/_bundle/rx/executor/v1/executor.proto -> build/bdist.linux-aarch64/wheel/./rxclpy/_bundle/rx/executor/v1
+creating build/bdist.linux-aarch64/wheel/rxclpy/_bundle/rx/executor/plan
+creating build/bdist.linux-aarch64/wheel/rxclpy/_bundle/rx/executor/plan/v1
+copying build/lib/rxclpy/_bundle/rx/executor/plan/v1/plan.proto -> build/bdist.linux-aarch64/wheel/./rxclpy/_bundle/rx/executor/plan/v1
+creating build/bdist.linux-aarch64/wheel/rxclpy/_bundle/rx/executor/assignment
+creating build/bdist.linux-aarch64/wheel/rxclpy/_bundle/rx/executor/assignment/v1
+copying build/lib/rxclpy/_bundle/rx/executor/assignment/v1/assignment.proto -> build/bdist.linux-aarch64/wheel/./rxclpy/_bundle/rx/executor/assignment/v1
+creating build/bdist.linux-aarch64/wheel/rxclpy/_bundle/rx/executor/production
+creating build/bdist.linux-aarch64/wheel/rxclpy/_bundle/rx/executor/production/v1
+copying build/lib/rxclpy/_bundle/rx/executor/production/v1/production.proto -> build/bdist.linux-aarch64/wheel/./rxclpy/_bundle/rx/executor/production/v1
+copying build/lib/rxclpy/py.typed -> build/bdist.linux-aarch64/wheel/./rxclpy
+copying build/lib/rxclpy/conformance.py -> build/bdist.linux-aarch64/wheel/./rxclpy
+copying build/lib/rxclpy/_build.json -> build/bdist.linux-aarch64/wheel/./rxclpy
+creating build/bdist.linux-aarch64/wheel/rxclpy/_generated
+copying build/lib/rxclpy/_generated/__init__.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated
+creating build/bdist.linux-aarch64/wheel/rxclpy/_generated/strict_wire_v1
+copying build/lib/rxclpy/_generated/strict_wire_v1/probe_pb2.pyi -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/strict_wire_v1
+copying build/lib/rxclpy/_generated/strict_wire_v1/__init__.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/strict_wire_v1
+copying build/lib/rxclpy/_generated/strict_wire_v1/probe_pb2.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/strict_wire_v1
+creating build/bdist.linux-aarch64/wheel/rxclpy/_generated/rx
+creating build/bdist.linux-aarch64/wheel/rxclpy/_generated/rx/contract
+creating build/bdist.linux-aarch64/wheel/rxclpy/_generated/rx/contract/v1
+copying build/lib/rxclpy/_generated/rx/contract/v1/__init__.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/contract/v1
+copying build/lib/rxclpy/_generated/rx/contract/v1/contract_pb2.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/contract/v1
+copying build/lib/rxclpy/_generated/rx/contract/v1/contract_pb2.pyi -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/contract/v1
+copying build/lib/rxclpy/_generated/rx/contract/__init__.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/contract
+creating build/bdist.linux-aarch64/wheel/rxclpy/_generated/rx/host
+creating build/bdist.linux-aarch64/wheel/rxclpy/_generated/rx/host/configuration
+creating build/bdist.linux-aarch64/wheel/rxclpy/_generated/rx/host/configuration/v1
+copying build/lib/rxclpy/_generated/rx/host/configuration/v1/__init__.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/host/configuration/v1
+copying build/lib/rxclpy/_generated/rx/host/configuration/v1/configuration_pb2.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/host/configuration/v1
+copying build/lib/rxclpy/_generated/rx/host/configuration/v1/configuration_pb2.pyi -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/host/configuration/v1
+copying build/lib/rxclpy/_generated/rx/host/configuration/__init__.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/host/configuration
+creating build/bdist.linux-aarch64/wheel/rxclpy/_generated/rx/host/read
+creating build/bdist.linux-aarch64/wheel/rxclpy/_generated/rx/host/read/v1
+copying build/lib/rxclpy/_generated/rx/host/read/v1/read_pb2.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/host/read/v1
+copying build/lib/rxclpy/_generated/rx/host/read/v1/__init__.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/host/read/v1
+copying build/lib/rxclpy/_generated/rx/host/read/v1/read_pb2.pyi -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/host/read/v1
+copying build/lib/rxclpy/_generated/rx/host/read/__init__.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/host/read
+copying build/lib/rxclpy/_generated/rx/host/__init__.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/host
+creating build/bdist.linux-aarch64/wheel/rxclpy/_generated/rx/host/qualification
+creating build/bdist.linux-aarch64/wheel/rxclpy/_generated/rx/host/qualification/v1
+copying build/lib/rxclpy/_generated/rx/host/qualification/v1/__init__.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/host/qualification/v1
+copying build/lib/rxclpy/_generated/rx/host/qualification/v1/qualification_pb2.pyi -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/host/qualification/v1
+copying build/lib/rxclpy/_generated/rx/host/qualification/v1/qualification_pb2.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/host/qualification/v1
+copying build/lib/rxclpy/_generated/rx/host/qualification/__init__.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/host/qualification
+copying build/lib/rxclpy/_generated/rx/__init__.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx
+creating build/bdist.linux-aarch64/wheel/rxclpy/_generated/rx/cell
+creating build/bdist.linux-aarch64/wheel/rxclpy/_generated/rx/cell/v1
+copying build/lib/rxclpy/_generated/rx/cell/v1/cell_pb2.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/cell/v1
+copying build/lib/rxclpy/_generated/rx/cell/v1/__init__.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/cell/v1
+copying build/lib/rxclpy/_generated/rx/cell/v1/cell_pb2.pyi -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/cell/v1
+copying build/lib/rxclpy/_generated/rx/cell/__init__.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/cell
+creating build/bdist.linux-aarch64/wheel/rxclpy/_generated/rx/executor
+creating build/bdist.linux-aarch64/wheel/rxclpy/_generated/rx/executor/v1
+copying build/lib/rxclpy/_generated/rx/executor/v1/executor_pb2.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/executor/v1
+copying build/lib/rxclpy/_generated/rx/executor/v1/__init__.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/executor/v1
+copying build/lib/rxclpy/_generated/rx/executor/v1/executor_pb2.pyi -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/executor/v1
+creating build/bdist.linux-aarch64/wheel/rxclpy/_generated/rx/executor/plan
+creating build/bdist.linux-aarch64/wheel/rxclpy/_generated/rx/executor/plan/v1
+copying build/lib/rxclpy/_generated/rx/executor/plan/v1/plan_pb2.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/executor/plan/v1
+copying build/lib/rxclpy/_generated/rx/executor/plan/v1/__init__.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/executor/plan/v1
+copying build/lib/rxclpy/_generated/rx/executor/plan/v1/plan_pb2.pyi -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/executor/plan/v1
+copying build/lib/rxclpy/_generated/rx/executor/plan/__init__.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/executor/plan
+copying build/lib/rxclpy/_generated/rx/executor/__init__.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/executor
+creating build/bdist.linux-aarch64/wheel/rxclpy/_generated/rx/executor/assignment
+creating build/bdist.linux-aarch64/wheel/rxclpy/_generated/rx/executor/assignment/v1
+copying build/lib/rxclpy/_generated/rx/executor/assignment/v1/assignment_pb2.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/executor/assignment/v1
+copying build/lib/rxclpy/_generated/rx/executor/assignment/v1/__init__.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/executor/assignment/v1
+copying build/lib/rxclpy/_generated/rx/executor/assignment/v1/assignment_pb2.pyi -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/executor/assignment/v1
+copying build/lib/rxclpy/_generated/rx/executor/assignment/__init__.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/executor/assignment
+creating build/bdist.linux-aarch64/wheel/rxclpy/_generated/rx/executor/production
+creating build/bdist.linux-aarch64/wheel/rxclpy/_generated/rx/executor/production/v1
+copying build/lib/rxclpy/_generated/rx/executor/production/v1/production_pb2.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/executor/production/v1
+copying build/lib/rxclpy/_generated/rx/executor/production/v1/production_pb2.pyi -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/executor/production/v1
+copying build/lib/rxclpy/_generated/rx/executor/production/v1/__init__.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/executor/production/v1
+copying build/lib/rxclpy/_generated/rx/executor/production/__init__.py -> build/bdist.linux-aarch64/wheel/./rxclpy/_generated/rx/executor/production
+running install_egg_info
+Copying src/rxclpy.egg-info to build/bdist.linux-aarch64/wheel/./rxclpy-0.1.0-py3.12.egg-info
+running install_scripts
+creating build/bdist.linux-aarch64/wheel/rxclpy-0.1.0.dist-info/WHEEL
+creating '/evidence/final-client-packages/wheels/.tmp-pe_zxykw/rxclpy-0.1.0-py3-none-any.whl' and adding 'build/bdist.linux-aarch64/wheel' to it
+adding 'rxclpy/__init__.py'
+adding 'rxclpy/_build.json'
+adding 'rxclpy/client.py'
+adding 'rxclpy/conformance.py'
+adding 'rxclpy/py.typed'
+adding 'rxclpy/wire.py'
+adding 'rxclpy/_bundle/README.md'
+adding 'rxclpy/_bundle/bundle.json'
+adding 'rxclpy/_bundle/cell_operations_manifest.json'
+adding 'rxclpy/_bundle/contracts_manifest.json'
+adding 'rxclpy/_bundle/semantic_fields.json'
+adding 'rxclpy/_bundle/rx/cell/v1/cell.proto'
+adding 'rxclpy/_bundle/rx/contract/v1/contract.proto'
+adding 'rxclpy/_bundle/rx/executor/assignment/v1/assignment.proto'
+adding 'rxclpy/_bundle/rx/executor/plan/v1/plan.proto'
+adding 'rxclpy/_bundle/rx/executor/production/v1/production.proto'
+adding 'rxclpy/_bundle/rx/executor/v1/executor.proto'
+adding 'rxclpy/_bundle/rx/host/configuration/v1/configuration.proto'
+adding 'rxclpy/_bundle/rx/host/qualification/v1/qualification.proto'
+adding 'rxclpy/_bundle/rx/host/read/v1/read.proto'
+adding 'rxclpy/_bundle/strict-wire-v1/README.md'
+adding 'rxclpy/_bundle/strict-wire-v1/probe.proto'
+adding 'rxclpy/_bundle/strict-wire-v1/vectors.json'
+adding 'rxclpy/_generated/__init__.py'
+adding 'rxclpy/_generated/rx/__init__.py'
+adding 'rxclpy/_generated/rx/cell/__init__.py'
+adding 'rxclpy/_generated/rx/cell/v1/__init__.py'
+adding 'rxclpy/_generated/rx/cell/v1/cell_pb2.py'
+adding 'rxclpy/_generated/rx/cell/v1/cell_pb2.pyi'
+adding 'rxclpy/_generated/rx/contract/__init__.py'
+adding 'rxclpy/_generated/rx/contract/v1/__init__.py'
+adding 'rxclpy/_generated/rx/contract/v1/contract_pb2.py'
+adding 'rxclpy/_generated/rx/contract/v1/contract_pb2.pyi'
+adding 'rxclpy/_generated/rx/executor/__init__.py'
+adding 'rxclpy/_generated/rx/executor/assignment/__init__.py'
+adding 'rxclpy/_generated/rx/executor/assignment/v1/__init__.py'
+adding 'rxclpy/_generated/rx/executor/assignment/v1/assignment_pb2.py'
+adding 'rxclpy/_generated/rx/executor/assignment/v1/assignment_pb2.pyi'
+adding 'rxclpy/_generated/rx/executor/plan/__init__.py'
+adding 'rxclpy/_generated/rx/executor/plan/v1/__init__.py'
+adding 'rxclpy/_generated/rx/executor/plan/v1/plan_pb2.py'
+adding 'rxclpy/_generated/rx/executor/plan/v1/plan_pb2.pyi'
+adding 'rxclpy/_generated/rx/executor/production/__init__.py'
+adding 'rxclpy/_generated/rx/executor/production/v1/__init__.py'
+adding 'rxclpy/_generated/rx/executor/production/v1/production_pb2.py'
+adding 'rxclpy/_generated/rx/executor/production/v1/production_pb2.pyi'
+adding 'rxclpy/_generated/rx/executor/v1/__init__.py'
+adding 'rxclpy/_generated/rx/executor/v1/executor_pb2.py'
+adding 'rxclpy/_generated/rx/executor/v1/executor_pb2.pyi'
+adding 'rxclpy/_generated/rx/host/__init__.py'
+adding 'rxclpy/_generated/rx/host/configuration/__init__.py'
+adding 'rxclpy/_generated/rx/host/configuration/v1/__init__.py'
+adding 'rxclpy/_generated/rx/host/configuration/v1/configuration_pb2.py'
+adding 'rxclpy/_generated/rx/host/configuration/v1/configuration_pb2.pyi'
+adding 'rxclpy/_generated/rx/host/qualification/__init__.py'
+adding 'rxclpy/_generated/rx/host/qualification/v1/__init__.py'
+adding 'rxclpy/_generated/rx/host/qualification/v1/qualification_pb2.py'
+adding 'rxclpy/_generated/rx/host/qualification/v1/qualification_pb2.pyi'
+adding 'rxclpy/_generated/rx/host/read/__init__.py'
+adding 'rxclpy/_generated/rx/host/read/v1/__init__.py'
+adding 'rxclpy/_generated/rx/host/read/v1/read_pb2.py'
+adding 'rxclpy/_generated/rx/host/read/v1/read_pb2.pyi'
+adding 'rxclpy/_generated/strict_wire_v1/__init__.py'
+adding 'rxclpy/_generated/strict_wire_v1/probe_pb2.py'
+adding 'rxclpy/_generated/strict_wire_v1/probe_pb2.pyi'
+adding 'rxclpy-0.1.0.dist-info/licenses/LICENSE'
+adding 'rxclpy-0.1.0.dist-info/licenses/NOTICE'
+adding 'rxclpy-0.1.0.dist-info/METADATA'
+adding 'rxclpy-0.1.0.dist-info/WHEEL'
+adding 'rxclpy-0.1.0.dist-info/top_level.txt'
+adding 'rxclpy-0.1.0.dist-info/RECORD'
+removing build/bdist.linux-aarch64/wheel
+Successfully built rxclpy-0.1.0-py3-none-any.whl

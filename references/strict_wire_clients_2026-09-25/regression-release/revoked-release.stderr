@@ -1,0 +1,2 @@
+{"condition":"release/revoked","current_permission":"NOT_GRANTED","detail":"release/revoked","schema":"rx.release-refusal.v1"}
+Error: "release/revoked"

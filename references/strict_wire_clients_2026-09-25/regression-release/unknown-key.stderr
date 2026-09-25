@@ -1,0 +1,2 @@
+{"condition":"release/unknown-key","current_permission":"NOT_GRANTED","detail":"release/unknown-key","schema":"rx.release-refusal.v1"}
+Error: "release/unknown-key"

@@ -1,0 +1,1 @@
+{"id":17,"method":"rx.contract.v1.OperationService/Get","request":{"context":{"call_id":"985ae39a-64c0-4f99-a77c-0629ee872c60","session_id":"01a0d6c1-5e3e-714d-a6b9-f4489697a6fe"},"operation_id":"01a0d6c1-79c1-7460-8c0a-94da8ee1865e"},"timeout":10}

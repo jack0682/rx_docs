@@ -1,0 +1,26 @@
+{
+  "expected": [
+    "rx/cell/v1/cell.proto",
+    "rx/contract/v1/contract.proto",
+    "rx/executor/assignment/v1/assignment.proto",
+    "rx/executor/plan/v1/plan.proto",
+    "rx/executor/production/v1/production.proto",
+    "rx/executor/v1/executor.proto",
+    "rx/host/configuration/v1/configuration.proto",
+    "rx/host/qualification/v1/qualification.proto",
+    "rx/host/read/v1/read.proto"
+  ],
+  "actual": [
+    "rx/cell/v1/cell.proto",
+    "rx/contract/v1/contract.proto",
+    "rx/executor/assignment/v1/assignment.proto",
+    "rx/executor/plan/v1/plan.proto",
+    "rx/executor/production/v1/production.proto",
+    "rx/executor/v1/executor.proto",
+    "rx/host/qualification/v1/qualification.proto",
+    "rx/host/read/v1/read.proto"
+  ],
+  "missing": [
+    "rx/host/configuration/v1/configuration.proto"
+  ]
+}

@@ -1,0 +1,421 @@
+[
+  {
+    "scene": "natural-positive",
+    "result": {
+      "operating_area_provider": {
+        "challenge": "7bd95bfa-531a-4399-b90e-23c99bcca8e0",
+        "condition": null,
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "COMMIT_CALLBACK_COMPLETED"
+      },
+      "result": {
+        "current_permission": "NONE; HISTORICAL_WORK_RESULT_ONLY",
+        "decision": {
+          "challenge": "7bd95bfa-531a-4399-b90e-23c99bcca8e0",
+          "context_digest": "1cd2378aa4e81514abd796f0008aa899f7e4b2790727cf974b904ef4fbf01018",
+          "decision": "5469b29f-91d8-4e99-8574-1fa45678e909",
+          "epoch": "e4a5a22f-3a3f-480e-91bc-94ef5a5856d9",
+          "issuer": "development/support-gap-judge-v1",
+          "key": "rx/development-work-judge-v1",
+          "kind": "WORK_USE",
+          "owner": {
+            "catalog": "6e39d325e5ad06aa2c07de39184e94d4fcd52e56d72a644cefbea5a616cfb126",
+            "program": "rx/status-work-http",
+            "registration": "a0d9bbe8-dff7-4246-b42c-b4e6ce80096f",
+            "revision": "1"
+          },
+          "policy_digest": "be98f61eebe5e488708f84a12ca3992e87ed8c67423b38fc7dc48044c82bf531",
+          "signed_digest": "b6fdecf147d76d05cb7a8958e96c40fa793538b326c0f748e6ca82a62125e8c9",
+          "ttl_ms": "30000"
+        },
+        "input_digest": "97fc6889937566a8f58899f2e88a501119962e5526b587210d4ec8215634af4e",
+        "instance": "86dff35e-408a-45df-9bbd-196cd58c2012",
+        "native_packages": {
+          "observed": "675",
+          "required": "1000",
+          "shortfall": "325"
+        },
+        "observation_origin": {
+          "basis": "COMPONENT_SELF_REPORT",
+          "native_packages": "STARTUP_AUDIT_DERIVED",
+          "support_profiles": "STARTUP_CATALOG_DERIVED"
+        },
+        "observed_at": {
+          "clock_id": "unix-utc-ns",
+          "ticks_ns": "1790309559167356467"
+        },
+        "operating_area_policy": "EXTERNAL_ISSUER_DECISION; NOT_EVALUATED_BY_HOST; PHYSICAL_POLICY_NOT_ATTESTED",
+        "physical_qualification": "NOT_PERFORMED",
+        "readiness_semantics": "3c187c0984f484240d7169c009959aa0ef985dd8e8572dfbd36a3d7d316a0602",
+        "registration": "a0d9bbe8-dff7-4246-b42c-b4e6ce80096f",
+        "registration_revision": "1",
+        "run": "79084ffd-ae70-4bda-aaf4-eaea6c4afec1",
+        "signature_verification": "EXTERNAL_SIGNATURE_AND_CONTEXT_VERIFIED_AT_LOGICAL_CUT",
+        "source_digest": "6cbcb57be20983e2b8c9da7825c340f8d46a9ff3ee59691df2b625734443f6cc",
+        "support_profiles": {
+          "observed": "4",
+          "required": "6",
+          "shortfall": "2"
+        },
+        "task": {
+          "operating_area": "development/support-area",
+          "operation": "a5c22e83-dd0d-413e-b936-a342fe7a7730",
+          "required_native_packages": "1000",
+          "required_support_profiles": "6",
+          "selection": "status"
+        }
+      },
+      "schema": "rx.work-use-result.v1"
+    },
+    "work_rows": 2,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": true,
+    "host_custody": {
+      "uid": 10001,
+      "private_key_path_present": false,
+      "issuer_processes_observed": [],
+      "process_snapshot": {
+        "1": "/usr/bin/python3",
+        "7": "/evidence/rx-solutionsd"
+      },
+      "scope": "one actual process snapshot plus inspected host launch code"
+    }
+  },
+  {
+    "scene": "unconnected",
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": "NOT_CONNECTED",
+      "operation": "3e5d4d7c-9dee-4032-bd37-dc495c17fe22",
+      "reason": "invalid supervisor input: work-use/external-judgment-Unsupported: work-use/operating-area-provider: operating-area positive work-use provider is not connected; the host is not an issuer",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": false,
+    "host_custody": {
+      "uid": 10001,
+      "private_key_path_present": false,
+      "issuer_processes_observed": [],
+      "process_snapshot": {
+        "1": "/usr/bin/python3",
+        "7": "/evidence/rx-solutionsd"
+      },
+      "scope": "one actual process snapshot plus inspected host launch code"
+    }
+  },
+  {
+    "scene": "issuer-scope",
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": {
+        "challenge": null,
+        "condition": "work-use/issuer-scope",
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "REFUSED"
+      },
+      "operation": "14143e71-b83b-4536-a94e-67cc1efa98ed",
+      "reason": "invalid supervisor input: work-use/external-judgment-Denied: work-use/issuer-scope: decision/issuer-scope: key, issuer, role or operating area is not authorized",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": false,
+    "host_custody": {
+      "uid": 10001,
+      "private_key_path_present": false,
+      "issuer_processes_observed": [],
+      "process_snapshot": {
+        "1": "/usr/bin/python3",
+        "7": "/evidence/rx-solutionsd"
+      },
+      "scope": "one actual process snapshot plus inspected host launch code"
+    }
+  },
+  {
+    "scene": "judge-policy-denied",
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": {
+        "challenge": "6f378da8-65b7-425d-b5e1-77bb50b9e9cd",
+        "condition": "work-use/judge-policy-denied",
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "REFUSED"
+      },
+      "operation": "b093254d-d557-4d60-881a-0b50650a18cf",
+      "reason": "invalid supervisor input: work-use/external-judgment-Denied: work-use/judge-policy-denied: unverified negative issuer report; development/bounded-support-gap-report-v1: judge/bounded-report-rule",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": false,
+    "host_custody": {
+      "uid": 10001,
+      "private_key_path_present": false,
+      "issuer_processes_observed": [],
+      "process_snapshot": {
+        "1": "/usr/bin/python3",
+        "7": "/evidence/rx-solutionsd"
+      },
+      "scope": "one actual process snapshot plus inspected host launch code"
+    }
+  },
+  {
+    "scene": "signature-mismatch",
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": {
+        "challenge": "7f4e7970-ed03-46a7-8344-da25bd356fdb",
+        "condition": "work-use/signature-mismatch",
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "REFUSED"
+      },
+      "operation": "ac6d38ea-7c46-402f-bdba-f4d5bf1882c0",
+      "reason": "invalid supervisor input: work-use/external-judgment-Denied: work-use/signature-mismatch: decision/signature: detached Ed25519 verification failed",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": false,
+    "host_custody": {
+      "uid": 10001,
+      "private_key_path_present": false,
+      "issuer_processes_observed": [],
+      "process_snapshot": {
+        "1": "/usr/bin/python3",
+        "7": "/evidence/rx-solutionsd"
+      },
+      "scope": "one actual process snapshot plus inspected host launch code"
+    }
+  },
+  {
+    "scene": "claimed-area",
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": {
+        "challenge": "29afec7e-dfe3-4b05-ace4-1e545c585ffc",
+        "condition": "work-use/operating-area-mismatch",
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "REFUSED"
+      },
+      "operation": "67ee48ca-178c-4759-b553-9c71809bb241",
+      "reason": "invalid supervisor input: work-use/external-judgment-Denied: work-use/operating-area-mismatch: untrusted claimed area differs; issuer identity not verified",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": false,
+    "host_custody": {
+      "uid": 10001,
+      "private_key_path_present": false,
+      "issuer_processes_observed": [],
+      "process_snapshot": {
+        "1": "/usr/bin/python3",
+        "7": "/evidence/rx-solutionsd"
+      },
+      "scope": "one actual process snapshot plus inspected host launch code"
+    }
+  },
+  {
+    "scene": "claimed-role",
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": {
+        "challenge": "ff16dc87-b537-40bc-8301-865d381b6b40",
+        "condition": "work-use/role-kind-mismatch",
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "REFUSED"
+      },
+      "operation": "e7a7a028-5cf3-4296-913c-34b628722e33",
+      "reason": "invalid supervisor input: work-use/external-judgment-Denied: work-use/role-kind-mismatch: untrusted claimed role/kind differs; issuer identity not verified",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": false,
+    "host_custody": {
+      "uid": 10001,
+      "private_key_path_present": false,
+      "issuer_processes_observed": [],
+      "process_snapshot": {
+        "1": "/usr/bin/python3",
+        "7": "/evidence/rx-solutionsd"
+      },
+      "scope": "one actual process snapshot plus inspected host launch code"
+    }
+  },
+  {
+    "scene": "claimed-kind",
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": {
+        "challenge": "5ec325dd-5718-4fa0-ad77-b463d832d1f6",
+        "condition": "work-use/role-kind-mismatch",
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "REFUSED"
+      },
+      "operation": "592ff573-247d-4468-a2e2-9b9c50880a78",
+      "reason": "invalid supervisor input: work-use/external-judgment-Denied: work-use/role-kind-mismatch: untrusted claimed role/kind differs; issuer identity not verified",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": false,
+    "host_custody": {
+      "uid": 10001,
+      "private_key_path_present": false,
+      "issuer_processes_observed": [],
+      "process_snapshot": {
+        "1": "/usr/bin/python3",
+        "7": "/evidence/rx-solutionsd"
+      },
+      "scope": "one actual process snapshot plus inspected host launch code"
+    }
+  },
+  {
+    "scene": "unknown-response-key",
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": {
+        "challenge": "f8120fbd-2320-41e2-ac11-4e3c63eb54d6",
+        "condition": "work-use/issuer-scope",
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "REFUSED"
+      },
+      "operation": "316a5e90-c83a-40bb-adc6-c5b056a25eaa",
+      "reason": "invalid supervisor input: work-use/external-judgment-Denied: work-use/issuer-scope: untrusted response key is outside authored issuer scope",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": false,
+    "host_custody": {
+      "uid": 10001,
+      "private_key_path_present": false,
+      "issuer_processes_observed": [],
+      "process_snapshot": {
+        "1": "/usr/bin/python3",
+        "7": "/evidence/rx-solutionsd"
+      },
+      "scope": "one actual process snapshot plus inspected host launch code"
+    }
+  },
+  {
+    "scene": "revoked",
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": {
+        "challenge": "000d18d5-44c1-4091-b5bc-24930a8cd224",
+        "condition": "work-use/revoked",
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "REFUSED"
+      },
+      "operation": "6f4dbdba-3908-4763-8106-109a1a7c1575",
+      "reason": "invalid supervisor input: work-use/decision/revoked: the external decision has been invalidated",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": true,
+    "host_custody": {
+      "uid": 10001,
+      "private_key_path_present": false,
+      "issuer_processes_observed": [],
+      "process_snapshot": {
+        "1": "/usr/bin/python3",
+        "7": "/evidence/rx-solutionsd"
+      },
+      "scope": "one actual process snapshot plus inspected host launch code"
+    }
+  },
+  {
+    "scene": "expiry-after-judgment",
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": {
+        "challenge": "cc2cc0ce-aa89-47c6-85a2-bcb27a3611fb",
+        "condition": "work-use/ttl-expired",
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "REFUSED"
+      },
+      "operation": "d2dc98b3-b414-4ba5-a0d0-db063c82dbb0",
+      "reason": "invalid supervisor input: work-use/decision/expired: local monotonic deadline measured from challenge creation elapsed",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": true,
+    "host_custody": {
+      "uid": 10001,
+      "private_key_path_present": false,
+      "issuer_processes_observed": [],
+      "process_snapshot": {
+        "1": "/usr/bin/python3",
+        "7": "/evidence/rx-solutionsd"
+      },
+      "scope": "one actual process snapshot plus inspected host launch code"
+    }
+  },
+  {
+    "scene": "commit-lock-busy",
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": {
+        "challenge": "5801593f-2d72-4bc8-8c30-18b7ce34224c",
+        "condition": null,
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "EXTERNAL_DECISION_VERIFIED"
+      },
+      "operation": "22c566ff-803b-4198-aeea-851d2f7a33b3",
+      "reason": "invalid supervisor input: work-use/mailbox-unavailable: exclusive ownership Contended: exclusive owner not established; a live owner or inherited description may retain the lock",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": true,
+    "host_custody": {
+      "uid": 10001,
+      "private_key_path_present": false,
+      "issuer_processes_observed": [],
+      "process_snapshot": {
+        "1": "/usr/bin/python3",
+        "7": "/evidence/rx-solutionsd"
+      },
+      "scope": "one actual process snapshot plus inspected host launch code"
+    }
+  }
+]

@@ -1,0 +1,4 @@
+
+thread 'sigkill_at_both_journal_native_boundaries_never_replays_device_effect' (7) panicked at runtime/rx-host/tests/process_crash.rs:27:18:
+called `Result::unwrap()` on an `Err` value: Os { code: 2, kind: NotFound, message: "No such file or directory" }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace

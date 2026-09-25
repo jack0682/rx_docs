@@ -1,0 +1,288 @@
+{
+  "abrupt_loss": "REFUSED_UNTIL_INHERITED_DESCRIPTION_CLOSES",
+  "result": "PASS_NORMAL_RELEASE_AND_LIVE_WRITER_EXCLUSION",
+  "scenes": [
+    {
+      "live_writer_refused": true,
+      "new_writer_refused_after_old_child_exit": true,
+      "reacquired_before_child_exit": true,
+      "scene": "drop_with_live_fork_copy"
+    },
+    {
+      "live_writer_refused": true,
+      "new_writer_refused_after_old_child_exit": true,
+      "reacquired_before_child_exit": true,
+      "scene": "explicit_close_with_live_fork_copy"
+    },
+    {
+      "inherited_sqlite_use_refused": true,
+      "parent_remains_writer": true,
+      "scene": "descendant_drop_does_not_unlock"
+    },
+    {
+      "inherited_sqlite_use_refused": true,
+      "parent_remains_writer": true,
+      "scene": "descendant_close_refused"
+    },
+    {
+      "live_holder_denied": true,
+      "owner_release_reacquired": true,
+      "scene": "host_guard_descendant_release_refused"
+    },
+    {
+      "after_child_exit": "REACQUIRED",
+      "past_work_outcome": "NOT_ASSERTED",
+      "scene": "manager_sigkill_before_exec",
+      "while_inherited_fd_alive": "REFUSED_UNTIL_INHERITED_DESCRIPTION_CLOSES"
+    },
+    {
+      "child_callback": "ok",
+      "child_sql_commit_and_rollback_refused": true,
+      "parent_transaction_preserved": true,
+      "scene": "fork_inside_active_transaction"
+    },
+    {
+      "child_callback": "error",
+      "child_sql_commit_and_rollback_refused": true,
+      "parent_transaction_preserved": true,
+      "scene": "fork_inside_active_transaction"
+    },
+    {
+      "child_callback": "panic",
+      "child_sql_commit_and_rollback_refused": true,
+      "parent_transaction_preserved": true,
+      "scene": "fork_inside_active_transaction"
+    },
+    {
+      "child_completion_does_not_unlock_new_writer": true,
+      "executable": "/bin/true",
+      "legitimate_close_reacquired_in_window": true,
+      "live_owner_denied": true,
+      "scene": "actual_command_pre_exec"
+    },
+    {
+      "child_completion_does_not_unlock_new_writer": true,
+      "executable": "/missing/g1-child",
+      "legitimate_close_reacquired_in_window": true,
+      "live_owner_denied": true,
+      "scene": "actual_command_pre_exec"
+    }
+  ],
+  "scope": "actual local Linux cooperating-process ownership; no process adoption, remote filesystem or physical guarantee",
+  "runtime_image": "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+  "builder_image": "sha256:42a4ede83f51be9276dd11e9d4eb7c2082fae2daf9a85e7508e50643bd81bfb6",
+  "binary_sha256": {
+    "fork-probe": "63181d969e04cfdde708d09021bc501306e602b477a84561e08a0b8f40f7a134",
+    "host-service": "c89a86abf31f346de4e5a5fe7383b067b1dd94dddf72d0934361de0f37616eaf",
+    "atomicity": "f1b859ef63dba18eeb6efcac36d449a00a7e8ad3c803c42ccebb39bf61ac79fd",
+    "ownership": "503eba9114881664b06b6c75ec834c29615da3b60cd02de3764b8a7d10bba68f",
+    "rx_storage": "9e75d633d6d518e06fd76e92626fa86a36bf8858d7dac135b3430c7d866434cc"
+  },
+  "host_stress": [
+    {
+      "round": 0,
+      "exit_code": 0
+    },
+    {
+      "round": 1,
+      "exit_code": 0
+    },
+    {
+      "round": 2,
+      "exit_code": 0
+    },
+    {
+      "round": 3,
+      "exit_code": 0
+    },
+    {
+      "round": 4,
+      "exit_code": 0
+    },
+    {
+      "round": 5,
+      "exit_code": 0
+    },
+    {
+      "round": 6,
+      "exit_code": 0
+    },
+    {
+      "round": 7,
+      "exit_code": 0
+    },
+    {
+      "round": 8,
+      "exit_code": 0
+    },
+    {
+      "round": 9,
+      "exit_code": 0
+    },
+    {
+      "round": 10,
+      "exit_code": 0
+    },
+    {
+      "round": 11,
+      "exit_code": 0
+    },
+    {
+      "round": 12,
+      "exit_code": 0
+    },
+    {
+      "round": 13,
+      "exit_code": 0
+    },
+    {
+      "round": 14,
+      "exit_code": 0
+    },
+    {
+      "round": 15,
+      "exit_code": 0
+    },
+    {
+      "round": 16,
+      "exit_code": 0
+    },
+    {
+      "round": 17,
+      "exit_code": 0
+    },
+    {
+      "round": 18,
+      "exit_code": 0
+    },
+    {
+      "round": 19,
+      "exit_code": 0
+    },
+    {
+      "round": 20,
+      "exit_code": 0
+    },
+    {
+      "round": 21,
+      "exit_code": 0
+    },
+    {
+      "round": 22,
+      "exit_code": 0
+    },
+    {
+      "round": 23,
+      "exit_code": 0
+    },
+    {
+      "round": 24,
+      "exit_code": 0
+    },
+    {
+      "round": 25,
+      "exit_code": 0
+    },
+    {
+      "round": 26,
+      "exit_code": 0
+    },
+    {
+      "round": 27,
+      "exit_code": 0
+    },
+    {
+      "round": 28,
+      "exit_code": 0
+    },
+    {
+      "round": 29,
+      "exit_code": 0
+    },
+    {
+      "round": 30,
+      "exit_code": 0
+    },
+    {
+      "round": 31,
+      "exit_code": 0
+    },
+    {
+      "round": 32,
+      "exit_code": 0
+    },
+    {
+      "round": 33,
+      "exit_code": 0
+    },
+    {
+      "round": 34,
+      "exit_code": 0
+    },
+    {
+      "round": 35,
+      "exit_code": 0
+    },
+    {
+      "round": 36,
+      "exit_code": 0
+    },
+    {
+      "round": 37,
+      "exit_code": 0
+    },
+    {
+      "round": 38,
+      "exit_code": 0
+    },
+    {
+      "round": 39,
+      "exit_code": 0
+    },
+    {
+      "round": 40,
+      "exit_code": 0
+    },
+    {
+      "round": 41,
+      "exit_code": 0
+    },
+    {
+      "round": 42,
+      "exit_code": 0
+    },
+    {
+      "round": 43,
+      "exit_code": 0
+    },
+    {
+      "round": 44,
+      "exit_code": 0
+    },
+    {
+      "round": 45,
+      "exit_code": 0
+    },
+    {
+      "round": 46,
+      "exit_code": 0
+    },
+    {
+      "round": 47,
+      "exit_code": 0
+    },
+    {
+      "round": 48,
+      "exit_code": 0
+    },
+    {
+      "round": 49,
+      "exit_code": 0
+    }
+  ],
+  "source_platform": "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-platform-source",
+  "source_solutions": "/Users/ojaehong/RX_automation/rx_ws/rx-solutions",
+  "typed_errors": "OWNER_ACQUISITION/CONTENTION/FOREIGN_PROCESS/CONNECTION_CLOSE/RELEASE; NO_STRING_ADAPTER",
+  "remaining_failures": [],
+  "historical_attribution": "NO_DEFINITIVE_ATTRIBUTION_OF_F9_SINGLE_FAILURE"
+}

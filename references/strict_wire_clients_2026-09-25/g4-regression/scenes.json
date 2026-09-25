@@ -1,0 +1,812 @@
+[
+  {
+    "scene": "A-positive",
+    "area": "A",
+    "expected_refusal": null,
+    "decision_sha256": "ca4fd0afe7fd463f7db040aaf7b6c252dba5d773d2d8db90ff511e3ce2c6d0ca",
+    "replayed_from": null,
+    "result": {
+      "operating_area_provider": {
+        "challenge": "092fbef4-9536-4bb1-bf96-a3a51a01f88b",
+        "condition": null,
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "COMMIT_CALLBACK_COMPLETED"
+      },
+      "result": {
+        "current_permission": "NONE; HISTORICAL_WORK_RESULT_ONLY",
+        "decision": {
+          "challenge": "092fbef4-9536-4bb1-bf96-a3a51a01f88b",
+          "context_digest": "ada076445cf1e80eeadd0858099676795d3acd683941554c8e84d46955bc123e",
+          "decision": "ce33a8b9-0a8b-417a-b6ac-4765186d6811",
+          "epoch": "85a22b31-929b-4da2-b228-812eb67856d0",
+          "issuer": "development/support-gap-judge-v1",
+          "key": "rx/development-work-judge-v1",
+          "kind": "WORK_USE",
+          "owner": {
+            "catalog": "6e39d325e5ad06aa2c07de39184e94d4fcd52e56d72a644cefbea5a616cfb126",
+            "program": "rx/status-work-http",
+            "registration": "e3db42bd-9201-4d7f-ac37-cdf0fe8a3630",
+            "revision": "1"
+          },
+          "policy_digest": "be98f61eebe5e488708f84a12ca3992e87ed8c67423b38fc7dc48044c82bf531",
+          "signed_digest": "49fa3ce3e97cc0892a8ff75c467bc961d806646a8f84126452e5cc9a8bbfa848",
+          "ttl_ms": "30000"
+        },
+        "input_digest": "5a5054e0f2ec952eb55a7155dd29b873bbc2d718acfeb479273709c4afe945af",
+        "instance": "562c3a6f-33e5-48b1-ae56-daee9b5bad1c",
+        "native_packages": {
+          "observed": "675",
+          "required": "1000",
+          "shortfall": "325"
+        },
+        "observation_origin": {
+          "basis": "COMPONENT_SELF_REPORT",
+          "native_packages": "STARTUP_AUDIT_DERIVED",
+          "support_profiles": "STARTUP_CATALOG_DERIVED"
+        },
+        "observed_at": {
+          "clock_id": "unix-utc-ns",
+          "ticks_ns": "1790309560354827551"
+        },
+        "operating_area_policy": "EXTERNAL_ISSUER_DECISION; NOT_EVALUATED_BY_HOST; PHYSICAL_POLICY_NOT_ATTESTED",
+        "physical_qualification": "NOT_PERFORMED",
+        "readiness_semantics": "ffa263d41ab2ce13320507a1f94c523287db01a53944742042739d57c67c59fa",
+        "registration": "e3db42bd-9201-4d7f-ac37-cdf0fe8a3630",
+        "registration_revision": "1",
+        "run": "8ad0638c-f705-44f2-a734-edda72fb80cb",
+        "signature_verification": "EXTERNAL_SIGNATURE_AND_CONTEXT_VERIFIED_AT_LOGICAL_CUT",
+        "source_digest": "be4b56ed1db9ed046a1a668b8ee06f0a9bc4a87154ee85b48bf28cffe031e518",
+        "support_profiles": {
+          "observed": "4",
+          "required": "6",
+          "shortfall": "2"
+        },
+        "task": {
+          "operating_area": "development/support-area",
+          "operation": "7e73a550-8a5d-4684-aefe-40664d8a87bb",
+          "required_native_packages": "1000",
+          "required_support_profiles": "6",
+          "selection": "status-a"
+        }
+      },
+      "schema": "rx.work-use-result.v1"
+    },
+    "work_rows": 2,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": true
+  },
+  {
+    "scene": "B-positive",
+    "area": "B",
+    "expected_refusal": null,
+    "decision_sha256": "6378bfdd0bf1777858868c69913ec18bbd571f86f3226e6c292a845eb40d7e64",
+    "replayed_from": null,
+    "result": {
+      "operating_area_provider": {
+        "challenge": "cb24d1a9-8dc3-4623-a582-b2bbfb62f6a0",
+        "condition": null,
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "COMMIT_CALLBACK_COMPLETED"
+      },
+      "result": {
+        "current_permission": "NONE; HISTORICAL_WORK_RESULT_ONLY",
+        "decision": {
+          "challenge": "cb24d1a9-8dc3-4623-a582-b2bbfb62f6a0",
+          "context_digest": "ee3009161455233853af0c2c6df64a6c398b4a3f734a31e398ee113d7abdf970",
+          "decision": "8761ca65-1298-43e8-b270-dd4dd10e91b6",
+          "epoch": "95f5552b-4733-4fb8-8890-734f8264e0b9",
+          "issuer": "development/compact-support-judge-v1",
+          "key": "rx/development-compact-judge-v1",
+          "kind": "WORK_USE",
+          "owner": {
+            "catalog": "106f91c2c193bf588625c26bde0c0bc7f913b045b66212331c7da93c2bd0f12e",
+            "program": "rx/status-compact-work-http",
+            "registration": "8aca8ffe-ae5d-4788-9c15-5b5f500ff0ae",
+            "revision": "1"
+          },
+          "policy_digest": "40cc40b65e96c51a7e81ab8b42afc8cbc894f0fd977993a892cca0ec92fc3b0a",
+          "signed_digest": "5f41b54835c299eb5c947a7a74e39d5005895d1c3f95b842e5f281c80c552440",
+          "ttl_ms": "15000"
+        },
+        "input_digest": "cadbb3a34b22876f097e0514a99a2067722b3e0d0341a4d69b1a1a234a22f446",
+        "instance": "ec328102-d00c-42b9-8476-36c2ed3f9b1e",
+        "native_packages": {
+          "observed": "675",
+          "required": "1000",
+          "shortfall": "325"
+        },
+        "observation_origin": {
+          "basis": "COMPONENT_SELF_REPORT",
+          "native_packages": "STARTUP_AUDIT_DERIVED",
+          "support_profiles": "STARTUP_CATALOG_DERIVED"
+        },
+        "observed_at": {
+          "clock_id": "unix-utc-ns",
+          "ticks_ns": "1790309569524974764"
+        },
+        "operating_area_policy": "EXTERNAL_ISSUER_DECISION; NOT_EVALUATED_BY_HOST; PHYSICAL_POLICY_NOT_ATTESTED",
+        "physical_qualification": "NOT_PERFORMED",
+        "readiness_semantics": "42a594bf60e191315af605ff384a1ff68b96d12ca40daf64aac10611741f5c94",
+        "registration": "8aca8ffe-ae5d-4788-9c15-5b5f500ff0ae",
+        "registration_revision": "1",
+        "run": "521df35c-080f-4cc5-a5f3-339940315201",
+        "signature_verification": "EXTERNAL_SIGNATURE_AND_CONTEXT_VERIFIED_AT_LOGICAL_CUT",
+        "source_digest": "bf8d684746e26a77e97f4758760bc65d489f3cd75be28946edebdb2970cb410b",
+        "support_profiles": {
+          "observed": "4",
+          "required": "6",
+          "shortfall": "2"
+        },
+        "task": {
+          "operating_area": "development/compact-support-area",
+          "operation": "50d6bc1f-ed43-422f-99e4-b1504349541a",
+          "required_native_packages": "1000",
+          "required_support_profiles": "6",
+          "selection": "status-b"
+        }
+      },
+      "schema": "rx.work-use-result.v1"
+    },
+    "work_rows": 2,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": true
+  },
+  {
+    "scene": "A-replay-other",
+    "area": "A",
+    "expected_refusal": "issuer-scope",
+    "decision_sha256": "6378bfdd0bf1777858868c69913ec18bbd571f86f3226e6c292a845eb40d7e64",
+    "replayed_from": "B-positive",
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": {
+        "challenge": "95b05789-bee7-4ba9-9de7-3f2c8dcc6e28",
+        "condition": "work-use/issuer-scope",
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "REFUSED"
+      },
+      "operation": "189ab030-cab3-42c7-a77f-3232805f1f1e",
+      "reason": "invalid supervisor input: work-use/external-judgment-Denied: work-use/issuer-scope: untrusted response key is outside authored issuer scope",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status-a"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": false
+  },
+  {
+    "scene": "B-replay-other",
+    "area": "B",
+    "expected_refusal": "issuer-scope",
+    "decision_sha256": "ca4fd0afe7fd463f7db040aaf7b6c252dba5d773d2d8db90ff511e3ce2c6d0ca",
+    "replayed_from": "A-positive",
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": {
+        "challenge": "7409ed2c-b40c-4189-a76e-0f3c9e475f07",
+        "condition": "work-use/issuer-scope",
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "REFUSED"
+      },
+      "operation": "f77eee75-1682-4bab-bddb-80016d413ef3",
+      "reason": "invalid supervisor input: work-use/external-judgment-Denied: work-use/issuer-scope: untrusted response key is outside authored issuer scope",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status-b"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": false
+  },
+  {
+    "scene": "A-native-5000",
+    "area": "A",
+    "expected_refusal": null,
+    "decision_sha256": "b50f9cd0ced52bcba5172455da28fac248d4f3f30f4943585a4692620f6ec492",
+    "replayed_from": null,
+    "result": {
+      "operating_area_provider": {
+        "challenge": "2733af1a-686e-44f7-952e-4bf40101de50",
+        "condition": null,
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "COMMIT_CALLBACK_COMPLETED"
+      },
+      "result": {
+        "current_permission": "NONE; HISTORICAL_WORK_RESULT_ONLY",
+        "decision": {
+          "challenge": "2733af1a-686e-44f7-952e-4bf40101de50",
+          "context_digest": "0fb1e2f01a47eb95e4157738695a77743590c069a57db45a0e3298d058f7157e",
+          "decision": "acc0fc94-9082-49c8-bfd1-2235012bd102",
+          "epoch": "e5d78d54-1b0b-491f-8605-394f2022fa2b",
+          "issuer": "development/support-gap-judge-v1",
+          "key": "rx/development-work-judge-v1",
+          "kind": "WORK_USE",
+          "owner": {
+            "catalog": "6e39d325e5ad06aa2c07de39184e94d4fcd52e56d72a644cefbea5a616cfb126",
+            "program": "rx/status-work-http",
+            "registration": "ad8f024d-2524-43ff-87dc-5308f8910337",
+            "revision": "1"
+          },
+          "policy_digest": "be98f61eebe5e488708f84a12ca3992e87ed8c67423b38fc7dc48044c82bf531",
+          "signed_digest": "876b17a4cfd85cba8ab06cf5931c9ea23ccaac2d1a7e6027874076e7c7b0c09a",
+          "ttl_ms": "30000"
+        },
+        "input_digest": "1fa816fce236527e95d7e5d4ddb7258917c5280ed086840015aa75c7fb25a116",
+        "instance": "5a1b0fcb-c794-45ae-84de-faa2da032737",
+        "native_packages": {
+          "observed": "675",
+          "required": "5000",
+          "shortfall": "4325"
+        },
+        "observation_origin": {
+          "basis": "COMPONENT_SELF_REPORT",
+          "native_packages": "STARTUP_AUDIT_DERIVED",
+          "support_profiles": "STARTUP_CATALOG_DERIVED"
+        },
+        "observed_at": {
+          "clock_id": "unix-utc-ns",
+          "ticks_ns": "1790309599975963514"
+        },
+        "operating_area_policy": "EXTERNAL_ISSUER_DECISION; NOT_EVALUATED_BY_HOST; PHYSICAL_POLICY_NOT_ATTESTED",
+        "physical_qualification": "NOT_PERFORMED",
+        "readiness_semantics": "b13232704ad64b362bd1605a29f29750bb9641f565973959ba04ade8d02b4ce5",
+        "registration": "ad8f024d-2524-43ff-87dc-5308f8910337",
+        "registration_revision": "1",
+        "run": "6eaa7004-8766-498d-bab9-436e9e8c6809",
+        "signature_verification": "EXTERNAL_SIGNATURE_AND_CONTEXT_VERIFIED_AT_LOGICAL_CUT",
+        "source_digest": "2f070b9c8e01bd3fa7bc3d8414b586f1484a7d2634cc5e7a7321da249d9c7fa9",
+        "support_profiles": {
+          "observed": "4",
+          "required": "6",
+          "shortfall": "2"
+        },
+        "task": {
+          "operating_area": "development/support-area",
+          "operation": "216c80aa-c714-4611-82ba-59e642384acf",
+          "required_native_packages": "5000",
+          "required_support_profiles": "6",
+          "selection": "status-a"
+        }
+      },
+      "schema": "rx.work-use-result.v1"
+    },
+    "work_rows": 2,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": true
+  },
+  {
+    "scene": "B-native-5000",
+    "area": "B",
+    "expected_refusal": "judge-policy-denied",
+    "decision_sha256": null,
+    "replayed_from": null,
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": {
+        "challenge": "ea051885-2342-46fd-9f7e-4c461028f447",
+        "condition": "work-use/judge-policy-denied",
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "REFUSED"
+      },
+      "operation": "1474fdcc-5e4a-45d7-8275-646720e536e0",
+      "reason": "invalid supervisor input: work-use/external-judgment-Denied: work-use/judge-policy-denied: unverified negative issuer report; development/compact-support-gap-report-v1: judge/bounded-report-rule",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status-b"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": false
+  },
+  {
+    "scene": "A-profiles-32",
+    "area": "A",
+    "expected_refusal": null,
+    "decision_sha256": "b2feacebe60333364c2bd53abaef8182eeebb2dfda24417039ba57b123c4a856",
+    "replayed_from": null,
+    "result": {
+      "operating_area_provider": {
+        "challenge": "48a78a6f-8436-4fa0-b633-99a0f6a30ce3",
+        "condition": null,
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "COMMIT_CALLBACK_COMPLETED"
+      },
+      "result": {
+        "current_permission": "NONE; HISTORICAL_WORK_RESULT_ONLY",
+        "decision": {
+          "challenge": "48a78a6f-8436-4fa0-b633-99a0f6a30ce3",
+          "context_digest": "b33e8ff3f21bf8a89979a584c45423a5f409a10e0d8920790278653d609269f1",
+          "decision": "b4cb26ff-37ea-4884-8250-89a5ede0bc2c",
+          "epoch": "1014d108-51f8-4f52-8096-7fb71d419650",
+          "issuer": "development/support-gap-judge-v1",
+          "key": "rx/development-work-judge-v1",
+          "kind": "WORK_USE",
+          "owner": {
+            "catalog": "6e39d325e5ad06aa2c07de39184e94d4fcd52e56d72a644cefbea5a616cfb126",
+            "program": "rx/status-work-http",
+            "registration": "730935a6-37c2-4561-bd64-d1138bfea5f1",
+            "revision": "1"
+          },
+          "policy_digest": "be98f61eebe5e488708f84a12ca3992e87ed8c67423b38fc7dc48044c82bf531",
+          "signed_digest": "5fcedacc7b3eafce604c81aa71656ab75c71eb3b89128052cac415e10ffca688",
+          "ttl_ms": "30000"
+        },
+        "input_digest": "63ab7c0191e9a849b6534d4f88f022d7b83ea846c148d6de8fc83d38bd2025d5",
+        "instance": "74a10ef1-a152-4679-89a0-f2e53600323f",
+        "native_packages": {
+          "observed": "675",
+          "required": "1000",
+          "shortfall": "325"
+        },
+        "observation_origin": {
+          "basis": "COMPONENT_SELF_REPORT",
+          "native_packages": "STARTUP_AUDIT_DERIVED",
+          "support_profiles": "STARTUP_CATALOG_DERIVED"
+        },
+        "observed_at": {
+          "clock_id": "unix-utc-ns",
+          "ticks_ns": "1790309620028973426"
+        },
+        "operating_area_policy": "EXTERNAL_ISSUER_DECISION; NOT_EVALUATED_BY_HOST; PHYSICAL_POLICY_NOT_ATTESTED",
+        "physical_qualification": "NOT_PERFORMED",
+        "readiness_semantics": "1e8a23cabdc8dccf4df95a812ff2fc015418d99c3ea9e4e8e2ffa74cd70864e0",
+        "registration": "730935a6-37c2-4561-bd64-d1138bfea5f1",
+        "registration_revision": "1",
+        "run": "c490a7c7-b76f-451a-96b0-3c4bc46c2cc5",
+        "signature_verification": "EXTERNAL_SIGNATURE_AND_CONTEXT_VERIFIED_AT_LOGICAL_CUT",
+        "source_digest": "5acb4f43ecf84238ebffe1d4141f4cc5d0d445cb4c332b64686850d69b995215",
+        "support_profiles": {
+          "observed": "4",
+          "required": "32",
+          "shortfall": "28"
+        },
+        "task": {
+          "operating_area": "development/support-area",
+          "operation": "04d07e4c-0b2e-4751-8c08-453119f9aa14",
+          "required_native_packages": "1000",
+          "required_support_profiles": "32",
+          "selection": "status-a"
+        }
+      },
+      "schema": "rx.work-use-result.v1"
+    },
+    "work_rows": 2,
+    "observer_pid": 1,
+    "manager_pid": 6,
+    "judgment_observed": true
+  },
+  {
+    "scene": "B-profiles-32",
+    "area": "B",
+    "expected_refusal": "judge-policy-denied",
+    "decision_sha256": null,
+    "replayed_from": null,
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": {
+        "challenge": "d32d3b1f-bc45-4cb2-beae-4ddc7775ddf7",
+        "condition": "work-use/judge-policy-denied",
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "REFUSED"
+      },
+      "operation": "aaa1c04d-60bb-492e-8eec-a5aeed2e11a7",
+      "reason": "invalid supervisor input: work-use/external-judgment-Denied: work-use/judge-policy-denied: unverified negative issuer report; development/compact-support-gap-report-v1: judge/bounded-report-rule",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status-b"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": false
+  },
+  {
+    "scene": "A-ttl-25000",
+    "area": "A",
+    "expected_refusal": null,
+    "decision_sha256": "f73835435bf60ba9cb99568d64caeda5f4441018b17ee015a5aa3e79ad26c3a8",
+    "replayed_from": null,
+    "result": {
+      "operating_area_provider": {
+        "challenge": "37beaaf6-f362-452e-88d8-3990cf58fd41",
+        "condition": null,
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "COMMIT_CALLBACK_COMPLETED"
+      },
+      "result": {
+        "current_permission": "NONE; HISTORICAL_WORK_RESULT_ONLY",
+        "decision": {
+          "challenge": "37beaaf6-f362-452e-88d8-3990cf58fd41",
+          "context_digest": "f80a772b2203e34e226fb956149925b8c48ca3464f9ab5bbaa10cb119b188d83",
+          "decision": "67704019-6f57-4183-aef7-0252c84223d2",
+          "epoch": "f55d82b2-ed55-4525-b72a-f50fbecd33ad",
+          "issuer": "development/support-gap-judge-v1",
+          "key": "rx/development-work-judge-v1",
+          "kind": "WORK_USE",
+          "owner": {
+            "catalog": "6e39d325e5ad06aa2c07de39184e94d4fcd52e56d72a644cefbea5a616cfb126",
+            "program": "rx/status-work-http",
+            "registration": "14cbfc13-13e2-45cb-9b6b-9da0f2d1137b",
+            "revision": "1"
+          },
+          "policy_digest": "be98f61eebe5e488708f84a12ca3992e87ed8c67423b38fc7dc48044c82bf531",
+          "signed_digest": "074b7dd1534432d8e475a1c6b014566c73a6419463b243ec6155476b93b7f150",
+          "ttl_ms": "25000"
+        },
+        "input_digest": "f1a0a9d1a8477d43602aa0942224818ea3c9c608f529a0775a35a3e5b1d1ef94",
+        "instance": "7f0973bd-dfac-4b7f-93be-d707b90eecc2",
+        "native_packages": {
+          "observed": "675",
+          "required": "1000",
+          "shortfall": "325"
+        },
+        "observation_origin": {
+          "basis": "COMPONENT_SELF_REPORT",
+          "native_packages": "STARTUP_AUDIT_DERIVED",
+          "support_profiles": "STARTUP_CATALOG_DERIVED"
+        },
+        "observed_at": {
+          "clock_id": "unix-utc-ns",
+          "ticks_ns": "1790309636672370461"
+        },
+        "operating_area_policy": "EXTERNAL_ISSUER_DECISION; NOT_EVALUATED_BY_HOST; PHYSICAL_POLICY_NOT_ATTESTED",
+        "physical_qualification": "NOT_PERFORMED",
+        "readiness_semantics": "a199c50aff28b7aa4bd13f76420ecbb0cc52583a89995d5dcbe7867dd52e8d1a",
+        "registration": "14cbfc13-13e2-45cb-9b6b-9da0f2d1137b",
+        "registration_revision": "1",
+        "run": "b4802e7f-3a6b-49ba-ba63-7dc1ef303604",
+        "signature_verification": "EXTERNAL_SIGNATURE_AND_CONTEXT_VERIFIED_AT_LOGICAL_CUT",
+        "source_digest": "3c3a0d57ad46dcfeb1f166d52a61c584b761a45395a8aceef96eb3794004e70e",
+        "support_profiles": {
+          "observed": "4",
+          "required": "6",
+          "shortfall": "2"
+        },
+        "task": {
+          "operating_area": "development/support-area",
+          "operation": "9e2192a3-09e9-41af-9b51-bfd17b6d1397",
+          "required_native_packages": "1000",
+          "required_support_profiles": "6",
+          "selection": "status-a"
+        }
+      },
+      "schema": "rx.work-use-result.v1"
+    },
+    "work_rows": 2,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": true
+  },
+  {
+    "scene": "B-ttl-25000",
+    "area": "B",
+    "expected_refusal": "judge-policy-denied",
+    "decision_sha256": null,
+    "replayed_from": null,
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": {
+        "challenge": "20a3422e-1c84-4973-ada6-81e059d81eee",
+        "condition": "work-use/judge-policy-denied",
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "REFUSED"
+      },
+      "operation": "a06fbbd0-8fba-4989-8a78-7264d4cbfddd",
+      "reason": "invalid supervisor input: work-use/external-judgment-Denied: work-use/judge-policy-denied: unverified negative issuer report; development/compact-support-gap-report-v1: judge/ttl",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status-b"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": false
+  },
+  {
+    "scene": "A-own-native-denied",
+    "area": "A",
+    "expected_refusal": "judge-policy-denied",
+    "decision_sha256": null,
+    "replayed_from": null,
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": {
+        "challenge": "de780f80-407f-4ce9-b66b-6a0727c47ce8",
+        "condition": "work-use/judge-policy-denied",
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "REFUSED"
+      },
+      "operation": "db226366-e518-4922-991d-58de4838d836",
+      "reason": "invalid supervisor input: work-use/external-judgment-Denied: work-use/judge-policy-denied: unverified negative issuer report; development/bounded-support-gap-report-v1: judge/bounded-report-rule",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status-a"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": false
+  },
+  {
+    "scene": "B-own-native-denied",
+    "area": "B",
+    "expected_refusal": "judge-policy-denied",
+    "decision_sha256": null,
+    "replayed_from": null,
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": {
+        "challenge": "1d569bf8-3fa8-4fab-be3c-89e9bbd574b9",
+        "condition": "work-use/judge-policy-denied",
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "REFUSED"
+      },
+      "operation": "7ccdd8b3-18cd-4477-b796-f986ef580350",
+      "reason": "invalid supervisor input: work-use/external-judgment-Denied: work-use/judge-policy-denied: unverified negative issuer report; development/compact-support-gap-report-v1: judge/bounded-report-rule",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status-b"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": false
+  },
+  {
+    "scene": "A-own-profiles-denied",
+    "area": "A",
+    "expected_refusal": "judge-policy-denied",
+    "decision_sha256": null,
+    "replayed_from": null,
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": {
+        "challenge": "918c39b1-3358-48e8-bad3-cb35ad9de9d2",
+        "condition": "work-use/judge-policy-denied",
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "REFUSED"
+      },
+      "operation": "dcf1dbac-22d6-40ca-8520-bb7585592838",
+      "reason": "invalid supervisor input: work-use/external-judgment-Denied: work-use/judge-policy-denied: unverified negative issuer report; development/bounded-support-gap-report-v1: judge/bounded-report-rule",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status-a"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": false
+  },
+  {
+    "scene": "B-own-profiles-denied",
+    "area": "B",
+    "expected_refusal": "judge-policy-denied",
+    "decision_sha256": null,
+    "replayed_from": null,
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": {
+        "challenge": "10453973-c5ba-4be2-ada9-2e28e7862e9a",
+        "condition": "work-use/judge-policy-denied",
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "REFUSED"
+      },
+      "operation": "ce1869a5-361d-4d78-bf91-bc18dd217765",
+      "reason": "invalid supervisor input: work-use/external-judgment-Denied: work-use/judge-policy-denied: unverified negative issuer report; development/compact-support-gap-report-v1: judge/bounded-report-rule",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status-b"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": false
+  },
+  {
+    "scene": "A-task-other-area",
+    "area": "A",
+    "expected_refusal": "issuer-scope",
+    "decision_sha256": null,
+    "replayed_from": null,
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": {
+        "challenge": null,
+        "condition": "work-use/issuer-scope",
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "REFUSED"
+      },
+      "operation": "78a79099-de9f-432c-b360-c9c2eb5fe481",
+      "reason": "invalid supervisor input: work-use/external-judgment-Denied: work-use/issuer-scope: decision/issuer-scope: key, issuer, role or operating area is not authorized",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status-a"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": false
+  },
+  {
+    "scene": "B-task-other-area",
+    "area": "B",
+    "expected_refusal": "issuer-scope",
+    "decision_sha256": null,
+    "replayed_from": null,
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": {
+        "challenge": null,
+        "condition": "work-use/issuer-scope",
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "REFUSED"
+      },
+      "operation": "8714c40f-486d-4784-8aab-8c470a96836c",
+      "reason": "invalid supervisor input: work-use/external-judgment-Denied: work-use/issuer-scope: decision/issuer-scope: key, issuer, role or operating area is not authorized",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status-b"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": false
+  },
+  {
+    "scene": "A-foreign-role",
+    "area": "A",
+    "expected_refusal": "judge-policy-denied",
+    "decision_sha256": null,
+    "replayed_from": null,
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": {
+        "challenge": "c5686cf4-4735-47b6-9bd9-9444973d1753",
+        "condition": "work-use/judge-policy-denied",
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "REFUSED"
+      },
+      "operation": "aecf3ec3-2c59-48a3-8eeb-9ce2acbfda8c",
+      "reason": "invalid supervisor input: work-use/external-judgment-Denied: work-use/judge-policy-denied: unverified negative issuer report; development/bounded-support-gap-report-v1: judge/role-kind-program",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status-a"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": false
+  },
+  {
+    "scene": "B-foreign-role",
+    "area": "B",
+    "expected_refusal": "judge-policy-denied",
+    "decision_sha256": null,
+    "replayed_from": null,
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": {
+        "challenge": "83f447c5-aa2b-4715-be21-79ffdd311326",
+        "condition": "work-use/judge-policy-denied",
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "REFUSED"
+      },
+      "operation": "7fcd17bd-3adb-4243-ae88-071171635398",
+      "reason": "invalid supervisor input: work-use/external-judgment-Denied: work-use/judge-policy-denied: unverified negative issuer report; development/compact-support-gap-report-v1: judge/role-kind-program",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status-b"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": false
+  },
+  {
+    "scene": "A-foreign-program",
+    "area": "A",
+    "expected_refusal": "judge-policy-denied",
+    "decision_sha256": null,
+    "replayed_from": null,
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": {
+        "challenge": "67e01d9d-8970-41da-814f-f3fd4b83fa48",
+        "condition": "work-use/judge-policy-denied",
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "REFUSED"
+      },
+      "operation": "c142a22b-35de-4a75-a068-7f16f13f90c8",
+      "reason": "invalid supervisor input: work-use/external-judgment-Denied: work-use/judge-policy-denied: unverified negative issuer report; development/bounded-support-gap-report-v1: judge/role-kind-program",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status-a"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": false
+  },
+  {
+    "scene": "B-foreign-program",
+    "area": "B",
+    "expected_refusal": "judge-policy-denied",
+    "decision_sha256": null,
+    "replayed_from": null,
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": {
+        "challenge": "005a891e-7b7f-4065-a779-04a0c486776d",
+        "condition": "work-use/judge-policy-denied",
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "REFUSED"
+      },
+      "operation": "98e6a51b-163a-40f2-bb2a-2f77c699b28e",
+      "reason": "invalid supervisor input: work-use/external-judgment-Denied: work-use/judge-policy-denied: unverified negative issuer report; development/compact-support-gap-report-v1: judge/role-kind-program",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status-b"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": false
+  },
+  {
+    "scene": "A-foreign-key-signature",
+    "area": "A",
+    "expected_refusal": "signature-mismatch",
+    "decision_sha256": "37aca7730b3458e53e727deca258aeae9a7ad221c9a105a9dff90515719452f8",
+    "replayed_from": null,
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": {
+        "challenge": "7ce59810-ebea-46e1-af4f-6d308848a89b",
+        "condition": "work-use/signature-mismatch",
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "REFUSED"
+      },
+      "operation": "793dc12e-df3d-4fb6-b9a0-22df8931faf3",
+      "reason": "invalid supervisor input: work-use/external-judgment-Denied: work-use/signature-mismatch: decision/signature: detached Ed25519 verification failed",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status-a"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": false
+  },
+  {
+    "scene": "B-foreign-key-signature",
+    "area": "B",
+    "expected_refusal": "signature-mismatch",
+    "decision_sha256": "0414eefc9ad5cf46b6eb179bc478424b1c0dc4c20b6d1fa1d28bdb66aa2c756c",
+    "replayed_from": null,
+    "result": {
+      "current_permission": "NONE",
+      "gate": "DENIED",
+      "operating_area_provider": {
+        "challenge": "4f796895-259a-4f2b-923e-2cdfdfdc906b",
+        "condition": "work-use/signature-mismatch",
+        "meaning": "OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY",
+        "state": "REFUSED"
+      },
+      "operation": "12cd6548-ef1b-4dfb-9913-94cca131d661",
+      "reason": "invalid supervisor input: work-use/external-judgment-Denied: work-use/signature-mismatch: decision/signature: detached Ed25519 verification failed",
+      "schema": "rx.work-use-result.v1",
+      "selection": "status-b"
+    },
+    "work_rows": 0,
+    "observer_pid": 1,
+    "manager_pid": 7,
+    "judgment_observed": false
+  }
+]

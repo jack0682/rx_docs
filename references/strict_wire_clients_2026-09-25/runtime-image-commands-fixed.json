@@ -1,0 +1,37 @@
+[
+  {
+    "label": "runtime-parent",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "rx-solutions:g2-authenticated"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "platform-parent",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "ubuntu:24.04"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "build-solutions-unsigned",
+    "argv": [
+      "docker",
+      "build",
+      "--network",
+      "none",
+      "-f",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/runtime-images-fixed/Solutions.Dockerfile",
+      "-t",
+      "rx-g5-solutions-unsigned",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/runtime-images-fixed"
+    ],
+    "exit_code": 1
+  }
+]

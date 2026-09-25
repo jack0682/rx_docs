@@ -1,0 +1,2 @@
+{"id": 1, "ok": false, "code": "PERMISSION_DENIED", "detail": "certificate is not registered"}
+{"id": 2, "ok": true, "transport": "CLOSED", "operation_outcome": "NOT_INFERRED"}

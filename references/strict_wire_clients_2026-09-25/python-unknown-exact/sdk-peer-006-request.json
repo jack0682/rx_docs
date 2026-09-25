@@ -1,0 +1,1 @@
+{"id":6,"method":"rx.contract.v1.WorkflowService/GetRun","request":{"context":{"call_id":"64a38a96-d357-4703-9ac0-45cc0bb2ced5","session_id":"01a0d6c1-bb53-710c-8662-86c7c858bfdf"},"run_id":"01a0d6c1-d2f8-71bd-90f4-47ca2f9ae3db"},"timeout":10}

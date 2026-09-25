@@ -54,3 +54,5 @@ A full native image rebuild, operating deployment, network judgment service,
 continuous monitor, eight-area physical system and production key custody are not
 claimed. Earlier status snapshots are historical; final merge-CI files identify
 the exact code heads and first attempts.
+
+The first committed inventory audit found Git newline normalization in two Docker progress logs. Scoped .gitattributes entries now preserve their original bytes; all inventory hashes are checked against Git blobs, not just the working tree. The initial two mismatches remain recorded.

@@ -8980,6 +8980,16 @@
       "path": "compact-builder/Dockerfile",
       "sha256": "b277874ae5050b53dce7d39dba2188cea737cccdcf204bc9d4e02aaa2e0b6082",
       "bytes": 180
+    },
+    {
+      "path": "solutions-merge-ci.log",
+      "sha256": "51c4389eded115aa6e8784aa30c1a65b8eb55266c84f71d649a90c7e89233479",
+      "bytes": 329695
+    },
+    {
+      "path": "initial-evidence-hash-mismatches.json",
+      "sha256": "adf685f8279de649d92ab513ad5fc56e74ee1c291c503c6176c0eb8d5d9327fb",
+      "bytes": 49
     }
   ]
 }

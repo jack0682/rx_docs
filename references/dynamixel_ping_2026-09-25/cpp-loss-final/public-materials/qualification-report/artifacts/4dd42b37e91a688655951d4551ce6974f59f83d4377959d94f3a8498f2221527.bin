@@ -1,0 +1,1 @@
+{"area":"CELL_INTEGRATION","evidence":"external harness must supply actual source-backed artifacts; exporter generates no verdict","requirement":"Actual mTLS P/Host registration, current Fence and process-context receipt matching the complete cell scope","schema":"rx.delivery-criterion.v1"}

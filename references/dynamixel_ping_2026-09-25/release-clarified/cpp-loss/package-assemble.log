@@ -1,0 +1,1 @@
+{"manifest_digest":"00012c3beb61121cddb8de529d754945fbcf78daa1e3b78167d750127e3ae1ac","permissions":[{"kind":"ARTIFACT_READ"},{"kind":"OPERATION_SUBMIT","operation":"cycle"}],"status":"UNSIGNED_CANDIDATE"}

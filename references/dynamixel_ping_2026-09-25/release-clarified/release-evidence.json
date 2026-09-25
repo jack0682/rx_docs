@@ -1,0 +1,17 @@
+{
+  "status": "PASS_FOR_REPORTED_SCOPE",
+  "images": {
+    "platform": "sha256:31b46ae19b7512c71fcf6581dd1bca10131be0cbd6cd32fc4d870e1c7949ddb9",
+    "solutions": "sha256:a386c0bd244de50a31886e08703fa4b5c1ac24f566fdf9ebd8677d2f4e34a105"
+  },
+  "archive": {
+    "path": "runtime-source.tar.gz",
+    "sha256": "10d09b9c5ceaa44827efdaebb0494c7fea6cea9f5101719a810a1f9c07a7f2df"
+  },
+  "logs_sha256": {
+    "release-sigkill_at_both_journal_native_boundaries_never_replays_device_effect.stdout": "f57d8ee4f51aa507f53edb53ea1f7df51ca9de5670ac23e880ee087e33655ddf",
+    "release-lost_run_initialization_reply_recovers_binding_without_reinitializing.stdout": "b0108ec925debec0dece9ebc3f23081efdb3ca3c2380fb4f7416209b5f68c1ed",
+    "release-run_creation_marker_cannot_change_after_header_initialization.stdout": "68369d997bd546b1a87784eedcfc0c5587a65313772edff1703638e869b12331"
+  },
+  "scope": "existing recovery tests on selected image, plus adapter runtime scenes recorded separately; physical qualification not performed"
+}

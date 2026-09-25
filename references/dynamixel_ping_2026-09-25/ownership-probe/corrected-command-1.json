@@ -1,0 +1,1 @@
+{"argv": ["docker", "run", "--rm", "--read-only", "--cap-drop", "ALL", "--security-opt", "no-new-privileges", "--user", "10001:10001", "--network", "none", "-v", "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/ownership-probe:/probe:ro", "--entrypoint", "python", "rx-g5-client-builder:latest", "/probe/run.py"], "exit": 0}

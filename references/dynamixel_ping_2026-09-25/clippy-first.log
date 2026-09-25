@@ -1,0 +1,5 @@
+   Compiling rx-host v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-host)
+    Checking rx-service-status v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-service-status)
+    Checking rx-melsec-mc v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/drivers/rx-melsec-mc)
+    Checking rx-solution-catalog v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-solution-catalog)
+    Finished `dev` profile [unoptimized] target(s) in 2.89s

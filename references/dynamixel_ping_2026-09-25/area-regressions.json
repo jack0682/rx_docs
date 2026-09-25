@@ -1,0 +1,40 @@
+[
+  {
+    "label": "g3",
+    "exit": 0,
+    "command": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/operating_area_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--daemon",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/linux-target/debug/rx-solutionsd",
+      "--judge",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/judge-target/debug/rx-operating-area-judge",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression",
+      "--key",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/operating-area-keys/development-judge.pem"
+    ]
+  },
+  {
+    "label": "g4",
+    "exit": 0,
+    "command": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/multi_area_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--daemon",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/linux-target/debug/rx-solutionsd",
+      "--judge",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/judge-target/debug/rx-operating-area-judge",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g4-regression",
+      "--key-a",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/operating-area-keys/development-judge.pem",
+      "--key-b",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/operating-area-keys/compact-judge.pem"
+    ]
+  }
+]

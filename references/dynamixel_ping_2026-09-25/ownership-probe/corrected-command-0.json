@@ -1,0 +1,1 @@
+{"argv": ["docker", "run", "--rm", "-v", "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/ownership-probe:/probe", "--entrypoint", "sh", "rx-g5-client-builder:latest", "-c", "c++ -DHELPER /probe/probe.cpp -o /probe/helper && c++ /probe/probe.cpp -o /probe/owner && c++ /probe/probe.cpp -o /probe/caller"], "exit": 0}

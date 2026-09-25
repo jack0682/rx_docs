@@ -1,0 +1,16 @@
+Checking docs/21_declaration_reuse_measurement.md
+labels {'free': 73, 'declared': 4} free_types {'이관': 64, '침묵': 9}
+sensitivity {'free': 76, 'declared': 1}
+RX_lower_bound 4
+first_matched 7
+second_generous 27
+second_strict 9
+expanded_strict 15
+Checking docs/22_open_items_boundary.md
+requirements 19 mapping {'완전매핑': 18, '부분매핑': 1} unmapped 0
+unique edges 55 slots 33 labels {'free': 32, 'declared': 1}
+free conditions compared 32 original labels unchanged 77
+Checking docs/23_handover_counterexamples.md
+cases 4 steps 24 axes 20 original questions preserved 4
+norm I 12 SC 19 used I 8 SC 5
+linked slots 17 case names 10 unknown I/SC/slot/case 0 roadmap terms covered 4

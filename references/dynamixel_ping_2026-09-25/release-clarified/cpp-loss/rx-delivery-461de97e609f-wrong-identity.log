@@ -1,0 +1,2 @@
+{"code":"PERMISSION_DENIED","detail":"certificate is not registered","id":1,"ok":false}
+{"id":2,"ok":true,"operation_outcome":"NOT_INFERRED","transport":"CLOSED"}

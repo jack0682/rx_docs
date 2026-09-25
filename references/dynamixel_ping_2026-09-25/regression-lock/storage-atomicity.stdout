@@ -1,0 +1,17 @@
+
+running 12 tests
+test snapshot_is_a_cut_and_after_is_exclusive ... ok
+test request_identity_survives_reopening_and_namespace_isolated ... ok
+test one_transaction_commits_state_key_event_and_outbox ... ok
+test second_runtime_cannot_open_owned_database ... ok
+test online_backup_preserves_committed_state_without_copying_live_db_file ... ok
+test control_projection_and_sequence_roll_back_together_and_ignore_audit_appends ... ok
+test schema_upgrade_preserves_emitted_work_and_delivered_records_never_resurrect ... ok
+test stale_revision_does_not_partially_record_an_event ... ok
+test pending_outbox_pages_are_exclusive_and_do_not_starve_later_ids ... ok
+test metadata_compatibility_upgrade_preserves_record_bytes_and_rejects_future_stores ... ok
+test voided_outbox_cannot_be_resurrected_or_sent ... ok
+test failure_at_each_commit_component_rolls_everything_back ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+

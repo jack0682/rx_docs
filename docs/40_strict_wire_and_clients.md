@@ -1,6 +1,6 @@
 # 40. strict-wire-v1 공개와 첫 C++·Python 클라이언트 (G5.1)
 
-상태: G5.1 직접 구현·검증 완료, 독립 수락 대기. G5 SDK 기준선 및 ROBOTIS 전체 번들의 완료 기록이 아니다.
+상태: G5.1 독립 수락 완료 (`g5-strict-wire-and-first-client-claude-2026-09-25`). G5 SDK 기준선 및 ROBOTIS 전체 번들의 완료 기록이 아니다.
 
 ## 사용자 요구와 단계 경계
 
@@ -14,7 +14,7 @@ G5.1은 공개 wire profile, 같은 번들에서 생성한 두 언어 개발 인
 계약이 ROBOTIS 제품을 실어 나를 수 있다는 것도 아직 미증명이다. G5 SDK 기준선 완료도,
 다섯 제품군 통합 완료도 아니다.**
 
-G5.2를 바로 다음 단위로 두며 첫 DYNAMIXEL 어댑터를 연결한다. 승인된 경계는 공식 SDK4.1.0을
+후속 [G5.2](41_dynamixel_ping_adapter.md)는 첫 DYNAMIXEL 모의 어댑터의 실제 Linux 연결을 다룬다. 승인된 경계는 공식 SDK4.1.0을
 외부 native helper 하나에서 사용하는 read-only protocol2 Ping, 명시적 모의 transport/model,
 실제 /dev endpoint 거절, 토크·운동 조작 없음이다. 두 Client Library에 드라이버를 각각 넣지
 않고 RX Host의 같은 지속 호출·중복 방지·cell admission을 통과시킨다. 이후 나머지 네 제품,

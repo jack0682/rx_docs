@@ -1,0 +1,30 @@
+{
+  "rx-process-package": {
+    "same_bytes": true,
+    "sha256": "2a85ec5bbf314a3fba7a82a1cf7feab295158b9e04f746e657bfd0ca9217797e"
+  },
+  "rx-dynamixel-ping": {
+    "same_bytes": true,
+    "sha256": "95cb5b1902bbeab0af2d984b9f7c38210b48254be2b0d43720ba5e66d11db51c"
+  },
+  "rx-executor-service": {
+    "same_bytes": true,
+    "sha256": "a797d8e3155a90d34f0c526a224c740d7ac7c96afdc47af92edb46d6b39949e6"
+  },
+  "rx-process-compile": {
+    "same_bytes": true,
+    "sha256": "b004549dfe75505fde67382c5a8723b76e1d7f8a54156ce1296dad55b049c894"
+  },
+  "rx-device-package": {
+    "same_bytes": true,
+    "sha256": "55ed23ca20d61a75d5784cd12a7da2cc83e7f9c3e685c0c2f29432a41c84b89b"
+  },
+  "rx-solutionsd": {
+    "same_bytes": true,
+    "sha256": "46252d17b5e6c887048459e39755e67a9147ba3ce684fc7942a41f2ae80d8a8f"
+  },
+  "rx-hostd": {
+    "same_bytes": false,
+    "sha256": "173a6c838c8cb110396b74a4c6c55035ddae3df9f4aa2255d0a75d68ac98cc3e"
+  }
+}

@@ -1,0 +1,285 @@
+[
+  {
+    "label": "resident-passage",
+    "argv": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/resident_registration_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--builder",
+      "rx-g4-compact-builder:latest",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/regression-resource/resident"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "fixture-build",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions:/source:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/regression-resource/resident:/evidence",
+      "-w",
+      "/source",
+      "-e",
+      "CARGO_HOME=/evidence/cargo-home",
+      "--entrypoint",
+      "cargo",
+      "sha256:42a4ede83f51be9276dd11e9d4eb7c2082fae2daf9a85e7508e50643bd81bfb6",
+      "test",
+      "--locked",
+      "-p",
+      "rx-supervisor",
+      "--lib",
+      "--test",
+      "resource_enforcement",
+      "--no-run",
+      "--target-dir",
+      "/evidence/target",
+      "--message-format=json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "fixture-resource_enforcement",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/regression-resource/resident:/evidence:ro",
+      "--entrypoint",
+      "/evidence/target/debug/deps/resource_enforcement-7d9f223a2826f0f8",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "--nocapture"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "fixture-rx_supervisor",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/regression-resource/resident:/evidence:ro",
+      "--entrypoint",
+      "/evidence/target/debug/deps/rx_supervisor-4ec584d0a11cfc89",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "--nocapture"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "current-launcher",
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "rx-resources-current-86b86bee08",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/regression-resource/fresh-state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/regression-resource/startup.json:/config/startup.json:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/regression-resource/resident/target/debug/rx-solutionsd:/test/rx-solutionsd:ro",
+      "--entrypoint",
+      "/test/rx-solutionsd",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "run",
+      "/config/startup.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "outside-supervisor",
+    "argv": [
+      "docker",
+      "exec",
+      "rx-resources-current-86b86bee08",
+      "/usr/bin/python3",
+      "-c",
+      "import os,json,sqlite3; c=sqlite3.connect('file:/var/lib/rx-solutions/managed/supervisor.db?mode=ro',uri=True); s=json.loads(c.execute(\"select document from entities where key='supervisor/state'\").fetchone()[0])['value']; p=s['records']['status']['pid']; print(json.dumps({'observer_pid':os.getpid(),'supervisor_pid':1,'child_pid':p,'child_limits':open('/proc/%s/limits'%p).read(),'supervisor_limits':open('/proc/1/limits').read(),'child_cmdline':open('/proc/%s/cmdline'%p,'rb').read().decode().split(chr(0)),'resource_history':s['records']['status']['resources']}))"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "current-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--timeout",
+      "15",
+      "rx-resources-current-86b86bee08"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "baseline-launcher",
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "rx-resources-baseline-86b86bee08",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/regression-resource/existing-state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/regression-resource/startup.json:/config/startup.json:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.f7-evidence/resident-final/target/debug/rx-solutionsd:/test/rx-solutionsd:ro",
+      "--entrypoint",
+      "/test/rx-solutionsd",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "run",
+      "/config/startup.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "baseline-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--timeout",
+      "15",
+      "rx-resources-baseline-86b86bee08"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "changed-catalog-launcher",
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "rx-resources-changed-catalog-86b86bee08",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/regression-resource/existing-state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/regression-resource/startup.json:/config/startup.json:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/regression-resource/resident/target/debug/rx-solutionsd:/test/rx-solutionsd:ro",
+      "--entrypoint",
+      "/test/rx-solutionsd",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "run",
+      "/config/startup.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "changed-catalog-output",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-resources-changed-catalog-86b86bee08"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "retained-rx-resources-current-86b86bee08",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-resources-current-86b86bee08"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "cleanup-remove-rx-resources-current-86b86bee08",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-resources-current-86b86bee08"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "retained-rx-resources-baseline-86b86bee08",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-resources-baseline-86b86bee08"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "cleanup-remove-rx-resources-baseline-86b86bee08",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-resources-baseline-86b86bee08"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "retained-rx-resources-changed-catalog-86b86bee08",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-resources-changed-catalog-86b86bee08"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "cleanup-remove-rx-resources-changed-catalog-86b86bee08",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-resources-changed-catalog-86b86bee08"
+    ],
+    "exit_code": 0
+  }
+]

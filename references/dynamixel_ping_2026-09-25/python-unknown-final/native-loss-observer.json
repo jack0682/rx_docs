@@ -1,0 +1,1 @@
+{"exit":0,"stderr":"","stdout":"{\"killed_helper\": {\"deadline_ns\": \"2381439753162\", \"event\": \"helper_entered\", \"instance\": \"1120a543-7123-4990-8cfa-4e282565c020\", \"invocation\": \"7a399889-9dfd-42bd-870b-ad6764aa132c\", \"operation\": \"01a0d773-49ae-7172-832b-806303ab1a0b\", \"parent_pid\": 1, \"pid\": 63}}\n"}

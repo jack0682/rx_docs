@@ -1,0 +1,1 @@
+{"uid": 10001, "private_key_path_present": false, "issuer_processes_observed": [], "process_snapshot": {"1": "/usr/bin/python3", "13": "/evidence/rx-solutionsd"}, "scope": "one actual process snapshot plus inspected host launch code"}

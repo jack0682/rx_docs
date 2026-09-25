@@ -1,0 +1,68 @@
+{
+  "status": "HELPER_BOUNDARY_PASS",
+  "physical_device_opened": false,
+  "rows": [
+    {
+      "language": "python",
+      "mode": "direct",
+      "exit": 21,
+      "stdout": "",
+      "stderr": "DXL_HOST_CHANNEL_REQUIRED\n"
+    },
+    {
+      "language": "python",
+      "mode": "socket",
+      "exit": 21,
+      "stdout": "",
+      "stderr": "DXL_HOST_EXECUTABLE_REQUIRED\n"
+    },
+    {
+      "language": "python",
+      "mode": "spoof",
+      "exit": 21,
+      "stdout": "",
+      "stderr": "DXL_HOST_EXECUTABLE_REQUIRED\n"
+    },
+    {
+      "language": "cpp",
+      "mode": "direct",
+      "exit": 21,
+      "stdout": "",
+      "stderr": "DXL_HOST_CHANNEL_REQUIRED\n"
+    },
+    {
+      "language": "cpp",
+      "mode": "socket",
+      "exit": 21,
+      "stdout": "",
+      "stderr": "DXL_HOST_EXECUTABLE_REQUIRED\n"
+    },
+    {
+      "language": "cpp",
+      "mode": "spoof",
+      "exit": 21,
+      "stdout": "",
+      "stderr": "DXL_HOST_EXECUTABLE_REQUIRED\n"
+    },
+    {
+      "endpoint": "/dev/ttyUSB0",
+      "exit": 21,
+      "stderr": "DXL_REAL_ENDPOINT_UNSUPPORTED\n"
+    },
+    {
+      "endpoint": "/dev/ttyACM0",
+      "exit": 21,
+      "stderr": "DXL_REAL_ENDPOINT_UNSUPPORTED\n"
+    },
+    {
+      "endpoint": "tcp://127.0.0.1:1234",
+      "exit": 21,
+      "stderr": "DXL_REAL_ENDPOINT_UNSUPPORTED\n"
+    },
+    {
+      "endpoint": "simulation/dynamixel/id-2",
+      "exit": 21,
+      "stderr": "DXL_REAL_ENDPOINT_UNSUPPORTED\n"
+    }
+  ]
+}

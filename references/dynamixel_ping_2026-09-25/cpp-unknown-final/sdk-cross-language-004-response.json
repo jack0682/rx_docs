@@ -1,0 +1,1 @@
+{"id":4,"ok":true,"response":{"disposition":"DISPOSITION_QUARANTINED","execution_knowledge":"KNOWLEDGE_UNKNOWN","integrity":"INTEGRITY_VALID","intent_digest":"nWSCLPEc3zj06/LvrfmQcPso+IzNpiKzrypDvfuxAfk=","operation_id":"01a0d773-4e73-769b-9376-8de3c6904a60","outcome":"OUTCOME_NONE","phase":"PHASE_RECONCILING","reason":{"code":"REASON_CODE_UNKNOWN_OUTCOME"},"revision":"6"}}

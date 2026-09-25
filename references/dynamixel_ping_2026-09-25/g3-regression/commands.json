@@ -1,0 +1,1652 @@
+[
+  {
+    "label": "image",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "rx-solutions:g2-authenticated"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "natural-positive-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g3-1a7cc537599a",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/natural-positive:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/natural-positive/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/natural-positive/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/natural-positive/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/rx-solutionsd",
+      "natural-positive"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "natural-positive-host-custody",
+    "argv": [
+      "docker",
+      "exec",
+      "rx-g3-1a7cc537599a",
+      "/usr/bin/python3",
+      "-c",
+      "import os,json; from pathlib import Path; assert not Path('/private/key.pem').exists(); processes={}\nfor p in Path('/proc').iterdir():\n if p.name.isdigit() and int(p.name)!=os.getpid():\n  try: processes[p.name]=p.joinpath('cmdline').read_bytes().split(b'\\0')[0].decode(errors='replace')\n  except (FileNotFoundError,PermissionError,ProcessLookupError):pass\nissuers=[v for v in processes.values() if Path(v).name in ['judge','rx-operating-area-judge','openssl']];assert not issuers;print(json.dumps({'uid':os.getuid(),'private_key_path_present':False,'issuer_processes_observed':issuers,'process_snapshot':processes,'scope':'one actual process snapshot plus inspected host launch code'}))"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "natural-positive-host-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g3-1a7cc537599a"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "natural-positive-decide",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/rx-operating-area-judge:/judge:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/natural-positive/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/operating-area-keys/development-judge.pem:/private/key.pem:ro",
+      "--entrypoint",
+      "/judge",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "decide",
+      "/exchange",
+      "55a5d639-e68b-4c93-b566-b3e79d3b255e",
+      "/private/key.pem",
+      "30000"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "natural-positive-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g3-1a7cc537599a"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "natural-positive-final-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g3-1a7cc537599a"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "natural-positive-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g3-1a7cc537599a"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "natural-positive-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g3-1a7cc537599a"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "unconnected-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g3-31b962e22107",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/unconnected:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/unconnected/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/unconnected/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/unconnected/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/rx-solutionsd",
+      "unconnected"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "unconnected-host-custody",
+    "argv": [
+      "docker",
+      "exec",
+      "rx-g3-31b962e22107",
+      "/usr/bin/python3",
+      "-c",
+      "import os,json; from pathlib import Path; assert not Path('/private/key.pem').exists(); processes={}\nfor p in Path('/proc').iterdir():\n if p.name.isdigit() and int(p.name)!=os.getpid():\n  try: processes[p.name]=p.joinpath('cmdline').read_bytes().split(b'\\0')[0].decode(errors='replace')\n  except (FileNotFoundError,PermissionError,ProcessLookupError):pass\nissuers=[v for v in processes.values() if Path(v).name in ['judge','rx-operating-area-judge','openssl']];assert not issuers;print(json.dumps({'uid':os.getuid(),'private_key_path_present':False,'issuer_processes_observed':issuers,'process_snapshot':processes,'scope':'one actual process snapshot plus inspected host launch code'}))"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "unconnected-host-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g3-31b962e22107"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "unconnected-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g3-31b962e22107"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "unconnected-final-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g3-31b962e22107"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "unconnected-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g3-31b962e22107"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "unconnected-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g3-31b962e22107"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "issuer-scope-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g3-5cfd5692624a",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/issuer-scope:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/issuer-scope/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/issuer-scope/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/issuer-scope/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/rx-solutionsd",
+      "issuer-scope"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "issuer-scope-host-custody",
+    "argv": [
+      "docker",
+      "exec",
+      "rx-g3-5cfd5692624a",
+      "/usr/bin/python3",
+      "-c",
+      "import os,json; from pathlib import Path; assert not Path('/private/key.pem').exists(); processes={}\nfor p in Path('/proc').iterdir():\n if p.name.isdigit() and int(p.name)!=os.getpid():\n  try: processes[p.name]=p.joinpath('cmdline').read_bytes().split(b'\\0')[0].decode(errors='replace')\n  except (FileNotFoundError,PermissionError,ProcessLookupError):pass\nissuers=[v for v in processes.values() if Path(v).name in ['judge','rx-operating-area-judge','openssl']];assert not issuers;print(json.dumps({'uid':os.getuid(),'private_key_path_present':False,'issuer_processes_observed':issuers,'process_snapshot':processes,'scope':'one actual process snapshot plus inspected host launch code'}))"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "issuer-scope-host-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g3-5cfd5692624a"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "issuer-scope-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g3-5cfd5692624a"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "issuer-scope-final-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g3-5cfd5692624a"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "issuer-scope-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g3-5cfd5692624a"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "issuer-scope-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g3-5cfd5692624a"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "judge-policy-denied-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g3-c5faba256425",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/judge-policy-denied:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/judge-policy-denied/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/judge-policy-denied/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/judge-policy-denied/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/rx-solutionsd",
+      "judge-policy-denied"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "judge-policy-denied-host-custody",
+    "argv": [
+      "docker",
+      "exec",
+      "rx-g3-c5faba256425",
+      "/usr/bin/python3",
+      "-c",
+      "import os,json; from pathlib import Path; assert not Path('/private/key.pem').exists(); processes={}\nfor p in Path('/proc').iterdir():\n if p.name.isdigit() and int(p.name)!=os.getpid():\n  try: processes[p.name]=p.joinpath('cmdline').read_bytes().split(b'\\0')[0].decode(errors='replace')\n  except (FileNotFoundError,PermissionError,ProcessLookupError):pass\nissuers=[v for v in processes.values() if Path(v).name in ['judge','rx-operating-area-judge','openssl']];assert not issuers;print(json.dumps({'uid':os.getuid(),'private_key_path_present':False,'issuer_processes_observed':issuers,'process_snapshot':processes,'scope':'one actual process snapshot plus inspected host launch code'}))"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "judge-policy-denied-host-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g3-c5faba256425"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "judge-policy-denied-decide",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/rx-operating-area-judge:/judge:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/judge-policy-denied/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/operating-area-keys/development-judge.pem:/private/key.pem:ro",
+      "--entrypoint",
+      "/judge",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "decide",
+      "/exchange",
+      "2d80f118-5074-427e-9697-3cb58c3c7eb3",
+      "/private/key.pem",
+      "30000"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "judge-policy-denied-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g3-c5faba256425"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "judge-policy-denied-final-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g3-c5faba256425"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "judge-policy-denied-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g3-c5faba256425"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "judge-policy-denied-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g3-c5faba256425"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "signature-mismatch-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g3-2cc224015417",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/signature-mismatch:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/signature-mismatch/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/signature-mismatch/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/signature-mismatch/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/rx-solutionsd",
+      "signature-mismatch"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "signature-mismatch-host-custody",
+    "argv": [
+      "docker",
+      "exec",
+      "rx-g3-2cc224015417",
+      "/usr/bin/python3",
+      "-c",
+      "import os,json; from pathlib import Path; assert not Path('/private/key.pem').exists(); processes={}\nfor p in Path('/proc').iterdir():\n if p.name.isdigit() and int(p.name)!=os.getpid():\n  try: processes[p.name]=p.joinpath('cmdline').read_bytes().split(b'\\0')[0].decode(errors='replace')\n  except (FileNotFoundError,PermissionError,ProcessLookupError):pass\nissuers=[v for v in processes.values() if Path(v).name in ['judge','rx-operating-area-judge','openssl']];assert not issuers;print(json.dumps({'uid':os.getuid(),'private_key_path_present':False,'issuer_processes_observed':issuers,'process_snapshot':processes,'scope':'one actual process snapshot plus inspected host launch code'}))"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "signature-mismatch-host-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g3-2cc224015417"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "signature-mismatch-decide",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/rx-operating-area-judge:/judge:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/signature-mismatch/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/operating-area-keys/development-judge.pem:/private/key.pem:ro",
+      "--entrypoint",
+      "/judge",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "decide",
+      "/exchange",
+      "0e1c4e73-894f-4e69-96dc-cd54e8a517a5",
+      "/private/key.pem",
+      "30000"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "signature-mismatch-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g3-2cc224015417"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "signature-mismatch-final-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g3-2cc224015417"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "signature-mismatch-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g3-2cc224015417"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "signature-mismatch-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g3-2cc224015417"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "claimed-area-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g3-7ae25670d7e2",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/claimed-area:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/claimed-area/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/claimed-area/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/claimed-area/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/rx-solutionsd",
+      "claimed-area"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "claimed-area-host-custody",
+    "argv": [
+      "docker",
+      "exec",
+      "rx-g3-7ae25670d7e2",
+      "/usr/bin/python3",
+      "-c",
+      "import os,json; from pathlib import Path; assert not Path('/private/key.pem').exists(); processes={}\nfor p in Path('/proc').iterdir():\n if p.name.isdigit() and int(p.name)!=os.getpid():\n  try: processes[p.name]=p.joinpath('cmdline').read_bytes().split(b'\\0')[0].decode(errors='replace')\n  except (FileNotFoundError,PermissionError,ProcessLookupError):pass\nissuers=[v for v in processes.values() if Path(v).name in ['judge','rx-operating-area-judge','openssl']];assert not issuers;print(json.dumps({'uid':os.getuid(),'private_key_path_present':False,'issuer_processes_observed':issuers,'process_snapshot':processes,'scope':'one actual process snapshot plus inspected host launch code'}))"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "claimed-area-host-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g3-7ae25670d7e2"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "claimed-area-decide",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/rx-operating-area-judge:/judge:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/claimed-area/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/operating-area-keys/development-judge.pem:/private/key.pem:ro",
+      "--entrypoint",
+      "/judge",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "decide",
+      "/exchange",
+      "09e33482-0268-4b43-8668-759d5f092824",
+      "/private/key.pem",
+      "30000"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "claimed-area-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g3-7ae25670d7e2"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "claimed-area-final-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g3-7ae25670d7e2"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "claimed-area-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g3-7ae25670d7e2"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "claimed-area-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g3-7ae25670d7e2"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "claimed-role-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g3-aa73b80d69ed",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/claimed-role:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/claimed-role/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/claimed-role/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/claimed-role/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/rx-solutionsd",
+      "claimed-role"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "claimed-role-host-custody",
+    "argv": [
+      "docker",
+      "exec",
+      "rx-g3-aa73b80d69ed",
+      "/usr/bin/python3",
+      "-c",
+      "import os,json; from pathlib import Path; assert not Path('/private/key.pem').exists(); processes={}\nfor p in Path('/proc').iterdir():\n if p.name.isdigit() and int(p.name)!=os.getpid():\n  try: processes[p.name]=p.joinpath('cmdline').read_bytes().split(b'\\0')[0].decode(errors='replace')\n  except (FileNotFoundError,PermissionError,ProcessLookupError):pass\nissuers=[v for v in processes.values() if Path(v).name in ['judge','rx-operating-area-judge','openssl']];assert not issuers;print(json.dumps({'uid':os.getuid(),'private_key_path_present':False,'issuer_processes_observed':issuers,'process_snapshot':processes,'scope':'one actual process snapshot plus inspected host launch code'}))"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "claimed-role-host-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g3-aa73b80d69ed"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "claimed-role-decide",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/rx-operating-area-judge:/judge:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/claimed-role/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/operating-area-keys/development-judge.pem:/private/key.pem:ro",
+      "--entrypoint",
+      "/judge",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "decide",
+      "/exchange",
+      "1766282b-6b20-4d1a-b2b5-69f665ea029b",
+      "/private/key.pem",
+      "30000"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "claimed-role-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g3-aa73b80d69ed"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "claimed-role-final-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g3-aa73b80d69ed"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "claimed-role-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g3-aa73b80d69ed"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "claimed-role-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g3-aa73b80d69ed"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "claimed-kind-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g3-656747c373e7",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/claimed-kind:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/claimed-kind/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/claimed-kind/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/claimed-kind/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/rx-solutionsd",
+      "claimed-kind"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "claimed-kind-host-custody",
+    "argv": [
+      "docker",
+      "exec",
+      "rx-g3-656747c373e7",
+      "/usr/bin/python3",
+      "-c",
+      "import os,json; from pathlib import Path; assert not Path('/private/key.pem').exists(); processes={}\nfor p in Path('/proc').iterdir():\n if p.name.isdigit() and int(p.name)!=os.getpid():\n  try: processes[p.name]=p.joinpath('cmdline').read_bytes().split(b'\\0')[0].decode(errors='replace')\n  except (FileNotFoundError,PermissionError,ProcessLookupError):pass\nissuers=[v for v in processes.values() if Path(v).name in ['judge','rx-operating-area-judge','openssl']];assert not issuers;print(json.dumps({'uid':os.getuid(),'private_key_path_present':False,'issuer_processes_observed':issuers,'process_snapshot':processes,'scope':'one actual process snapshot plus inspected host launch code'}))"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "claimed-kind-host-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g3-656747c373e7"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "claimed-kind-decide",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/rx-operating-area-judge:/judge:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/claimed-kind/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/operating-area-keys/development-judge.pem:/private/key.pem:ro",
+      "--entrypoint",
+      "/judge",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "decide",
+      "/exchange",
+      "758ca82a-cd35-43d1-8a9a-21f069cb7646",
+      "/private/key.pem",
+      "30000"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "claimed-kind-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g3-656747c373e7"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "claimed-kind-final-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g3-656747c373e7"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "claimed-kind-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g3-656747c373e7"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "claimed-kind-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g3-656747c373e7"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "unknown-response-key-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g3-27550fe69c62",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/unknown-response-key:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/unknown-response-key/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/unknown-response-key/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/unknown-response-key/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/rx-solutionsd",
+      "unknown-response-key"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "unknown-response-key-host-custody",
+    "argv": [
+      "docker",
+      "exec",
+      "rx-g3-27550fe69c62",
+      "/usr/bin/python3",
+      "-c",
+      "import os,json; from pathlib import Path; assert not Path('/private/key.pem').exists(); processes={}\nfor p in Path('/proc').iterdir():\n if p.name.isdigit() and int(p.name)!=os.getpid():\n  try: processes[p.name]=p.joinpath('cmdline').read_bytes().split(b'\\0')[0].decode(errors='replace')\n  except (FileNotFoundError,PermissionError,ProcessLookupError):pass\nissuers=[v for v in processes.values() if Path(v).name in ['judge','rx-operating-area-judge','openssl']];assert not issuers;print(json.dumps({'uid':os.getuid(),'private_key_path_present':False,'issuer_processes_observed':issuers,'process_snapshot':processes,'scope':'one actual process snapshot plus inspected host launch code'}))"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "unknown-response-key-host-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g3-27550fe69c62"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "unknown-response-key-decide",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/rx-operating-area-judge:/judge:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/unknown-response-key/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/operating-area-keys/development-judge.pem:/private/key.pem:ro",
+      "--entrypoint",
+      "/judge",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "decide",
+      "/exchange",
+      "4999a413-fc34-4f01-aaea-29bc1b1fbd06",
+      "/private/key.pem",
+      "30000"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "unknown-response-key-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g3-27550fe69c62"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "unknown-response-key-final-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g3-27550fe69c62"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "unknown-response-key-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g3-27550fe69c62"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "unknown-response-key-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g3-27550fe69c62"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "revoked-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g3-434750532617",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/revoked:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/revoked/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/revoked/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/revoked/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/rx-solutionsd",
+      "revoked"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "revoked-host-custody",
+    "argv": [
+      "docker",
+      "exec",
+      "rx-g3-434750532617",
+      "/usr/bin/python3",
+      "-c",
+      "import os,json; from pathlib import Path; assert not Path('/private/key.pem').exists(); processes={}\nfor p in Path('/proc').iterdir():\n if p.name.isdigit() and int(p.name)!=os.getpid():\n  try: processes[p.name]=p.joinpath('cmdline').read_bytes().split(b'\\0')[0].decode(errors='replace')\n  except (FileNotFoundError,PermissionError,ProcessLookupError):pass\nissuers=[v for v in processes.values() if Path(v).name in ['judge','rx-operating-area-judge','openssl']];assert not issuers;print(json.dumps({'uid':os.getuid(),'private_key_path_present':False,'issuer_processes_observed':issuers,'process_snapshot':processes,'scope':'one actual process snapshot plus inspected host launch code'}))"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "revoked-host-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g3-434750532617"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "revoked-decide",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/rx-operating-area-judge:/judge:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/revoked/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/operating-area-keys/development-judge.pem:/private/key.pem:ro",
+      "--entrypoint",
+      "/judge",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "decide",
+      "/exchange",
+      "9582e8b6-8965-48ef-8b93-db8070c6b20b",
+      "/private/key.pem",
+      "30000"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "revoked-revoke",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/rx-operating-area-judge:/judge:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/revoked/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/operating-area-keys/development-judge.pem:/private/key.pem:ro",
+      "--entrypoint",
+      "/judge",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "revoke",
+      "/exchange",
+      "9582e8b6-8965-48ef-8b93-db8070c6b20b",
+      "/private/key.pem",
+      "development/condition-changed"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "revoked-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g3-434750532617"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "revoked-final-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g3-434750532617"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "revoked-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g3-434750532617"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "revoked-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g3-434750532617"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "expiry-after-judgment-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g3-37019aefdc5d",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/expiry-after-judgment:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/expiry-after-judgment/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/expiry-after-judgment/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/expiry-after-judgment/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/rx-solutionsd",
+      "expiry-after-judgment"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "expiry-after-judgment-host-custody",
+    "argv": [
+      "docker",
+      "exec",
+      "rx-g3-37019aefdc5d",
+      "/usr/bin/python3",
+      "-c",
+      "import os,json; from pathlib import Path; assert not Path('/private/key.pem').exists(); processes={}\nfor p in Path('/proc').iterdir():\n if p.name.isdigit() and int(p.name)!=os.getpid():\n  try: processes[p.name]=p.joinpath('cmdline').read_bytes().split(b'\\0')[0].decode(errors='replace')\n  except (FileNotFoundError,PermissionError,ProcessLookupError):pass\nissuers=[v for v in processes.values() if Path(v).name in ['judge','rx-operating-area-judge','openssl']];assert not issuers;print(json.dumps({'uid':os.getuid(),'private_key_path_present':False,'issuer_processes_observed':issuers,'process_snapshot':processes,'scope':'one actual process snapshot plus inspected host launch code'}))"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "expiry-after-judgment-host-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g3-37019aefdc5d"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "expiry-after-judgment-decide",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/rx-operating-area-judge:/judge:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/expiry-after-judgment/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/operating-area-keys/development-judge.pem:/private/key.pem:ro",
+      "--entrypoint",
+      "/judge",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "decide",
+      "/exchange",
+      "0029e591-a49d-475f-a61e-0ecbd2985248",
+      "/private/key.pem",
+      "1000"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "expiry-after-judgment-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g3-37019aefdc5d"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "expiry-after-judgment-final-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g3-37019aefdc5d"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "expiry-after-judgment-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g3-37019aefdc5d"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "expiry-after-judgment-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g3-37019aefdc5d"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "commit-lock-busy-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g3-a4a0415e56fc",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/commit-lock-busy:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/commit-lock-busy/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/commit-lock-busy/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/commit-lock-busy/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/rx-solutionsd",
+      "commit-lock-busy"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "commit-lock-busy-host-custody",
+    "argv": [
+      "docker",
+      "exec",
+      "rx-g3-a4a0415e56fc",
+      "/usr/bin/python3",
+      "-c",
+      "import os,json; from pathlib import Path; assert not Path('/private/key.pem').exists(); processes={}\nfor p in Path('/proc').iterdir():\n if p.name.isdigit() and int(p.name)!=os.getpid():\n  try: processes[p.name]=p.joinpath('cmdline').read_bytes().split(b'\\0')[0].decode(errors='replace')\n  except (FileNotFoundError,PermissionError,ProcessLookupError):pass\nissuers=[v for v in processes.values() if Path(v).name in ['judge','rx-operating-area-judge','openssl']];assert not issuers;print(json.dumps({'uid':os.getuid(),'private_key_path_present':False,'issuer_processes_observed':issuers,'process_snapshot':processes,'scope':'one actual process snapshot plus inspected host launch code'}))"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "commit-lock-busy-host-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g3-a4a0415e56fc"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "commit-lock-busy-decide",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/rx-operating-area-judge:/judge:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/commit-lock-busy/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/operating-area-keys/development-judge.pem:/private/key.pem:ro",
+      "--entrypoint",
+      "/judge",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "decide",
+      "/exchange",
+      "7bf93978-d798-4bbb-805a-d6c6a022e659",
+      "/private/key.pem",
+      "30000"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "commit-lock-busy-lock-holder",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g3-a4a0415e56fc-holder",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/commit-lock-busy/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/g3-regression/commit-lock-busy/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "-c",
+      "import fcntl,time;from pathlib import Path\nf=open('/exchange/exchange.lock','a+');fcntl.flock(f,fcntl.LOCK_EX|fcntl.LOCK_NB);Path('/control/lock-held').touch()\nwhile not Path('/control/lock-release').exists():time.sleep(.02)"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "commit-lock-busy-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g3-a4a0415e56fc"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "commit-lock-busy-holder-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "5",
+      "rx-g3-a4a0415e56fc-holder"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "commit-lock-busy-holder-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g3-a4a0415e56fc-holder"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "commit-lock-busy-final-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g3-a4a0415e56fc"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "commit-lock-busy-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g3-a4a0415e56fc"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "commit-lock-busy-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g3-a4a0415e56fc"
+    ],
+    "exit_code": 0,
+    "expected": null
+  }
+]

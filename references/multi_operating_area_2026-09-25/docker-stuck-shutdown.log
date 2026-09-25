@@ -1,0 +1,15 @@
+[2026-09-25T01:43:33.880492000Z][com.docker.backend.electron] waiting for electron to quit
+[2026-09-25T01:43:33.907551000Z][com.docker.backend.electron] electron processes have shut down
+[2026-09-25T01:43:33.907671000Z][com.docker.backend] shutting down analytics client
+[2026-09-25T01:43:33.907749000Z][com.docker.backend.analytics.marlin] processing batch of 31 records
+[2026-09-25T01:43:35.065120000Z][com.docker.backend.analytics.marlin] sent message 200 OK (1158 ms)
+[2026-09-25T01:43:35.072467000Z][com.docker.backend] shutting down vital services
+[2026-09-25T01:43:35.073107000Z][com.docker.backend.ipc] shutting down 9551758f-BackendAPI for component BackendCMD on backend on context done
+[2026-09-25T01:43:35.073151000Z][com.docker.backend.gvisor] unable to accept vfkit connection: invalid magic length: 0/4
+[2026-09-25T01:43:35.073160000Z][com.docker.backend.ipc] shutting down 9551758f-BackendAPI for component BackendCMD on <HOME>/Library/Containers/com.docker.docker/Data/backend.sock on context done
+[2026-09-25T01:43:35.073168000Z][com.docker.backend.socketforwarder] root context has been cancelled
+[2026-09-25T01:43:35.073780000Z][com.docker.backend.socketforwarder] stop
+[2026-09-25T01:43:35.073382000Z][com.docker.backend.socketforward] closing virtual listener on backend
+[2026-09-25T01:43:35.073964000Z][com.docker.backend.socketforward] closing virtual listener on backend
+[2026-09-25T01:43:35.074108000Z][com.docker.backend.apiproxy] closing <HOME>/.docker/run/docker.sock
+[2026-09-25T01:43:35.074210000Z][com.docker.backend.apiproxy] closing <HOME>/.docker/run/docker-proxy.sock

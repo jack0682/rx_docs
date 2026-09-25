@@ -1,0 +1,26 @@
+From https://github.com/jack0682/rx-platform
+ * branch            develop    -> FETCH_HEAD
+ * branch            main       -> FETCH_HEAD
+   75e1933..7d1a31f  develop    -> origin/develop
+Switched to branch 'develop'
+Your branch is behind 'origin/develop' by 2 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+From https://github.com/jack0682/rx-platform
+ * branch            develop    -> FETCH_HEAD
+Updating 75e1933..7d1a31f
+Fast-forward
+ crates/rx-package/OPERATING_AREA.md       |  37 +++++++-
+ crates/rx-package/src/operating_area.rs   | 143 +++++++++++++++++++++++++-----
+ crates/rx-package/tests/operating_area.rs | 128 ++++++++++++++++++++++++++
+ tools/operating_area_judge/README.md      |   7 ++
+ tools/operating_area_judge/src/main.rs    |  27 +++---
+ 5 files changed, 308 insertions(+), 34 deletions(-)
+gpg: Signature made Fri Sep 25 10:31:21 2026 KST
+gpg:                using RSA key 7527E36F9EB3667236B5B0919C9FE74DE196CD5A
+gpg: Good signature from "jaehongOh <jaehongoh1554@gmail.com>" [ultimate]
+gpg: Signature made Fri Sep 25 10:47:16 2026 KST
+gpg:                using RSA key B5690EEEBB952194
+gpg: Good signature from "GitHub <noreply@github.com>" [unknown]
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+      968479A1AFF927E37D1A566BB5690EEEBB952194

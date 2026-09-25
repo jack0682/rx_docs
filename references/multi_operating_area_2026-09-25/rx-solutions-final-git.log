@@ -1,0 +1,31 @@
+From https://github.com/jack0682/rx-solutions
+ * branch            develop    -> FETCH_HEAD
+ * branch            main       -> FETCH_HEAD
+   ed3d90f..6b92bab  develop    -> origin/develop
+Switched to branch 'develop'
+Your branch is behind 'origin/develop' by 2 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+From https://github.com/jack0682/rx-solutions
+ * branch            develop    -> FETCH_HEAD
+Updating ed3d90f..6b92bab
+Fast-forward
+ runtime/rx-supervisor/src/bin/rx-solutionsd.rs  |  42 ++++---
+ runtime/rx-supervisor/src/builtin.rs            |  29 +++--
+ runtime/rx-supervisor/src/operating_area.rs     |  35 +++++-
+ runtime/rx-supervisor/src/registered.rs         |   4 +-
+ runtime/rx-supervisor/src/work_use.rs           |   5 +-
+ runtime/rx-supervisor/tests/decision_anchors.rs |  17 +++
+ sdk/crates/rx-package/src/operating_area.rs     | 143 ++++++++++++++++++---
+ sdk/source-lock.json                            |   2 +-
+ tools/multi_area_passage.py                     | 161 ++++++++++++++++++++++++
+ 9 files changed, 385 insertions(+), 53 deletions(-)
+ create mode 100644 tools/multi_area_passage.py
+gpg: Signature made Fri Sep 25 10:33:53 2026 KST
+gpg:                using RSA key 7527E36F9EB3667236B5B0919C9FE74DE196CD5A
+gpg: Good signature from "jaehongOh <jaehongoh1554@gmail.com>" [ultimate]
+gpg: Signature made Fri Sep 25 10:47:16 2026 KST
+gpg:                using RSA key B5690EEEBB952194
+gpg: Good signature from "GitHub <noreply@github.com>" [unknown]
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+      968479A1AFF927E37D1A566BB5690EEEBB952194

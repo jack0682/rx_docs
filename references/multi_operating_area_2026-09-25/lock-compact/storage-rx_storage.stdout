@@ -1,0 +1,10 @@
+
+running 4 tests
+test mailbox::tests::partial_publication_and_oversized_input_are_refused_not_erased ... ok
+test mailbox::tests::publication_is_immutable_and_live_cooperating_writer_excluded ... ok
+test mailbox::tests::symlink_and_nonregular_payloads_are_refused_without_following ... ok
+SQLITE_CLOSE_UNCONFIRMED: no unlock; contender refused until holder process exits
+test ownership_close_tests::sqlite_close_failure_retains_ownership_until_process_exit ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+

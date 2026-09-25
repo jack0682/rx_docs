@@ -1,0 +1,8 @@
+{
+  "source": "functions.write_stdin session52965 tool result",
+  "exit_code": 120,
+  "output": "",
+  "reported_last_phase": "storage build completed; Host service build has no completion record",
+  "runtime_scenes_started": false,
+  "exact_python_exception": "NOT_CAPTURED"
+}

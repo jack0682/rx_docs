@@ -1,0 +1,47 @@
+{
+  "key": {
+    "before": "rx/development-work-judge-v1",
+    "after": "rx/development-work-judge-v1",
+    "same": true
+  },
+  "issuer": {
+    "before": "development/support-gap-judge-v1",
+    "after": "development/support-gap-judge-v1",
+    "same": true
+  },
+  "operating_area": {
+    "before": "development/support-area",
+    "after": "development/support-area",
+    "same": true
+  },
+  "role": {
+    "before": "work/support-gap-report",
+    "after": "work/support-gap-report",
+    "same": true
+  },
+  "kind": {
+    "before": "WORK_USE",
+    "after": "WORK_USE",
+    "same": true
+  },
+  "max_ttl_ms": {
+    "before": "30000",
+    "after": "30000",
+    "same": true
+  },
+  "policy_digest": {
+    "before": "be98f61eebe5e488708f84a12ca3992e87ed8c67423b38fc7dc48044c82bf531",
+    "after": "be98f61eebe5e488708f84a12ca3992e87ed8c67423b38fc7dc48044c82bf531",
+    "same": true
+  },
+  "owner.program": {
+    "before": "rx/status-work-http",
+    "after": "rx/status-work-http",
+    "same": true
+  },
+  "owner.catalog": {
+    "before": "6e39d325e5ad06aa2c07de39184e94d4fcd52e56d72a644cefbea5a616cfb126",
+    "after": "6e39d325e5ad06aa2c07de39184e94d4fcd52e56d72a644cefbea5a616cfb126",
+    "same": true
+  }
+}

@@ -81,7 +81,8 @@ G1 standalone probe의 lockfile에도 새 storage→rustix 의존 edge 갱신이
 | TTL | F10 logical cut 뒤 commit IO 중에도 흐름 |
 | HTTP | 자기 시각의 as-of 관측이며 SQL commit과 물리적으로 원자적이지 않음 |
 | 과거 등록·파일·report | live 요청이나 현재 허가로 복원하지 않음 |
-| 네트워크 판단·다중 영역 | 이번 범위 밖. 다중 운영 영역은 별도 검증이 필요함 |
+| 네트워크 판단 | 이번 범위 밖. 온라인 서비스·연속 감시 없음 |
+| 다중 운영 영역 | G3에서는 미검증. 후속 [G4](39_multi_operating_area.md)가 두 컴파일 개발 영역의 교차 거절과 각자 결과 저장을 검증함; 실물·운영 자격 아님 |
 | G2 신뢰 | verifier/OS 신뢰, 통째 DB rollback 미탐지, offline release 철회 최신성 미확립은 유지 |
 
 [G2의 O1](37_authenticated_release_origin.md)도 한계표에 추가했다. 운영자 공급 패키지 검증 정책은 배포 image의 누락 파일이 아니라 별도 가변 로컬 구성이다. 릴리스 인증이 그 패키지 신뢰 선택을 제약하지 않는다.

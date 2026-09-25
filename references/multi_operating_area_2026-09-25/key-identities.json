@@ -1,0 +1,17 @@
+{
+  "distinct_from_each_other_and_release": true,
+  "areas": [
+    {
+      "area": "SUPPORT",
+      "public_key_sha256": "ffce700e3ebbb26365458682afbdace0c3db86b13107e14d80f3fa86cc169b2c",
+      "matches_compiled": true,
+      "private_mode": "0o600"
+    },
+    {
+      "area": "COMPACT",
+      "public_key_sha256": "20a36904d8e0c5cbc79b35a0f43721f1dbd1737c0b9fc5c82d1546acf96e5dee",
+      "matches_compiled": true,
+      "private_mode": "0o600"
+    }
+  ]
+}

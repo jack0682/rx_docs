@@ -1,0 +1,9 @@
+{
+  "removed": [
+    "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/lock-compact/platform-target",
+    "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/lock-compact/probe-target",
+    "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/lock-compact/solutions-target",
+    "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/lock-compact/cargo-home"
+  ],
+  "preserved": "original interrupted G1 target, G3 unresolved target, all evidence and root final binaries"
+}

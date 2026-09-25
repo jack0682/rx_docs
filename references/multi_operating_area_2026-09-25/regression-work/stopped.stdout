@@ -1,0 +1,239 @@
+[
+    {
+        "Id": "b5d17b5027f6023db2d5ea098335682d6ab830f4a23b91647a9eaadfb2c2ff73",
+        "Created": "2026-09-25T01:33:23.809813883Z",
+        "Path": "/evidence/target/debug/rx-solutionsd",
+        "Args": [
+            "run",
+            "/evidence/startup.json",
+            "/evidence/task.json"
+        ],
+        "State": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-09-25T01:33:23.833358549Z",
+            "FinishedAt": "2026-09-25T01:33:27.885209343Z"
+        },
+        "Image": "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+        "ResolvConfPath": "/var/lib/docker/containers/b5d17b5027f6023db2d5ea098335682d6ab830f4a23b91647a9eaadfb2c2ff73/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/b5d17b5027f6023db2d5ea098335682d6ab830f4a23b91647a9eaadfb2c2ff73/hostname",
+        "HostsPath": "/var/lib/docker/containers/b5d17b5027f6023db2d5ea098335682d6ab830f4a23b91647a9eaadfb2c2ff73/hosts",
+        "LogPath": "/var/lib/docker/containers/b5d17b5027f6023db2d5ea098335682d6ab830f4a23b91647a9eaadfb2c2ff73/b5d17b5027f6023db2d5ea098335682d6ab830f4a23b91647a9eaadfb2c2ff73-json.log",
+        "Name": "/rx-work-3b2611f71622",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/regression-work/data:/var/lib/rx-solutions",
+                "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/regression-work:/evidence:ro"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "none",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": [
+                "ALL"
+            ],
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": true,
+            "SecurityOpt": [
+                "no-new-privileges"
+            ],
+            "Tmpfs": {
+                "/tmp": "rw"
+            },
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/regression-work/data",
+                "Destination": "/var/lib/rx-solutions",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/regression-work",
+                "Destination": "/evidence",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "b5d17b5027f6",
+            "Domainname": "",
+            "User": "10001:10001",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "8081/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "LC_ALL=C.UTF-8",
+                "ROS_DISTRO=jazzy",
+                "DEBIAN_FRONTEND=noninteractive",
+                "CMAKE_BUILD_PARALLEL_LEVEL=1",
+                "MAKEFLAGS=-j1 -l1",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "ROS_LOG_DIR=/var/lib/rx-solutions/ros-log"
+            ],
+            "Cmd": [
+                "run",
+                "/evidence/startup.json",
+                "/evidence/task.json"
+            ],
+            "Image": "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+            "Volumes": null,
+            "WorkingDir": "/var/lib/rx-solutions",
+            "Entrypoint": [
+                "/evidence/target/debug/rx-solutionsd"
+            ],
+            "Labels": {
+                "org.opencontainers.image.version": "24.04"
+            },
+            "StopSignal": "SIGTERM"
+        },
+        "NetworkSettings": {
+            "SandboxID": "",
+            "SandboxKey": "",
+            "Ports": {},
+            "Networks": {
+                "none": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "0bb5d864c8b01e6d1542352da95d38a802b71f0305914dbba39c27ea9b9838e6",
+                    "EndpointID": "",
+                    "Gateway": "",
+                    "IPAddress": "",
+                    "MacAddress": "",
+                    "IPPrefixLen": 0,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:a9df9618d95223a93c45c278eae1e112617de3d047a792ba2b8a629c8e0dcdb1",
+            "size": 6179,
+            "platform": {
+                "architecture": "arm64",
+                "os": "linux"
+            }
+        }
+    }
+]

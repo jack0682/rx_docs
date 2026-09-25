@@ -1,0 +1,1955 @@
+[
+  {
+    "label": "image",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "rx-solutions:g2-authenticated"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-positive-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g4-8c5d37574f1f",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-positive:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-positive/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-positive/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-positive/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/daemon",
+      "controlled"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-positive-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g4-8c5d37574f1f"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-positive-judge",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/judge:/judge:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-positive/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/operating-area-keys/development-judge.pem:/private/key.pem:ro",
+      "--entrypoint",
+      "/judge",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "decide",
+      "/exchange",
+      "9ef144e9-407e-4d73-8613-6f525a5a6ab0",
+      "/private/key.pem",
+      "30000"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-positive-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g4-8c5d37574f1f"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-positive-logs",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g4-8c5d37574f1f"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "A-positive-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g4-8c5d37574f1f"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "A-positive-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g4-8c5d37574f1f"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "B-positive-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g4-5ea50e0c1c2c",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-positive:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-positive/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-positive/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-positive/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/daemon",
+      "controlled"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-positive-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g4-5ea50e0c1c2c"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-positive-judge",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/judge:/judge:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-positive/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/operating-area-keys/compact-judge.pem:/private/key.pem:ro",
+      "--entrypoint",
+      "/judge",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "decide",
+      "/exchange",
+      "f56d1607-e568-48e6-8acc-9e8d2b532653",
+      "/private/key.pem",
+      "15000"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-positive-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g4-5ea50e0c1c2c"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-positive-logs",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g4-5ea50e0c1c2c"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "B-positive-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g4-5ea50e0c1c2c"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "B-positive-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g4-5ea50e0c1c2c"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "A-replay-other-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g4-14f4a9e81130",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-replay-other:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-replay-other/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-replay-other/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-replay-other/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/daemon",
+      "controlled"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-replay-other-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g4-14f4a9e81130"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-replay-other-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g4-14f4a9e81130"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-replay-other-logs",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g4-14f4a9e81130"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "A-replay-other-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g4-14f4a9e81130"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "A-replay-other-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g4-14f4a9e81130"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "B-replay-other-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g4-0314236e46a0",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-replay-other:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-replay-other/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-replay-other/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-replay-other/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/daemon",
+      "controlled"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-replay-other-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g4-0314236e46a0"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-replay-other-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g4-0314236e46a0"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-replay-other-logs",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g4-0314236e46a0"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "B-replay-other-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g4-0314236e46a0"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "B-replay-other-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g4-0314236e46a0"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "A-native-5000-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g4-4fb4e81a978a",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-native-5000:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-native-5000/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-native-5000/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-native-5000/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/daemon",
+      "controlled"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-native-5000-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g4-4fb4e81a978a"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-native-5000-judge",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/judge:/judge:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-native-5000/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/operating-area-keys/development-judge.pem:/private/key.pem:ro",
+      "--entrypoint",
+      "/judge",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "decide",
+      "/exchange",
+      "44ba28a6-3f78-4f32-975e-2c4b1e0d8d11",
+      "/private/key.pem",
+      "30000"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-native-5000-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g4-4fb4e81a978a"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-native-5000-logs",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g4-4fb4e81a978a"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "A-native-5000-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g4-4fb4e81a978a"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "A-native-5000-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g4-4fb4e81a978a"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "B-native-5000-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g4-5732c88609f2",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-native-5000:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-native-5000/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-native-5000/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-native-5000/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/daemon",
+      "controlled"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-native-5000-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g4-5732c88609f2"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-native-5000-judge",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/judge:/judge:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-native-5000/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/operating-area-keys/compact-judge.pem:/private/key.pem:ro",
+      "--entrypoint",
+      "/judge",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "decide",
+      "/exchange",
+      "b5cfb390-2c45-41a7-8cb4-ddc039fae2b9",
+      "/private/key.pem",
+      "15000"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-native-5000-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g4-5732c88609f2"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-native-5000-logs",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g4-5732c88609f2"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "B-native-5000-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g4-5732c88609f2"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "B-native-5000-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g4-5732c88609f2"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "A-profiles-32-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g4-6d7d44b82df9",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-profiles-32:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-profiles-32/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-profiles-32/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-profiles-32/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/daemon",
+      "controlled"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-profiles-32-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g4-6d7d44b82df9"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-profiles-32-judge",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/judge:/judge:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-profiles-32/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/operating-area-keys/development-judge.pem:/private/key.pem:ro",
+      "--entrypoint",
+      "/judge",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "decide",
+      "/exchange",
+      "3c3d6b4d-15c4-4eab-96b7-f617cc932926",
+      "/private/key.pem",
+      "30000"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-profiles-32-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g4-6d7d44b82df9"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-profiles-32-logs",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g4-6d7d44b82df9"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "A-profiles-32-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g4-6d7d44b82df9"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "A-profiles-32-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g4-6d7d44b82df9"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "B-profiles-32-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g4-8e4d1f163832",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-profiles-32:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-profiles-32/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-profiles-32/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-profiles-32/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/daemon",
+      "controlled"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-profiles-32-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g4-8e4d1f163832"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-profiles-32-judge",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/judge:/judge:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-profiles-32/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/operating-area-keys/compact-judge.pem:/private/key.pem:ro",
+      "--entrypoint",
+      "/judge",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "decide",
+      "/exchange",
+      "519a8f10-87b8-42da-93ed-2e9680b58979",
+      "/private/key.pem",
+      "15000"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-profiles-32-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g4-8e4d1f163832"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-profiles-32-logs",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g4-8e4d1f163832"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "B-profiles-32-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g4-8e4d1f163832"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "B-profiles-32-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g4-8e4d1f163832"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "A-ttl-25000-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g4-c81cbbd8afc6",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-ttl-25000:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-ttl-25000/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-ttl-25000/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-ttl-25000/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/daemon",
+      "controlled"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-ttl-25000-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g4-c81cbbd8afc6"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-ttl-25000-judge",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/judge:/judge:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-ttl-25000/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/operating-area-keys/development-judge.pem:/private/key.pem:ro",
+      "--entrypoint",
+      "/judge",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "decide",
+      "/exchange",
+      "bdde1eae-ece2-40db-b495-8aed97524de8",
+      "/private/key.pem",
+      "25000"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-ttl-25000-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g4-c81cbbd8afc6"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-ttl-25000-logs",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g4-c81cbbd8afc6"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "A-ttl-25000-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g4-c81cbbd8afc6"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "A-ttl-25000-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g4-c81cbbd8afc6"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "B-ttl-25000-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g4-414ad251c0dd",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-ttl-25000:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-ttl-25000/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-ttl-25000/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-ttl-25000/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/daemon",
+      "controlled"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-ttl-25000-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g4-414ad251c0dd"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-ttl-25000-judge",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/judge:/judge:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-ttl-25000/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/operating-area-keys/compact-judge.pem:/private/key.pem:ro",
+      "--entrypoint",
+      "/judge",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "decide",
+      "/exchange",
+      "439ad5d1-de78-43ef-b32e-4c7f845fb897",
+      "/private/key.pem",
+      "25000"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-ttl-25000-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g4-414ad251c0dd"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-ttl-25000-logs",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g4-414ad251c0dd"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "B-ttl-25000-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g4-414ad251c0dd"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "B-ttl-25000-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g4-414ad251c0dd"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "A-own-native-denied-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g4-09c7919833a6",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-own-native-denied:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-own-native-denied/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-own-native-denied/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-own-native-denied/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/daemon",
+      "controlled"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-own-native-denied-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g4-09c7919833a6"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-own-native-denied-judge",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/judge:/judge:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-own-native-denied/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/operating-area-keys/development-judge.pem:/private/key.pem:ro",
+      "--entrypoint",
+      "/judge",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "decide",
+      "/exchange",
+      "59109db2-513d-4368-9951-4cc23c3f492a",
+      "/private/key.pem",
+      "30000"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-own-native-denied-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g4-09c7919833a6"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-own-native-denied-logs",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g4-09c7919833a6"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "A-own-native-denied-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g4-09c7919833a6"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "A-own-native-denied-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g4-09c7919833a6"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "B-own-native-denied-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g4-e498448e80fe",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-own-native-denied:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-own-native-denied/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-own-native-denied/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-own-native-denied/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/daemon",
+      "controlled"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-own-native-denied-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g4-e498448e80fe"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-own-native-denied-judge",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/judge:/judge:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-own-native-denied/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/operating-area-keys/compact-judge.pem:/private/key.pem:ro",
+      "--entrypoint",
+      "/judge",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "decide",
+      "/exchange",
+      "c09f303f-2123-4ca9-ad09-7daf3e56c98e",
+      "/private/key.pem",
+      "15000"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-own-native-denied-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g4-e498448e80fe"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-own-native-denied-logs",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g4-e498448e80fe"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "B-own-native-denied-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g4-e498448e80fe"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "B-own-native-denied-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g4-e498448e80fe"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "A-own-profiles-denied-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g4-9982aee96100",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-own-profiles-denied:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-own-profiles-denied/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-own-profiles-denied/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-own-profiles-denied/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/daemon",
+      "controlled"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-own-profiles-denied-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g4-9982aee96100"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-own-profiles-denied-judge",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/judge:/judge:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-own-profiles-denied/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/operating-area-keys/development-judge.pem:/private/key.pem:ro",
+      "--entrypoint",
+      "/judge",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "decide",
+      "/exchange",
+      "d0578eab-67cc-4e7f-801b-6a37f9ca17c3",
+      "/private/key.pem",
+      "30000"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-own-profiles-denied-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g4-9982aee96100"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-own-profiles-denied-logs",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g4-9982aee96100"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "A-own-profiles-denied-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g4-9982aee96100"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "A-own-profiles-denied-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g4-9982aee96100"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "B-own-profiles-denied-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g4-eb13f2ac0230",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-own-profiles-denied:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-own-profiles-denied/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-own-profiles-denied/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-own-profiles-denied/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/daemon",
+      "controlled"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-own-profiles-denied-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g4-eb13f2ac0230"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-own-profiles-denied-judge",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/judge:/judge:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-own-profiles-denied/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/operating-area-keys/compact-judge.pem:/private/key.pem:ro",
+      "--entrypoint",
+      "/judge",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "decide",
+      "/exchange",
+      "8c32a9d3-4c87-4ef9-bbb5-9f5abb3aaefa",
+      "/private/key.pem",
+      "15000"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-own-profiles-denied-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g4-eb13f2ac0230"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-own-profiles-denied-logs",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g4-eb13f2ac0230"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "B-own-profiles-denied-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g4-eb13f2ac0230"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "B-own-profiles-denied-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g4-eb13f2ac0230"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "A-task-other-area-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g4-7e7c14bc02d1",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-task-other-area:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-task-other-area/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-task-other-area/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-task-other-area/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/daemon",
+      "issuer-scope"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-task-other-area-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g4-7e7c14bc02d1"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-task-other-area-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g4-7e7c14bc02d1"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-task-other-area-logs",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g4-7e7c14bc02d1"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "A-task-other-area-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g4-7e7c14bc02d1"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "A-task-other-area-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g4-7e7c14bc02d1"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "B-task-other-area-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g4-2a8493cd73d4",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-task-other-area:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-task-other-area/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-task-other-area/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/B-task-other-area/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/daemon",
+      "issuer-scope"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-task-other-area-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g4-2a8493cd73d4"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-task-other-area-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g4-2a8493cd73d4"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "B-task-other-area-logs",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g4-2a8493cd73d4"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "B-task-other-area-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g4-2a8493cd73d4"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "B-task-other-area-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g4-2a8493cd73d4"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "A-foreign-role-start",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-d",
+      "--name",
+      "rx-g4-f81ca5b2e6e7",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first:/evidence:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-foreign-role:/case:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-foreign-role/state:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-foreign-role/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-foreign-role/control:/control",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/evidence/observer.py",
+      "/evidence/daemon",
+      "controlled"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-foreign-role-mounts",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-g4-f81ca5b2e6e7"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-foreign-role-judge",
+    "argv": [
+      "docker",
+      "run",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/judge:/judge:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/A-foreign-role/mailbox:/exchange",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/operating-area-keys/development-judge.pem:/private/key.pem:ro",
+      "--entrypoint",
+      "/judge",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "decide",
+      "/exchange",
+      "9a810d7e-49e0-4460-a55d-1c2078bcd4c1",
+      "/private/key.pem",
+      "30000"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-foreign-role-wait",
+    "argv": [
+      "docker",
+      "wait",
+      "rx-g4-f81ca5b2e6e7"
+    ],
+    "exit_code": 0,
+    "expected": 0
+  },
+  {
+    "label": "A-foreign-role-logs",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-g4-f81ca5b2e6e7"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "A-foreign-role-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-g4-f81ca5b2e6e7"
+    ],
+    "exit_code": 0,
+    "expected": null
+  },
+  {
+    "label": "A-foreign-role-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-g4-f81ca5b2e6e7"
+    ],
+    "exit_code": 0,
+    "expected": null
+  }
+]

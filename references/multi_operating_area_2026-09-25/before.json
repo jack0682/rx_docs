@@ -1,0 +1,14 @@
+{
+  "rx-platform": {
+    "head": "75e19331ec1c3bfdb275f75480188f485c86d64b",
+    "status": ""
+  },
+  "rx-solutions": {
+    "head": "ed3d90f9bd1e54e78023b77ae399b4d237c8e4b4",
+    "status": ""
+  },
+  "rx_docs": {
+    "head": "c38f3c872706a336ed51456da55b0adce8badbc5",
+    "status": "?? docs/design_principles.md\n"
+  }
+}

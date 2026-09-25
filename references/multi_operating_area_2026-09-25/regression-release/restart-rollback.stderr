@@ -1,0 +1,2 @@
+{"condition":"release/rollback","current_permission":"NOT_GRANTED","detail":"release/rollback","schema":"rx.release-refusal.v1"}
+Error: "release/rollback"

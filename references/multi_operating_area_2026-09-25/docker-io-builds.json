@@ -1,0 +1,39 @@
+[
+  {
+    "label": "judge",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "-e",
+      "CARGO_BUILD_JOBS=1",
+      "-e",
+      "CARGO_HOME=/evidence/cargo-home",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence:/evidence",
+      "-w",
+      "/platform/tools/operating_area_judge",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/Cargo.toml:/platform/Cargo.toml:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/Cargo.lock:/platform/Cargo.lock:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/rust-toolchain.toml:/platform/rust-toolchain.toml:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates:/platform/crates:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/spec:/platform/spec:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/proto:/platform/proto:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/operating_area_judge:/platform/tools/operating_area_judge:ro",
+      "rust:1.98.1-slim-bookworm",
+      "cargo",
+      "build",
+      "--locked",
+      "--target-dir",
+      "/evidence/judge-target"
+    ],
+    "exit_code": 125
+  }
+]

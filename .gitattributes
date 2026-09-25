@@ -6,3 +6,6 @@
 *.bin binary
 *.p12 binary
 *.pfx binary
+# Preserve captured carriage returns; the evidence inventory hashes exact bytes.
+references/multi_operating_area_2026-09-25/docker-lock-restart.log -text
+references/multi_operating_area_2026-09-25/docker-restart.log -text

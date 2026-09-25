@@ -1,0 +1,260 @@
+[
+    {
+        "Id": "8a604ebf33cff71413297a7dbd5a0c6be10f44e8169408b83b69b5e71b05abdf",
+        "Created": "2026-09-25T01:38:59.59025601Z",
+        "Path": "cargo",
+        "Args": [
+            "test",
+            "--locked",
+            "-p",
+            "rx-host",
+            "--all-features",
+            "--test",
+            "service",
+            "--no-run",
+            "--target-dir",
+            "/evidence/solutions-target",
+            "--message-format=json"
+        ],
+        "State": {
+            "Status": "dead",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": true,
+            "Pid": 0,
+            "ExitCode": 101,
+            "Error": "write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: input/output error",
+            "StartedAt": "2026-09-25T01:38:59.622390302Z",
+            "FinishedAt": "2026-09-25T01:41:23.579838924Z"
+        },
+        "Image": "sha256:ff521445a372125ed4f76e1453a1f8098f2d05332d1601d30db1c1f62757e730",
+        "ResolvConfPath": "/var/lib/docker/containers/8a604ebf33cff71413297a7dbd5a0c6be10f44e8169408b83b69b5e71b05abdf/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/8a604ebf33cff71413297a7dbd5a0c6be10f44e8169408b83b69b5e71b05abdf/hostname",
+        "HostsPath": "/var/lib/docker/containers/8a604ebf33cff71413297a7dbd5a0c6be10f44e8169408b83b69b5e71b05abdf/hosts",
+        "LogPath": "/var/lib/docker/containers/8a604ebf33cff71413297a7dbd5a0c6be10f44e8169408b83b69b5e71b05abdf/8a604ebf33cff71413297a7dbd5a0c6be10f44e8169408b83b69b5e71b05abdf-json.log",
+        "Name": "/cranky_leavitt",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/platform-public:/platform:ro",
+                "/Users/ojaehong/RX_automation/rx_ws/rx-solutions:/solutions:ro",
+                "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/regression-lock:/evidence"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "bridge",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": true,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/platform-public",
+                "Destination": "/platform",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/Users/ojaehong/RX_automation/rx_ws/rx-solutions",
+                "Destination": "/solutions",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/regression-lock",
+                "Destination": "/evidence",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "8a604ebf33cf",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "CARGO_HOME=/evidence/cargo-home",
+                "CARGO_BUILD_JOBS=1",
+                "PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "RUSTUP_HOME=/usr/local/rustup",
+                "RUST_VERSION=1.98.1"
+            ],
+            "Cmd": [
+                "test",
+                "--locked",
+                "-p",
+                "rx-host",
+                "--all-features",
+                "--test",
+                "service",
+                "--no-run",
+                "--target-dir",
+                "/evidence/solutions-target",
+                "--message-format=json"
+            ],
+            "Image": "sha256:ff521445a372125ed4f76e1453a1f8098f2d05332d1601d30db1c1f62757e730",
+            "Volumes": null,
+            "WorkingDir": "/solutions",
+            "Entrypoint": [
+                "cargo"
+            ],
+            "Labels": {
+                "org.opencontainers.image.source": "https://github.com/rust-lang/docker-rust"
+            }
+        },
+        "NetworkSettings": {
+            "SandboxID": "",
+            "SandboxKey": "",
+            "Ports": {},
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "0290d1fef7beb1dd3bb52f9745b91b3ee6545edb46db9a452084cd9056ed547c",
+                    "EndpointID": "",
+                    "Gateway": "",
+                    "IPAddress": "",
+                    "MacAddress": "",
+                    "IPPrefixLen": 0,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:3ebe98baef5911f8461cf81ba05644374a3c5ef1f8a33db3977bd4175f5ff1fc",
+            "size": 1369,
+            "annotations": {
+                "com.docker.official-images.bashbrew.arch": "arm64v8",
+                "org.opencontainers.image.base.digest": "sha256:0c8bbb8e987a035fe1d9704eb2e571b7e9a836e1caa46345290674b45b69e417",
+                "org.opencontainers.image.base.name": "debian:bookworm-slim",
+                "org.opencontainers.image.created": "2026-09-19T01:15:07Z",
+                "org.opencontainers.image.revision": "4dc5209f5e720a3d6b5eb336cabb69a424a822c1",
+                "org.opencontainers.image.source": "https://github.com/rust-lang/docker-rust.git#4dc5209f5e720a3d6b5eb336cabb69a424a822c1:stable/bookworm/slim",
+                "org.opencontainers.image.url": "https://hub.docker.com/_/rust",
+                "org.opencontainers.image.version": "1-slim-bookworm"
+            },
+            "platform": {
+                "architecture": "arm64",
+                "os": "linux",
+                "variant": "v8"
+            }
+        }
+    }
+]

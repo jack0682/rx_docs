@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/ojaehong/RX_automation/my_harness/../rx_ws/rx-solutions/tools/multi_area_passage.py", line 155, in <module>
+    main()
+    ~~~~^^
+  File "/Users/ojaehong/RX_automation/my_harness/../rx_ws/rx-solutions/tools/multi_area_passage.py", line 134, in main
+    assert result['gate'] == 'DENIED' and denied in result['reason'] and observed['work_rows'] == 0, observed
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'result': {'current_permission': 'NONE', 'gate': 'DENIED', 'operating_area_provider': {'challenge': '9a810d7e-49e0-4460-a55d-1c2078bcd4c1', 'condition': 'work-use/mailbox-unavailable', 'meaning': 'OFFLINE_CHECKPOINT_OBSERVATION; NOT_CURRENT_PERMISSION_OR_PHYSICAL_AUTHORITY', 'state': 'REFUSED'}, 'operation': '43092073-48a8-46b6-9b88-23598869641a', 'reason': 'invalid supervisor input: work-use/external-judgment-Denied: work-use/mailbox-unavailable: mailbox/immutable-publication-conflict', 'schema': 'rx.work-use-result.v1', 'selection': 'status-a'}, 'work_rows': 0, 'observer_pid': 1, 'manager_pid': 7, 'judgment_observed': False}

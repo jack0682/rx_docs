@@ -1,0 +1,55 @@
+{
+  "result": "PASS",
+  "runtime_image": "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+  "builder_image": "sha256:ff521445a372125ed4f76e1453a1f8098f2d05332d1601d30db1c1f62757e730",
+  "daemon_sha256": "5b39cb0be795d4ddb74fc58d11129f0ca93b00091ed44f326256c4e98ba02eab",
+  "supplied_baseline_sha256": "7e6d4a55eef8642affc69e5ba895eb065fc6f3eb6f10e3ad05aad012b9f34d96",
+  "external_observation": {
+    "observer_pid": 160,
+    "supervisor_pid": 1,
+    "child_pid": 153,
+    "child_limits": "Limit                     Soft Limit           Hard Limit           Units     \nMax cpu time              unlimited            unlimited            seconds   \nMax file size             unlimited            unlimited            bytes     \nMax data size             unlimited            unlimited            bytes     \nMax stack size            8388608              unlimited            bytes     \nMax core file size        0                    unlimited            bytes     \nMax resident set          unlimited            unlimited            bytes     \nMax processes             unlimited            unlimited            processes \nMax open files            1048576              1048576              files     \nMax locked memory         unlimited            unlimited            bytes     \nMax address space         268435456            268435456            bytes     \nMax file locks            unlimited            unlimited            locks     \nMax pending signals       23687                23687                signals   \nMax msgqueue size         819200               819200               bytes     \nMax nice priority         0                    0                    \nMax realtime priority     0                    0                    \nMax realtime timeout      unlimited            unlimited            us        \n",
+    "supervisor_limits": "Limit                     Soft Limit           Hard Limit           Units     \nMax cpu time              unlimited            unlimited            seconds   \nMax file size             unlimited            unlimited            bytes     \nMax data size             unlimited            unlimited            bytes     \nMax stack size            8388608              unlimited            bytes     \nMax core file size        0                    unlimited            bytes     \nMax resident set          unlimited            unlimited            bytes     \nMax processes             unlimited            unlimited            processes \nMax open files            1048576              1048576              files     \nMax locked memory         unlimited            unlimited            bytes     \nMax address space         unlimited            unlimited            bytes     \nMax file locks            unlimited            unlimited            locks     \nMax pending signals       23687                23687                signals   \nMax msgqueue size         819200               819200               bytes     \nMax nice priority         0                    0                    \nMax realtime priority     0                    0                    \nMax realtime timeout      unlimited            unlimited            us        \n",
+    "child_cmdline": [
+      "/usr/bin/python3",
+      "/opt/rx/tools/solutions_status.py",
+      "serve",
+      "--bind",
+      "127.0.0.1",
+      "--port",
+      "8081",
+      ""
+    ],
+    "resource_history": {
+      "capacity_reservation": "NONE_CREATED",
+      "current_enforcement": "NOT_ESTABLISHED_BY_HISTORY",
+      "last_observed": {
+        "capacity_reservation": "NONE_CREATED",
+        "hard_bytes": "268435456",
+        "instance": "8f1b9271-2108-4cfc-a580-9bd20d2c28be",
+        "physical_handover": "NOT_ASSESSED",
+        "pid": 153,
+        "requirement": "status/address-space",
+        "scope": "PER_PROCESS_VIRTUAL_ADDRESS_SPACE_UPPER_BOUND",
+        "soft_bytes": "268435456"
+      },
+      "lifetime": "OBSERVED_AT_START",
+      "physical_handover": "NOT_ASSESSED"
+    }
+  },
+  "container_resource_options": {
+    "Memory": 0,
+    "NanoCpus": 0,
+    "Ulimits": null
+  },
+  "existing_registration_changed_catalog_refused": true,
+  "old_entities_preserved": true,
+  "rx_test_child_64MiB_rejected_128MiB_allocation": true,
+  "limitations": [
+    "per-process virtual address-space ceiling, not physical memory or capacity reservation",
+    "one kernel policy; multi-policy partial application is not established",
+    "descendant policy lifetime and physical handover unassessed",
+    "stored observations never restore current enforcement ownership",
+    "actual guarded services and physical equipment not qualified"
+  ]
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "binary": "rx-solutionsd",
+    "sha256": "5b39cb0be795d4ddb74fc58d11129f0ca93b00091ed44f326256c4e98ba02eab",
+    "A_B_private_encodings_absent": true
+  },
+  {
+    "binary": "rx-operating-area-judge",
+    "sha256": "f3491cedf567c3331c3ec04a05f2814b3906d5accb523da299ac5e0f0c581db2",
+    "A_B_private_encodings_absent": true
+  }
+]

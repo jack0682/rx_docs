@@ -1,0 +1,33 @@
+info: syncing channel updates for 1.98.1-aarch64-unknown-linux-gnu
+info: latest update on 2026-09-03 for version 1.98.1 (48a229cea 2026-09-01)
+info: downloading 2 components
+ Downloading crates ...
+  Downloaded thiserror v2.0.21
+  Downloaded unicode-ident v1.0.26
+  Downloaded cfg-if v1.0.5
+  Downloaded thiserror-impl v2.0.21
+  Downloaded find-msvc-tools v0.1.13
+  Downloaded smallvec v1.16.1
+  Downloaded cc v1.4.7
+  Downloaded syn v3.0.6
+  Downloaded rustix v1.1.5
+   Compiling typenum v1.20.1
+   Compiling libc v0.2.189
+   Compiling proc-macro2 v1.0.107
+   Compiling unicode-ident v1.0.26
+   Compiling quote v1.0.47
+   Compiling serde_core v1.0.229
+   Compiling cfg-if v1.0.5
+   Compiling version_check v0.9.5
+   Compiling generic-array v0.14.7
+   Compiling rustix v1.1.5
+   Compiling bitflags v2.13.2
+   Compiling syn v3.0.6
+   Compiling linux-raw-sys v0.12.1
+   Compiling getrandom v0.4.3
+   Compiling zmij v1.0.23
+   Compiling hybrid-array v0.4.15
+error: couldn't create a temp dir: No space left on device (os error 28) at path "/evidence/judge-target/debug/deps/rmetaUPC8Cp"
+
+error: could not compile `hybrid-array` (lib) due to 1 previous error
+time="2026-09-25T10:22:51+09:00" level=error msg="Error waiting for container: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: input/output error"

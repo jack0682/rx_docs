@@ -1,0 +1,12 @@
+{
+  "rx-platform": {
+    "passed": 407,
+    "failed": 0,
+    "ignored": 16
+  },
+  "rx-solutions": {
+    "passed": 388,
+    "failed": 0,
+    "ignored": 17
+  }
+}

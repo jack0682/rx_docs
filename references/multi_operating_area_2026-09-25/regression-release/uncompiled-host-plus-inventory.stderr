@@ -1,0 +1,2 @@
+{"condition":"release/content-mismatch","current_permission":"NOT_GRANTED","detail":"release/content-mismatch: inventory","schema":"rx.release-refusal.v1"}
+Error: "release/content-mismatch"

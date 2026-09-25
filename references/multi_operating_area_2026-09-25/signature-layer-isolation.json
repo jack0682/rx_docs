@@ -1,0 +1,9 @@
+{
+  "exact_rust_signing_bytes_match_python_messages": true,
+  "areas": [
+    "A",
+    "B"
+  ],
+  "foreign_key_signatures_independently_verified": "multi-final/*-adversarial-sign-and-verify.stdout",
+  "receiver_refused_signature_layer": true
+}

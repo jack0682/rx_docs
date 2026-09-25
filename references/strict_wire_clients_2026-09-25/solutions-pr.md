@@ -1,0 +1,3 @@
+Regenerates the source-owned Rust SDK (118 files) and 16-file protocol bundle with the strict-wire-v1 normative profile, authored conformance inputs and TCK-only descriptors. Existing RPC IDL bytes, installed runtime authority and Host/device behavior remain unchanged; client libraries do not add a supervisor work-use ingress.
+
+Validation: source SDK freshness, workspace 388/0/17 on macOS, clippy/repository checks; current P/H image tests exercised the actual Cell.SubmitOperation path with both installed language clients. Corresponding platform branch feature/g5-strict-wire-first-client owns the profile, generator correction and clients; rx_docs records full compatible commits and scopes. No ROBOTIS robot is connected and no full SDK/bundle completion is claimed.

@@ -1,0 +1,96 @@
+   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-protocol)
+    Finished `test` profile [unoptimized] target(s) in 3.30s
+     Running tests/strict_conformance.rs (../.g5-evidence/baseline-target/debug/deps/strict_conformance-5617a5417dc25004)
+
+running 1 test
+empty-ordinary-message SW14 public bytes=0 expected=OK actual=OK
+ordinary-enum-omitted SW11 public bytes=0 expected=OK actual=OK
+ordinary-explicit-zero SW14 public bytes=2 expected=OK actual=OK
+optional-absent SW14 public bytes=0 expected=OK actual=OK
+optional-present-zero SW14 public bytes=2 expected=OK actual=OK
+oneof-present-false SW08 public bytes=2 expected=OK actual=OK
+oneof-present-true SW10 public bytes=2 expected=OK actual=OK
+oneof-zigzag-minus-one SW10 public bytes=2 expected=OK actual=OK
+uint64-maximum SW04 public bytes=11 expected=OK actual=OK
+uint32-maximum SW10 public bytes=6 expected=OK actual=OK
+nonminimal-value SW04 public bytes=3 expected=OK actual=OK
+nonminimal-value re-encode expected=OK actual=OK
+nonminimal-tag SW04 public bytes=4 expected=OK actual=OK
+nonminimal-tag re-encode expected=OK actual=OK
+unordered-fields SW05 public bytes=5 expected=OK actual=OK
+unordered-fields re-encode expected=OK actual=OK
+unicode-string SW13 public bytes=6 expected=OK actual=OK
+opaque-bytes SW13 public bytes=4 expected=OK actual=OK
+known-enum SW11 public bytes=2 expected=OK actual=OK
+nested-empty-ordinary-message SW14 public bytes=2 expected=OK actual=OK
+nested-oneof-present SW08 public bytes=6 expected=OK actual=OK
+finite-negative-zero SW12 public bytes=9 expected=OK actual=OK
+finite-double-one SW12 public bytes=9 expected=OK actual=OK
+packed-reals SW09 public bytes=18 expected=OK actual=OK
+unpacked-reals SW09 public bytes=18 expected=OK actual=OK
+mixed-packed-unpacked SW09 public bytes=19 expected=OK actual=OK
+multiple-packed-segments SW09 public bytes=20 expected=OK actual=OK
+empty-packed-segment SW09 public bytes=2 expected=OK actual=OK
+tag-zero SW05 public bytes=1 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+unknown-tag SW05 public bytes=3 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+field-number-overflow SW05 public bytes=7 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+truncated-key SW04 public bytes=1 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+truncated-varint SW04 public bytes=2 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+overflow-tenth-byte SW04 public bytes=11 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+unterminated-ten-byte-varint SW04 public bytes=11 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+truncated-length SW04 public bytes=2 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+length-beyond-message SW04 public bytes=3 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+length-overflow SW04 public bytes=11 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+wrong-wire-type SW05 public bytes=2 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+groups-not-supported SW05 public bytes=2 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+duplicate-singular-equal SW07 public bytes=6 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+duplicate-singular-different SW07 public bytes=6 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+duplicate-optional SW07 public bytes=4 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+missing-oneof SW08 public bytes=0 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+two-oneof-arms SW08 public bytes=4 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+repeated-oneof-arm SW08 public bytes=4 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+nested-missing-oneof SW08 public bytes=4 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+bool-outside-range SW10 public bytes=2 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+uint32-overflow SW10 public bytes=6 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+explicit-enum-zero SW11 public bytes=2 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+unknown-enum SW11 public bytes=2 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+negative-enum SW11 public bytes=11 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+double-nan SW12 public bytes=9 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+packed-double-nan SW12 public bytes=10 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+double-infinity SW12 public bytes=9 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+packed-double-infinity SW12 public bytes=10 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+double-negative-infinity SW12 public bytes=9 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+packed-double-negative-infinity SW12 public bytes=10 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+truncated-fixed64 SW04 public bytes=4 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+truncated-packed-fixed64 SW04 public bytes=9 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+utf8-overlong SW13 public bytes=4 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+utf8-surrogate SW13 public bytes=5 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+utf8-above-unicode SW13 public bytes=6 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+utf8-incomplete SW13 public bytes=4 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+utf8-stray-continuation SW13 public bytes=3 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+size-1048576 SW01 public bytes=1048576 expected=OK actual=OK
+size-1048577 SW01 public bytes=1048577 expected=RESOURCE_EXHAUSTED actual=RESOURCE_EXHAUSTED
+field-budget-65536 SW03 public bytes=131072 expected=OK actual=OK
+field-budget-65537 SW03 public bytes=131074 expected=RESOURCE_EXHAUSTED actual=RESOURCE_EXHAUSTED
+packed-budget-65535 SW03 public bytes=524284 expected=OK actual=OK
+packed-budget-65536 SW03 public bytes=524292 expected=RESOURCE_EXHAUSTED actual=RESOURCE_EXHAUSTED
+unpacked-limit-reencode-over-budget SW03 public bytes=589824 expected=OK actual=OK
+unpacked-limit-reencode-over-budget re-encode expected=RESOURCE_EXHAUSTED actual=RESOURCE_EXHAUSTED
+depth-63 SW02 guard bytes=126 expected=OK actual=OK
+depth-64 SW02 guard bytes=128 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+absent-map SW06 guard bytes=0 expected=OK actual=OK
+encoded-map SW06 guard bytes=2 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+float32-one SW12 guard bytes=5 expected=OK actual=OK
+float32-infinity SW12 guard bytes=5 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+truncated-fixed32 SW04 guard bytes=3 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+fixed32-and-fixed64 SW09 guard bytes=14 expected=OK actual=OK
+sint32-maximum-raw SW10 guard bytes=6 expected=OK actual=OK
+sint32-overflow SW10 guard bytes=6 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+packed-booleans SW09 guard bytes=4 expected=OK actual=OK
+packed-invalid-boolean SW10 guard bytes=3 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+repeated-boolean-unpacked SW09 guard bytes=4 expected=OK actual=OK
+TCK totals: public=69 synthetic=13
+test authored_profile_vectors_check_existing_rust_codec_and_synthetic_guards ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+

@@ -1,0 +1,33 @@
+{
+  "argv": [
+    "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/cargo",
+    "test",
+    "--locked",
+    "--manifest-path",
+    "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/duplicate-mutant-source/Cargo.toml",
+    "-p",
+    "rx-protocol",
+    "--test",
+    "strict_conformance",
+    "--target-dir",
+    "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/duplicate-mutant-target",
+    "--",
+    "--nocapture"
+  ],
+  "exit_code": 101,
+  "mutation": "disable ordinary singular duplicate refusal only, retain other guards",
+  "same_vector_sha256": "6561f18484c6d8772c63895bdad80c66640d98f313699d964e680a61d307aed1",
+  "product_pins_before": {
+    "crates/rx-protocol/src/strict.rs": "f95cd4bf9172d3e65a25b4a7de08cd56f50b72e4a3e1ac28b2a9b77e446c054a",
+    "proto/strict-wire-v1/README.md": "520758b766823eb7ebdc1a41396a5fcf5d1f570c903bd36df42573fe7b74f799",
+    "proto/strict-wire-v1/vectors.json": "6561f18484c6d8772c63895bdad80c66640d98f313699d964e680a61d307aed1",
+    "proto/strict-wire-v1/probe.proto": "5642c154c6427e4ebaf33184a51c9c45caacd4d0347ac7f3e6780b957bc1576e"
+  },
+  "product_pins_after": {
+    "crates/rx-protocol/src/strict.rs": "f95cd4bf9172d3e65a25b4a7de08cd56f50b72e4a3e1ac28b2a9b77e446c054a",
+    "proto/strict-wire-v1/README.md": "520758b766823eb7ebdc1a41396a5fcf5d1f570c903bd36df42573fe7b74f799",
+    "proto/strict-wire-v1/vectors.json": "6561f18484c6d8772c63895bdad80c66640d98f313699d964e680a61d307aed1",
+    "proto/strict-wire-v1/probe.proto": "5642c154c6427e4ebaf33184a51c9c45caacd4d0347ac7f3e6780b957bc1576e"
+  },
+  "result": "FIXED_EXPECTATIONS_DETECTED_MUTANT"
+}

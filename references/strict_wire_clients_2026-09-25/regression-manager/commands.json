@@ -1,0 +1,109 @@
+[
+  {
+    "label": "runtime",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "rx-solutions:g2-authenticated"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "builder",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "rx-g4-compact-builder"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "build",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions:/source:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-manager:/evidence",
+      "-w",
+      "/source",
+      "-e",
+      "CARGO_HOME=/evidence/cargo-home",
+      "--entrypoint",
+      "cargo",
+      "sha256:42a4ede83f51be9276dd11e9d4eb7c2082fae2daf9a85e7508e50643bd81bfb6",
+      "build",
+      "--locked",
+      "-p",
+      "rx-supervisor",
+      "--bin",
+      "rx-solutionsd",
+      "--target-dir",
+      "/evidence/target"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "scene",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-manager/data:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-manager:/evidence",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-manager/target/debug/rx-solutionsd:/test/rx-solutionsd:ro",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "-I",
+      "-B",
+      "/evidence/observer.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "foreign-namespace",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-manager/data:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-manager:/evidence",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-manager/target/debug/rx-solutionsd:/test/rx-solutionsd:ro",
+      "--entrypoint",
+      "/test/rx-solutionsd",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "investigate",
+      "/evidence/current.json"
+    ],
+    "exit_code": 0
+  }
+]

@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_clients.py", line 201, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_clients.py", line 195, in main
+    exercise(d,materials,final,bundle,p,s,port,identity,a.release_evidence.resolve(),'independent',start_services=scenario.start_services,after_commissioning=scenario.after_commissioning)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/cell_delivery/installation.py", line 96, in exercise
+    run_commissioning(context)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/cell_delivery/installation.py", line 123, in run_commissioning
+    run(context)
+    ~~~^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/cell_delivery/workflow.py", line 99, in run
+    c['after_commissioning'](c,active)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_clients.py", line 144, in after_commissioning
+    refused=bad.call(method,request,ok=False);assert not refused['ok'] and refused['code']=='UNAUTHENTICATED',refused
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'id': 1, 'ok': False, 'code': 'PERMISSION_DENIED', 'detail': 'certificate is not registered'}

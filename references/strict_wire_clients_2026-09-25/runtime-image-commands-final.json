@@ -1,0 +1,161 @@
+[
+  {
+    "label": "runtime-parent",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "rx-solutions:g2-authenticated"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "platform-parent",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "ubuntu:24.04"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "build-solutions-unsigned",
+    "argv": [
+      "docker",
+      "build",
+      "--network",
+      "none",
+      "-f",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/runtime-images-final/Solutions.Dockerfile",
+      "-t",
+      "rx-g5-solutions-unsigned",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/runtime-images-final"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "inventory-holder",
+    "argv": [
+      "docker",
+      "create",
+      "--entrypoint",
+      "/bin/true",
+      "rx-g5-solutions-unsigned"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "inventory-copy",
+    "argv": [
+      "docker",
+      "cp",
+      "f5a80f72217f57982d70a9a2d7ad7e9bb009c0989982d966992954974738e776:/opt/rx/manifests/runtime-files.json",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/runtime-images-final/runtime-files.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "inventory-holder-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "f5a80f72217f57982d70a9a2d7ad7e9bb009c0989982d966992954974738e776"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "sign-development-release",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/sign_release.py",
+      "--key",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/release-keys/development-release.pem",
+      "--inventory",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/runtime-images-final/runtime-files.json",
+      "--version",
+      "5",
+      "--revocation-version",
+      "1",
+      "--output",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/runtime-images-final/signed"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "build-solutions-signed",
+    "argv": [
+      "docker",
+      "build",
+      "--network",
+      "none",
+      "-f",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/runtime-images-final/Signed.Dockerfile",
+      "-t",
+      "rx-g5-solutions-runtime",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/runtime-images-final"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "build-platform",
+    "argv": [
+      "docker",
+      "build",
+      "--network",
+      "none",
+      "-f",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/runtime-images-final/Platform.Dockerfile",
+      "-t",
+      "rx-g5-platform-runtime",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/runtime-images-final"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "platform-image",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "rx-g5-platform-runtime"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "solutions-image",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "rx-g5-solutions-runtime"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "release-sigkill_at_both_journal_native_boundaries_never_replays_device_effect",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/process_crash-release-tests:/test:ro",
+      "--entrypoint",
+      "/test",
+      "sha256:4a1f371db678dd6ed04521b0eeafa48984c03bb982b67d5ae53c8c73e0ce9cd4",
+      "sigkill_at_both_journal_native_boundaries_never_replays_device_effect",
+      "--exact",
+      "--nocapture"
+    ],
+    "exit_code": 101
+  }
+]

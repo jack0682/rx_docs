@@ -1,0 +1,52 @@
+   Compiling serde_core v1.0.229
+   Compiling syn v2.0.119
+   Compiling syn v3.0.5
+   Compiling indexmap v2.14.2
+   Compiling sync_wrapper v1.0.2
+   Compiling serde_json v1.0.151
+   Compiling subtle v2.6.1
+   Compiling sha2 v0.10.9
+   Compiling axum-core v0.5.6
+   Compiling rustls v0.23.44
+   Compiling tokio-macros v2.7.2
+   Compiling serde_derive v1.0.229
+   Compiling thiserror-impl v2.0.20
+   Compiling async-trait v0.1.92
+   Compiling prettyplease v0.2.37
+   Compiling uuid v1.26.1
+   Compiling tokio v1.53.1
+   Compiling tonic-build v0.14.6
+   Compiling prost-derive v0.14.4
+   Compiling tracing-attributes v0.1.31
+   Compiling pin-project-internal v1.1.13
+   Compiling thiserror v2.0.20
+   Compiling tracing v0.1.44
+   Compiling pin-project v1.1.13
+   Compiling prost v0.14.4
+   Compiling serde v1.0.229
+   Compiling prost-types v0.14.4
+   Compiling serde_jcs v0.2.0
+   Compiling rx-domain v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-domain)
+   Compiling prost-build v0.14.4
+   Compiling prost-reflect v0.16.5
+   Compiling tonic-prost-build v0.14.6
+   Compiling tokio-util v0.7.19
+   Compiling tokio-rustls v0.26.5
+   Compiling tokio-stream v0.1.19
+   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-platform/crates/rx-protocol)
+   Compiling h2 v0.4.19
+   Compiling tower v0.5.3
+   Compiling axum v0.8.9
+   Compiling hyper v1.11.1
+   Compiling hyper-util v0.1.20
+   Compiling hyper-timeout v0.5.2
+   Compiling tonic v0.14.6
+   Compiling tonic-prost v0.14.6
+    Finished `test` profile [unoptimized] target(s) in 18.66s
+     Running tests/strict_conformance.rs (../.g5-evidence/platform-suite-target/debug/deps/strict_conformance-5617a5417dc25004)
+
+running 1 test
+test authored_profile_vectors_check_existing_rust_codec_and_synthetic_guards ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.13s
+

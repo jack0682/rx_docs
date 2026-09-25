@@ -1,0 +1,218 @@
+[
+  {
+    "label": "library",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/registration_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--builder",
+      "rx-g4-compact-builder",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-library"
+    ],
+    "disk_before": {
+      "total": 494332366848,
+      "used": 455689269248,
+      "free": 38643097600
+    },
+    "started": 1790309321.979409,
+    "exit_code": 0,
+    "finished": 1790309427.8303628,
+    "disk_after": {
+      "total": 494332366848,
+      "used": 457159749632,
+      "free": 37172617216
+    }
+  },
+  {
+    "label": "release",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/release_origin_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--builder",
+      "rx-g4-compact-builder",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-release",
+      "--unsigned-image",
+      "rx-solutions:n5-runtime",
+      "--metadata",
+      "/Users/ojaehong/RX_automation/rx_ws/.g2-evidence/metadata"
+    ],
+    "disk_before": {
+      "total": 494332366848,
+      "used": 457202327552,
+      "free": 37130039296
+    },
+    "started": 1790309428.516063,
+    "exit_code": 0,
+    "finished": 1790309495.924751,
+    "disk_after": {
+      "total": 494332366848,
+      "used": 456897470464,
+      "free": 37434896384
+    }
+  },
+  {
+    "label": "resource",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/resource_enforcement_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--builder",
+      "rx-g4-compact-builder",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-resource",
+      "--baseline-daemon",
+      "/Users/ojaehong/RX_automation/rx_ws/.f7-evidence/resident-final/target/debug/rx-solutionsd"
+    ],
+    "disk_before": {
+      "total": 494332366848,
+      "used": 456899350528,
+      "free": 37433016320
+    },
+    "started": 1790309496.221823,
+    "exit_code": 0,
+    "finished": 1790309573.6596532,
+    "disk_after": {
+      "total": 494332366848,
+      "used": 457391656960,
+      "free": 36940709888
+    }
+  },
+  {
+    "label": "manager",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/manager_loss_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--builder",
+      "rx-g4-compact-builder",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-manager"
+    ],
+    "disk_before": {
+      "total": 494332366848,
+      "used": 457394913280,
+      "free": 36937453568
+    },
+    "started": 1790309574.2923641,
+    "exit_code": 0,
+    "finished": 1790309653.833268,
+    "disk_after": {
+      "total": 494332366848,
+      "used": 457834418176,
+      "free": 36497948672
+    }
+  },
+  {
+    "label": "work",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/work_use_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--builder",
+      "rx-g4-compact-builder",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-work"
+    ],
+    "disk_before": {
+      "total": 494332366848,
+      "used": 457837604864,
+      "free": 36494761984
+    },
+    "started": 1790309654.281805,
+    "exit_code": 0,
+    "finished": 1790309702.758483,
+    "disk_after": {
+      "total": 494332366848,
+      "used": 458192785408,
+      "free": 36139581440
+    }
+  },
+  {
+    "label": "replacement",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/dependency_replacement_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--builder",
+      "rx-g4-compact-builder",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-replacement"
+    ],
+    "disk_before": {
+      "total": 494332366848,
+      "used": 458195808256,
+      "free": 36136558592
+    },
+    "started": 1790309703.197867,
+    "exit_code": 0,
+    "finished": 1790309746.589005,
+    "disk_after": {
+      "total": 494332366848,
+      "used": 458554343424,
+      "free": 35778023424
+    }
+  },
+  {
+    "label": "support",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/support_limits_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--builder",
+      "rx-g4-compact-builder",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-support"
+    ],
+    "disk_before": {
+      "total": 494332366848,
+      "used": 458557435904,
+      "free": 35774930944
+    },
+    "started": 1790309746.951489,
+    "exit_code": 0,
+    "finished": 1790309910.2835908,
+    "disk_after": {
+      "total": 494332366848,
+      "used": 458383450112,
+      "free": 35948916736
+    }
+  },
+  {
+    "label": "lock",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-platform-source/tools/storage_lock_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--builder",
+      "rx-g4-compact-builder",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-lock",
+      "--solutions",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions"
+    ],
+    "disk_before": {
+      "total": 494332366848,
+      "used": 458387243008,
+      "free": 35945123840
+    },
+    "started": 1790309911.090685,
+    "exit_code": 0,
+    "finished": 1790310064.379649,
+    "disk_after": {
+      "total": 494332366848,
+      "used": 460969742336,
+      "free": 33362624512
+    }
+  }
+]

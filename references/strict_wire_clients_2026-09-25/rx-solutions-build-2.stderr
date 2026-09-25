@@ -1,0 +1,24 @@
+info: syncing channel updates for 1.98.1-aarch64-unknown-linux-gnu
+info: latest update on 2026-09-03 for version 1.98.1 (48a229cea 2026-09-01)
+info: downloading 2 components
+   Compiling rustix v1.1.4
+   Compiling uuid v1.26.1
+   Compiling rx-domain v0.1.0 (/source/sdk/crates/rx-domain)
+   Compiling fs-set-times v0.20.3
+   Compiling rustix-linux-procfs v0.1.1
+   Compiling cap-primitives v4.0.3
+   Compiling rx-ports v0.1.0 (/source/sdk/crates/rx-ports)
+   Compiling cap-std v4.0.3
+   Compiling tokio-stream v0.1.19
+   Compiling tonic v0.14.6
+   Compiling cap-fs-ext v4.0.3
+   Compiling tempfile v3.27.0
+   Compiling rx-package v0.1.0 (/source/sdk/crates/rx-package)
+   Compiling tonic-prost v0.14.6
+   Compiling rx-process-contract v0.1.0 (/source/sdk/crates/rx-process-contract)
+   Compiling rx-process v0.1.0 (/source/runtime/rx-process)
+   Compiling rx-protocol v0.1.0 (/source/sdk/crates/rx-protocol)
+   Compiling rx-storage v0.1.0 (/source/sdk/crates/rx-storage)
+   Compiling rx-service-status v0.1.0 (/source/runtime/rx-service-status)
+   Compiling rx-executor v0.1.0 (/source/runtime/rx-executor)
+    Finished `test` profile [unoptimized] target(s) in 22.63s

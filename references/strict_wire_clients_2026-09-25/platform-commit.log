@@ -1,0 +1,29 @@
+[feature/g5-strict-wire-first-client cffbe28] Publish strict wire profile and installable C++ and Python clients
+ 32 files changed, 2549 insertions(+), 3 deletions(-)
+ create mode 100644 clients/README.md
+ create mode 100644 clients/examples/cpp/CMakeLists.txt
+ create mode 100644 clients/examples/cpp/main.cpp
+ create mode 100644 clients/examples/python_peer.py
+ create mode 100644 clients/rxclcpp/CMakeLists.txt
+ create mode 100644 clients/rxclcpp/cmake/VerifyBundle.cmake
+ create mode 100644 clients/rxclcpp/cmake/rxclcppConfig.cmake.in
+ create mode 100644 clients/rxclcpp/include/rxclcpp/client.hpp
+ create mode 100644 clients/rxclcpp/include/rxclcpp/wire.hpp
+ create mode 100644 clients/rxclcpp/src/client.cpp
+ create mode 100644 clients/rxclcpp/src/wire.cpp
+ create mode 100644 clients/rxclcpp/tests/conformance.cpp
+ create mode 100644 clients/rxclpy/pyproject.toml
+ create mode 100644 clients/rxclpy/setup.py
+ create mode 100644 clients/rxclpy/src/rxclpy/__init__.py
+ create mode 100644 clients/rxclpy/src/rxclpy/client.py
+ create mode 100644 clients/rxclpy/src/rxclpy/conformance.py
+ create mode 100644 clients/rxclpy/src/rxclpy/wire.py
+ create mode 100644 clients/tests/loss_proxy.py
+ create mode 100644 crates/rx-protocol/tests/strict_conformance.rs
+ create mode 100644 proto/strict-wire-v1/README.md
+ create mode 100644 proto/strict-wire-v1/probe.proto
+ create mode 100644 proto/strict-wire-v1/vectors.json
+ create mode 100644 tools/prepare_clients.py
+ create mode 100644 tools/test_client_packages.py
+ create mode 100644 tools/test_clients.py
+ create mode 100644 tools/test_prepare_clients.py

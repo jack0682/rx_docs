@@ -1,0 +1,123 @@
+[
+  {
+    "name": "export",
+    "argv": [
+      "/opt/client-env/bin/python",
+      "/source/tools/export_protocol.py",
+      "/evidence/client-packages/bundle"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "prepare",
+    "argv": [
+      "/opt/client-env/bin/python",
+      "/source/tools/prepare_clients.py",
+      "--bundle",
+      "/evidence/client-packages/bundle",
+      "--output",
+      "/evidence/client-packages/prepared"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "cpp-configure",
+    "argv": [
+      "cmake",
+      "-S",
+      "/evidence/client-packages/prepared/rxclcpp",
+      "-B",
+      "/evidence/client-packages/cpp-build",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DCMAKE_INSTALL_PREFIX=/evidence/client-packages/install"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "cpp-build",
+    "argv": [
+      "cmake",
+      "--build",
+      "/evidence/client-packages/cpp-build",
+      "-j2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "cpp-corpus",
+    "argv": [
+      "/evidence/client-packages/cpp-build/rxclcpp-conformance",
+      "/evidence/client-packages/bundle/strict-wire-v1/vectors.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "cpp-install",
+    "argv": [
+      "cmake",
+      "--install",
+      "/evidence/client-packages/cpp-build"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "python-wheel",
+    "argv": [
+      "/opt/client-env/bin/python",
+      "-m",
+      "build",
+      "--wheel",
+      "--no-isolation",
+      "--outdir",
+      "/evidence/client-packages/wheels",
+      "/evidence/client-packages/prepared/rxclpy"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "python-install",
+    "argv": [
+      "/opt/client-env/bin/python",
+      "-m",
+      "pip",
+      "install",
+      "--no-index",
+      "--no-deps",
+      "--force-reinstall",
+      "/evidence/client-packages/wheels/rxclpy-0.1.0-py3-none-any.whl"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "python-corpus",
+    "argv": [
+      "/opt/client-env/bin/python",
+      "-m",
+      "rxclpy.conformance"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "consumer-configure",
+    "argv": [
+      "cmake",
+      "-S",
+      "/source/clients/examples/cpp",
+      "-B",
+      "/evidence/client-packages/consumer",
+      "-DCMAKE_PREFIX_PATH=/evidence/client-packages/install",
+      "-DCMAKE_BUILD_TYPE=Release"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "consumer-build",
+    "argv": [
+      "cmake",
+      "--build",
+      "/evidence/client-packages/consumer",
+      "-j2"
+    ],
+    "exit_code": 0
+  }
+]

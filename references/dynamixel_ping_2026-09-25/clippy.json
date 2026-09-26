@@ -1,0 +1,36 @@
+[
+  {
+    "repo": "rx-platform",
+    "exit": 0,
+    "command": [
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/cargo",
+      "clippy",
+      "--workspace",
+      "--all-targets",
+      "--all-features",
+      "--locked",
+      "--target-dir",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/platform-mac-target",
+      "--",
+      "-D",
+      "warnings"
+    ]
+  },
+  {
+    "repo": "rx-solutions",
+    "exit": 0,
+    "command": [
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/cargo",
+      "clippy",
+      "--workspace",
+      "--all-targets",
+      "--all-features",
+      "--locked",
+      "--target-dir",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/mac-target",
+      "--",
+      "-D",
+      "warnings"
+    ]
+  }
+]

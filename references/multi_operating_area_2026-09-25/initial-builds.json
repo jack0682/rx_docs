@@ -1,0 +1,31 @@
+[
+  {
+    "label": "daemon",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "-e",
+      "CARGO_BUILD_JOBS=1",
+      "-e",
+      "CARGO_HOME=/evidence/cargo-home",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence:/evidence",
+      "-w",
+      "/source",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions:/source:ro",
+      "rust:1.98.1-slim-bookworm",
+      "cargo",
+      "build",
+      "--locked",
+      "-p",
+      "rx-supervisor",
+      "--bin",
+      "rx-solutionsd",
+      "--target-dir",
+      "/evidence/linux-target"
+    ],
+    "exit_code": 101
+  }
+]

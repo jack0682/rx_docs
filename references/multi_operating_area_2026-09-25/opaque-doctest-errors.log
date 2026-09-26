@@ -1,0 +1,377 @@
+   Compiling serde_core v1.0.229
+   Compiling rustix v1.1.4
+   Compiling memchr v2.8.3
+   Compiling syn v3.0.5
+   Compiling zeroize v1.9.0
+   Compiling smallvec v1.16.0
+   Compiling curve25519-dalek v5.0.0
+   Compiling rusqlite v0.40.2
+   Compiling ed25519-dalek v3.0.0
+   Compiling fs-set-times v0.20.3
+   Compiling tempfile v3.27.0
+   Compiling cap-primitives v4.0.3
+   Compiling serde_derive v1.0.229
+   Compiling thiserror-impl v2.0.20
+   Compiling tokio-macros v2.7.2
+   Compiling cap-std v4.0.3
+   Compiling serde_json v1.0.151
+   Compiling uuid v1.26.1
+   Compiling semver v1.0.28
+   Compiling cap-fs-ext v4.0.3
+   Compiling tokio v1.53.1
+   Compiling thiserror v2.0.20
+   Compiling serde v1.0.229
+   Compiling serde_jcs v0.2.0
+   Compiling rx-domain v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-domain)
+   Compiling rx-ports v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-ports)
+   Compiling rx-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-package)
+   Compiling rx-service-status v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-service-status)
+   Compiling rx-storage v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/sdk/crates/rx-storage)
+   Compiling rx-solution-catalog v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-solution-catalog)
+   Compiling rx-supervisor v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-supervisor)
+    Finished `test` profile [unoptimized] target(s) in 10.65s
+   Doc-tests rx_supervisor
+
+running 18 tests
+test runtime/rx-supervisor/src/registration/diagnostic/replacement.rs - registration::diagnostic::replacement::PreparedReplacement (line 84) - compile fail ... ok
+test runtime/rx-supervisor/src/operating_area.rs - operating_area (line 10) - compile fail ... ok
+test runtime/rx-supervisor/src/registration/diagnostic/replacement.rs - registration::diagnostic::replacement::PreparedReplacement (line 76) - compile fail ... ok
+test runtime/rx-supervisor/src/operating_area.rs - operating_area (line 4) - compile fail ... ok
+test runtime/rx-supervisor/src/operating_area.rs - operating_area (line 16) - compile fail ... ok
+test runtime/rx-supervisor/src/registration/diagnostic/replacement.rs - registration::diagnostic::replacement::PreparedReplacement (line 72) - compile fail ... ok
+test runtime/rx-supervisor/src/registration/diagnostic/replacement.rs - registration::diagnostic::replacement::PreparedReplacement (line 80) - compile fail ... ok
+test runtime/rx-supervisor/src/operating_area.rs - operating_area (line 19) - compile fail ... ok
+test runtime/rx-supervisor/src/operating_area.rs - operating_area (line 13) - compile fail ... ok
+test runtime/rx-supervisor/src/operating_area.rs - operating_area (line 7) - compile fail ... ok
+test runtime/rx-supervisor/src/registration/recovery.rs - registration::recovery::ProcessInvestigation (line 17) - compile fail ... ok
+test runtime/rx-supervisor/src/registration/recovery.rs - registration::recovery::ProcessInvestigation (line 12) - compile fail ... ok
+test runtime/rx-supervisor/src/registration/recovery.rs - registration::recovery::ProcessInvestigation (line 8) - compile fail ... ok
+test runtime/rx-supervisor/src/work_use.rs - work_use::Prepared (line 61) - compile fail ... ok
+test runtime/rx-supervisor/src/work_use.rs - work_use::Prepared (line 65) - compile fail ... ok
+test runtime/rx-supervisor/src/work_use.rs - work_use::Prepared (line 73) - compile fail ... ok
+test runtime/rx-supervisor/src/work_use.rs - work_use::Prepared (line 69) - compile fail ... ok
+test runtime/rx-supervisor/src/registration/recovery.rs - registration::recovery::Registry<R>::investigate (line 494) - compile fail ... ok
+
+successes:
+
+---- runtime/rx-supervisor/src/registration/diagnostic/replacement.rs - registration::diagnostic::replacement::PreparedReplacement (line 84) stdout ----
+error[E0616]: field `proof` of struct `PreparedReplacement` is private
+  --> runtime/rx-supervisor/src/registration/diagnostic/replacement.rs:87:46
+   |
+87 | fn forge(p: PreparedReplacement) { let _ = p.proof; }
+   |                                              ^^^^^ private field
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0616`.
+
+---- runtime/rx-supervisor/src/operating_area.rs - operating_area (line 10) stdout ----
+error[E0616]: field `proof` of struct `rx_supervisor::work_use::Prepared` is private
+  --> runtime/rx-supervisor/src/operating_area.rs:12:61
+   |
+12 | fn leak(p: &rx_supervisor::work_use::Prepared) { let _ = &p.proof; }
+   |                                                             ^^^^^ private field
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0616`.
+
+---- runtime/rx-supervisor/src/registration/diagnostic/replacement.rs - registration::diagnostic::replacement::PreparedReplacement (line 76) stdout ----
+error[E0277]: the trait bound `PreparedReplacement: From<AcceptanceAssessment>` is not satisfied
+  --> runtime/rx-supervisor/src/registration/diagnostic/replacement.rs:79:64
+   |
+79 | fn restore(v: AcceptanceAssessment) -> PreparedReplacement { v.into() }
+   |                                                                ^^^^ the trait `From<AcceptanceAssessment>` is not implemented for `PreparedReplacement`
+   |
+   = note: required for `AcceptanceAssessment` to implement `Into<PreparedReplacement>`
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0277`.
+
+---- runtime/rx-supervisor/src/operating_area.rs - operating_area (line 4) stdout ----
+error[E0616]: field `policy` of struct `rx_supervisor::decision::Request` is private
+ --> runtime/rx-supervisor/src/operating_area.rs:6:60
+  |
+6 | fn leak(r: &rx_supervisor::decision::Request) { let _ = &r.policy; }
+  |                                                            ^^^^^^ private field
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0616`.
+
+---- runtime/rx-supervisor/src/operating_area.rs - operating_area (line 16) stdout ----
+error[E0616]: field `runtime` of struct `VerifiedDecision` is private
+  --> runtime/rx-supervisor/src/operating_area.rs:18:69
+   |
+18 | fn leak(p: &rx_supervisor::decision::VerifiedDecision) { let _ = &p.runtime; }
+   |                                                                     ^^^^^^^ private field
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0616`.
+
+---- runtime/rx-supervisor/src/registration/diagnostic/replacement.rs - registration::diagnostic::replacement::PreparedReplacement (line 72) stdout ----
+error[E0277]: the trait bound `PreparedReplacement: serde::Deserialize<'de>` is not satisfied
+    --> runtime/rx-supervisor/src/registration/diagnostic/replacement.rs:75:30
+     |
+  75 | let _: PreparedReplacement = serde_json::from_str("{}").unwrap();
+     |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `serde_core::de::Deserialize<'_>` is not implemented for `PreparedReplacement`
+     |
+     = note: for local types consider adding `#[derive(serde::Deserialize)]` to your `PreparedReplacement` type
+     = note: for types from other crates check whether the crate offers a `serde` feature flag
+     = help: the following other types implement trait `serde_core::de::Deserialize<'de>`:
+               &'a Path
+               &'a [u8]
+               &'a str
+               ()
+               (T,)
+               (T0, T1)
+               (T0, T1, T2)
+               (T0, T1, T2, T3)
+             and 306 others
+note: required by a bound in `serde_json::from_str`
+    --> /Users/ojaehong/RX_automation/rx_ws/.tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_json-1.0.151/src/de.rs:2711:8
+     |
+2709 | pub fn from_str<'a, T>(s: &'a str) -> Result<T>
+     |        -------- required by a bound in this function
+2710 | where
+2711 |     T: de::Deserialize<'a>,
+     |        ^^^^^^^^^^^^^^^^^^^ required by this bound in `from_str`
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0277`.
+
+---- runtime/rx-supervisor/src/registration/diagnostic/replacement.rs - registration::diagnostic::replacement::PreparedReplacement (line 80) stdout ----
+error[E0277]: the trait bound `PreparedReplacement: From<ReplacementReceipt>` is not satisfied
+  --> runtime/rx-supervisor/src/registration/diagnostic/replacement.rs:83:62
+   |
+83 | fn restore(v: ReplacementReceipt) -> PreparedReplacement { v.into() }
+   |                                                              ^^^^ the trait `From<ReplacementReceipt>` is not implemented for `PreparedReplacement`
+   |
+   = note: required for `ReplacementReceipt` to implement `Into<PreparedReplacement>`
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0277`.
+
+---- runtime/rx-supervisor/src/operating_area.rs - operating_area (line 19) stdout ----
+error[E0599]: no associated function or constant named `new` found for struct `VerifiedDecision` in the current scope
+  --> runtime/rx-supervisor/src/operating_area.rs:21:52
+   |
+21 | let _ = rx_supervisor::decision::VerifiedDecision::new();
+   |                                                    ^^^ associated function or constant not found in `VerifiedDecision`
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0599`.
+
+---- runtime/rx-supervisor/src/operating_area.rs - operating_area (line 13) stdout ----
+error[E0599]: no associated function or constant named `new` found for struct `rx_supervisor::work_use::Prepared` in the current scope
+  --> runtime/rx-supervisor/src/operating_area.rs:15:44
+   |
+15 | let _ = rx_supervisor::work_use::Prepared::new();
+   |                                            ^^^ associated function or constant not found in `rx_supervisor::work_use::Prepared`
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0599`.
+
+---- runtime/rx-supervisor/src/operating_area.rs - operating_area (line 7) stdout ----
+error[E0599]: no associated function or constant named `new` found for struct `rx_supervisor::decision::Request` in the current scope
+ --> runtime/rx-supervisor/src/operating_area.rs:9:43
+  |
+9 | let _ = rx_supervisor::decision::Request::new();
+  |                                           ^^^ associated function or constant not found in `rx_supervisor::decision::Request`
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0599`.
+
+---- runtime/rx-supervisor/src/registration/recovery.rs - registration::recovery::ProcessInvestigation (line 17) stdout ----
+error[E0277]: the trait bound `Box<rx_supervisor::registration::ProcessInvestigation>: From<&str>` is not satisfied
+  --> runtime/rx-supervisor/src/registration/recovery.rs:21:63
+   |
+21 |     RecoveryEvidence::Investigation { report, finding: "gone".into() }
+   |                                                               ^^^^ the trait `From<&str>` is not implemented for `Box<rx_supervisor::registration::ProcessInvestigation>`
+   |
+   = help: the following other types implement trait `From<T>`:
+             `Box<ByteStr>` implements `From<Box<[u8]>>`
+             `Box<CStr>` implements `From<&CStr>`
+             `Box<CStr>` implements `From<&mut CStr>`
+             `Box<CStr>` implements `From<CString>`
+             `Box<CStr>` implements `From<Cow<'_, CStr>>`
+             `Box<OsStr>` implements `From<&OsStr>`
+             `Box<OsStr>` implements `From<&mut OsStr>`
+             `Box<OsStr>` implements `From<Cow<'_, OsStr>>`
+           and 25 others
+   = note: required for `&str` to implement `Into<Box<rx_supervisor::registration::ProcessInvestigation>>`
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0277`.
+
+---- runtime/rx-supervisor/src/registration/recovery.rs - registration::recovery::ProcessInvestigation (line 12) stdout ----
+error[E0277]: the trait bound `rx_supervisor::registration::ProcessInvestigation: From<EvidenceReference>` is not satisfied
+  --> runtime/rx-supervisor/src/registration/recovery.rs:16:35
+   |
+16 | let _: ProcessInvestigation = old.into();
+   |                                   ^^^^ the trait `From<EvidenceReference>` is not implemented for `rx_supervisor::registration::ProcessInvestigation`
+   |
+   = note: required for `EvidenceReference` to implement `Into<rx_supervisor::registration::ProcessInvestigation>`
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0277`.
+
+---- runtime/rx-supervisor/src/registration/recovery.rs - registration::recovery::ProcessInvestigation (line 8) stdout ----
+error[E0277]: the trait bound `rx_supervisor::registration::ProcessInvestigation: serde::Deserialize<'de>` is not satisfied
+    --> runtime/rx-supervisor/src/registration/recovery.rs:11:31
+     |
+  11 | let _: ProcessInvestigation = serde_json::from_str("{}").unwrap();
+     |                               ^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `serde_core::de::Deserialize<'_>` is not implemented for `rx_supervisor::registration::ProcessInvestigation`
+     |
+     = note: for local types consider adding `#[derive(serde::Deserialize)]` to your `rx_supervisor::registration::ProcessInvestigation` type
+     = note: for types from other crates check whether the crate offers a `serde` feature flag
+     = help: the following other types implement trait `serde_core::de::Deserialize<'de>`:
+               &'a Path
+               &'a [u8]
+               &'a str
+               ()
+               (T,)
+               (T0, T1)
+               (T0, T1, T2)
+               (T0, T1, T2, T3)
+             and 306 others
+note: required by a bound in `serde_json::from_str`
+    --> /Users/ojaehong/RX_automation/rx_ws/.tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_json-1.0.151/src/de.rs:2711:8
+     |
+2709 | pub fn from_str<'a, T>(s: &'a str) -> Result<T>
+     |        -------- required by a bound in this function
+2710 | where
+2711 |     T: de::Deserialize<'a>,
+     |        ^^^^^^^^^^^^^^^^^^^ required by this bound in `from_str`
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0277`.
+
+---- runtime/rx-supervisor/src/work_use.rs - work_use::Prepared (line 61) stdout ----
+error[E0277]: the trait bound `rx_supervisor::work_use::Prepared: serde::Deserialize<'de>` is not satisfied
+    --> runtime/rx-supervisor/src/work_use.rs:64:19
+     |
+  64 | let _: Prepared = serde_json::from_str("{}").unwrap();
+     |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `serde_core::de::Deserialize<'_>` is not implemented for `rx_supervisor::work_use::Prepared`
+     |
+     = note: for local types consider adding `#[derive(serde::Deserialize)]` to your `rx_supervisor::work_use::Prepared` type
+     = note: for types from other crates check whether the crate offers a `serde` feature flag
+     = help: the following other types implement trait `serde_core::de::Deserialize<'de>`:
+               &'a Path
+               &'a [u8]
+               &'a str
+               ()
+               (T,)
+               (T0, T1)
+               (T0, T1, T2)
+               (T0, T1, T2, T3)
+             and 306 others
+note: required by a bound in `serde_json::from_str`
+    --> /Users/ojaehong/RX_automation/rx_ws/.tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_json-1.0.151/src/de.rs:2711:8
+     |
+2709 | pub fn from_str<'a, T>(s: &'a str) -> Result<T>
+     |        -------- required by a bound in this function
+2710 | where
+2711 |     T: de::Deserialize<'a>,
+     |        ^^^^^^^^^^^^^^^^^^^ required by this bound in `from_str`
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0277`.
+
+---- runtime/rx-supervisor/src/work_use.rs - work_use::Prepared (line 65) stdout ----
+error[E0277]: the trait bound `rx_supervisor::work_use::Prepared: From<rx_supervisor::work_use::Report>` is not satisfied
+  --> runtime/rx-supervisor/src/work_use.rs:68:51
+   |
+68 | fn restore(history: Report) -> Prepared { history.into() }
+   |                                                   ^^^^ the trait `From<rx_supervisor::work_use::Report>` is not implemented for `rx_supervisor::work_use::Prepared`
+   |
+   = note: required for `rx_supervisor::work_use::Report` to implement `Into<rx_supervisor::work_use::Prepared>`
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0277`.
+
+---- runtime/rx-supervisor/src/work_use.rs - work_use::Prepared (line 73) stdout ----
+error[E0451]: fields `task`, `proof`, `context` and `assessment` of struct `rx_supervisor::work_use::Prepared` are private
+  --> runtime/rx-supervisor/src/work_use.rs:77:16
+   |
+77 |     Prepared { task, proof, context, assessment }
+   |                ^^^^  ^^^^^  ^^^^^^^  ^^^^^^^^^^ private field
+   |                |     |      |
+   |                |     |      private field
+   |                |     private field
+   |                private field
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0451`.
+
+---- runtime/rx-supervisor/src/work_use.rs - work_use::Prepared (line 69) stdout ----
+error[E0277]: the trait bound `rx_supervisor::work_use::Prepared: From<WorkUseAssessment>` is not satisfied
+  --> runtime/rx-supervisor/src/work_use.rs:72:62
+   |
+72 | fn reuse_display(past: WorkUseAssessment) -> Prepared { past.into() }
+   |                                                              ^^^^ the trait `From<WorkUseAssessment>` is not implemented for `rx_supervisor::work_use::Prepared`
+   |
+   = note: required for `WorkUseAssessment` to implement `Into<rx_supervisor::work_use::Prepared>`
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0277`.
+
+---- runtime/rx-supervisor/src/registration/recovery.rs - registration::recovery::Registry<R>::investigate (line 494) stdout ----
+error[E0061]: this method takes 1 argument but 2 arguments were supplied
+   --> runtime/rx-supervisor/src/registration/recovery.rs:498:7
+    |
+498 |     r.investigate(target, fake);
+    |       ^^^^^^^^^^^         ---- unexpected argument #2 of type `StoredProcessIdentity`
+    |
+note: method defined here
+   --> runtime/rx-supervisor/src/registration/recovery.rs:500:12
+    |
+500 |     pub fn investigate(&mut self, expected: &ObservationRef) -> Result<ProcessInvestigation> {
+    |            ^^^^^^^^^^^
+help: remove the extra argument
+    |
+498 -     r.investigate(target, fake);
+498 +     r.investigate(target);
+    |
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0061`.
+
+
+successes:
+    runtime/rx-supervisor/src/operating_area.rs - operating_area (line 10)
+    runtime/rx-supervisor/src/operating_area.rs - operating_area (line 13)
+    runtime/rx-supervisor/src/operating_area.rs - operating_area (line 16)
+    runtime/rx-supervisor/src/operating_area.rs - operating_area (line 19)
+    runtime/rx-supervisor/src/operating_area.rs - operating_area (line 4)
+    runtime/rx-supervisor/src/operating_area.rs - operating_area (line 7)
+    runtime/rx-supervisor/src/registration/diagnostic/replacement.rs - registration::diagnostic::replacement::PreparedReplacement (line 72)
+    runtime/rx-supervisor/src/registration/diagnostic/replacement.rs - registration::diagnostic::replacement::PreparedReplacement (line 76)
+    runtime/rx-supervisor/src/registration/diagnostic/replacement.rs - registration::diagnostic::replacement::PreparedReplacement (line 80)
+    runtime/rx-supervisor/src/registration/diagnostic/replacement.rs - registration::diagnostic::replacement::PreparedReplacement (line 84)
+    runtime/rx-supervisor/src/registration/recovery.rs - registration::recovery::ProcessInvestigation (line 12)
+    runtime/rx-supervisor/src/registration/recovery.rs - registration::recovery::ProcessInvestigation (line 17)
+    runtime/rx-supervisor/src/registration/recovery.rs - registration::recovery::ProcessInvestigation (line 8)
+    runtime/rx-supervisor/src/registration/recovery.rs - registration::recovery::Registry<R>::investigate (line 494)
+    runtime/rx-supervisor/src/work_use.rs - work_use::Prepared (line 61)
+    runtime/rx-supervisor/src/work_use.rs - work_use::Prepared (line 65)
+    runtime/rx-supervisor/src/work_use.rs - work_use::Prepared (line 69)
+    runtime/rx-supervisor/src/work_use.rs - work_use::Prepared (line 73)
+
+test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.29s
+

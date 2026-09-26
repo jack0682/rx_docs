@@ -1,0 +1,11 @@
+
+running 2 tests
+F6-count-0: Err(Invalid("decision/anchors: author policy requires 1..8 authorities"))
+F6-count-1: Ok(CatalogReference { program: Name("rx/diagnostic-consumer"), digest: Digest([130, 161, 178, 21, 167, 105, 54, 196, 0, 191, 186, 183, 135, 245, 89, 43, 4, 44, 122, 194, 1, 190, 232, 0, 154, 197, 105, 106, 92, 72, 66, 38]) })
+F6-count-8: Ok(CatalogReference { program: Name("rx/diagnostic-consumer"), digest: Digest([50, 4, 106, 217, 142, 66, 163, 64, 111, 50, 85, 250, 223, 40, 81, 204, 246, 172, 93, 115, 151, 147, 237, 4, 39, 14, 96, 108, 19, 101, 186, 34]) })
+F6-count-9: Err(Invalid("decision/anchors: author policy requires 1..8 authorities"))
+test f6_authority_count_is_one_through_eight_without_g4_uniqueness_restrictions ... ok
+test author_anchors_are_pinned_and_site_data_cannot_override_them ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+

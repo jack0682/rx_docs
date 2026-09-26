@@ -1,0 +1,6 @@
+{
+  "result": "BYTE_IDENTICAL",
+  "bytes": 6225,
+  "sha256": "03f8f40ac636ba5e205e404e55cfa30455b9899670259a71e6efe1ea38870ce4",
+  "includes": "decision/revocation serde and canonical signing bytes; all fourteen Failure strings"
+}

@@ -1,0 +1,17 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--entrypoint",
+    "/opt/client-env/bin/python",
+    "rx-g5-client-runtime-final:latest",
+    "-c",
+    "import importlib.util,json;from pathlib import Path;print(json.dumps({'dynamixel_sdk_import_available':importlib.util.find_spec('dynamixel_sdk') is not None,'helper_installed':Path('/opt/rx/bin/rx-dynamixel-ping').exists(),'sdk_control_scope':'gRPC client only'}))"
+  ],
+  "result": {
+    "dynamixel_sdk_import_available": false,
+    "helper_installed": false,
+    "sdk_control_scope": "gRPC client only"
+  }
+}

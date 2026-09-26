@@ -1,0 +1,4 @@
+{"installed_release":true,"private_key_available_to_probe":false,"refusal":"invalid supervisor input: work-use/author-policy-absent; operating-area provider is not connected","scene":"shipping-anchors-absent","work_rows":0}
+{"installed_release":true,"private_key_available_to_probe":false,"refusal":"invalid supervisor input: work-use/external-judgment-Unsupported: work-use/operating-area-provider: operating-area positive work-use provider is not connected; the host is not an issuer","scene":"authored-anchor-null-provider","work_rows":0}
+host_counterfeit_signature=decision/signature: detached Ed25519 verification failed
+{"installed_release":true,"private_key_available_to_probe":false,"refusal":"invalid supervisor input: work-use/external-judgment-Denied: work-use/host-self-issue: decision/signature: detached Ed25519 verification failed","scene":"host-self-issuance","work_rows":0}

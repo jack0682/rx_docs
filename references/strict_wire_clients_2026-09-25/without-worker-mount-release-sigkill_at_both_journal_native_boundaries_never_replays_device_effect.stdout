@@ -1,0 +1,11 @@
+
+running 1 test
+test sigkill_at_both_journal_native_boundaries_never_replays_device_effect ... FAILED
+
+failures:
+
+failures:
+    sigkill_at_both_journal_native_boundaries_never_replays_device_effect
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 2 filtered out; finished in 0.00s
+

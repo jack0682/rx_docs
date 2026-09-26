@@ -1,0 +1,659 @@
+{
+  "result": "PASS",
+  "runtime_image": "sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0",
+  "builder_image": "sha256:ff521445a372125ed4f76e1453a1f8098f2d05332d1601d30db1c1f62757e730",
+  "daemon_sha256": "7e6d4a55eef8642affc69e5ba895eb065fc6f3eb6f10e3ad05aad012b9f34d96",
+  "registration_ids": {
+    "first": "c91ecf13-09c7-4245-9c69-8bb641cae59c",
+    "second": "2c2d3c31-dc25-44ca-8b7c-b3758f2282e7"
+  },
+  "state_files": [
+    "logs",
+    "registration.db",
+    "registration.writer.lock",
+    "supervisor.db",
+    "supervisor.writer.lock"
+  ],
+  "first": {
+    "execution_admission": {
+      "first": {
+        "application": {
+          "state": "NOT_APPLIED"
+        },
+        "not_applied_reasons": [],
+        "requested": {}
+      },
+      "second": {
+        "application": {
+          "state": "NOT_APPLIED"
+        },
+        "not_applied_reasons": [],
+        "requested": {}
+      }
+    },
+    "physical_qualification": "NOT_PERFORMED",
+    "registrations": {
+      "first": {
+        "execution_ownership": "NOT_ESTABLISHED_BY_PERSISTENT_RECORDS",
+        "executions": [],
+        "functional_readiness": {
+          "conditions": [
+            {
+              "name": "readiness/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no current-owner assessment has been requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "evidence": null,
+          "meaning": "catalog conditions over a component self-report; not independent functional or physical qualification",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        },
+        "recovery": {
+          "dispositions": [],
+          "limitations": [
+            "external investigation provider after total manager-process/Child-handle loss is unsupported",
+            "confirmed closure without the original saved PID binding is unsupported",
+            "recovery disposition supplies neither a functional-readiness assessment nor work-use permission",
+            "resource recovery, F1 receipt restoration and physical outcome confirmation not claimed"
+          ],
+          "new_execution": "NO_RECOVERY_BLOCK",
+          "resume_requests": []
+        },
+        "registration": {
+          "registration": {
+            "declaration": {
+              "catalog": {
+                "digest": "8dad04c118214143ee0190d6f71d1b4d1db992f47dca37c4d296f4dc6b68c847",
+                "program": "rx/status-http"
+              },
+              "label": "first"
+            },
+            "id": "c91ecf13-09c7-4245-9c69-8bb641cae59c",
+            "state": "ACCEPTED"
+          },
+          "revision": "1"
+        },
+        "work_use_permission": {
+          "conditions": [
+            {
+              "name": "work-use/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no scoped operating-area work-use assessment requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "decision_reference": null,
+          "positive_provider": "UNSUPPORTED: operating-area positive permission provider connection",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        }
+      },
+      "second": {
+        "execution_ownership": "NOT_ESTABLISHED_BY_PERSISTENT_RECORDS",
+        "executions": [],
+        "functional_readiness": {
+          "conditions": [
+            {
+              "name": "readiness/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no current-owner assessment has been requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "evidence": null,
+          "meaning": "catalog conditions over a component self-report; not independent functional or physical qualification",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        },
+        "recovery": {
+          "dispositions": [],
+          "limitations": [
+            "external investigation provider after total manager-process/Child-handle loss is unsupported",
+            "confirmed closure without the original saved PID binding is unsupported",
+            "recovery disposition supplies neither a functional-readiness assessment nor work-use permission",
+            "resource recovery, F1 receipt restoration and physical outcome confirmation not claimed"
+          ],
+          "new_execution": "NO_RECOVERY_BLOCK",
+          "resume_requests": []
+        },
+        "registration": {
+          "registration": {
+            "declaration": {
+              "catalog": {
+                "digest": "8dad04c118214143ee0190d6f71d1b4d1db992f47dca37c4d296f4dc6b68c847",
+                "program": "rx/status-http"
+              },
+              "label": "second"
+            },
+            "id": "2c2d3c31-dc25-44ca-8b7c-b3758f2282e7",
+            "state": "ACCEPTED"
+          },
+          "revision": "1"
+        },
+        "work_use_permission": {
+          "conditions": [
+            {
+              "name": "work-use/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no scoped operating-area work-use assessment requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "decision_reference": null,
+          "positive_provider": "UNSUPPORTED: operating-area positive permission provider connection",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        }
+      }
+    },
+    "schema": "rx.resident-reconciliation.v1",
+    "state": {
+      "plan": "d39d3f83-4059-4a83-be28-3b21bfe1bce6",
+      "plan_digest": "0c4c737e5c5011a51114f7d39e4dc9362f31eae572c16b5c7b6bc77a44e060ab",
+      "records": {
+        "first": {
+          "attempts": "0",
+          "error": null,
+          "exit_code": null,
+          "id": "first",
+          "instance": null,
+          "phase": "PENDING",
+          "pid": null
+        },
+        "second": {
+          "attempts": "0",
+          "error": null,
+          "exit_code": null,
+          "id": "second",
+          "instance": null,
+          "phase": "PENDING",
+          "pid": null
+        }
+      },
+      "schema": "rx.supervisor-state.v1",
+      "stop_requested": false
+    }
+  },
+  "reopened": {
+    "execution_admission": {
+      "first": {
+        "application": {
+          "reason": "no current-owner application receipt; no resource recovery is inferred",
+          "state": "UNCONFIRMED"
+        },
+        "not_applied_reasons": [],
+        "requested": {}
+      },
+      "second": {
+        "application": {
+          "reason": "no current-owner application receipt; no resource recovery is inferred",
+          "state": "UNCONFIRMED"
+        },
+        "not_applied_reasons": [],
+        "requested": {}
+      }
+    },
+    "physical_qualification": "NOT_PERFORMED",
+    "registrations": {
+      "first": {
+        "execution_ownership": "NOT_ESTABLISHED_BY_PERSISTENT_RECORDS",
+        "executions": [
+          {
+            "binding": {
+              "catalog": {
+                "digest": "8dad04c118214143ee0190d6f71d1b4d1db992f47dca37c4d296f4dc6b68c847",
+                "program": "rx/status-http"
+              },
+              "instance": "2b34ee23-0df0-4c62-8058-7d9e22f14ce9",
+              "registration": "c91ecf13-09c7-4245-9c69-8bb641cae59c",
+              "registration_revision": "1",
+              "run": "d39d3f83-4059-4a83-be28-3b21bfe1bce6",
+              "selection": "first"
+            },
+            "last_observed": {
+              "detail": "supervisor phase Exited; no additional lifecycle error; functional readiness and work-use permission are not assessed",
+              "exit_code": 0,
+              "pid": 30,
+              "state": "EXITED"
+            }
+          }
+        ],
+        "functional_readiness": {
+          "conditions": [
+            {
+              "name": "readiness/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no current-owner assessment has been requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "evidence": null,
+          "meaning": "catalog conditions over a component self-report; not independent functional or physical qualification",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        },
+        "recovery": {
+          "dispositions": [],
+          "limitations": [
+            "external investigation provider after total manager-process/Child-handle loss is unsupported",
+            "confirmed closure without the original saved PID binding is unsupported",
+            "recovery disposition supplies neither a functional-readiness assessment nor work-use permission",
+            "resource recovery, F1 receipt restoration and physical outcome confirmation not claimed"
+          ],
+          "new_execution": "NO_RECOVERY_BLOCK",
+          "resume_requests": []
+        },
+        "registration": {
+          "registration": {
+            "declaration": {
+              "catalog": {
+                "digest": "8dad04c118214143ee0190d6f71d1b4d1db992f47dca37c4d296f4dc6b68c847",
+                "program": "rx/status-http"
+              },
+              "label": "first"
+            },
+            "id": "c91ecf13-09c7-4245-9c69-8bb641cae59c",
+            "state": "ACCEPTED"
+          },
+          "revision": "1"
+        },
+        "work_use_permission": {
+          "conditions": [
+            {
+              "name": "work-use/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no scoped operating-area work-use assessment requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "decision_reference": null,
+          "positive_provider": "UNSUPPORTED: operating-area positive permission provider connection",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        }
+      },
+      "second": {
+        "execution_ownership": "NOT_ESTABLISHED_BY_PERSISTENT_RECORDS",
+        "executions": [
+          {
+            "binding": {
+              "catalog": {
+                "digest": "8dad04c118214143ee0190d6f71d1b4d1db992f47dca37c4d296f4dc6b68c847",
+                "program": "rx/status-http"
+              },
+              "instance": "0b485867-fac1-4c78-8003-edd534a915d0",
+              "registration": "2c2d3c31-dc25-44ca-8b7c-b3758f2282e7",
+              "registration_revision": "1",
+              "run": "d39d3f83-4059-4a83-be28-3b21bfe1bce6",
+              "selection": "second"
+            },
+            "last_observed": {
+              "detail": "supervisor phase Exited; no additional lifecycle error; functional readiness and work-use permission are not assessed",
+              "exit_code": 0,
+              "pid": 43,
+              "state": "EXITED"
+            }
+          }
+        ],
+        "functional_readiness": {
+          "conditions": [
+            {
+              "name": "readiness/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no current-owner assessment has been requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "evidence": null,
+          "meaning": "catalog conditions over a component self-report; not independent functional or physical qualification",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        },
+        "recovery": {
+          "dispositions": [],
+          "limitations": [
+            "external investigation provider after total manager-process/Child-handle loss is unsupported",
+            "confirmed closure without the original saved PID binding is unsupported",
+            "recovery disposition supplies neither a functional-readiness assessment nor work-use permission",
+            "resource recovery, F1 receipt restoration and physical outcome confirmation not claimed"
+          ],
+          "new_execution": "NO_RECOVERY_BLOCK",
+          "resume_requests": []
+        },
+        "registration": {
+          "registration": {
+            "declaration": {
+              "catalog": {
+                "digest": "8dad04c118214143ee0190d6f71d1b4d1db992f47dca37c4d296f4dc6b68c847",
+                "program": "rx/status-http"
+              },
+              "label": "second"
+            },
+            "id": "2c2d3c31-dc25-44ca-8b7c-b3758f2282e7",
+            "state": "ACCEPTED"
+          },
+          "revision": "1"
+        },
+        "work_use_permission": {
+          "conditions": [
+            {
+              "name": "work-use/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no scoped operating-area work-use assessment requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "decision_reference": null,
+          "positive_provider": "UNSUPPORTED: operating-area positive permission provider connection",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        }
+      }
+    },
+    "schema": "rx.resident-reconciliation.v1",
+    "state": {
+      "plan": "d39d3f83-4059-4a83-be28-3b21bfe1bce6",
+      "plan_digest": "0c4c737e5c5011a51114f7d39e4dc9362f31eae572c16b5c7b6bc77a44e060ab",
+      "records": {
+        "first": {
+          "attempts": "1",
+          "error": null,
+          "exit_code": 0,
+          "id": "first",
+          "instance": "2b34ee23-0df0-4c62-8058-7d9e22f14ce9",
+          "phase": "EXITED",
+          "pid": 30
+        },
+        "second": {
+          "attempts": "1",
+          "error": null,
+          "exit_code": 0,
+          "id": "second",
+          "instance": "0b485867-fac1-4c78-8003-edd534a915d0",
+          "phase": "EXITED",
+          "pid": 43
+        }
+      },
+      "schema": "rx.supervisor-state.v1",
+      "stop_requested": true
+    }
+  },
+  "unclean_reopen": {
+    "execution_admission": {
+      "first": {
+        "application": {
+          "reason": "no current-owner application receipt; no resource recovery is inferred",
+          "state": "UNCONFIRMED"
+        },
+        "not_applied_reasons": [],
+        "requested": {}
+      },
+      "second": {
+        "application": {
+          "reason": "no current-owner application receipt; no resource recovery is inferred",
+          "state": "UNCONFIRMED"
+        },
+        "not_applied_reasons": [],
+        "requested": {}
+      }
+    },
+    "physical_qualification": "NOT_PERFORMED",
+    "registrations": {
+      "first": {
+        "execution_ownership": "NOT_ESTABLISHED_BY_PERSISTENT_RECORDS",
+        "executions": [
+          {
+            "binding": {
+              "catalog": {
+                "digest": "8dad04c118214143ee0190d6f71d1b4d1db992f47dca37c4d296f4dc6b68c847",
+                "program": "rx/status-http"
+              },
+              "instance": "2b34ee23-0df0-4c62-8058-7d9e22f14ce9",
+              "registration": "c91ecf13-09c7-4245-9c69-8bb641cae59c",
+              "registration_revision": "1",
+              "run": "d39d3f83-4059-4a83-be28-3b21bfe1bce6",
+              "selection": "first"
+            },
+            "last_observed": {
+              "detail": "supervisor phase Exited; no additional lifecycle error; functional readiness and work-use permission are not assessed",
+              "exit_code": 0,
+              "pid": 30,
+              "state": "EXITED"
+            }
+          },
+          {
+            "binding": {
+              "catalog": {
+                "digest": "8dad04c118214143ee0190d6f71d1b4d1db992f47dca37c4d296f4dc6b68c847",
+                "program": "rx/status-http"
+              },
+              "instance": "b0ee1367-315a-4e15-841e-3b2e49e9324e",
+              "registration": "c91ecf13-09c7-4245-9c69-8bb641cae59c",
+              "registration_revision": "1",
+              "run": "d39d3f83-4059-4a83-be28-3b21bfe1bce6",
+              "selection": "first"
+            },
+            "last_observed": {
+              "detail": "supervisor phase Unknown; supervisor ownership lost; no PID adoption or replay; functional readiness and work-use permission are not assessed",
+              "exit_code": null,
+              "pid": 31,
+              "state": "UNKNOWN"
+            }
+          }
+        ],
+        "functional_readiness": {
+          "conditions": [
+            {
+              "name": "readiness/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no current-owner assessment has been requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "evidence": null,
+          "meaning": "catalog conditions over a component self-report; not independent functional or physical qualification",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        },
+        "recovery": {
+          "dispositions": [],
+          "limitations": [
+            "external investigation provider after total manager-process/Child-handle loss is unsupported",
+            "confirmed closure without the original saved PID binding is unsupported",
+            "recovery disposition supplies neither a functional-readiness assessment nor work-use permission",
+            "resource recovery, F1 receipt restoration and physical outcome confirmation not claimed"
+          ],
+          "new_execution": "BLOCKED_UNRESOLVED",
+          "resume_requests": []
+        },
+        "registration": {
+          "registration": {
+            "declaration": {
+              "catalog": {
+                "digest": "8dad04c118214143ee0190d6f71d1b4d1db992f47dca37c4d296f4dc6b68c847",
+                "program": "rx/status-http"
+              },
+              "label": "first"
+            },
+            "id": "c91ecf13-09c7-4245-9c69-8bb641cae59c",
+            "state": "ACCEPTED"
+          },
+          "revision": "1"
+        },
+        "work_use_permission": {
+          "conditions": [
+            {
+              "name": "work-use/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no scoped operating-area work-use assessment requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "decision_reference": null,
+          "positive_provider": "UNSUPPORTED: operating-area positive permission provider connection",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        }
+      },
+      "second": {
+        "execution_ownership": "NOT_ESTABLISHED_BY_PERSISTENT_RECORDS",
+        "executions": [
+          {
+            "binding": {
+              "catalog": {
+                "digest": "8dad04c118214143ee0190d6f71d1b4d1db992f47dca37c4d296f4dc6b68c847",
+                "program": "rx/status-http"
+              },
+              "instance": "0b485867-fac1-4c78-8003-edd534a915d0",
+              "registration": "2c2d3c31-dc25-44ca-8b7c-b3758f2282e7",
+              "registration_revision": "1",
+              "run": "d39d3f83-4059-4a83-be28-3b21bfe1bce6",
+              "selection": "second"
+            },
+            "last_observed": {
+              "detail": "supervisor phase Exited; no additional lifecycle error; functional readiness and work-use permission are not assessed",
+              "exit_code": 0,
+              "pid": 43,
+              "state": "EXITED"
+            }
+          },
+          {
+            "binding": {
+              "catalog": {
+                "digest": "8dad04c118214143ee0190d6f71d1b4d1db992f47dca37c4d296f4dc6b68c847",
+                "program": "rx/status-http"
+              },
+              "instance": "7c0ee863-f04c-40f0-a1ff-40e70fa7a38f",
+              "registration": "2c2d3c31-dc25-44ca-8b7c-b3758f2282e7",
+              "registration_revision": "1",
+              "run": "d39d3f83-4059-4a83-be28-3b21bfe1bce6",
+              "selection": "second"
+            },
+            "last_observed": {
+              "detail": "supervisor phase Unknown; supervisor ownership lost; no PID adoption or replay; functional readiness and work-use permission are not assessed",
+              "exit_code": null,
+              "pid": 44,
+              "state": "UNKNOWN"
+            }
+          }
+        ],
+        "functional_readiness": {
+          "conditions": [
+            {
+              "name": "readiness/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no current-owner assessment has been requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "evidence": null,
+          "meaning": "catalog conditions over a component self-report; not independent functional or physical qualification",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        },
+        "recovery": {
+          "dispositions": [],
+          "limitations": [
+            "external investigation provider after total manager-process/Child-handle loss is unsupported",
+            "confirmed closure without the original saved PID binding is unsupported",
+            "recovery disposition supplies neither a functional-readiness assessment nor work-use permission",
+            "resource recovery, F1 receipt restoration and physical outcome confirmation not claimed"
+          ],
+          "new_execution": "BLOCKED_UNRESOLVED",
+          "resume_requests": []
+        },
+        "registration": {
+          "registration": {
+            "declaration": {
+              "catalog": {
+                "digest": "8dad04c118214143ee0190d6f71d1b4d1db992f47dca37c4d296f4dc6b68c847",
+                "program": "rx/status-http"
+              },
+              "label": "second"
+            },
+            "id": "2c2d3c31-dc25-44ca-8b7c-b3758f2282e7",
+            "state": "ACCEPTED"
+          },
+          "revision": "1"
+        },
+        "work_use_permission": {
+          "conditions": [
+            {
+              "name": "work-use/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no scoped operating-area work-use assessment requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "decision_reference": null,
+          "positive_provider": "UNSUPPORTED: operating-area positive permission provider connection",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        }
+      }
+    },
+    "schema": "rx.resident-reconciliation.v1",
+    "state": {
+      "plan": "d39d3f83-4059-4a83-be28-3b21bfe1bce6",
+      "plan_digest": "0c4c737e5c5011a51114f7d39e4dc9362f31eae572c16b5c7b6bc77a44e060ab",
+      "records": {
+        "first": {
+          "attempts": "1",
+          "error": "supervisor ownership lost; no PID adoption or replay",
+          "exit_code": null,
+          "id": "first",
+          "instance": "b0ee1367-315a-4e15-841e-3b2e49e9324e",
+          "phase": "UNKNOWN",
+          "pid": 31
+        },
+        "second": {
+          "attempts": "1",
+          "error": "supervisor ownership lost; no PID adoption or replay",
+          "exit_code": null,
+          "id": "second",
+          "instance": "7c0ee863-f04c-40f0-a1ff-40e70fa7a38f",
+          "phase": "UNKNOWN",
+          "pid": 44
+        }
+      },
+      "schema": "rx.supervisor-state.v1",
+      "stop_requested": false
+    }
+  },
+  "scope": "actual Linux resident daemon; two release-owned non-actuating services; launcher exits before observations; same registration across normal restart and crash; no PID adoption",
+  "not_established": [
+    "physical qualification",
+    "resource enforcement",
+    "functional readiness",
+    "work-use decisions",
+    "dependency replacement",
+    "manager-total-loss recovery",
+    "actual guarded Host/Executor process integration"
+  ]
+}

@@ -1,0 +1,759 @@
+{
+  "result": "PASS",
+  "runtime_image": "sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0",
+  "builder_image": "sha256:ff521445a372125ed4f76e1453a1f8098f2d05332d1601d30db1c1f62757e730",
+  "daemon_sha256": "3829c6e1b7fb5bd9a401f9926a7fae3fb8bec7ee865cca376708f0e2c7fc7ca8",
+  "registration_ids": {
+    "first": "40140ad8-9856-460b-b57f-dc87a1d6f0e9",
+    "second": "a2adc206-6c28-43f2-a378-4f39e4624525"
+  },
+  "state_files": [
+    "logs",
+    "registration.db",
+    "registration.writer.lock",
+    "supervisor.db",
+    "supervisor.writer.lock"
+  ],
+  "first": {
+    "execution_admission": {
+      "first": {
+        "application": {
+          "state": "NOT_APPLIED"
+        },
+        "not_applied_reasons": [],
+        "requested": {
+          "status/address-space": {
+            "amount": "268435456",
+            "meaning": "UPPER_BOUND",
+            "resource": "ADDRESS_SPACE_BYTES"
+          }
+        }
+      },
+      "second": {
+        "application": {
+          "state": "NOT_APPLIED"
+        },
+        "not_applied_reasons": [],
+        "requested": {
+          "status/address-space": {
+            "amount": "268435456",
+            "meaning": "UPPER_BOUND",
+            "resource": "ADDRESS_SPACE_BYTES"
+          }
+        }
+      }
+    },
+    "physical_qualification": "NOT_PERFORMED",
+    "registrations": {
+      "first": {
+        "execution_ownership": "NOT_ESTABLISHED_BY_PERSISTENT_RECORDS",
+        "executions": [],
+        "functional_readiness": {
+          "conditions": [
+            {
+              "name": "readiness/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no current-owner assessment has been requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "evidence": null,
+          "meaning": "catalog conditions over a component self-report; not independent functional or physical qualification",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        },
+        "recovery": {
+          "dispositions": [],
+          "limitations": [
+            "external investigation provider after total manager-process/Child-handle loss is unsupported",
+            "confirmed closure without the original saved PID binding is unsupported",
+            "recovery disposition supplies neither a functional-readiness assessment nor work-use permission",
+            "resource recovery, F1 receipt restoration and physical outcome confirmation not claimed"
+          ],
+          "new_execution": "NO_RECOVERY_BLOCK",
+          "resume_requests": []
+        },
+        "registration": {
+          "registration": {
+            "declaration": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "label": "first"
+            },
+            "id": "40140ad8-9856-460b-b57f-dc87a1d6f0e9",
+            "state": "ACCEPTED"
+          },
+          "revision": "1"
+        },
+        "work_use_permission": {
+          "conditions": [
+            {
+              "name": "work-use/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no scoped operating-area work-use assessment requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "decision_reference": null,
+          "positive_provider": "UNSUPPORTED: operating-area positive permission provider connection",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        }
+      },
+      "second": {
+        "execution_ownership": "NOT_ESTABLISHED_BY_PERSISTENT_RECORDS",
+        "executions": [],
+        "functional_readiness": {
+          "conditions": [
+            {
+              "name": "readiness/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no current-owner assessment has been requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "evidence": null,
+          "meaning": "catalog conditions over a component self-report; not independent functional or physical qualification",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        },
+        "recovery": {
+          "dispositions": [],
+          "limitations": [
+            "external investigation provider after total manager-process/Child-handle loss is unsupported",
+            "confirmed closure without the original saved PID binding is unsupported",
+            "recovery disposition supplies neither a functional-readiness assessment nor work-use permission",
+            "resource recovery, F1 receipt restoration and physical outcome confirmation not claimed"
+          ],
+          "new_execution": "NO_RECOVERY_BLOCK",
+          "resume_requests": []
+        },
+        "registration": {
+          "registration": {
+            "declaration": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "label": "second"
+            },
+            "id": "a2adc206-6c28-43f2-a378-4f39e4624525",
+            "state": "ACCEPTED"
+          },
+          "revision": "1"
+        },
+        "work_use_permission": {
+          "conditions": [
+            {
+              "name": "work-use/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no scoped operating-area work-use assessment requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "decision_reference": null,
+          "positive_provider": "UNSUPPORTED: operating-area positive permission provider connection",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        }
+      }
+    },
+    "schema": "rx.resident-reconciliation.v1",
+    "state": {
+      "plan": "b0c0de2e-c247-46ca-bce7-6c7dbe507008",
+      "plan_digest": "25e5585be65f570e2f37cd9c44c8a6f892d53132d6e46104d012218b5ec9a79b",
+      "records": {
+        "first": {
+          "attempts": "0",
+          "error": null,
+          "exit_code": null,
+          "id": "first",
+          "instance": null,
+          "phase": "PENDING",
+          "pid": null
+        },
+        "second": {
+          "attempts": "0",
+          "error": null,
+          "exit_code": null,
+          "id": "second",
+          "instance": null,
+          "phase": "PENDING",
+          "pid": null
+        }
+      },
+      "schema": "rx.supervisor-state.v1",
+      "stop_requested": false
+    }
+  },
+  "reopened": {
+    "execution_admission": {
+      "first": {
+        "application": {
+          "reason": "no current-owner application receipt; no resource recovery is inferred",
+          "state": "UNCONFIRMED"
+        },
+        "not_applied_reasons": [],
+        "requested": {
+          "status/address-space": {
+            "amount": "268435456",
+            "meaning": "UPPER_BOUND",
+            "resource": "ADDRESS_SPACE_BYTES"
+          }
+        }
+      },
+      "second": {
+        "application": {
+          "reason": "no current-owner application receipt; no resource recovery is inferred",
+          "state": "UNCONFIRMED"
+        },
+        "not_applied_reasons": [],
+        "requested": {
+          "status/address-space": {
+            "amount": "268435456",
+            "meaning": "UPPER_BOUND",
+            "resource": "ADDRESS_SPACE_BYTES"
+          }
+        }
+      }
+    },
+    "physical_qualification": "NOT_PERFORMED",
+    "registrations": {
+      "first": {
+        "execution_ownership": "NOT_ESTABLISHED_BY_PERSISTENT_RECORDS",
+        "executions": [
+          {
+            "binding": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "instance": "fabeb993-de5f-4963-8f83-0010e97d0bc1",
+              "registration": "40140ad8-9856-460b-b57f-dc87a1d6f0e9",
+              "registration_revision": "1",
+              "run": "b0c0de2e-c247-46ca-bce7-6c7dbe507008",
+              "selection": "first"
+            },
+            "last_observed": {
+              "detail": "supervisor phase Exited; no additional lifecycle error; functional readiness and work-use permission are not assessed",
+              "exit_code": 0,
+              "pid": 31,
+              "state": "EXITED"
+            }
+          }
+        ],
+        "functional_readiness": {
+          "conditions": [
+            {
+              "name": "readiness/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no current-owner assessment has been requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "evidence": null,
+          "meaning": "catalog conditions over a component self-report; not independent functional or physical qualification",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        },
+        "recovery": {
+          "dispositions": [],
+          "limitations": [
+            "external investigation provider after total manager-process/Child-handle loss is unsupported",
+            "confirmed closure without the original saved PID binding is unsupported",
+            "recovery disposition supplies neither a functional-readiness assessment nor work-use permission",
+            "resource recovery, F1 receipt restoration and physical outcome confirmation not claimed"
+          ],
+          "new_execution": "NO_RECOVERY_BLOCK",
+          "resume_requests": []
+        },
+        "registration": {
+          "registration": {
+            "declaration": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "label": "first"
+            },
+            "id": "40140ad8-9856-460b-b57f-dc87a1d6f0e9",
+            "state": "ACCEPTED"
+          },
+          "revision": "1"
+        },
+        "work_use_permission": {
+          "conditions": [
+            {
+              "name": "work-use/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no scoped operating-area work-use assessment requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "decision_reference": null,
+          "positive_provider": "UNSUPPORTED: operating-area positive permission provider connection",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        }
+      },
+      "second": {
+        "execution_ownership": "NOT_ESTABLISHED_BY_PERSISTENT_RECORDS",
+        "executions": [
+          {
+            "binding": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "instance": "2aa3dcf7-a8dd-4a6c-9c2a-38d93fd73b74",
+              "registration": "a2adc206-6c28-43f2-a378-4f39e4624525",
+              "registration_revision": "1",
+              "run": "b0c0de2e-c247-46ca-bce7-6c7dbe507008",
+              "selection": "second"
+            },
+            "last_observed": {
+              "detail": "supervisor phase Exited; no additional lifecycle error; functional readiness and work-use permission are not assessed",
+              "exit_code": 0,
+              "pid": 38,
+              "state": "EXITED"
+            }
+          }
+        ],
+        "functional_readiness": {
+          "conditions": [
+            {
+              "name": "readiness/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no current-owner assessment has been requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "evidence": null,
+          "meaning": "catalog conditions over a component self-report; not independent functional or physical qualification",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        },
+        "recovery": {
+          "dispositions": [],
+          "limitations": [
+            "external investigation provider after total manager-process/Child-handle loss is unsupported",
+            "confirmed closure without the original saved PID binding is unsupported",
+            "recovery disposition supplies neither a functional-readiness assessment nor work-use permission",
+            "resource recovery, F1 receipt restoration and physical outcome confirmation not claimed"
+          ],
+          "new_execution": "NO_RECOVERY_BLOCK",
+          "resume_requests": []
+        },
+        "registration": {
+          "registration": {
+            "declaration": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "label": "second"
+            },
+            "id": "a2adc206-6c28-43f2-a378-4f39e4624525",
+            "state": "ACCEPTED"
+          },
+          "revision": "1"
+        },
+        "work_use_permission": {
+          "conditions": [
+            {
+              "name": "work-use/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no scoped operating-area work-use assessment requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "decision_reference": null,
+          "positive_provider": "UNSUPPORTED: operating-area positive permission provider connection",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        }
+      }
+    },
+    "schema": "rx.resident-reconciliation.v1",
+    "state": {
+      "plan": "b0c0de2e-c247-46ca-bce7-6c7dbe507008",
+      "plan_digest": "25e5585be65f570e2f37cd9c44c8a6f892d53132d6e46104d012218b5ec9a79b",
+      "records": {
+        "first": {
+          "attempts": "1",
+          "error": null,
+          "exit_code": 0,
+          "id": "first",
+          "instance": "fabeb993-de5f-4963-8f83-0010e97d0bc1",
+          "phase": "EXITED",
+          "pid": 31,
+          "resources": {
+            "capacity_reservation": "NONE_CREATED",
+            "current_enforcement": "NOT_ESTABLISHED_BY_HISTORY",
+            "last_observed": {
+              "capacity_reservation": "NONE_CREATED",
+              "hard_bytes": "268435456",
+              "instance": "fabeb993-de5f-4963-8f83-0010e97d0bc1",
+              "physical_handover": "NOT_ASSESSED",
+              "pid": 31,
+              "requirement": "status/address-space",
+              "scope": "PER_PROCESS_VIRTUAL_ADDRESS_SPACE_UPPER_BOUND",
+              "soft_bytes": "268435456"
+            },
+            "lifetime": "DIRECT_CHILD_EXITED_DESCENDANTS_UNASSESSED",
+            "physical_handover": "NOT_ASSESSED"
+          }
+        },
+        "second": {
+          "attempts": "1",
+          "error": null,
+          "exit_code": 0,
+          "id": "second",
+          "instance": "2aa3dcf7-a8dd-4a6c-9c2a-38d93fd73b74",
+          "phase": "EXITED",
+          "pid": 38,
+          "resources": {
+            "capacity_reservation": "NONE_CREATED",
+            "current_enforcement": "NOT_ESTABLISHED_BY_HISTORY",
+            "last_observed": {
+              "capacity_reservation": "NONE_CREATED",
+              "hard_bytes": "268435456",
+              "instance": "2aa3dcf7-a8dd-4a6c-9c2a-38d93fd73b74",
+              "physical_handover": "NOT_ASSESSED",
+              "pid": 38,
+              "requirement": "status/address-space",
+              "scope": "PER_PROCESS_VIRTUAL_ADDRESS_SPACE_UPPER_BOUND",
+              "soft_bytes": "268435456"
+            },
+            "lifetime": "DIRECT_CHILD_EXITED_DESCENDANTS_UNASSESSED",
+            "physical_handover": "NOT_ASSESSED"
+          }
+        }
+      },
+      "schema": "rx.supervisor-state.v1",
+      "stop_requested": true
+    }
+  },
+  "unclean_reopen": {
+    "execution_admission": {
+      "first": {
+        "application": {
+          "reason": "no current-owner application receipt; no resource recovery is inferred",
+          "state": "UNCONFIRMED"
+        },
+        "not_applied_reasons": [],
+        "requested": {
+          "status/address-space": {
+            "amount": "268435456",
+            "meaning": "UPPER_BOUND",
+            "resource": "ADDRESS_SPACE_BYTES"
+          }
+        }
+      },
+      "second": {
+        "application": {
+          "reason": "no current-owner application receipt; no resource recovery is inferred",
+          "state": "UNCONFIRMED"
+        },
+        "not_applied_reasons": [],
+        "requested": {
+          "status/address-space": {
+            "amount": "268435456",
+            "meaning": "UPPER_BOUND",
+            "resource": "ADDRESS_SPACE_BYTES"
+          }
+        }
+      }
+    },
+    "physical_qualification": "NOT_PERFORMED",
+    "registrations": {
+      "first": {
+        "execution_ownership": "NOT_ESTABLISHED_BY_PERSISTENT_RECORDS",
+        "executions": [
+          {
+            "binding": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "instance": "ecc11a1a-4530-4254-97c6-3917fef8999f",
+              "registration": "40140ad8-9856-460b-b57f-dc87a1d6f0e9",
+              "registration_revision": "1",
+              "run": "b0c0de2e-c247-46ca-bce7-6c7dbe507008",
+              "selection": "first"
+            },
+            "last_observed": {
+              "detail": "supervisor phase Unknown; supervisor ownership lost; no PID adoption or replay; functional readiness and work-use permission are not assessed",
+              "exit_code": null,
+              "pid": 31,
+              "state": "UNKNOWN"
+            }
+          },
+          {
+            "binding": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "instance": "fabeb993-de5f-4963-8f83-0010e97d0bc1",
+              "registration": "40140ad8-9856-460b-b57f-dc87a1d6f0e9",
+              "registration_revision": "1",
+              "run": "b0c0de2e-c247-46ca-bce7-6c7dbe507008",
+              "selection": "first"
+            },
+            "last_observed": {
+              "detail": "supervisor phase Exited; no additional lifecycle error; functional readiness and work-use permission are not assessed",
+              "exit_code": 0,
+              "pid": 31,
+              "state": "EXITED"
+            }
+          }
+        ],
+        "functional_readiness": {
+          "conditions": [
+            {
+              "name": "readiness/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no current-owner assessment has been requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "evidence": null,
+          "meaning": "catalog conditions over a component self-report; not independent functional or physical qualification",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        },
+        "recovery": {
+          "dispositions": [],
+          "limitations": [
+            "external investigation provider after total manager-process/Child-handle loss is unsupported",
+            "confirmed closure without the original saved PID binding is unsupported",
+            "recovery disposition supplies neither a functional-readiness assessment nor work-use permission",
+            "resource recovery, F1 receipt restoration and physical outcome confirmation not claimed"
+          ],
+          "new_execution": "BLOCKED_UNRESOLVED",
+          "resume_requests": []
+        },
+        "registration": {
+          "registration": {
+            "declaration": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "label": "first"
+            },
+            "id": "40140ad8-9856-460b-b57f-dc87a1d6f0e9",
+            "state": "ACCEPTED"
+          },
+          "revision": "1"
+        },
+        "work_use_permission": {
+          "conditions": [
+            {
+              "name": "work-use/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no scoped operating-area work-use assessment requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "decision_reference": null,
+          "positive_provider": "UNSUPPORTED: operating-area positive permission provider connection",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        }
+      },
+      "second": {
+        "execution_ownership": "NOT_ESTABLISHED_BY_PERSISTENT_RECORDS",
+        "executions": [
+          {
+            "binding": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "instance": "2aa3dcf7-a8dd-4a6c-9c2a-38d93fd73b74",
+              "registration": "a2adc206-6c28-43f2-a378-4f39e4624525",
+              "registration_revision": "1",
+              "run": "b0c0de2e-c247-46ca-bce7-6c7dbe507008",
+              "selection": "second"
+            },
+            "last_observed": {
+              "detail": "supervisor phase Exited; no additional lifecycle error; functional readiness and work-use permission are not assessed",
+              "exit_code": 0,
+              "pid": 38,
+              "state": "EXITED"
+            }
+          },
+          {
+            "binding": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "instance": "f2eafd3d-a6d2-4b01-a9b1-5eb604131d0c",
+              "registration": "a2adc206-6c28-43f2-a378-4f39e4624525",
+              "registration_revision": "1",
+              "run": "b0c0de2e-c247-46ca-bce7-6c7dbe507008",
+              "selection": "second"
+            },
+            "last_observed": {
+              "detail": "supervisor phase Unknown; supervisor ownership lost; no PID adoption or replay; functional readiness and work-use permission are not assessed",
+              "exit_code": null,
+              "pid": 43,
+              "state": "UNKNOWN"
+            }
+          }
+        ],
+        "functional_readiness": {
+          "conditions": [
+            {
+              "name": "readiness/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no current-owner assessment has been requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "evidence": null,
+          "meaning": "catalog conditions over a component self-report; not independent functional or physical qualification",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        },
+        "recovery": {
+          "dispositions": [],
+          "limitations": [
+            "external investigation provider after total manager-process/Child-handle loss is unsupported",
+            "confirmed closure without the original saved PID binding is unsupported",
+            "recovery disposition supplies neither a functional-readiness assessment nor work-use permission",
+            "resource recovery, F1 receipt restoration and physical outcome confirmation not claimed"
+          ],
+          "new_execution": "BLOCKED_UNRESOLVED",
+          "resume_requests": []
+        },
+        "registration": {
+          "registration": {
+            "declaration": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "label": "second"
+            },
+            "id": "a2adc206-6c28-43f2-a378-4f39e4624525",
+            "state": "ACCEPTED"
+          },
+          "revision": "1"
+        },
+        "work_use_permission": {
+          "conditions": [
+            {
+              "name": "work-use/assessment",
+              "observed": null,
+              "origin": "NOT_OBSERVED",
+              "reason": "no scoped operating-area work-use assessment requested",
+              "state": "NOT_EVALUATED"
+            }
+          ],
+          "decision_reference": null,
+          "positive_provider": "UNSUPPORTED: operating-area positive permission provider connection",
+          "scope": null,
+          "state": "NOT_EVALUATED",
+          "subject": null
+        }
+      }
+    },
+    "schema": "rx.resident-reconciliation.v1",
+    "state": {
+      "plan": "b0c0de2e-c247-46ca-bce7-6c7dbe507008",
+      "plan_digest": "25e5585be65f570e2f37cd9c44c8a6f892d53132d6e46104d012218b5ec9a79b",
+      "records": {
+        "first": {
+          "attempts": "1",
+          "error": "supervisor ownership lost; no PID adoption or replay",
+          "exit_code": null,
+          "id": "first",
+          "instance": "ecc11a1a-4530-4254-97c6-3917fef8999f",
+          "phase": "UNKNOWN",
+          "pid": 31,
+          "resources": {
+            "capacity_reservation": "NONE_CREATED",
+            "current_enforcement": "NOT_ESTABLISHED_BY_HISTORY",
+            "last_observed": {
+              "capacity_reservation": "NONE_CREATED",
+              "hard_bytes": "268435456",
+              "instance": "ecc11a1a-4530-4254-97c6-3917fef8999f",
+              "physical_handover": "NOT_ASSESSED",
+              "pid": 31,
+              "requirement": "status/address-space",
+              "scope": "PER_PROCESS_VIRTUAL_ADDRESS_SPACE_UPPER_BOUND",
+              "soft_bytes": "268435456"
+            },
+            "lifetime": "UNCONFIRMED",
+            "physical_handover": "NOT_ASSESSED"
+          }
+        },
+        "second": {
+          "attempts": "1",
+          "error": "supervisor ownership lost; no PID adoption or replay",
+          "exit_code": null,
+          "id": "second",
+          "instance": "f2eafd3d-a6d2-4b01-a9b1-5eb604131d0c",
+          "phase": "UNKNOWN",
+          "pid": 43,
+          "resources": {
+            "capacity_reservation": "NONE_CREATED",
+            "current_enforcement": "NOT_ESTABLISHED_BY_HISTORY",
+            "last_observed": {
+              "capacity_reservation": "NONE_CREATED",
+              "hard_bytes": "268435456",
+              "instance": "f2eafd3d-a6d2-4b01-a9b1-5eb604131d0c",
+              "physical_handover": "NOT_ASSESSED",
+              "pid": 43,
+              "requirement": "status/address-space",
+              "scope": "PER_PROCESS_VIRTUAL_ADDRESS_SPACE_UPPER_BOUND",
+              "soft_bytes": "268435456"
+            },
+            "lifetime": "UNCONFIRMED",
+            "physical_handover": "NOT_ASSESSED"
+          }
+        }
+      },
+      "schema": "rx.supervisor-state.v1",
+      "stop_requested": false
+    }
+  },
+  "scope": "actual Linux resident daemon; two release-owned non-actuating services; launcher exits before observations; same registration across normal restart and crash; no PID adoption",
+  "not_established": [
+    "physical qualification",
+    "resource enforcement",
+    "functional readiness",
+    "work-use decisions",
+    "dependency replacement",
+    "manager-total-loss recovery",
+    "actual guarded Host/Executor process integration"
+  ]
+}

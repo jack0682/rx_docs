@@ -1,0 +1,38 @@
+{
+  "rx-platform": {
+    "headRefOid": "b145366992c36b1227efbab7e7a776fae6d9c62f",
+    "mergeCommit": {
+      "oid": "7a825b346a02d5283498ebab8f8288a28357e32c"
+    },
+    "number": 25,
+    "state": "MERGED",
+    "url": "https://github.com/jack0682/rx-platform/pull/25",
+    "source_merge_tree_equal": true,
+    "tree": "0e73652531e24f9d65bd87e77e3edcf7497f5167",
+    "main": "3dbf1b4067ffeef0d2ab9dff5dff1a79ed8c4c31"
+  },
+  "rx-solutions": {
+    "headRefOid": "71aec7e7f1e2d6723884e30e97b9dd4ba97fb502",
+    "mergeCommit": {
+      "oid": "0996f0f5ac7b66a76388983e5c100a386458ba29"
+    },
+    "number": 42,
+    "state": "MERGED",
+    "url": "https://github.com/jack0682/rx-solutions/pull/42",
+    "feature_pr": {
+      "headRefOid": "039aa0d0459b8087e708ec77fdccfbd48fadc1d0",
+      "mergeCommit": {
+        "oid": "fccc996ae60062ea4ef42acf88bc594bc698d20c"
+      },
+      "number": 41,
+      "state": "MERGED",
+      "url": "https://github.com/jack0682/rx-solutions/pull/41",
+      "source_merge_tree_equal": true,
+      "tree": "dede741621bf26d8f9bfe74466baa610e465eeb1",
+      "main": "d4d38f6901ced41079af0d76daa273ee3b83bbf0"
+    },
+    "source_merge_tree_equal": true,
+    "tree": "2507bab67d0f1e0aa068b74e3f3522e18e3da6f7",
+    "main": "d4d38f6901ced41079af0d76daa273ee3b83bbf0"
+  }
+}

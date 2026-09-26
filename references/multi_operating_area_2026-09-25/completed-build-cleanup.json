@@ -1,0 +1,15 @@
+{
+  "removed": [
+    "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/linux-target",
+    "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/judge-target",
+    "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/catalog-target",
+    "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/judge-mac-compact",
+    "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/cargo-home"
+  ],
+  "retained": "exact daemon/judge/probe/test binaries, raw logs and all DBs",
+  "disk_after": {
+    "total": 494332366848,
+    "used": 489202384896,
+    "free": 5129981952
+  }
+}

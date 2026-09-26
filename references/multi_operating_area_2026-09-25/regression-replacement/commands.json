@@ -1,0 +1,76 @@
+[
+  {
+    "label": "runtime",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "rx-solutions:g2-authenticated"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "builder",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "rust:1.98.1-slim-bookworm"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "build",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions:/source:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/regression-replacement:/evidence",
+      "-w",
+      "/source",
+      "-e",
+      "CARGO_HOME=/evidence/cargo-home",
+      "--entrypoint",
+      "cargo",
+      "sha256:ff521445a372125ed4f76e1453a1f8098f2d05332d1601d30db1c1f62757e730",
+      "test",
+      "--locked",
+      "-p",
+      "rx-supervisor",
+      "--test",
+      "replacement",
+      "--no-run",
+      "--target-dir",
+      "/evidence/target",
+      "--message-format=json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "replacement-tests",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/regression-replacement:/evidence:ro",
+      "--entrypoint",
+      "/evidence/target/debug/deps/replacement-a81b291b519ea2f6",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "--nocapture"
+    ],
+    "exit_code": 0
+  }
+]

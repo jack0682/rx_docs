@@ -1,0 +1,58 @@
+    Checking axum v0.8.9
+    Checking hyper-timeout v0.5.2
+    Checking rx-runtime v0.1.0 (<workspace>/rx-platform/crates/rx-runtime)
+    Checking rx-storage v0.1.0 (<workspace>/rx-platform/crates/rx-storage)
+    Checking hyper-rustls v0.27.9
+    Checking reqwest v0.12.28
+    Checking rx-application v0.1.0 (<workspace>/rx-platform/crates/rx-application)
+    Checking tonic v0.14.6
+    Checking tonic-prost v0.14.6
+    Checking rx-protocol v0.1.0 (<workspace>/rx-platform/crates/rx-protocol)
+    Checking rx-protocol-adapter v0.1.0 (<workspace>/rx-platform/crates/rx-protocol-adapter)
+    Checking rx-api v0.1.0 (<workspace>/rx-platform/crates/rx-api)
+    Checking rx-host-client v0.1.0 (<workspace>/rx-platform/crates/rx-host-client)
+error[E0004]: non-exhaustive patterns: `&rx_ports::StoreError::Ownership(_)` not covered
+  --> crates/rx-host-client/src/connection/diagnostic.rs:68:55
+   |
+68 |                 WriterError::Rejected(error) => match error {
+   |                                                       ^^^^^ pattern `&rx_ports::StoreError::Ownership(_)` not covered
+   |
+note: `rx_ports::StoreError` defined here
+  --> crates/rx-ports/src/lib.rs:23:1
+   |
+23 | pub enum StoreError {
+   | ^^^^^^^^^^^^^^^^^^^
+24 |     #[error(transparent)]
+25 |     Ownership(#[from] OwnershipError),
+   |     --------- not covered
+   = note: the matched value is of type `&rx_ports::StoreError`
+help: ensure that all possible cases are being handled by adding a match arm with a wildcard pattern or an explicit pattern as shown
+   |
+75 ~                     StoreError::Invalid(_) => "INVALID_DOCUMENT".into(),
+76 ~                     &rx_ports::StoreError::Ownership(_) => todo!(),
+   |
+
+error[E0004]: non-exhaustive patterns: `&rx_ports::StoreError::Ownership(_)` not covered
+  --> crates/rx-host-client/src/delivery/diagnostic.rs:44:62
+   |
+44 |         Error::Writer(WriterError::Rejected(error)) => match error {
+   |                                                              ^^^^^ pattern `&rx_ports::StoreError::Ownership(_)` not covered
+   |
+note: `rx_ports::StoreError` defined here
+  --> crates/rx-ports/src/lib.rs:23:1
+   |
+23 | pub enum StoreError {
+   | ^^^^^^^^^^^^^^^^^^^
+24 |     #[error(transparent)]
+25 |     Ownership(#[from] OwnershipError),
+   |     --------- not covered
+   = note: the matched value is of type `&rx_ports::StoreError`
+help: ensure that all possible cases are being handled by adding a match arm with a wildcard pattern or an explicit pattern as shown
+   |
+70 ~             StoreError::Invalid(message) => ("STATE_STORE", "INVALID".into(), message.clone()),
+71 ~             &rx_ports::StoreError::Ownership(_) => todo!(),
+   |
+
+For more information about this error, try `rustc --explain E0004`.
+error: could not compile `rx-host-client` (lib) due to 2 previous errors
+warning: build failed, waiting for other jobs to finish...

@@ -1,0 +1,285 @@
+[
+  {
+    "label": "resident-passage",
+    "argv": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "<workspace>/rx-solutions/tools/resident_registration_passage.py",
+      "--image",
+      "rx-solutions:n5-runtime",
+      "--builder",
+      "rust:1.98.1-slim-bookworm",
+      "--evidence",
+      "<workspace>/.g1-evidence/resource-final/resident"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "fixture-build",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "-v",
+      "<workspace>/rx-solutions:/source:ro",
+      "-v",
+      "<workspace>/.g1-evidence/resource-final/resident:/evidence",
+      "-w",
+      "/source",
+      "-e",
+      "CARGO_HOME=/evidence/cargo-home",
+      "--entrypoint",
+      "cargo",
+      "sha256:ff521445a372125ed4f76e1453a1f8098f2d05332d1601d30db1c1f62757e730",
+      "test",
+      "--locked",
+      "-p",
+      "rx-supervisor",
+      "--lib",
+      "--test",
+      "resource_enforcement",
+      "--no-run",
+      "--target-dir",
+      "/evidence/target",
+      "--message-format=json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "fixture-resource_enforcement",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "<workspace>/.g1-evidence/resource-final/resident:/evidence:ro",
+      "--entrypoint",
+      "/evidence/target/debug/deps/resource_enforcement-af7016062aa4e453",
+      "sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0",
+      "--nocapture"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "fixture-rx_supervisor",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "<workspace>/.g1-evidence/resource-final/resident:/evidence:ro",
+      "--entrypoint",
+      "/evidence/target/debug/deps/rx_supervisor-6e7db95580edc34d",
+      "sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0",
+      "--nocapture"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "current-launcher",
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "rx-resources-current-339ab75308",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "<workspace>/.g1-evidence/resource-final/fresh-state:/var/lib/rx-solutions",
+      "-v",
+      "<workspace>/.g1-evidence/resource-final/startup.json:/config/startup.json:ro",
+      "-v",
+      "<workspace>/.g1-evidence/resource-final/resident/target/debug/rx-solutionsd:/test/rx-solutionsd:ro",
+      "--entrypoint",
+      "/test/rx-solutionsd",
+      "sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0",
+      "run",
+      "/config/startup.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "outside-supervisor",
+    "argv": [
+      "docker",
+      "exec",
+      "rx-resources-current-339ab75308",
+      "/usr/bin/python3",
+      "-c",
+      "import os,json,sqlite3; c=sqlite3.connect('file:/var/lib/rx-solutions/managed/supervisor.db?mode=ro',uri=True); s=json.loads(c.execute(\"select document from entities where key='supervisor/state'\").fetchone()[0])['value']; p=s['records']['status']['pid']; print(json.dumps({'observer_pid':os.getpid(),'supervisor_pid':1,'child_pid':p,'child_limits':open('/proc/%s/limits'%p).read(),'supervisor_limits':open('/proc/1/limits').read(),'child_cmdline':open('/proc/%s/cmdline'%p,'rb').read().decode().split(chr(0)),'resource_history':s['records']['status']['resources']}))"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "current-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--timeout",
+      "15",
+      "rx-resources-current-339ab75308"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "baseline-launcher",
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "rx-resources-baseline-339ab75308",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "<workspace>/.g1-evidence/resource-final/existing-state:/var/lib/rx-solutions",
+      "-v",
+      "<workspace>/.g1-evidence/resource-final/startup.json:/config/startup.json:ro",
+      "-v",
+      "<workspace>/.f7-evidence/resident-final/target/debug/rx-solutionsd:/test/rx-solutionsd:ro",
+      "--entrypoint",
+      "/test/rx-solutionsd",
+      "sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0",
+      "run",
+      "/config/startup.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "baseline-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--timeout",
+      "15",
+      "rx-resources-baseline-339ab75308"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "changed-catalog-launcher",
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "rx-resources-changed-catalog-339ab75308",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "<workspace>/.g1-evidence/resource-final/existing-state:/var/lib/rx-solutions",
+      "-v",
+      "<workspace>/.g1-evidence/resource-final/startup.json:/config/startup.json:ro",
+      "-v",
+      "<workspace>/.g1-evidence/resource-final/resident/target/debug/rx-solutionsd:/test/rx-solutionsd:ro",
+      "--entrypoint",
+      "/test/rx-solutionsd",
+      "sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0",
+      "run",
+      "/config/startup.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "changed-catalog-output",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-resources-changed-catalog-339ab75308"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "retained-rx-resources-current-339ab75308",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-resources-current-339ab75308"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "cleanup-remove-rx-resources-current-339ab75308",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-resources-current-339ab75308"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "retained-rx-resources-baseline-339ab75308",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-resources-baseline-339ab75308"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "cleanup-remove-rx-resources-baseline-339ab75308",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-resources-baseline-339ab75308"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "retained-rx-resources-changed-catalog-339ab75308",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-resources-changed-catalog-339ab75308"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "cleanup-remove-rx-resources-changed-catalog-339ab75308",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-resources-changed-catalog-339ab75308"
+    ],
+    "exit_code": 0
+  }
+]

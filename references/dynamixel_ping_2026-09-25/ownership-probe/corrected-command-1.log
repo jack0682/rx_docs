@@ -1,0 +1,53 @@
+{
+  "scope": "Linux mechanism probe only; surrogate owner; no DYNAMIXEL implementation or product Host claim",
+  "rows": [
+    {
+      "language": "python",
+      "mode": "direct",
+      "exit": 21,
+      "stdout": "DXL_HOST_CHANNEL_REQUIRED",
+      "stderr": ""
+    },
+    {
+      "language": "python",
+      "mode": "socket",
+      "exit": 22,
+      "stdout": "DXL_HOST_EXECUTABLE_REQUIRED",
+      "stderr": ""
+    },
+    {
+      "language": "python",
+      "mode": "spoof",
+      "exit": 22,
+      "stdout": "DXL_HOST_EXECUTABLE_REQUIRED",
+      "stderr": ""
+    },
+    {
+      "language": "cpp",
+      "mode": "direct",
+      "exit": 21,
+      "stdout": "DXL_HOST_CHANNEL_REQUIRED",
+      "stderr": ""
+    },
+    {
+      "language": "cpp",
+      "mode": "socket",
+      "exit": 22,
+      "stdout": "DXL_HOST_EXECUTABLE_REQUIRED",
+      "stderr": ""
+    },
+    {
+      "language": "cpp",
+      "mode": "spoof",
+      "exit": 22,
+      "stdout": "DXL_HOST_EXECUTABLE_REQUIRED",
+      "stderr": ""
+    },
+    {
+      "language": "compiled_owner_surrogate",
+      "mode": "positive",
+      "exit": 0,
+      "stdout": "PROBE_OWNER_ACCEPTED_NO_SDK_OR_DEVICE"
+    }
+  ]
+}

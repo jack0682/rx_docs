@@ -1,0 +1,370 @@
+{
+  "result": "ENFORCEMENT_PASS_LOCK_LIFETIME_UNRESOLVED",
+  "runtime_image": "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+  "builder_image": "sha256:ff521445a372125ed4f76e1453a1f8098f2d05332d1601d30db1c1f62757e730",
+  "daemon_sha256": "5b39cb0be795d4ddb74fc58d11129f0ca93b00091ed44f326256c4e98ba02eab",
+  "manifest_substitution": "NORMAL_ACCEPTED; SCRIPT_ONLY_AND_SCRIPT_PLUS_INVENTORY_AND_CATALOG_PLUS_INVENTORY_REFUSED",
+  "descriptor_observation": {
+    "result": "PASS",
+    "parent_lock_fds": {
+      "0": {
+        "target": "/dev/null",
+        "info": "pos:\t0\nflags:\t0400002\nmnt_id:\t146\nino:\t5\n"
+      },
+      "1": {
+        "target": "/tmp/daemon.log",
+        "info": "pos:\t14496\nflags:\t0400001\nmnt_id:\t152\nino:\t2\n"
+      },
+      "2": {
+        "target": "/tmp/daemon.log",
+        "info": "pos:\t14496\nflags:\t0400001\nmnt_id:\t152\nino:\t2\n"
+      },
+      "3": {
+        "target": "anon_inode:[eventpoll]",
+        "info": "pos:\t0\nflags:\t02000002\nmnt_id:\t17\nino:\t32\ntfd:        8 events: 80002019 data:                1  pos:0 ino:1617e sdev:9\ntfd:        4 events: 80002019 data:                0  pos:0 ino:20 sdev:10\n"
+      },
+      "4": {
+        "target": "anon_inode:[eventfd]",
+        "info": "pos:\t0\nflags:\t02004002\nmnt_id:\t17\nino:\t32\neventfd-count:                3\neventfd-id: 11\neventfd-semaphore: 0\n"
+      },
+      "5": {
+        "target": "anon_inode:[eventpoll]",
+        "info": "pos:\t0\nflags:\t02000002\nmnt_id:\t17\nino:\t32\ntfd:        8 events: 80002019 data:                1  pos:0 ino:1617e sdev:9\ntfd:        4 events: 80002019 data:                0  pos:0 ino:20 sdev:10\n"
+      },
+      "6": {
+        "target": "socket:[90494]",
+        "info": "pos:\t0\nflags:\t02004002\nmnt_id:\t10\nino:\t90494\nscm_fds: 0\n"
+      },
+      "7": {
+        "target": "socket:[90495]",
+        "info": "pos:\t0\nflags:\t02004002\nmnt_id:\t10\nino:\t90495\nscm_fds: 0\n"
+      },
+      "8": {
+        "target": "socket:[90494]",
+        "info": "pos:\t0\nflags:\t02004002\nmnt_id:\t10\nino:\t90494\nscm_fds: 0\n"
+      },
+      "9": {
+        "target": "/var/lib/rx-solutions/f12/registration.writer.lock",
+        "info": "pos:\t0\nflags:\t02400002\nmnt_id:\t158\nino:\t8\nlock:\t1: FLOCK  ADVISORY  WRITE 7 00:44:8 0 EOF\n"
+      },
+      "10": {
+        "target": "/var/lib/rx-solutions/f12/registration.db",
+        "info": "pos:\t0\nflags:\t02500002\nmnt_id:\t158\nino:\t9\nlock:\t1: POSIX  ADVISORY  READ 7 00:44:9 1073741826 1073742335\n"
+      },
+      "11": {
+        "target": "/var/lib/rx-solutions/f12/registration.db-wal",
+        "info": "pos:\t0\nflags:\t02500002\nmnt_id:\t158\nino:\t11\n"
+      },
+      "12": {
+        "target": "/var/lib/rx-solutions/f12/registration.db-shm",
+        "info": "pos:\t0\nflags:\t02500002\nmnt_id:\t158\nino:\t12\nlock:\t1: POSIX  ADVISORY  READ 7 00:44:12 128 128\n"
+      },
+      "13": {
+        "target": "/var/lib/rx-solutions/f12/supervisor.writer.lock",
+        "info": "pos:\t0\nflags:\t02400002\nmnt_id:\t158\nino:\t13\nlock:\t1: FLOCK  ADVISORY  WRITE 7 00:44:13 0 EOF\n"
+      },
+      "14": {
+        "target": "/var/lib/rx-solutions/f12/supervisor.db",
+        "info": "pos:\t0\nflags:\t02500002\nmnt_id:\t158\nino:\t14\nlock:\t1: POSIX  ADVISORY  READ 7 00:44:14 1073741826 1073742335\n"
+      },
+      "15": {
+        "target": "/var/lib/rx-solutions/f12/supervisor.db-wal",
+        "info": "pos:\t0\nflags:\t02500002\nmnt_id:\t158\nino:\t16\n"
+      },
+      "16": {
+        "target": "/var/lib/rx-solutions/f12/supervisor.db-shm",
+        "info": "pos:\t0\nflags:\t02500002\nmnt_id:\t158\nino:\t17\nlock:\t1: POSIX  ADVISORY  READ 7 00:44:17 128 128\n"
+      }
+    },
+    "children_after_exec": {
+      "status": {
+        "pid": 8,
+        "fds": {
+          "0": {
+            "target": "/dev/null",
+            "info": "pos:\t0\nflags:\t0400000\nmnt_id:\t146\nino:\t5\n"
+          },
+          "1": {
+            "target": "/var/lib/rx-solutions/f12/logs/0c93c499-8d65-47df-bd0c-c3c9ed1b8109.stdout.log",
+            "info": "pos:\t0\nflags:\t0502001\nmnt_id:\t158\nino:\t19\n"
+          },
+          "2": {
+            "target": "/var/lib/rx-solutions/f12/logs/0c93c499-8d65-47df-bd0c-c3c9ed1b8109.stderr.log",
+            "info": "pos:\t0\nflags:\t0400001\nmnt_id:\t158\nino:\t20\n"
+          },
+          "3": {
+            "target": "socket:[92237]",
+            "info": "pos:\t0\nflags:\t02000002\nmnt_id:\t10\nino:\t92237\n"
+          }
+        }
+      }
+    },
+    "locks_reacquired_after_manager_loss": [
+      "/var/lib/rx-solutions/f12/registration.writer.lock",
+      "/var/lib/rx-solutions/f12/supervisor.writer.lock"
+    ],
+    "original_children_still_present": [
+      true
+    ],
+    "scope": "product daemon real spawn after exec; no surviving-child storage lock leak observed; does not exclude transient pre-exec inheritance"
+  },
+  "storage_refusals": [
+    {
+      "lock": "registration",
+      "exit_code": 1,
+      "diagnostic": {
+        "schema": "rx.support-refusal.v1",
+        "condition": "storage/exclusive-writer-not-established",
+        "decision": "REFUSED",
+        "owner_identity": "NOT_ESTABLISHED",
+        "detail": "exclusive owner not established; a live owner or inherited description may retain the lock",
+        "recovery": "OBSERVE_OWNER_OR_INHERITED_DESCRIPTION_RELEASE_THEN_EXPLICIT_OPEN; ABRUPT_LOSS_CAN_RETAIN_LOCK_UNTIL_INHERITED_DESCRIPTION_CLOSES; NO_AUTOMATIC_RETRY_OR_LOCK_FILE_DELETION"
+      }
+    },
+    {
+      "lock": "supervisor",
+      "exit_code": 1,
+      "diagnostic": {
+        "schema": "rx.support-refusal.v1",
+        "condition": "storage/exclusive-writer-not-established",
+        "decision": "REFUSED",
+        "owner_identity": "NOT_ESTABLISHED",
+        "detail": "exclusive owner not established; a live owner or inherited description may retain the lock",
+        "recovery": "OBSERVE_OWNER_OR_INHERITED_DESCRIPTION_RELEASE_THEN_EXPLICIT_OPEN; ABRUPT_LOSS_CAN_RETAIN_LOCK_UNTIL_INHERITED_DESCRIPTION_CLOSES; NO_AUTOMATIC_RETRY_OR_LOCK_FILE_DELETION"
+      }
+    }
+  ],
+  "schema_refusal": {
+    "exit_code": 1,
+    "reason": "Error: Unavailable(\"newer store schema: downgrade refused\")\n",
+    "original_version": 999
+  },
+  "boundary": {
+    "area_declaration_uniqueness": "COMPILED_CATALOG_ONLY; GENERIC_F6_POLICY_RETAINS_1_TO_8_AUTHORITIES",
+    "authenticated_immutable_provenance": "NOT_ESTABLISHED_FOR_OS_AND_VERIFIER; DEVELOPMENT_RELEASE_CONTENT_AUTHENTICATED_AT_CHECKPOINT",
+    "inspection": "OBSERVATION_ONLY; NOT_DURABLE_ADMISSION_OR_WORK_PERMISSION",
+    "interval": "EXPLICIT_CALLER_DRIVEN_CHECKPOINTS",
+    "inventory": "CONSISTENCY_INDEX_AUTHENTICATED_BY_COMPILED_DEVELOPMENT_ROOT",
+    "judge_delivery_order": "COOPERATING_MAILBOX_LOCK_THROUGH_WORK_COMMIT; NONCOOPERATING_PUBLICATION_NOT_ORDERED",
+    "monitor": "NO_TIMER_OR_BACKGROUND_MONITOR",
+    "offline_revocation_freshness": "NOT_ESTABLISHED",
+    "operating_area_judge": "OPT_IN_DEVELOPMENT_OFFLINE_RULE_JUDGE; PHYSICAL_SAFETY_QUALITY_EQUIPMENT_QUALIFICATION_NOT_GRANTED",
+    "operating_areas": "TWO_COMPILED_DEVELOPMENT_AREAS_WITH_DISTINCT_KEYS; SITE_ENROLLMENT_REFUSED; NO_NETWORK_OR_PHYSICAL_AUTHORITY",
+    "product_release_custody_and_rotation": "NOT_ESTABLISHED",
+    "release_key": "rx/development-release-2026-09",
+    "remaining_interval": "TRUSTED_INSTALLATION_STABILITY_BETWEEN_BYTE_CHECK_AND_USE",
+    "source_assets": "STATUS_SCRIPT_AND_DEVICE_CATALOG_MATCH_COMPILED_SOURCE_CONTENT",
+    "trust": "TRUSTED_INSTALLED_RUST_BINARIES_AND_OS",
+    "whole_state_rollback_or_deletion": "NOT_DETECTED",
+    "work_commit_residuals": [
+      "TTL_CONTINUES_DURING_POST_CUT_IO",
+      "HTTP_OBSERVATION_IS_AS_OF"
+    ]
+  },
+  "guarded": "FAILED_DELIVERY_NOT_COMPLETION; FINAL_REPORT_AND_OWNED_EXIT_REQUIRED; FORCE_REFUSED",
+  "host_lock": "SERVICE_ADMISSION_REFUSED_WITHOUT_OWNER_IDENTITY_CLAIM; EXPLICIT_RETRY_AFTER_HOLDER_EXIT",
+  "host_stress": [
+    {
+      "round": 0,
+      "exit_code": 0
+    },
+    {
+      "round": 1,
+      "exit_code": 0
+    },
+    {
+      "round": 2,
+      "exit_code": 0
+    },
+    {
+      "round": 3,
+      "exit_code": 0
+    },
+    {
+      "round": 4,
+      "exit_code": 0
+    },
+    {
+      "round": 5,
+      "exit_code": 0
+    },
+    {
+      "round": 6,
+      "exit_code": 0
+    },
+    {
+      "round": 7,
+      "exit_code": 0
+    },
+    {
+      "round": 8,
+      "exit_code": 0
+    },
+    {
+      "round": 9,
+      "exit_code": 0
+    },
+    {
+      "round": 10,
+      "exit_code": 0
+    },
+    {
+      "round": 11,
+      "exit_code": 0
+    },
+    {
+      "round": 12,
+      "exit_code": 0
+    },
+    {
+      "round": 13,
+      "exit_code": 0
+    },
+    {
+      "round": 14,
+      "exit_code": 0
+    },
+    {
+      "round": 15,
+      "exit_code": 0
+    },
+    {
+      "round": 16,
+      "exit_code": 0
+    },
+    {
+      "round": 17,
+      "exit_code": 0
+    },
+    {
+      "round": 18,
+      "exit_code": 0
+    },
+    {
+      "round": 19,
+      "exit_code": 0
+    },
+    {
+      "round": 20,
+      "exit_code": 0
+    },
+    {
+      "round": 21,
+      "exit_code": 0
+    },
+    {
+      "round": 22,
+      "exit_code": 0
+    },
+    {
+      "round": 23,
+      "exit_code": 0
+    },
+    {
+      "round": 24,
+      "exit_code": 0
+    },
+    {
+      "round": 25,
+      "exit_code": 0
+    },
+    {
+      "round": 26,
+      "exit_code": 0
+    },
+    {
+      "round": 27,
+      "exit_code": 0
+    },
+    {
+      "round": 28,
+      "exit_code": 0
+    },
+    {
+      "round": 29,
+      "exit_code": 0
+    },
+    {
+      "round": 30,
+      "exit_code": 0
+    },
+    {
+      "round": 31,
+      "exit_code": 0
+    },
+    {
+      "round": 32,
+      "exit_code": 0
+    },
+    {
+      "round": 33,
+      "exit_code": 0
+    },
+    {
+      "round": 34,
+      "exit_code": 0
+    },
+    {
+      "round": 35,
+      "exit_code": 0
+    },
+    {
+      "round": 36,
+      "exit_code": 0
+    },
+    {
+      "round": 37,
+      "exit_code": 0
+    },
+    {
+      "round": 38,
+      "exit_code": 0
+    },
+    {
+      "round": 39,
+      "exit_code": 0
+    },
+    {
+      "round": 40,
+      "exit_code": 0
+    },
+    {
+      "round": 41,
+      "exit_code": 0
+    },
+    {
+      "round": 42,
+      "exit_code": 0
+    },
+    {
+      "round": 43,
+      "exit_code": 0
+    },
+    {
+      "round": 44,
+      "exit_code": 0
+    },
+    {
+      "round": 45,
+      "exit_code": 0
+    },
+    {
+      "round": 46,
+      "exit_code": 0
+    },
+    {
+      "round": 47,
+      "exit_code": 0
+    },
+    {
+      "round": 48,
+      "exit_code": 0
+    },
+    {
+      "round": 49,
+      "exit_code": 0
+    }
+  ],
+  "historical_host_flake": "NOT_PROVEN_RESOLVED; ORIGINAL_CAUSE_UNATTRIBUTED",
+  "evidence_scope": "actual Linux processes; explicit delivery failure injection and separate real lock holder; no physical operation"
+}

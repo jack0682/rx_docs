@@ -1,0 +1,21 @@
+
+running 12 tests
+test initialization::termination_tests::failed_signal_command_status_is_not_a_successful_delivery ... ok
+test initialization::termination_tests::failed_term_keeps_the_same_owned_child_retryable_until_delivery_is_confirmed ... ok
+test process::signal_tests::failed_signal_keeps_control_and_unknown_effect_errors ... ok
+test process::signal_tests::failed_signal_uses_only_confirmed_owned_non_actuating_exit ... ok
+test process::signal_tests::failed_signal_with_live_or_unconfirmed_child_remains_error ... ok
+test process::signal_tests::signal_acceptance_does_not_claim_child_exit ... ok
+exec: EXEC_ERROR:2; gated child exit confirmed, no policy remains from this attempt
+test process::linux_limits::tests::exec_syscall_failure_is_not_an_admission ... ok
+permission: kernel application failed: process: Operation not permitted (os error 1); gated child exit confirmed, no policy remains from this attempt
+test process::linux_limits::tests::actual_kernel_permission_failure_after_lowering_rolls_back_before_target ... ok
+observation: parent kernel observation did not confirm the complete policy; gated child exit confirmed, no policy remains from this attempt
+test process::linux_limits::tests::observation_failure_after_application_confirms_no_remaining_child_policy ... ok
+test process::linux_limits::tests::gate_death_in_exec_window_cannot_mint_a_receipt_from_eof ... ok
+normal: startup authority changed after application, before EXEC; gated child exit confirmed, no policy remains from this attempt
+test process::linux_limits::tests::authority_change_after_application_prevents_exec_and_confirms_rollback ... ok
+test process::linux_limits::tests::gate_excludes_current_directory_python_module_shadowing ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.87s
+

@@ -1,0 +1,55 @@
+[
+    {
+        "Id": "sha256:31b46ae19b7512c71fcf6581dd1bca10131be0cbd6cd32fc4d870e1c7949ddb9",
+        "RepoTags": [
+            "rx-g5-platform-runtime:latest"
+        ],
+        "RepoDigests": [
+            "rx-g5-platform-runtime@sha256:31b46ae19b7512c71fcf6581dd1bca10131be0cbd6cd32fc4d870e1c7949ddb9"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-09-25T03:46:41.695745385Z",
+        "Config": {
+            "User": "10001:10001",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Entrypoint": [
+                "/usr/local/bin/rx-platformd"
+            ],
+            "WorkingDir": "/var/lib/rx",
+            "Labels": {
+                "org.opencontainers.image.version": "24.04"
+            },
+            "StopSignal": "SIGTERM"
+        },
+        "Architecture": "arm64",
+        "Os": "linux",
+        "Size": 47729945,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:646eea22414270d74b0c9e9d6d3b9550701ae62e658a099825d4d15045a3630b",
+                "sha256:328d2eb5659717d6b3fda1e45f57df15296a90467f4c73dc834756b9044d676b",
+                "sha256:e69771291e8d194f668719fb986026f7bb5477afa60b1e2f783eb94ac915fb05",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-09-25T03:46:43.458112552Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:31b46ae19b7512c71fcf6581dd1bca10131be0cbd6cd32fc4d870e1c7949ddb9",
+            "size": 856
+        },
+        "Identity": {
+            "Build": [
+                {
+                    "Ref": "p1kzl1hkycj2vnlrlkfeu85ui",
+                    "CreatedAt": "2026-09-25T03:46:43.703014136Z"
+                }
+            ]
+        }
+    }
+]

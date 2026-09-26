@@ -1,0 +1,94 @@
+[
+  {
+    "language": "python",
+    "mode": "loss",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_clients.py",
+      "--language",
+      "python",
+      "--mode",
+      "loss",
+      "--platform-image",
+      "rx-g5-platform-runtime",
+      "--solutions-image",
+      "rx-g5-solutions-runtime",
+      "--client-image",
+      "rx-g5-client-runtime",
+      "--release-evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/release-evidence.json",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/python-loss-final"
+    ],
+    "exit_code": 0
+  },
+  {
+    "language": "cpp",
+    "mode": "loss",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_clients.py",
+      "--language",
+      "cpp",
+      "--mode",
+      "loss",
+      "--platform-image",
+      "rx-g5-platform-runtime",
+      "--solutions-image",
+      "rx-g5-solutions-runtime",
+      "--client-image",
+      "rx-g5-client-runtime",
+      "--release-evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/release-evidence.json",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/cpp-loss-final"
+    ],
+    "exit_code": 0
+  },
+  {
+    "language": "python",
+    "mode": "unknown",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_clients.py",
+      "--language",
+      "python",
+      "--mode",
+      "unknown",
+      "--platform-image",
+      "rx-g5-platform-runtime",
+      "--solutions-image",
+      "rx-g5-solutions-runtime",
+      "--client-image",
+      "rx-g5-client-runtime",
+      "--release-evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/release-evidence.json",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/python-unknown-final"
+    ],
+    "exit_code": 0
+  },
+  {
+    "language": "cpp",
+    "mode": "unknown",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_clients.py",
+      "--language",
+      "cpp",
+      "--mode",
+      "unknown",
+      "--platform-image",
+      "rx-g5-platform-runtime",
+      "--solutions-image",
+      "rx-g5-solutions-runtime",
+      "--client-image",
+      "rx-g5-client-runtime",
+      "--release-evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/release-evidence.json",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/cpp-unknown-final"
+    ],
+    "exit_code": 0
+  }
+]

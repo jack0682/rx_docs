@@ -1,0 +1,21 @@
+{
+  "rx-solutions": {
+    "baseline": "05f0aa0a27cc9e770ca1251c50f26580cdb86eed",
+    "changed_baseline_tracked_files": [
+      "docker/Solutions.Dockerfile",
+      "runtime/rx-executor/src/bin/service.rs",
+      "runtime/rx-host/src/bin/rx-hostd.rs",
+      "runtime/rx-host/src/service/mod.rs",
+      "runtime/rx-host/tests/service.rs",
+      "runtime/rx-service-status/src/lib.rs",
+      "runtime/rx-supervisor/README.md",
+      "runtime/rx-supervisor/src/bin/rx-solutionsd.rs",
+      "runtime/rx-supervisor/src/builtin.rs",
+      "runtime/rx-supervisor/src/registration/diagnostic/store.rs"
+    ]
+  },
+  "rx_docs": {
+    "baseline": "1020aad238d8c410cdc683dbbfbd72882309ba55",
+    "changed_baseline_tracked_files": []
+  }
+}

@@ -1,0 +1,3 @@
+[ 33%] Building CXX object CMakeFiles/rx-dynamixel-ping.dir/helper.cpp.o
+[ 66%] Linking CXX executable rx-dynamixel-ping
+[100%] Built target rx-dynamixel-ping

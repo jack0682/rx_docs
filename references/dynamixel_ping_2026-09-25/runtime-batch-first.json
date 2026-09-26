@@ -1,0 +1,74 @@
+[
+  {
+    "label": "cpp-loss-first",
+    "exit": 0,
+    "command": [
+      "python3",
+      "tools/test_clients.py",
+      "--language",
+      "cpp",
+      "--mode",
+      "loss",
+      "--platform-image",
+      "rx-g5-platform-runtime:latest",
+      "--solutions-image",
+      "rx-g5-2-solutions-runtime:latest",
+      "--client-image",
+      "rx-g5-client-runtime-final:latest",
+      "--adapter-descriptor",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/dynamixel-driver.json",
+      "--release-evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/release-evidence.json",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/cpp-loss-first"
+    ]
+  },
+  {
+    "label": "python-unknown-first",
+    "exit": 0,
+    "command": [
+      "python3",
+      "tools/test_clients.py",
+      "--language",
+      "python",
+      "--mode",
+      "unknown",
+      "--platform-image",
+      "rx-g5-platform-runtime:latest",
+      "--solutions-image",
+      "rx-g5-2-solutions-runtime:latest",
+      "--client-image",
+      "rx-g5-client-runtime-final:latest",
+      "--adapter-descriptor",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/dynamixel-driver.json",
+      "--release-evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/release-evidence.json",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/python-unknown-first"
+    ]
+  },
+  {
+    "label": "cpp-unknown-first",
+    "exit": 0,
+    "command": [
+      "python3",
+      "tools/test_clients.py",
+      "--language",
+      "cpp",
+      "--mode",
+      "unknown",
+      "--platform-image",
+      "rx-g5-platform-runtime:latest",
+      "--solutions-image",
+      "rx-g5-2-solutions-runtime:latest",
+      "--client-image",
+      "rx-g5-client-runtime-final:latest",
+      "--adapter-descriptor",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/dynamixel-driver.json",
+      "--release-evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/release-evidence.json",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/cpp-unknown-first"
+    ]
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "source_sha": "2b0c4a35631e55817a2f1a75e30eb396b448bfa4",
+  "macos_workspace": {
+    "passed": 362,
+    "failed": 0,
+    "ignored": 17
+  },
+  "new_work_tests": 9,
+  "new_compile_rejections": 4,
+  "checks": {
+    "fmt": 0,
+    "doc-tests": 0,
+    "repository-tests": 0,
+    "commit-policy-tests": 0,
+    "repository-check": 0,
+    "invariant-check": 0,
+    "catalog-check": 0,
+    "native-tests": 0
+  },
+  "work_passage": "PASS",
+  "library_stages": 32,
+  "resident": "PASS",
+  "resource": "PASS",
+  "manager_loss": "PASS",
+  "protected": {
+    "protected_files": 183,
+    "changed": [],
+    "shipping_catalog_and_F5_unchanged": true,
+    "existing_supervisor_tests_unchanged": true,
+    "one_production_binary": true
+  },
+  "timing_boundary": "final live check in a successful atomic transaction, not commit IO completion",
+  "timing_residuals": [
+    "TTL can expire during post-cut commit IO",
+    "HTTP self-report values have their own timestamp, not atomicity with SQL commit"
+  ],
+  "shipping_issuer_policy": "NONE; DEFAULT DENIAL; HEALTH RETAINED",
+  "positive_scope": "EXTERNALLY SIGNED TEST ISSUER, NOT OPERATING-AREA APPROVAL",
+  "linux_workspace_ci": {
+    "passed": 404,
+    "failed": 0,
+    "ignored": 20,
+    "run": 35953340454,
+    "source_sha": "2b0c4a35631e55817a2f1a75e30eb396b448bfa4"
+  }
+}

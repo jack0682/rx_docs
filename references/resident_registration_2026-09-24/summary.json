@@ -1,0 +1,61 @@
+{
+  "source_commit": "9fa53afe308f0df89b09d2fa01e92a2e753181cb",
+  "solutions_pr": "https://github.com/jack0682/rx-solutions/pull/29",
+  "macos": [
+    342,
+    0,
+    17
+  ],
+  "linux_ci": [
+    368,
+    0,
+    20
+  ],
+  "linux_ci_run": "https://github.com/jack0682/rx-solutions/actions/runs/35880305825",
+  "linux_ci_job": 107246733469,
+  "new_tests": 13,
+  "daemon_binary_count": 1,
+  "unchanged_protected_files": 145,
+  "protected_categories": [
+    "sdk",
+    "manifests",
+    "native",
+    "process.rs",
+    "supervisor.rs"
+  ],
+  "library_observed_stages": [
+    "registered",
+    "admitted-and-observed",
+    "process-ready-but-use-conditions-not-met",
+    "reported-conditions-met-but-work-use-unavailable",
+    "terminated",
+    "reopened-in-new-manager-process",
+    "abnormal-child-exit",
+    "lost-manager-ownership",
+    "explicit-disposition",
+    "disposition-alone-rejected",
+    "explicitly-resumed-new-instance",
+    "resumed-child-terminated",
+    "second-resume-request-rejected",
+    "consumed-permit-rejected",
+    "dependency-registered-without-execution",
+    "diagnostic-assigned",
+    "diagnostic-in-progress",
+    "diagnostic-result-recorded",
+    "preparation-only-provider-loss",
+    "continuous-and-generation-provider-loss",
+    "unrelated-diagnostic-completed",
+    "same-format-replacement-not-inherited",
+    "diagnostic-history-reopened",
+    "unverified-decision-rejected",
+    "external-work-decision-verified",
+    "initial-binding-verified-without-work-promotion",
+    "replacement-decision-verified-without-automatic-rebind",
+    "decision-reuse-rejected",
+    "expired-decision-rejected",
+    "revoked-decision-rejected-with-history-preserved",
+    "decision-record-does-not-restore-live-proof",
+    "passage-complete"
+  ],
+  "library_passage_exit_code": 0
+}

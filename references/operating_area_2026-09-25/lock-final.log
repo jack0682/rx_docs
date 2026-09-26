@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/storage_lock_passage.py", line 92, in <module>
+    main()
+    ~~~~^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/storage_lock_passage.py", line 49, in main
+    assert set(executables) == {'rx_storage', 'atomicity', 'ownership'}, executables
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'atomicity': '/evidence/platform-target/debug/deps/atomicity-8efd85017bdbb986', 'mailbox': '/evidence/platform-target/debug/deps/mailbox-3eb924c1477f75d6', 'ownership': '/evidence/platform-target/debug/deps/ownership-f20acdfb06e49f37', 'rx_storage': '/evidence/platform-target/debug/deps/rx_storage-dfdd77111eef40b3'}

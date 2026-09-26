@@ -1,0 +1,63 @@
+$ cd <workspace>/rx-solutions
+$ docker run --rm --network none --read-only --cap-drop ALL --security-opt no-new-privileges --tmpfs /tmp:rw -v <workspace>/.f9-evidence/identity_probe.py:/probe.py:ro --entrypoint /usr/bin/python3 sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0 /probe.py
+{
+  "kind": "identity exposure probe, not production recovery",
+  "uid": 10001,
+  "cap_eff": "CapEff:\t0000000000000000",
+  "self": {
+    "pid": 1,
+    "state": "R",
+    "start_ticks": 164,
+    "boot_id": "b75caaa4-95f8-4e05-a77b-586b322d9a5f",
+    "observer_pid_namespace": "pid:[4026532560]",
+    "target_pid_namespace": "pid:[4026532560]",
+    "cmdline": [
+      "/usr/bin/python3",
+      "/probe.py",
+      ""
+    ],
+    "exe": "/usr/bin/python3.12"
+  },
+  "proc_self": "1",
+  "clock_ticks": 100,
+  "proc_mounts": [
+    "144 142 0:62 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw"
+  ],
+  "after_actual_manager_kill": {
+    "old_manager_pid": 7,
+    "child_before": {
+      "pid": 8,
+      "state": "R",
+      "start_ticks": 172,
+      "boot_id": "b75caaa4-95f8-4e05-a77b-586b322d9a5f",
+      "observer_pid_namespace": "pid:[4026532560]",
+      "target_pid_namespace": "pid:[4026532560]",
+      "cmdline": [
+        "/usr/bin/python3",
+        "-c",
+        "import time; time.sleep(60)",
+        ""
+      ],
+      "exe": "/usr/bin/python3.12"
+    },
+    "child_after": {
+      "pid": 8,
+      "state": "R",
+      "start_ticks": 172,
+      "boot_id": "b75caaa4-95f8-4e05-a77b-586b322d9a5f",
+      "observer_pid_namespace": "pid:[4026532560]",
+      "target_pid_namespace": "pid:[4026532560]",
+      "cmdline": [
+        "/usr/bin/python3",
+        "-c",
+        "import time; time.sleep(60)",
+        ""
+      ],
+      "exe": "/usr/bin/python3.12"
+    },
+    "child_survived": true
+  },
+  "after_controlled_original_exit": {
+    "proc_exists": false
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "result": "REFUSED_VALID_ATTACKER_SIGNATURE_FOR_EXACT_COMPILED_KEY_ID",
+  "attacker_signature_independently_verified": "Signature Verified Successfully",
+  "policy": "complete mutable Policy fixture with matching key ID and attacker public key",
+  "runtime_exit": 1,
+  "refusal": "{\"condition\":\"release/invalid-signature\",\"current_permission\":\"NOT_GRANTED\",\"detail\":\"release/invalid-signature\",\"schema\":\"rx.release-refusal.v1\"}\nError: \"release/invalid-signature\"\n"
+}

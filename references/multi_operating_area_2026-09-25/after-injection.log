@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/ojaehong/RX_automation/my_harness/../rx_ws/.g4-evidence/injection_probe.py", line 17, in <module>
+    if mode!='file-env-area':assert r.returncode!=0 and 'unknown field' in r.stderr,(mode,r.stdout,r.stderr)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('config-area', '', "docker: Error response from daemon: rpc error: code = Unknown desc = blob sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311 expected at /var/lib/desktop-containerd/daemon/io.containerd.content.v1.content/blobs/sha256/983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311: open /var/lib/desktop-containerd/daemon/io.containerd.content.v1.content/blobs/sha256/983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311: input/output error\n\nRun 'docker run --help' for more information\n")

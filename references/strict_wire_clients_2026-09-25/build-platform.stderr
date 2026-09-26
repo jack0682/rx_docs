@@ -1,0 +1,44 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Platform.Dockerfile
+#1 transferring dockerfile: 318B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/ubuntu:24.04
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/4] FROM docker.io/library/ubuntu:24.04@sha256:33ceb71981b602c1a7443a53469e4dba065f7503eab3078a2d7a57a2ab987517
+#4 resolve docker.io/library/ubuntu:24.04@sha256:33ceb71981b602c1a7443a53469e4dba065f7503eab3078a2d7a57a2ab987517 0.0s done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 ...
+
+#6 [2/4] RUN mkdir -p /etc/rx/platform /var/lib/rx /run/rx && chown 10001:10001 /var/lib/rx /run/rx
+#6 DONE 0.1s
+
+#5 [internal] load build context
+#5 transferring context: 79.73MB 1.1s done
+#5 DONE 1.1s
+
+#7 [3/4] COPY bin/rx-platform/rx-platformd /usr/local/bin/rx-platformd
+#7 DONE 0.1s
+
+#8 [4/4] WORKDIR /var/lib/rx
+#8 DONE 0.0s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 1.7s done
+#9 exporting manifest sha256:e1d4fac9a7bfc1e13a868505c93e21df237bfc8380fee0e9f822299e2fe26123 done
+#9 exporting config sha256:845d8507f8ce42da01a7a4e7647afc6c38b9e2095cdd14e3dc2cc33bb1efcc71 done
+#9 exporting attestation manifest sha256:108a7782f0a13c89fefca289507889c4f72e5973abe7a578030b403735ec75bd done
+#9 exporting manifest list sha256:31b46ae19b7512c71fcf6581dd1bca10131be0cbd6cd32fc4d870e1c7949ddb9 done
+#9 naming to docker.io/library/rx-g5-platform-runtime:latest done
+#9 unpacking to docker.io/library/rx-g5-platform-runtime:latest
+#9 unpacking to docker.io/library/rx-g5-platform-runtime:latest 0.2s done
+#9 DONE 2.0s

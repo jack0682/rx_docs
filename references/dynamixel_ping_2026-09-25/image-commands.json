@@ -1,0 +1,168 @@
+[
+  {
+    "label": "image-unsigned",
+    "argv": [
+      "docker",
+      "build",
+      "-t",
+      "rx-g5-2-solutions-unsigned",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/image"
+    ],
+    "exit": 0
+  },
+  {
+    "label": "extract-runtime-files.json",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--entrypoint",
+      "cat",
+      "rx-g5-2-solutions-unsigned",
+      "/opt/rx/manifests/runtime-files.json"
+    ],
+    "exit": 0
+  },
+  {
+    "label": "extract-dynamixel-driver.json",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--entrypoint",
+      "cat",
+      "rx-g5-2-solutions-unsigned",
+      "/opt/rx/manifests/dynamixel-driver.json"
+    ],
+    "exit": 0
+  },
+  {
+    "label": "sign-runtime",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/sign_release.py",
+      "--key",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/.tools/release-keys/development-release.pem",
+      "--inventory",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/runtime-files.json",
+      "--version",
+      "6",
+      "--revocation-version",
+      "1",
+      "--output",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/image/signed"
+    ],
+    "exit": 0
+  },
+  {
+    "label": "image-signed",
+    "argv": [
+      "docker",
+      "build",
+      "-f",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/image/Signed.Dockerfile",
+      "-t",
+      "rx-g5-2-solutions-runtime",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/image"
+    ],
+    "exit": 0
+  },
+  {
+    "label": "image-platform",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "rx-g5-platform-runtime:latest"
+    ],
+    "exit": 0
+  },
+  {
+    "label": "image-solutions",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "rx-g5-2-solutions-runtime:latest"
+    ],
+    "exit": 0
+  },
+  {
+    "label": "release-sigkill_at_both_journal_native_boundaries_never_replays_device_effect",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/linux-target:/evidence/linux-target:ro",
+      "--entrypoint",
+      "/evidence/linux-target/debug/deps/process_crash-a61f0fdf0a76b036",
+      "sha256:d836370eabed9aed11b14d8aee71a13b4077934b900964b0f60c9d88badf76e7",
+      "sigkill_at_both_journal_native_boundaries_never_replays_device_effect",
+      "--exact",
+      "--nocapture"
+    ],
+    "exit": 0
+  },
+  {
+    "label": "release-lost_run_initialization_reply_recovers_binding_without_reinitializing",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/linux-target:/evidence/linux-target:ro",
+      "--entrypoint",
+      "/evidence/linux-target/debug/deps/assignment_journal-b0919dd3a0a74c90",
+      "sha256:d836370eabed9aed11b14d8aee71a13b4077934b900964b0f60c9d88badf76e7",
+      "lost_run_initialization_reply_recovers_binding_without_reinitializing",
+      "--exact",
+      "--nocapture"
+    ],
+    "exit": 0
+  },
+  {
+    "label": "release-run_creation_marker_cannot_change_after_header_initialization",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/linux-target:/evidence/linux-target:ro",
+      "--entrypoint",
+      "/evidence/linux-target/debug/deps/assignment_journal-b0919dd3a0a74c90",
+      "sha256:d836370eabed9aed11b14d8aee71a13b4077934b900964b0f60c9d88badf76e7",
+      "run_creation_marker_cannot_change_after_header_initialization",
+      "--exact",
+      "--nocapture"
+    ],
+    "exit": 0
+  }
+]

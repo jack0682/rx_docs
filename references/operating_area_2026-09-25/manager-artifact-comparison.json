@@ -1,0 +1,7 @@
+{
+  "prior_artifact_count": 126,
+  "changed_prior_artifacts": {},
+  "diagnostic_result": "SUCCESS_WITHOUT_SOURCE_CHANGE_OR_ARTIFACT_DELETION",
+  "compiler": "rustc 1.98.1 48a229cea aarch64-unknown-linux-gnu",
+  "cause": "NOT_ESTABLISHED; transient metadata access/visibility is a hypothesis, not attribution"
+}

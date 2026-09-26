@@ -1,0 +1,13 @@
+{
+  "reason": "observed ENOSPC; completed processes, regenerate without debug symbols/incremental; retain source logs DB exact daemon",
+  "removed_build_targets": [
+    "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/platform-mac-target",
+    "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/solutions-mac-target",
+    "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/judge-target"
+  ],
+  "disk_after": {
+    "total": 494332366848,
+    "used": 490535723008,
+    "free": 3796643840
+  }
+}

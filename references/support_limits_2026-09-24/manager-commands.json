@@ -1,0 +1,109 @@
+[
+  {
+    "label": "runtime",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "rx-solutions:n5-runtime"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "builder",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "rust:1.98.1-slim-bookworm"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "build",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "-v",
+      "<workspace>/rx-solutions:/source:ro",
+      "-v",
+      "<workspace>/.f12-evidence/manager-final:/evidence",
+      "-w",
+      "/source",
+      "-e",
+      "CARGO_HOME=/evidence/cargo-home",
+      "--entrypoint",
+      "cargo",
+      "sha256:ff521445a372125ed4f76e1453a1f8098f2d05332d1601d30db1c1f62757e730",
+      "build",
+      "--locked",
+      "-p",
+      "rx-supervisor",
+      "--bin",
+      "rx-solutionsd",
+      "--target-dir",
+      "/evidence/target"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "scene",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "<workspace>/.f12-evidence/manager-final/data:/var/lib/rx-solutions",
+      "-v",
+      "<workspace>/.f12-evidence/manager-final:/evidence",
+      "-v",
+      "<workspace>/.f12-evidence/manager-final/target/debug/rx-solutionsd:/test/rx-solutionsd:ro",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0",
+      "-I",
+      "-B",
+      "/evidence/observer.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "foreign-namespace",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "<workspace>/.f12-evidence/manager-final/data:/var/lib/rx-solutions",
+      "-v",
+      "<workspace>/.f12-evidence/manager-final:/evidence",
+      "-v",
+      "<workspace>/.f12-evidence/manager-final/target/debug/rx-solutionsd:/test/rx-solutionsd:ro",
+      "--entrypoint",
+      "/test/rx-solutionsd",
+      "sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0",
+      "investigate",
+      "/evidence/current.json"
+    ],
+    "exit_code": 0
+  }
+]

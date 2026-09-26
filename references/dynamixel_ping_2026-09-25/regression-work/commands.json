@@ -1,0 +1,523 @@
+[
+  {
+    "label": "runtime",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "rx-solutions:g2-authenticated"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "builder",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "rx-g4-compact-builder:latest"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-build",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions:/source:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/regression-work:/evidence",
+      "-w",
+      "/source",
+      "-e",
+      "CARGO_HOME=/evidence/cargo-home",
+      "--entrypoint",
+      "cargo",
+      "sha256:42a4ede83f51be9276dd11e9d4eb7c2082fae2daf9a85e7508e50643bd81bfb6",
+      "build",
+      "--locked",
+      "-p",
+      "rx-supervisor",
+      "--bin",
+      "rx-solutionsd",
+      "--target-dir",
+      "/evidence/target"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "test-build",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions:/source:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/regression-work:/evidence",
+      "-w",
+      "/source",
+      "-e",
+      "CARGO_HOME=/evidence/cargo-home",
+      "--entrypoint",
+      "cargo",
+      "sha256:42a4ede83f51be9276dd11e9d4eb7c2082fae2daf9a85e7508e50643bd81bfb6",
+      "test",
+      "--locked",
+      "-p",
+      "rx-supervisor",
+      "--test",
+      "work_use",
+      "--no-run",
+      "--target-dir",
+      "/evidence/target",
+      "--message-format=json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "work-tests",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/regression-work:/evidence:ro",
+      "-e",
+      "RX_WORK_INSTALLED=1",
+      "--entrypoint",
+      "/evidence/target/debug/deps/work_use-bde33da5a573d16a",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "--nocapture"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-start",
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "rx-work-4b4f531176d2",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/regression-work/data:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-2-evidence/regression-work:/evidence:ro",
+      "--entrypoint",
+      "/evidence/target/debug/rx-solutionsd",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "run",
+      "/evidence/startup.json",
+      "/evidence/task.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "daemon-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "outside-observer",
+    "argv": [
+      "docker",
+      "exec",
+      "rx-work-4b4f531176d2",
+      "/usr/bin/python3",
+      "-I",
+      "-B",
+      "-c",
+      "import os,json,sqlite3,urllib.request; db=sqlite3.connect('file:/var/lib/rx-solutions/managed/registration.db?mode=ro',uri=True); print(json.dumps({'observer_pid':os.getpid(),'health':json.load(urllib.request.urlopen('http://127.0.0.1:8081/health')),'work_rows':db.execute(\"SELECT count(*) FROM entities WHERE key LIKE 'work/%'\").fetchone()[0]}))"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "normal-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "stopped",
+    "argv": [
+      "docker",
+      "inspect",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "final-log",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "cleanup-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "cleanup-remove",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-work-4b4f531176d2"
+    ],
+    "exit_code": 0
+  }
+]

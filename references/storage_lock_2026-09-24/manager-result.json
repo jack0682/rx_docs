@@ -1,0 +1,288 @@
+{
+  "result": "PASS",
+  "observer_pid": 1,
+  "manager_pid": 7,
+  "original": {
+    "binding": {
+      "catalog": {
+        "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+        "program": "rx/status-http"
+      },
+      "instance": "9cf7ac35-62d1-4c76-a859-d0b229ab0637",
+      "registration": "538e535f-59a0-475b-936b-b85c866b0e2c",
+      "registration_revision": "1",
+      "run": "2c05cedd-715d-44da-842d-551f79622efe",
+      "selection": "status"
+    },
+    "last_observed": {
+      "detail": "supervisor phase Starting; no additional lifecycle error; functional readiness and work-use permission are not assessed",
+      "exit_code": null,
+      "pid": 8,
+      "process_identity": {
+        "pid": 8,
+        "scope": {
+          "boot": "2cfbff8c-20dd-45b3-a6a0-d5b28daad9b8",
+          "euid": 10001,
+          "init_start_ticks": 23256,
+          "mount_namespace": "mnt:[4026532691]",
+          "pid_namespace": "pid:[4026532695]",
+          "proc_mount": "178 176 0:71 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw",
+          "time_namespace": "time:[4026532826]",
+          "time_offsets": "monotonic           0         0\nboottime            0         0\n",
+          "uid": 10001,
+          "user_namespace": "user:[4026531837]"
+        },
+        "start_ticks": 23387
+      },
+      "state": "RUNNING"
+    }
+  },
+  "external_kernel_observation": {
+    "pid": 8,
+    "stat": "8 (python3) R 7 8 1 0 -1 4194560 3602 0 0 0 3 0 0 0 20 0 1 0 23387 26460160 4714 18446744073709551615 4194304 10541240 281474589872864 0 0 0 0 16781312 2 0 0 0 17 4 0 0 0 0 0 10616216 12102016 226856960 281474589875995 281474589876081 281474589876081 281474589876199 0\n",
+    "boot": "2cfbff8c-20dd-45b3-a6a0-d5b28daad9b8",
+    "pid_namespace": "pid:[4026532695]",
+    "time_namespace": "time:[4026532826]"
+  },
+  "live": {
+    "identity": {
+      "pid": 8,
+      "scope": {
+        "boot": "2cfbff8c-20dd-45b3-a6a0-d5b28daad9b8",
+        "euid": 10001,
+        "init_start_ticks": 23256,
+        "mount_namespace": "mnt:[4026532691]",
+        "pid_namespace": "pid:[4026532695]",
+        "proc_mount": "178 176 0:71 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw",
+        "time_namespace": "time:[4026532826]",
+        "time_offsets": "monotonic           0         0\nboottime            0         0\n",
+        "uid": 10001,
+        "user_namespace": "user:[4026531837]"
+      },
+      "start_ticks": 23387
+    },
+    "observed_at": {
+      "clock_id": "unix-utc-ns",
+      "ticks_ns": "1790251080472217553"
+    },
+    "outcome": {
+      "state": "MATCHING_PROCESS_PRESENT"
+    },
+    "reference": "bf5bd02a-aa03-4df6-8db8-4243c1adf9f2",
+    "target": {
+      "digest": "9b10d286fbf4ccbb13a43f41b264816f53ce1d64d59ba20cdffba0180df3573a",
+      "instance": "9cf7ac35-62d1-4c76-a859-d0b229ab0637",
+      "registration": "538e535f-59a0-475b-936b-b85c866b0e2c",
+      "revision": "3"
+    }
+  },
+  "absent": {
+    "identity": {
+      "pid": 8,
+      "scope": {
+        "boot": "2cfbff8c-20dd-45b3-a6a0-d5b28daad9b8",
+        "euid": 10001,
+        "init_start_ticks": 23256,
+        "mount_namespace": "mnt:[4026532691]",
+        "pid_namespace": "pid:[4026532695]",
+        "proc_mount": "178 176 0:71 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw",
+        "time_namespace": "time:[4026532826]",
+        "time_offsets": "monotonic           0         0\nboottime            0         0\n",
+        "uid": 10001,
+        "user_namespace": "user:[4026531837]"
+      },
+      "start_ticks": 23387
+    },
+    "observed_at": {
+      "clock_id": "unix-utc-ns",
+      "ticks_ns": "1790251082333820887"
+    },
+    "outcome": {
+      "reason": "scoped-kernel-pid-absent",
+      "state": "ORIGINAL_NOT_RUNNING"
+    },
+    "reference": "4f1699cb-33fe-43c9-9db0-9b937bc12292",
+    "target": {
+      "digest": "9b10d286fbf4ccbb13a43f41b264816f53ce1d64d59ba20cdffba0180df3573a",
+      "instance": "9cf7ac35-62d1-4c76-a859-d0b229ab0637",
+      "registration": "538e535f-59a0-475b-936b-b85c866b0e2c",
+      "revision": "3"
+    }
+  },
+  "pid_reuse": null,
+  "resumed": {
+    "binding": {
+      "catalog": {
+        "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+        "program": "rx/status-http"
+      },
+      "instance": "299eb425-b7fc-42bb-acd0-7409ea459a58",
+      "registration": "538e535f-59a0-475b-936b-b85c866b0e2c",
+      "registration_revision": "1",
+      "run": "e3917c9e-05c3-4288-a88f-37045475e087",
+      "selection": "status"
+    },
+    "last_observed": {
+      "detail": "supervisor phase Starting; no additional lifecycle error; functional readiness and work-use permission are not assessed",
+      "exit_code": null,
+      "pid": 14,
+      "process_identity": {
+        "pid": 14,
+        "scope": {
+          "boot": "2cfbff8c-20dd-45b3-a6a0-d5b28daad9b8",
+          "euid": 10001,
+          "init_start_ticks": 23256,
+          "mount_namespace": "mnt:[4026532691]",
+          "pid_namespace": "pid:[4026532695]",
+          "proc_mount": "178 176 0:71 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw",
+          "time_namespace": "time:[4026532826]",
+          "time_offsets": "monotonic           0         0\nboottime            0         0\n",
+          "uid": 10001,
+          "user_namespace": "user:[4026531837]"
+        },
+        "start_ticks": 23765
+      },
+      "state": "RUNNING"
+    }
+  },
+  "recovery": {
+    "dispositions": [
+      {
+        "evidence": {
+          "basis": "PROCESS_INVESTIGATION",
+          "digest": "820a3d286043ebbd108d98064238be6a1e661550adea871ce9d1e53feb6821bc",
+          "outcome": {
+            "reason": "scoped-kernel-pid-absent",
+            "state": "ORIGINAL_NOT_RUNNING"
+          },
+          "reference": "90cd4e17-cd3d-4b21-b4c2-76dd2f54c04d"
+        },
+        "id": "1fe8f411-cfe5-47c2-8062-1acfcfe3dbca",
+        "kind": "CONFIRMED_CLOSURE",
+        "past_outcome": "UNRESOLVED",
+        "report": {
+          "actor": "local/explicit-resume",
+          "observed_at": {
+            "clock_id": "unix-utc-ns",
+            "ticks_ns": "1790251082879715304"
+          },
+          "procedure": "linux/scoped-process-identity",
+          "scope": "host/execution-investigation"
+        },
+        "resource_recovery": "NOT_CLAIMED",
+        "target": {
+          "digest": "9b10d286fbf4ccbb13a43f41b264816f53ce1d64d59ba20cdffba0180df3573a",
+          "instance": "9cf7ac35-62d1-4c76-a859-d0b229ab0637",
+          "registration": "538e535f-59a0-475b-936b-b85c866b0e2c",
+          "revision": "3"
+        },
+        "work_use_permission": "UNSUPPORTED"
+      }
+    ],
+    "limitations": [
+      "cold investigation supports only recorded Linux scoped birth identity; legacy records without it cannot be backfilled",
+      "scope mismatch, zombie and read races remain unverifiable; historical outcome remains unresolved",
+      "recovery disposition supplies neither a functional-readiness assessment nor work-use permission",
+      "resource recovery, F1 receipt restoration and physical outcome confirmation not claimed"
+    ],
+    "new_execution": "RESUME_AUTHORIZED_FOR_NAMED_RUN",
+    "resume_requests": [
+      {
+        "catalog": {
+          "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+          "program": "rx/status-http"
+        },
+        "consumed_by": null,
+        "registration_revision": "1",
+        "request": {
+          "actor": "local/explicit-resume",
+          "disposition": "1fe8f411-cfe5-47c2-8062-1acfcfe3dbca",
+          "id": "6c22daf5-1169-4479-a7f2-508dd9e39bd9",
+          "next_run": "e3917c9e-05c3-4288-a88f-37045475e087",
+          "requested_at": {
+            "clock_id": "unix-utc-ns",
+            "ticks_ns": "1790251082883026596"
+          }
+        }
+      }
+    ]
+  },
+  "old_unknown": {
+    "binding": {
+      "catalog": {
+        "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+        "program": "rx/status-http"
+      },
+      "instance": "9cf7ac35-62d1-4c76-a859-d0b229ab0637",
+      "registration": "538e535f-59a0-475b-936b-b85c866b0e2c",
+      "registration_revision": "1",
+      "run": "2c05cedd-715d-44da-842d-551f79622efe",
+      "selection": "status"
+    },
+    "last_observed": {
+      "detail": "supervisor phase Unknown; supervisor ownership lost; no PID adoption or replay; functional readiness and work-use permission are not assessed",
+      "exit_code": null,
+      "pid": 8,
+      "process_identity": {
+        "pid": 8,
+        "scope": {
+          "boot": "2cfbff8c-20dd-45b3-a6a0-d5b28daad9b8",
+          "euid": 10001,
+          "init_start_ticks": 23256,
+          "mount_namespace": "mnt:[4026532691]",
+          "pid_namespace": "pid:[4026532695]",
+          "proc_mount": "178 176 0:71 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw",
+          "time_namespace": "time:[4026532826]",
+          "time_offsets": "monotonic           0         0\nboottime            0         0\n",
+          "uid": 10001,
+          "user_namespace": "user:[4026531837]"
+        },
+        "start_ticks": 23387
+      },
+      "state": "UNKNOWN"
+    }
+  },
+  "state_files": [
+    "registration.db",
+    "runs/e3917c9e-05c3-4288-a88f-37045475e087/supervisor.db",
+    "supervisor.db"
+  ],
+  "scope": "same-namespace direct non-actuating child; no ownership adoption; original outcome unresolved",
+  "privileged_counterexample_fixture": false,
+  "runtime_image": "sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0",
+  "builder_image": "sha256:ff521445a372125ed4f76e1453a1f8098f2d05332d1601d30db1c1f62757e730",
+  "daemon_sha256": "5b161de1e14fa197cfe6d4130f9392cf879307076fb25fe110c3a7557179efec",
+  "foreign_namespace": {
+    "identity": {
+      "pid": 8,
+      "scope": {
+        "boot": "2cfbff8c-20dd-45b3-a6a0-d5b28daad9b8",
+        "euid": 10001,
+        "init_start_ticks": 23256,
+        "mount_namespace": "mnt:[4026532691]",
+        "pid_namespace": "pid:[4026532695]",
+        "proc_mount": "178 176 0:71 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw",
+        "time_namespace": "time:[4026532826]",
+        "time_offsets": "monotonic           0         0\nboottime            0         0\n",
+        "uid": 10001,
+        "user_namespace": "user:[4026531837]"
+      },
+      "start_ticks": 23387
+    },
+    "observed_at": {
+      "clock_id": "unix-utc-ns",
+      "ticks_ns": "1790251085130962388"
+    },
+    "outcome": {
+      "reason": "saved-namespace-not-observable-in-current-scope",
+      "state": "UNVERIFIABLE"
+    },
+    "reference": "68e73149-3fac-4d88-9765-1d73aca770fa",
+    "target": {
+      "digest": "9b10d286fbf4ccbb13a43f41b264816f53ce1d64d59ba20cdffba0180df3573a",
+      "instance": "9cf7ac35-62d1-4c76-a859-d0b229ab0637",
+      "registration": "538e535f-59a0-475b-936b-b85c866b0e2c",
+      "revision": "3"
+    }
+  }
+}

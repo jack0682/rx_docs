@@ -1,0 +1,119 @@
+[
+  {
+    "label": "runtime-image",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "rx-solutions:n5-runtime"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "builder-image",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "rust:1.98.1-slim-bookworm"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "release-inspection",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0",
+      "/opt/rx/tools/solutions_status.py",
+      "inspect"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "release-source-hash",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--read-only",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0",
+      "-c",
+      "import hashlib; from pathlib import Path; print(hashlib.sha256(Path(\"/opt/rx/tools/solutions_status.py\").read_bytes()).hexdigest())"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "build",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "-v",
+      "<workspace>/rx-solutions:/source:ro",
+      "-v",
+      "<workspace>/.f11-evidence/library-final:/evidence",
+      "-w",
+      "/source",
+      "-e",
+      "CARGO_HOME=/evidence/cargo-home",
+      "--entrypoint",
+      "cargo",
+      "sha256:ff521445a372125ed4f76e1453a1f8098f2d05332d1601d30db1c1f62757e730",
+      "test",
+      "-p",
+      "rx-supervisor",
+      "--locked",
+      "--test",
+      "registration_passage",
+      "--no-run",
+      "--target-dir",
+      "/evidence/target",
+      "--message-format=json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "passage",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "--user",
+      "501:20",
+      "-v",
+      "<workspace>/.f11-evidence/library-final:/evidence",
+      "-e",
+      "RX_PASSAGE_DATA=/evidence/state",
+      "--entrypoint",
+      "/evidence/target/debug/deps/registration_passage-6eb0541d6c975d6b",
+      "sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0",
+      "--ignored",
+      "--exact",
+      "real_registration_passage",
+      "--nocapture"
+    ],
+    "exit_code": 0
+  }
+]

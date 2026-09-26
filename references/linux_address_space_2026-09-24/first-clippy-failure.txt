@@ -1,0 +1,183 @@
+$ cd <workspace>/rx-solutions
+$ tools/cargo clippy --workspace --all-targets --all-features --locked --target-dir <workspace>/.f8-evidence/target-macos -- -D warnings
+    Checking once_cell v1.21.4
+    Checking memchr v2.8.3
+    Checking serde_core v1.0.229
+    Checking zeroize v1.9.0
+    Checking thiserror v2.0.20
+    Checking rustix v1.1.4
+    Checking bytes v1.12.1
+    Checking socket2 v0.6.5
+    Checking smallvec v1.16.0
+    Checking futures-core v0.3.34
+    Checking equivalent v1.0.2
+   Compiling cfg-if v1.0.4
+    Checking curve25519-dalek v5.0.0
+    Checking tracing-core v0.1.36
+    Checking rusqlite v0.40.2
+    Checking futures-sink v0.3.34
+    Checking slab v0.4.12
+   Compiling generic-array v0.14.7
+    Checking indexmap v2.14.2
+   Compiling bitflags v2.13.2
+    Checking tracing v0.1.44
+    Checking tokio v1.53.1
+    Checking http v1.5.0
+    Checking getrandom v0.2.17
+    Checking ed25519-dalek v3.0.0
+    Checking tower-service v0.3.3
+    Checking futures-task v0.3.34
+    Checking untrusted v0.9.0
+   Compiling block-buffer v0.10.4
+   Compiling crypto-common v0.1.7
+    Checking futures-util v0.3.34
+    Checking rustls-pki-types v1.15.1
+    Checking fnv v1.0.7
+    Checking ring v0.17.14
+    Checking atomic-waker v1.1.2
+    Checking try-lock v0.2.5
+   Compiling pulldown-cmark v0.13.4
+    Checking want v0.3.1
+   Compiling digest v0.10.7
+    Checking http-body v1.1.0
+    Checking httparse v1.10.1
+   Compiling getrandom v0.4.3
+    Checking futures-channel v0.3.34
+   Compiling cpufeatures v0.2.17
+   Compiling zmij v1.0.23
+    Checking httpdate v1.0.3
+   Compiling itoa v1.0.18
+    Checking tower-layer v0.3.3
+    Checking fs-set-times v0.20.3
+    Checking tempfile v3.27.0
+    Checking sync_wrapper v1.0.2
+   Compiling fastrand v2.5.0
+    Checking cap-primitives v4.0.3
+   Compiling serde_json v1.0.151
+    Checking serde v1.0.229
+    Checking uuid v1.26.1
+    Checking semver v1.0.28
+    Checking cap-std v4.0.3
+   Compiling pulldown-cmark-to-cmark v22.0.1
+    Checking rustls-webpki v0.103.15
+   Compiling petgraph v0.8.3
+   Compiling sha2 v0.10.9
+    Checking cap-fs-ext v4.0.3
+    Checking http-body-util v0.1.5
+   Compiling prost-types v0.14.4
+    Checking log v0.4.34
+    Checking mime v0.3.17
+    Checking prost v0.14.4
+    Checking percent-encoding v2.3.2
+    Checking axum-core v0.5.6
+    Checking rustls v0.23.44
+    Checking serde_jcs v0.2.0
+    Checking matchit v0.8.4
+    Checking pin-project v1.1.13
+    Checking base64 v0.22.1
+    Checking rx-domain v0.1.0 (<workspace>/rx-solutions/sdk/crates/rx-domain)
+   Compiling rx-host v0.1.0 (<workspace>/rx-solutions/runtime/rx-host)
+    Checking rx-melsec-mc v0.1.0 (<workspace>/rx-solutions/drivers/rx-melsec-mc)
+    Checking num-conv v0.2.2
+    Checking powerfmt v0.2.0
+    Checking deranged v0.5.8
+    Checking time-core v0.1.9
+    Checking base64 v0.23.1
+    Checking pem v4.0.0
+    Checking prost-reflect v0.16.5
+   Compiling prost-build v0.14.4
+    Checking tokio-util v0.7.19
+    Checking tokio-stream v0.1.19
+    Checking time v0.3.55
+   Compiling tonic-prost-build v0.14.6
+    Checking rx-package v0.1.0 (<workspace>/rx-solutions/sdk/crates/rx-package)
+    Checking rx-ports v0.1.0 (<workspace>/rx-solutions/sdk/crates/rx-ports)
+    Checking rx-service-status v0.1.0 (<workspace>/rx-solutions/runtime/rx-service-status)
+    Checking rx-process-contract v0.1.0 (<workspace>/rx-solutions/sdk/crates/rx-process-contract)
+    Checking h2 v0.4.19
+    Checking rx-storage v0.1.0 (<workspace>/rx-solutions/sdk/crates/rx-storage)
+    Checking tower v0.5.3
+    Checking yasna v0.6.0
+   Compiling rx-protocol v0.1.0 (<workspace>/rx-solutions/sdk/crates/rx-protocol)
+    Checking rcgen v0.14.10
+    Checking rx-solution-catalog v0.1.0 (<workspace>/rx-solutions/runtime/rx-solution-catalog)
+    Checking tokio-rustls v0.26.5
+    Checking axum v0.8.9
+    Checking rx-supervisor v0.1.0 (<workspace>/rx-solutions/runtime/rx-supervisor)
+    Checking rx-process v0.1.0 (<workspace>/rx-solutions/runtime/rx-process)
+    Checking hyper v1.11.1
+    Checking rx-process-package v0.1.0 (<workspace>/rx-solutions/runtime/rx-process-package)
+    Checking hyper-util v0.1.20
+error: large size difference between variants
+   --> runtime/rx-supervisor/src/execution.rs:125:1
+    |
+125 | /   pub enum Evidence {
+126 | |       /// A test double's result, never evidence of OS policy application.
+127 | | /     Simulation {
+128 | | |         provider: Name,
+129 | | |         reference: String,
+130 | | |     },
+    | | |_____- the second-largest variant contains at least 48 bytes
+...   |
+139 | | /     LinuxRlimit {
+140 | | |         observation: KernelObservation,
+141 | | |     },
+    | | |_____- the largest variant contains at least 296 bytes
+142 | |   }
+    | |___^ the entire enum is at least 296 bytes
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.98.0/index.html#large_enum_variant
+    = note: `-D clippy::large-enum-variant` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(clippy::large_enum_variant)]`
+help: consider boxing the large fields or introducing indirection in some other way to reduce the total size of the enum
+    |
+140 -         observation: KernelObservation,
+140 +         observation: Box<KernelObservation>,
+    |
+
+error: large size difference between variants
+   --> runtime/rx-supervisor/src/execution.rs:302:1
+    |
+302 | / pub enum Decision {
+303 | |     Admitted { pid: u32, receipt: Receipt },
+    | |     --------------------------------------- the largest variant contains at least 428 bytes
+304 | |     Rejected { unmet: Vec<Unmet> },
+    | |     ------------------------------ the second-largest variant contains at least 24 bytes
+305 | | }
+    | |_^ the entire enum is at least 432 bytes
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.98.0/index.html#large_enum_variant
+help: consider boxing the large fields or introducing indirection in some other way to reduce the total size of the enum
+    |
+303 -     Admitted { pid: u32, receipt: Receipt },
+303 +     Admitted { pid: u32, receipt: Box<Receipt> },
+    |
+
+error: large size difference between variants
+   --> runtime/rx-supervisor/src/execution.rs:309:1
+    |
+309 | /   pub enum Application {
+310 | |       LegacyNotDeclared,
+311 | |       NotApplied,
+312 | |       /// Historical observation bound to one launch, not a current enforcement monitor.
+313 | | /     ReportedAtStart {
+314 | | |         receipt: Receipt,
+315 | | |     },
+    | | |_____- the largest variant contains at least 424 bytes
+316 | | /     Unconfirmed {
+317 | | |         reason: String,
+318 | | |     },
+    | | |_____- the second-largest variant contains at least 24 bytes
+319 | |   }
+    | |___^ the entire enum is at least 424 bytes
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.98.0/index.html#large_enum_variant
+help: consider boxing the large fields or introducing indirection in some other way to reduce the total size of the enum
+    |
+314 -         receipt: Receipt,
+314 +         receipt: Box<Receipt>,
+    |
+
+error: could not compile `rx-supervisor` (lib) due to 3 previous errors
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `rx-supervisor` (lib test) due to 3 previous errors

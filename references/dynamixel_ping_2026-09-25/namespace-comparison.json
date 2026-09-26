@@ -1,0 +1,23 @@
+{
+  "old_command": [
+    "git",
+    "grep",
+    "-n",
+    "-E",
+    "native-dynamixel|dynamixel/meta|dynamixel-operation|dynamixel-invocation",
+    "1edc8457370c4691171cbbdd7831315564fe565c",
+    "--",
+    "runtime"
+  ],
+  "old_exit": 1,
+  "old_matches": "",
+  "current_command": [
+    "rg",
+    "-n",
+    "native-dynamixel|dynamixel/meta|dynamixel-operation|dynamixel-invocation",
+    "runtime/rx-host/src"
+  ],
+  "current_exit": 0,
+  "current_matches": "runtime/rx-host/src/dynamixel/mod.rs:53:            &name(\"dynamixel/meta\"),\nruntime/rx-host/src/dynamixel/mod.rs:88:                .get(&name(\"dynamixel/meta\"))?\nruntime/rx-host/src/dynamixel/mod.rs:94:            let entries = tx.scan(\"dynamixel-operation/\")?;\nruntime/rx-host/src/dynamixel/mod.rs:101:                if row.key != key(\"dynamixel-operation\", &entry.operation)\nruntime/rx-host/src/dynamixel/mod.rs:108:                    .get(&key(\"dynamixel-invocation\", &entry.invocation))?\nruntime/rx-host/src/dynamixel/mod.rs:160:                .get(&name(\"dynamixel/meta\"))?\nruntime/rx-host/src/dynamixel/mod.rs:167:                &key(\"dynamixel-operation\", operation),\nruntime/rx-host/src/dynamixel/mod.rs:172:                &key(\"dynamixel-invocation\", invocation),\nruntime/rx-host/src/dynamixel/mod.rs:180:                &name(\"dynamixel/meta\"),\nruntime/rx-host/src/dynamixel/mod.rs:199:                .get(&key(\"dynamixel-operation\", operation))?\nruntime/rx-host/src/dynamixel/mod.rs:212:                .get(&name(\"dynamixel/meta\"))?\nruntime/rx-host/src/dynamixel/mod.rs:317:            tx.get(&key(\"dynamixel-operation\", op))?\nruntime/rx-host/src/dynamixel/mod.rs:453:            .transact(|tx| Ok(tx.scan(\"dynamixel-operation/\")?.len()))\nruntime/rx-host/src/service/factory.rs:99:                identity: crate::dynamixel::initialize(&data.join(\"native-dynamixel\"))?,\nruntime/rx-host/src/service/factory.rs:130:                Ok(BuiltinAdapter::Dynamixel(Box::new(crate::dynamixel::Dynamixel::open(&data.join(\"native-dynamixel\"),identity,pin,clock)?)))\nruntime/rx-host/src/service/mod.rs:176:    for kind in [\"native-melsec\", \"native-dynamixel\"] {\nruntime/rx-host/src/service/mod.rs:268:        for dir in [\"native-melsec\", \"native-jtc\", \"native-dynamixel\"] {\n",
+  "interpretation": "new local adapter directory/key prefixes absent from prior runtime; supported old record bytes separately roundtripped; no global anti-cloning claim"
+}

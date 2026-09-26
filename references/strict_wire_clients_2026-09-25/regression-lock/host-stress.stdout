@@ -1,0 +1,1151 @@
+ROUND=0 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.41s
+
+
+ROUND=1 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.40s
+
+
+ROUND=2 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.38s
+
+
+ROUND=3 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.40s
+
+
+ROUND=4 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.38s
+
+
+ROUND=5 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.38s
+
+
+ROUND=6 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.38s
+
+
+ROUND=7 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.37s
+
+
+ROUND=8 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.36s
+
+
+ROUND=9 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.37s
+
+
+ROUND=10 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.39s
+
+
+ROUND=11 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.39s
+
+
+ROUND=12 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.39s
+
+
+ROUND=13 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.37s
+
+
+ROUND=14 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.37s
+
+
+ROUND=15 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.37s
+
+
+ROUND=16 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.37s
+
+
+ROUND=17 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.38s
+
+
+ROUND=18 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.40s
+
+
+ROUND=19 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.39s
+
+
+ROUND=20 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.38s
+
+
+ROUND=21 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.37s
+
+
+ROUND=22 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.39s
+
+
+ROUND=23 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.40s
+
+
+ROUND=24 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.38s
+
+
+ROUND=25 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.37s
+
+
+ROUND=26 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.39s
+
+
+ROUND=27 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.37s
+
+
+ROUND=28 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.38s
+
+
+ROUND=29 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.38s
+
+
+ROUND=30 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.39s
+
+
+ROUND=31 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.38s
+
+
+ROUND=32 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.38s
+
+
+ROUND=33 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.38s
+
+
+ROUND=34 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.38s
+
+
+ROUND=35 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.37s
+
+
+ROUND=36 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.38s
+
+
+ROUND=37 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.37s
+
+
+ROUND=38 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.38s
+
+
+ROUND=39 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.39s
+
+
+ROUND=40 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.38s
+
+
+ROUND=41 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.37s
+
+
+ROUND=42 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.37s
+
+
+ROUND=43 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.39s
+
+
+ROUND=44 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.37s
+
+
+ROUND=45 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.39s
+
+
+ROUND=46 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.38s
+
+
+ROUND=47 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.38s
+
+
+ROUND=48 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.38s
+
+
+ROUND=49 EXIT=0
+
+running 16 tests
+test export_host_image_fixture ... ignored, exports isolated container fixture
+test maintenance_crash_child ... ignored, abrupt-exit helper invoked only by the maintenance crash test
+test startup_rejects_policy_tampering_unknown_fields_and_unimplemented_physical_backend ... ok
+test binding_inspection_compares_full_cohort_without_creating_installation_or_restoring_authority ... ok
+test initialization_cannot_replace_a_concurrently_created_empty_destination ... ok
+test startup_rejects_a_symlink_at_the_actual_host_writer_lock_path ... ok
+test empty_replacement_database_is_not_reinitialized_as_a_fresh_host ... ok
+test maintenance_requires_descriptor_feature_marker_and_does_not_silently_upgrade_legacy_installations ... ok
+test operational_state_changes_after_stop_invalidate_preparation_without_reinitializing_the_journal ... ok
+test product_composition_has_immutable_installation_real_owner_and_clean_software_stop ... ok
+test preparation_cannot_swap_both_current_and_proposed_around_the_actual_stopped_startup ... ok
+test unavailable_runtime_lock_refuses_service_without_claiming_a_known_owner ... ok
+test failed_startup_invalidates_old_stop_even_when_old_status_file_still_says_stopped ... ok
+test durable_maintenance_requires_real_stop_recovers_same_request_and_blocks_startup_until_cancelled ... ok
+test preparation_commit_crashes_preserve_atomicity_and_durable_same_request_recovery ... ok
+test normal_stop_retains_adapter_until_drop_permission_is_explicit ... ok
+
+test result: ok. 14 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.37s
+
+
+G1_STRESS=[{"round": 0, "exit_code": 0}, {"round": 1, "exit_code": 0}, {"round": 2, "exit_code": 0}, {"round": 3, "exit_code": 0}, {"round": 4, "exit_code": 0}, {"round": 5, "exit_code": 0}, {"round": 6, "exit_code": 0}, {"round": 7, "exit_code": 0}, {"round": 8, "exit_code": 0}, {"round": 9, "exit_code": 0}, {"round": 10, "exit_code": 0}, {"round": 11, "exit_code": 0}, {"round": 12, "exit_code": 0}, {"round": 13, "exit_code": 0}, {"round": 14, "exit_code": 0}, {"round": 15, "exit_code": 0}, {"round": 16, "exit_code": 0}, {"round": 17, "exit_code": 0}, {"round": 18, "exit_code": 0}, {"round": 19, "exit_code": 0}, {"round": 20, "exit_code": 0}, {"round": 21, "exit_code": 0}, {"round": 22, "exit_code": 0}, {"round": 23, "exit_code": 0}, {"round": 24, "exit_code": 0}, {"round": 25, "exit_code": 0}, {"round": 26, "exit_code": 0}, {"round": 27, "exit_code": 0}, {"round": 28, "exit_code": 0}, {"round": 29, "exit_code": 0}, {"round": 30, "exit_code": 0}, {"round": 31, "exit_code": 0}, {"round": 32, "exit_code": 0}, {"round": 33, "exit_code": 0}, {"round": 34, "exit_code": 0}, {"round": 35, "exit_code": 0}, {"round": 36, "exit_code": 0}, {"round": 37, "exit_code": 0}, {"round": 38, "exit_code": 0}, {"round": 39, "exit_code": 0}, {"round": 40, "exit_code": 0}, {"round": 41, "exit_code": 0}, {"round": 42, "exit_code": 0}, {"round": 43, "exit_code": 0}, {"round": 44, "exit_code": 0}, {"round": 45, "exit_code": 0}, {"round": 46, "exit_code": 0}, {"round": 47, "exit_code": 0}, {"round": 48, "exit_code": 0}, {"round": 49, "exit_code": 0}]

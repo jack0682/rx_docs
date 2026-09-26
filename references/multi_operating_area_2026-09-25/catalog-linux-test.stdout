@@ -1,0 +1,17 @@
+
+running 3 tests
+catalog-area: area-catalog/duplicate-area
+catalog-issuer: area-catalog/duplicate-issuer
+catalog-key-id: area-catalog/duplicate-key-id
+catalog-public-key: area-catalog/duplicate-public-key
+catalog-program: area-catalog/duplicate-program
+catalog-count-0: area-catalog/count: requires 1..8 declarations
+catalog-count-9: area-catalog/count: requires 1..8 declarations
+test judge_approves_only_its_bounded_nonactuating_report_rule ... ok
+test catalog_rejects_each_ambiguous_declaration_before_map_construction ... ok
+development/support-area: own approval; own rule, foreign role/program/area refusals
+development/compact-support-area: own approval; own rule, foreign role/program/area refusals
+test each_area_checks_its_own_limits_role_and_program ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

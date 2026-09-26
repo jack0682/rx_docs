@@ -1,0 +1,121 @@
+[
+  {
+    "repo": "rx-platform",
+    "argv": [
+      "python3",
+      ".github/test_repository.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "repo": "rx-platform",
+    "argv": [
+      "python3",
+      ".github/test_commit_policy.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "repo": "rx-platform",
+    "argv": [
+      "python3",
+      "tools/check_repository.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "repo": "rx-platform",
+    "argv": [
+      "python3",
+      "tools/check_contract_baselines.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "repo": "rx-platform",
+    "argv": [
+      "python3",
+      "tools/test_export_host_sdk.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "repo": "rx-platform",
+    "argv": [
+      "python3",
+      "tools/check_host_sdk.py",
+      "../rx-solutions/sdk"
+    ],
+    "exit_code": 0
+  },
+  {
+    "repo": "rx-platform",
+    "argv": [
+      "tools/cargo",
+      "fmt",
+      "--all",
+      "--",
+      "--check"
+    ],
+    "exit_code": 0
+  },
+  {
+    "repo": "rx-solutions",
+    "argv": [
+      "python3",
+      ".github/test_repository.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "repo": "rx-solutions",
+    "argv": [
+      "python3",
+      ".github/test_commit_policy.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "repo": "rx-solutions",
+    "argv": [
+      "python3",
+      "tools/check_repository.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "repo": "rx-solutions",
+    "argv": [
+      "python3",
+      "tools/check_invariant_traceability.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "repo": "rx-solutions",
+    "argv": [
+      "python3",
+      "tools/check_device_catalog_sources.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "repo": "rx-solutions",
+    "argv": [
+      "python3",
+      "tools/test_native_inventory.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "repo": "rx-solutions",
+    "argv": [
+      "tools/cargo",
+      "fmt",
+      "--all",
+      "--",
+      "--check"
+    ],
+    "exit_code": 0
+  }
+]

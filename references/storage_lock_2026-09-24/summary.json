@@ -1,0 +1,49 @@
+{
+  "platform_contribution": "e387dec6f2d51f3c5b497808eba5c45b68e18969",
+  "solutions_contribution": "9a59bffb8f659e07acdf9dae507500a69390ccba",
+  "macos_workspaces": {
+    "rx-platform": {
+      "passed": 398,
+      "failed": 0,
+      "ignored": 16
+    },
+    "rx-solutions": {
+      "passed": 376,
+      "failed": 0,
+      "ignored": 17
+    }
+  },
+  "actual_linux_scenes": 11,
+  "host_stress_rounds": 50,
+  "host_stress_failures": 0,
+  "checks": {
+    "rx-platform-sdk-sync": 0,
+    "binding-update_host_qualification_binding": 0,
+    "rx-solutions-invariants": 0,
+    "rx-solutions-commit-policy-tests": 0,
+    "rx-platform-sdk-export-tests": 0,
+    "binding-update_host_configuration_binding": 0,
+    "rx-solutions-native": 0,
+    "rx-platform-fmt": 0,
+    "rx-solutions-repository": 0,
+    "rx-platform-contracts": 0,
+    "binding-update_executor_plan_binding": 0,
+    "binding-update_production_binding": 0,
+    "rx-solutions-repository-tests": 0,
+    "rx-platform-repository-tests": 0,
+    "rx-platform-invariants": 0,
+    "rx-platform-commit-policy-tests": 0,
+    "rx-solutions-fmt": 0,
+    "rx-solutions-catalog": 0,
+    "rx-platform-repository": 0,
+    "binding-update_host_read_binding": 0,
+    "binding-update_assignment_binding": 0,
+    "binding-update_executor_read_binding": 0
+  },
+  "seven_historical_passages": "maintained; F12 historical result label retained and its stress has no failures in this run",
+  "abrupt_loss": "REFUSED_UNTIL_INHERITED_DESCRIPTION_CLOSES",
+  "historical_attribution": "NO_DEFINITIVE_ATTRIBUTION_OF_F9_SINGLE_FAILURE",
+  "schema_and_wire": "unchanged; Rust source API has typed ownership errors",
+  "sdk": "regenerated from platform; 108 files checked",
+  "new_unix_lock_permissions": "0600 subject to umask; existing modes unchanged"
+}

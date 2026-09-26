@@ -1,0 +1,11 @@
+    Checking rx-application v0.1.0 (<workspace>/rx-platform/crates/rx-application)
+    Checking rx-storage v0.1.0 (<workspace>/rx-platform/crates/rx-storage)
+    Checking rx-process-contract v0.1.0 (<workspace>/rx-platform/crates/rx-process-contract)
+    Checking rx-package v0.1.0 (<workspace>/rx-platform/crates/rx-package)
+    Checking rx-protocol v0.1.0 (<workspace>/rx-platform/crates/rx-protocol)
+    Checking rx-protocol-adapter v0.1.0 (<workspace>/rx-platform/crates/rx-protocol-adapter)
+    Checking rx-runtime v0.1.0 (<workspace>/rx-platform/crates/rx-runtime)
+    Checking rx-api v0.1.0 (<workspace>/rx-platform/crates/rx-api)
+    Checking rx-host-client v0.1.0 (<workspace>/rx-platform/crates/rx-host-client)
+    Checking rx-platformd v0.1.0 (<workspace>/rx-platform/crates/rx-platformd)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 7.23s

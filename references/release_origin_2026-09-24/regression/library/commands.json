@@ -1,0 +1,119 @@
+[
+  {
+    "label": "runtime-image",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "rx-solutions:g2-authenticated"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "builder-image",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "rust:1.98.1-slim-bookworm"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "release-inspection",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "/opt/rx/tools/solutions_status.py",
+      "inspect"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "release-source-hash",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--read-only",
+      "--entrypoint",
+      "/usr/bin/python3",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "-c",
+      "import hashlib; from pathlib import Path; print(hashlib.sha256(Path(\"/opt/rx/tools/solutions_status.py\").read_bytes()).hexdigest())"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "build",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions:/source:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g2-evidence/library-fixed:/evidence",
+      "-w",
+      "/source",
+      "-e",
+      "CARGO_HOME=/evidence/cargo-home",
+      "--entrypoint",
+      "cargo",
+      "sha256:ff521445a372125ed4f76e1453a1f8098f2d05332d1601d30db1c1f62757e730",
+      "test",
+      "-p",
+      "rx-supervisor",
+      "--locked",
+      "--test",
+      "registration_passage",
+      "--no-run",
+      "--target-dir",
+      "/evidence/target",
+      "--message-format=json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "passage",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "--user",
+      "501:20",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g2-evidence/library-fixed:/evidence",
+      "-e",
+      "RX_PASSAGE_DATA=/evidence/state",
+      "--entrypoint",
+      "/evidence/target/debug/deps/registration_passage-bf13705a6989987b",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "--ignored",
+      "--exact",
+      "real_registration_passage",
+      "--nocapture"
+    ],
+    "exit_code": 0
+  }
+]

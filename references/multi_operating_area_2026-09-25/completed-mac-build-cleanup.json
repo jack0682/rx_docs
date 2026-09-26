@@ -1,0 +1,12 @@
+{
+  "removed": [
+    "rx-platform-mac-compact",
+    "rx-solutions-mac-compact"
+  ],
+  "retained": "test, clippy, repository, doctest-error logs",
+  "disk_after": {
+    "total": 494332366848,
+    "used": 486556348416,
+    "free": 7776018432
+  }
+}

@@ -32,3 +32,5 @@ RX는 많은 이기종 로봇과 시설을 공통 작업·권한·관측·결과
 ## 라이선스
 
 프로젝트 원본은 [Apache License 2.0](LICENSE)을 따른다. 제삼자 소프트웨어·문서·자료는 해당 저작권과 라이선스가 유지되며 [NOTICE](NOTICE)를 함께 읽는다.
+
+[첫 DYNAMIXEL Ping 모의 어댑터와 남은 번들 통합](docs/41_dynamixel_ping_adapter.md) · [G5.2 실행 근거](references/dynamixel_ping_2026-09-25/README.md)

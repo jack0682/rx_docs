@@ -1,0 +1,1 @@
+{"schema": "rx.catalog-source-check.v1", "status": "PASS", "external_repositories": 0, "profiles": 4, "unique_source_files": 1, "catalog_sha256": "669aaf825d542bf3173ab49072350b488e2f71826dfd9492e006d059a3c2ccbd", "scope": "Source identity and declarations only; synthetic fixtures are not physical equipment qualification."}

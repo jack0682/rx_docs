@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/support_limits_passage.py", line 146, in <module>
+    main()
+    ~~~~^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/support_limits_passage.py", line 132, in main
+    assert 'source-pin-mismatch' in error or 'program file integrity differs' in error
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

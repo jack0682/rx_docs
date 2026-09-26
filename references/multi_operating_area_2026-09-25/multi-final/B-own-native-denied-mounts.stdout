@@ -1,0 +1,266 @@
+[
+    {
+        "Id": "c9e4134376a219757b1e1b30ddb0e71fc72642d1a1c03ff849d4c997076dff2a",
+        "Created": "2026-09-25T01:30:57.756739926Z",
+        "Path": "/usr/bin/python3",
+        "Args": [
+            "/evidence/observer.py",
+            "/evidence/daemon",
+            "controlled"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 20485,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-09-25T01:30:57.78725726Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+        "ResolvConfPath": "/var/lib/docker/containers/c9e4134376a219757b1e1b30ddb0e71fc72642d1a1c03ff849d4c997076dff2a/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/c9e4134376a219757b1e1b30ddb0e71fc72642d1a1c03ff849d4c997076dff2a/hostname",
+        "HostsPath": "/var/lib/docker/containers/c9e4134376a219757b1e1b30ddb0e71fc72642d1a1c03ff849d4c997076dff2a/hosts",
+        "LogPath": "/var/lib/docker/containers/c9e4134376a219757b1e1b30ddb0e71fc72642d1a1c03ff849d4c997076dff2a/c9e4134376a219757b1e1b30ddb0e71fc72642d1a1c03ff849d4c997076dff2a-json.log",
+        "Name": "/rx-g4-09669869ae1b",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-final:/evidence:ro",
+                "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-final/B-own-native-denied:/case:ro",
+                "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-final/B-own-native-denied/state:/var/lib/rx-solutions",
+                "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-final/B-own-native-denied/mailbox:/exchange",
+                "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-final/B-own-native-denied/control:/control"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "none",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": [
+                "ALL"
+            ],
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": true,
+            "SecurityOpt": [
+                "no-new-privileges"
+            ],
+            "Tmpfs": {
+                "/tmp": "rw"
+            },
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-final",
+                "Destination": "/evidence",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-final/B-own-native-denied",
+                "Destination": "/case",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-final/B-own-native-denied/state",
+                "Destination": "/var/lib/rx-solutions",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-final/B-own-native-denied/mailbox",
+                "Destination": "/exchange",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-final/B-own-native-denied/control",
+                "Destination": "/control",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "c9e4134376a2",
+            "Domainname": "",
+            "User": "10001:10001",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "8081/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "LC_ALL=C.UTF-8",
+                "ROS_DISTRO=jazzy",
+                "DEBIAN_FRONTEND=noninteractive",
+                "CMAKE_BUILD_PARALLEL_LEVEL=1",
+                "MAKEFLAGS=-j1 -l1",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "ROS_LOG_DIR=/var/lib/rx-solutions/ros-log"
+            ],
+            "Cmd": [
+                "/evidence/observer.py",
+                "/evidence/daemon",
+                "controlled"
+            ],
+            "Image": "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+            "Volumes": null,
+            "WorkingDir": "/var/lib/rx-solutions",
+            "Entrypoint": [
+                "/usr/bin/python3"
+            ],
+            "Labels": {
+                "org.opencontainers.image.version": "24.04"
+            },
+            "StopSignal": "SIGTERM"
+        },
+        "NetworkSettings": {
+            "SandboxID": "4051483abcacbe0a7b6504f1c80a6a1189521ba17b43ceb1043fdcfcba77f112",
+            "SandboxKey": "/var/run/docker/netns/4051483abcac",
+            "Ports": {},
+            "Networks": {
+                "none": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "0bb5d864c8b01e6d1542352da95d38a802b71f0305914dbba39c27ea9b9838e6",
+                    "EndpointID": "ecf3f29ff1280a0e23819d95405ce13e595e72f7a98e4aa81fc913a9145be79c",
+                    "Gateway": "",
+                    "IPAddress": "",
+                    "MacAddress": "",
+                    "IPPrefixLen": 0,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:a9df9618d95223a93c45c278eae1e112617de3d047a792ba2b8a629c8e0dcdb1",
+            "size": 6179,
+            "platform": {
+                "architecture": "arm64",
+                "os": "linux"
+            }
+        }
+    }
+]

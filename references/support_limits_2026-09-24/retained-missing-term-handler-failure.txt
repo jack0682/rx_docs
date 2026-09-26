@@ -1,0 +1,19 @@
+$ cd <workspace>
+$ docker run --rm --network none --read-only --cap-drop ALL --security-opt no-new-privileges --tmpfs /tmp:rw -v <workspace>/.f12-evidence:/evidence:ro --entrypoint /evidence/target-linux/debug/deps/support_limits-082a7064042327a3 sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0 --nocapture
+
+running 1 test
+
+thread 'failed_guarded_delivery_never_settles_without_owned_exit_and_current_final_report' (6) panicked at runtime/rx-supervisor/tests/support_limits.rs:184:9:
+assertion `left == right` failed
+  left: false
+ right: true
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test failed_guarded_delivery_never_settles_without_owned_exit_and_current_final_report ... FAILED
+
+failures:
+
+failures:
+    failed_guarded_delivery_never_settles_without_owned_exit_and_current_final_report
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.38s
+

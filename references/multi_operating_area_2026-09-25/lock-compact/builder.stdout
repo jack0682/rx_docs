@@ -1,0 +1,56 @@
+[
+    {
+        "Id": "sha256:42a4ede83f51be9276dd11e9d4eb7c2082fae2daf9a85e7508e50643bd81bfb6",
+        "RepoTags": [
+            "rx-g4-compact-builder:latest"
+        ],
+        "RepoDigests": [
+            "rx-g4-compact-builder@sha256:42a4ede83f51be9276dd11e9d4eb7c2082fae2daf9a85e7508e50643bd81bfb6"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-09-19T01:15:32.407942199Z",
+        "Config": {
+            "Env": [
+                "PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "RUSTUP_HOME=/usr/local/rustup",
+                "CARGO_HOME=/usr/local/cargo",
+                "RUST_VERSION=1.98.1",
+                "CARGO_PROFILE_DEV_DEBUG=0",
+                "CARGO_PROFILE_TEST_DEBUG=0",
+                "CARGO_INCREMENTAL=0"
+            ],
+            "Cmd": [
+                "bash"
+            ],
+            "Labels": {
+                "org.opencontainers.image.source": "https://github.com/rust-lang/docker-rust"
+            }
+        },
+        "Architecture": "arm64",
+        "Os": "linux",
+        "Size": 276116511,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:055ab12bd547e17a0630037f06a186cf405e3f61bb03a614562ca8f5ab52a8be",
+                "sha256:3f42c559e1af4cb6b331c082581fb0fc2c947b9d59bc6e719afb228bbd407fb6"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-09-25T01:47:34.323236417Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:42a4ede83f51be9276dd11e9d4eb7c2082fae2daf9a85e7508e50643bd81bfb6",
+            "size": 855
+        },
+        "Identity": {
+            "Build": [
+                {
+                    "Ref": "kidtbc38xf9lu4ce20i84a62r",
+                    "CreatedAt": "2026-09-25T01:47:34.326501Z"
+                }
+            ]
+        }
+    }
+]

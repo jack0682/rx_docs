@@ -1,0 +1,14 @@
+# G5.2 initial source decision and proposed boundary
+
+Observed: Backend::ValidatedDriver was explicitly reserved (rx-host/DEVICE_PACKAGE_STARTUP.md), not a differently implemented device contract. factory.rs rejects it; binding_change.rs reports unavailable. Candidate A can host one fixed allowlisted simulation profile while all other profiles remain refused. This is not a generic plugin registry.
+
+Proposed, not yet implemented or measured:
+- One external Linux C++ helper using the pinned official 4.1.0 Protocol2PacketHandler and a custom in-memory PortHandler. Do not link any OS serial PortHandler implementation. One fixed ID/model/protocol2 Ping; no arbitrary instructions. Raw TX/RX transcript and SDK result retained separately from NativeCapture.
+- Host NativeAdapter alone dispatches after existing admission/SEND_ENTERED. Durable receipt lookup never launches helper. A lost native result stays UNKNOWN rather than re-pinging. Host journal, native file identity and exclusive ownership retained.
+- Reuse VALIDATED_DRIVER with exact profile and driver source digest; add explicit endpoint to the reserved configuration form (no previously supported installation). Only simulation/dynamixel/id-1 accepted; /dev and all other endpoints named refused before opening. Exact allowed finite program artifact and completion contract bound; no interpretation of arbitrary finite programs as Ping.
+- Helper accepts an inherited anonymous Unix socket, no listener. Linux SO_PEERCRED creator PID must equal parent, whose /proc/PID/exe inode/device must equal the fixed trusted installed /opt/rx/bin/rx-hostd; no argv0, env secret or caller supplied claimed identity. Python/C++ directly execing helper, including a fake socket and spoofed argv0, should be refused. Measure this before product implementation.
+- Trust scope is existing trusted installed Rust binaries and OS, not protection against root, arbitrary same-UID ptrace/FD theft, replacing installed executables or malicious recompilation. SDK clients contain no driver/helper and have no Host channel. No raw socket/serial endpoint exposed by helper. A copy of a model is not the selected Host-owned instance.
+- Source pin covers adapter/helper/upstream content pins. Build/install must also bind actual helper executable bytes; prefer existing authenticated release inventory and an explicit pinned executable descriptor checked before spawn, no arbitrary path. Need decide exact binding without a circular build hash.
+- Both installed SDK consumers use actual public commissioning and Cell.SubmitOperation, not G3/G4 work-use or base Operation.Submit. Need change fixture artifacts before signing/compiling so declared Ping program/completion are truthful.
+
+Open decisions for peer: parent credential boundary adequacy; binary pin construction; reserved configuration extension; finite-action Ping contract; what counts as same simulated model identity. No product source edits yet.

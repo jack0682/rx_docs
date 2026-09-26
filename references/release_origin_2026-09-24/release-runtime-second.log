@@ -1,0 +1,28 @@
+{
+  "result": "DEVELOPMENT_RELEASE_AUTHENTICATION_PASS",
+  "image": "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+  "unsigned_image": "sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0",
+  "daemon_sha256": "92ee52a32bd69a6ae94dff634759d284b9d6938a68da08749a5d05d15432c273",
+  "refusals": {
+    "unsigned-original": "release/unsigned",
+    "invalid-signature": "release/invalid-signature",
+    "unknown-key": "release/unknown-key",
+    "disk-and-env-key-injection": "release/unknown-key",
+    "root-id-impersonation": "release/invalid-signature",
+    "content-mismatch": "release/content-mismatch",
+    "forged-inventory": "release/content-mismatch",
+    "restart-rollback": "release/rollback",
+    "revoked-release": "release/revoked",
+    "revocation-replay-after-restart": "release/rollback"
+  },
+  "positive_versions": [
+    1,
+    2,
+    3
+  ],
+  "root": "COMPILED_SOURCE_LITERAL",
+  "whole_state_rollback_or_deletion": "NOT_DETECTED",
+  "product_custody": "NOT_ESTABLISHED",
+  "offline_revocation_freshness": "NOT_ESTABLISHED",
+  "physical_qualification": "NOT_PERFORMED"
+}

@@ -1,0 +1,19 @@
+{
+  "removed": [
+    "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/daemon",
+    "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-first/judge",
+    "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-final/daemon",
+    "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/multi-final/judge",
+    "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/g3-regression/rx-solutionsd",
+    "/Users/ojaehong/RX_automation/rx_ws/.g4-evidence/g3-regression/rx-operating-area-judge",
+    "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/area-first/rx-solutionsd",
+    "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/area-first/rx-operating-area-judge",
+    "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/area-final/rx-solutionsd",
+    "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/area-final/rx-operating-area-judge",
+    "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/area-final2/rx-solutionsd",
+    "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/area-final2/rx-operating-area-judge",
+    "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/area-catalog-fix/rx-solutionsd",
+    "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/area-catalog-fix/rx-operating-area-judge"
+  ],
+  "preserved": "all logs DBs sources hashes; exact G3 final-exact-area binaries and G4 root binaries; F7 baseline"
+}

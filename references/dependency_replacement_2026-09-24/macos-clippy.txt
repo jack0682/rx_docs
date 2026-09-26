@@ -1,0 +1,7 @@
+    Checking tonic-prost v0.14.6
+    Checking rx-supervisor v0.1.0 (<workspace>/rx-solutions/runtime/rx-supervisor)
+    Checking rx-protocol v0.1.0 (<workspace>/rx-solutions/sdk/crates/rx-protocol)
+    Checking rx-host v0.1.0 (<workspace>/rx-solutions/runtime/rx-host)
+    Checking rx-executor v0.1.0 (<workspace>/rx-solutions/runtime/rx-executor)
+    Checking rx-device-package v0.1.0 (<workspace>/rx-solutions/runtime/rx-device-package)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 5.58s

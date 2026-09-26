@@ -1,0 +1,88 @@
+[
+  {
+    "label": "library",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/registration_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--builder",
+      "rust:1.98.1-slim-bookworm",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g2-evidence/library-final"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "resource",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/resource_enforcement_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--builder",
+      "rust:1.98.1-slim-bookworm",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g2-evidence/resource-final",
+      "--baseline-daemon",
+      "/Users/ojaehong/RX_automation/rx_ws/.f7-evidence/resident-final/target/debug/rx-solutionsd"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "manager",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/manager_loss_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--builder",
+      "rust:1.98.1-slim-bookworm",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g2-evidence/manager-final"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "work",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/work_use_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--builder",
+      "rust:1.98.1-slim-bookworm",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g2-evidence/work-final"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "replacement",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/dependency_replacement_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--builder",
+      "rust:1.98.1-slim-bookworm",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g2-evidence/replacement-final"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "support",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/support_limits_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--builder",
+      "rust:1.98.1-slim-bookworm",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g2-evidence/support-final"
+    ],
+    "exit_code": 1
+  }
+]

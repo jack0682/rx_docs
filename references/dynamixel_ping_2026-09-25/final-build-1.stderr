@@ -1,0 +1,27 @@
+info: syncing channel updates for 1.98.1-aarch64-unknown-linux-gnu
+info: latest update on 2026-09-03 for version 1.98.1 (48a229cea 2026-09-01)
+info: downloading 2 components
+   Compiling tokio v1.53.1
+   Compiling rx-host v0.1.0 (/source/runtime/rx-host)
+   Compiling powerfmt v0.2.0
+   Compiling num-conv v0.2.2
+   Compiling time-core v0.1.9
+   Compiling deranged v0.5.8
+   Compiling time v0.3.55
+   Compiling base64 v0.23.1
+   Compiling tokio-util v0.7.19
+   Compiling h2 v0.4.19
+   Compiling tower v0.5.3
+   Compiling axum v0.8.9
+   Compiling hyper v1.11.1
+   Compiling hyper-util v0.1.20
+   Compiling tokio-rustls v0.26.5
+   Compiling tokio-stream v0.1.19
+   Compiling pem v4.0.0
+   Compiling yasna v0.6.0
+   Compiling hyper-timeout v0.5.2
+   Compiling tonic v0.14.6
+   Compiling rcgen v0.14.10
+   Compiling tonic-prost v0.14.6
+   Compiling rx-protocol v0.1.0 (/source/sdk/crates/rx-protocol)
+    Finished `test` profile [unoptimized] target(s) in 16.57s

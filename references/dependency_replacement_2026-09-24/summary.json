@@ -1,0 +1,36 @@
+{
+  "source_sha": "0591b6f0283423db7c220c797abc683096c4373b",
+  "macos_workspace": {
+    "passed": 374,
+    "failed": 0,
+    "ignored": 17
+  },
+  "new_replacement_tests_macos": 8,
+  "new_replacement_tests_linux": 9,
+  "new_compile_rejections": 4,
+  "checks": {
+    "fmt": 0,
+    "doc-tests": 0,
+    "repository-tests": 0,
+    "commit-policy-tests": 0,
+    "repository-check": 0,
+    "invariant-check": 0,
+    "catalog-check": 0,
+    "native-tests": 0
+  },
+  "replacement_passage": "PASS",
+  "library_stages": 32,
+  "resident": "PASS",
+  "resource": "PASS",
+  "manager_loss": "PASS",
+  "work": "PASS",
+  "scope": "diagnostic Consumer application API with actual Linux processes and external test issuer; no new resident routing CLI or operating-area provider integration",
+  "no_drain_reason": "non-actuating diagnostic input; one future route per relationship and one immutable version per run; no physical/process ownership transfer",
+  "checkpoint_period": null,
+  "maximum_detection_delay": null,
+  "timing_residuals": [
+    "TTL may expire after logical cut during commit IO",
+    "HTTP observation has its own timestamp, not SQL commit atomicity"
+  ],
+  "shipping_issuer_policy": "NONE; DEFAULT DENIAL; DIAGNOSTIC COMPLETION RETAINED"
+}

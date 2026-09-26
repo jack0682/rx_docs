@@ -1,0 +1,22 @@
+$ cd <workspace>/rx-solutions
+$ tools/cargo test -p rx-supervisor --doc --locked --target-dir <workspace>/.f11-evidence/target-macos
+    Blocking waiting for file lock on build directory
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.05s
+   Doc-tests rx_supervisor
+
+running 12 tests
+test runtime/rx-supervisor/src/registration/diagnostic/replacement.rs - registration::diagnostic::replacement::PreparedReplacement (line 84) - compile fail ... ok
+test runtime/rx-supervisor/src/work_use.rs - work_use::Prepared (line 74) - compile fail ... ok
+test runtime/rx-supervisor/src/registration/recovery.rs - registration::recovery::ProcessInvestigation (line 12) - compile fail ... ok
+test runtime/rx-supervisor/src/registration/diagnostic/replacement.rs - registration::diagnostic::replacement::PreparedReplacement (line 76) - compile fail ... ok
+test runtime/rx-supervisor/src/registration/recovery.rs - registration::recovery::ProcessInvestigation (line 17) - compile fail ... ok
+test runtime/rx-supervisor/src/registration/diagnostic/replacement.rs - registration::diagnostic::replacement::PreparedReplacement (line 80) - compile fail ... ok
+test runtime/rx-supervisor/src/work_use.rs - work_use::Prepared (line 70) - compile fail ... ok
+test runtime/rx-supervisor/src/registration/recovery.rs - registration::recovery::ProcessInvestigation (line 8) - compile fail ... ok
+test runtime/rx-supervisor/src/registration/diagnostic/replacement.rs - registration::diagnostic::replacement::PreparedReplacement (line 72) - compile fail ... ok
+test runtime/rx-supervisor/src/registration/recovery.rs - registration::recovery::Registry<R>::investigate (line 494) - compile fail ... ok
+test runtime/rx-supervisor/src/work_use.rs - work_use::Prepared (line 78) - compile fail ... ok
+test runtime/rx-supervisor/src/work_use.rs - work_use::Prepared (line 82) - compile fail ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.23s
+

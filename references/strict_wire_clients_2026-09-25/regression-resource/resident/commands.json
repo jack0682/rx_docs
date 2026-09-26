@@ -1,0 +1,328 @@
+[
+  {
+    "label": "image",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "rx-solutions:g2-authenticated"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "builder",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "rx-g4-compact-builder"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "build",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions:/source:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-resource/resident:/evidence",
+      "-w",
+      "/source",
+      "-e",
+      "CARGO_HOME=/evidence/cargo-home",
+      "--entrypoint",
+      "cargo",
+      "sha256:42a4ede83f51be9276dd11e9d4eb7c2082fae2daf9a85e7508e50643bd81bfb6",
+      "build",
+      "--locked",
+      "-p",
+      "rx-supervisor",
+      "--bin",
+      "rx-solutionsd",
+      "--target-dir",
+      "/evidence/target"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "first-launcher",
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "rx-resident-first-eb690a4c72d4",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-resource/resident/data:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-resource/resident/startup.json:/config/startup.json:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-resource/resident/target/debug/rx-solutionsd:/test/rx-solutionsd:ro",
+      "--entrypoint",
+      "/test/rx-solutionsd",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "run",
+      "/config/startup.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "first-owner",
+    "argv": [
+      "docker",
+      "exec",
+      "rx-resident-first-eb690a4c72d4",
+      "/usr/bin/python3",
+      "-c",
+      "from pathlib import Path; print(Path(\"/proc/1/cmdline\").read_bytes().decode().replace(chr(0),\" \"))"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "first-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-resident-first-eb690a4c72d4"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "first-logs",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-resident-first-eb690a4c72d4"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "reopen-launcher",
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "rx-resident-reopen-eb690a4c72d4",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-resource/resident/data:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-resource/resident/startup.json:/config/startup.json:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-resource/resident/target/debug/rx-solutionsd:/test/rx-solutionsd:ro",
+      "--entrypoint",
+      "/test/rx-solutionsd",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "run",
+      "/config/startup.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "reopen-logs",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-resident-reopen-eb690a4c72d4"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "activate-launcher",
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "rx-resident-activate-eb690a4c72d4",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-resource/resident/data:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-resource/resident/startup.json:/config/startup.json:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-resource/resident/target/debug/rx-solutionsd:/test/rx-solutionsd:ro",
+      "--entrypoint",
+      "/test/rx-solutionsd",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "activate",
+      "/config/startup.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "activate-owner",
+    "argv": [
+      "docker",
+      "exec",
+      "rx-resident-activate-eb690a4c72d4",
+      "/usr/bin/python3",
+      "-c",
+      "from pathlib import Path; print(Path(\"/proc/1/cmdline\").read_bytes().decode().replace(chr(0),\" \"))"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "crash",
+    "argv": [
+      "docker",
+      "kill",
+      "--signal",
+      "KILL",
+      "rx-resident-activate-eb690a4c72d4"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "activate-logs",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-resident-activate-eb690a4c72d4"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "unknown-launcher",
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "rx-resident-unknown-eb690a4c72d4",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-resource/resident/data:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-resource/resident/startup.json:/config/startup.json:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/regression-resource/resident/target/debug/rx-solutionsd:/test/rx-solutionsd:ro",
+      "--entrypoint",
+      "/test/rx-solutionsd",
+      "sha256:983e84c8c93602980531e72833c540fda53afb4f8a78460c26e5abecf8dae311",
+      "activate",
+      "/config/startup.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "unknown-logs",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-resident-unknown-eb690a4c72d4"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "retained-rx-resident-first-eb690a4c72d4",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-resident-first-eb690a4c72d4"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "cleanup-remove-rx-resident-first-eb690a4c72d4",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-resident-first-eb690a4c72d4"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "retained-rx-resident-reopen-eb690a4c72d4",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-resident-reopen-eb690a4c72d4"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "cleanup-remove-rx-resident-reopen-eb690a4c72d4",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-resident-reopen-eb690a4c72d4"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "retained-rx-resident-activate-eb690a4c72d4",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-resident-activate-eb690a4c72d4"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "cleanup-remove-rx-resident-activate-eb690a4c72d4",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-resident-activate-eb690a4c72d4"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "retained-rx-resident-unknown-eb690a4c72d4",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-resident-unknown-eb690a4c72d4"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "cleanup-remove-rx-resident-unknown-eb690a4c72d4",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-resident-unknown-eb690a4c72d4"
+    ],
+    "exit_code": 0
+  }
+]

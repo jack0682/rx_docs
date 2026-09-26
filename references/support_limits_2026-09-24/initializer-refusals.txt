@@ -1,0 +1,7 @@
+
+running 2 tests
+test required_composition_initialization_rejects_missing_partial_changed_list_and_wrong_digest ... ok
+test four_named_initializer_successes_are_recorded_once_and_entered_is_never_replayed ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.29s
+

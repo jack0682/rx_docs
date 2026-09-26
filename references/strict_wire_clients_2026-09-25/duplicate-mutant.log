@@ -1,0 +1,237 @@
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.24
+   Compiling libc v0.2.189
+   Compiling bytes v1.12.1
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling pin-project-lite v0.2.17
+   Compiling cfg-if v1.0.4
+   Compiling hashbrown v0.17.1
+   Compiling equivalent v1.0.2
+   Compiling futures-core v0.3.34
+   Compiling anyhow v1.0.104
+   Compiling either v1.18.0
+   Compiling once_cell v1.21.4
+   Compiling itertools v0.14.0
+   Compiling version_check v0.9.5
+   Compiling find-msvc-tools v0.1.12
+   Compiling http v1.5.0
+   Compiling shlex v2.0.1
+   Compiling serde_core v1.0.229
+   Compiling generic-array v0.14.7
+   Compiling cc v1.4.5
+   Compiling tracing-core v0.1.36
+   Compiling futures-sink v0.3.34
+   Compiling slab v0.4.12
+   Compiling typenum v1.20.1
+   Compiling http-body v1.1.0
+   Compiling socket2 v0.6.5
+   Compiling mio v1.2.3
+   Compiling indexmap v2.14.2
+   Compiling syn v2.0.119
+   Compiling syn v3.0.5
+   Compiling bitflags v2.13.2
+   Compiling zmij v1.0.23
+   Compiling log v0.4.34
+   Compiling pulldown-cmark v0.13.4
+   Compiling futures-task v0.3.34
+   Compiling httparse v1.10.1
+   Compiling tower-service v0.3.3
+   Compiling ring v0.17.14
+   Compiling getrandom v0.4.3
+   Compiling rustix v1.1.4
+   Compiling prettyplease v0.2.37
+   Compiling block-buffer v0.10.4
+   Compiling crypto-common v0.1.7
+   Compiling futures-util v0.3.34
+   Compiling errno v0.3.14
+   Compiling getrandom v0.2.17
+   Compiling fnv v1.0.7
+   Compiling atomic-waker v1.1.2
+   Compiling foldhash v0.1.5
+   Compiling regex-syntax v0.8.11
+   Compiling unicase v2.9.0
+   Compiling zeroize v1.9.0
+   Compiling untrusted v0.9.0
+   Compiling try-lock v0.2.5
+   Compiling rustls-pki-types v1.15.1
+   Compiling want v0.3.1
+   Compiling hashbrown v0.15.5
+   Compiling digest v0.10.7
+   Compiling futures-channel v0.3.34
+   Compiling smallvec v1.16.0
+   Compiling httpdate v1.0.3
+   Compiling rustls v0.23.44
+   Compiling regex-automata v0.4.18
+   Compiling fastrand v2.5.0
+   Compiling fixedbitset v0.5.7
+   Compiling sync_wrapper v1.0.2
+   Compiling tower-layer v0.3.3
+   Compiling tempfile v3.27.0
+   Compiling petgraph v0.8.3
+   Compiling pulldown-cmark-to-cmark v22.0.1
+   Compiling http-body-util v0.1.5
+   Compiling serde_json v1.0.151
+   Compiling multimap v0.10.1
+   Compiling heck v0.5.0
+   Compiling subtle v2.6.1
+   Compiling mime v0.3.17
+   Compiling tokio-macros v2.7.2
+   Compiling serde v1.0.229
+   Compiling serde_derive v1.0.229
+   Compiling axum-core v0.5.6
+   Compiling tokio v1.53.1
+   Compiling regex v1.13.1
+   Compiling tonic-build v0.14.6
+   Compiling prost-derive v0.14.4
+   Compiling tracing-attributes v0.1.31
+   Compiling pin-project-internal v1.1.13
+   Compiling rustls-webpki v0.103.15
+   Compiling cpufeatures v0.2.17
+   Compiling protoc-bin-vendored-linux-x86_32 v3.2.0
+   Compiling protoc-bin-vendored-macos-aarch_64 v3.2.0
+   Compiling protoc-bin-vendored-win32 v3.2.0
+   Compiling protoc-bin-vendored-macos-x86_64 v3.2.0
+   Compiling thiserror v2.0.20
+   Compiling protoc-bin-vendored-linux-x86_64 v3.2.0
+   Compiling protoc-bin-vendored-linux-aarch_64 v3.2.0
+   Compiling protoc-bin-vendored-linux-ppcle_64 v3.2.0
+   Compiling matchit v0.8.4
+   Compiling protoc-bin-vendored-linux-s390_64 v3.2.0
+   Compiling percent-encoding v2.3.2
+   Compiling pin-project v1.1.13
+   Compiling protoc-bin-vendored v3.2.0
+   Compiling tracing v0.1.44
+   Compiling prost v0.14.4
+   Compiling sha2 v0.10.9
+   Compiling thiserror-impl v2.0.20
+   Compiling async-trait v0.1.92
+   Compiling prost-types v0.14.4
+   Compiling base64 v0.22.1
+   Compiling ryu-js v0.2.2
+   Compiling uuid v1.26.1
+   Compiling aho-corasick v1.1.5
+   Compiling serde_jcs v0.2.0
+   Compiling prost-build v0.14.4
+   Compiling prost-reflect v0.16.5
+   Compiling rx-domain v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/duplicate-mutant-source/crates/rx-domain)
+   Compiling tonic-prost-build v0.14.6
+   Compiling tokio-util v0.7.19
+   Compiling tokio-stream v0.1.19
+   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/duplicate-mutant-source/crates/rx-protocol)
+   Compiling tokio-rustls v0.26.5
+   Compiling h2 v0.4.19
+   Compiling tower v0.5.3
+   Compiling axum v0.8.9
+   Compiling hyper v1.11.1
+   Compiling hyper-util v0.1.20
+   Compiling hyper-timeout v0.5.2
+   Compiling tonic v0.14.6
+   Compiling tonic-prost v0.14.6
+    Finished `test` profile [unoptimized] target(s) in 11.86s
+     Running tests/strict_conformance.rs (/Users/ojaehong/RX_automation/rx_ws/.g5-evidence/duplicate-mutant-target/debug/deps/strict_conformance-5617a5417dc25004)
+
+running 1 test
+empty-ordinary-message SW14 public bytes=0 expected=OK actual=OK
+ordinary-enum-omitted SW11 public bytes=0 expected=OK actual=OK
+ordinary-explicit-zero SW14 public bytes=2 expected=OK actual=OK
+optional-absent SW14 public bytes=0 expected=OK actual=OK
+optional-present-zero SW14 public bytes=2 expected=OK actual=OK
+oneof-present-false SW08 public bytes=2 expected=OK actual=OK
+oneof-present-true SW10 public bytes=2 expected=OK actual=OK
+oneof-zigzag-minus-one SW10 public bytes=2 expected=OK actual=OK
+uint64-maximum SW04 public bytes=11 expected=OK actual=OK
+uint32-maximum SW10 public bytes=6 expected=OK actual=OK
+nonminimal-value SW04 public bytes=3 expected=OK actual=OK
+nonminimal-value re-encode expected=OK actual=OK
+nonminimal-tag SW04 public bytes=4 expected=OK actual=OK
+nonminimal-tag re-encode expected=OK actual=OK
+unordered-fields SW05 public bytes=5 expected=OK actual=OK
+unordered-fields re-encode expected=OK actual=OK
+unicode-string SW13 public bytes=6 expected=OK actual=OK
+opaque-bytes SW13 public bytes=4 expected=OK actual=OK
+known-enum SW11 public bytes=2 expected=OK actual=OK
+nested-empty-ordinary-message SW14 public bytes=2 expected=OK actual=OK
+nested-oneof-present SW08 public bytes=6 expected=OK actual=OK
+finite-negative-zero SW12 public bytes=9 expected=OK actual=OK
+finite-double-one SW12 public bytes=9 expected=OK actual=OK
+packed-reals SW09 public bytes=18 expected=OK actual=OK
+unpacked-reals SW09 public bytes=18 expected=OK actual=OK
+mixed-packed-unpacked SW09 public bytes=19 expected=OK actual=OK
+multiple-packed-segments SW09 public bytes=20 expected=OK actual=OK
+empty-packed-segment SW09 public bytes=2 expected=OK actual=OK
+tag-zero SW05 public bytes=1 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+unknown-tag SW05 public bytes=3 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+field-number-overflow SW05 public bytes=7 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+truncated-key SW04 public bytes=1 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+truncated-varint SW04 public bytes=2 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+overflow-tenth-byte SW04 public bytes=11 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+unterminated-ten-byte-varint SW04 public bytes=11 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+truncated-length SW04 public bytes=2 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+length-beyond-message SW04 public bytes=3 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+length-overflow SW04 public bytes=11 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+wrong-wire-type SW05 public bytes=2 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+groups-not-supported SW05 public bytes=2 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+duplicate-singular-equal SW07 public bytes=6 expected=INVALID_ARGUMENT actual=OK
+duplicate-singular-different SW07 public bytes=6 expected=INVALID_ARGUMENT actual=OK
+duplicate-optional SW07 public bytes=4 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+missing-oneof SW08 public bytes=0 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+two-oneof-arms SW08 public bytes=4 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+repeated-oneof-arm SW08 public bytes=4 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+nested-missing-oneof SW08 public bytes=4 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+bool-outside-range SW10 public bytes=2 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+uint32-overflow SW10 public bytes=6 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+explicit-enum-zero SW11 public bytes=2 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+unknown-enum SW11 public bytes=2 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+negative-enum SW11 public bytes=11 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+double-nan SW12 public bytes=9 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+packed-double-nan SW12 public bytes=10 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+double-infinity SW12 public bytes=9 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+packed-double-infinity SW12 public bytes=10 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+double-negative-infinity SW12 public bytes=9 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+packed-double-negative-infinity SW12 public bytes=10 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+truncated-fixed64 SW04 public bytes=4 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+truncated-packed-fixed64 SW04 public bytes=9 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+utf8-overlong SW13 public bytes=4 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+utf8-surrogate SW13 public bytes=5 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+utf8-above-unicode SW13 public bytes=6 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+utf8-incomplete SW13 public bytes=4 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+utf8-stray-continuation SW13 public bytes=3 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+size-1048576 SW01 public bytes=1048576 expected=OK actual=OK
+size-1048577 SW01 public bytes=1048577 expected=RESOURCE_EXHAUSTED actual=RESOURCE_EXHAUSTED
+field-budget-65536 SW03 public bytes=131072 expected=OK actual=OK
+field-budget-65537 SW03 public bytes=131074 expected=RESOURCE_EXHAUSTED actual=RESOURCE_EXHAUSTED
+packed-budget-65535 SW03 public bytes=524284 expected=OK actual=OK
+packed-budget-65536 SW03 public bytes=524292 expected=RESOURCE_EXHAUSTED actual=RESOURCE_EXHAUSTED
+unpacked-limit-reencode-over-budget SW03 public bytes=589824 expected=OK actual=OK
+unpacked-limit-reencode-over-budget re-encode expected=RESOURCE_EXHAUSTED actual=RESOURCE_EXHAUSTED
+depth-63 SW02 guard bytes=126 expected=OK actual=OK
+depth-64 SW02 guard bytes=128 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+absent-map SW06 guard bytes=0 expected=OK actual=OK
+encoded-map SW06 guard bytes=2 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+float32-one SW12 guard bytes=5 expected=OK actual=OK
+float32-infinity SW12 guard bytes=5 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+truncated-fixed32 SW04 guard bytes=3 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+fixed32-and-fixed64 SW09 guard bytes=14 expected=OK actual=OK
+sint32-maximum-raw SW10 guard bytes=6 expected=OK actual=OK
+sint32-overflow SW10 guard bytes=6 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+packed-booleans SW09 guard bytes=4 expected=OK actual=OK
+packed-invalid-boolean SW10 guard bytes=3 expected=INVALID_ARGUMENT actual=INVALID_ARGUMENT
+repeated-boolean-unpacked SW09 guard bytes=4 expected=OK actual=OK
+TCK totals: public=69 synthetic=13
+
+thread 'authored_profile_vectors_check_existing_rust_codec_and_synthetic_guards' (22619487) panicked at crates/rx-protocol/tests/strict_conformance.rs:155:5:
+duplicate-singular-equal: expected INVALID_ARGUMENT, got OK: Ok([10, 1, 97])
+duplicate-singular-different: expected INVALID_ARGUMENT, got OK: Ok([10, 1, 98])
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test authored_profile_vectors_check_existing_rust_codec_and_synthetic_guards ... FAILED
+
+failures:
+
+failures:
+    authored_profile_vectors_check_existing_rust_codec_and_synthetic_guards
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+
+error: test failed, to rerun pass `-p rx-protocol --test strict_conformance`

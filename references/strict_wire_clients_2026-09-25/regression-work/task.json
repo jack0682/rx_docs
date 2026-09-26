@@ -1,0 +1,7 @@
+{
+  "operation": "e5c6bf47-5e2e-4582-8934-cd5d7a5159a6",
+  "selection": "status",
+  "operating_area": "example/unconnected-area",
+  "required_native_packages": "1000",
+  "required_support_profiles": "6"
+}

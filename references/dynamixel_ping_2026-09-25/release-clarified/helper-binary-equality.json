@@ -1,0 +1,5 @@
+{
+  "equal_to_prior_helper": true,
+  "sha256": "95cb5b1902bbeab0af2d984b9f7c38210b48254be2b0d43720ba5e66d11db51c",
+  "change": "source comment clarifies required conjunction; Rust source descriptor pin and signed inventory rebuilt"
+}

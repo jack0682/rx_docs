@@ -1,0 +1,47 @@
+$ cd <workspace>/rx-solutions
+$ docker run --rm --network none --read-only --cap-drop ALL --security-opt no-new-privileges --tmpfs /tmp:rw -v <workspace>/.f8-evidence/footprint_probe.py:/probe.py:ro --entrypoint /usr/bin/python3 sha256:fcb56bfdfcc1f68bf8cfb6d28f7f24d5899f5e31030ee2a882f6e29e1e28b4a0 /probe.py
+{
+  "scope": "status footprint and prlimit feasibility probe, not production RX enforcement",
+  "rows": [
+    {
+      "scene": "baseline",
+      "kernel_vm_peak_bytes": 52219904,
+      "chosen_limit_bytes": null,
+      "limit_to_observed_peak_ratio": null,
+      "limits": "Limit                     Soft Limit           Hard Limit           Units     \nMax cpu time              unlimited            unlimited            seconds   \nMax file size             unlimited            unlimited            bytes     \nMax data size             unlimited            unlimited            bytes     \nMax stack size            8388608              unlimited            bytes     \nMax core file size        0                    unlimited            bytes     \nMax resident set          unlimited            unlimited            bytes     \nMax processes             unlimited            unlimited            processes \nMax open files            1048576              1048576              files     \nMax locked memory         unlimited            unlimited            bytes     \nMax address space         unlimited            unlimited            bytes     \nMax file locks            unlimited            unlimited            locks     \nMax pending signals       23687                23687                signals   \nMax msgqueue size         819200               819200               bytes     \nMax nice priority         0                    0                    \nMax realtime priority     0                    0                    \nMax realtime timeout      unlimited            unlimited            us        \n",
+      "health": {
+        "schema": "rx.solutions-status.v1",
+        "supervisor_instance": "8f000000-0000-4000-8000-000000000001",
+        "phase": "SOFTWARE_READY_UNCOMMISSIONED",
+        "native_packages": 675,
+        "external_device_repositories": 0,
+        "support_profiles": 4,
+        "simulation_profiles": 4,
+        "physical_qualification": "NOT_PERFORMED",
+        "hardware_processes_started_by_entrypoint": 0,
+        "operator_api_delegation": "NOT_CONNECTED"
+      },
+      "exit_code": 0
+    },
+    {
+      "scene": "bounded",
+      "kernel_vm_peak_bytes": 52219904,
+      "chosen_limit_bytes": 268435456,
+      "limit_to_observed_peak_ratio": 5.140481606400502,
+      "limits": "Limit                     Soft Limit           Hard Limit           Units     \nMax cpu time              unlimited            unlimited            seconds   \nMax file size             unlimited            unlimited            bytes     \nMax data size             unlimited            unlimited            bytes     \nMax stack size            8388608              unlimited            bytes     \nMax core file size        0                    unlimited            bytes     \nMax resident set          unlimited            unlimited            bytes     \nMax processes             unlimited            unlimited            processes \nMax open files            1048576              1048576              files     \nMax locked memory         unlimited            unlimited            bytes     \nMax address space         268435456            268435456            bytes     \nMax file locks            unlimited            unlimited            locks     \nMax pending signals       23687                23687                signals   \nMax msgqueue size         819200               819200               bytes     \nMax nice priority         0                    0                    \nMax realtime priority     0                    0                    \nMax realtime timeout      unlimited            unlimited            us        \n",
+      "health": {
+        "schema": "rx.solutions-status.v1",
+        "supervisor_instance": "8f000000-0000-4000-8000-000000000001",
+        "phase": "SOFTWARE_READY_UNCOMMISSIONED",
+        "native_packages": 675,
+        "external_device_repositories": 0,
+        "support_profiles": 4,
+        "simulation_profiles": 4,
+        "physical_qualification": "NOT_PERFORMED",
+        "hardware_processes_started_by_entrypoint": 0,
+        "operator_api_delegation": "NOT_CONNECTED"
+      },
+      "exit_code": 0
+    }
+  ]
+}

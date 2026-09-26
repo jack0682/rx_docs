@@ -1,0 +1,44 @@
+   Compiling rx-supervisor v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/rx-solutions/runtime/rx-supervisor)
+warning: field `installed` is never read
+   --> runtime/rx-supervisor/tests/support/work_fixture.rs:158:9
+    |
+151 | pub struct Fixture {
+    |            ------- field in this struct
+...
+158 |     pub installed: bool,
+    |         ^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: methods `counts` and `observed_counts` are never used
+   --> runtime/rx-supervisor/tests/support/work_fixture.rs:334:12
+    |
+161 | impl Fixture {
+    | ------------ methods in this implementation
+...
+334 |     pub fn counts(&self, native: u64, profiles: u64) {
+    |            ^^^^^^
+...
+348 |     pub fn observed_counts(&self) -> (u64, u64) {
+    |            ^^^^^^^^^^^^^^^
+
+warning: method `revocation` is never used
+   --> runtime/rx-supervisor/tests/support/offline_signer.rs:127:12
+    |
+ 18 | impl ExternalSigner {
+    | ------------------- method in this implementation
+...
+127 |     pub fn revocation(&self, claim: RevocationClaim) -> SignedRevocation {
+    |            ^^^^^^^^^^
+
+warning: `rx-supervisor` (test "operating_area") generated 3 warnings
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.34s
+     Running tests/operating_area.rs (/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/solutions-target/debug/deps/operating_area-2292071e8e8a56ea)
+
+running 3 tests
+test pending_publication_is_not_use_and_commit_lock_spans_the_physical_transaction ... ok
+test old_response_cannot_restore_a_live_request_after_receiver_restart ... ok
+test polling_keeps_original_nonce_and_deadline_and_context_failure_is_not_pending ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.63s
+

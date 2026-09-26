@@ -1,0 +1,12 @@
+{
+  "ci-platform-pr": {
+    "passed": 402,
+    "failed": 0,
+    "ignored": 16
+  },
+  "ci-solutions-initial-pr": {
+    "passed": 420,
+    "failed": 0,
+    "ignored": 20
+  }
+}

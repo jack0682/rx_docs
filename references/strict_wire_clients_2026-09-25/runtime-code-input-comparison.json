@@ -1,0 +1,8 @@
+{
+  "compiled_runtime_code_files_unchanged": {
+    "rx-platform": 205,
+    "rx-solutions": 205
+  },
+  "changed_runtime_code": [],
+  "scope": "test-only code, documentation, client packages and CI are not runtime binary inputs"
+}

@@ -1,0 +1,156 @@
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+   Compiling cfg-if v1.0.4
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling bitflags v2.13.2
+   Compiling libc v0.2.189
+   Compiling serde_core v1.0.229
+   Compiling typenum v1.20.1
+   Compiling zmij v1.0.23
+   Compiling once_cell v1.21.4
+   Compiling thiserror v2.0.20
+   Compiling zeroize v1.9.0
+   Compiling ryu-js v0.2.2
+   Compiling fastrand v2.5.0
+   Compiling subtle v2.6.1
+   Compiling io-lifetimes v3.0.1
+   Compiling io-lifetimes v2.0.4
+   Compiling maybe-owned v0.3.4
+   Compiling io-extras v0.19.0
+   Compiling ambient-authority v0.0.2
+   Compiling ipnet v2.12.2
+   Compiling signature v3.0.0
+   Compiling bytes v1.12.1
+   Compiling pin-project-lite v0.2.17
+   Compiling ed25519 v3.0.0
+   Compiling foldhash v0.2.0
+   Compiling smallvec v1.16.0
+   Compiling hashbrown v0.17.1
+   Compiling libsqlite3-sys v0.38.2
+   Compiling fallible-streaming-iterator v0.1.9
+   Compiling fallible-iterator v0.3.0
+   Compiling equivalent v1.0.2
+   Compiling futures-core v0.3.34
+   Compiling tracing-core v0.1.36
+   Compiling slab v0.4.12
+   Compiling futures-sink v0.3.34
+   Compiling generic-array v0.14.7
+   Compiling log v0.4.34
+   Compiling futures-task v0.3.34
+   Compiling untrusted v0.9.0
+   Compiling errno v0.3.14
+   Compiling getrandom v0.4.3
+   Compiling cpufeatures v0.2.17
+   Compiling rustix v1.1.4
+   Compiling cpufeatures v0.3.1
+   Compiling signal-hook-registry v1.4.8
+   Compiling socket2 v0.6.5
+   Compiling mio v1.2.3
+   Compiling tracing v0.1.44
+   Compiling http v1.5.0
+   Compiling hashlink v0.12.2
+   Compiling indexmap v2.14.2
+   Compiling getrandom v0.2.17
+   Compiling tower-service v0.3.3
+   Compiling ring v0.17.14
+   Compiling futures-util v0.3.34
+   Compiling hybrid-array v0.4.15
+   Compiling tokio v1.53.1
+   Compiling rusqlite v0.40.2
+   Compiling block-buffer v0.10.4
+   Compiling crypto-common v0.1.7
+   Compiling digest v0.10.7
+   Compiling http-body v1.1.0
+   Compiling sha2 v0.10.9
+   Compiling block-buffer v0.12.1
+   Compiling crypto-common v0.2.2
+   Compiling rustls-pki-types v1.15.1
+   Compiling try-lock v0.2.5
+   Compiling atomic-waker v1.1.2
+   Compiling fnv v1.0.7
+   Compiling pulldown-cmark v0.13.4
+   Compiling want v0.3.1
+   Compiling httparse v1.10.1
+   Compiling digest v0.11.3
+   Compiling futures-channel v0.3.34
+   Compiling curve25519-dalek v5.0.0
+   Compiling sha2 v0.11.0
+   Compiling serde v1.0.229
+   Compiling serde_json v1.0.151
+   Compiling uuid v1.26.1
+   Compiling fs-set-times v0.20.3
+   Compiling cap-primitives v4.0.3
+   Compiling tempfile v3.27.0
+   Compiling ed25519-dalek v3.0.0
+   Compiling semver v1.0.28
+   Compiling sync_wrapper v1.0.2
+   Compiling httpdate v1.0.3
+   Compiling tower-layer v0.3.3
+   Compiling petgraph v0.8.3
+   Compiling pulldown-cmark-to-cmark v22.0.1
+   Compiling rustls-webpki v0.103.15
+   Compiling prost-types v0.14.4
+   Compiling http-body-util v0.1.5
+   Compiling cap-std v4.0.3
+   Compiling mime v0.3.17
+   Compiling prost v0.14.4
+   Compiling matchit v0.8.4
+   Compiling axum-core v0.5.6
+   Compiling cap-fs-ext v4.0.3
+   Compiling percent-encoding v2.3.2
+   Compiling pin-project v1.1.13
+   Compiling base64 v0.22.1
+   Compiling serde_jcs v0.2.0
+   Compiling rx-domain v0.1.0 (<workspace>/rx-solutions/sdk/crates/rx-domain)
+   Compiling rustls v0.23.44
+   Compiling rx-melsec-mc v0.1.0 (<workspace>/rx-solutions/drivers/rx-melsec-mc)
+   Compiling time-core v0.1.9
+   Compiling rx-host v0.1.0 (<workspace>/rx-solutions/runtime/rx-host)
+   Compiling num-conv v0.2.2
+   Compiling powerfmt v0.2.0
+   Compiling deranged v0.5.8
+   Compiling base64 v0.23.1
+   Compiling pem v4.0.0
+   Compiling prost-build v0.14.4
+   Compiling prost-reflect v0.16.5
+   Compiling time v0.3.55
+   Compiling tonic-prost-build v0.14.6
+   Compiling rx-protocol v0.1.0 (<workspace>/rx-solutions/sdk/crates/rx-protocol)
+   Compiling yasna v0.6.0
+   Compiling rx-package v0.1.0 (<workspace>/rx-solutions/sdk/crates/rx-package)
+   Compiling rx-ports v0.1.0 (<workspace>/rx-solutions/sdk/crates/rx-ports)
+   Compiling rx-process-contract v0.1.0 (<workspace>/rx-solutions/sdk/crates/rx-process-contract)
+   Compiling rcgen v0.14.10
+   Compiling rx-service-status v0.1.0 (<workspace>/rx-solutions/runtime/rx-service-status)
+   Compiling rx-storage v0.1.0 (<workspace>/rx-solutions/sdk/crates/rx-storage)
+   Compiling tokio-util v0.7.19
+   Compiling tokio-stream v0.1.19
+   Compiling h2 v0.4.19
+   Compiling tower v0.5.3
+   Compiling rx-solution-catalog v0.1.0 (<workspace>/rx-solutions/runtime/rx-solution-catalog)
+   Compiling axum v0.8.9
+   Compiling tokio-rustls v0.26.5
+   Compiling rx-supervisor v0.1.0 (<workspace>/rx-solutions/runtime/rx-supervisor)
+   Compiling rx-process v0.1.0 (<workspace>/rx-solutions/runtime/rx-process)
+   Compiling rx-process-package v0.1.0 (<workspace>/rx-solutions/runtime/rx-process-package)
+   Compiling hyper v1.11.1
+   Compiling hyper-util v0.1.20
+   Compiling hyper-timeout v0.5.2
+   Compiling tonic v0.14.6
+   Compiling tonic-prost v0.14.6
+   Compiling rx-executor v0.1.0 (<workspace>/rx-solutions/runtime/rx-executor)
+error[E0119]: conflicting implementations of trait `Debug` for type `RuntimeOwnershipError`
+   --> runtime/rx-host/src/service/mod.rs:312:10
+    |
+312 | #[derive(Debug, thiserror::Error)]
+    |          ^^^^^ conflicting implementation for `RuntimeOwnershipError`
+...
+317 | impl std::fmt::Debug for RuntimeOwnershipError {
+    | ---------------------------------------------- first implementation here
+
+For more information about this error, try `rustc --explain E0119`.
+error: could not compile `rx-host` (lib) due to 1 previous error
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `rx-host` (lib test) due to 1 previous error

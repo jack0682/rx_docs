@@ -1,0 +1,135 @@
+[
+  {
+    "label": "manager-replication",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/manager_loss_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--builder",
+      "rust:1.98.1-slim-bookworm",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/manager-replication"
+    ],
+    "disk_before": {
+      "total": 494332366848,
+      "used": 477777227776,
+      "free": 16555139072
+    },
+    "started": 1790288652.564411,
+    "exit_code": 0,
+    "disk_after": {
+      "total": 494332366848,
+      "used": 478687125504,
+      "free": 15645241344
+    },
+    "finished": 1790288700.556854
+  },
+  {
+    "label": "work-complete",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/work_use_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--builder",
+      "rust:1.98.1-slim-bookworm",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/work-complete"
+    ],
+    "disk_before": {
+      "total": 494332366848,
+      "used": 478688174080,
+      "free": 15644192768
+    },
+    "started": 1790288700.831796,
+    "exit_code": 0,
+    "disk_after": {
+      "total": 494332366848,
+      "used": 479731113984,
+      "free": 14601252864
+    },
+    "finished": 1790288736.715035
+  },
+  {
+    "label": "replacement-complete",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/dependency_replacement_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--builder",
+      "rust:1.98.1-slim-bookworm",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/replacement-complete"
+    ],
+    "disk_before": {
+      "total": 494332366848,
+      "used": 479733338112,
+      "free": 14599028736
+    },
+    "started": 1790288736.989789,
+    "exit_code": 0,
+    "disk_after": {
+      "total": 494332366848,
+      "used": 480782110720,
+      "free": 13550256128
+    },
+    "finished": 1790288768.52895
+  },
+  {
+    "label": "support-complete",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions/tools/support_limits_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--builder",
+      "rust:1.98.1-slim-bookworm",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/support-complete"
+    ],
+    "disk_before": {
+      "total": 494332366848,
+      "used": 480785358848,
+      "free": 13547008000
+    },
+    "started": 1790288768.816229,
+    "exit_code": 0,
+    "disk_after": {
+      "total": 494332366848,
+      "used": 485890015232,
+      "free": 8442351616
+    },
+    "finished": 1790288956.25668
+  },
+  {
+    "label": "lock-complete",
+    "argv": [
+      "python3",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/storage_lock_passage.py",
+      "--image",
+      "rx-solutions:g2-authenticated",
+      "--builder",
+      "rust:1.98.1-slim-bookworm",
+      "--evidence",
+      "/Users/ojaehong/RX_automation/rx_ws/.g3-evidence/lock-complete",
+      "--solutions",
+      "/Users/ojaehong/RX_automation/rx_ws/rx-solutions"
+    ],
+    "disk_before": {
+      "total": 494332366848,
+      "used": 485890408448,
+      "free": 8441958400
+    },
+    "started": 1790288956.981601,
+    "exit_code": 1,
+    "disk_after": {
+      "total": 494332366848,
+      "used": 485920821248,
+      "free": 8411545600
+    },
+    "finished": 1790288958.588193,
+    "dependency_artifacts": []
+  }
+]

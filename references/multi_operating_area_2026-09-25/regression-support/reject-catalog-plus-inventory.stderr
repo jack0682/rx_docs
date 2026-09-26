@@ -1,0 +1,2 @@
+{"condition":"release/content-mismatch","current_permission":"NOT_GRANTED","detail":"release/content-mismatch: release/source-pin-mismatch; inventory cannot authorize changed source assets","schema":"rx.release-refusal.v1"}
+Error: "release/content-mismatch"

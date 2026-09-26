@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_clients.py", line 236, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/test_clients.py", line 230, in main
+    exercise(d,materials,final,bundle,p,s,port,identity,a.release_evidence.resolve(),'independent',start_services=scenario.start_services,after_commissioning=scenario.after_commissioning)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/cell_delivery/installation.py", line 81, in exercise
+    patch_s(final,installation,hashlib.sha256(engine.read_bytes()).hexdigest())
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ojaehong/RX_automation/rx_ws/rx-platform/tools/cell_delivery/installation.py", line 35, in patch_s
+    assert host['backend']['kind']=='FILE_SIMULATION'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

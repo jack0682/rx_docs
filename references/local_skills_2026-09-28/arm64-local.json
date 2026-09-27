@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "checks": [
+    "clean-installer-and-cli-link",
+    "client-worker-authentication-separation",
+    "external-code-executed-once-and-original-request-replayed",
+    "key-version-and-physical-scope-refusals",
+    "lost-admission-body-recovered-by-original-id",
+    "real-exception-output-schema-and-timeout",
+    "persistent-installation-restart",
+    "killed-worker-quarantined-original-and-accepted-distinct-next-run",
+    "non-root-readonly-no-devices-no-docker-socket"
+  ],
+  "release": {
+    "schema": "rx.local-sim.release.v1",
+    "version": "0.3.0-rc.1",
+    "architecture": "arm64",
+    "image": "rx-local-skills:0.3.0-rc.1-arm64",
+    "image_id": "sha256:c7e2b8698ecdf5c9a782c9df297ee16b51ea60f03b83f3b6d6c25b6718dcb606",
+    "image_sha256": "6b80758567653d33342d68c5b48106e9f9a5642c187defaab18c8f94918934c0",
+    "platform_commit": "09353b4fe23d001340ce4868a805d44a490a22bb",
+    "solutions_commit": "f66d76488f9958485042a7364d93ff6efdfca13b",
+    "source_dirty": false,
+    "physical_execution": "NOT_SUPPORTED"
+  },
+  "normal_result": {
+    "duration_ms": 74,
+    "error": null,
+    "finished_ms": 1790552944024,
+    "operation": {
+      "disposition": "HELD",
+      "evidence_ids": [
+        "06dfb0f4-38ec-4be2-a9f2-c79c7803ff06"
+      ],
+      "execution_knowledge": "ENDED",
+      "integrity": "VALID",
+      "intent_digest": "673bf358b41e0688ff4b1db551e8be940e353b3bdc84e0e334d94c30d1ba5017",
+      "operation_id": "9060116c-a7cc-471c-8ba5-e1c452cc54fe",
+      "outcome": "SUCCEEDED",
+      "phase": "SETTLED",
+      "revision": "3"
+    },
+    "output": {
+      "receipt": "0a20c917-41ce-4f00-96c5-9cb38b8c22cc",
+      "total": 14
+    },
+    "package_digest": "9fddcdb72e850da6e93e55f624d3890135b9b9fe0af643335e6cafdb6ad5e165",
+    "request": {
+      "input": {
+        "values": [
+          2,
+          4,
+          8
+        ]
+      },
+      "request_id": "9060116c-a7cc-471c-8ba5-e1c452cc54fe",
+      "skill": "external-sum",
+      "version": "1.0.0"
+    },
+    "started_ms": 1790552943942,
+    "submitted_ms": 1790552943753,
+    "worker": "3980c8cc-7dcf-478f-8fdb-448038b9c567"
+  },
+  "physical_execution": "NOT_PERFORMED"
+}

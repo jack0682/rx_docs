@@ -6,6 +6,8 @@ RX는 많은 이기종 로봇과 시설을 공통 작업·권한·관측·결과
 
 ## 시작하기
 
+설치해서 스킬을 작성·실행해 보려면 [로컬 스킬 개발판 설치](docs/local_skill_installation.md)를 따른다. 이 경로는 Python 모의 기능을 위한 것으로 실제 장비 운전 설치와 구분한다.
+
 1. [프로젝트 목표](docs/01_product_definition.md)와 [현재 범위](docs/03_product_scope.md)를 읽는다.
 2. [아키텍처](docs/05_software_architecture.md)와 [장비 지원 정책](docs/13_device_support_matrix.md)을 확인한다.
 3. [공통 작업 계약](docs/contracts/v1.0/README.md)과 [셀 운영 계약](docs/cell_operations/v1.0/README.md)을 읽는다.

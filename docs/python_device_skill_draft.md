@@ -72,3 +72,11 @@ P에 별도 스킬 DB나 새 패키지 ABI를 추가하지 않았다. 다만 이
 검토된 Python binding으로 작성한 공정을 실제 도구로 패키징·검증하고 별도 테스트 계정의 승인과 staging까지 진행했다. P는 Host binding 변경 계획을 만들었지만 적용 준비를 HOST_BINDING_CHANGE_REQUIRED / CAPABILITY_MISSING으로 거절했다. [실행 증거와 다음 전환 요구](../references/python_deployment_boundary_2026-09-29/README.md)를 참조한다.
 
 이는 배치 완료가 아니다. 기존 Host maintenance는 준비/취소까지만 있어, 원 저널·정상 정지 증거를 보존하는 교체 commit과 P의 실측 확인을 구현해야 한다. 해당 거절을 없애서 통과시키거나 별도 DB 수정으로 우회하지 않는다.
+
+## 진행: 교체 commit을 위한 native 세대 분리 기반
+
+Host 내부 설치 descriptor에 선택적 native 세대 경로를 추가했다. 기존 descriptor는 원 저장 위치를 그대로 사용한다. 새 경로는 native-generations/요청 UUID 형태의 실제 디렉터리만 허용하며 누락·심볼릭 링크·유지보수 표식 없는 descriptor는 거절한다. 이는 내부 저장소 준비이며 아직 공개 교체 commit 명령이 생성하는 상태는 아니다.
+
+서비스는 runtime owner를 얻은 뒤 descriptor 바이트가 처음 읽은 값과 같은지 다시 확인한다. Factory도 native root와 identity를 같은 descriptor 스냅샷에서 읽는다. 기존 Host/MELSEC 서비스 회귀시험, Host 전체 시험, 세대 경로의 누락/링크/기존 기록 보존 시험과 clippy를 실행했다. 마지막 유지보수 표식 보강은 관련 세대 시험으로 재확인했다.
+
+다음 commit 구현은 정상 정지·준비 기록의 원 요청을 고정한 뒤 새 native metadata를 별도 세대에 준비하고, 재실행 가능한 교체 의도를 기록한 상태에서 설치 descriptor를 원자적으로 바꿔야 한다. 전후 어느 시점에서 끊겨도 기존 delivery/evidence 저널을 새로 만들면 안 된다. commit 조회는 변경 전/후 설정 모두에서 원 결과를 찾아야 하고, 미완료 commit은 기동과 임의 취소를 차단해야 한다. 그 후 P가 원 staged change와 새 Host 확인을 대조하는 계약/SDK 변경을 진행한다. 이 상태에서 교체 확정·P 적용·활성화가 완료됐다고 주장하지 않는다.

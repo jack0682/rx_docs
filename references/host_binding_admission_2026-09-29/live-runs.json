@@ -1,0 +1,141 @@
+{
+  "r1": {
+    "status": "PASS",
+    "stop_exit_code": 0,
+    "stop_attention": [],
+    "intent_phases": [
+      "BASELINE_RECORDED"
+    ],
+    "preparation": true,
+    "blockers": [
+      {
+        "kind": "HOST_BINDING_CHANGE_REQUIRED"
+      },
+      {
+        "kind": "HOST_BINDING_COMMIT_UNCONFIRMED",
+        "host": "host/sim"
+      },
+      {
+        "kind": "HOST_CONFIGURATION_ACKNOWLEDGEMENT_REQUIRED",
+        "cell": "cell/a",
+        "host": "host/sim"
+      }
+    ],
+    "guard": {
+      "route": "/api/v1/process-change/configure-hosts",
+      "status": 409,
+      "body": {
+        "code": "CAPABILITY_MISSING",
+        "outcome_unknown": false
+      }
+    }
+  },
+  "r2": {
+    "status": "PASS",
+    "stop_exit_code": 2,
+    "stop_attention": [
+      {
+        "cell": "cell/a",
+        "host": "host/sim",
+        "kind": "HOST_FENCE_UNCONFIRMED"
+      }
+    ],
+    "intent_phases": [
+      "BASELINE_RECORDED"
+    ],
+    "preparation": true,
+    "blockers": [
+      {
+        "kind": "HOST_BINDING_CHANGE_REQUIRED"
+      },
+      {
+        "kind": "HOST_BINDING_COMMIT_UNCONFIRMED",
+        "host": "host/sim"
+      },
+      {
+        "kind": "HOST_CONFIGURATION_ACKNOWLEDGEMENT_REQUIRED",
+        "cell": "cell/a",
+        "host": "host/sim"
+      }
+    ],
+    "guard": {
+      "route": "/api/v1/process-change/configure-hosts",
+      "status": 409,
+      "body": {
+        "code": "CAPABILITY_MISSING",
+        "outcome_unknown": false
+      }
+    }
+  },
+  "r3": {
+    "status": "PASS",
+    "stop_exit_code": 2,
+    "stop_attention": [
+      {
+        "cell": "cell/a",
+        "host": "host/sim",
+        "kind": "HOST_FENCE_UNCONFIRMED"
+      }
+    ],
+    "intent_phases": [
+      "BASELINE_RECORDED"
+    ],
+    "preparation": true,
+    "blockers": [
+      {
+        "kind": "HOST_BINDING_CHANGE_REQUIRED"
+      },
+      {
+        "kind": "HOST_BINDING_COMMIT_UNCONFIRMED",
+        "host": "host/sim"
+      },
+      {
+        "kind": "HOST_CONFIGURATION_ACKNOWLEDGEMENT_REQUIRED",
+        "cell": "cell/a",
+        "host": "host/sim"
+      }
+    ],
+    "guard": {
+      "route": "/api/v1/process-change/configure-hosts",
+      "status": 409,
+      "body": {
+        "code": "CAPABILITY_MISSING",
+        "outcome_unknown": false
+      }
+    }
+  },
+  "without_host": {
+    "status": "PASS",
+    "stop_exit_code": 0,
+    "stop_attention": [],
+    "intent_phases": [
+      "AWAITING_BASELINE"
+    ],
+    "preparation": false,
+    "blockers": [
+      {
+        "kind": "HOST_BINDING_CHANGE_REQUIRED"
+      },
+      {
+        "kind": "HOST_BINDING_BASELINE_REQUIRED",
+        "host": "host/sim"
+      },
+      {
+        "kind": "PREPARATION_REQUIRED"
+      },
+      {
+        "kind": "HOST_CONFIGURATION_ACKNOWLEDGEMENT_REQUIRED",
+        "cell": "cell/a",
+        "host": "host/sim"
+      }
+    ],
+    "guard": {
+      "route": "/api/v1/process-change/prepare",
+      "status": 409,
+      "body": {
+        "code": "CAPABILITY_MISSING",
+        "outcome_unknown": false
+      }
+    }
+  }
+}

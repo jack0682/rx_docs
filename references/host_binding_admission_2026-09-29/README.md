@@ -1,0 +1,11 @@
+# Binding-change preparation gated by Host standing
+
+2026-09-29. Preparation of a process change with a Host binding plan was refused unconditionally. P now derives a standing for every plan Host from its durable binding intent and the Host generation registered now for all intent cells: `BASELINE_REQUIRED`, `BASELINE_CURRENT`, `COMMIT_UNCONFIRMED` or `COMMIT_CURRENT` ([design](../../docs/host_binding_admission.md)). Preparation, which fences the affected cells, is accepted only when every plan Host is `BASELINE_CURRENT` or `COMMIT_CURRENT`. Change detail keeps `HOST_BINDING_CHANGE_REQUIRED` and adds `HOST_BINDING_BASELINE_REQUIRED` or `HOST_BINDING_COMMIT_UNCONFIRMED` per Host. Configuration dispatch and application still refuse binding changes.
+
+Three live image runs ([live-runs.json](live-runs.json), first run in [live-api.json](live-api.json)) captured the baseline from an isolated FILE_SIMULATION Host, accepted preparation, observed the Host acknowledge the preparation fence (no `HOST_FENCE_UNCONFIRMED` blocker), showed `HOST_BINDING_COMMIT_UNCONFIRMED` for `host/sim`, and received 409 `CAPABILITY_MISSING` from configure-hosts. Without a Host, preparation is refused with 409 and the detail shows `HOST_BINDING_BASELINE_REQUIRED`.
+
+Stopping P revokes all cells and fences registered Hosts without waiting for acknowledgement. Run 1 exited 0 because the Host acknowledged in time; runs 2 and 3 reported `HOST_FENCE_UNCONFIRMED` with exit 2. The acceptance accepts either outcome only when the report and exit code agree. Whether P should wait for these acknowledgements during stop is a separate product decision.
+
+Workspace tests (0 failed; see [workspace-tests.log](workspace-tests.log)), workspace clippy, fmt, repository checks and the 118-file SDK comparison passed. No new engine-level unit test covers the standing function; its coverage here is the live image acceptance and the unchanged refusal paths. Source commits are in [checks.json](checks.json).
+
+Not exercised: stopping, committing and restarting the Host against a live P; preparation refresh after replacement; the commit confirmation reaching `COMMIT_CURRENT`; configuration dispatch and apply; adoption after a P restart. No physical equipment was operated.

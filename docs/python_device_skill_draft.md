@@ -54,3 +54,9 @@ Rust PythonSkill adapter를 기존 Host gate에 연결해 준비 단계·잘못�
 Python 등록을 DEVICE_REFERENCE와 공통 operation catalog로 묶는 python-assemble을 추가했다. 서명 검증·원본 재조립·현재 정책과 선택 manifest 검증을 기존 경로에 연결했고, CLI와 변조/신뢰 키 제거 반례 시험을 통과했다. [검증 기록](../references/python_device_package_2026-09-29/README.md)을 참조한다.
 
 P에 별도 스킬 DB나 새 패키지 ABI를 추가하지 않았다. 다만 이번 시험은 metadata 패키지 fixture이며 실제 P 접수 및 설치된 signed-package Python 실행은 아직 다음 검증으로 남는다.
+
+## 진행: 실제 P 접수와 소프트웨어 보고서 확인
+
+실제 Linux 이미지에서 SDK 환경을 준비하고 생성·서명한 Python 장치 패키지를 별도의 P에 공개 API로 접수했다. AWAITING_REVIEW 기록과 원본 catalog 일치, 동일 요청의 같은 접수 기록을 확인했다. P의 원 심사 요청을 실제 S 검증기가 검사하고 외부 테스트 서명자가 서명한 보고서를 P가 ready_for_software_approval로 기록했다. [검증 기록](../references/python_package_p_review_2026-09-29/README.md)을 참조한다.
+
+아직 심사 결정은 없고 활성화 허가는 false다. 이 결과는 SDK 배치·binding 적용·실행이나 독립 승인으로 확대하지 않는다. 다음 단계는 승인된 Python 패키지의 실제 Host 배치와 공정 실행·출력 연결이다.

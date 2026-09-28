@@ -9,3 +9,5 @@ P는 사용자 제공 JSON을 확인 증거로 받으면 안 된다. 인증된 H
 호환성: 새 필드가 없는 기존 JSON은 미확인으로 읽을 수 있다. 새 필드가 포함된 JSON은 이전 strict decoder와 호환되지 않으므로 선택 binding의 source revision과 hash를 갱신한다. 정확한 hash 협상으로 P/Host/SDK 조합을 맞춰야 하며, 부재·미지원·오래된 관측을 성공으로 바꾸지 않는다. 기본 계약의 frozen manifest는 변경하지 않는다.
 
 구현 순서: 공유 model/검사와 optional binding manifest → 생성 SDK → Host 현재 관측 → P의 사전 요청 기록과 실측 확인 → staged change 적용 조건 → 실제 이미지의 중단/재기동/잘못된 확인 반례. 마지막 P 확인·적용 조건을 연결하기 전까지 기존 HOST_BINDING_CHANGE_REQUIRED 차단은 유지한다.
+
+현재 서비스 identity는 durable startup marker에 실제 Host boot가 일치할 때만 제공한다. 정지 상태 또는 같은 identity를 가진 다른 boot는 현재 확인 정보가 아니다. 로컬 mTLS 시험과 모델 반례는 [검증 기록](../references/host_binding_observation_2026-09-29/README.md)에 있다. P 확인 정책은 아직 미구현이다.

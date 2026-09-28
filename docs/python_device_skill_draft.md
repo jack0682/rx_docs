@@ -86,3 +86,9 @@ Host 내부 설치 descriptor에 선택적 native 세대 경로를 추가했다.
 정상 정지·준비 기록을 사용하는 commit/조회 CLI와 내구 상태 전환을 구현했다. 교체 의도, 새 native 세대, descriptor 교체 직후의 실제 SIGKILL에서 같은 요청으로 복구했고 원 delivery/evidence 저널 ID와 이전 native 기록을 보존했다. 변경 요청/변조된 세대/미완료 기동·취소를 거절하며, 정확한 P 구성 확인 전에는 Arm을 막는다. [검증 기록](../references/host_binding_commit_2026-09-29/README.md)을 참조한다.
 
 현재는 FILE_SIMULATION 로컬 Host 시험이다. 설치 이미지의 signed Python backend 교체, P의 새 Host 결과 확인과 전체 공정 적용·자격 활성화는 아직 미완료다. P의 배치 거절은 유지하며, 다음에는 확인 계약/SDK와 실제 일치 검증을 연결한다.
+
+## 진행: 현재 Host 교체 관측과 선택 계약 revision 2
+
+현재 서비스 boot·설치 identity·binding digest·저널이 완료된 교체 기록과 일치할 때만 관측을 내보내도록 연결했다. 실제 mTLS 조회에서 원 요청/계획/저널을 확인했고, 정지·다른 boot·잘못된 binding hash는 현재 증거가 되지 않았다. 선택 계약 revision/hash와 생성 SDK를 맞췄으며 기본 동결 manifest는 유지했다. [검증 기록](../references/host_binding_observation_2026-09-29/README.md)을 참조한다.
+
+다음은 P가 사전에 저장한 교체 요청/기준과 실측 관측을 대조하는 판정 경로다. 아직 배치 거절을 해제하지 않았으며 Host 관측만으로 자격·실행 권한이 생기지 않는다.

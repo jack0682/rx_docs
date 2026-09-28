@@ -30,3 +30,9 @@
 - 설치·재시작·업데이트 후 같은 버전과 환경이 실행됐음을 확인한다. 테스트 키와 모의 SDK의 통과를 실제 장비 자격으로 확대하지 않는다.
 
 다음 구현의 첫 작업은 기존 Host의 ProgramGoal에 연결할 Python 실행·원 요청 조회 경계를 만드는 것이다. SDK 환경의 획득/고정과 native 완료/관측 전달이 함께 검증돼야 하며, LOCAL_SIM에 import만 허용하는 변경으로 전체 요구를 대체하지 않는다. Python 프로세스 종료는 장비의 물리 정지 증거가 아니므로 독립된 현장 보호와 자원 인계의 의미를 보존한다.
+
+## 진행: SDK 환경 준비 CLI
+
+`rx skill prepare-environment`와 `verify-environment`를 구현했다. 별도 fixture SDK wheel을 실제 CLI로 오프라인 설치하고, 테스트 스킬이 그 SDK를 import해 값을 반환하는 시험을 실행했다. 기존 출력 덮어쓰기와 파일 변경, wheel 시작 훅·상위 경로를 거절하는 시험도 통과했다. 준비 과정 자체는 스킬/SDK를 import하지 않는다.
+
+이 결과는 환경 준비의 근거이며 Host 등록/실행 근거가 아니다. 가상환경은 현 경로와 플랫폼에 고정되고, base Python 전체·native system library의 release pin은 아직 연결되지 않아 결과에 미검증 상태를 표시한다. 다음 작업은 이 환경을 기존 ProgramGoal과 Host 허가·원 실행 조회에 연결하는 것이다. SDK 의존성 완전성, 임의 장비 제어와 동적 입출력이 지원됐다고 주장하지 않는다.

@@ -80,3 +80,9 @@ Host 내부 설치 descriptor에 선택적 native 세대 경로를 추가했다.
 서비스는 runtime owner를 얻은 뒤 descriptor 바이트가 처음 읽은 값과 같은지 다시 확인한다. Factory도 native root와 identity를 같은 descriptor 스냅샷에서 읽는다. 기존 Host/MELSEC 서비스 회귀시험, Host 전체 시험, 세대 경로의 누락/링크/기존 기록 보존 시험과 clippy를 실행했다. 마지막 유지보수 표식 보강은 관련 세대 시험으로 재확인했다.
 
 다음 commit 구현은 정상 정지·준비 기록의 원 요청을 고정한 뒤 새 native metadata를 별도 세대에 준비하고, 재실행 가능한 교체 의도를 기록한 상태에서 설치 descriptor를 원자적으로 바꿔야 한다. 전후 어느 시점에서 끊겨도 기존 delivery/evidence 저널을 새로 만들면 안 된다. commit 조회는 변경 전/후 설정 모두에서 원 결과를 찾아야 하고, 미완료 commit은 기동과 임의 취소를 차단해야 한다. 그 후 P가 원 staged change와 새 Host 확인을 대조하는 계약/SDK 변경을 진행한다. 이 상태에서 교체 확정·P 적용·활성화가 완료됐다고 주장하지 않는다.
+
+## 진행: 복구 가능한 Host 로컬 교체 commit
+
+정상 정지·준비 기록을 사용하는 commit/조회 CLI와 내구 상태 전환을 구현했다. 교체 의도, 새 native 세대, descriptor 교체 직후의 실제 SIGKILL에서 같은 요청으로 복구했고 원 delivery/evidence 저널 ID와 이전 native 기록을 보존했다. 변경 요청/변조된 세대/미완료 기동·취소를 거절하며, 정확한 P 구성 확인 전에는 Arm을 막는다. [검증 기록](../references/host_binding_commit_2026-09-29/README.md)을 참조한다.
+
+현재는 FILE_SIMULATION 로컬 Host 시험이다. 설치 이미지의 signed Python backend 교체, P의 새 Host 결과 확인과 전체 공정 적용·자격 활성화는 아직 미완료다. P의 배치 거절은 유지하며, 다음에는 확인 계약/SDK와 실제 일치 검증을 연결한다.

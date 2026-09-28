@@ -1,6 +1,6 @@
 # 한 명령 설치와 로컬 스킬 개발판
 
-2026-09-28 · `0.3.0-rc.1` · LOCAL_SIM Python computation profile.
+2026-09-28 · `0.3.0-rc.2` · LOCAL_SIM Python computation profile.
 
 외부 개발자가 Rust·ROS를 빌드하지 않고 설치한 RX에 Python 스킬을 등록하고 실행 결과를 조회하는 첫 배포 경로다. 실제 로봇용 Platform/Host/Executor 설치·자격 검증을 대체하지 않는다.
 
@@ -9,7 +9,7 @@
 Python 3.11 이상, curl, 실행 중인 Linux Docker Engine 또는 Docker Desktop이 필요하다. 배포물은 Docker 엔진의 amd64/arm64에 맞춰 선택된다.
 
 ```sh
-curl -fsSL https://github.com/jack0682/rx-solutions/releases/download/v0.3.0-rc.1/install.sh | sh
+curl -fsSL https://github.com/jack0682/rx-solutions/releases/download/v0.3.0-rc.2/install.sh | sh
 ~/.local/bin/rx skill add --example add
 ~/.local/bin/rx run add --input '{"a":2,"b":3}'
 ~/.local/bin/rx ui
@@ -50,3 +50,9 @@ curl -fsSL https://github.com/jack0682/rx-solutions/releases/download/v0.3.0-rc.
 solutions CI의 필수 `skills` job은 amd64와 arm64의 네이티브 runner에서 이미지를 빌드하고 동일한 설치 인수 시험을 수행한다. 릴리스에는 그 산출물, 소스 커밋·이미지 ID, 체크섬 및 서명을 함께 보관한다. 로컬 결과만으로 다른 아키텍처 통과를 선언하지 않는다.
 
 [배포물·상세 설치 안내](https://github.com/jack0682/rx-solutions/tree/main/deployment/local-skills) · [Platform 프로필 명세](https://github.com/jack0682/rx-platform/blob/main/crates/rx-api/SOFTWARE_SKILLS.md)
+
+## Docker 엔진 간 설치 호환 수정
+
+설치 배포물 rc.1은 CI의 Docker config digest와 Docker Desktop의 OCI manifest digest를 같은 표현으로 가정해 다운로드 설치가 거절됐다. 해당 설치 릴리스를 초안으로 회수했고 기존 소스 태그는 보존했다. rc.2는 체크섬으로 고정된 아카이브의 실제 config·manifest·index 내용을 검증해 같은 이미지로 연결되는 식별자만 허용한다. 알 수 없는 ID·내용 변조·아키텍처 불일치는 계속 거절한다. [실제 아카이브 대조](../references/local_skills_2026-09-28/image-portability.json)
+
+rc.2는 설치 배포물의 수정이며 서버 컴포넌트는 검증된 rc.1 소스를 재사용한다. 실제 장비 지원 범위는 늘어나지 않는다.

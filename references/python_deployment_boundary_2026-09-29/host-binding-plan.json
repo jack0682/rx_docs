@@ -1,0 +1,80 @@
+{
+  "schema": "rx.host-binding-plan.v1",
+  "installation": "33c45d15-a6bf-4e6c-99a6-0f9fd1ed7dda",
+  "cell": "cell/a",
+  "device_context_digest": "322c9836fee88553e44f0174e03c993f38b0135a0eceeafaf5c24bb410c1eafd",
+  "process_review_digest": "94be99cf0b7604def97e42f127119970226fcb13f35d637881f523635b535c7d",
+  "before_configuration": {
+    "sha256": "d7cb82be01f0cd7778bde8571233c2ffb42ee068d72d50093e1bcce6f247d381",
+    "schema_id": "rx.cell-configuration.v1",
+    "size_bytes": "1750"
+  },
+  "after_configuration": {
+    "sha256": "9e681896ac6ee9fc3fce46272ed821a78ccc53e7cf357bf924ce0024ea081988",
+    "schema_id": "rx.cell-configuration.v1",
+    "size_bytes": "3792"
+  },
+  "definition": {
+    "sha256": "0101010101010101010101010101010101010101010101010101010101010101",
+    "schema_id": "rx.test.v1",
+    "size_bytes": "1"
+  },
+  "envelope": {
+    "sha256": "0202020202020202020202020202020202020202020202020202020202020202",
+    "schema_id": "rx.test.v1",
+    "size_bytes": "1"
+  },
+  "environment": "SIMULATION",
+  "scopes": [
+    "zone/shared"
+  ],
+  "hosts": {
+    "host/sim": {
+      "required_intents": [
+        {
+          "kind": "FINITE_ACTION",
+          "target": "device/python-sdk",
+          "profile_digest": "8f370261267cacbfe45ac1ca96275c9d26ffe796a640d4d55ddd7f35cf3a95f5",
+          "site_config_digest": "0404040404040404040404040404040404040404040404040404040404040404",
+          "calibration_digests": [],
+          "resource_set": [
+            "controller/sim"
+          ],
+          "execution_timeout_ms": "2000",
+          "prepare_validity_ms": "1000",
+          "completion_rule": "rx.python.returned.v1",
+          "cancel_rule": "python/unknown",
+          "body": {
+            "program": {
+              "program": {
+                "sha256": "3f43000179af79b12e6d82ad60f4d1c7c6c30fb81287ab3db352be604189ad96",
+                "schema_id": "rx.python-environment.v1",
+                "size_bytes": "166508"
+              },
+              "parameter_set": {
+                "sha256": "36060134d807a85bd4de45d03754fc36d6f73b2349587345f0f71b5548caeaee",
+                "schema_id": "rx.python-input.v1",
+                "size_bytes": "11"
+              }
+            }
+          }
+        }
+      ],
+      "required_conditions": [
+        "sim/ready"
+      ],
+      "device_packages": [
+        {
+          "manifest": "faed974703d494f20f33e5c9793262d323f4cb461fbd53eb47b1bc4e103b60f6",
+          "signature": "a81cbe7cecfbb491a47f0fe25931f9cfb0a446bdb935bc9cc41a19b982737e3f",
+          "catalog": {
+            "sha256": "c06d48c3b7071111447ddb163ebe0fdf52a6fa2fcc5555ac2c42cebb0eb5c2cf",
+            "schema_id": "rx.device-operation-catalog.v1",
+            "size_bytes": "2247"
+          }
+        }
+      ],
+      "other_affected_cells": []
+    }
+  }
+}

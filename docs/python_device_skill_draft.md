@@ -66,3 +66,9 @@ P에 별도 스킬 DB나 새 패키지 ABI를 추가하지 않았다. 다만 이
 실제 P에서 제출자의 자기 승인은 거절됐고 별도 테스트 검토 계정이 현재 보고서를 승인했다. Python binding 계획의 영향 검토 후 설치된 CLI가 그 계획을 선택해 공정 초안을 저장하고 v2 컴파일 입력에 원 계획/binding 출처를 보존했다. compose-recover도 같은 결과였다. [검증 기록](../references/python_reviewed_composition_2026-09-29/README.md)을 참조한다.
 
 최종 활성 구성은 바뀌지 않았고 Run/자격도 없었다. 별도 테스트 계정을 독립된 사람의 심사로 표현하지 않는다. 다음 남은 작업은 실제 배치·공정 적용/활성화·Python 실행과 출력/KPI 연결이다.
+
+## 진행: 공정 staging과 기존 Host 교체 미구현 경계 확인
+
+검토된 Python binding으로 작성한 공정을 실제 도구로 패키징·검증하고 별도 테스트 계정의 승인과 staging까지 진행했다. P는 Host binding 변경 계획을 만들었지만 적용 준비를 HOST_BINDING_CHANGE_REQUIRED / CAPABILITY_MISSING으로 거절했다. [실행 증거와 다음 전환 요구](../references/python_deployment_boundary_2026-09-29/README.md)를 참조한다.
+
+이는 배치 완료가 아니다. 기존 Host maintenance는 준비/취소까지만 있어, 원 저널·정상 정지 증거를 보존하는 교체 commit과 P의 실측 확인을 구현해야 한다. 해당 거절을 없애서 통과시키거나 별도 DB 수정으로 우회하지 않는다.

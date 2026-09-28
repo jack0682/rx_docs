@@ -1,0 +1,11 @@
+{
+  "scope": "Unmodified CI rc.1 archive on Docker Desktop containerd",
+  "archive_sha256": "e66f791c89f780711aaacaf2ccc82ec319619f99356a6ec4c2f290b13acf4fe2",
+  "ci_image_id": "sha256:169e2c1fdc8e86ef7d06dbd67c46fd08cb2dead01616cee19bad65f568bebb3a",
+  "loaded_image_id": "sha256:3a0efa52020c02b223d241bbed38811172c9fb0c40555922a285d5263e4c4f41",
+  "verified_archive_identifiers": [
+    "sha256:169e2c1fdc8e86ef7d06dbd67c46fd08cb2dead01616cee19bad65f568bebb3a",
+    "sha256:3a0efa52020c02b223d241bbed38811172c9fb0c40555922a285d5263e4c4f41"
+  ],
+  "status": "PASS"
+}

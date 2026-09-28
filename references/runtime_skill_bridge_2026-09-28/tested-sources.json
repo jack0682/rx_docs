@@ -1,0 +1,30 @@
+{
+  "rx-platform": {
+    "base": "ffd2bb157f99d825778c8f9edb9b1dd59a8c7c74",
+    "modified_sources": {
+      "crates/rx-api/src/routes.rs": "0ee836dd8e595cd0d3a0d08b93cf6333d2c33e3b61ad1f452545a02e95f91df5",
+      "crates/rx-application/src/engine/mod.rs": "506700a8ccef77931147bb3c4b6a59375dd3d6d89322eb902ed6fdee977470ab",
+      "crates/rx-application/src/engine/runtime_skill.rs": "4e943d5ccd5ad02a32e88961cb4fce6a1b4cac6525e72e3c70a8f4612a64f527",
+      "crates/rx-application/src/lib.rs": "18c445c55331c01a41fd8bab9029c42401dbb398e9b64f2756bcb1446ff8431a",
+      "crates/rx-application/src/runtime_skill.rs": "7774286682352ecead6741e7ae6c313a9fe10db83a4ea16b6e38a778fd7c77df",
+      "crates/rx-application/tests/support/runtime_skill_tests.rs": "639cb1645b5f5bc49ef364c33abacad772465f63ebfe5a08be7a7edb54cd5d09",
+      "crates/rx-application/tests/transactions.rs": "61b8ab3abac941026d8b04c8b7f8c72f8e4d3d515f7ce1a100fae6c869240a3b",
+      "crates/rx-runtime/src/application.rs": "f4bccb3a08bc5863a89be4108cdc57a167dd46084ec04ae3ed347e7ceb40fe8d",
+      "tools/cell_delivery/installation.py": "c8fccbb29ce14d0f1bc2ab118e3e89d945d4e20a8b2d09be40b755c9b224b231",
+      "tools/cell_delivery/materials.py": "490dc6609697a3f50f6033bd8a16acf24c843647c5cd5517f31f8de3155a0f07",
+      "tools/test_runtime_skills.py": "1d66aa64bf11e71862411125e1afe144a759989990eacc5be6c36cb6e4a0d6a0"
+    },
+    "committed_revision": "5cd872456e67cecdb9089c739bd1113163e5e9f5"
+  },
+  "rx-solutions": {
+    "base": "1b878a1926b8a2a582821b83f5531ce724d7fa9a",
+    "modified_sources": {
+      "deployment/local-skills/RUNTIME.md": "59b85a8f69efc31ad02ef437d0855ff4edea62714de7c63c87f3f541a7e8cf7f",
+      "deployment/local-skills/runtime_client.py": "4ebed8358009b52870568ffbf92d29dd4de3fa7cbce9d5e638e4fd5434d4abcf",
+      "deployment/local-skills/rx": "fb7b01aace450ce30dce3aa72d162b8baa9edc438bf19d36ec3663f00f59a4b6",
+      "docker/RuntimeSkillValidation.Dockerfile": "9b8e31e4311f93c44b3573d1504eec74d7a6956ce5c5b5e8692eab5cc3dc7196",
+      "tools/test_runtime_skill_client.py": "084d9ca0577430300bd6190ad11a6bb5b625a35b44175ec73c7e627f31a652bd"
+    },
+    "committed_revision": "6f3bcb89d37ba94421b427058cd86a20efa16ff5"
+  }
+}

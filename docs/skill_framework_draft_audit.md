@@ -36,3 +36,11 @@
 R3/R4/R5의 소프트웨어 조합 경로는 진전됐지만 완료 범위는 순차 LOCAL_SIM이다. 특히 R6의 실제 Platform/Host/Executor 경로, 장비·자원 책임, 관측의 유효기간·보정·출처, 운영자 조정과 R7의 기존 rx_poc 기능 동등성은 여전히 미완료다. 다음 통합은 이 경계를 연결해야 하며, 계산기나 모의 UI 기능을 더 늘리는 것으로 대체하지 않는다.
 
 [고정된 후보 소스의 실제 설치·공정 시험](../references/skill_process_draft_2026-09-28/README.md)에는 두 번째 스킬 실행 중 서버와 worker를 함께 종료한 뒤, 완료된 첫 스킬과 전체 자식 ID가 유지되고 나머지가 실행되지 않은 결과도 포함한다. 공정 작성은 아직 구조화 JSON이며, 등록된 스킬을 기존 개발·실행 경로에서 조합하는 작성 경험까지 단순해졌다고 주장하지 않는다.
+
+## 진행: 실제 P/Host/Executor 호출 연결
+
+기존 P의 공개 CreateRun·StartRun을 사용하는 runtime CLI와 권한 범위에 따른 카탈로그·결과 projection을 추가했다. 결과 원장은 P이며 LOCAL_SIM DB로 완료를 복제하지 않는다. 설치 이미지에서 추출한 CLI를 실제 P·Executor·Host FILE_SIMULATION에 연결해 실행했고, StartRun 응답 직후 소비자 SIGKILL → 새 CLI 복구 → 같은 Run 및 추가 효과 없음 → 새 요청에서만 새 Run/효과 발생을 확인했다. [실행 증거와 한계](../references/runtime_skill_bridge_2026-09-28/README.md)를 참조한다.
+
+최초 시험은 CLI가 시작 전 revision과 P의 시작 접수 후 revision을 동일시해 실패했다. 실제 계약에 맞게 후속 revision을 검사하도록 수정하고, 잘못된 revision 거절 시험과 설치 이미지 종단 재시험을 통과했다.
+
+R6은 실제 실행 경로 연결까지 진전됐지만, 현재는 이미 승인된 고정 공정을 호출하는 BOUND_CONFIGURATION이다. 임의 스킬의 등록·동적 입력·관측 전달·스킬 단위 조합을 이 경로에서 사용할 수 있다는 증거는 아니다. R1/R2/R3/R5의 LOCAL_SIM 기능을 실제 runtime에 통합하고 R7의 main 기능 대응을 검증한 설치 릴리스까지 전체 목표는 진행 중이다.

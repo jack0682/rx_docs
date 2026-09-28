@@ -1,0 +1,11 @@
+# Host binding baseline collection by the configuration worker
+
+2026-09-29. The Platform's Host configuration worker now lists the P-issued binding intents visible to its registered Host session, performs one bounded transport read per batch and submits that observation to P. A transport failure is stored as `TRANSPORT_UNAVAILABLE`; a rejected submission is stored as `AUTHORIZATION_CHANGED`. Neither is dropped silently, and neither produces a baseline.
+
+The live image acceptance ([live-api.json](live-api.json)) starts an isolated FILE_SIMULATION Host from the solutions image next to the Platform image. The Host publisher is bound to P's current store generation, and the test waits for the Host registration context to become `CURRENT`. In three consecutive runs ([live-runs.json](live-runs.json)) every intent reached `BASELINE_RECORDED` from the actual Host snapshot, including installation identity and evidence journal. `activation_authorized` stayed false and the deployment guard still answered 409 `HOST_BINDING_CHANGE_REQUIRED`. The same test without a Host keeps the intent at `AWAITING_BASELINE`.
+
+The first attempt after wiring the publisher failed only at shutdown and passed once on rerun. Diagnosis showed a race, not a flaky product: when the Host registered before P stopped, P correctly reported `HOST_FENCE_UNCONFIRMED` for the registered but never-fenced Host and exited 2; when registration had not yet happened, it exited 0. The acceptance now waits for registration and requires exit 2 with exactly that attention, so an unconfirmed fence cannot pass as a clean stop.
+
+Regression tests for rx-application, rx-host-client, rx-runtime and rx-api (319 passed), workspace clippy, fmt, repository checks and the 118-file SDK comparison passed ([checks.json](checks.json)).
+
+Still unfinished: fences and current-confirmation revalidation before admission, deployment-admission integration, adoption of original requests after a P restart, and the Host-side replacement commit observed by this same live path. A persistently rejected submission (for example lost continuity) is recorded but will be retried on each worker step. Metadata matching is not application, qualification or execution authority. No physical equipment was operated.

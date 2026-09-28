@@ -98,3 +98,9 @@ Host 내부 설치 descriptor에 선택적 native 세대 경로를 추가했다.
 P가 staged change/Host별 원 요청 ID를 저장하는 ReleaseManager API를 추가했고 실제 이미지에서 동일 요청 재조회·권한 거절·요청 키 내용 변경 거절을 확인했다. 전후 구성, 현재 boot, 두 저널, 셀 범위와 시각을 대조하는 정책 및 내부 저장 handler도 구현했다. [검증 기록](../references/p_host_binding_intents_2026-09-29/README.md)을 참조한다.
 
 아직 요청 상태는 AWAITING_BASELINE이다. 인증된 Host transport worker의 수집, fences와 최종 재확인, 배치 허용 조건 연결은 미완료이며 기존 차단을 유지했다. P 재시작 시 원 요청을 보존하는 adoption도 별도 검증이 필요하다.
+
+## 진행: 설정 worker의 실제 Host 기준 수집
+
+P의 Host 설정 worker가 등록된 Host 세션에 보이는 교체 요청을 조회하고, 묶음마다 한 번의 transport 읽기로 얻은 관측을 P에 제출하도록 연결했다. transport 실패는 `TRANSPORT_UNAVAILABLE`, 제출 거절은 `AUTHORIZATION_CHANGED`로 기록하며 어느 쪽도 기준을 만들지 않는다. 실제 P 이미지 옆에 격리된 FILE_SIMULATION Host를 띄운 연속 3회 시험에서 모든 요청이 실제 Host snapshot으로 `BASELINE_RECORDED`가 됐고, 활성화 권한은 false, 배치 거절(409)은 유지됐다. Host가 없으면 `AWAITING_BASELINE`에 머문다. [검증 기록](../references/p_host_binding_reader_2026-09-29/README.md)을 참조한다.
+
+시험 중 종료 단계의 간헐 실패는 제품 결함이 아니라 등록 시점의 경합이었다. 등록됐지만 fence를 받은 적 없는 Host가 있으면 P는 `HOST_FENCE_UNCONFIRMED`를 보고하고 exit 2로 끝나는 것이 올바른 동작이다. 시험은 이제 등록을 기다린 뒤 정확히 그 주의 항목과 exit 2를 요구한다. 남은 범위는 fence와 현재 확인의 재검증, 배치 허용 연결, P 재시작 뒤 원 요청 인수, 같은 실시간 경로에서의 Host 교체 commit 관측이다.

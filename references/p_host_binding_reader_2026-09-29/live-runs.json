@@ -1,0 +1,79 @@
+{
+  "r1": {
+    "status": "PASS",
+    "stop_exit_code": 2,
+    "stop_attention": [
+      {
+        "cell": "cell/a",
+        "host": "host/sim",
+        "kind": "HOST_FENCE_UNCONFIRMED"
+      }
+    ],
+    "intents": [
+      {
+        "phase": "BASELINE_RECORDED",
+        "activation_authorized": false,
+        "baseline_host": "host/sim",
+        "installation_identity_present": true,
+        "evidence_journal_present": true
+      }
+    ],
+    "deployment_guard_status": 409,
+    "deployment_status": "HOST_BINDING_CHANGE_REQUIRED"
+  },
+  "r2": {
+    "status": "PASS",
+    "stop_exit_code": 2,
+    "stop_attention": [
+      {
+        "cell": "cell/a",
+        "host": "host/sim",
+        "kind": "HOST_FENCE_UNCONFIRMED"
+      }
+    ],
+    "intents": [
+      {
+        "phase": "BASELINE_RECORDED",
+        "activation_authorized": false,
+        "baseline_host": "host/sim",
+        "installation_identity_present": true,
+        "evidence_journal_present": true
+      }
+    ],
+    "deployment_guard_status": 409,
+    "deployment_status": "HOST_BINDING_CHANGE_REQUIRED"
+  },
+  "r3": {
+    "status": "PASS",
+    "stop_exit_code": 2,
+    "stop_attention": [
+      {
+        "cell": "cell/a",
+        "host": "host/sim",
+        "kind": "HOST_FENCE_UNCONFIRMED"
+      }
+    ],
+    "intents": [
+      {
+        "phase": "BASELINE_RECORDED",
+        "activation_authorized": false,
+        "baseline_host": "host/sim",
+        "installation_identity_present": true,
+        "evidence_journal_present": true
+      }
+    ],
+    "deployment_guard_status": 409,
+    "deployment_status": "HOST_BINDING_CHANGE_REQUIRED"
+  },
+  "without_host": {
+    "status": "PASS",
+    "stop_exit_code": 0,
+    "intents": [
+      {
+        "phase": "AWAITING_BASELINE",
+        "baseline": null
+      }
+    ],
+    "deployment_status": "HOST_BINDING_CHANGE_REQUIRED"
+  }
+}

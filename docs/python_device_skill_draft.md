@@ -60,3 +60,9 @@ P에 별도 스킬 DB나 새 패키지 ABI를 추가하지 않았다. 다만 이
 실제 Linux 이미지에서 SDK 환경을 준비하고 생성·서명한 Python 장치 패키지를 별도의 P에 공개 API로 접수했다. AWAITING_REVIEW 기록과 원본 catalog 일치, 동일 요청의 같은 접수 기록을 확인했다. P의 원 심사 요청을 실제 S 검증기가 검사하고 외부 테스트 서명자가 서명한 보고서를 P가 ready_for_software_approval로 기록했다. [검증 기록](../references/python_package_p_review_2026-09-29/README.md)을 참조한다.
 
 아직 심사 결정은 없고 활성화 허가는 false다. 이 결과는 SDK 배치·binding 적용·실행이나 독립 승인으로 확대하지 않는다. 다음 단계는 승인된 Python 패키지의 실제 Host 배치와 공정 실행·출력 연결이다.
+
+## 진행: 별도 계정 승인과 검토된 binding의 CLI 조합
+
+실제 P에서 제출자의 자기 승인은 거절됐고 별도 테스트 검토 계정이 현재 보고서를 승인했다. Python binding 계획의 영향 검토 후 설치된 CLI가 그 계획을 선택해 공정 초안을 저장하고 v2 컴파일 입력에 원 계획/binding 출처를 보존했다. compose-recover도 같은 결과였다. [검증 기록](../references/python_reviewed_composition_2026-09-29/README.md)을 참조한다.
+
+최종 활성 구성은 바뀌지 않았고 Run/자격도 없었다. 별도 테스트 계정을 독립된 사람의 심사로 표현하지 않는다. 다음 남은 작업은 실제 배치·공정 적용/활성화·Python 실행과 출력/KPI 연결이다.

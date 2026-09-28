@@ -36,3 +36,9 @@
 `rx skill prepare-environment`와 `verify-environment`를 구현했다. 별도 fixture SDK wheel을 실제 CLI로 오프라인 설치하고, 테스트 스킬이 그 SDK를 import해 값을 반환하는 시험을 실행했다. 기존 출력 덮어쓰기와 파일 변경, wheel 시작 훅·상위 경로를 거절하는 시험도 통과했다. 준비 과정 자체는 스킬/SDK를 import하지 않는다.
 
 이 결과는 환경 준비의 근거이며 Host 등록/실행 근거가 아니다. 가상환경은 현 경로와 플랫폼에 고정되고, base Python 전체·native system library의 release pin은 아직 연결되지 않아 결과에 미검증 상태를 표시한다. 다음 작업은 이 환경을 기존 ProgramGoal과 Host 허가·원 실행 조회에 연결하는 것이다. SDK 의존성 완전성, 임의 장비 제어와 동적 입출력이 지원됐다고 주장하지 않는다.
+
+## 진행: 실제 Host gate 뒤의 Python adapter
+
+Rust PythonSkill adapter를 기존 Host gate에 연결해 준비 단계·잘못된 호출자에서는 SDK 효과가 없고, 올바른 허가 이후에만 실행되는 것을 확인했다. 반복 허가/조회는 효과를 반복하지 않았다. 시간 초과는 SendEntered를 유지하고 인계를 거절하며, 코드 변경과 만료된 dispatch도 거절했다. [검증 기록](../references/python_host_gate_2026-09-29/README.md)을 참조한다.
+
+현재는 Host 라이브러리의 실제 gate 시험이다. 제품 service Backend/Factory 등록 경로, P 등록, 출력/관측 전달과 운영자 조정은 아직 미완료이며 모의 support만 허용한다. 이 결과를 전체 설치 경로 또는 실제 장비 실행 지원으로 확대하지 않는다.

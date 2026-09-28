@@ -42,3 +42,9 @@
 Rust PythonSkill adapter를 기존 Host gate에 연결해 준비 단계·잘못된 호출자에서는 SDK 효과가 없고, 올바른 허가 이후에만 실행되는 것을 확인했다. 반복 허가/조회는 효과를 반복하지 않았다. 시간 초과는 SendEntered를 유지하고 인계를 거절하며, 코드 변경과 만료된 dispatch도 거절했다. [검증 기록](../references/python_host_gate_2026-09-29/README.md)을 참조한다.
 
 현재는 Host 라이브러리의 실제 gate 시험이다. 제품 service Backend/Factory 등록 경로, P 등록, 출력/관측 전달과 운영자 조정은 아직 미완료이며 모의 support만 허용한다. 이 결과를 전체 설치 경로 또는 실제 장비 실행 지원으로 확대하지 않는다.
+
+## 진행: 제품 Host 서비스 로딩
+
+제품 Builtin factory와 설정 로더에 Python 등록을 연결했다. 설치·Host·셀·Intent·환경 digest를 대조하고 실행 파일/보조 코드는 릴리스 경로에서 고정한다. 실제 이미지의 rx-hostd 초기화·기동·정지에서 SDK/스킬 import가 없었고, 물리 binding과 변조 입력은 거절됐다. [검증 기록](../references/python_host_service_2026-09-29/README.md)을 참조한다.
+
+이제 제품 서비스가 등록 파일을 로드하지만, 파일은 아직 시험 도구에서 준비했다. P의 사용자 등록 명령과 배치, 실제 P/Executor/Host Python 실행 및 출력 연결은 다음 작업으로 남는다.

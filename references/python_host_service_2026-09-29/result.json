@@ -1,0 +1,82 @@
+{
+  "schema": "rx.python-host-service-test.v1",
+  "status": "PASS",
+  "image": "sha256:7a71586f700ff4be4de5c3221f4810888d60ba4d5f3c3832a05cdab6e279561f",
+  "inspection": {
+    "activation_authorized": false,
+    "backend": {
+      "kind": "PYTHON_SKILL_SIMULATION",
+      "registration": {
+        "path": "/config/python-registration.json",
+        "sha256": "00829e5dceef49758185e4a783bfb12f23efcbf30d21a0e334023468f043c084"
+      }
+    },
+    "binding_cells": [
+      "cell/sim"
+    ],
+    "control_provider": "BUILTIN",
+    "host": "host/sim",
+    "identity": "c375f4479e2ccc87a32e06fe4dea333235e73be6624c538482ffc1bdb3a53010",
+    "installation": "e771dc4e-8b3f-4569-8005-657021d9b2a3",
+    "native_processes_started": 0,
+    "physical_backend_available": false,
+    "physical_qualification_verified": false,
+    "runtime_qualification_required": false,
+    "schema": "rx.host-installation-inspection.v1"
+  },
+  "ready": {
+    "admission_open": true,
+    "clock_id": "linux-boottime/ca53bdb1-0453-4365-a1df-dce180f361ed",
+    "endpoint": "https://0.0.0.0:7444",
+    "host": "host/sim",
+    "host_boot": "09a4b9c0-ba7d-41ed-b9b0-a47d366840df",
+    "installation": "e771dc4e-8b3f-4569-8005-657021d9b2a3",
+    "instance": "c1c2c7ae-3d4d-46d3-89e4-4ece6a626aba",
+    "pending_evidence": null,
+    "phase": "SOFTWARE_READY_UNARMED",
+    "publication": "DISABLED",
+    "qualification_or_arm_restored": false,
+    "schema": "rx.host-service-status.v1",
+    "stop": null
+  },
+  "stopped": {
+    "admission_open": false,
+    "clock_id": "linux-boottime/ca53bdb1-0453-4365-a1df-dce180f361ed",
+    "endpoint": "https://0.0.0.0:7444",
+    "host": "host/sim",
+    "host_boot": "09a4b9c0-ba7d-41ed-b9b0-a47d366840df",
+    "installation": "e771dc4e-8b3f-4569-8005-657021d9b2a3",
+    "instance": "c1c2c7ae-3d4d-46d3-89e4-4ece6a626aba",
+    "pending_evidence": "0",
+    "phase": "STOPPED",
+    "publication": "DISABLED",
+    "qualification_or_arm_restored": false,
+    "schema": "rx.host-service-status.v1",
+    "stop": {
+      "admission_open": false,
+      "host_boot": "09a4b9c0-ba7d-41ed-b9b0-a47d366840df",
+      "native": {
+        "device_session": "a8dd158b-1abd-4397-a64c-1cc444af26cb",
+        "no_pending_commands": true,
+        "observed_at": {
+          "clock_id": "linux-boottime/ca53bdb1-0453-4365-a1df-dce180f361ed",
+          "ticks_ns": "219665701098"
+        },
+        "resources": [
+          "sim/controller"
+        ],
+        "safe_to_drop": true,
+        "uncertainty_ns": "0"
+      },
+      "pending_operations": [],
+      "physical_shutdown_assessed": false,
+      "retained_evidence": "0",
+      "safe_to_drop": true
+    }
+  },
+  "physical_binding_denied": true,
+  "changed_input_denied": true,
+  "image_source_inventory_matched": true,
+  "sdk_imports_before_admission": 0,
+  "scope": "Installed product Builtin Python backend init/run/stop; no P registration or Python operation dispatch in this scene"
+}

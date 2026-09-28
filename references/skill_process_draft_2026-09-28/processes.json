@@ -1,0 +1,998 @@
+{
+  "first": {
+    "definition_digest": "ed13e38cc423b3023b2dda7a63161f11f320030c0eee35d45d56a8ed666afacd",
+    "finished_ms": 1790559977245,
+    "issue": null,
+    "output": {
+      "location": "output-bin",
+      "part": "part-one"
+    },
+    "request": {
+      "input": {
+        "part": "part-one",
+        "present": true
+      },
+      "process": "material-flow",
+      "request_id": "851d3144-f9e4-4538-b977-f51c4045232e",
+      "version": "1.0.0"
+    },
+    "status": "SUCCEEDED",
+    "steps": [
+      {
+        "execution": {
+          "duration_ms": 73,
+          "error": null,
+          "finished_ms": 1790559977102,
+          "operation": {
+            "disposition": "HELD",
+            "evidence_ids": [
+              "b4112544-9511-4e42-b8b3-8497bac3904e"
+            ],
+            "execution_knowledge": "ENDED",
+            "integrity": "VALID",
+            "intent_digest": "f51d4ab646ff9436307f3e735f086cfb43d77a895e78a0be31489fc210614093",
+            "operation_id": "32c35ce2-b5bd-44a2-8ed2-087df171e7fc",
+            "outcome": "SUCCEEDED",
+            "phase": "SETTLED",
+            "revision": "3"
+          },
+          "output": {
+            "holding": true,
+            "part": "part-one"
+          },
+          "package_digest": "143a7d60b5d3eac95d4c6bacce9301459397094482e896e2aa8a27327cf9c6ac",
+          "parent": {
+            "process_run": "851d3144-f9e4-4538-b977-f51c4045232e",
+            "step": "acquire"
+          },
+          "request": {
+            "input": {
+              "part": "part-one",
+              "present": true
+            },
+            "request_id": "32c35ce2-b5bd-44a2-8ed2-087df171e7fc",
+            "skill": "acquire",
+            "version": "1.0.0"
+          },
+          "started_ms": 1790559977021,
+          "submitted_ms": 1790559976852,
+          "worker": "dda0b26e-f7f9-43ed-9baa-055f904c8ebc"
+        },
+        "package_digest": "143a7d60b5d3eac95d4c6bacce9301459397094482e896e2aa8a27327cf9c6ac",
+        "request_id": "32c35ce2-b5bd-44a2-8ed2-087df171e7fc",
+        "skill": "acquire",
+        "step": "acquire",
+        "version": "1.0.0"
+      },
+      {
+        "execution": {
+          "duration_ms": 45,
+          "error": null,
+          "finished_ms": 1790559977151,
+          "operation": {
+            "disposition": "HELD",
+            "evidence_ids": [
+              "1f6b466d-625a-4694-9ca1-4ca5363d73d3"
+            ],
+            "execution_knowledge": "ENDED",
+            "integrity": "VALID",
+            "intent_digest": "2f60d49bbcda38923b8f27038f9ff8c285603c6610c9b0f8f2043ff2a225ec6b",
+            "operation_id": "6beb61ea-4a2b-4a39-9d53-e7791a3e68e5",
+            "outcome": "SUCCEEDED",
+            "phase": "SETTLED",
+            "revision": "3"
+          },
+          "output": {
+            "clamped": true,
+            "part": "part-one"
+          },
+          "package_digest": "70ed5e9d74f8412d0efeb348494c720d61f3cc458a330e1b0bbd6ea69759f477",
+          "parent": {
+            "process_run": "851d3144-f9e4-4538-b977-f51c4045232e",
+            "step": "load"
+          },
+          "request": {
+            "input": {
+              "holding": true,
+              "part": "part-one"
+            },
+            "request_id": "6beb61ea-4a2b-4a39-9d53-e7791a3e68e5",
+            "skill": "load",
+            "version": "1.0.0"
+          },
+          "started_ms": 1790559977103,
+          "submitted_ms": 1790559977103,
+          "worker": "dda0b26e-f7f9-43ed-9baa-055f904c8ebc"
+        },
+        "package_digest": "70ed5e9d74f8412d0efeb348494c720d61f3cc458a330e1b0bbd6ea69759f477",
+        "request_id": "6beb61ea-4a2b-4a39-9d53-e7791a3e68e5",
+        "skill": "load",
+        "step": "load",
+        "version": "1.0.0"
+      },
+      {
+        "execution": {
+          "duration_ms": 44,
+          "error": null,
+          "finished_ms": 1790559977198,
+          "operation": {
+            "disposition": "HELD",
+            "evidence_ids": [
+              "81a5a023-7522-42b3-b8ab-1f433e52a4c4"
+            ],
+            "execution_knowledge": "ENDED",
+            "integrity": "VALID",
+            "intent_digest": "0eab2b14245ab087fcb3947eee7b96fd493972fabc76fb269ea753376df25688",
+            "operation_id": "e31efb66-9c2e-4e2a-9e49-031c756e4fd6",
+            "outcome": "SUCCEEDED",
+            "phase": "SETTLED",
+            "revision": "3"
+          },
+          "output": {
+            "part": "part-one",
+            "released": true
+          },
+          "package_digest": "d4ee23a728ddd9ceeff7fd04fee85c2b514a49766a672202caf7dea844bca58b",
+          "parent": {
+            "process_run": "851d3144-f9e4-4538-b977-f51c4045232e",
+            "step": "release"
+          },
+          "request": {
+            "input": {
+              "clamped": true,
+              "part": "part-one"
+            },
+            "request_id": "e31efb66-9c2e-4e2a-9e49-031c756e4fd6",
+            "skill": "release",
+            "version": "1.0.0"
+          },
+          "started_ms": 1790559977152,
+          "submitted_ms": 1790559977152,
+          "worker": "dda0b26e-f7f9-43ed-9baa-055f904c8ebc"
+        },
+        "package_digest": "d4ee23a728ddd9ceeff7fd04fee85c2b514a49766a672202caf7dea844bca58b",
+        "request_id": "e31efb66-9c2e-4e2a-9e49-031c756e4fd6",
+        "skill": "release",
+        "step": "release",
+        "version": "1.0.0"
+      },
+      {
+        "execution": {
+          "duration_ms": 44,
+          "error": null,
+          "finished_ms": 1790559977245,
+          "operation": {
+            "disposition": "HELD",
+            "evidence_ids": [
+              "3b34371d-d62f-4ea9-b577-fa0faa148de3"
+            ],
+            "execution_knowledge": "ENDED",
+            "integrity": "VALID",
+            "intent_digest": "eaa9e81e18f54a829bbd2fdeeef96e1dd81cd8c5eab184551b15ce3303e49b87",
+            "operation_id": "d33e3101-d0db-472e-9ad4-afa6417e1e22",
+            "outcome": "SUCCEEDED",
+            "phase": "SETTLED",
+            "revision": "3"
+          },
+          "output": {
+            "location": "output-bin",
+            "part": "part-one"
+          },
+          "package_digest": "44e34d2a5810c8c3cf1e5f26309822d74171c8604f19118186d447eb2c22589e",
+          "parent": {
+            "process_run": "851d3144-f9e4-4538-b977-f51c4045232e",
+            "step": "unload"
+          },
+          "request": {
+            "input": {
+              "part": "part-one",
+              "released": true
+            },
+            "request_id": "d33e3101-d0db-472e-9ad4-afa6417e1e22",
+            "skill": "unload",
+            "version": "1.0.0"
+          },
+          "started_ms": 1790559977199,
+          "submitted_ms": 1790559977199,
+          "worker": "dda0b26e-f7f9-43ed-9baa-055f904c8ebc"
+        },
+        "package_digest": "44e34d2a5810c8c3cf1e5f26309822d74171c8604f19118186d447eb2c22589e",
+        "request_id": "d33e3101-d0db-472e-9ad4-afa6417e1e22",
+        "skill": "unload",
+        "step": "unload",
+        "version": "1.0.0"
+      }
+    ],
+    "submitted_ms": 1790559976852
+  },
+  "second": {
+    "definition_digest": "ed13e38cc423b3023b2dda7a63161f11f320030c0eee35d45d56a8ed666afacd",
+    "finished_ms": 1790559977666,
+    "issue": null,
+    "output": {
+      "location": "output-bin",
+      "part": "part-two"
+    },
+    "request": {
+      "input": {
+        "part": "part-two",
+        "present": true
+      },
+      "process": "material-flow",
+      "request_id": "940a9caf-9af4-4f82-aead-6f1104754115",
+      "version": "1.0.0"
+    },
+    "status": "SUCCEEDED",
+    "steps": [
+      {
+        "execution": {
+          "duration_ms": 63,
+          "error": null,
+          "finished_ms": 1790559977518,
+          "operation": {
+            "disposition": "HELD",
+            "evidence_ids": [
+              "c6df3e21-181f-47f9-856d-aa1556b0d9d0"
+            ],
+            "execution_knowledge": "ENDED",
+            "integrity": "VALID",
+            "intent_digest": "4bd8fa6855116c5ea178b220d51a086f4c0e103913ffdd5b14c1709912c9203c",
+            "operation_id": "da2e0d81-faca-4b92-9cba-7550cfd5e5ed",
+            "outcome": "SUCCEEDED",
+            "phase": "SETTLED",
+            "revision": "3"
+          },
+          "output": {
+            "holding": true,
+            "part": "part-two"
+          },
+          "package_digest": "143a7d60b5d3eac95d4c6bacce9301459397094482e896e2aa8a27327cf9c6ac",
+          "parent": {
+            "process_run": "940a9caf-9af4-4f82-aead-6f1104754115",
+            "step": "acquire"
+          },
+          "request": {
+            "input": {
+              "part": "part-two",
+              "present": true
+            },
+            "request_id": "da2e0d81-faca-4b92-9cba-7550cfd5e5ed",
+            "skill": "acquire",
+            "version": "1.0.0"
+          },
+          "started_ms": 1790559977449,
+          "submitted_ms": 1790559977441,
+          "worker": "dda0b26e-f7f9-43ed-9baa-055f904c8ebc"
+        },
+        "package_digest": "143a7d60b5d3eac95d4c6bacce9301459397094482e896e2aa8a27327cf9c6ac",
+        "request_id": "da2e0d81-faca-4b92-9cba-7550cfd5e5ed",
+        "skill": "acquire",
+        "step": "acquire",
+        "version": "1.0.0"
+      },
+      {
+        "execution": {
+          "duration_ms": 47,
+          "error": null,
+          "finished_ms": 1790559977568,
+          "operation": {
+            "disposition": "HELD",
+            "evidence_ids": [
+              "e5ef1ebc-e43e-4bbd-9d6e-694a175fe3bb"
+            ],
+            "execution_knowledge": "ENDED",
+            "integrity": "VALID",
+            "intent_digest": "5adb72361481031bcffc14947808072f884c3bd31544d554b57620c8a60aea12",
+            "operation_id": "6c191792-cb5f-4682-ab43-b91eec6ff64f",
+            "outcome": "SUCCEEDED",
+            "phase": "SETTLED",
+            "revision": "3"
+          },
+          "output": {
+            "clamped": true,
+            "part": "part-two"
+          },
+          "package_digest": "70ed5e9d74f8412d0efeb348494c720d61f3cc458a330e1b0bbd6ea69759f477",
+          "parent": {
+            "process_run": "940a9caf-9af4-4f82-aead-6f1104754115",
+            "step": "load"
+          },
+          "request": {
+            "input": {
+              "holding": true,
+              "part": "part-two"
+            },
+            "request_id": "6c191792-cb5f-4682-ab43-b91eec6ff64f",
+            "skill": "load",
+            "version": "1.0.0"
+          },
+          "started_ms": 1790559977519,
+          "submitted_ms": 1790559977519,
+          "worker": "dda0b26e-f7f9-43ed-9baa-055f904c8ebc"
+        },
+        "package_digest": "70ed5e9d74f8412d0efeb348494c720d61f3cc458a330e1b0bbd6ea69759f477",
+        "request_id": "6c191792-cb5f-4682-ab43-b91eec6ff64f",
+        "skill": "load",
+        "step": "load",
+        "version": "1.0.0"
+      },
+      {
+        "execution": {
+          "duration_ms": 45,
+          "error": null,
+          "finished_ms": 1790559977618,
+          "operation": {
+            "disposition": "HELD",
+            "evidence_ids": [
+              "e7a6eab5-9501-4fee-a78b-c9129e11446f"
+            ],
+            "execution_knowledge": "ENDED",
+            "integrity": "VALID",
+            "intent_digest": "214dace8ec95b0fb91820ae364bac10be5bb6be592039390c87e614d9cd65a7e",
+            "operation_id": "bd433e04-dd6a-4423-b713-8ca65871719d",
+            "outcome": "SUCCEEDED",
+            "phase": "SETTLED",
+            "revision": "3"
+          },
+          "output": {
+            "part": "part-two",
+            "released": true
+          },
+          "package_digest": "d4ee23a728ddd9ceeff7fd04fee85c2b514a49766a672202caf7dea844bca58b",
+          "parent": {
+            "process_run": "940a9caf-9af4-4f82-aead-6f1104754115",
+            "step": "release"
+          },
+          "request": {
+            "input": {
+              "clamped": true,
+              "part": "part-two"
+            },
+            "request_id": "bd433e04-dd6a-4423-b713-8ca65871719d",
+            "skill": "release",
+            "version": "1.0.0"
+          },
+          "started_ms": 1790559977569,
+          "submitted_ms": 1790559977569,
+          "worker": "dda0b26e-f7f9-43ed-9baa-055f904c8ebc"
+        },
+        "package_digest": "d4ee23a728ddd9ceeff7fd04fee85c2b514a49766a672202caf7dea844bca58b",
+        "request_id": "bd433e04-dd6a-4423-b713-8ca65871719d",
+        "skill": "release",
+        "step": "release",
+        "version": "1.0.0"
+      },
+      {
+        "execution": {
+          "duration_ms": 45,
+          "error": null,
+          "finished_ms": 1790559977666,
+          "operation": {
+            "disposition": "HELD",
+            "evidence_ids": [
+              "9d14a828-1ec8-4614-9812-99675e2f7d49"
+            ],
+            "execution_knowledge": "ENDED",
+            "integrity": "VALID",
+            "intent_digest": "0c5b3bb9f9c88580fb134dd713054d9523376cd6374fc9a827ab1818da83bc3b",
+            "operation_id": "6d551834-3eda-499a-b573-e8327b5711be",
+            "outcome": "SUCCEEDED",
+            "phase": "SETTLED",
+            "revision": "3"
+          },
+          "output": {
+            "location": "output-bin",
+            "part": "part-two"
+          },
+          "package_digest": "44e34d2a5810c8c3cf1e5f26309822d74171c8604f19118186d447eb2c22589e",
+          "parent": {
+            "process_run": "940a9caf-9af4-4f82-aead-6f1104754115",
+            "step": "unload"
+          },
+          "request": {
+            "input": {
+              "part": "part-two",
+              "released": true
+            },
+            "request_id": "6d551834-3eda-499a-b573-e8327b5711be",
+            "skill": "unload",
+            "version": "1.0.0"
+          },
+          "started_ms": 1790559977619,
+          "submitted_ms": 1790559977619,
+          "worker": "dda0b26e-f7f9-43ed-9baa-055f904c8ebc"
+        },
+        "package_digest": "44e34d2a5810c8c3cf1e5f26309822d74171c8604f19118186d447eb2c22589e",
+        "request_id": "6d551834-3eda-499a-b573-e8327b5711be",
+        "skill": "unload",
+        "step": "unload",
+        "version": "1.0.0"
+      }
+    ],
+    "submitted_ms": 1790559977441
+  },
+  "failed": {
+    "definition_digest": "ed13e38cc423b3023b2dda7a63161f11f320030c0eee35d45d56a8ed666afacd",
+    "finished_ms": 1790559978160,
+    "issue": null,
+    "output": null,
+    "request": {
+      "input": {
+        "part": "missing",
+        "present": false
+      },
+      "process": "material-flow",
+      "request_id": "9c15d3c9-01ba-40ca-a885-a9e7cef33375",
+      "version": "1.0.0"
+    },
+    "status": "FAILED",
+    "steps": [
+      {
+        "execution": {
+          "duration_ms": 70,
+          "error": "Traceback (most recent call last):\n  File \"/opt/rx/runner.py\", line 16, in <module>\n    result = module[\"main\"](request)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/rx-skill-ywmxn3hx/skill.py\", line 4, in main\n    raise ValueError('material not detected')\nValueError: material not detected\n",
+          "finished_ms": 1790559978160,
+          "operation": {
+            "disposition": "HELD",
+            "evidence_ids": [
+              "9c17e755-fd2e-4e23-96d0-edf789ec9f12"
+            ],
+            "execution_knowledge": "ENDED",
+            "integrity": "VALID",
+            "intent_digest": "8f2f337f3d6b2025db4b399f42b68e1ae63740d4062c1360f4ccdb002395b748",
+            "operation_id": "13afada7-7ab4-4db2-a5cf-c8e54dfb2048",
+            "outcome": "FAILED",
+            "phase": "SETTLED",
+            "revision": "3"
+          },
+          "output": null,
+          "package_digest": "143a7d60b5d3eac95d4c6bacce9301459397094482e896e2aa8a27327cf9c6ac",
+          "parent": {
+            "process_run": "9c15d3c9-01ba-40ca-a885-a9e7cef33375",
+            "step": "acquire"
+          },
+          "request": {
+            "input": {
+              "part": "missing",
+              "present": false
+            },
+            "request_id": "13afada7-7ab4-4db2-a5cf-c8e54dfb2048",
+            "skill": "acquire",
+            "version": "1.0.0"
+          },
+          "started_ms": 1790559978082,
+          "submitted_ms": 1790559977965,
+          "worker": "dda0b26e-f7f9-43ed-9baa-055f904c8ebc"
+        },
+        "package_digest": "143a7d60b5d3eac95d4c6bacce9301459397094482e896e2aa8a27327cf9c6ac",
+        "request_id": "13afada7-7ab4-4db2-a5cf-c8e54dfb2048",
+        "skill": "acquire",
+        "step": "acquire",
+        "version": "1.0.0"
+      },
+      {
+        "execution": null,
+        "package_digest": "70ed5e9d74f8412d0efeb348494c720d61f3cc458a330e1b0bbd6ea69759f477",
+        "request_id": "013ebb11-695e-4a93-8ab2-5d93572bb236",
+        "skill": "load",
+        "step": "load",
+        "version": "1.0.0"
+      },
+      {
+        "execution": null,
+        "package_digest": "d4ee23a728ddd9ceeff7fd04fee85c2b514a49766a672202caf7dea844bca58b",
+        "request_id": "03c9a0c6-b53f-45e8-881e-e7ebe5f4d61a",
+        "skill": "release",
+        "step": "release",
+        "version": "1.0.0"
+      },
+      {
+        "execution": null,
+        "package_digest": "44e34d2a5810c8c3cf1e5f26309822d74171c8604f19118186d447eb2c22589e",
+        "request_id": "38eb4893-eef1-4dab-aa45-2641150073e8",
+        "skill": "unload",
+        "step": "unload",
+        "version": "1.0.0"
+      }
+    ],
+    "submitted_ms": 1790559977965
+  },
+  "unknown": {
+    "definition_digest": "3d94613fc8f6d53e8a869960a30c5ce16633ddbabf4283525cad80cf1eee3be8",
+    "finished_ms": 1790559978694,
+    "issue": null,
+    "output": null,
+    "request": {
+      "input": {
+        "part": "uncertain",
+        "present": true
+      },
+      "process": "material-flow",
+      "request_id": "b87d90cf-e2d7-4113-99ec-464a57738b1e",
+      "version": "2.0.0"
+    },
+    "status": "UNKNOWN",
+    "steps": [
+      {
+        "execution": {
+          "duration_ms": 105,
+          "error": "execution deadline exceeded; result unknown",
+          "finished_ms": 1790559978694,
+          "operation": {
+            "disposition": "QUARANTINED",
+            "evidence_ids": [
+              "b6e82a49-049c-48b5-ab89-69621bbfc186"
+            ],
+            "execution_knowledge": "UNKNOWN",
+            "integrity": "VALID",
+            "intent_digest": "460618b8247e04b68890e1f4bb436fd2597f148cc01bd9ffc4f040649aab2315",
+            "operation_id": "991dfb19-7609-4a5c-8002-c40ee8fe92e5",
+            "outcome": "UNRESOLVED",
+            "phase": "SETTLED",
+            "revision": "3"
+          },
+          "output": null,
+          "package_digest": "cab96a42f0aacb1d597581dcc62bc0c34f80367a2a45a5482a16e54188eb7e1b",
+          "parent": {
+            "process_run": "b87d90cf-e2d7-4113-99ec-464a57738b1e",
+            "step": "acquire"
+          },
+          "request": {
+            "input": {
+              "part": "uncertain",
+              "present": true
+            },
+            "request_id": "991dfb19-7609-4a5c-8002-c40ee8fe92e5",
+            "skill": "acquire",
+            "version": "2.0.0"
+          },
+          "started_ms": 1790559978578,
+          "submitted_ms": 1790559978391,
+          "worker": "dda0b26e-f7f9-43ed-9baa-055f904c8ebc"
+        },
+        "package_digest": "cab96a42f0aacb1d597581dcc62bc0c34f80367a2a45a5482a16e54188eb7e1b",
+        "request_id": "991dfb19-7609-4a5c-8002-c40ee8fe92e5",
+        "skill": "acquire",
+        "step": "acquire",
+        "version": "2.0.0"
+      },
+      {
+        "execution": null,
+        "package_digest": "70ed5e9d74f8412d0efeb348494c720d61f3cc458a330e1b0bbd6ea69759f477",
+        "request_id": "84069c39-08e0-4bfa-8398-ea92d2ecc3f7",
+        "skill": "load",
+        "step": "load",
+        "version": "1.0.0"
+      },
+      {
+        "execution": null,
+        "package_digest": "d4ee23a728ddd9ceeff7fd04fee85c2b514a49766a672202caf7dea844bca58b",
+        "request_id": "248e166c-3f32-496b-98d8-2e8c153778b6",
+        "skill": "release",
+        "step": "release",
+        "version": "1.0.0"
+      },
+      {
+        "execution": null,
+        "package_digest": "44e34d2a5810c8c3cf1e5f26309822d74171c8604f19118186d447eb2c22589e",
+        "request_id": "35c96616-6028-49b9-8def-a8afb661d204",
+        "skill": "unload",
+        "step": "unload",
+        "version": "1.0.0"
+      }
+    ],
+    "submitted_ms": 1790559978391
+  },
+  "metrics": {
+    "groups": [
+      {
+        "counts": {
+          "active": 0,
+          "admitted": 3,
+          "canceled": 0,
+          "failed": 1,
+          "not_executed": 0,
+          "queued": 0,
+          "succeeded": 2,
+          "unknown": 0
+        },
+        "decided_denominator": 3,
+        "execution_ms": {
+          "mean_ms": 68.66666666666667,
+          "missing": 0,
+          "p50_ms": 70,
+          "p95_ms": 73,
+          "samples": 3
+        },
+        "package_digest": "143a7d60b5d3eac95d4c6bacce9301459397094482e896e2aa8a27327cf9c6ac",
+        "queue_wait_wall_ms": {
+          "mean_ms": 98.0,
+          "missing": 0,
+          "p50_ms": 117,
+          "p95_ms": 169,
+          "samples": 3
+        },
+        "skill": "acquire",
+        "success_fraction_of_decided": 0.6666666666666666,
+        "version": "1.0.0"
+      },
+      {
+        "counts": {
+          "active": 0,
+          "admitted": 1,
+          "canceled": 0,
+          "failed": 0,
+          "not_executed": 0,
+          "queued": 0,
+          "succeeded": 0,
+          "unknown": 1
+        },
+        "decided_denominator": 0,
+        "execution_ms": {
+          "mean_ms": null,
+          "missing": 0,
+          "p50_ms": null,
+          "p95_ms": null,
+          "samples": 0
+        },
+        "package_digest": "cab96a42f0aacb1d597581dcc62bc0c34f80367a2a45a5482a16e54188eb7e1b",
+        "queue_wait_wall_ms": {
+          "mean_ms": 187.0,
+          "missing": 0,
+          "p50_ms": 187,
+          "p95_ms": 187,
+          "samples": 1
+        },
+        "skill": "acquire",
+        "success_fraction_of_decided": null,
+        "version": "2.0.0"
+      },
+      {
+        "counts": {
+          "active": 0,
+          "admitted": 1,
+          "canceled": 0,
+          "failed": 1,
+          "not_executed": 0,
+          "queued": 0,
+          "succeeded": 0,
+          "unknown": 0
+        },
+        "decided_denominator": 1,
+        "execution_ms": {
+          "mean_ms": 61.0,
+          "missing": 0,
+          "p50_ms": 61,
+          "p95_ms": 61,
+          "samples": 1
+        },
+        "package_digest": "698cfcdcb98aee8591678ba0a40aaea51cbe18bf17bb50ffa7d39c4815a3275f",
+        "queue_wait_wall_ms": {
+          "mean_ms": 18.0,
+          "missing": 0,
+          "p50_ms": 18,
+          "p95_ms": 18,
+          "samples": 1
+        },
+        "skill": "broken",
+        "success_fraction_of_decided": 0.0,
+        "version": "1.0.0"
+      },
+      {
+        "counts": {
+          "active": 0,
+          "admitted": 2,
+          "canceled": 0,
+          "failed": 0,
+          "not_executed": 0,
+          "queued": 0,
+          "succeeded": 2,
+          "unknown": 0
+        },
+        "decided_denominator": 2,
+        "execution_ms": {
+          "mean_ms": 80.5,
+          "missing": 0,
+          "p50_ms": 78,
+          "p95_ms": 83,
+          "samples": 2
+        },
+        "package_digest": "9fddcdb72e850da6e93e55f624d3890135b9b9fe0af643335e6cafdb6ad5e165",
+        "queue_wait_wall_ms": {
+          "mean_ms": 116.0,
+          "missing": 0,
+          "p50_ms": 26,
+          "p95_ms": 206,
+          "samples": 2
+        },
+        "skill": "external-sum",
+        "success_fraction_of_decided": 1.0,
+        "version": "1.0.0"
+      },
+      {
+        "counts": {
+          "active": 0,
+          "admitted": 2,
+          "canceled": 0,
+          "failed": 0,
+          "not_executed": 0,
+          "queued": 0,
+          "succeeded": 2,
+          "unknown": 0
+        },
+        "decided_denominator": 2,
+        "execution_ms": {
+          "mean_ms": 46.0,
+          "missing": 0,
+          "p50_ms": 45,
+          "p95_ms": 47,
+          "samples": 2
+        },
+        "package_digest": "70ed5e9d74f8412d0efeb348494c720d61f3cc458a330e1b0bbd6ea69759f477",
+        "queue_wait_wall_ms": {
+          "mean_ms": 0.0,
+          "missing": 0,
+          "p50_ms": 0,
+          "p95_ms": 0,
+          "samples": 2
+        },
+        "skill": "load",
+        "success_fraction_of_decided": 1.0,
+        "version": "1.0.0"
+      },
+      {
+        "counts": {
+          "active": 0,
+          "admitted": 2,
+          "canceled": 0,
+          "failed": 0,
+          "not_executed": 0,
+          "queued": 0,
+          "succeeded": 2,
+          "unknown": 0
+        },
+        "decided_denominator": 2,
+        "execution_ms": {
+          "mean_ms": 44.5,
+          "missing": 0,
+          "p50_ms": 44,
+          "p95_ms": 45,
+          "samples": 2
+        },
+        "package_digest": "d4ee23a728ddd9ceeff7fd04fee85c2b514a49766a672202caf7dea844bca58b",
+        "queue_wait_wall_ms": {
+          "mean_ms": 0.0,
+          "missing": 0,
+          "p50_ms": 0,
+          "p95_ms": 0,
+          "samples": 2
+        },
+        "skill": "release",
+        "success_fraction_of_decided": 1.0,
+        "version": "1.0.0"
+      },
+      {
+        "counts": {
+          "active": 0,
+          "admitted": 1,
+          "canceled": 0,
+          "failed": 0,
+          "not_executed": 0,
+          "queued": 0,
+          "succeeded": 0,
+          "unknown": 1
+        },
+        "decided_denominator": 0,
+        "execution_ms": {
+          "mean_ms": null,
+          "missing": 0,
+          "p50_ms": null,
+          "p95_ms": null,
+          "samples": 0
+        },
+        "package_digest": "043e859457a9179eaa1f726598edd7cc12cd656ec8189ddd67a2385f7fb010f0",
+        "queue_wait_wall_ms": {
+          "mean_ms": 62.0,
+          "missing": 0,
+          "p50_ms": 62,
+          "p95_ms": 62,
+          "samples": 1
+        },
+        "skill": "slow",
+        "success_fraction_of_decided": null,
+        "version": "1.0.0"
+      },
+      {
+        "counts": {
+          "active": 0,
+          "admitted": 2,
+          "canceled": 0,
+          "failed": 0,
+          "not_executed": 0,
+          "queued": 0,
+          "succeeded": 2,
+          "unknown": 0
+        },
+        "decided_denominator": 2,
+        "execution_ms": {
+          "mean_ms": 44.5,
+          "missing": 0,
+          "p50_ms": 44,
+          "p95_ms": 45,
+          "samples": 2
+        },
+        "package_digest": "44e34d2a5810c8c3cf1e5f26309822d74171c8604f19118186d447eb2c22589e",
+        "queue_wait_wall_ms": {
+          "mean_ms": 0.0,
+          "missing": 0,
+          "p50_ms": 0,
+          "p95_ms": 0,
+          "samples": 2
+        },
+        "skill": "unload",
+        "success_fraction_of_decided": 1.0,
+        "version": "1.0.0"
+      },
+      {
+        "counts": {
+          "active": 0,
+          "admitted": 1,
+          "canceled": 0,
+          "failed": 1,
+          "not_executed": 0,
+          "queued": 0,
+          "succeeded": 0,
+          "unknown": 0
+        },
+        "decided_denominator": 1,
+        "execution_ms": {
+          "mean_ms": 74.0,
+          "missing": 0,
+          "p50_ms": 74,
+          "p95_ms": 74,
+          "samples": 1
+        },
+        "package_digest": "b5fffe8a879d20d8d2ec94b04fccee8be7eb6645d092fd23196ee1743a073982",
+        "queue_wait_wall_ms": {
+          "mean_ms": 126.0,
+          "missing": 0,
+          "p50_ms": 126,
+          "p95_ms": 126,
+          "samples": 1
+        },
+        "skill": "wrong-output",
+        "success_fraction_of_decided": 0.0,
+        "version": "1.0.0"
+      }
+    ],
+    "ledger_sequence": "64",
+    "window": {
+      "since_ms": null,
+      "until_ms": null
+    }
+  },
+  "restarted": {
+    "definition_digest": "d01a3f357c319d8bfc534b00de23b044816c3f60086333d9ee3b0dd9732102f1",
+    "finished_ms": 1790559979825,
+    "issue": null,
+    "output": null,
+    "request": {
+      "input": {
+        "part": "part-restart",
+        "present": true
+      },
+      "process": "material-flow",
+      "request_id": "057e02a9-4505-4c1b-bcae-8d36dc3b4478",
+      "version": "3.0.0"
+    },
+    "status": "UNKNOWN",
+    "steps": [
+      {
+        "execution": {
+          "duration_ms": 70,
+          "error": null,
+          "finished_ms": 1790559979176,
+          "operation": {
+            "disposition": "HELD",
+            "evidence_ids": [
+              "72de3289-62ca-4b53-af3b-fe7f95aac669"
+            ],
+            "execution_knowledge": "ENDED",
+            "integrity": "VALID",
+            "intent_digest": "5e9f613924f7170893acfa9ffc1dfe800c7717f4c8f15e6dbb91448e0c10d03b",
+            "operation_id": "a01ca2e6-bf51-487c-a413-aa1a5ef8f10f",
+            "outcome": "SUCCEEDED",
+            "phase": "SETTLED",
+            "revision": "3"
+          },
+          "output": {
+            "holding": true,
+            "part": "part-restart"
+          },
+          "package_digest": "143a7d60b5d3eac95d4c6bacce9301459397094482e896e2aa8a27327cf9c6ac",
+          "parent": {
+            "process_run": "057e02a9-4505-4c1b-bcae-8d36dc3b4478",
+            "step": "acquire"
+          },
+          "request": {
+            "input": {
+              "part": "part-restart",
+              "present": true
+            },
+            "request_id": "a01ca2e6-bf51-487c-a413-aa1a5ef8f10f",
+            "skill": "acquire",
+            "version": "1.0.0"
+          },
+          "started_ms": 1790559979100,
+          "submitted_ms": 1790559979095,
+          "worker": "dda0b26e-f7f9-43ed-9baa-055f904c8ebc"
+        },
+        "package_digest": "143a7d60b5d3eac95d4c6bacce9301459397094482e896e2aa8a27327cf9c6ac",
+        "request_id": "a01ca2e6-bf51-487c-a413-aa1a5ef8f10f",
+        "skill": "acquire",
+        "step": "acquire",
+        "version": "1.0.0"
+      },
+      {
+        "execution": {
+          "duration_ms": null,
+          "error": "server restarted; execution outcome unknown; no automatic replay",
+          "finished_ms": 1790559979825,
+          "operation": {
+            "disposition": "QUARANTINED",
+            "evidence_ids": [
+              "0a476fd0-c06c-46a2-ae96-fe8cf184d650"
+            ],
+            "execution_knowledge": "UNKNOWN",
+            "integrity": "VALID",
+            "intent_digest": "fadb9f1ad7cdc45ecdb3c4c8a4b99ebcc97b469bc56ed3e0b7a2925539632a51",
+            "operation_id": "b86f3ed0-db44-46e7-8699-29620837a712",
+            "outcome": "UNRESOLVED",
+            "phase": "SETTLED",
+            "revision": "4"
+          },
+          "output": null,
+          "package_digest": "05536f5b1f6a906e0ef2aef7b4aefd48f831bf8e0ad27dd44da2f525f5c43cd8",
+          "parent": {
+            "process_run": "057e02a9-4505-4c1b-bcae-8d36dc3b4478",
+            "step": "load"
+          },
+          "request": {
+            "input": {
+              "holding": true,
+              "part": "part-restart"
+            },
+            "request_id": "b86f3ed0-db44-46e7-8699-29620837a712",
+            "skill": "load",
+            "version": "2.0.0"
+          },
+          "started_ms": 1790559979177,
+          "submitted_ms": 1790559979177,
+          "worker": "dda0b26e-f7f9-43ed-9baa-055f904c8ebc"
+        },
+        "package_digest": "05536f5b1f6a906e0ef2aef7b4aefd48f831bf8e0ad27dd44da2f525f5c43cd8",
+        "request_id": "b86f3ed0-db44-46e7-8699-29620837a712",
+        "skill": "load",
+        "step": "load",
+        "version": "2.0.0"
+      },
+      {
+        "execution": null,
+        "package_digest": "d4ee23a728ddd9ceeff7fd04fee85c2b514a49766a672202caf7dea844bca58b",
+        "request_id": "d3f06e28-df6e-44b4-96dd-e8e2f06b3512",
+        "skill": "release",
+        "step": "release",
+        "version": "1.0.0"
+      },
+      {
+        "execution": null,
+        "package_digest": "44e34d2a5810c8c3cf1e5f26309822d74171c8604f19118186d447eb2c22589e",
+        "request_id": "b24d291a-7b34-45b3-8d4d-5c1f2fe69c8d",
+        "skill": "unload",
+        "step": "unload",
+        "version": "1.0.0"
+      }
+    ],
+    "submitted_ms": 1790559979095
+  }
+}

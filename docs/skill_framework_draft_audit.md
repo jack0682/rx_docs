@@ -44,3 +44,9 @@ R3/R4/R5의 소프트웨어 조합 경로는 진전됐지만 완료 범위는 �
 최초 시험은 CLI가 시작 전 revision과 P의 시작 접수 후 revision을 동일시해 실패했다. 실제 계약에 맞게 후속 revision을 검사하도록 수정하고, 잘못된 revision 거절 시험과 설치 이미지 종단 재시험을 통과했다.
 
 R6은 실제 실행 경로 연결까지 진전됐지만, 현재는 이미 승인된 고정 공정을 호출하는 BOUND_CONFIGURATION이다. 임의 스킬의 등록·동적 입력·관측 전달·스킬 단위 조합을 이 경로에서 사용할 수 있다는 증거는 아니다. R1/R2/R3/R5의 LOCAL_SIM 기능을 실제 runtime에 통합하고 R7의 main 기능 대응을 검증한 설치 릴리스까지 전체 목표는 진행 중이다.
+
+## 진행: 기존 P의 서버 공정 작성 경로
+
+`rx runtime steps/compose/compose-recover`가 기존 공정 초안·binding API를 사용한다. 개발자가 등록된 Step을 순서대로 선택하면 서버에 초안과 선택을 저장하고, P가 고정된 컴파일 입력을 내보낸다. 실제 설치 CLI에서 binding 접수 응답 직후 SIGKILL → 새 CLI 복구 → 같은 초안/원 요청 보존 → 기존 패키지 assembler 수락을 확인했다. [검증 기록](../references/runtime_skill_authoring_2026-09-28/README.md)을 참조한다.
+
+R3의 기존 runtime 작성 경로가 진전됐다. 다만 신규 스킬 구현 등록, 작성한 공정의 검토·활성화·실행까지 한 흐름으로 연결, 동적 입출력과 runtime KPI는 아직 남아 있다. 이번 실행 시험은 기존 승인 공정에 대한 것이며 새 초안의 실행 증거로 대체하지 않는다.

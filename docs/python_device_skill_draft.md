@@ -92,3 +92,9 @@ Host 내부 설치 descriptor에 선택적 native 세대 경로를 추가했다.
 현재 서비스 boot·설치 identity·binding digest·저널이 완료된 교체 기록과 일치할 때만 관측을 내보내도록 연결했다. 실제 mTLS 조회에서 원 요청/계획/저널을 확인했고, 정지·다른 boot·잘못된 binding hash는 현재 증거가 되지 않았다. 선택 계약 revision/hash와 생성 SDK를 맞췄으며 기본 동결 manifest는 유지했다. [검증 기록](../references/host_binding_observation_2026-09-29/README.md)을 참조한다.
 
 다음은 P가 사전에 저장한 교체 요청/기준과 실측 관측을 대조하는 판정 경로다. 아직 배치 거절을 해제하지 않았으며 Host 관측만으로 자격·실행 권한이 생기지 않는다.
+
+## 진행: P의 원 교체 요청 저장과 대조 정책
+
+P가 staged change/Host별 원 요청 ID를 저장하는 ReleaseManager API를 추가했고 실제 이미지에서 동일 요청 재조회·권한 거절·요청 키 내용 변경 거절을 확인했다. 전후 구성, 현재 boot, 두 저널, 셀 범위와 시각을 대조하는 정책 및 내부 저장 handler도 구현했다. [검증 기록](../references/p_host_binding_intents_2026-09-29/README.md)을 참조한다.
+
+아직 요청 상태는 AWAITING_BASELINE이다. 인증된 Host transport worker의 수집, fences와 최종 재확인, 배치 허용 조건 연결은 미완료이며 기존 차단을 유지했다. P 재시작 시 원 요청을 보존하는 adoption도 별도 검증이 필요하다.

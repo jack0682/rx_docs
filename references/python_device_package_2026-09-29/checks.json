@@ -1,0 +1,11 @@
+{
+  "solutions_commit": "2309c682d8a99badb7d17ffff98c827a87ea8230",
+  "scope": "Metadata-only package fixtures and actual CLI; not live P intake",
+  "python_package_tests": 3,
+  "package_and_host_suite": "PASS",
+  "clippy": "PASS",
+  "workspace_check": "PASS",
+  "python_environment_tests": 2,
+  "python_runner_tests": 5,
+  "physical_execution": "NOT_PERFORMED"
+}

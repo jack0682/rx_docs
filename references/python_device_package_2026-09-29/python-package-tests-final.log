@@ -1,0 +1,12 @@
+   Compiling rx-host v0.1.0 (<workspace>/rx-solutions/runtime/rx-host)
+   Compiling rx-device-package v0.1.0 (<workspace>/rx-solutions/runtime/rx-device-package)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.51s
+     Running tests/python.rs (<workspace>/.build/python-host-bridge/debug/deps/python-382701e6d2c264bf)
+
+running 3 tests
+test changed_input_environment_and_target_are_not_accepted ... ok
+test signed_but_inconsistent_python_catalog_is_rejected ... ok
+test python_package_roundtrip_preserves_generic_catalog_and_originals ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.57s
+

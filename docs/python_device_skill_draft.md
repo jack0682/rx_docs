@@ -48,3 +48,9 @@ Rust PythonSkill adapter를 기존 Host gate에 연결해 준비 단계·잘못�
 제품 Builtin factory와 설정 로더에 Python 등록을 연결했다. 설치·Host·셀·Intent·환경 digest를 대조하고 실행 파일/보조 코드는 릴리스 경로에서 고정한다. 실제 이미지의 rx-hostd 초기화·기동·정지에서 SDK/스킬 import가 없었고, 물리 binding과 변조 입력은 거절됐다. [검증 기록](../references/python_host_service_2026-09-29/README.md)을 참조한다.
 
 이제 제품 서비스가 등록 파일을 로드하지만, 파일은 아직 시험 도구에서 준비했다. P의 사용자 등록 명령과 배치, 실제 P/Executor/Host Python 실행 및 출력 연결은 다음 작업으로 남는다.
+
+## 진행: 기존 서명 장치 패키지 경로 재사용
+
+Python 등록을 DEVICE_REFERENCE와 공통 operation catalog로 묶는 python-assemble을 추가했다. 서명 검증·원본 재조립·현재 정책과 선택 manifest 검증을 기존 경로에 연결했고, CLI와 변조/신뢰 키 제거 반례 시험을 통과했다. [검증 기록](../references/python_device_package_2026-09-29/README.md)을 참조한다.
+
+P에 별도 스킬 DB나 새 패키지 ABI를 추가하지 않았다. 다만 이번 시험은 metadata 패키지 fixture이며 실제 P 접수 및 설치된 signed-package Python 실행은 아직 다음 검증으로 남는다.

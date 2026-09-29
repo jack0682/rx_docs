@@ -163,10 +163,10 @@ ROS 코어는 통신을 연결하고, RX 코어는 작업 책임을 관리한다
 |---|---|
 | 재시작 인수 | A안을 구현한다. "이번 boot에서 재확인"을 따로 두고, 준비되지 않은 상태를 승인 철회와 구분한다. **구현(rx-platform #42)**: Store 소유자 영속, 정책 불변 시 generation 재사용. `Unavailable` 구분은 남음 |
 | 재자격 연속 | 정책 등록은 매 boot 재구성으로 유지된다(변경 불필요). 2번 경로(cell_delivery 고정물에서 변경 후 구성 사전 계산) 타당성: 연쇄의 Id는 모두 클라이언트가 정하므로 미리 발급할 수 있다. 걸림돌은 장치 검토 Version digest에 들어간 P 기록 시각이었다. 이 시각이 plan digest → compile input → package → 변경 후 구성으로 전파됐다. **해소(#49)**: digest v2에서 기록 시각을 제외했다. 장치 검토는 릴리스 태그에 없어 호환 경로를 두지 않았다. 2번 경로는 설치 전에 계획한 binding만 다룬다. 설치 뒤에 정한 변경은 1번 경로(새 정책으로 재시작)나 새 설치가 필요하므로 두 경로는 보완 관계다. E2E는 진행 중 |
-| 재시작 연속성 행렬 | 재시작 때 잃는 항목을 영속 / 재확인 / 의도적 소멸로 분류하고 시험한다 |
+| 재시작 연속성 행렬 | 재시작 때 잃는 항목을 영속 / 재확인 / 의도적 소멸로 분류하고 시험한다. **조사(2026-09-30)**: 약 65개 항목을 분류했다. 그 과정에서 재시작 뒤 셀이 서비스에 복귀하지 못하는 결함이 드러났다. **수정**: (1) 정상 종료(SIGTERM)가 모든 셀에 남기는 AuthorityRevoked에 해제 경로가 없었고, executor가 같은 프로세스로 재접속해도 출처 없는 AuthorityRevoked를 다시 추가했다. 그래서 정상 재시작마다 셀이 영구히 막혔다. 종료 origin을 기록하고 P만 재시작한 경우의 executor 재접속을 판별하도록 고쳤다(rx-platform #52). (2) 계약에 있는 AbandonRun이 미구현이라, 재시작으로 RecoveryRequired가 된 Run이 변경·구성·재자격 게이트를 영원히 막았다. 진행 중인 작업이 없을 때 운영자가 폐기하도록 구현했다(#53). **남음**: 재시작한 executor의 AuthorityRevoked 해제, 재시작 때 무효화된 작업이 잡고 있는 자원의 격리, store 복원 뒤 이전 generation 제한의 선택 불가, 이전 boot의 대기 중인 자격 배치, 거절된 Arm 전송의 무한 재시도 |
 | 중단 없는 writer | 단일 writer 경로의 panic 가능 지점을 없앤다. 명령 단위 오류와 서비스 정지를 구분한다. **구현(#43)**: unwrap 제거, `clippy::unwrap_used` deny, 티켓 TTL 상수 |
 | 백업·복원 | 복원하면 store generation을 새로 발급해 Host가 롤백을 감지하게 한다. 모든 버전→최신 업그레이드를 시험한다. **구현(#46)**: `rx-platformd backup/restore`, `rx.store-restore.v1` 기록, 스키마 1–5 업그레이드 시험 |
-| 성장 상한 | 무한히 커지는 목록과 전체 prefix 조회를 상한·페이지 단위로 바꾼다 |
+| 성장 상한 | 무한히 커지는 목록과 전체 prefix 조회를 상한·페이지 단위로 바꾼다. **조사·1단계(2026-09-30)**: 저장소의 prefix 조회가 `LIKE`여서 인덱스를 쓰지 못했고, 모든 조회가 prefix와 관계없이 store 전체 키를 읽었다. 기본키 범위 조회로 바꿨다(rx-platform #51, SDK rx-solutions #67). 관계없는 키 100만 개 옆에서 20행 prefix 조회가 43ms에서 0.012ms가 됐다. **남음**: 자주 호출되는 경로(25ms 감시, 호스트별 100ms 전송, Run 변경마다 checkpoint)가 이력 전체를 읽는 문제는 셀별 live 집합 인덱스로 바꿔야 한다. 누적 Run 1만 개에서 executor 배정이 영구히 실패하는 절벽, Run·ExecutorState 문서 1MiB 한계(스텝 5개면 part 약 800개), fence ack·case retention도 남았다 |
 | 이벤트 스트림 | 두 단계로 나눈다. (1) 운영자 BFF의 SSE(`/api/v1/events`): 제어 journal의 변경 알림으로 3초 폴링을 대체한다. 공개 계약이 아니다. (2) gRPC `Journal.Subscribe`/`GetSnapshot` 등록: rx-platform `CONTROL_JOURNAL.md`가 밝힌 공개 매핑(CellJournalRecord·SnapshotEntity, cursor·보존·gap·구독자 상한)이 끝나야 등록한다. 매핑 없이 등록하면 동결 계약 적합성을 주장하는 것이 되므로 하지 않는다 |
 | API 수명주기 | 미구현 RPC를 구현 / 삭제 / 예약으로 판정한다. deprecation 절차를 둔다 |
 | 관리 축 연결 | 등록·준비·업무 사용을 supervisor와 platform 사이에서 끝까지 연결한다 |
@@ -174,7 +174,7 @@ ROS 코어는 통신을 연결하고, RX 코어는 작업 책임을 관리한다
 | **P 재시작 뒤 유지된 Host의 운영 rebind** | P만 재시작하고 Host는 그대로이면 운영 등록이 옛 세션에 묶여 셀이 link를 되찾지 못했다([기록](../references/p_restart_adoption_2026-09-29/README.md)). **구현(#45)**: 재수용이 세션 만료된 같은 boot를 교체, grant 만료 대기, 소비 시 work 재검사, 이력 키에 세션. 실제 이미지 3회 연속 통과([기록](../references/p_restart_rebind_2026-09-29/README.md)) |
 | Host 재시작 뒤 복귀 | 무효화 origin 기록을 둔다. **DeviceRestart block 해제 경로**를 만든다. 재기동 Host의 결과를 아는 작업을 정산한다(settlement v2). 모두 재수용 기록을 기준으로 한다([비교표](implementation/host_readmission_delta.md)). **origin·해제 구현(#48)**: 재link(기록된 epoch 이후의 bound link) 뒤 재자격 선택으로만 해제. settlement v2는 남음 |
 | 관측 전용 참여 | observation-only binding(P와 Host). 제어 권한 없이 관측만 제공하는 구성요소를 참여시킨다 |
-| 시험 신뢰성 | 시간에 의존하는 불안정 시험을 결정적 대기로 바꾼다(예: platformd 기동 8초 타임아웃) |
+| 시험 신뢰성 | 시간에 의존하는 불안정 시험을 결정적 대기로 바꾼다(예: platformd 기동 8초 타임아웃). **처리(2026-09-30)**: platformd 기동 대기는 준비 완료 또는 서버 종료 신호로 끝나게 했다(rx-platform #50). rx-host 시험의 간헐 실패는 CI 로그상 ETXTBSY였다. 실행 파일을 쓰자마자 exec할 때 다른 스레드의 fork와 겹치는 **제품 경합**이라, 운영 중 bridge 기동도 실패할 수 있었다. exec 실패만 제한 재시도하도록 고치고 Linux 재현 시험을 두었다(rx-solutions #66) |
 
 **품질 게이트**
 - 불변식 30개 모두 의미 시험으로 커버한다.

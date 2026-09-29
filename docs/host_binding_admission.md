@@ -118,6 +118,8 @@ S3–S5 실시간 시험을 준비하며 코드로 확인한 사실이다.
 
 이 rebind 공백은 binding 변경과 무관하게 모든 P 재시작에 해당한다. 마스터 플랜 Phase 2의 우선 항목으로 둔다([비교표 정정](implementation/host_readmission_delta.md)).
 
+**rebind 구현 (2026-09-29, rx-platform `feature/retained-host-rebind`).** 재수용이 세션이 만료된 같은 boot도 교체할 수 있게 하고, 이전 runtime의 grant가 끝날 때까지 link를 Busy로 두며, 승인 소비 시 Run·work 조건을 다시 검사한다. 첫 실제 이미지 실행은 등록 이력 키 충돌(`COMMIT_LINK REVISION_CONFLICT`)로 멈췄고, 키에 세션을 넣은 뒤 `--binding-commit --restart-platform`이 3회 연속 `APPLIED_UNQUALIFIED`까지 통과했다([기록](../references/p_restart_rebind_2026-09-29/README.md)). P 재시작 인수 경로는 이로써 끝까지 이어진다. 재자격 연결(2번 경로)은 남는다.
+
 ## 커밋 전 무계획 재시작 (2026-09-29)
 
 코드 검토로 막다른 경로를 찾았다. 기준 수집·fence 뒤, Host binding commit 전에 Host가 교체 없이 재시작하면(정전·업데이트 등) 다음이 겹쳐 변경을 끝낼 수 없었다.

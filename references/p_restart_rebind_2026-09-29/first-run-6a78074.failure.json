@@ -1,0 +1,129 @@
+{
+  "label": "binding commit was not confirmed",
+  "intents": [
+    {
+      "intent": {
+        "request": "01a0ed59-4c5e-76d1-8498-53efee7b3ac4",
+        "change": "579ecc90-b5e0-4bcd-ba86-28b2a601c08b",
+        "host": "host/sim",
+        "cell": "cell/a",
+        "host_plan_digest": "250bf45650032c0b8da7d0150248119a63ede259546aa303490a969b0a53e261",
+        "before_configuration": "d7cb82be01f0cd7778bde8571233c2ffb42ee068d72d50093e1bcce6f247d381",
+        "after_configuration": "91b2466d4b193535aab9983a619017341f02e6dd29435b9f0227f5c84904a370",
+        "before_cells": {
+          "cell/a": {
+            "definition": "0101010101010101010101010101010101010101010101010101010101010101",
+            "envelope": "0202020202020202020202020202020202020202020202020202020202020202",
+            "environment": "SIMULATION"
+          }
+        },
+        "after_cells": {
+          "cell/a": {
+            "definition": "0101010101010101010101010101010101010101010101010101010101010101",
+            "envelope": "0202020202020202020202020202020202020202020202020202020202020202",
+            "environment": "SIMULATION"
+          }
+        },
+        "runtime_boot": "01a0ed59-5083-7520-9e76-a51a2ab49f22",
+        "created_at": {
+          "clock_id": "linux-boottime/2ed9b317-bca7-4f33-b103-e793ae664d59",
+          "ticks_ns": "156304828112"
+        }
+      },
+      "phase": "BASELINE_RECORDED",
+      "baseline": {
+        "snapshot": {
+          "evidence_journal": "635abb7c-69c1-4f0f-9447-5da0708a8a17",
+          "installation_identity": "a361757d0997b6d4a150afe563e6965b64f5abddc737ed50b1311798cf341cfa",
+          "schema": "rx.host-process-configuration-snapshot.v1",
+          "host": "host/sim",
+          "host_boot": "4b683098-3893-4524-a082-9ec88a0f43c8",
+          "delivery_journal": "99eeed13-dc85-44f1-9405-b6575d6b84a9",
+          "binding_digest": "f7943d7b26b0c22fd927471a2f680cb933915345996805b3ed49d7c6c650937f",
+          "cells": [
+            {
+              "cell": "cell/a",
+              "definition": "0101010101010101010101010101010101010101010101010101010101010101",
+              "envelope": "0202020202020202020202020202020202020202020202020202020202020202",
+              "environment": "SIMULATION",
+              "epoch": "2",
+              "scopes": {
+                "zone/shared": "2"
+              },
+              "blocked": [
+                "01a0ed59-4287-77d3-88f0-f1da2bc1dc5c"
+              ],
+              "applied": null
+            }
+          ]
+        },
+        "observed_at": {
+          "clock_id": "linux-boottime/2ed9b317-bca7-4f33-b103-e793ae664d59",
+          "ticks_ns": "156530352903"
+        },
+        "producer_session": "01a0ed59-4414-7074-a58e-4cc9b712cea5"
+      },
+      "observation": {
+        "schema": "rx.host-process-configuration-observation.v1",
+        "snapshot": {
+          "evidence_journal": "635abb7c-69c1-4f0f-9447-5da0708a8a17",
+          "installation_identity": "a361757d0997b6d4a150afe563e6965b64f5abddc737ed50b1311798cf341cfa",
+          "schema": "rx.host-process-configuration-snapshot.v1",
+          "host": "host/sim",
+          "host_boot": "4b683098-3893-4524-a082-9ec88a0f43c8",
+          "delivery_journal": "99eeed13-dc85-44f1-9405-b6575d6b84a9",
+          "binding_digest": "f7943d7b26b0c22fd927471a2f680cb933915345996805b3ed49d7c6c650937f",
+          "cells": [
+            {
+              "cell": "cell/a",
+              "definition": "0101010101010101010101010101010101010101010101010101010101010101",
+              "envelope": "0202020202020202020202020202020202020202020202020202020202020202",
+              "environment": "SIMULATION",
+              "epoch": "2",
+              "scopes": {
+                "zone/shared": "2"
+              },
+              "blocked": [
+                "01a0ed59-4287-77d3-88f0-f1da2bc1dc5c"
+              ],
+              "applied": null
+            }
+          ]
+        },
+        "receipt": null,
+        "context_matches_current_host": false,
+        "activation_authorized": false
+      },
+      "read_started": {
+        "clock_id": "linux-boottime/2ed9b317-bca7-4f33-b103-e793ae664d59",
+        "ticks_ns": "156526378778"
+      },
+      "observed_session": null,
+      "issue": "TRANSPORT_UNAVAILABLE",
+      "created_by": "reviewer",
+      "activation_authorized": false,
+      "adopted_from": [
+        "01a0ed59-4286-76e8-a507-49e6d85e663a"
+      ]
+    }
+  ],
+  "blockers": [
+    {
+      "kind": "HOST_BINDING_CHANGE_REQUIRED"
+    },
+    {
+      "kind": "HOST_BINDING_COMMIT_UNCONFIRMED",
+      "host": "host/sim"
+    },
+    {
+      "kind": "PREPARATION_STALE"
+    },
+    {
+      "kind": "HOST_CONFIGURATION_ACKNOWLEDGEMENT_REQUIRED",
+      "cell": "cell/a",
+      "host": "host/sim"
+    }
+  ],
+  "platform_log": "",
+  "host_log": ""
+}

@@ -173,7 +173,7 @@ ROS 코어는 통신을 연결하고, RX 코어는 작업 책임을 관리한다
 | API 수명주기 | 미구현 RPC를 구현 / 삭제 / 예약으로 판정한다. deprecation 절차를 둔다 |
 | 관리 축 연결 | 등록·준비·업무 사용을 supervisor와 platform 사이에서 끝까지 연결한다 |
 | 호스트 실행 자원 | 실행 요구를 cgroup v2(CPU·메모리)와 장치 접근으로 적용하고 보고한다. 지원하지 않는 요구는 거절한다 |
-| **P 재시작 뒤 유지된 Host의 운영 rebind (우선)** | P만 재시작하고 Host는 그대로이면 운영 등록이 옛 세션에 묶여 셀이 link를 되찾지 못한다(2026-09-29 실제 이미지 확인, [기록](../references/p_restart_adoption_2026-09-29/README.md)). 기존 Host 복구 승인과 재수용 기록 모델로 명시적 rebind를 만든다. link 경로는 하나로 유지한다 |
+| **P 재시작 뒤 유지된 Host의 운영 rebind (우선)** | P만 재시작하고 Host는 그대로이면 운영 등록이 옛 세션에 묶여 셀이 link를 되찾지 못한다(2026-09-29 실제 이미지 확인, [기록](../references/p_restart_adoption_2026-09-29/README.md)). 명시적 재수용으로 rebind하게 구현했고 실제 이미지 3회 연속 통과([기록](../references/p_restart_rebind_2026-09-29/README.md)). develop 머지 대기 |
 | Host 재시작 뒤 복귀 | 무효화 origin 기록을 둔다. **DeviceRestart block 해제 경로**를 만든다(현재는 해제 경로가 없어 재시작한 Host의 셀이 계속 막힘). 재기동 Host의 결과를 아는 작업을 정산한다(settlement v2). 모두 재수용 기록을 기준으로 한다([비교표](implementation/host_readmission_delta.md)) |
 | 관측 전용 참여 | observation-only binding(P와 Host). 제어 권한 없이 관측만 제공하는 구성요소를 참여시킨다 |
 | 시험 신뢰성 | 시간에 의존하는 불안정 시험을 결정적 대기로 바꾼다(예: platformd 기동 8초 타임아웃) |

@@ -13,7 +13,7 @@
 | S4 교체 확인 | P worker | ReleaseManager의 binding 재수용 승인 → 새 boot가 변경 후 구성으로 link → 새 boot, 같은 두 저널, commit 요청/계획/구성/설치 identity 일치 → MetadataMatched | 실제 이미지 시험 통과 |
 | S5 준비 갱신 | ReleaseManager | 재기동 뒤 이전 fence 확인은 옛 boot의 것이므로 refresh로 새 세대에 다시 fence | 실제 이미지 시험 통과 |
 | S6 구성 전달 | P | 모든 계획 Host가 **CommitCurrent**, 확인이 현재 P runtime·현재 등록 세션의 것, 최종 재검증 | 실제 이미지 시험 통과 |
-| S7 적용 | ReleaseManager | 기존 적용 조건 + Host의 정확한 commit 대상 수신 확인 | 미구현 |
+| S7 적용 | ReleaseManager | 기존 적용 조건 + 모든 계획 Host의 CommitCurrent | 실제 이미지 시험 통과(`APPLIED_UNQUALIFIED`, 자격은 별도 — 아래 "S6·S7 연결") |
 
 ## Standing
 
@@ -36,7 +36,7 @@ P는 변경마다 계획 Host별 standing을 원장과 현재 Host 등록에서 
 
 ## 변경 상세의 차단 항목
 
-binding 계획이 있는 변경에는 `HOST_BINDING_CHANGE_REQUIRED`(적용 경로 미구현)를 계속 표시한다. 여기에 Host별로 `HOST_BINDING_BASELINE_REQUIRED` 또는 `HOST_BINDING_COMMIT_UNCONFIRMED`를 추가해 무엇이 빠졌는지 보인다. CommitCurrent인 Host에는 추가 항목이 없다.
+binding 계획이 있는 변경에는 모든 계획 Host가 CommitCurrent가 될 때까지 `HOST_BINDING_CHANGE_REQUIRED`를 표시한다("S6·S7 연결" 이후). 여기에 Host별로 `HOST_BINDING_BASELINE_REQUIRED` 또는 `HOST_BINDING_COMMIT_UNCONFIRMED`를 추가해 무엇이 빠졌는지 보인다. CommitCurrent인 Host에는 추가 항목이 없다.
 
 ## P 재시작 인수 (설계만)
 

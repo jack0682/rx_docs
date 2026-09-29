@@ -1,0 +1,9 @@
+# Runtime stop waits for Host fence acknowledgement
+
+2026-09-29. A runtime stop revokes every cell and fences each registered Host. Before this change P shut the Host delivery services down immediately, so a connected Host sometimes acknowledged in time (exit 0) and sometimes did not (`HOST_FENCE_UNCONFIRMED`, exit 2). The earlier [binding admission record](../host_binding_admission_2026-09-29/README.md) observed one of each within three runs.
+
+P now keeps the delivery services running for at most 5 s until no `HOST_FENCE_UNCONFIRMED` attention remains, re-reading the idempotent stop report every 50 ms. The fence wait and the service drain share one 10 s budget, keeping the stop inside the 15 s container stop grace used by the image tests. The wait is skipped when a critical service has already failed. It does not change which Host evidence counts; an acknowledgement still has to match the registered Host boot, journal, cell epoch and scopes.
+
+With the final image, three runs with a connected FILE_SIMULATION Host stopped in about 0.3 s with exit 0 and no attention; five further runs on the first build of this change gave the same result. When the Host was stopped before P (`--host-unreachable-at-stop`), P waited, reported `HOST_FENCE_UNCONFIRMED` for `host/sim` and exited 2 after 5.2 s ([unreachable-host.json](unreachable-host.json)). Without a Host, P stopped with exit 0. See [live-runs.json](live-runs.json) and [checks.json](checks.json).
+
+Workspace tests (0 failed), workspace clippy, fmt, repository checks and the 118-file SDK comparison passed. The operator cell-delivery acceptance, which stops the Host before P and accepts exit 0 or 2, was not re-run; its P stop may now take up to 5 s longer. A Host that stays connected but never acknowledges was not exercised separately. No physical equipment was operated.

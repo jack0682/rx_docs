@@ -1,0 +1,29 @@
+{
+  "sources": {
+    "rx-platform": "7c8450f7998f556e901c538bfd94feb954ba155e",
+    "rx-solutions": "1857da402aaf44cad940105596689c04454f45e1"
+  },
+  "fence_acknowledgement_wait_s": 5,
+  "shared_stop_budget_s": 10,
+  "container_stop_grace_s": 15,
+  "connected_host_runs": {
+    "exit_0_no_attention": 3,
+    "other": 0
+  },
+  "earlier_build_connected_host_runs": {
+    "exit_0_no_attention": 5,
+    "other": 0
+  },
+  "unreachable_host": "EXIT_2_HOST_FENCE_UNCONFIRMED_AFTER_WAIT",
+  "without_host": "EXIT_0",
+  "workspace_tests_failed": 0,
+  "clippy_workspace": "PASS",
+  "fmt": "PASS",
+  "repository_checks": "PASS",
+  "sdk_files_matched": 118,
+  "not_exercised": [
+    "cell_delivery operator acceptance (accepts exit 0 or 2; now slower by up to 5 s when the Host is stopped first)",
+    "Host that stays connected but never acknowledges"
+  ],
+  "physical_equipment": "NOT_OPERATED"
+}

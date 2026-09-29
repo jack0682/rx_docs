@@ -1,0 +1,58 @@
+{
+  "live-r1": {
+    "status": "PASS",
+    "image": "sha256:e43c633c519c55244f275c8c458b992c87f086c8710ff039b60a06f03267815b",
+    "binding_host": true,
+    "host_unreachable_at_stop": false,
+    "stop_exit_code": 0,
+    "stop_seconds": 0.32,
+    "stop_attention": [],
+    "final_phase": "PROCESS_STOPPED"
+  },
+  "live-r2": {
+    "status": "PASS",
+    "image": "sha256:e43c633c519c55244f275c8c458b992c87f086c8710ff039b60a06f03267815b",
+    "binding_host": true,
+    "host_unreachable_at_stop": false,
+    "stop_exit_code": 0,
+    "stop_seconds": 0.31,
+    "stop_attention": [],
+    "final_phase": "PROCESS_STOPPED"
+  },
+  "live-r3": {
+    "status": "PASS",
+    "image": "sha256:e43c633c519c55244f275c8c458b992c87f086c8710ff039b60a06f03267815b",
+    "binding_host": true,
+    "host_unreachable_at_stop": false,
+    "stop_exit_code": 0,
+    "stop_seconds": 0.31,
+    "stop_attention": [],
+    "final_phase": "PROCESS_STOPPED"
+  },
+  "unreachable": {
+    "status": "PASS",
+    "image": "sha256:e43c633c519c55244f275c8c458b992c87f086c8710ff039b60a06f03267815b",
+    "binding_host": true,
+    "host_unreachable_at_stop": true,
+    "stop_exit_code": 2,
+    "stop_seconds": 5.24,
+    "stop_attention": [
+      {
+        "cell": "cell/a",
+        "host": "host/sim",
+        "kind": "HOST_FENCE_UNCONFIRMED"
+      }
+    ],
+    "final_phase": "PROCESS_STOPPED"
+  },
+  "nohost": {
+    "status": "PASS",
+    "image": "sha256:e43c633c519c55244f275c8c458b992c87f086c8710ff039b60a06f03267815b",
+    "binding_host": false,
+    "host_unreachable_at_stop": false,
+    "stop_exit_code": 0,
+    "stop_seconds": 0.17,
+    "stop_attention": [],
+    "final_phase": "PROCESS_STOPPED"
+  }
+}

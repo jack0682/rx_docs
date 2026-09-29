@@ -103,7 +103,7 @@ P가 staged change/Host별 원 요청 ID를 저장하는 ReleaseManager API를 �
 
 P의 Host 설정 worker가 등록된 Host 세션에 보이는 교체 요청을 조회하고, 묶음마다 한 번의 transport 읽기로 얻은 관측을 P에 제출하도록 연결했다. transport 실패는 `TRANSPORT_UNAVAILABLE`, 제출 거절은 `AUTHORIZATION_CHANGED`로 기록하며 어느 쪽도 기준을 만들지 않는다. 실제 P 이미지 옆에 격리된 FILE_SIMULATION Host를 띄운 연속 3회 시험에서 모든 요청이 실제 Host snapshot으로 `BASELINE_RECORDED`가 됐고, 활성화 권한은 false, 배치 거절(409)은 유지됐다. Host가 없으면 `AWAITING_BASELINE`에 머문다. [검증 기록](../references/p_host_binding_reader_2026-09-29/README.md)을 참조한다.
 
-시험 중 종료 단계의 간헐 실패는 제품 결함이 아니라 등록 시점의 경합이었다. P는 종료할 때 모든 셀을 무효화하고 등록된 Host에 fence를 보내지만 그 확인을 기다리지 않는다. 그래서 등록된 Host가 제때 확인하지 못하면 `HOST_FENCE_UNCONFIRMED`와 exit 2가, 확인하면 exit 0이 나온다. 두 결과 모두 보고와 종료 코드가 일치하면 올바르며, 시험은 등록을 기다린 뒤 이 일치를 요구한다. (정정: 처음 기록은 원인을 fence를 받은 적 없는 Host로 적었다.) 남은 범위는 fence와 현재 확인의 재검증, 배치 허용 연결, P 재시작 뒤 원 요청 인수, 같은 실시간 경로에서의 Host 교체 commit 관측이다.
+시험 중 종료 단계의 간헐 실패는 제품 결함이 아니라 등록 시점의 경합이었다. P는 종료할 때 모든 셀을 무효화하고 등록된 Host에 fence를 보내지만 그 확인을 기다리지 않는다. 그래서 등록된 Host가 제때 확인하지 못하면 `HOST_FENCE_UNCONFIRMED`와 exit 2가, 확인하면 exit 0이 나온다. 두 결과 모두 보고와 종료 코드가 일치하면 올바르며, 시험은 등록을 기다린 뒤 이 일치를 요구한다. 이후 사용자 결정에 따라 P가 최대 5초 동안 Host의 fence 확인을 기다리도록 바꿔, 연결된 Host는 항상 exit 0, 도달할 수 없는 Host는 대기 후 exit 2가 되게 했다([검증 기록](../references/platform_stop_fence_wait_2026-09-29/README.md)). (정정: 처음 기록은 원인을 fence를 받은 적 없는 Host로 적었다.) 남은 범위는 fence와 현재 확인의 재검증, 배치 허용 연결, P 재시작 뒤 원 요청 인수, 같은 실시간 경로에서의 Host 교체 commit 관측이다.
 
 ## 진행: 기준을 잡은 Host 세대에만 준비·fence 허용
 

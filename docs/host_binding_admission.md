@@ -102,6 +102,22 @@ S3–S5 실시간 시험을 준비하며 코드로 확인한 사실이다.
 
 결정 필요: (A) 정책·store 소유자·정책 파일이 같으면 generation을 재시작 사이에 유지해 검토가 살아남게 한다. (B) 현재대로 재시작은 재검토를 요구하고, binding 교체 도중이면 새 변경·새 요청과 Host 쪽 되돌림 절차를 설계한다.
 
+**A 결정과 구현 (2026-09-29).** 사용자가 A를 선택했다([마스터 플랜](42_framework_master_plan.md)).
+
+**구현 내용** (rx-platform c70af0d)
+- store 소유자는 원래 open할 때마다 새로 발급됐다. 이를 store 루트별로 영속하도록 바꿨다.
+- 소유자·정책 fingerprint·정책 파일이 모두 같으면 generation을 재사용한다.
+- 중간에 다른 값이나 비활성화가 있었으면 새 generation을 발급한다.
+
+**실제 이미지 재실행 결과** ([기록](../references/p_restart_adoption_2026-09-29/README.md))
+- 인수가 두 번 모두 수락됐다.
+- 그러나 다음 단계에서 막혔다. P만 재시작하고 Host는 그대로인 경우, 운영 HostRegistration이 옛 세션에 묶여 있다.
+- link 준비는 같은 boot의 새 세션을 `ContinuityUnproven`으로 거절한다.
+- 재수용은 재시작한 Host만 다룬다.
+- 따라서 Host 운영 context가 `IDENTITY_UNAVAILABLE`에 머문다.
+
+이 rebind 공백은 binding 변경과 무관하게 모든 P 재시작에 해당한다. 마스터 플랜 Phase 2의 우선 항목으로 둔다([비교표 정정](implementation/host_readmission_delta.md)).
+
 ## 커밋 전 무계획 재시작 (2026-09-29)
 
 코드 검토로 막다른 경로를 찾았다. 기준 수집·fence 뒤, Host binding commit 전에 Host가 교체 없이 재시작하면(정전·업데이트 등) 다음이 겹쳐 변경을 끝낼 수 없었다.

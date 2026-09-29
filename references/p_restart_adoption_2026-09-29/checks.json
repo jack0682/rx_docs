@@ -1,0 +1,18 @@
+{
+ "sources": {
+  "rx-platform": "c70af0dcc629b6b758f43010d2bc92e80ea194fc",
+  "binding_host_image_from_rx-solutions": "1857da402aaf44cad940105596689c04454f45e1"
+ },
+ "platform_image": "sha256:c1ebd84090c903f2b4cbdff7d3b18c9eb95310b79c3b68379bd947ef4adcd54e",
+ "binding_host_image": "sha256:b59b19f4ef96847821e2beca970353fb41d22f912b494904f3788f4ed2b226bb",
+ "scenario": "tools/test_platform_image.py --binding-commit --restart-platform",
+ "runs": 2,
+ "adoption_accepted": 2,
+ "operating_host_context_after_adoption": "IDENTITY_UNAVAILABLE (30 s limit, both runs)",
+ "platform_link_error_after_restart": {
+  "stage": "PREPARE_LINK",
+  "code": "ContinuityUnproven"
+ },
+ "previous_result_before_decision_A": "adoption refused 409 QUALIFICATION_REQUIRED with REVIEW_NO_LONGER_APPROVED",
+ "physical_equipment": "NOT_OPERATED"
+}

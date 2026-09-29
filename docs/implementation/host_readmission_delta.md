@@ -11,7 +11,8 @@
 
 | 의미 | develop 재수용 | 연구 host-rejoin | 판정 |
 |---|---|---|---|
-| 진입 | 재수용 요청 한 번 | context → proposal → 승인 → 진행 → 조회 → 정산 → rebind 다단계 | 이미 있음. 다단계 API는 폐기 |
+| 진입 | 재수용 요청 한 번(**재시작한 Host**, 다른 boot만) | context → proposal → 승인 → 진행 → 조회 → 정산 → rebind 다단계 | 재시작한 Host는 이미 있음. 다단계 API 형태는 폐기 |
+| **P만 재시작하고 Host는 유지된 경우의 운영 rebind** | **없음.** 같은 boot의 새 producer 세션을 link 준비가 거절하고(`engine/host_link.rs`), 재수용은 다른 boot만 다루며(`covers`), Host 복구 흐름은 recovery-only에서 끝난다 | 새 grant와 등록·baseline 교체로 운영 등록을 되찾는 rebind | **없음 → 흡수(재설계).** 2026-09-29 정정(§5) |
 | 승인 주체 | 등록 terminal의 ReleaseManager가 Host의 모든 등록 셀을 포함해야 함 | 같은 역할이 cohort 전체를 포함해야 함 | 이미 있음 |
 | 신원·세대·저널 연속성 | 같은 이전 boot·delivery journal·session. evidence journal 일치. 새 boot는 이전 boot와 달라야 함. link 준비 시 실제 snapshot 대조 | Runtime·인증 바인딩·구성·epoch·scope·baseline·transport pin 비교. 새 read로 fence 카운터·구성 적용 증명 확인 | 부분. 인증 바인딩 불변과 fence 카운터 대조는 후속 보강 후보 |
 | 복원 범위 | 등록 교체만 함. grant·Arm·자격·permit·Run은 복원하지 않고 block 유지 | RECOVERY_ONLY fence 뒤 rebind에서 새 grant. 생산 허가 없음 | 이미 있음 |
@@ -19,7 +20,7 @@
 | 제안 수명·TTL | TTL 없음. 모든 셀이 다시 연결될 때까지 유효. Host당 하나 | proposal 30초, 승인 실행 30초 | 설계 차이. 폐기. 오래 방치된 승인의 만료는 별도 과제 |
 | 실행 중 작업 | 실행 중 Run·미해결 작업이 있으면 승인 거절 | 활성 Run·mandate·permit이 있으면 blocker | 이미 있음 |
 | binding 변경과의 관계 | 재수용이 staged 변경의 binding intent를 받아 commit 전후 세대 규칙 적용 | 별도 rebind 구성 origin 체인(최대 64) | 다른 방식으로 있음. 체인은 폐기(구성 증명 이원화 방지) |
-| grant 획득 | 정상 link commit이 새 grant 검증 | 정상 link 거절을 유지하고 별도 grant 래퍼 사용 | **충돌**. 폐기 |
+| grant 획득 | 정상 link commit이 새 grant 검증 | 정상 link 거절을 유지하고 별도 grant 래퍼 사용 | 재시작한 Host에서는 충돌. 유지된 Host의 rebind에서는 흡수 설계 시 하나의 link 경로로 통합 |
 | 결과를 아는 작업의 정산 | 없음. 재수용이 Quarantined·RecoveryRequired를 정산하지 않음 | 작업별 receipt·native evidence 기준으로 교체된 boot에서 정산 | **없음 → 재설계해 흡수** |
 | DeviceRestart 해제 | **해제 경로 없음**(아래 §2) | review에 묶인 해제 | **없음 → 재설계해 흡수** |
 
@@ -44,7 +45,8 @@ rx-platform `crates/rx-api/HOST_READMISSION.md`에는 "별도 재개·재자격�
 | DeviceRestart 해제. origin·재수용 기록·link receipt 기준으로 재작성 | 흡수(재설계) | Phase 2 코어 보강 |
 | observation-only binding(P와 Host). commit 경로에도 제어 거절 가드 추가 | 흡수 | Phase 2 코어 보강 |
 | settlement v2: 재기동 Host의 결과를 아는 작업. 재수용 뒤 fresh read와 receipt 기준 | 흡수(재설계) | Phase 2 코어 보강 |
-| host-rejoin의 context·proposal·승인·진행·조회·rebind 엔드포인트와 기록, rebind 체인, 전용 recovery transport, retired-session 대기 | **폐기** | — |
+| 유지된 Host의 운영 rebind(새 grant, 등록·baseline 교체). 기존 Host 복구 승인과 재수용 기록 모델에 맞춰 재설계 | 흡수(재설계) — **2026-09-29 정정** | Phase 2 코어 보강(우선) |
+| host-rejoin의 별도 context·proposal·승인 엔드포인트 형태, rebind 구성 origin 체인, 전용 recovery transport | 폐기(rebind 의미는 위 행으로 흡수) | — |
 | 계약 README 네 개 | 각 흡수 항목과 함께 현재 코드 기준으로 새로 작성 | 각 단계 |
 
 **폐기 이유**
@@ -59,3 +61,16 @@ rx-platform `crates/rx-api/HOST_READMISSION.md`에는 "별도 재개·재자격�
 observation-only binding은 Host 로컬 설치 입력의 형식과 Rust API를 바꾼다. 하지만 기본 계약 `rx.contract.v1`·`rx.cell.v1`의 wire와 manifest는 바꾸지 않는다. 유효한 기존 binding의 digest도 그대로다.
 
 따라서 [마스터 플랜](../42_framework_master_plan.md)의 "호환성이 깨지는 계약 변경은 v1.1 revision"에는 해당하지 않는다. 대신 host-configuration 선택 binding 계열의 revision과 호환성 시험으로 다룬다. 구버전 Host·P는 새 형식을 모르는 필드로 거절한다(fail-closed).
+
+## 5. 정정 — 유지된 Host의 운영 rebind (2026-09-29)
+
+§1과 §3의 첫 판정은 host-rejoin의 rebind를 재수용과 같은 경우로 보고 폐기했다. 이는 틀렸다. 재수용은 **Host가 재시작한 경우**(다른 boot)만 다룬다. rebind는 **P만 재시작하고 Host는 그대로인 경우**를 다룬다.
+
+develop에서 P만 재시작하면 다음과 같이 된다.
+- Host는 새 producer 세션으로 증거 통신을 이어 간다. 그러나 운영 HostRegistration은 옛 세션에 묶인 채 남는다(rx-platform `PRODUCER_RUNTIME_RECONNECT.md`).
+- link 준비는 같은 boot의 다른 세션을 `ContinuityUnproven`으로 거절한다.
+- 결과적으로 셀은 운영 link를 되찾지 못한다.
+
+실제 이미지 실행에서 확인했다. 재시작 인수 A안 뒤 인수는 수락됐지만, Host 운영 context가 `IDENTITY_UNAVAILABLE`에 머물렀다([기록](../../references/p_restart_adoption_2026-09-29/README.md)).
+
+이 rebind는 Phase 2에서 기존 Host 복구 승인(context → proposal → approve)과 재수용 기록을 기준으로 재설계해 흡수한다. link 경로는 하나로 유지한다.

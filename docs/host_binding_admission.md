@@ -9,9 +9,9 @@
 | S0 요청 발급 | ReleaseManager | STAGED 변경, 전체 Host 계획, 원 요청 ID 고정 | 구현 |
 | S1 기준 수집 | P worker | 등록된 현재 Host 세대의 bounded read, 교체 전 cohort·설치 identity·두 저널 | 구현 |
 | S2 준비·fence | ReleaseManager | 모든 계획 Host가 **BaselineCurrent**(기준이 현재 등록 세대의 것) 또는 **CommitCurrent** | 이번 구현 |
-| S3 Host 정지·commit | Host 운영자 | fence 확인 뒤 정상 정지, 같은 요청 ID로 commit, 제안 구성으로 재기동 | Host 구현, P 연동 시험 미완 |
-| S4 교체 확인 | P worker | ReleaseManager의 binding 재수용 승인 → 새 boot가 변경 후 구성으로 link → 새 boot, 같은 두 저널, commit 요청/계획/구성/설치 identity 일치 → MetadataMatched | P 쪽 구현·엔진 시험 완료, 실시간 시험은 Host Python package 적재에서 정지 |
-| S5 준비 갱신 | ReleaseManager | 재기동 뒤 이전 fence 확인은 옛 boot의 것이므로 refresh로 새 세대에 다시 fence | 기존 경로 재사용, 시험 미완 |
+| S3 Host 정지·commit | Host 운영자 | fence 확인 뒤 정상 정지, 같은 요청 ID로 commit, 제안 구성으로 재기동 | 실제 이미지 시험 통과 |
+| S4 교체 확인 | P worker | ReleaseManager의 binding 재수용 승인 → 새 boot가 변경 후 구성으로 link → 새 boot, 같은 두 저널, commit 요청/계획/구성/설치 identity 일치 → MetadataMatched | 실제 이미지 시험 통과 |
+| S5 준비 갱신 | ReleaseManager | 재기동 뒤 이전 fence 확인은 옛 boot의 것이므로 refresh로 새 세대에 다시 fence | 실제 이미지 시험 통과 |
 | S6 구성 전달 | P | 모든 계획 Host가 **CommitCurrent**, 확인이 현재 P runtime·현재 등록 세션의 것, 최종 재검증 | 미구현 (barrier 유지) |
 | S7 적용 | ReleaseManager | 기존 적용 조건 + Host의 정확한 commit 대상 수신 확인 | 미구현 |
 
@@ -77,10 +77,9 @@ S3–S5 실시간 시험을 준비하며 코드로 확인한 사실이다.
 - standing은 등록이 Host의 현재 producer 세션·boot일 때만 현재로 본다. 이후 재기동은 이전 교체 확인을 하강시킨다.
 - 엔진 시험 3개(승인 없는 재기동 거절, 역할·세대·저널 반례, 1회 소비, 같은 sequence 재사용 충돌, 없는 intent 거절)와 워크스페이스 437개 통과. binding 변형의 엔진 수준 시험은 없다(binding 계획이 있는 변경을 만드는 엔진 fixture가 없음).
 
-실제 이미지 `--binding-commit` 시험은 승인·권한 거절·Host 정상 정지·제안 구성 작성까지 진행한 뒤 Host의 `prepare-binding-change`에서 멈춘다. 확인한 Host 쪽 결함은 다음과 같다.
+실제 이미지 `--binding-commit` 시험의 첫 시도는 Host의 `prepare-binding-change`에서 멈췄다. 이때 "하위 디렉터리 적재 실패"와 "파일 수 8 제한"을 원인으로 추정했으나 **둘 다 틀렸다**(정정). 같은 이미지·볼륨에서 `rx-device-package verify`는 같은 package를 통과시켰고, 파일 수 검사는 manifest·서명을 제외하고 8개를 허용해 실제 package(8개)와 맞는다. 실제 원인은 다음 둘이었다.
 
-1. P 검증 정책의 asset 경로가 작성 시스템의 절대 경로라 컨테이너에서 읽을 수 없었다. 시험 도구가 경로를 Host 볼륨으로 바꾸도록 고쳤다.
-2. Host의 서명 Python package 적재가 하위 디렉터리(`authoring/`)가 있는 package를 컨테이너 안에서 `package directory could not be acquired`로 거절한다. root 실행, tmpfs 복사본에서도 같고, 하위 디렉터리를 빼면 다음 단계(`file set`)로 넘어간다.
-3. 코드상 Host는 Python package 파일 수를 8로 제한하지만(`python_package.rs`) 검토된 package는 10개 파일을 갖는다. 2번에 막혀 이 제한이 실제로 실패를 내는지는 아직 관측하지 못했다.
+1. 서명된 package의 profile이 Python 환경을 절대 경로(`/fixture/environment`)로 고정하는데, Host 컨테이너에 그 경로가 없었다. 설치 요구이며 시험 도구가 그 경로에 환경을 마운트한다. P 검증 정책의 asset 절대 경로도 같은 방식으로 Host 볼륨에 둔다.
+2. 연결된 Host가 재기동하면 P 전체가 종료됐다. 새 producer 세션 때문에 link worker가 인증 거절을 받으면 service 실패로 처리됐다. 이제 producer 세션 교체를 구별해 오래된 worker만 내리고 재수용이 필요한 link 단계로 돌아간다(rx-platform cb45bb4). 다른 worker 실패는 여전히 runtime을 멈춘다.
 
-이 둘은 rx-solutions Host backend의 서명 Python package 교체 경로 문제이며, [Python 장비 스킬 초안](python_device_skill_draft.md)의 "설치 이미지의 signed Python backend 교체 미완료"와 같은 지점이다.
+이후 S3–S5와 재기동 반례가 실제 이미지에서 통과했다([검증 기록](../references/host_binding_commit_live_2026-09-29/README.md)).

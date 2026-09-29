@@ -1,0 +1,28 @@
+{
+  "sources": {
+    "rx-platform": "cb45bb4542ccaec5ef79a0660a0f68a1114130af",
+    "rx-solutions": "1857da402aaf44cad940105596689c04454f45e1"
+  },
+  "platform_image": "sha256:3578be1331665a53fdef2c8101a5e2f88ff22ec2003e97abcb4343db3f580d29",
+  "binding_host_image": "sha256:b59b19f4ef96847821e2beca970353fb41d22f912b494904f3788f4ed2b226bb",
+  "binding_commit_runs": 3,
+  "binding_commit_passed": 3,
+  "regression": {
+    "connected": "PASS",
+    "unreachable": "PASS",
+    "without_host": "PASS"
+  },
+  "workspace_tests_failed": 0,
+  "clippy_workspace": "PASS",
+  "fmt": "PASS",
+  "repository_checks": "PASS",
+  "sdk_files_matched": 118,
+  "not_exercised": [
+    "restart without change before any commit (same mechanism as the demotion case, not run separately)",
+    "S6 configuration dispatch and S7 apply",
+    "P restart adoption of intents",
+    "physical equipment"
+  ],
+  "activation_authorized": false,
+  "physical_equipment": "NOT_OPERATED"
+}

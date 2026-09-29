@@ -1,0 +1,173 @@
+{
+  "commit-1": {
+    "status": "PASS",
+    "stop_exit_code": 2,
+    "stop_attention": [
+      {
+        "cell": "cell/a",
+        "host": "host/sim",
+        "kind": "HOST_FENCE_UNCONFIRMED"
+      }
+    ],
+    "matched_phase": "METADATA_MATCHED",
+    "baseline_boot": "fc5bd148-77a2-47dd-91bb-9de14a3e40ec",
+    "committed_boot": "1a480fae-50c6-4005-a3c9-4e0b76be60d2",
+    "commit_request_matches": true,
+    "confirmed_blockers": [
+      {
+        "kind": "HOST_BINDING_CHANGE_REQUIRED"
+      },
+      {
+        "kind": "HOST_CONFIGURATION_ACKNOWLEDGEMENT_REQUIRED",
+        "cell": "cell/a",
+        "host": "host/sim"
+      }
+    ],
+    "refreshed_attempt": "2",
+    "still_refused": {
+      "/api/v1/process-change/configure-hosts": "CAPABILITY_MISSING",
+      "/api/v1/process-change/apply": "CAPABILITY_MISSING"
+    },
+    "demoted_blockers": [
+      {
+        "kind": "HOST_BINDING_CHANGE_REQUIRED"
+      },
+      {
+        "kind": "HOST_BINDING_COMMIT_UNCONFIRMED",
+        "host": "host/sim"
+      },
+      {
+        "kind": "PREPARATION_STALE"
+      },
+      {
+        "kind": "HOST_CONFIGURATION_ACKNOWLEDGEMENT_REQUIRED",
+        "cell": "cell/a",
+        "host": "host/sim"
+      }
+    ],
+    "demoted_refresh": "CONTINUITY_UNPROVEN",
+    "final_state": "STAGED",
+    "activation_authorized": false
+  },
+  "commit-2": {
+    "status": "PASS",
+    "stop_exit_code": 2,
+    "stop_attention": [
+      {
+        "cell": "cell/a",
+        "host": "host/sim",
+        "kind": "HOST_FENCE_UNCONFIRMED"
+      }
+    ],
+    "matched_phase": "METADATA_MATCHED",
+    "baseline_boot": "2ee0d069-7ea3-4a9a-87bb-ca8d61d69866",
+    "committed_boot": "cca55274-c19b-44a9-b082-9569acc36a76",
+    "commit_request_matches": true,
+    "confirmed_blockers": [
+      {
+        "kind": "HOST_BINDING_CHANGE_REQUIRED"
+      },
+      {
+        "kind": "HOST_CONFIGURATION_ACKNOWLEDGEMENT_REQUIRED",
+        "cell": "cell/a",
+        "host": "host/sim"
+      }
+    ],
+    "refreshed_attempt": "2",
+    "still_refused": {
+      "/api/v1/process-change/configure-hosts": "CAPABILITY_MISSING",
+      "/api/v1/process-change/apply": "CAPABILITY_MISSING"
+    },
+    "demoted_blockers": [
+      {
+        "kind": "HOST_BINDING_CHANGE_REQUIRED"
+      },
+      {
+        "kind": "HOST_BINDING_COMMIT_UNCONFIRMED",
+        "host": "host/sim"
+      },
+      {
+        "kind": "PREPARATION_STALE"
+      },
+      {
+        "kind": "HOST_CONFIGURATION_ACKNOWLEDGEMENT_REQUIRED",
+        "cell": "cell/a",
+        "host": "host/sim"
+      }
+    ],
+    "demoted_refresh": "CONTINUITY_UNPROVEN",
+    "final_state": "STAGED",
+    "activation_authorized": false
+  },
+  "commit-3": {
+    "status": "PASS",
+    "stop_exit_code": 2,
+    "stop_attention": [
+      {
+        "cell": "cell/a",
+        "host": "host/sim",
+        "kind": "HOST_FENCE_UNCONFIRMED"
+      }
+    ],
+    "matched_phase": "METADATA_MATCHED",
+    "baseline_boot": "deb11849-048f-4f44-9458-0c6f5e7a4afb",
+    "committed_boot": "a8561e90-1fae-4986-9f54-71260e7861d7",
+    "commit_request_matches": true,
+    "confirmed_blockers": [
+      {
+        "kind": "HOST_BINDING_CHANGE_REQUIRED"
+      },
+      {
+        "kind": "HOST_CONFIGURATION_ACKNOWLEDGEMENT_REQUIRED",
+        "cell": "cell/a",
+        "host": "host/sim"
+      }
+    ],
+    "refreshed_attempt": "2",
+    "still_refused": {
+      "/api/v1/process-change/configure-hosts": "CAPABILITY_MISSING",
+      "/api/v1/process-change/apply": "CAPABILITY_MISSING"
+    },
+    "demoted_blockers": [
+      {
+        "kind": "HOST_BINDING_CHANGE_REQUIRED"
+      },
+      {
+        "kind": "HOST_BINDING_COMMIT_UNCONFIRMED",
+        "host": "host/sim"
+      },
+      {
+        "kind": "PREPARATION_STALE"
+      },
+      {
+        "kind": "HOST_CONFIGURATION_ACKNOWLEDGEMENT_REQUIRED",
+        "cell": "cell/a",
+        "host": "host/sim"
+      }
+    ],
+    "demoted_refresh": "CONTINUITY_UNPROVEN",
+    "final_state": "STAGED",
+    "activation_authorized": false
+  },
+  "connected": {
+    "status": "PASS",
+    "stop_exit_code": 0,
+    "stop_attention": []
+  },
+  "unreachable": {
+    "status": "PASS",
+    "stop_exit_code": 2,
+    "stop_attention": [
+      {
+        "cell": "cell/a",
+        "host": "host/sim",
+        "kind": "HOST_FENCE_UNCONFIRMED"
+      }
+    ]
+  },
+  "nohost": {
+    "status": "PASS",
+    "stop_exit_code": 0,
+    "stop_attention": []
+  }
+}

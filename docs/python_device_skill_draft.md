@@ -114,3 +114,7 @@ binding 계획이 있는 변경의 준비를 일괄 거절하던 조건을 [Host
 독립 검토에서 설정 worker가 매 단계 같은 binding 관측을 다시 저장하고 이벤트를 남겨, 교체를 기다리는 동안 요청당 시간당 약 7,200건씩 원장이 커지는 결함이 드러났다(rx-platform 75f01ce). 읽기 시작 시각만 다른 재관측은 저장하지 않도록 고쳤고(824e1fe), Host standing 판정을 순수 함수로 분리해 모든 standing과 하강을 단위 시험으로 고정했다. boot·세션 비교를 제거하는 변이는 시험을 실패시킨다. 관측 no-op 자체의 엔진 수준 시험은 아직 없고 실제 이미지 회귀 시험(연결 3회, 도달 불가 1회, Host 없음 1회)으로만 확인했다.
 
 S3–S5를 준비하며 P에 재기동 Host를 다시 등록하는 경로가 없음을 확인했다. 자세한 원인과 사용자 결정은 [P 진행 조건](host_binding_admission.md#s4-차단-원인과-결정-2026-09-29)에 적었다.
+
+## 진행: 재기동 Host 재수용과 교체 확인의 실제 시험
+
+P에 재기동 Host 재수용과 binding 전이 등록을 추가했고, 연결된 Host가 재기동해도 P가 종료되지 않도록 link를 고쳤다. 실제 이미지에서 Host 정지 → 같은 요청 ID로 commit → 서명 Python package backend로 재기동 → `METADATA_MATCHED` → 새 boot fence → 구성 전달·적용 거절 → 승인 없는 재기동 시 하강을 3회 연속 확인했다. [검증 기록](../references/host_binding_commit_live_2026-09-29/README.md). 구성 전달(S6)·적용(S7)과 P 재시작 인수는 남는다.

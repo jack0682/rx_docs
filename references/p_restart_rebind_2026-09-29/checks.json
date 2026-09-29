@@ -11,9 +11,14 @@
  "run_at_6a78074": "failed at COMMIT_LINK REVISION_CONFLICT (registration history key), see first-run-6a78074.failure.json",
  "engine_tests": "453 passed, 0 failed, 16 ignored (57 suites)",
  "not_exercised": [
-  "--host-restart-before-commit with --restart-platform",
   "DeviceRestart release",
   "physical equipment"
  ],
- "physical_equipment": "NOT_OPERATED"
+ "physical_equipment": "NOT_OPERATED",
+ "combined_run_at_7b36e69": {
+  "scenario": "tools/test_platform_image.py --binding-commit --restart-platform --host-restart-before-commit",
+  "passed": 1,
+  "runs": 1,
+  "evidence": "live-api-combined-host-restart-before-commit.json"
+ }
 }

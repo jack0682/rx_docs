@@ -1,0 +1,2976 @@
+{
+  "schema": "rx.platform-image-smoke.v1",
+  "status": "PASS",
+  "image_id": "sha256:5610585169234287a18bd16a777b64609fe9a0bec0bea11fb0bda64c8e4fc46b",
+  "os": "linux",
+  "architecture": "arm64",
+  "user": "10001:10001",
+  "read_only_root": true,
+  "cap_drop": [
+    "ALL"
+  ],
+  "https_health": {
+    "admission_open": true,
+    "mode": "TERMINAL_HTTPS",
+    "service": "rx-platform",
+    "start_requires_user_terminal_and_runtime_conditions": true,
+    "writer_available": true
+  },
+  "startup": {
+    "installation_id": "7b50f152-53eb-4d58-a98c-20c7d16bdf53",
+    "phase": "SOFTWARE_READY_UNCOMMISSIONED",
+    "physical_shutdown_assessed": false,
+    "qualification_authority": "NOT_CONNECTED",
+    "runtime_boot": "01a0ebf4-e9ed-713e-9163-1cf4ab0dac77",
+    "schema": "rx.platform-process-status.v1",
+    "stop": null
+  },
+  "stop": {
+    "installation_id": "7b50f152-53eb-4d58-a98c-20c7d16bdf53",
+    "phase": "PROCESS_STOPPED",
+    "physical_shutdown_assessed": false,
+    "qualification_authority": "NOT_CONNECTED",
+    "runtime_boot": "01a0ebf4-e9ed-713e-9163-1cf4ab0dac77",
+    "schema": "rx.platform-process-status.v1",
+    "stop": {
+      "attention": [],
+      "attention_count": "0",
+      "lifecycle": {
+        "phase": "STOP_COMMITTED",
+        "requested_at": {
+          "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+          "ticks_ns": "372860993586"
+        },
+        "runtime_boot": "01a0ebf4-e9ed-713e-9163-1cf4ab0dac77",
+        "stop_id": "01a0ebf5-014a-7496-8451-e724b58c8752",
+        "stopped_at": {
+          "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+          "ticks_ns": "372916868503"
+        }
+      },
+      "physical_shutdown_assessed": false,
+      "truncated": false
+    }
+  },
+  "package_intake": {
+    "status": "PASS",
+    "receipt": {
+      "device_catalog": {
+        "sha256": "efb07adb57711242e3a3fc978154afb363f9f71ed080c4f2aa436ae378ac061d",
+        "schema_id": "rx.device-operation-catalog.v1",
+        "size_bytes": "2247"
+      },
+      "id": "d58f68b7-8b74-4732-81ca-66e853c1f5d1",
+      "cell": "cell/a",
+      "title": "Image acceptance package",
+      "object": {
+        "manifest": "a7d5b9beb5b5fc4443f724bb4961cce7635fdf2fa6c2d38f5c46f0f3d99ed217",
+        "signature": "dcf53824d8d05348fbec9bdc5c78b1710e0b5a7015773490b5f66a5f44191ca8"
+      },
+      "configuration_digest": "cd9290731b18788a9e151e1b81d56364ae1e9ec1d40b11890fcc8db3aaa0b275",
+      "registration": {
+        "generation": "01a0ebf4-e9f2-7643-b4e4-512db1cdfa1b",
+        "store_owner": "4759766f-e0fc-40ae-a7e5-2343b34bda76",
+        "policy_fingerprint": "76269dfb3bfebf2998c5acd919ef61fd5e53d9fc83bff63a33c33dfc66a85d2d",
+        "policy_file_digest": "90e0f87de246d5a36569dfcce3057ef243cca5a07a852ebe36ac46b74e66e8c8"
+      },
+      "manifest": {
+        "schema": "rx.package.v2",
+        "package": "test/python-sdk",
+        "version": "1.0.0",
+        "publisher": "test",
+        "contracts": {
+          "base": "d32519ffd33cc02f5e6f82406ad2fe253421527dc047b807c11beb11a8f7583c",
+          "cell": "5e75ab4d3d72d4b22082003dbec5e2ca54562cc4302d2e306b07ce64d215d71b",
+          "package_abi": "rx.package-abi.v2"
+        },
+        "targets": [
+          {
+            "os": "LINUX",
+            "architecture": "ARM64",
+            "ros_distribution": null
+          }
+        ],
+        "entry": {
+          "kind": "DEVICE_REFERENCE",
+          "family": "family.json",
+          "profiles": [
+            "profile.json"
+          ],
+          "adapter": "adapter.json"
+        },
+        "permissions": [
+          {
+            "kind": "ARTIFACT_READ"
+          },
+          {
+            "kind": "NATIVE_ENDPOINT",
+            "role": "python-sdk"
+          }
+        ],
+        "dependencies": [],
+        "assets": [
+          {
+            "sha256": "36060134d807a85bd4de45d03754fc36d6f73b2349587345f0f71b5548caeaee",
+            "schema_id": "rx.python-input.v1",
+            "size_bytes": "11"
+          },
+          {
+            "sha256": "90e00c307d2a7b21bf2a37fd2b1ddca4f780562ece534d899158d99d1c10ca5c",
+            "schema_id": "rx.python-environment.v1",
+            "size_bytes": "166508"
+          }
+        ],
+        "files": [
+          {
+            "path": "adapter.json",
+            "sha256": "91de532f99d276c4d86d280604e110da5619ecd4a68cfb308d44c1d27c7d4cf1",
+            "size_bytes": "161",
+            "executable": false
+          },
+          {
+            "path": "authoring/assembly.json",
+            "sha256": "6cf170aad80219d0d1d4917b5d84b8f2a94bdf954a9cffe37947cd10616252a1",
+            "size_bytes": "1074",
+            "executable": false
+          },
+          {
+            "path": "device-catalog.json",
+            "sha256": "efb07adb57711242e3a3fc978154afb363f9f71ed080c4f2aa436ae378ac061d",
+            "size_bytes": "2247",
+            "executable": false
+          },
+          {
+            "path": "environment.json",
+            "sha256": "90e00c307d2a7b21bf2a37fd2b1ddca4f780562ece534d899158d99d1c10ca5c",
+            "size_bytes": "166508",
+            "executable": false
+          },
+          {
+            "path": "family.json",
+            "sha256": "a2adb3d18b7af1f6a9dae9ca8f8a468f86b451471ab3783830b43e4a010d7d01",
+            "size_bytes": "118",
+            "executable": false
+          },
+          {
+            "path": "operations.json",
+            "sha256": "8412232cc335ad7b4cff9fcca59d170a2b503edadef96a5fb6aff7c80e778086",
+            "size_bytes": "745",
+            "executable": false
+          },
+          {
+            "path": "outcomes.json",
+            "sha256": "2b89057338f2ba365847dc90b408bbd765fbdd1016326c94fb8f019365c78294",
+            "size_bytes": "259",
+            "executable": false
+          },
+          {
+            "path": "profile.json",
+            "sha256": "a608db89f8281db846bcce020d1174f729ab9045a247327175c7ec536bc4d487",
+            "size_bytes": "1018",
+            "executable": false
+          }
+        ]
+      },
+      "submitted_by": "admin",
+      "terminal": "panel/a",
+      "submitted_at": {
+        "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+        "ticks_ns": "367325895292"
+      },
+      "state": "AWAITING_REVIEW"
+    },
+    "view": {
+      "receipt": {
+        "device_catalog": {
+          "sha256": "efb07adb57711242e3a3fc978154afb363f9f71ed080c4f2aa436ae378ac061d",
+          "schema_id": "rx.device-operation-catalog.v1",
+          "size_bytes": "2247"
+        },
+        "id": "d58f68b7-8b74-4732-81ca-66e853c1f5d1",
+        "cell": "cell/a",
+        "title": "Image acceptance package",
+        "object": {
+          "manifest": "a7d5b9beb5b5fc4443f724bb4961cce7635fdf2fa6c2d38f5c46f0f3d99ed217",
+          "signature": "dcf53824d8d05348fbec9bdc5c78b1710e0b5a7015773490b5f66a5f44191ca8"
+        },
+        "configuration_digest": "cd9290731b18788a9e151e1b81d56364ae1e9ec1d40b11890fcc8db3aaa0b275",
+        "registration": {
+          "generation": "01a0ebf4-e9f2-7643-b4e4-512db1cdfa1b",
+          "store_owner": "4759766f-e0fc-40ae-a7e5-2343b34bda76",
+          "policy_fingerprint": "76269dfb3bfebf2998c5acd919ef61fd5e53d9fc83bff63a33c33dfc66a85d2d",
+          "policy_file_digest": "90e0f87de246d5a36569dfcce3057ef243cca5a07a852ebe36ac46b74e66e8c8"
+        },
+        "manifest": {
+          "schema": "rx.package.v2",
+          "package": "test/python-sdk",
+          "version": "1.0.0",
+          "publisher": "test",
+          "contracts": {
+            "base": "d32519ffd33cc02f5e6f82406ad2fe253421527dc047b807c11beb11a8f7583c",
+            "cell": "5e75ab4d3d72d4b22082003dbec5e2ca54562cc4302d2e306b07ce64d215d71b",
+            "package_abi": "rx.package-abi.v2"
+          },
+          "targets": [
+            {
+              "os": "LINUX",
+              "architecture": "ARM64",
+              "ros_distribution": null
+            }
+          ],
+          "entry": {
+            "kind": "DEVICE_REFERENCE",
+            "family": "family.json",
+            "profiles": [
+              "profile.json"
+            ],
+            "adapter": "adapter.json"
+          },
+          "permissions": [
+            {
+              "kind": "ARTIFACT_READ"
+            },
+            {
+              "kind": "NATIVE_ENDPOINT",
+              "role": "python-sdk"
+            }
+          ],
+          "dependencies": [],
+          "assets": [
+            {
+              "sha256": "36060134d807a85bd4de45d03754fc36d6f73b2349587345f0f71b5548caeaee",
+              "schema_id": "rx.python-input.v1",
+              "size_bytes": "11"
+            },
+            {
+              "sha256": "90e00c307d2a7b21bf2a37fd2b1ddca4f780562ece534d899158d99d1c10ca5c",
+              "schema_id": "rx.python-environment.v1",
+              "size_bytes": "166508"
+            }
+          ],
+          "files": [
+            {
+              "path": "adapter.json",
+              "sha256": "91de532f99d276c4d86d280604e110da5619ecd4a68cfb308d44c1d27c7d4cf1",
+              "size_bytes": "161",
+              "executable": false
+            },
+            {
+              "path": "authoring/assembly.json",
+              "sha256": "6cf170aad80219d0d1d4917b5d84b8f2a94bdf954a9cffe37947cd10616252a1",
+              "size_bytes": "1074",
+              "executable": false
+            },
+            {
+              "path": "device-catalog.json",
+              "sha256": "efb07adb57711242e3a3fc978154afb363f9f71ed080c4f2aa436ae378ac061d",
+              "size_bytes": "2247",
+              "executable": false
+            },
+            {
+              "path": "environment.json",
+              "sha256": "90e00c307d2a7b21bf2a37fd2b1ddca4f780562ece534d899158d99d1c10ca5c",
+              "size_bytes": "166508",
+              "executable": false
+            },
+            {
+              "path": "family.json",
+              "sha256": "a2adb3d18b7af1f6a9dae9ca8f8a468f86b451471ab3783830b43e4a010d7d01",
+              "size_bytes": "118",
+              "executable": false
+            },
+            {
+              "path": "operations.json",
+              "sha256": "8412232cc335ad7b4cff9fcca59d170a2b503edadef96a5fb6aff7c80e778086",
+              "size_bytes": "745",
+              "executable": false
+            },
+            {
+              "path": "outcomes.json",
+              "sha256": "2b89057338f2ba365847dc90b408bbd765fbdd1016326c94fb8f019365c78294",
+              "size_bytes": "259",
+              "executable": false
+            },
+            {
+              "path": "profile.json",
+              "sha256": "a608db89f8281db846bcce020d1174f729ab9045a247327175c7ec536bc4d487",
+              "size_bytes": "1018",
+              "executable": false
+            }
+          ]
+        },
+        "submitted_by": "admin",
+        "terminal": "panel/a",
+        "submitted_at": {
+          "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+          "ticks_ns": "367325895292"
+        },
+        "state": "AWAITING_REVIEW"
+      },
+      "review_context_current": true,
+      "content_reverification_required": true,
+      "activation_authorized": false
+    },
+    "repeat_returns_identical_receipt": true,
+    "no_run_or_qualification": true,
+    "policy_sha256": "90e0f87de246d5a36569dfcce3057ef243cca5a07a852ebe36ac46b74e66e8c8",
+    "device_catalog": {
+      "cell": "cell/a",
+      "intake": "d58f68b7-8b74-4732-81ca-66e853c1f5d1",
+      "object": {
+        "manifest": "a7d5b9beb5b5fc4443f724bb4961cce7635fdf2fa6c2d38f5c46f0f3d99ed217",
+        "signature": "dcf53824d8d05348fbec9bdc5c78b1710e0b5a7015773490b5f66a5f44191ca8"
+      },
+      "reference": {
+        "sha256": "efb07adb57711242e3a3fc978154afb363f9f71ed080c4f2aa436ae378ac061d",
+        "schema_id": "rx.device-operation-catalog.v1",
+        "size_bytes": "2247"
+      },
+      "catalog": {
+        "schema": "rx.device-operation-catalog.v1",
+        "installation": "7b50f152-53eb-4d58-a98c-20c7d16bdf53",
+        "cell": "cell/a",
+        "target": "device/python-sdk",
+        "environment": "SIMULATION",
+        "profile_digest": "942cdf79dd972d0179855b1a1b616be3de03c14f4458e166d506315a34fc434b",
+        "condition_ids": [
+          "sim/ready"
+        ],
+        "operations": {
+          "skill/run": {
+            "kind": "FINITE_ACTION",
+            "target": "device/python-sdk",
+            "profile_digest": "942cdf79dd972d0179855b1a1b616be3de03c14f4458e166d506315a34fc434b",
+            "site_config_digest": "0404040404040404040404040404040404040404040404040404040404040404",
+            "calibration_digests": [],
+            "resource_set": [
+              "controller/sim"
+            ],
+            "execution_timeout_ms": "2000",
+            "prepare_validity_ms": "1000",
+            "completion_rule": "rx.python.returned.v1",
+            "cancel_rule": "python/unknown",
+            "body": {
+              "program": {
+                "program": {
+                  "sha256": "90e00c307d2a7b21bf2a37fd2b1ddca4f780562ece534d899158d99d1c10ca5c",
+                  "schema_id": "rx.python-environment.v1",
+                  "size_bytes": "166508"
+                },
+                "parameter_set": {
+                  "sha256": "36060134d807a85bd4de45d03754fc36d6f73b2349587345f0f71b5548caeaee",
+                  "schema_id": "rx.python-input.v1",
+                  "size_bytes": "11"
+                }
+              }
+            }
+          }
+        },
+        "outcomes": {
+          "schema": "rx.native-outcome-table.v1",
+          "profile_digest": "942cdf79dd972d0179855b1a1b616be3de03c14f4458e166d506315a34fc434b",
+          "completion_rule": "rx.python.returned.v1",
+          "cases": [
+            {
+              "status_schema": "rx.python.returned.v1",
+              "statuses": [
+                "0"
+              ],
+              "conclusion": "SUCCEEDED"
+            }
+          ]
+        },
+        "documents": {
+          "adapter": {
+            "path": "adapter.json",
+            "artifact": {
+              "sha256": "91de532f99d276c4d86d280604e110da5619ecd4a68cfb308d44c1d27c7d4cf1",
+              "schema_id": "rx.native-driver-reference.v1",
+              "size_bytes": "161"
+            }
+          },
+          "family": {
+            "path": "family.json",
+            "artifact": {
+              "sha256": "a2adb3d18b7af1f6a9dae9ca8f8a468f86b451471ab3783830b43e4a010d7d01",
+              "schema_id": "rx.device-family.v1",
+              "size_bytes": "118"
+            }
+          },
+          "operations": {
+            "path": "operations.json",
+            "artifact": {
+              "sha256": "8412232cc335ad7b4cff9fcca59d170a2b503edadef96a5fb6aff7c80e778086",
+              "schema_id": "rx.python-operations.v1",
+              "size_bytes": "745"
+            }
+          },
+          "outcomes": {
+            "path": "outcomes.json",
+            "artifact": {
+              "sha256": "2b89057338f2ba365847dc90b408bbd765fbdd1016326c94fb8f019365c78294",
+              "schema_id": "rx.native-outcome-table.v1",
+              "size_bytes": "259"
+            }
+          },
+          "profile": {
+            "path": "profile.json",
+            "artifact": {
+              "sha256": "a608db89f8281db846bcce020d1174f729ab9045a247327175c7ec536bc4d487",
+              "schema_id": "rx.python-skill-registration.v1",
+              "size_bytes": "1018"
+            }
+          }
+        }
+      },
+      "review_context_current": true,
+      "content_reverification_required": true,
+      "manufacturer_validation_required": true,
+      "activation_authorized": false
+    },
+    "device_review": {
+      "request": {
+        "schema": "rx.device-review-request.v1",
+        "id": "41ca0a19-77a6-4378-bda7-2f07a0c97d69",
+        "intake": "d58f68b7-8b74-4732-81ca-66e853c1f5d1",
+        "installation": "7b50f152-53eb-4d58-a98c-20c7d16bdf53",
+        "cell": "cell/a",
+        "package_manifest": "a7d5b9beb5b5fc4443f724bb4961cce7635fdf2fa6c2d38f5c46f0f3d99ed217",
+        "package_signature": "dcf53824d8d05348fbec9bdc5c78b1710e0b5a7015773490b5f66a5f44191ca8",
+        "catalog": {
+          "sha256": "efb07adb57711242e3a3fc978154afb363f9f71ed080c4f2aa436ae378ac061d",
+          "schema_id": "rx.device-operation-catalog.v1",
+          "size_bytes": "2247"
+        },
+        "configuration_digest": "cd9290731b18788a9e151e1b81d56364ae1e9ec1d40b11890fcc8db3aaa0b275",
+        "package_policy_fingerprint": "76269dfb3bfebf2998c5acd919ef61fd5e53d9fc83bff63a33c33dfc66a85d2d",
+        "package_policy_file_digest": "90e0f87de246d5a36569dfcce3057ef243cca5a07a852ebe36ac46b74e66e8c8",
+        "verification_authority_digest": "a9f28a9d77b43d4bc72baceb061d16bcb495dba914faaaebd3b91bab50d4a3e7"
+      },
+      "report": {
+        "activation_authorized": false,
+        "physical_validation": "NOT_PERFORMED",
+        "report_digest": "666d92aec1490f123a3827d11ea72c31915cfd3ed8a01f25c8aa6e48fa4a0f63",
+        "software_checks_passed": true,
+        "status": "UNSIGNED_DEVICE_SOFTWARE_REPORT"
+      },
+      "version": {
+        "review": "41ca0a19-77a6-4378-bda7-2f07a0c97d69",
+        "cell": "cell/a",
+        "revision": "1",
+        "review_digest": "78675832cf9e6816264e568911b74bba4600634ec9812e0e58a89417c6764b06",
+        "checker_digest": "d394c2012bb295f8d9c62aac8a32f9ae014703ff6c99214625323c60b5f5ffc2",
+        "report_digest": "666d92aec1490f123a3827d11ea72c31915cfd3ed8a01f25c8aa6e48fa4a0f63",
+        "report": {
+          "schema": "rx.device-verification-report.v1",
+          "request": {
+            "schema": "rx.device-review-request.v1",
+            "id": "41ca0a19-77a6-4378-bda7-2f07a0c97d69",
+            "intake": "d58f68b7-8b74-4732-81ca-66e853c1f5d1",
+            "installation": "7b50f152-53eb-4d58-a98c-20c7d16bdf53",
+            "cell": "cell/a",
+            "package_manifest": "a7d5b9beb5b5fc4443f724bb4961cce7635fdf2fa6c2d38f5c46f0f3d99ed217",
+            "package_signature": "dcf53824d8d05348fbec9bdc5c78b1710e0b5a7015773490b5f66a5f44191ca8",
+            "catalog": {
+              "sha256": "efb07adb57711242e3a3fc978154afb363f9f71ed080c4f2aa436ae378ac061d",
+              "schema_id": "rx.device-operation-catalog.v1",
+              "size_bytes": "2247"
+            },
+            "configuration_digest": "cd9290731b18788a9e151e1b81d56364ae1e9ec1d40b11890fcc8db3aaa0b275",
+            "package_policy_fingerprint": "76269dfb3bfebf2998c5acd919ef61fd5e53d9fc83bff63a33c33dfc66a85d2d",
+            "package_policy_file_digest": "90e0f87de246d5a36569dfcce3057ef243cca5a07a852ebe36ac46b74e66e8c8",
+            "verification_authority_digest": "a9f28a9d77b43d4bc72baceb061d16bcb495dba914faaaebd3b91bab50d4a3e7"
+          },
+          "validator_digest": "b9b21d117911e85ac6dbcd563f11166cc27e6586051475e9f2fe9f937229acbc",
+          "validator_policy_file_digest": "90e0f87de246d5a36569dfcce3057ef243cca5a07a852ebe36ac46b74e66e8c8",
+          "scope": "DEVICE_PACKAGE_SOFTWARE",
+          "checks": {
+            "CONTENT_SIGNATURE": "PASSED",
+            "DEVICE_SOURCE_CONSISTENCY": "PASSED",
+            "CATALOG_REQUEST_BINDING": "PASSED"
+          },
+          "issues": []
+        },
+        "signature": {
+          "key": "test/key",
+          "signature": "77444df0489207b82997f1ec05b9acea3626622c051bfb3653b37ce493bbb7902943b3d8e360400cb91844234a4f8ad800c3bbb9ed18dbb144f1825f9c01ad0e"
+        },
+        "ready_for_software_approval": true,
+        "recorded_by": "admin",
+        "recorded_at": {
+          "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+          "ticks_ns": "367955933750"
+        }
+      },
+      "pre_approval_detail": {
+        "job": {
+          "request": {
+            "schema": "rx.device-review-request.v1",
+            "id": "41ca0a19-77a6-4378-bda7-2f07a0c97d69",
+            "intake": "d58f68b7-8b74-4732-81ca-66e853c1f5d1",
+            "installation": "7b50f152-53eb-4d58-a98c-20c7d16bdf53",
+            "cell": "cell/a",
+            "package_manifest": "a7d5b9beb5b5fc4443f724bb4961cce7635fdf2fa6c2d38f5c46f0f3d99ed217",
+            "package_signature": "dcf53824d8d05348fbec9bdc5c78b1710e0b5a7015773490b5f66a5f44191ca8",
+            "catalog": {
+              "sha256": "efb07adb57711242e3a3fc978154afb363f9f71ed080c4f2aa436ae378ac061d",
+              "schema_id": "rx.device-operation-catalog.v1",
+              "size_bytes": "2247"
+            },
+            "configuration_digest": "cd9290731b18788a9e151e1b81d56364ae1e9ec1d40b11890fcc8db3aaa0b275",
+            "package_policy_fingerprint": "76269dfb3bfebf2998c5acd919ef61fd5e53d9fc83bff63a33c33dfc66a85d2d",
+            "package_policy_file_digest": "90e0f87de246d5a36569dfcce3057ef243cca5a07a852ebe36ac46b74e66e8c8",
+            "verification_authority_digest": "a9f28a9d77b43d4bc72baceb061d16bcb495dba914faaaebd3b91bab50d4a3e7"
+          },
+          "registration": {
+            "generation": "01a0ebf4-e9f2-7643-b4e4-512db1cdfa1b",
+            "store_owner": "4759766f-e0fc-40ae-a7e5-2343b34bda76",
+            "policy_fingerprint": "76269dfb3bfebf2998c5acd919ef61fd5e53d9fc83bff63a33c33dfc66a85d2d",
+            "policy_file_digest": "90e0f87de246d5a36569dfcce3057ef243cca5a07a852ebe36ac46b74e66e8c8"
+          },
+          "submitted_by": "admin",
+          "requested_by": "admin",
+          "created_at": {
+            "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+            "ticks_ns": "367333662458"
+          }
+        },
+        "version": {
+          "review": "41ca0a19-77a6-4378-bda7-2f07a0c97d69",
+          "cell": "cell/a",
+          "revision": "1",
+          "review_digest": "78675832cf9e6816264e568911b74bba4600634ec9812e0e58a89417c6764b06",
+          "checker_digest": "d394c2012bb295f8d9c62aac8a32f9ae014703ff6c99214625323c60b5f5ffc2",
+          "report_digest": "666d92aec1490f123a3827d11ea72c31915cfd3ed8a01f25c8aa6e48fa4a0f63",
+          "report": {
+            "schema": "rx.device-verification-report.v1",
+            "request": {
+              "schema": "rx.device-review-request.v1",
+              "id": "41ca0a19-77a6-4378-bda7-2f07a0c97d69",
+              "intake": "d58f68b7-8b74-4732-81ca-66e853c1f5d1",
+              "installation": "7b50f152-53eb-4d58-a98c-20c7d16bdf53",
+              "cell": "cell/a",
+              "package_manifest": "a7d5b9beb5b5fc4443f724bb4961cce7635fdf2fa6c2d38f5c46f0f3d99ed217",
+              "package_signature": "dcf53824d8d05348fbec9bdc5c78b1710e0b5a7015773490b5f66a5f44191ca8",
+              "catalog": {
+                "sha256": "efb07adb57711242e3a3fc978154afb363f9f71ed080c4f2aa436ae378ac061d",
+                "schema_id": "rx.device-operation-catalog.v1",
+                "size_bytes": "2247"
+              },
+              "configuration_digest": "cd9290731b18788a9e151e1b81d56364ae1e9ec1d40b11890fcc8db3aaa0b275",
+              "package_policy_fingerprint": "76269dfb3bfebf2998c5acd919ef61fd5e53d9fc83bff63a33c33dfc66a85d2d",
+              "package_policy_file_digest": "90e0f87de246d5a36569dfcce3057ef243cca5a07a852ebe36ac46b74e66e8c8",
+              "verification_authority_digest": "a9f28a9d77b43d4bc72baceb061d16bcb495dba914faaaebd3b91bab50d4a3e7"
+            },
+            "validator_digest": "b9b21d117911e85ac6dbcd563f11166cc27e6586051475e9f2fe9f937229acbc",
+            "validator_policy_file_digest": "90e0f87de246d5a36569dfcce3057ef243cca5a07a852ebe36ac46b74e66e8c8",
+            "scope": "DEVICE_PACKAGE_SOFTWARE",
+            "checks": {
+              "CONTENT_SIGNATURE": "PASSED",
+              "DEVICE_SOURCE_CONSISTENCY": "PASSED",
+              "CATALOG_REQUEST_BINDING": "PASSED"
+            },
+            "issues": []
+          },
+          "signature": {
+            "key": "test/key",
+            "signature": "77444df0489207b82997f1ec05b9acea3626622c051bfb3653b37ce493bbb7902943b3d8e360400cb91844234a4f8ad800c3bbb9ed18dbb144f1825f9c01ad0e"
+          },
+          "ready_for_software_approval": true,
+          "recorded_by": "admin",
+          "recorded_at": {
+            "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+            "ticks_ns": "367955933750"
+          }
+        },
+        "decision": null,
+        "latest_report_revision": "1",
+        "is_latest": true,
+        "context_current": true,
+        "approval_matches_current_review": false,
+        "activation_authorized": false
+      },
+      "detail": {
+        "job": {
+          "request": {
+            "schema": "rx.device-review-request.v1",
+            "id": "41ca0a19-77a6-4378-bda7-2f07a0c97d69",
+            "intake": "d58f68b7-8b74-4732-81ca-66e853c1f5d1",
+            "installation": "7b50f152-53eb-4d58-a98c-20c7d16bdf53",
+            "cell": "cell/a",
+            "package_manifest": "a7d5b9beb5b5fc4443f724bb4961cce7635fdf2fa6c2d38f5c46f0f3d99ed217",
+            "package_signature": "dcf53824d8d05348fbec9bdc5c78b1710e0b5a7015773490b5f66a5f44191ca8",
+            "catalog": {
+              "sha256": "efb07adb57711242e3a3fc978154afb363f9f71ed080c4f2aa436ae378ac061d",
+              "schema_id": "rx.device-operation-catalog.v1",
+              "size_bytes": "2247"
+            },
+            "configuration_digest": "cd9290731b18788a9e151e1b81d56364ae1e9ec1d40b11890fcc8db3aaa0b275",
+            "package_policy_fingerprint": "76269dfb3bfebf2998c5acd919ef61fd5e53d9fc83bff63a33c33dfc66a85d2d",
+            "package_policy_file_digest": "90e0f87de246d5a36569dfcce3057ef243cca5a07a852ebe36ac46b74e66e8c8",
+            "verification_authority_digest": "a9f28a9d77b43d4bc72baceb061d16bcb495dba914faaaebd3b91bab50d4a3e7"
+          },
+          "registration": {
+            "generation": "01a0ebf4-e9f2-7643-b4e4-512db1cdfa1b",
+            "store_owner": "4759766f-e0fc-40ae-a7e5-2343b34bda76",
+            "policy_fingerprint": "76269dfb3bfebf2998c5acd919ef61fd5e53d9fc83bff63a33c33dfc66a85d2d",
+            "policy_file_digest": "90e0f87de246d5a36569dfcce3057ef243cca5a07a852ebe36ac46b74e66e8c8"
+          },
+          "submitted_by": "admin",
+          "requested_by": "admin",
+          "created_at": {
+            "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+            "ticks_ns": "367333662458"
+          }
+        },
+        "version": {
+          "review": "41ca0a19-77a6-4378-bda7-2f07a0c97d69",
+          "cell": "cell/a",
+          "revision": "1",
+          "review_digest": "78675832cf9e6816264e568911b74bba4600634ec9812e0e58a89417c6764b06",
+          "checker_digest": "d394c2012bb295f8d9c62aac8a32f9ae014703ff6c99214625323c60b5f5ffc2",
+          "report_digest": "666d92aec1490f123a3827d11ea72c31915cfd3ed8a01f25c8aa6e48fa4a0f63",
+          "report": {
+            "schema": "rx.device-verification-report.v1",
+            "request": {
+              "schema": "rx.device-review-request.v1",
+              "id": "41ca0a19-77a6-4378-bda7-2f07a0c97d69",
+              "intake": "d58f68b7-8b74-4732-81ca-66e853c1f5d1",
+              "installation": "7b50f152-53eb-4d58-a98c-20c7d16bdf53",
+              "cell": "cell/a",
+              "package_manifest": "a7d5b9beb5b5fc4443f724bb4961cce7635fdf2fa6c2d38f5c46f0f3d99ed217",
+              "package_signature": "dcf53824d8d05348fbec9bdc5c78b1710e0b5a7015773490b5f66a5f44191ca8",
+              "catalog": {
+                "sha256": "efb07adb57711242e3a3fc978154afb363f9f71ed080c4f2aa436ae378ac061d",
+                "schema_id": "rx.device-operation-catalog.v1",
+                "size_bytes": "2247"
+              },
+              "configuration_digest": "cd9290731b18788a9e151e1b81d56364ae1e9ec1d40b11890fcc8db3aaa0b275",
+              "package_policy_fingerprint": "76269dfb3bfebf2998c5acd919ef61fd5e53d9fc83bff63a33c33dfc66a85d2d",
+              "package_policy_file_digest": "90e0f87de246d5a36569dfcce3057ef243cca5a07a852ebe36ac46b74e66e8c8",
+              "verification_authority_digest": "a9f28a9d77b43d4bc72baceb061d16bcb495dba914faaaebd3b91bab50d4a3e7"
+            },
+            "validator_digest": "b9b21d117911e85ac6dbcd563f11166cc27e6586051475e9f2fe9f937229acbc",
+            "validator_policy_file_digest": "90e0f87de246d5a36569dfcce3057ef243cca5a07a852ebe36ac46b74e66e8c8",
+            "scope": "DEVICE_PACKAGE_SOFTWARE",
+            "checks": {
+              "CONTENT_SIGNATURE": "PASSED",
+              "DEVICE_SOURCE_CONSISTENCY": "PASSED",
+              "CATALOG_REQUEST_BINDING": "PASSED"
+            },
+            "issues": []
+          },
+          "signature": {
+            "key": "test/key",
+            "signature": "77444df0489207b82997f1ec05b9acea3626622c051bfb3653b37ce493bbb7902943b3d8e360400cb91844234a4f8ad800c3bbb9ed18dbb144f1825f9c01ad0e"
+          },
+          "ready_for_software_approval": true,
+          "recorded_by": "admin",
+          "recorded_at": {
+            "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+            "ticks_ns": "367955933750"
+          }
+        },
+        "decision": {
+          "review_digest": "78675832cf9e6816264e568911b74bba4600634ec9812e0e58a89417c6764b06",
+          "review": "41ca0a19-77a6-4378-bda7-2f07a0c97d69",
+          "cell": "cell/a",
+          "revision": "1",
+          "report_revision": "1",
+          "report_digest": "666d92aec1490f123a3827d11ea72c31915cfd3ed8a01f25c8aa6e48fa4a0f63",
+          "choice": "APPROVE",
+          "note": "Separate test account reviewed exact software report; no physical qualification.",
+          "decided_by": "reviewer",
+          "decided_at": {
+            "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+            "ticks_ns": "367977599708"
+          },
+          "scope": "DEVICE_PACKAGE_SOFTWARE"
+        },
+        "latest_report_revision": "1",
+        "is_latest": true,
+        "context_current": true,
+        "approval_matches_current_review": true,
+        "activation_authorized": false
+      },
+      "repeat_returns_same_report_version": true,
+      "self_approval_denied": true,
+      "decision": {
+        "review_digest": "78675832cf9e6816264e568911b74bba4600634ec9812e0e58a89417c6764b06",
+        "review": "41ca0a19-77a6-4378-bda7-2f07a0c97d69",
+        "cell": "cell/a",
+        "revision": "1",
+        "report_revision": "1",
+        "report_digest": "666d92aec1490f123a3827d11ea72c31915cfd3ed8a01f25c8aa6e48fa4a0f63",
+        "choice": "APPROVE",
+        "note": "Separate test account reviewed exact software report; no physical qualification.",
+        "decided_by": "reviewer",
+        "decided_at": {
+          "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+          "ticks_ns": "367977599708"
+        },
+        "scope": "DEVICE_PACKAGE_SOFTWARE"
+      },
+      "binding_plan": {
+        "id": "c7cfc249-69fa-4943-8ca1-42dc83afce2f",
+        "cell": "cell/a",
+        "revision": "2",
+        "state": "IMPACT_REVIEWED",
+        "plan_digest": "2bc4ada4c0c5d384bd85e292592cb2ec915632f2f3dd577b70119d92d5371299",
+        "definition": {
+          "input": {
+            "id": "c7cfc249-69fa-4943-8ca1-42dc83afce2f",
+            "cell": "cell/a",
+            "review": {
+              "id": "41ca0a19-77a6-4378-bda7-2f07a0c97d69",
+              "revision": "1",
+              "review_digest": "78675832cf9e6816264e568911b74bba4600634ec9812e0e58a89417c6764b06",
+              "decision_revision": "1"
+            },
+            "bindings": {
+              "skill/python": {
+                "action": "skill/run",
+                "host": "host/sim",
+                "conditions": {
+                  "sim/ready": {
+                    "op": "EQ",
+                    "fact": "ready",
+                    "schema": "boolean/v1",
+                    "unit": "unitless",
+                    "expected": {
+                      "boolean": true
+                    }
+                  }
+                },
+                "completion_postconditions": [],
+                "handover_max_age_ns": "1000000000"
+              }
+            },
+            "reason": "Bind the reviewed Python SDK declaration; no deployment or qualification inferred."
+          },
+          "before": {
+            "sha256": "d7cb82be01f0cd7778bde8571233c2ffb42ee068d72d50093e1bcce6f247d381",
+            "schema_id": "rx.cell-configuration.v1",
+            "size_bytes": "1750"
+          },
+          "base_configuration_digest": "cd9290731b18788a9e151e1b81d56364ae1e9ec1d40b11890fcc8db3aaa0b275",
+          "object": {
+            "manifest": "a7d5b9beb5b5fc4443f724bb4961cce7635fdf2fa6c2d38f5c46f0f3d99ed217",
+            "signature": "dcf53824d8d05348fbec9bdc5c78b1710e0b5a7015773490b5f66a5f44191ca8"
+          },
+          "catalog": {
+            "sha256": "efb07adb57711242e3a3fc978154afb363f9f71ed080c4f2aa436ae378ac061d",
+            "schema_id": "rx.device-operation-catalog.v1",
+            "size_bytes": "2247"
+          },
+          "builder_digest": "475c5a37d685d604cef8df0e859c8239dc2dfc59fa7414f12ea77dad3273f6b1",
+          "candidates": {
+            "skill/python": {
+              "action": "skill/run",
+              "previous_step_digest": null,
+              "step": {
+                "id": "skill/python",
+                "host": "host/sim",
+                "intent": {
+                  "kind": "FINITE_ACTION",
+                  "target": "device/python-sdk",
+                  "profile_digest": "942cdf79dd972d0179855b1a1b616be3de03c14f4458e166d506315a34fc434b",
+                  "site_config_digest": "0404040404040404040404040404040404040404040404040404040404040404",
+                  "calibration_digests": [],
+                  "resource_set": [
+                    "controller/sim"
+                  ],
+                  "execution_timeout_ms": "2000",
+                  "prepare_validity_ms": "1000",
+                  "completion_rule": "rx.python.returned.v1",
+                  "cancel_rule": "python/unknown",
+                  "body": {
+                    "program": {
+                      "program": {
+                        "sha256": "90e00c307d2a7b21bf2a37fd2b1ddca4f780562ece534d899158d99d1c10ca5c",
+                        "schema_id": "rx.python-environment.v1",
+                        "size_bytes": "166508"
+                      },
+                      "parameter_set": {
+                        "sha256": "36060134d807a85bd4de45d03754fc36d6f73b2349587345f0f71b5548caeaee",
+                        "schema_id": "rx.python-input.v1",
+                        "size_bytes": "11"
+                      }
+                    }
+                  }
+                },
+                "predecessors": [],
+                "conditions": [
+                  {
+                    "op": "EQ",
+                    "fact": "ready",
+                    "schema": "boolean/v1",
+                    "unit": "unitless",
+                    "expected": {
+                      "boolean": true
+                    }
+                  }
+                ],
+                "completion": {
+                  "kind": "NATIVE_OUTCOMES",
+                  "table": {
+                    "schema": "rx.native-outcome-table.v1",
+                    "profile_digest": "942cdf79dd972d0179855b1a1b616be3de03c14f4458e166d506315a34fc434b",
+                    "completion_rule": "rx.python.returned.v1",
+                    "cases": [
+                      {
+                        "status_schema": "rx.python.returned.v1",
+                        "statuses": [
+                          "0"
+                        ],
+                        "conclusion": "SUCCEEDED"
+                      }
+                    ]
+                  },
+                  "postconditions": []
+                },
+                "condition_ids": [
+                  "sim/ready"
+                ],
+                "condition_revision": "1",
+                "handover_max_age_ns": "1000000000"
+              }
+            }
+          },
+          "issues": [],
+          "impact": {
+            "cells": [
+              {
+                "id": "cell/a",
+                "configuration_digest": "cd9290731b18788a9e151e1b81d56364ae1e9ec1d40b11890fcc8db3aaa0b275",
+                "definition": {
+                  "sha256": "0101010101010101010101010101010101010101010101010101010101010101",
+                  "schema_id": "rx.test.v1",
+                  "size_bytes": "1"
+                },
+                "envelope": {
+                  "sha256": "0202020202020202020202020202020202020202020202020202020202020202",
+                  "schema_id": "rx.test.v1",
+                  "size_bytes": "1"
+                },
+                "recipe": {
+                  "sha256": "0303030303030303030303030303030303030303030303030303030303030303",
+                  "schema_id": "rx.test.v1",
+                  "size_bytes": "1"
+                },
+                "hosts": [
+                  "host/sim"
+                ],
+                "scopes": [
+                  "zone/shared"
+                ],
+                "resources": [
+                  "controller/sim"
+                ]
+              }
+            ],
+            "scope_policy": "WHOLE_CELL_AND_SHARED_HOST_RESOURCE_SCOPE_CLOSURE",
+            "qualification_review_required": true,
+            "recovery_review_required": true,
+            "host_configuration_ack_required": true
+          },
+          "requires_process_review": true,
+          "requires_host_binding": true,
+          "requires_operating_envelope_review": true
+        },
+        "proposed_by": "admin",
+        "proposed_at": {
+          "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+          "ticks_ns": "367982974583"
+        },
+        "impact_review": {
+          "actor": "reviewer",
+          "note": "Checked isolated simulation Host/resource scope.",
+          "at": {
+            "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+            "ticks_ns": "367988157667"
+          }
+        }
+      },
+      "binding_options": {
+        "device_plans": [
+          {
+            "id": "c7cfc249-69fa-4943-8ca1-42dc83afce2f",
+            "revision": "2",
+            "plan_digest": "2bc4ada4c0c5d384bd85e292592cb2ec915632f2f3dd577b70119d92d5371299"
+          }
+        ],
+        "required_cells": [
+          "cell/a"
+        ],
+        "cell": "cell/a",
+        "definition": "0101010101010101010101010101010101010101010101010101010101010101",
+        "envelope": "0202020202020202020202020202020202020202020202020202020202020202",
+        "catalog_digest": "86488f737ebdcc30a44c2afb7444caf0b8df7ec48f447cc7b92db83d6a56250b",
+        "candidates": [
+          {
+            "device_plan": {
+              "id": "c7cfc249-69fa-4943-8ca1-42dc83afce2f",
+              "revision": "2",
+              "plan_digest": "2bc4ada4c0c5d384bd85e292592cb2ec915632f2f3dd577b70119d92d5371299"
+            },
+            "step": "skill/python",
+            "host": "host/sim",
+            "target": "device/python-sdk",
+            "kind": "FINITE_ACTION",
+            "resources": [
+              "controller/sim"
+            ],
+            "intent_digest": "77ee0e85e786ea441125ad9b6a1c02c586eb8281e5af49fbae7bec881e008648",
+            "step_digest": "d506b894e24ab56c690babaee9cc9087b8afdaa6ce04e1da714e47bab288e81d"
+          },
+          {
+            "step": "step/place",
+            "host": "host/sim",
+            "target": "device/sim",
+            "kind": "ENSURE_STATE",
+            "resources": [
+              "controller/sim"
+            ],
+            "intent_digest": "6bf1d9edd54dbd02b6a23380814db3dbd6f7f63069941fab1bde84cd967d5f8a",
+            "step_digest": "19434336b7fc75e7082a850c82f99f101b3a53a1f4216a87a216e3ff9d847776"
+          }
+        ]
+      },
+      "composition": {
+        "status": "DRAFT_READY_FOR_COMPILER",
+        "request_id": "7a14c8ad-082e-47b9-b54b-572f894458b5",
+        "draft_id": "b7c0f410-4aa2-52a4-904b-288d29a04ebf",
+        "execution_authorized": false,
+        "compile_input": {
+          "device_sources": {
+            "skill/1": {
+              "plan": {
+                "id": "c7cfc249-69fa-4943-8ca1-42dc83afce2f",
+                "revision": "2",
+                "plan_digest": "2bc4ada4c0c5d384bd85e292592cb2ec915632f2f3dd577b70119d92d5371299"
+              },
+              "binding": "skill/python",
+              "step_digest": "d506b894e24ab56c690babaee9cc9087b8afdaa6ce04e1da714e47bab288e81d",
+              "action_digest": "7cac5fd75a5c0cd76dfd99f0565dfa1fcb9601081342674dd59c9ddac05ed607"
+            }
+          },
+          "schema": "rx.process-compile-input.v2",
+          "draft": "b7c0f410-4aa2-52a4-904b-288d29a04ebf",
+          "cell": "cell/a",
+          "source_revision": "1",
+          "binding_revision": "1",
+          "source_document_digest": "79c67c3c1e76cba47d764b329883dd5301d3b2660409bb1941e218169234f79b",
+          "bindings_digest": "8add79db22ef7dfcf2787345f5c9883168c3ced3180769320b7b9e3c5d4118ed",
+          "catalog_digest": "86488f737ebdcc30a44c2afb7444caf0b8df7ec48f447cc7b92db83d6a56250b",
+          "source": {
+            "conditions": {},
+            "entry": "main",
+            "flows": [
+              {
+                "id": "main",
+                "nodes": [
+                  {
+                    "body": {
+                      "children": [
+                        "skill/1"
+                      ],
+                      "kind": "SEQUENCE"
+                    },
+                    "id": "sequence"
+                  },
+                  {
+                    "body": {
+                      "binding": "skill/1",
+                      "kind": "OPERATION"
+                    },
+                    "id": "skill/1"
+                  }
+                ],
+                "root": "sequence"
+              }
+            ],
+            "process": "python-composition",
+            "schema": "rx.process-source.v1"
+          },
+          "bindings": {
+            "skill/1": {
+              "host": "host/sim",
+              "intent": {
+                "kind": "FINITE_ACTION",
+                "target": "device/python-sdk",
+                "profile_digest": "942cdf79dd972d0179855b1a1b616be3de03c14f4458e166d506315a34fc434b",
+                "site_config_digest": "0404040404040404040404040404040404040404040404040404040404040404",
+                "calibration_digests": [],
+                "resource_set": [
+                  "controller/sim"
+                ],
+                "execution_timeout_ms": "2000",
+                "prepare_validity_ms": "1000",
+                "completion_rule": "rx.python.returned.v1",
+                "cancel_rule": "python/unknown",
+                "body": {
+                  "program": {
+                    "program": {
+                      "sha256": "90e00c307d2a7b21bf2a37fd2b1ddca4f780562ece534d899158d99d1c10ca5c",
+                      "schema_id": "rx.python-environment.v1",
+                      "size_bytes": "166508"
+                    },
+                    "parameter_set": {
+                      "sha256": "36060134d807a85bd4de45d03754fc36d6f73b2349587345f0f71b5548caeaee",
+                      "schema_id": "rx.python-input.v1",
+                      "size_bytes": "11"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "compose_recovery_preserved": true,
+      "deployment": {
+        "binding_commit": {
+          "second_approval": {
+            "schema": "rx.host-readmission.v1",
+            "id": "01a0ebf4-fd60-74f4-b62f-edf268e28915",
+            "host": "host/sim",
+            "previous_session": "01a0ebf4-fa70-734f-ba97-c5fadb09255a",
+            "previous_boot": "1a7ee677-c966-42b0-89ed-b0ab77833a96",
+            "delivery_journal": "7412b3ed-28ab-4047-92b7-77be0a62878e",
+            "evidence_journal": "63615e2d-8668-4d2c-a8ab-11266836b726",
+            "cells": {
+              "cell/a": null
+            },
+            "approved_by": "reviewer",
+            "approved_at": {
+              "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+              "ticks_ns": "371857938419"
+            },
+            "binding": {
+              "intent": "01a0ebf4-f403-75f8-9588-33ced6be079d",
+              "change": "f360a799-9cac-462e-80e3-9e77675094a5",
+              "cell": "cell/a",
+              "after_definition": "0101010101010101010101010101010101010101010101010101010101010101"
+            }
+          },
+          "rematched": {
+            "intent": {
+              "request": "01a0ebf4-f403-75f8-9588-33ced6be079d",
+              "change": "f360a799-9cac-462e-80e3-9e77675094a5",
+              "host": "host/sim",
+              "cell": "cell/a",
+              "host_plan_digest": "fcb6a5bc3c510bd165bc9fb7fb145dad45eb353707822dfffafd4d213ae17b78",
+              "before_configuration": "d7cb82be01f0cd7778bde8571233c2ffb42ee068d72d50093e1bcce6f247d381",
+              "after_configuration": "5a985b652a1a01ab9b7c14bc3022f8d8a65df367f53e8bed03cb727acfad3168",
+              "before_cells": {
+                "cell/a": {
+                  "definition": "0101010101010101010101010101010101010101010101010101010101010101",
+                  "envelope": "0202020202020202020202020202020202020202020202020202020202020202",
+                  "environment": "SIMULATION"
+                }
+              },
+              "after_cells": {
+                "cell/a": {
+                  "definition": "0101010101010101010101010101010101010101010101010101010101010101",
+                  "envelope": "0202020202020202020202020202020202020202020202020202020202020202",
+                  "environment": "SIMULATION"
+                }
+              },
+              "runtime_boot": "01a0ebf4-e9ed-713e-9163-1cf4ab0dac77",
+              "created_at": {
+                "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+                "ticks_ns": "369458017126"
+              }
+            },
+            "phase": "METADATA_MATCHED",
+            "baseline": {
+              "snapshot": {
+                "evidence_journal": "63615e2d-8668-4d2c-a8ab-11266836b726",
+                "installation_identity": "278e78b9fef27aa64dff70f75bf6f54b4296a4c770cae11cdaaeb5c3c434782e",
+                "schema": "rx.host-process-configuration-snapshot.v1",
+                "host": "host/sim",
+                "host_boot": "7b85271e-7c30-428b-a07c-c41819c87895",
+                "delivery_journal": "7412b3ed-28ab-4047-92b7-77be0a62878e",
+                "binding_digest": "805055bd8dd0f25b7130c85a9b751523f3f82ebe32a1ead9e9e5674f9670fadb",
+                "cells": [
+                  {
+                    "cell": "cell/a",
+                    "definition": "0101010101010101010101010101010101010101010101010101010101010101",
+                    "envelope": "0202020202020202020202020202020202020202020202020202020202020202",
+                    "environment": "SIMULATION",
+                    "epoch": "2",
+                    "scopes": {
+                      "zone/shared": "2"
+                    },
+                    "blocked": [
+                      "01a0ebf4-e9ed-713e-9163-1cf55d16a3f0"
+                    ],
+                    "applied": null
+                  }
+                ]
+              },
+              "observed_at": {
+                "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+                "ticks_ns": "369626570376"
+              },
+              "producer_session": "01a0ebf4-eb65-722d-8ab1-356cf6331bf8"
+            },
+            "observation": {
+              "schema": "rx.host-process-configuration-observation.v1",
+              "snapshot": {
+                "evidence_journal": "63615e2d-8668-4d2c-a8ab-11266836b726",
+                "installation_identity": "be44a75b11f992c165e3135d178b322fdd1ff1fdba48cca65e209fdf77f153df",
+                "binding_commit": {
+                  "schema": "rx.host-binding-commit-observation.v1",
+                  "request": "01a0ebf4-f403-75f8-9588-33ced6be079d",
+                  "plan_digest": "fcb6a5bc3c510bd165bc9fb7fb145dad45eb353707822dfffafd4d213ae17b78",
+                  "cell": "cell/a",
+                  "before_configuration": "d7cb82be01f0cd7778bde8571233c2ffb42ee068d72d50093e1bcce6f247d381",
+                  "after_configuration": "5a985b652a1a01ab9b7c14bc3022f8d8a65df367f53e8bed03cb727acfad3168",
+                  "before_installation_identity": "278e78b9fef27aa64dff70f75bf6f54b4296a4c770cae11cdaaeb5c3c434782e",
+                  "after_installation_identity": "be44a75b11f992c165e3135d178b322fdd1ff1fdba48cca65e209fdf77f153df",
+                  "delivery_journal": "7412b3ed-28ab-4047-92b7-77be0a62878e",
+                  "evidence_journal": "63615e2d-8668-4d2c-a8ab-11266836b726",
+                  "binding_digest": "e02384f41833191948f048160765391a42bc5477da4442ca1a12b7e80b1ad395"
+                },
+                "schema": "rx.host-process-configuration-snapshot.v1",
+                "host": "host/sim",
+                "host_boot": "e5ae891f-9600-4a3e-8555-0a6801a4a58c",
+                "delivery_journal": "7412b3ed-28ab-4047-92b7-77be0a62878e",
+                "binding_digest": "e02384f41833191948f048160765391a42bc5477da4442ca1a12b7e80b1ad395",
+                "cells": [
+                  {
+                    "cell": "cell/a",
+                    "definition": "0101010101010101010101010101010101010101010101010101010101010101",
+                    "envelope": "0202020202020202020202020202020202020202020202020202020202020202",
+                    "environment": "SIMULATION",
+                    "epoch": "6",
+                    "scopes": {
+                      "zone/shared": "6"
+                    },
+                    "blocked": [
+                      "01a0ebf4-e9ed-713e-9163-1cf55d16a3f0",
+                      "01a0ebf4-f4e4-7280-ba82-8b4885fdb45f",
+                      "01a0ebf4-fa6f-7087-8e41-67554f3d0307",
+                      "01a0ebf4-fab7-7718-a57c-7bb5c55cba22",
+                      "01a0ebf4-fd2e-735b-8326-8303691502b0"
+                    ],
+                    "applied": null
+                  }
+                ]
+              },
+              "receipt": null,
+              "context_matches_current_host": false,
+              "activation_authorized": false
+            },
+            "read_started": {
+              "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+              "ticks_ns": "372157365710"
+            },
+            "observed_session": "01a0ebf4-fd2f-7544-9c57-41d6e6a1a8f0",
+            "issue": null,
+            "created_by": "reviewer",
+            "activation_authorized": false
+          },
+          "refreshed_again": {
+            "attempt": "3",
+            "runtime_boot": "01a0ebf4-e9ed-713e-9163-1cf4ab0dac77",
+            "cells": [
+              {
+                "cell": "cell/a",
+                "epoch": "7",
+                "scopes": {
+                  "zone/shared": "7"
+                },
+                "change_blocks": [
+                  "01a0ebf4-ff1f-75f2-8491-920f4b11249e"
+                ]
+              }
+            ],
+            "fences": [
+              {
+                "cell": "cell/a",
+                "host": "host/sim",
+                "message": "01a0ebf4-ff1f-75f2-8491-9210ea4d074e",
+                "epoch": "7",
+                "scopes": {
+                  "zone/shared": "7"
+                }
+              }
+            ],
+            "started_by": "reviewer",
+            "started_at": {
+              "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+              "ticks_ns": "372297517627"
+            }
+          },
+          "demoted_configure": {
+            "status": 409,
+            "body": {
+              "code": "CAPABILITY_MISSING",
+              "outcome_unknown": false
+            }
+          },
+          "configured": {
+            "change": "f360a799-9cac-462e-80e3-9e77675094a5",
+            "preparation": "3",
+            "tasks": [
+              "01a0ebf5-0016-73c6-9645-ad9e44b0df52"
+            ]
+          },
+          "applied": {
+            "host_binding_plan": {
+              "schema": "rx.host-binding-plan.v1",
+              "installation": "7b50f152-53eb-4d58-a98c-20c7d16bdf53",
+              "cell": "cell/a",
+              "device_context_digest": "191c9e4f753ff923ffc23f6ae6934c36f6d9c2581c511bc9fff257bbf954ab41",
+              "process_review_digest": "aa247838c81ea3311890009c303ea7221e915bff7dd374120e20bdd261865b11",
+              "before_configuration": {
+                "sha256": "d7cb82be01f0cd7778bde8571233c2ffb42ee068d72d50093e1bcce6f247d381",
+                "schema_id": "rx.cell-configuration.v1",
+                "size_bytes": "1750"
+              },
+              "after_configuration": {
+                "sha256": "5a985b652a1a01ab9b7c14bc3022f8d8a65df367f53e8bed03cb727acfad3168",
+                "schema_id": "rx.cell-configuration.v1",
+                "size_bytes": "3792"
+              },
+              "definition": {
+                "sha256": "0101010101010101010101010101010101010101010101010101010101010101",
+                "schema_id": "rx.test.v1",
+                "size_bytes": "1"
+              },
+              "envelope": {
+                "sha256": "0202020202020202020202020202020202020202020202020202020202020202",
+                "schema_id": "rx.test.v1",
+                "size_bytes": "1"
+              },
+              "environment": "SIMULATION",
+              "scopes": [
+                "zone/shared"
+              ],
+              "hosts": {
+                "host/sim": {
+                  "required_intents": [
+                    {
+                      "kind": "FINITE_ACTION",
+                      "target": "device/python-sdk",
+                      "profile_digest": "942cdf79dd972d0179855b1a1b616be3de03c14f4458e166d506315a34fc434b",
+                      "site_config_digest": "0404040404040404040404040404040404040404040404040404040404040404",
+                      "calibration_digests": [],
+                      "resource_set": [
+                        "controller/sim"
+                      ],
+                      "execution_timeout_ms": "2000",
+                      "prepare_validity_ms": "1000",
+                      "completion_rule": "rx.python.returned.v1",
+                      "cancel_rule": "python/unknown",
+                      "body": {
+                        "program": {
+                          "program": {
+                            "sha256": "90e00c307d2a7b21bf2a37fd2b1ddca4f780562ece534d899158d99d1c10ca5c",
+                            "schema_id": "rx.python-environment.v1",
+                            "size_bytes": "166508"
+                          },
+                          "parameter_set": {
+                            "sha256": "36060134d807a85bd4de45d03754fc36d6f73b2349587345f0f71b5548caeaee",
+                            "schema_id": "rx.python-input.v1",
+                            "size_bytes": "11"
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "required_conditions": [
+                    "sim/ready"
+                  ],
+                  "device_packages": [
+                    {
+                      "manifest": "a7d5b9beb5b5fc4443f724bb4961cce7635fdf2fa6c2d38f5c46f0f3d99ed217",
+                      "signature": "dcf53824d8d05348fbec9bdc5c78b1710e0b5a7015773490b5f66a5f44191ca8",
+                      "catalog": {
+                        "sha256": "efb07adb57711242e3a3fc978154afb363f9f71ed080c4f2aa436ae378ac061d",
+                        "schema_id": "rx.device-operation-catalog.v1",
+                        "size_bytes": "2247"
+                      }
+                    }
+                  ],
+                  "other_affected_cells": []
+                }
+              }
+            },
+            "application": {
+              "preparation": "3",
+              "runtime_boot": "01a0ebf4-e9ed-713e-9163-1cf4ab0dac77",
+              "actor": "reviewer",
+              "terminal": "panel/a",
+              "applied_at": {
+                "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+                "ticks_ns": "372809422169"
+              },
+              "cells": [
+                {
+                  "cell": "cell/a",
+                  "before": {
+                    "sha256": "d7cb82be01f0cd7778bde8571233c2ffb42ee068d72d50093e1bcce6f247d381",
+                    "schema_id": "rx.cell-configuration.v1",
+                    "size_bytes": "1750"
+                  },
+                  "after": {
+                    "sha256": "5a985b652a1a01ab9b7c14bc3022f8d8a65df367f53e8bed03cb727acfad3168",
+                    "schema_id": "rx.cell-configuration.v1",
+                    "size_bytes": "3792"
+                  },
+                  "previous_qualification": null,
+                  "epoch": "8",
+                  "scopes": {
+                    "zone/shared": "8"
+                  }
+                }
+              ],
+              "host_proofs": [
+                {
+                  "host": "host/sim",
+                  "task": "01a0ebf5-0016-73c6-9645-ad9e44b0df52",
+                  "request_digest": "08d9352fa9afd111fa9f1e95e1a1b106a84e985c5ce48abcaa64b714d3f2f9f4",
+                  "receipt_digest": "32d0fdd2e2b4047fc046ba8df7a715df34aff31231ef22b104abc50a932633f2",
+                  "read_started": {
+                    "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+                    "ticks_ns": "372686161294"
+                  },
+                  "observation_digest": "5d8b85f68cb19e3c7e40d0fb917ab21def897278e91fd28d2b45c713cd2f5f7e"
+                }
+              ],
+              "fences": [
+                {
+                  "cell": "cell/a",
+                  "host": "host/sim",
+                  "message": "01a0ebf5-0122-7012-ae49-354957d695ca",
+                  "epoch": "8",
+                  "scopes": {
+                    "zone/shared": "8"
+                  }
+                }
+              ]
+            },
+            "id": "f360a799-9cac-462e-80e3-9e77675094a5",
+            "cell": "cell/a",
+            "revision": "7",
+            "state": "APPLIED_UNQUALIFIED",
+            "plan_digest": "fb6cfe53cffe3c7e8a897a0b3e939414086fe8808e43e69ded6b8102303a63f8",
+            "builder_digest": "1cd02de1dad0358de35b608ab1990148573f403df74f086994aa80970506cb30",
+            "review": {
+              "id": "31d85398-95ed-4a81-94f1-ac0ca6135556",
+              "revision": "1",
+              "review_digest": "aa247838c81ea3311890009c303ea7221e915bff7dd374120e20bdd261865b11",
+              "decision_revision": "1"
+            },
+            "before": {
+              "sha256": "d7cb82be01f0cd7778bde8571233c2ffb42ee068d72d50093e1bcce6f247d381",
+              "schema_id": "rx.cell-configuration.v1",
+              "size_bytes": "1750"
+            },
+            "after": {
+              "sha256": "5a985b652a1a01ab9b7c14bc3022f8d8a65df367f53e8bed03cb727acfad3168",
+              "schema_id": "rx.cell-configuration.v1",
+              "size_bytes": "3792"
+            },
+            "step_origins": {
+              "node/792ebc86078331458ad1b4979952a756cd6c45e666f1a981650f57dc795f9b38": "skill/python"
+            },
+            "impact": {
+              "cells": [
+                {
+                  "id": "cell/a",
+                  "configuration_digest": "cd9290731b18788a9e151e1b81d56364ae1e9ec1d40b11890fcc8db3aaa0b275",
+                  "definition": {
+                    "sha256": "0101010101010101010101010101010101010101010101010101010101010101",
+                    "schema_id": "rx.test.v1",
+                    "size_bytes": "1"
+                  },
+                  "envelope": {
+                    "sha256": "0202020202020202020202020202020202020202020202020202020202020202",
+                    "schema_id": "rx.test.v1",
+                    "size_bytes": "1"
+                  },
+                  "recipe": {
+                    "sha256": "0303030303030303030303030303030303030303030303030303030303030303",
+                    "schema_id": "rx.test.v1",
+                    "size_bytes": "1"
+                  },
+                  "hosts": [
+                    "host/sim"
+                  ],
+                  "scopes": [
+                    "zone/shared"
+                  ],
+                  "resources": [
+                    "controller/sim"
+                  ]
+                }
+              ],
+              "scope_policy": "WHOLE_CELL_AND_SHARED_HOST_RESOURCE_SCOPE_CLOSURE",
+              "qualification_review_required": true,
+              "recovery_review_required": true,
+              "host_configuration_ack_required": true
+            },
+            "reason": "Prepare the reviewed Python process deployment.",
+            "proposed_by": "admin",
+            "proposed_at": {
+              "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+              "ticks_ns": "369433048543"
+            },
+            "impact_review": {
+              "actor": "reviewer",
+              "note": "Review isolated simulation binding replacement.",
+              "at": {
+                "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+                "ticks_ns": "369437995751"
+              }
+            },
+            "staged_by": "reviewer",
+            "preparation": {
+              "attempt": "3",
+              "runtime_boot": "01a0ebf4-e9ed-713e-9163-1cf4ab0dac77",
+              "cells": [
+                {
+                  "cell": "cell/a",
+                  "epoch": "7",
+                  "scopes": {
+                    "zone/shared": "7"
+                  },
+                  "change_blocks": [
+                    "01a0ebf4-ff1f-75f2-8491-920f4b11249e"
+                  ]
+                }
+              ],
+              "fences": [
+                {
+                  "cell": "cell/a",
+                  "host": "host/sim",
+                  "message": "01a0ebf4-ff1f-75f2-8491-9210ea4d074e",
+                  "epoch": "7",
+                  "scopes": {
+                    "zone/shared": "7"
+                  }
+                }
+              ],
+              "started_by": "reviewer",
+              "started_at": {
+                "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+                "ticks_ns": "372297517627"
+              }
+            }
+          },
+          "applied_cell": {
+            "revision": "8",
+            "value": {
+              "mode": "SETUP",
+              "commissioning": "NOT_COMMISSIONED",
+              "configuration": {
+                "process": {
+                  "schema": "rx.resolved-process.v1",
+                  "package_digest": "7676c1633103057a6810bd4365c046d8795728b50af050f1afb96f91288167df",
+                  "source_digest": "2eec25112c3f601e9bee2d3f8aa0b6cb4835bad2acb2f779882b9f58b0368121",
+                  "process": "python-composition",
+                  "root": {
+                    "id": "node/82b63da6d0865cd766ce48c105ecb164ca2ca09a73c1e90ed0d6a325e4f87211",
+                    "source": {
+                      "flow": "main",
+                      "node": "sequence",
+                      "instantiation": []
+                    },
+                    "body": {
+                      "kind": "SEQUENCE",
+                      "children": [
+                        {
+                          "id": "node/792ebc86078331458ad1b4979952a756cd6c45e666f1a981650f57dc795f9b38",
+                          "source": {
+                            "flow": "main",
+                            "node": "skill/1",
+                            "instantiation": []
+                          },
+                          "body": {
+                            "kind": "OPERATION",
+                            "binding": "skill/1"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "bindings": {
+                    "skill/1": {
+                      "host": "host/sim",
+                      "intent": {
+                        "kind": "FINITE_ACTION",
+                        "target": "device/python-sdk",
+                        "profile_digest": "942cdf79dd972d0179855b1a1b616be3de03c14f4458e166d506315a34fc434b",
+                        "site_config_digest": "0404040404040404040404040404040404040404040404040404040404040404",
+                        "calibration_digests": [],
+                        "resource_set": [
+                          "controller/sim"
+                        ],
+                        "execution_timeout_ms": "2000",
+                        "prepare_validity_ms": "1000",
+                        "completion_rule": "rx.python.returned.v1",
+                        "cancel_rule": "python/unknown",
+                        "body": {
+                          "program": {
+                            "program": {
+                              "sha256": "90e00c307d2a7b21bf2a37fd2b1ddca4f780562ece534d899158d99d1c10ca5c",
+                              "schema_id": "rx.python-environment.v1",
+                              "size_bytes": "166508"
+                            },
+                            "parameter_set": {
+                              "sha256": "36060134d807a85bd4de45d03754fc36d6f73b2349587345f0f71b5548caeaee",
+                              "schema_id": "rx.python-input.v1",
+                              "size_bytes": "11"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "conditions": {}
+                },
+                "id": "cell/a",
+                "environment": "SIMULATION",
+                "definition": {
+                  "sha256": "0101010101010101010101010101010101010101010101010101010101010101",
+                  "schema_id": "rx.test.v1",
+                  "size_bytes": "1"
+                },
+                "envelope": {
+                  "sha256": "0202020202020202020202020202020202020202020202020202020202020202",
+                  "schema_id": "rx.test.v1",
+                  "size_bytes": "1"
+                },
+                "recipe": {
+                  "sha256": "180aec06d60190c04e1bb625626e0375b55bc39b3eace28a44875ec8a815080c",
+                  "schema_id": "rx.resolved-process.v1",
+                  "size_bytes": "1409"
+                },
+                "site_config_digest": "0404040404040404040404040404040404040404040404040404040404040404",
+                "scopes": [
+                  "zone/shared"
+                ],
+                "hosts": [
+                  "host/sim"
+                ],
+                "executor": "executor",
+                "maximum_budget": "10",
+                "permit_ttl_ns": "100000000",
+                "start_timeout_ns": "1000000000",
+                "start_conditions": [
+                  {
+                    "op": "EQ",
+                    "fact": "ready",
+                    "schema": "boolean/v1",
+                    "unit": "unitless",
+                    "expected": {
+                      "boolean": true
+                    }
+                  }
+                ],
+                "steps": [
+                  {
+                    "id": "node/792ebc86078331458ad1b4979952a756cd6c45e666f1a981650f57dc795f9b38",
+                    "host": "host/sim",
+                    "intent": {
+                      "kind": "FINITE_ACTION",
+                      "target": "device/python-sdk",
+                      "profile_digest": "942cdf79dd972d0179855b1a1b616be3de03c14f4458e166d506315a34fc434b",
+                      "site_config_digest": "0404040404040404040404040404040404040404040404040404040404040404",
+                      "calibration_digests": [],
+                      "resource_set": [
+                        "controller/sim"
+                      ],
+                      "execution_timeout_ms": "2000",
+                      "prepare_validity_ms": "1000",
+                      "completion_rule": "rx.python.returned.v1",
+                      "cancel_rule": "python/unknown",
+                      "body": {
+                        "program": {
+                          "program": {
+                            "sha256": "90e00c307d2a7b21bf2a37fd2b1ddca4f780562ece534d899158d99d1c10ca5c",
+                            "schema_id": "rx.python-environment.v1",
+                            "size_bytes": "166508"
+                          },
+                          "parameter_set": {
+                            "sha256": "36060134d807a85bd4de45d03754fc36d6f73b2349587345f0f71b5548caeaee",
+                            "schema_id": "rx.python-input.v1",
+                            "size_bytes": "11"
+                          }
+                        }
+                      }
+                    },
+                    "predecessors": [],
+                    "conditions": [
+                      {
+                        "op": "EQ",
+                        "fact": "ready",
+                        "schema": "boolean/v1",
+                        "unit": "unitless",
+                        "expected": {
+                          "boolean": true
+                        }
+                      }
+                    ],
+                    "completion": {
+                      "kind": "NATIVE_OUTCOMES",
+                      "table": {
+                        "schema": "rx.native-outcome-table.v1",
+                        "profile_digest": "942cdf79dd972d0179855b1a1b616be3de03c14f4458e166d506315a34fc434b",
+                        "completion_rule": "rx.python.returned.v1",
+                        "cases": [
+                          {
+                            "status_schema": "rx.python.returned.v1",
+                            "statuses": [
+                              "0"
+                            ],
+                            "conclusion": "SUCCEEDED"
+                          }
+                        ]
+                      },
+                      "postconditions": []
+                    },
+                    "condition_ids": [
+                      "sim/ready"
+                    ],
+                    "condition_revision": "1",
+                    "handover_max_age_ns": "1000000000"
+                  }
+                ],
+                "maintained_conditions": [],
+                "fact_specs": [
+                  {
+                    "id": "ready",
+                    "host": "host/sim",
+                    "schema": "boolean/v1",
+                    "unit": "unitless",
+                    "maximum_age_ns": "1000000000",
+                    "maximum_uncertainty_ns": "0"
+                  }
+                ]
+              },
+              "epoch": "8",
+              "scope_epochs": {
+                "zone/shared": "8"
+              },
+              "qualification": null,
+              "blocks": [
+                {
+                  "id": "01a0ebf4-e9ed-713e-9163-1cf55d16a3f0",
+                  "created_revision": "2",
+                  "reason": "RUNTIME_RESTART",
+                  "latched": true,
+                  "scopes": [
+                    "zone/shared"
+                  ]
+                },
+                {
+                  "id": "01a0ebf4-f4e4-7280-ba82-8b4885fdb45f",
+                  "created_revision": "3",
+                  "reason": "CONFIGURATION_CHANGE",
+                  "latched": true,
+                  "scopes": [
+                    "zone/shared"
+                  ]
+                },
+                {
+                  "id": "01a0ebf4-fa6f-7087-8e41-67554f3d0307",
+                  "created_revision": "4",
+                  "reason": "DEVICE_RESTART",
+                  "latched": true,
+                  "scopes": [
+                    "zone/shared"
+                  ]
+                },
+                {
+                  "id": "01a0ebf4-fab7-7718-a57c-7bb5c55cba22",
+                  "created_revision": "5",
+                  "reason": "CONFIGURATION_CHANGE",
+                  "latched": true,
+                  "scopes": [
+                    "zone/shared"
+                  ]
+                },
+                {
+                  "id": "01a0ebf4-fd2e-735b-8326-8303691502b0",
+                  "created_revision": "6",
+                  "reason": "DEVICE_RESTART",
+                  "latched": true,
+                  "scopes": [
+                    "zone/shared"
+                  ]
+                },
+                {
+                  "id": "01a0ebf4-ff1f-75f2-8491-920f4b11249e",
+                  "created_revision": "7",
+                  "reason": "CONFIGURATION_CHANGE",
+                  "latched": true,
+                  "scopes": [
+                    "zone/shared"
+                  ]
+                },
+                {
+                  "id": "01a0ebf5-0122-7012-ae49-3548b6fc3a8d",
+                  "created_revision": "8",
+                  "reason": "CONFIGURATION_CHANGE",
+                  "latched": true,
+                  "scopes": [
+                    "zone/shared"
+                  ]
+                }
+              ],
+              "open_cases": []
+            }
+          },
+          "approval": {
+            "schema": "rx.host-readmission.v1",
+            "id": "01a0ebf4-f5ef-72d4-af9d-1ed999643acf",
+            "host": "host/sim",
+            "previous_session": "01a0ebf4-eb65-722d-8ab1-356cf6331bf8",
+            "previous_boot": "7b85271e-7c30-428b-a07c-c41819c87895",
+            "delivery_journal": "7412b3ed-28ab-4047-92b7-77be0a62878e",
+            "evidence_journal": "63615e2d-8668-4d2c-a8ab-11266836b726",
+            "cells": {
+              "cell/a": null
+            },
+            "approved_by": "reviewer",
+            "approved_at": {
+              "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+              "ticks_ns": "369952607043"
+            },
+            "binding": {
+              "intent": "01a0ebf4-f403-75f8-9588-33ced6be079d",
+              "change": "f360a799-9cac-462e-80e3-9e77675094a5",
+              "cell": "cell/a",
+              "after_definition": "0101010101010101010101010101010101010101010101010101010101010101"
+            }
+          },
+          "stopped_host": {
+            "admission_open": false,
+            "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+            "endpoint": "https://0.0.0.0:7444",
+            "host": "host/sim",
+            "host_boot": "7b85271e-7c30-428b-a07c-c41819c87895",
+            "installation": "7b50f152-53eb-4d58-a98c-20c7d16bdf53",
+            "instance": "88b99647-3fda-425d-891a-c4d89ff292b3",
+            "pending_evidence": "0",
+            "phase": "STOPPED",
+            "publication": "Idle(PublicationCursor { journal: Id(\"63615e2d-8668-4d2c-a8ab-11266836b726\"), through: Counter(0), platform_sequence: Counter(2) })",
+            "qualification_or_arm_restored": false,
+            "schema": "rx.host-service-status.v1",
+            "stop": {
+              "admission_open": false,
+              "host_boot": "7b85271e-7c30-428b-a07c-c41819c87895",
+              "native": {
+                "device_session": "56962b4e-a25a-4cc0-b705-c395a57782f2",
+                "no_pending_commands": true,
+                "observed_at": {
+                  "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+                  "ticks_ns": "370096213084"
+                },
+                "resources": [
+                  "controller/sim"
+                ],
+                "safe_to_drop": true,
+                "uncertainty_ns": "0"
+              },
+              "pending_operations": [],
+              "physical_shutdown_assessed": false,
+              "retained_evidence": "0",
+              "safe_to_drop": true
+            }
+          },
+          "proposed_backend": {
+            "kind": "PYTHON_SKILL_PACKAGE",
+            "directory": "/config/device-package",
+            "manifest_digest": "a7d5b9beb5b5fc4443f724bb4961cce7635fdf2fa6c2d38f5c46f0f3d99ed217",
+            "policy": {
+              "path": "/config/device-package-policy.json",
+              "sha256": "49cfaad2550b375824703d8f9b6d83b0d4d98685a8ff1c9bff6fc46968cf3146"
+            }
+          },
+          "host_prepared": {
+            "request": "01a0ebf4-f403-75f8-9588-33ced6be079d",
+            "request_digest": "9b12aa903f3724e20d54983bdb2129661e9172b2d19ae07bc8a43fb990c711ef",
+            "state": "PREPARED",
+            "plan_digest": "fcb6a5bc3c510bd165bc9fb7fb145dad45eb353707822dfffafd4d213ae17b78",
+            "current_identity": "278e78b9fef27aa64dff70f75bf6f54b4296a4c770cae11cdaaeb5c3c434782e",
+            "proposed_identity": "be44a75b11f992c165e3135d178b322fdd1ff1fdba48cca65e209fdf77f153df",
+            "proposed_bindings_digest": "82c9be43bbcc524d5b7bd0638cdfd75e2897f7bb134ed4b27d15961af927f2e2",
+            "proposed_configuration": {
+              "schema": "rx.host-startup.v1",
+              "installation": "7b50f152-53eb-4d58-a98c-20c7d16bdf53",
+              "release_digest": "0808080808080808080808080808080808080808080808080808080808080808",
+              "host": "host/sim",
+              "bind": "0.0.0.0:7444",
+              "data_directory": "/data/host",
+              "runtime_directory": "/data/runtime",
+              "bindings": {
+                "path": "/config/proposed-bindings.json",
+                "sha256": "82c9be43bbcc524d5b7bd0638cdfd75e2897f7bb134ed4b27d15961af927f2e2"
+              },
+              "backend": {
+                "kind": "PYTHON_SKILL_PACKAGE",
+                "directory": "/config/device-package",
+                "manifest_digest": "a7d5b9beb5b5fc4443f724bb4961cce7635fdf2fa6c2d38f5c46f0f3d99ed217",
+                "policy": {
+                  "path": "/config/device-package-policy.json",
+                  "sha256": "49cfaad2550b375824703d8f9b6d83b0d4d98685a8ff1c9bff6fc46968cf3146"
+                }
+              },
+              "tls": {
+                "certificate": {
+                  "path": "/config/server.pem",
+                  "sha256": "6502aef0a2e7d651ffde03fd691e78a6a50bee0836391c8b0bee625235e0224c"
+                },
+                "key": {
+                  "path": "/config/server.key",
+                  "sha256": "9a5c814ddd5d6d5628f2c2647e171927e8551c3baae6f56cdca1623b41857090"
+                },
+                "ca": {
+                  "path": "/config/ca.pem",
+                  "sha256": "760846ecf1a990eb4d36052e4aa27eab719acba048e920ea38da67303432d5e7"
+                }
+              },
+              "allowed_platform_certificates": {
+                "4b37ad96b5a65d832b78d2803ac305e3bb6ff521bcb8222e50cd830fe05b2d9a": "7b50f152-53eb-4d58-a98c-20c7d16bdf53"
+              },
+              "publisher": {
+                "uri": "https://platform:7443",
+                "server_name": "localhost",
+                "tls": {
+                  "certificate": {
+                    "path": "/config/publisher.pem",
+                    "sha256": "b18421aa60a2d09a37ebd851be85ea580acdd625898dd9c31199cd24e4d8b7ed"
+                  },
+                  "key": {
+                    "path": "/config/publisher.key",
+                    "sha256": "3ae6819a833528a2f445422ca27553e648fa37e5c2bc1372df08455413881055"
+                  },
+                  "ca": {
+                    "path": "/config/ca.pem",
+                    "sha256": "760846ecf1a990eb4d36052e4aa27eab719acba048e920ea38da67303432d5e7"
+                  }
+                },
+                "store_generation": "01a0ebf4-e975-72fa-b1fc-3cf8e137c9e5"
+              },
+              "publication_drain_ms": "0"
+            },
+            "stop": {
+              "attempt": "7239b3ec-90fa-496c-97f0-4dbee8b033dd",
+              "installation_identity": "278e78b9fef27aa64dff70f75bf6f54b4296a4c770cae11cdaaeb5c3c434782e",
+              "startup_configuration_digest": "b57af26734fa9c334fb9c627d4a149ee0861b5bf55a1347fccf0e33d0866e4ad",
+              "delivery_journal": "7412b3ed-28ab-4047-92b7-77be0a62878e",
+              "evidence_journal": "63615e2d-8668-4d2c-a8ab-11266836b726",
+              "delivery_sequence": "3",
+              "journal_tail": "0",
+              "state_digest": "e94f4a7f75688be9591c612e1307dd0eb7f358bce58203cb559291814a8b5ef7",
+              "snapshot": {
+                "host_boot": "7b85271e-7c30-428b-a07c-c41819c87895",
+                "admission_open": false,
+                "pending_operations": [],
+                "retained_evidence": "0",
+                "native": {
+                  "device_session": "56962b4e-a25a-4cc0-b705-c395a57782f2",
+                  "observed_at": {
+                    "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+                    "ticks_ns": "370096446751"
+                  },
+                  "uncertainty_ns": "0",
+                  "resources": [
+                    "controller/sim"
+                  ],
+                  "no_pending_commands": true,
+                  "safe_to_drop": true
+                },
+                "safe_to_drop": true,
+                "physical_shutdown_assessed": false
+              }
+            },
+            "installation_changed": false,
+            "activation_authorized": false
+          },
+          "host_committed": {
+            "schema": "rx.host.binding-commit.v1",
+            "request": "01a0ebf4-f403-75f8-9588-33ced6be079d",
+            "request_digest": "9b12aa903f3724e20d54983bdb2129661e9172b2d19ae07bc8a43fb990c711ef",
+            "plan_digest": "fcb6a5bc3c510bd165bc9fb7fb145dad45eb353707822dfffafd4d213ae17b78",
+            "cell": "cell/a",
+            "before_configuration": "d7cb82be01f0cd7778bde8571233c2ffb42ee068d72d50093e1bcce6f247d381",
+            "after_configuration": "5a985b652a1a01ab9b7c14bc3022f8d8a65df367f53e8bed03cb727acfad3168",
+            "after_binding_digest": "e02384f41833191948f048160765391a42bc5477da4442ca1a12b7e80b1ad395",
+            "before_identity": "278e78b9fef27aa64dff70f75bf6f54b4296a4c770cae11cdaaeb5c3c434782e",
+            "after_identity": "be44a75b11f992c165e3135d178b322fdd1ff1fdba48cca65e209fdf77f153df",
+            "phase": "COMMITTED",
+            "native_generation": "native-generations/01a0ebf4-f403-75f8-9588-33ced6be079d",
+            "delivery_journal": "7412b3ed-28ab-4047-92b7-77be0a62878e",
+            "evidence_journal": "63615e2d-8668-4d2c-a8ab-11266836b726",
+            "activation_authorized": false,
+            "generation_digest": "bf71bb37440b9a82368e03ce827bbc3948d4ba37bebb4269bfbf4aeec4788049",
+            "before_descriptor": {
+              "maintenance_protocol": "rx.host-maintenance.v1",
+              "schema": "rx.host-installation.v2",
+              "identity": "278e78b9fef27aa64dff70f75bf6f54b4296a4c770cae11cdaaeb5c3c434782e",
+              "installation": "7b50f152-53eb-4d58-a98c-20c7d16bdf53",
+              "host": "host/sim",
+              "delivery_journal": "7412b3ed-28ab-4047-92b7-77be0a62878e",
+              "evidence_journal": "63615e2d-8668-4d2c-a8ab-11266836b726"
+            },
+            "after_descriptor": {
+              "native_directory": "native-generations/01a0ebf4-f403-75f8-9588-33ced6be079d",
+              "maintenance_protocol": "rx.host-maintenance.v1",
+              "schema": "rx.host-installation.v2",
+              "identity": "be44a75b11f992c165e3135d178b322fdd1ff1fdba48cca65e209fdf77f153df",
+              "installation": "7b50f152-53eb-4d58-a98c-20c7d16bdf53",
+              "host": "host/sim",
+              "delivery_journal": "7412b3ed-28ab-4047-92b7-77be0a62878e",
+              "evidence_journal": "63615e2d-8668-4d2c-a8ab-11266836b726",
+              "native": {
+                "kind": "PYTHON_SKILL",
+                "registration_digest": "a7d5b9beb5b5fc4443f724bb4961cce7635fdf2fa6c2d38f5c46f0f3d99ed217",
+                "environment_digest": "aadd4ea791b427bf50c5035866b897cb9ba07dcf4532495c9302f716b80f9533"
+              }
+            }
+          },
+          "committed_ready": {
+            "admission_open": true,
+            "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+            "endpoint": "https://0.0.0.0:7444",
+            "host": "host/sim",
+            "host_boot": "1a7ee677-c966-42b0-89ed-b0ab77833a96",
+            "installation": "7b50f152-53eb-4d58-a98c-20c7d16bdf53",
+            "instance": "96c49585-2211-4359-ae35-98b7928654cf",
+            "pending_evidence": null,
+            "phase": "SOFTWARE_READY_UNARMED",
+            "publication": "Connecting",
+            "qualification_or_arm_restored": false,
+            "schema": "rx.host-service-status.v1",
+            "stop": null
+          },
+          "matched": {
+            "intent": {
+              "request": "01a0ebf4-f403-75f8-9588-33ced6be079d",
+              "change": "f360a799-9cac-462e-80e3-9e77675094a5",
+              "host": "host/sim",
+              "cell": "cell/a",
+              "host_plan_digest": "fcb6a5bc3c510bd165bc9fb7fb145dad45eb353707822dfffafd4d213ae17b78",
+              "before_configuration": "d7cb82be01f0cd7778bde8571233c2ffb42ee068d72d50093e1bcce6f247d381",
+              "after_configuration": "5a985b652a1a01ab9b7c14bc3022f8d8a65df367f53e8bed03cb727acfad3168",
+              "before_cells": {
+                "cell/a": {
+                  "definition": "0101010101010101010101010101010101010101010101010101010101010101",
+                  "envelope": "0202020202020202020202020202020202020202020202020202020202020202",
+                  "environment": "SIMULATION"
+                }
+              },
+              "after_cells": {
+                "cell/a": {
+                  "definition": "0101010101010101010101010101010101010101010101010101010101010101",
+                  "envelope": "0202020202020202020202020202020202020202020202020202020202020202",
+                  "environment": "SIMULATION"
+                }
+              },
+              "runtime_boot": "01a0ebf4-e9ed-713e-9163-1cf4ab0dac77",
+              "created_at": {
+                "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+                "ticks_ns": "369458017126"
+              }
+            },
+            "phase": "METADATA_MATCHED",
+            "baseline": {
+              "snapshot": {
+                "evidence_journal": "63615e2d-8668-4d2c-a8ab-11266836b726",
+                "installation_identity": "278e78b9fef27aa64dff70f75bf6f54b4296a4c770cae11cdaaeb5c3c434782e",
+                "schema": "rx.host-process-configuration-snapshot.v1",
+                "host": "host/sim",
+                "host_boot": "7b85271e-7c30-428b-a07c-c41819c87895",
+                "delivery_journal": "7412b3ed-28ab-4047-92b7-77be0a62878e",
+                "binding_digest": "805055bd8dd0f25b7130c85a9b751523f3f82ebe32a1ead9e9e5674f9670fadb",
+                "cells": [
+                  {
+                    "cell": "cell/a",
+                    "definition": "0101010101010101010101010101010101010101010101010101010101010101",
+                    "envelope": "0202020202020202020202020202020202020202020202020202020202020202",
+                    "environment": "SIMULATION",
+                    "epoch": "2",
+                    "scopes": {
+                      "zone/shared": "2"
+                    },
+                    "blocked": [
+                      "01a0ebf4-e9ed-713e-9163-1cf55d16a3f0"
+                    ],
+                    "applied": null
+                  }
+                ]
+              },
+              "observed_at": {
+                "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+                "ticks_ns": "369626570376"
+              },
+              "producer_session": "01a0ebf4-eb65-722d-8ab1-356cf6331bf8"
+            },
+            "observation": {
+              "schema": "rx.host-process-configuration-observation.v1",
+              "snapshot": {
+                "evidence_journal": "63615e2d-8668-4d2c-a8ab-11266836b726",
+                "installation_identity": "be44a75b11f992c165e3135d178b322fdd1ff1fdba48cca65e209fdf77f153df",
+                "binding_commit": {
+                  "schema": "rx.host-binding-commit-observation.v1",
+                  "request": "01a0ebf4-f403-75f8-9588-33ced6be079d",
+                  "plan_digest": "fcb6a5bc3c510bd165bc9fb7fb145dad45eb353707822dfffafd4d213ae17b78",
+                  "cell": "cell/a",
+                  "before_configuration": "d7cb82be01f0cd7778bde8571233c2ffb42ee068d72d50093e1bcce6f247d381",
+                  "after_configuration": "5a985b652a1a01ab9b7c14bc3022f8d8a65df367f53e8bed03cb727acfad3168",
+                  "before_installation_identity": "278e78b9fef27aa64dff70f75bf6f54b4296a4c770cae11cdaaeb5c3c434782e",
+                  "after_installation_identity": "be44a75b11f992c165e3135d178b322fdd1ff1fdba48cca65e209fdf77f153df",
+                  "delivery_journal": "7412b3ed-28ab-4047-92b7-77be0a62878e",
+                  "evidence_journal": "63615e2d-8668-4d2c-a8ab-11266836b726",
+                  "binding_digest": "e02384f41833191948f048160765391a42bc5477da4442ca1a12b7e80b1ad395"
+                },
+                "schema": "rx.host-process-configuration-snapshot.v1",
+                "host": "host/sim",
+                "host_boot": "1a7ee677-c966-42b0-89ed-b0ab77833a96",
+                "delivery_journal": "7412b3ed-28ab-4047-92b7-77be0a62878e",
+                "binding_digest": "e02384f41833191948f048160765391a42bc5477da4442ca1a12b7e80b1ad395",
+                "cells": [
+                  {
+                    "cell": "cell/a",
+                    "definition": "0101010101010101010101010101010101010101010101010101010101010101",
+                    "envelope": "0202020202020202020202020202020202020202020202020202020202020202",
+                    "environment": "SIMULATION",
+                    "epoch": "4",
+                    "scopes": {
+                      "zone/shared": "4"
+                    },
+                    "blocked": [
+                      "01a0ebf4-e9ed-713e-9163-1cf55d16a3f0",
+                      "01a0ebf4-f4e4-7280-ba82-8b4885fdb45f",
+                      "01a0ebf4-fa6f-7087-8e41-67554f3d0307"
+                    ],
+                    "applied": null
+                  }
+                ]
+              },
+              "receipt": null,
+              "context_matches_current_host": false,
+              "activation_authorized": false
+            },
+            "read_started": {
+              "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+              "ticks_ns": "371130573127"
+            },
+            "observed_session": "01a0ebf4-fa70-734f-ba97-c5fadb09255a",
+            "issue": null,
+            "created_by": "reviewer",
+            "activation_authorized": false
+          },
+          "confirmed_blockers": [
+            {
+              "kind": "HOST_CONFIGURATION_ACKNOWLEDGEMENT_REQUIRED",
+              "cell": "cell/a",
+              "host": "host/sim"
+            }
+          ],
+          "refreshed_preparation": {
+            "attempt": "2",
+            "runtime_boot": "01a0ebf4-e9ed-713e-9163-1cf4ab0dac77",
+            "cells": [
+              {
+                "cell": "cell/a",
+                "epoch": "5",
+                "scopes": {
+                  "zone/shared": "5"
+                },
+                "change_blocks": [
+                  "01a0ebf4-fab7-7718-a57c-7bb5c55cba22"
+                ]
+              }
+            ],
+            "fences": [
+              {
+                "cell": "cell/a",
+                "host": "host/sim",
+                "message": "01a0ebf4-fab7-7718-a57c-7bb6e9dc9bfb",
+                "epoch": "5",
+                "scopes": {
+                  "zone/shared": "5"
+                }
+              }
+            ],
+            "started_by": "reviewer",
+            "started_at": {
+              "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+              "ticks_ns": "371173920627"
+            }
+          },
+          "restarted_ready": {
+            "admission_open": true,
+            "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+            "endpoint": "https://0.0.0.0:7444",
+            "host": "host/sim",
+            "host_boot": "e5ae891f-9600-4a3e-8555-0a6801a4a58c",
+            "installation": "7b50f152-53eb-4d58-a98c-20c7d16bdf53",
+            "instance": "273f5077-052b-4f6d-9215-29974ff9e65d",
+            "pending_evidence": null,
+            "phase": "SOFTWARE_READY_UNARMED",
+            "publication": "Connecting",
+            "qualification_or_arm_restored": false,
+            "schema": "rx.host-service-status.v1",
+            "stop": null
+          },
+          "demoted_blockers": [
+            {
+              "kind": "HOST_BINDING_CHANGE_REQUIRED"
+            },
+            {
+              "kind": "HOST_BINDING_COMMIT_UNCONFIRMED",
+              "host": "host/sim"
+            },
+            {
+              "kind": "PREPARATION_STALE"
+            },
+            {
+              "kind": "HOST_CONFIGURATION_ACKNOWLEDGEMENT_REQUIRED",
+              "cell": "cell/a",
+              "host": "host/sim"
+            }
+          ],
+          "demoted_refresh": {
+            "status": 409,
+            "body": {
+              "code": "CONTINUITY_UNPROVEN",
+              "outcome_unknown": false
+            }
+          }
+        },
+        "process_intake": {
+          "id": "4b1c6db4-0ff4-4ce1-9052-217c5ff570c5",
+          "cell": "cell/a",
+          "title": "Reviewed Python process",
+          "object": {
+            "manifest": "7676c1633103057a6810bd4365c046d8795728b50af050f1afb96f91288167df",
+            "signature": "3267cf375881843de71b60cf37486d13c7050bfef84eb7b18d99217fedc2353f"
+          },
+          "configuration_digest": "cd9290731b18788a9e151e1b81d56364ae1e9ec1d40b11890fcc8db3aaa0b275",
+          "registration": {
+            "generation": "01a0ebf4-e9f2-7643-b4e4-512db1cdfa1b",
+            "store_owner": "4759766f-e0fc-40ae-a7e5-2343b34bda76",
+            "policy_fingerprint": "76269dfb3bfebf2998c5acd919ef61fd5e53d9fc83bff63a33c33dfc66a85d2d",
+            "policy_file_digest": "90e0f87de246d5a36569dfcce3057ef243cca5a07a852ebe36ac46b74e66e8c8"
+          },
+          "manifest": {
+            "schema": "rx.package.v1",
+            "package": "test/python-process",
+            "version": "1.0.0",
+            "publisher": "test",
+            "contracts": {
+              "base": "d32519ffd33cc02f5e6f82406ad2fe253421527dc047b807c11beb11a8f7583c",
+              "cell": "5e75ab4d3d72d4b22082003dbec5e2ca54562cc4302d2e306b07ce64d215d71b",
+              "package_abi": "rx.package-abi.v1"
+            },
+            "targets": [
+              {
+                "os": "LINUX",
+                "architecture": "ARM64",
+                "ros_distribution": null
+              }
+            ],
+            "entry": {
+              "kind": "PROCESS",
+              "source": "process/source.json"
+            },
+            "permissions": [
+              {
+                "kind": "ARTIFACT_READ"
+              },
+              {
+                "kind": "OPERATION_SUBMIT",
+                "operation": "skill/1"
+              }
+            ],
+            "dependencies": [],
+            "assets": [
+              {
+                "sha256": "36060134d807a85bd4de45d03754fc36d6f73b2349587345f0f71b5548caeaee",
+                "schema_id": "rx.python-input.v1",
+                "size_bytes": "11"
+              },
+              {
+                "sha256": "90e00c307d2a7b21bf2a37fd2b1ddca4f780562ece534d899158d99d1c10ca5c",
+                "schema_id": "rx.python-environment.v1",
+                "size_bytes": "166508"
+              }
+            ],
+            "files": [
+              {
+                "path": "authoring/compile-input.json",
+                "sha256": "5a3e20ccb1719925603efe83b3c436baf6c3ded6295a03e6e13b529186fc4a4c",
+                "size_bytes": "1852",
+                "executable": false
+              },
+              {
+                "path": "authoring/package-recipe.json",
+                "sha256": "90a51278cba39cee31035985607b8c8793bb0416b60abb087c03790028315c76",
+                "size_bytes": "677",
+                "executable": false
+              },
+              {
+                "path": "process/bindings.json",
+                "sha256": "9f9fb148cd71c3cd0ea3e16b24e849a0168cff422dc1c60648505cf12d7a2428",
+                "size_bytes": "772",
+                "executable": false
+              },
+              {
+                "path": "process/context-requirements.json",
+                "sha256": "516eb8cf8706bd67a5b10bb33a1bcf6f5022d84d5ad318b54fc9afa5a49540eb",
+                "size_bytes": "354",
+                "executable": false
+              },
+              {
+                "path": "process/source.json",
+                "sha256": "2eec25112c3f601e9bee2d3f8aa0b6cb4835bad2acb2f779882b9f58b0368121",
+                "size_bytes": "280",
+                "executable": false
+              }
+            ]
+          },
+          "submitted_by": "admin",
+          "terminal": "panel/a",
+          "submitted_at": {
+            "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+            "ticks_ns": "368877593501"
+          },
+          "state": "AWAITING_REVIEW"
+        },
+        "process_report": {
+          "activation_authorized": false,
+          "compiler_checks_passed": true,
+          "report_digest": "f919071f96ecc21bdc6684090d2a942a7441acf3a6493e019b7b91b21b969a8a",
+          "status": "UNSIGNED_VERIFICATION_REPORT"
+        },
+        "process_decision": {
+          "review_digest": "aa247838c81ea3311890009c303ea7221e915bff7dd374120e20bdd261865b11",
+          "review": "31d85398-95ed-4a81-94f1-ac0ca6135556",
+          "cell": "cell/a",
+          "revision": "1",
+          "report_revision": "1",
+          "report_digest": "f919071f96ecc21bdc6684090d2a942a7441acf3a6493e019b7b91b21b969a8a",
+          "choice": "APPROVE",
+          "note": "Separate fixture reviewer checked signed Python process.",
+          "decided_by": "reviewer",
+          "decided_at": {
+            "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+            "ticks_ns": "369423778334"
+          },
+          "scope": "PROCESS_PACKAGE_SOFTWARE"
+        },
+        "change": {
+          "host_configuration": {
+            "hosts": [
+              {
+                "host": "host/sim",
+                "task": "01a0ebf5-0016-73c6-9645-ad9e44b0df52",
+                "preparation": "3",
+                "phase": "SEND_ENTERED",
+                "outcome": "APPLIED_UNQUALIFIED",
+                "issue": null,
+                "acknowledged_for_preparation": false,
+                "integrity_disputed": false
+              }
+            ],
+            "mixed_configuration": false,
+            "outcome_unknown": false,
+            "all_hosts_acknowledged": false,
+            "revalidation_required_before_platform_apply": false,
+            "platform_configuration_applied": true
+          },
+          "change": {
+            "host_binding_plan": {
+              "schema": "rx.host-binding-plan.v1",
+              "installation": "7b50f152-53eb-4d58-a98c-20c7d16bdf53",
+              "cell": "cell/a",
+              "device_context_digest": "191c9e4f753ff923ffc23f6ae6934c36f6d9c2581c511bc9fff257bbf954ab41",
+              "process_review_digest": "aa247838c81ea3311890009c303ea7221e915bff7dd374120e20bdd261865b11",
+              "before_configuration": {
+                "sha256": "d7cb82be01f0cd7778bde8571233c2ffb42ee068d72d50093e1bcce6f247d381",
+                "schema_id": "rx.cell-configuration.v1",
+                "size_bytes": "1750"
+              },
+              "after_configuration": {
+                "sha256": "5a985b652a1a01ab9b7c14bc3022f8d8a65df367f53e8bed03cb727acfad3168",
+                "schema_id": "rx.cell-configuration.v1",
+                "size_bytes": "3792"
+              },
+              "definition": {
+                "sha256": "0101010101010101010101010101010101010101010101010101010101010101",
+                "schema_id": "rx.test.v1",
+                "size_bytes": "1"
+              },
+              "envelope": {
+                "sha256": "0202020202020202020202020202020202020202020202020202020202020202",
+                "schema_id": "rx.test.v1",
+                "size_bytes": "1"
+              },
+              "environment": "SIMULATION",
+              "scopes": [
+                "zone/shared"
+              ],
+              "hosts": {
+                "host/sim": {
+                  "required_intents": [
+                    {
+                      "kind": "FINITE_ACTION",
+                      "target": "device/python-sdk",
+                      "profile_digest": "942cdf79dd972d0179855b1a1b616be3de03c14f4458e166d506315a34fc434b",
+                      "site_config_digest": "0404040404040404040404040404040404040404040404040404040404040404",
+                      "calibration_digests": [],
+                      "resource_set": [
+                        "controller/sim"
+                      ],
+                      "execution_timeout_ms": "2000",
+                      "prepare_validity_ms": "1000",
+                      "completion_rule": "rx.python.returned.v1",
+                      "cancel_rule": "python/unknown",
+                      "body": {
+                        "program": {
+                          "program": {
+                            "sha256": "90e00c307d2a7b21bf2a37fd2b1ddca4f780562ece534d899158d99d1c10ca5c",
+                            "schema_id": "rx.python-environment.v1",
+                            "size_bytes": "166508"
+                          },
+                          "parameter_set": {
+                            "sha256": "36060134d807a85bd4de45d03754fc36d6f73b2349587345f0f71b5548caeaee",
+                            "schema_id": "rx.python-input.v1",
+                            "size_bytes": "11"
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "required_conditions": [
+                    "sim/ready"
+                  ],
+                  "device_packages": [
+                    {
+                      "manifest": "a7d5b9beb5b5fc4443f724bb4961cce7635fdf2fa6c2d38f5c46f0f3d99ed217",
+                      "signature": "dcf53824d8d05348fbec9bdc5c78b1710e0b5a7015773490b5f66a5f44191ca8",
+                      "catalog": {
+                        "sha256": "efb07adb57711242e3a3fc978154afb363f9f71ed080c4f2aa436ae378ac061d",
+                        "schema_id": "rx.device-operation-catalog.v1",
+                        "size_bytes": "2247"
+                      }
+                    }
+                  ],
+                  "other_affected_cells": []
+                }
+              }
+            },
+            "application": {
+              "preparation": "3",
+              "runtime_boot": "01a0ebf4-e9ed-713e-9163-1cf4ab0dac77",
+              "actor": "reviewer",
+              "terminal": "panel/a",
+              "applied_at": {
+                "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+                "ticks_ns": "372809422169"
+              },
+              "cells": [
+                {
+                  "cell": "cell/a",
+                  "before": {
+                    "sha256": "d7cb82be01f0cd7778bde8571233c2ffb42ee068d72d50093e1bcce6f247d381",
+                    "schema_id": "rx.cell-configuration.v1",
+                    "size_bytes": "1750"
+                  },
+                  "after": {
+                    "sha256": "5a985b652a1a01ab9b7c14bc3022f8d8a65df367f53e8bed03cb727acfad3168",
+                    "schema_id": "rx.cell-configuration.v1",
+                    "size_bytes": "3792"
+                  },
+                  "previous_qualification": null,
+                  "epoch": "8",
+                  "scopes": {
+                    "zone/shared": "8"
+                  }
+                }
+              ],
+              "host_proofs": [
+                {
+                  "host": "host/sim",
+                  "task": "01a0ebf5-0016-73c6-9645-ad9e44b0df52",
+                  "request_digest": "08d9352fa9afd111fa9f1e95e1a1b106a84e985c5ce48abcaa64b714d3f2f9f4",
+                  "receipt_digest": "32d0fdd2e2b4047fc046ba8df7a715df34aff31231ef22b104abc50a932633f2",
+                  "read_started": {
+                    "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+                    "ticks_ns": "372686161294"
+                  },
+                  "observation_digest": "5d8b85f68cb19e3c7e40d0fb917ab21def897278e91fd28d2b45c713cd2f5f7e"
+                }
+              ],
+              "fences": [
+                {
+                  "cell": "cell/a",
+                  "host": "host/sim",
+                  "message": "01a0ebf5-0122-7012-ae49-354957d695ca",
+                  "epoch": "8",
+                  "scopes": {
+                    "zone/shared": "8"
+                  }
+                }
+              ]
+            },
+            "id": "f360a799-9cac-462e-80e3-9e77675094a5",
+            "cell": "cell/a",
+            "revision": "7",
+            "state": "APPLIED_UNQUALIFIED",
+            "plan_digest": "fb6cfe53cffe3c7e8a897a0b3e939414086fe8808e43e69ded6b8102303a63f8",
+            "builder_digest": "1cd02de1dad0358de35b608ab1990148573f403df74f086994aa80970506cb30",
+            "review": {
+              "id": "31d85398-95ed-4a81-94f1-ac0ca6135556",
+              "revision": "1",
+              "review_digest": "aa247838c81ea3311890009c303ea7221e915bff7dd374120e20bdd261865b11",
+              "decision_revision": "1"
+            },
+            "before": {
+              "sha256": "d7cb82be01f0cd7778bde8571233c2ffb42ee068d72d50093e1bcce6f247d381",
+              "schema_id": "rx.cell-configuration.v1",
+              "size_bytes": "1750"
+            },
+            "after": {
+              "sha256": "5a985b652a1a01ab9b7c14bc3022f8d8a65df367f53e8bed03cb727acfad3168",
+              "schema_id": "rx.cell-configuration.v1",
+              "size_bytes": "3792"
+            },
+            "step_origins": {
+              "node/792ebc86078331458ad1b4979952a756cd6c45e666f1a981650f57dc795f9b38": "skill/python"
+            },
+            "impact": {
+              "cells": [
+                {
+                  "id": "cell/a",
+                  "configuration_digest": "cd9290731b18788a9e151e1b81d56364ae1e9ec1d40b11890fcc8db3aaa0b275",
+                  "definition": {
+                    "sha256": "0101010101010101010101010101010101010101010101010101010101010101",
+                    "schema_id": "rx.test.v1",
+                    "size_bytes": "1"
+                  },
+                  "envelope": {
+                    "sha256": "0202020202020202020202020202020202020202020202020202020202020202",
+                    "schema_id": "rx.test.v1",
+                    "size_bytes": "1"
+                  },
+                  "recipe": {
+                    "sha256": "0303030303030303030303030303030303030303030303030303030303030303",
+                    "schema_id": "rx.test.v1",
+                    "size_bytes": "1"
+                  },
+                  "hosts": [
+                    "host/sim"
+                  ],
+                  "scopes": [
+                    "zone/shared"
+                  ],
+                  "resources": [
+                    "controller/sim"
+                  ]
+                }
+              ],
+              "scope_policy": "WHOLE_CELL_AND_SHARED_HOST_RESOURCE_SCOPE_CLOSURE",
+              "qualification_review_required": true,
+              "recovery_review_required": true,
+              "host_configuration_ack_required": true
+            },
+            "reason": "Prepare the reviewed Python process deployment.",
+            "proposed_by": "admin",
+            "proposed_at": {
+              "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+              "ticks_ns": "369433048543"
+            },
+            "impact_review": {
+              "actor": "reviewer",
+              "note": "Review isolated simulation binding replacement.",
+              "at": {
+                "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+                "ticks_ns": "369437995751"
+              }
+            },
+            "staged_by": "reviewer",
+            "preparation": {
+              "attempt": "3",
+              "runtime_boot": "01a0ebf4-e9ed-713e-9163-1cf4ab0dac77",
+              "cells": [
+                {
+                  "cell": "cell/a",
+                  "epoch": "7",
+                  "scopes": {
+                    "zone/shared": "7"
+                  },
+                  "change_blocks": [
+                    "01a0ebf4-ff1f-75f2-8491-920f4b11249e"
+                  ]
+                }
+              ],
+              "fences": [
+                {
+                  "cell": "cell/a",
+                  "host": "host/sim",
+                  "message": "01a0ebf4-ff1f-75f2-8491-9210ea4d074e",
+                  "epoch": "7",
+                  "scopes": {
+                    "zone/shared": "7"
+                  }
+                }
+              ],
+              "started_by": "reviewer",
+              "started_at": {
+                "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+                "ticks_ns": "372297517627"
+              }
+            }
+          },
+          "before": {
+            "id": "cell/a",
+            "environment": "SIMULATION",
+            "definition": {
+              "sha256": "0101010101010101010101010101010101010101010101010101010101010101",
+              "schema_id": "rx.test.v1",
+              "size_bytes": "1"
+            },
+            "envelope": {
+              "sha256": "0202020202020202020202020202020202020202020202020202020202020202",
+              "schema_id": "rx.test.v1",
+              "size_bytes": "1"
+            },
+            "recipe": {
+              "sha256": "0303030303030303030303030303030303030303030303030303030303030303",
+              "schema_id": "rx.test.v1",
+              "size_bytes": "1"
+            },
+            "site_config_digest": "0404040404040404040404040404040404040404040404040404040404040404",
+            "scopes": [
+              "zone/shared"
+            ],
+            "hosts": [
+              "host/sim"
+            ],
+            "executor": "executor",
+            "maximum_budget": "10",
+            "permit_ttl_ns": "100000000",
+            "start_timeout_ns": "1000000000",
+            "start_conditions": [
+              {
+                "op": "EQ",
+                "fact": "ready",
+                "schema": "boolean/v1",
+                "unit": "unitless",
+                "expected": {
+                  "boolean": true
+                }
+              }
+            ],
+            "steps": [
+              {
+                "id": "step/place",
+                "host": "host/sim",
+                "intent": {
+                  "kind": "ENSURE_STATE",
+                  "target": "device/sim",
+                  "profile_digest": "0808080808080808080808080808080808080808080808080808080808080808",
+                  "site_config_digest": "0404040404040404040404040404040404040404040404040404040404040404",
+                  "calibration_digests": [],
+                  "resource_set": [
+                    "controller/sim"
+                  ],
+                  "execution_timeout_ms": "500",
+                  "prepare_validity_ms": "100",
+                  "completion_rule": "sim/closed",
+                  "cancel_rule": "sim/stop",
+                  "body": {
+                    "predicate": {
+                      "predicate_id": "closed",
+                      "target": {
+                        "boolean": true
+                      },
+                      "settle_ms": "0"
+                    }
+                  }
+                },
+                "predecessors": [],
+                "conditions": [
+                  {
+                    "op": "EQ",
+                    "fact": "ready",
+                    "schema": "boolean/v1",
+                    "unit": "unitless",
+                    "expected": {
+                      "boolean": true
+                    }
+                  }
+                ],
+                "completion": {
+                  "kind": "UNOBSERVABLE"
+                },
+                "condition_ids": [
+                  "ready"
+                ],
+                "condition_revision": "1",
+                "handover_max_age_ns": "1000000000"
+              }
+            ],
+            "maintained_conditions": [],
+            "fact_specs": [
+              {
+                "id": "ready",
+                "host": "host/sim",
+                "schema": "boolean/v1",
+                "unit": "unitless",
+                "maximum_age_ns": "1000000000",
+                "maximum_uncertainty_ns": "0"
+              }
+            ]
+          },
+          "after": {
+            "process": {
+              "schema": "rx.resolved-process.v1",
+              "package_digest": "7676c1633103057a6810bd4365c046d8795728b50af050f1afb96f91288167df",
+              "source_digest": "2eec25112c3f601e9bee2d3f8aa0b6cb4835bad2acb2f779882b9f58b0368121",
+              "process": "python-composition",
+              "root": {
+                "id": "node/82b63da6d0865cd766ce48c105ecb164ca2ca09a73c1e90ed0d6a325e4f87211",
+                "source": {
+                  "flow": "main",
+                  "node": "sequence",
+                  "instantiation": []
+                },
+                "body": {
+                  "kind": "SEQUENCE",
+                  "children": [
+                    {
+                      "id": "node/792ebc86078331458ad1b4979952a756cd6c45e666f1a981650f57dc795f9b38",
+                      "source": {
+                        "flow": "main",
+                        "node": "skill/1",
+                        "instantiation": []
+                      },
+                      "body": {
+                        "kind": "OPERATION",
+                        "binding": "skill/1"
+                      }
+                    }
+                  ]
+                }
+              },
+              "bindings": {
+                "skill/1": {
+                  "host": "host/sim",
+                  "intent": {
+                    "kind": "FINITE_ACTION",
+                    "target": "device/python-sdk",
+                    "profile_digest": "942cdf79dd972d0179855b1a1b616be3de03c14f4458e166d506315a34fc434b",
+                    "site_config_digest": "0404040404040404040404040404040404040404040404040404040404040404",
+                    "calibration_digests": [],
+                    "resource_set": [
+                      "controller/sim"
+                    ],
+                    "execution_timeout_ms": "2000",
+                    "prepare_validity_ms": "1000",
+                    "completion_rule": "rx.python.returned.v1",
+                    "cancel_rule": "python/unknown",
+                    "body": {
+                      "program": {
+                        "program": {
+                          "sha256": "90e00c307d2a7b21bf2a37fd2b1ddca4f780562ece534d899158d99d1c10ca5c",
+                          "schema_id": "rx.python-environment.v1",
+                          "size_bytes": "166508"
+                        },
+                        "parameter_set": {
+                          "sha256": "36060134d807a85bd4de45d03754fc36d6f73b2349587345f0f71b5548caeaee",
+                          "schema_id": "rx.python-input.v1",
+                          "size_bytes": "11"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "conditions": {}
+            },
+            "id": "cell/a",
+            "environment": "SIMULATION",
+            "definition": {
+              "sha256": "0101010101010101010101010101010101010101010101010101010101010101",
+              "schema_id": "rx.test.v1",
+              "size_bytes": "1"
+            },
+            "envelope": {
+              "sha256": "0202020202020202020202020202020202020202020202020202020202020202",
+              "schema_id": "rx.test.v1",
+              "size_bytes": "1"
+            },
+            "recipe": {
+              "sha256": "180aec06d60190c04e1bb625626e0375b55bc39b3eace28a44875ec8a815080c",
+              "schema_id": "rx.resolved-process.v1",
+              "size_bytes": "1409"
+            },
+            "site_config_digest": "0404040404040404040404040404040404040404040404040404040404040404",
+            "scopes": [
+              "zone/shared"
+            ],
+            "hosts": [
+              "host/sim"
+            ],
+            "executor": "executor",
+            "maximum_budget": "10",
+            "permit_ttl_ns": "100000000",
+            "start_timeout_ns": "1000000000",
+            "start_conditions": [
+              {
+                "op": "EQ",
+                "fact": "ready",
+                "schema": "boolean/v1",
+                "unit": "unitless",
+                "expected": {
+                  "boolean": true
+                }
+              }
+            ],
+            "steps": [
+              {
+                "id": "node/792ebc86078331458ad1b4979952a756cd6c45e666f1a981650f57dc795f9b38",
+                "host": "host/sim",
+                "intent": {
+                  "kind": "FINITE_ACTION",
+                  "target": "device/python-sdk",
+                  "profile_digest": "942cdf79dd972d0179855b1a1b616be3de03c14f4458e166d506315a34fc434b",
+                  "site_config_digest": "0404040404040404040404040404040404040404040404040404040404040404",
+                  "calibration_digests": [],
+                  "resource_set": [
+                    "controller/sim"
+                  ],
+                  "execution_timeout_ms": "2000",
+                  "prepare_validity_ms": "1000",
+                  "completion_rule": "rx.python.returned.v1",
+                  "cancel_rule": "python/unknown",
+                  "body": {
+                    "program": {
+                      "program": {
+                        "sha256": "90e00c307d2a7b21bf2a37fd2b1ddca4f780562ece534d899158d99d1c10ca5c",
+                        "schema_id": "rx.python-environment.v1",
+                        "size_bytes": "166508"
+                      },
+                      "parameter_set": {
+                        "sha256": "36060134d807a85bd4de45d03754fc36d6f73b2349587345f0f71b5548caeaee",
+                        "schema_id": "rx.python-input.v1",
+                        "size_bytes": "11"
+                      }
+                    }
+                  }
+                },
+                "predecessors": [],
+                "conditions": [
+                  {
+                    "op": "EQ",
+                    "fact": "ready",
+                    "schema": "boolean/v1",
+                    "unit": "unitless",
+                    "expected": {
+                      "boolean": true
+                    }
+                  }
+                ],
+                "completion": {
+                  "kind": "NATIVE_OUTCOMES",
+                  "table": {
+                    "schema": "rx.native-outcome-table.v1",
+                    "profile_digest": "942cdf79dd972d0179855b1a1b616be3de03c14f4458e166d506315a34fc434b",
+                    "completion_rule": "rx.python.returned.v1",
+                    "cases": [
+                      {
+                        "status_schema": "rx.python.returned.v1",
+                        "statuses": [
+                          "0"
+                        ],
+                        "conclusion": "SUCCEEDED"
+                      }
+                    ]
+                  },
+                  "postconditions": []
+                },
+                "condition_ids": [
+                  "sim/ready"
+                ],
+                "condition_revision": "1",
+                "handover_max_age_ns": "1000000000"
+              }
+            ],
+            "maintained_conditions": [],
+            "fact_specs": [
+              {
+                "id": "ready",
+                "host": "host/sim",
+                "schema": "boolean/v1",
+                "unit": "unitless",
+                "maximum_age_ns": "1000000000",
+                "maximum_uncertainty_ns": "0"
+              }
+            ]
+          },
+          "blockers": [
+            {
+              "kind": "REQUALIFICATION_REQUIRED"
+            }
+          ],
+          "blocker_count": "1",
+          "blockers_truncated": false,
+          "applied": true,
+          "activation_authorized": false
+        },
+        "guard": {
+          "route": "/api/v1/process-change/configure-hosts",
+          "status": 409,
+          "body": {
+            "code": "CAPABILITY_MISSING",
+            "outcome_unknown": false
+          }
+        },
+        "status": "HOST_BINDING_CHANGE_REQUIRED",
+        "binding_intents": [
+          {
+            "intent": {
+              "request": "01a0ebf4-f403-75f8-9588-33ced6be079d",
+              "change": "f360a799-9cac-462e-80e3-9e77675094a5",
+              "host": "host/sim",
+              "cell": "cell/a",
+              "host_plan_digest": "fcb6a5bc3c510bd165bc9fb7fb145dad45eb353707822dfffafd4d213ae17b78",
+              "before_configuration": "d7cb82be01f0cd7778bde8571233c2ffb42ee068d72d50093e1bcce6f247d381",
+              "after_configuration": "5a985b652a1a01ab9b7c14bc3022f8d8a65df367f53e8bed03cb727acfad3168",
+              "before_cells": {
+                "cell/a": {
+                  "definition": "0101010101010101010101010101010101010101010101010101010101010101",
+                  "envelope": "0202020202020202020202020202020202020202020202020202020202020202",
+                  "environment": "SIMULATION"
+                }
+              },
+              "after_cells": {
+                "cell/a": {
+                  "definition": "0101010101010101010101010101010101010101010101010101010101010101",
+                  "envelope": "0202020202020202020202020202020202020202020202020202020202020202",
+                  "environment": "SIMULATION"
+                }
+              },
+              "runtime_boot": "01a0ebf4-e9ed-713e-9163-1cf4ab0dac77",
+              "created_at": {
+                "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+                "ticks_ns": "369458017126"
+              }
+            },
+            "phase": "BASELINE_RECORDED",
+            "baseline": {
+              "snapshot": {
+                "evidence_journal": "63615e2d-8668-4d2c-a8ab-11266836b726",
+                "installation_identity": "278e78b9fef27aa64dff70f75bf6f54b4296a4c770cae11cdaaeb5c3c434782e",
+                "schema": "rx.host-process-configuration-snapshot.v1",
+                "host": "host/sim",
+                "host_boot": "7b85271e-7c30-428b-a07c-c41819c87895",
+                "delivery_journal": "7412b3ed-28ab-4047-92b7-77be0a62878e",
+                "binding_digest": "805055bd8dd0f25b7130c85a9b751523f3f82ebe32a1ead9e9e5674f9670fadb",
+                "cells": [
+                  {
+                    "cell": "cell/a",
+                    "definition": "0101010101010101010101010101010101010101010101010101010101010101",
+                    "envelope": "0202020202020202020202020202020202020202020202020202020202020202",
+                    "environment": "SIMULATION",
+                    "epoch": "2",
+                    "scopes": {
+                      "zone/shared": "2"
+                    },
+                    "blocked": [
+                      "01a0ebf4-e9ed-713e-9163-1cf55d16a3f0"
+                    ],
+                    "applied": null
+                  }
+                ]
+              },
+              "observed_at": {
+                "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+                "ticks_ns": "369626570376"
+              },
+              "producer_session": "01a0ebf4-eb65-722d-8ab1-356cf6331bf8"
+            },
+            "observation": {
+              "schema": "rx.host-process-configuration-observation.v1",
+              "snapshot": {
+                "evidence_journal": "63615e2d-8668-4d2c-a8ab-11266836b726",
+                "installation_identity": "278e78b9fef27aa64dff70f75bf6f54b4296a4c770cae11cdaaeb5c3c434782e",
+                "schema": "rx.host-process-configuration-snapshot.v1",
+                "host": "host/sim",
+                "host_boot": "7b85271e-7c30-428b-a07c-c41819c87895",
+                "delivery_journal": "7412b3ed-28ab-4047-92b7-77be0a62878e",
+                "binding_digest": "805055bd8dd0f25b7130c85a9b751523f3f82ebe32a1ead9e9e5674f9670fadb",
+                "cells": [
+                  {
+                    "cell": "cell/a",
+                    "definition": "0101010101010101010101010101010101010101010101010101010101010101",
+                    "envelope": "0202020202020202020202020202020202020202020202020202020202020202",
+                    "environment": "SIMULATION",
+                    "epoch": "2",
+                    "scopes": {
+                      "zone/shared": "2"
+                    },
+                    "blocked": [
+                      "01a0ebf4-e9ed-713e-9163-1cf55d16a3f0"
+                    ],
+                    "applied": null
+                  }
+                ]
+              },
+              "receipt": null,
+              "context_matches_current_host": false,
+              "activation_authorized": false
+            },
+            "read_started": {
+              "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+              "ticks_ns": "369623951084"
+            },
+            "observed_session": "01a0ebf4-eb65-722d-8ab1-356cf6331bf8",
+            "issue": null,
+            "created_by": "reviewer",
+            "activation_authorized": false
+          }
+        ],
+        "same_intents_on_retry": true
+      }
+    }
+  },
+  "device_review_image": "sha256:b59b19f4ef96847821e2beca970353fb41d22f912b494904f3788f4ed2b226bb",
+  "binding_host_image": "sha256:b59b19f4ef96847821e2beca970353fb41d22f912b494904f3788f4ed2b226bb",
+  "binding_host_ready": {
+    "admission_open": true,
+    "clock_id": "linux-boottime/1a2125d6-256f-4d1d-9ebd-bf9bf5a3f5a2",
+    "endpoint": "https://0.0.0.0:7444",
+    "host": "host/sim",
+    "host_boot": "7b85271e-7c30-428b-a07c-c41819c87895",
+    "installation": "7b50f152-53eb-4d58-a98c-20c7d16bdf53",
+    "instance": "88b99647-3fda-425d-891a-c4d89ff292b3",
+    "pending_evidence": null,
+    "phase": "SOFTWARE_READY_UNARMED",
+    "publication": "Connecting",
+    "qualification_or_arm_restored": false,
+    "schema": "rx.host-service-status.v1",
+    "stop": null
+  },
+  "stop_exit_code": 0,
+  "stop_seconds": 0.24589120806194842,
+  "host_unreachable_at_stop": false,
+  "limitations": [
+    "uncommissioned draft authority",
+    "no Host/controller launch",
+    "no physical shutdown qualification",
+    "config/data volumes and test certificates were disposable"
+  ]
+}

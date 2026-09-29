@@ -118,3 +118,7 @@ S3–S5를 준비하며 P에 재기동 Host를 다시 등록하는 경로가 없
 ## 진행: 재기동 Host 재수용과 교체 확인의 실제 시험
 
 P에 재기동 Host 재수용과 binding 전이 등록을 추가했고, 연결된 Host가 재기동해도 P가 종료되지 않도록 link를 고쳤다. 실제 이미지에서 Host 정지 → 같은 요청 ID로 commit → 서명 Python package backend로 재기동 → `METADATA_MATCHED` → 새 boot fence → 구성 전달·적용 거절 → 승인 없는 재기동 시 하강을 3회 연속 확인했다. [검증 기록](../references/host_binding_commit_live_2026-09-29/README.md). 구성 전달(S6)·적용(S7)과 P 재시작 인수는 남는다.
+
+## 진행: binding 교체의 구성 전달과 적용
+
+모든 계획 Host가 교체를 확인한 현재 세대일 때만 구성 전달·적용을 허용하도록 연결했고, 실제 이미지에서 요청 발급부터 APPLIED_UNQUALIFIED 적용까지 5회 연속 통과했다. [검증 기록](../references/host_binding_apply_live_2026-09-29/README.md). 자격 활성화와 적용된 Python 스킬의 실제 실행, P 재시작 인수는 남는다.

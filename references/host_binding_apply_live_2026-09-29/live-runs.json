@@ -1,0 +1,118 @@
+{
+  "commit-1": {
+    "status": "PASS",
+    "stop_exit_code": 0,
+    "stop_attention": [],
+    "first_match_boot": "1a7ee677-c966-42b0-89ed-b0ab77833a96",
+    "rematch_boot": "e5ae891f-9600-4a3e-8555-0a6801a4a58c",
+    "demoted_refresh": "CONTINUITY_UNPROVEN",
+    "demoted_configure": "CAPABILITY_MISSING",
+    "applied_state": "APPLIED_UNQUALIFIED",
+    "final_blockers": [
+      {
+        "kind": "REQUALIFICATION_REQUIRED"
+      }
+    ],
+    "activation_authorized": false,
+    "host_configuration_outcome": [
+      "APPLIED_UNQUALIFIED"
+    ]
+  },
+  "commit-2": {
+    "status": "PASS",
+    "stop_exit_code": 0,
+    "stop_attention": [],
+    "first_match_boot": "d46636d0-d764-42fc-8ea7-a7e0e451e742",
+    "rematch_boot": "32afcb6a-e816-4c3b-9f40-83558127aa52",
+    "demoted_refresh": "CONTINUITY_UNPROVEN",
+    "demoted_configure": "CAPABILITY_MISSING",
+    "applied_state": "APPLIED_UNQUALIFIED",
+    "final_blockers": [
+      {
+        "kind": "REQUALIFICATION_REQUIRED"
+      }
+    ],
+    "activation_authorized": false,
+    "host_configuration_outcome": [
+      "APPLIED_UNQUALIFIED"
+    ]
+  },
+  "commit-3": {
+    "status": "PASS",
+    "stop_exit_code": 0,
+    "stop_attention": [],
+    "first_match_boot": "142d05e2-6c77-4647-9f44-971449960afb",
+    "rematch_boot": "7daff8bd-4c6c-4f8e-a643-c0c1f95cbd95",
+    "demoted_refresh": "CONTINUITY_UNPROVEN",
+    "demoted_configure": "CAPABILITY_MISSING",
+    "applied_state": "APPLIED_UNQUALIFIED",
+    "final_blockers": [
+      {
+        "kind": "REQUALIFICATION_REQUIRED"
+      }
+    ],
+    "activation_authorized": false,
+    "host_configuration_outcome": [
+      "APPLIED_UNQUALIFIED"
+    ]
+  },
+  "commit-4": {
+    "status": "PASS",
+    "stop_exit_code": 0,
+    "stop_attention": [],
+    "first_match_boot": "7fa2d709-2144-489f-b734-0ca86e54bef4",
+    "rematch_boot": "eee50aaa-af1f-4ae2-a353-4236e20a6d5c",
+    "demoted_refresh": "CONTINUITY_UNPROVEN",
+    "demoted_configure": "CAPABILITY_MISSING",
+    "applied_state": "APPLIED_UNQUALIFIED",
+    "final_blockers": [
+      {
+        "kind": "REQUALIFICATION_REQUIRED"
+      }
+    ],
+    "activation_authorized": false,
+    "host_configuration_outcome": [
+      "APPLIED_UNQUALIFIED"
+    ]
+  },
+  "commit-5": {
+    "status": "PASS",
+    "stop_exit_code": 0,
+    "stop_attention": [],
+    "first_match_boot": "be4e8d87-580a-4d41-8623-0bead1ae276e",
+    "rematch_boot": "79380f39-9063-48a0-a7bf-6fa684d95794",
+    "demoted_refresh": "CONTINUITY_UNPROVEN",
+    "demoted_configure": "CAPABILITY_MISSING",
+    "applied_state": "APPLIED_UNQUALIFIED",
+    "final_blockers": [
+      {
+        "kind": "REQUALIFICATION_REQUIRED"
+      }
+    ],
+    "activation_authorized": false,
+    "host_configuration_outcome": [
+      "APPLIED_UNQUALIFIED"
+    ]
+  },
+  "connected": {
+    "status": "PASS",
+    "stop_exit_code": 0,
+    "stop_attention": []
+  },
+  "unreachable": {
+    "status": "PASS",
+    "stop_exit_code": 2,
+    "stop_attention": [
+      {
+        "cell": "cell/a",
+        "host": "host/sim",
+        "kind": "HOST_FENCE_UNCONFIRMED"
+      }
+    ]
+  },
+  "nohost": {
+    "status": "PASS",
+    "stop_exit_code": 0,
+    "stop_attention": []
+  }
+}

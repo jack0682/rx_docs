@@ -12,7 +12,7 @@
 | S3 Host 정지·commit | Host 운영자 | fence 확인 뒤 정상 정지, 같은 요청 ID로 commit, 제안 구성으로 재기동 | 실제 이미지 시험 통과 |
 | S4 교체 확인 | P worker | ReleaseManager의 binding 재수용 승인 → 새 boot가 변경 후 구성으로 link → 새 boot, 같은 두 저널, commit 요청/계획/구성/설치 identity 일치 → MetadataMatched | 실제 이미지 시험 통과 |
 | S5 준비 갱신 | ReleaseManager | 재기동 뒤 이전 fence 확인은 옛 boot의 것이므로 refresh로 새 세대에 다시 fence | 실제 이미지 시험 통과 |
-| S6 구성 전달 | P | 모든 계획 Host가 **CommitCurrent**, 확인이 현재 P runtime·현재 등록 세션의 것, 최종 재검증 | 미구현 (barrier 유지) |
+| S6 구성 전달 | P | 모든 계획 Host가 **CommitCurrent**, 확인이 현재 P runtime·현재 등록 세션의 것, 최종 재검증 | 실제 이미지 시험 통과 |
 | S7 적용 | ReleaseManager | 기존 적용 조건 + Host의 정확한 commit 대상 수신 확인 | 미구현 |
 
 ## Standing
@@ -83,3 +83,13 @@ S3–S5 실시간 시험을 준비하며 코드로 확인한 사실이다.
 2. 연결된 Host가 재기동하면 P 전체가 종료됐다. 새 producer 세션 때문에 link worker가 인증 거절을 받으면 service 실패로 처리됐다. 이제 producer 세션 교체를 구별해 오래된 worker만 내리고 재수용이 필요한 link 단계로 돌아간다(rx-platform cb45bb4). 다른 worker 실패는 여전히 runtime을 멈춘다.
 
 이후 S3–S5와 재기동 반례가 실제 이미지에서 통과했다([검증 기록](../references/host_binding_commit_live_2026-09-29/README.md)).
+
+## S6·S7 연결 (2026-09-29)
+
+구성 전달과 적용의 차단을 "binding 계획이 있으면 거절"에서 "모든 계획 Host가 CommitCurrent가 아니면 거절"로 바꿨다(rx-platform 8eae0f1). CommitCurrent에서는 `HOST_BINDING_CHANGE_REQUIRED`도 사라진다. 적용 결과는 기존과 같이 APPLIED_UNQUALIFIED이며 자격은 별도다.
+
+실패하거나 모순되는 읽기가 확인된 교체 기록을 BASELINE_RECORDED로 되돌리던 동작을 없앴다. 이유만 기록하고, standing은 transport 유실 외의 모순이면 확인을 철회한다. 이 되돌림 때문에 확인 뒤 재기동한 Host의 재수용이 간헐적으로 409로 실패했다(수정 전 3회 중 1회 관측). 재수용은 확인된 commit 세대도 교체 대상으로 받는다.
+
+실제 이미지에서 확인 → 재기동 하강(refresh `CONTINUITY_UNPROVEN`, configure `CAPABILITY_MISSING`) → 확인된 세대 재수용 → 재확인 → refresh·fence → configure-hosts(Host `APPLIED_UNQUALIFIED`) → apply(`APPLIED_UNQUALIFIED`, 셀 구성 = 변경 후 구성, 남은 blocker `REQUALIFICATION_REQUIRED`)를 5회 연속 통과했다. [검증 기록](../references/host_binding_apply_live_2026-09-29/README.md).
+
+남은 것: P 재시작 뒤 요청 인수(현재는 RUNTIME_CHANGED로 진행 불가), 자격 활성화와 Python 스킬 실행 연결, commit 전 교체 없는 재시작의 단독 시험.

@@ -15,6 +15,7 @@
 | 2026-09-29 | 실행 코드 패키지는 외부 프로세스 어댑터와 컴파일 플러그인 두 경로 | 권한·결과 불명 판정은 Host 게이트에 유지 |
 | 2026-09-29 | 호환성이 깨지는 계약 변경은 v1.1 revision | 문서 revision·영향 사례·해시 갱신을 코드보다 먼저 |
 | 2026-09-29 | 모든 작업은 `feature/*` → `develop` PR, `main`은 별도 릴리스 | 사전 연구의 "기존 rx_ws를 새 설계 기준에서 제외" 조항은 폐기 |
+| 2026-09-29 | 코어 헌장([43](43_core_charter.md))과 상주 프레임워크 개념 명세([44](44_resident_framework_concept.md)) 채택. OD01–OD06 확정 | OD07(첫 지원 범위)과 OD08(구성요소 등록 소유자)은 미결 |
 
 Rust 코어와 platform/solutions 경계는 유지한다. 제조사별 driver·설치 정책의 변경과 작업 계약의 wire 의미 변경을 구별한다. 이번 문서 개정은 [공통 revision](contracts/v1.0/revision_2026-09-14.md), [셀 revision](cell_operations/v1.0/revision_2026-09-14.md)에 기록한다.
 

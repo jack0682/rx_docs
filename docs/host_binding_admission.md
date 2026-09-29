@@ -93,3 +93,11 @@ S3–S5 실시간 시험을 준비하며 코드로 확인한 사실이다.
 실제 이미지에서 확인 → 재기동 하강(refresh `CONTINUITY_UNPROVEN`, configure `CAPABILITY_MISSING`) → 확인된 세대 재수용 → 재확인 → refresh·fence → configure-hosts(Host `APPLIED_UNQUALIFIED`) → apply(`APPLIED_UNQUALIFIED`, 셀 구성 = 변경 후 구성, 남은 blocker `REQUALIFICATION_REQUIRED`)를 5회 연속 통과했다. [검증 기록](../references/host_binding_apply_live_2026-09-29/README.md).
 
 남은 것: P 재시작 뒤 요청 인수(현재는 RUNTIME_CHANGED로 진행 불가), 자격 활성화와 Python 스킬 실행 연결, commit 전 교체 없는 재시작의 단독 시험.
+
+## P 재시작 인수 (2026-09-29)
+
+명시적 인수 API를 구현했다(rx-platform 3be5f67). ReleaseManager가 staged·current 변경의 요청을 현재 runtime으로 가져오며, 요청 ID·기준·확인된 commit은 유지하고 이전 기록을 이력으로 남긴다. 확인 세션은 비워 새 runtime에서 다시 읽어야 한다. 원 요청과 clock이 다르면 거절한다.
+
+실제 이미지에서 fence 뒤 P를 재시작하면 요청이 `HOST_BINDING_BASELINE_REQUIRED`로 보고되고, refresh와 역할 없는 인수는 거절됐다. 그러나 인수 자체가 `QUALIFICATION_REQUIRED`로 거절됐다. 원인은 binding과 무관한 기존 동작이다. P가 시작할 때마다 package intake 서비스를 새 `generation`(무작위 ID)으로 등록하고, 장치 검토 context가 그 등록 전체를 비교하므로 모든 장치 검토와 그에 의존하는 공정 검토가 재시작 후 current가 아니다(`REVIEW_NO_LONGER_APPROVED`). 따라서 현재는 P 재시작 뒤 staged 변경을 이어갈 수 없다.
+
+결정 필요: (A) 정책·store 소유자·정책 파일이 같으면 generation을 재시작 사이에 유지해 검토가 살아남게 한다. (B) 현재대로 재시작은 재검토를 요구하고, binding 교체 도중이면 새 변경·새 요청과 Host 쪽 되돌림 절차를 설계한다.

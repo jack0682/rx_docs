@@ -109,16 +109,17 @@ ROS 코어는 통신을 연결하고, RX 코어는 작업 책임을 관리한다
 - 미승인 초안 `design_principles.md`는 포함하지 않는다.
 
 **0.4 연구 작업 이식**
-- 먼저 Host 재수용 비교표(`implementation/host_readmission_delta.md`)를 만든다. 기준은 python 브랜치의 재수용 설계다. 연구의 host-rejoin에서는 없는 의미만 흡수하고, 나머지는 폐기 이유와 함께 기록한다.
-- 그다음 주제별로 이식한다.
+- 먼저 [Host 재수용 비교표](implementation/host_readmission_delta.md)를 만든다(2026-09-29 완료). 기준은 develop의 재수용 설계다. 연구 host-rejoin에서는 없는 의미만 흡수하고, 나머지는 폐기 이유와 함께 기록한다.
+- 비교 결과에 따라, 이미 검증되고 독립적인 항목만 Phase 0.4에서 이식한다. 재수용 기준으로 다시 설계해야 하는 항목은 Phase 2로 옮긴다. 연구 원본은 로컬 bundle로 보존되어 있다.
 
-| 순서 | 브랜치 | 비고 |
+| 순서 | 브랜치 | 내용 |
 |---|---|---|
-| 1 | `feature/program-inputs-policy` | |
-| 2 | `feature/recovery-settlement` | |
-| 3 | `feature/observation-only-binding` | v1.1 revision이 선행 조건 |
-| 4 | `feature/readmission-rejoin-delta` | |
-| 5 | `feature/contract-readmes-recovery` | |
+| 1 | `feature/executor-replacement-suspend` | executor 교체 시 자격 batch 중지와 제한 소유권 기록(버그 수정) |
+| 2 | `feature/program-inputs-policy` | 정책 primitive만. admission·구성·자격 연결은 미구현으로 명시 |
+| 3 | `feature/recovery-settlement` | settlement v1. host-rejoin 참조 제거 |
+
+- 각 항목의 계약 README는 이식할 때 현재 코드 기준으로 새로 쓴다.
+- observation-only binding은 기본 계약을 바꾸지 않는다. 그래서 v1.1 revision 대상이 아니다. 선택 binding 계열의 revision으로 다룬다(비교표 §4).
 
 **0.5 문서 정합성**
 - Host binding 교체 문서의 S7 상태 표기를 바로잡는다.
@@ -129,7 +130,7 @@ ROS 코어는 통신을 연결하고, RX 코어는 작업 책임을 관리한다
 - 디스크에만 있는 변경이 0건이다.
 - 세 저장소 develop CI가 통과한다.
 - SDK 사본 검사가 통과한다.
-- Host 재수용 설계가 하나로 정리된다.
+- Host 재수용 설계가 하나로 정리된다(흡수·폐기 판정 기록 완료).
 
 ### Phase 1 — 코어 헌장과 경계
 
@@ -172,6 +173,9 @@ ROS 코어는 통신을 연결하고, RX 코어는 작업 책임을 관리한다
 | API 수명주기 | 미구현 RPC를 구현 / 삭제 / 예약으로 판정한다. deprecation 절차를 둔다 |
 | 관리 축 연결 | 등록·준비·업무 사용을 supervisor와 platform 사이에서 끝까지 연결한다 |
 | 호스트 실행 자원 | 실행 요구를 cgroup v2(CPU·메모리)와 장치 접근으로 적용하고 보고한다. 지원하지 않는 요구는 거절한다 |
+| Host 재시작 뒤 복귀 | 무효화 origin 기록을 둔다. **DeviceRestart block 해제 경로**를 만든다(현재는 해제 경로가 없어 재시작한 Host의 셀이 계속 막힘). 재기동 Host의 결과를 아는 작업을 정산한다(settlement v2). 모두 재수용 기록을 기준으로 한다([비교표](implementation/host_readmission_delta.md)) |
+| 관측 전용 참여 | observation-only binding(P와 Host). 제어 권한 없이 관측만 제공하는 구성요소를 참여시킨다 |
+| 시험 신뢰성 | 시간에 의존하는 불안정 시험을 결정적 대기로 바꾼다(예: platformd 기동 8초 타임아웃) |
 
 **품질 게이트**
 - 불변식 30개 모두 의미 시험으로 커버한다.

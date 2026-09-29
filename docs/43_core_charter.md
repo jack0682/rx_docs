@@ -55,7 +55,7 @@
 | 작업·담당·결과·미결 | Engine generic + cell 도메인 | 코어 |
 | 협업 자원·행동 권한 | Engine(fence·grant·permit), `rx-host` gate | 코어 |
 | 원본 관측·native 전달 사실 | `rx-host` journal, Engine evidence·observation | 코어 |
-| 재시도·업무 재개 | Engine host_recovery·readmission·settlement | 코어. DeviceRestart 해제 경로는 미구현 |
+| 재시도·업무 재개 | Engine host_recovery·readmission·settlement, device_invalidation | 코어. DeviceRestart는 재link 뒤 재자격으로 해제(rx-platform #48). 재기동 Host의 작업 정산(settlement v2)은 미구현 |
 | 변경 적용·절차 재개 | Engine process_change·apply·host_binding_transition | 코어(변경 통제) |
 | 최소 관리 기반 기동·복구 | `rx-platformd`·`rx-solutionsd` 기동, 서명 정책 | 코어. 제품 서명 custody 미확립 |
 

@@ -1,0 +1,15 @@
+{
+  "sources": {"rx-platform": "82cee399c5a99cde96cc62a404c257db286af30e", "rx-solutions": "1857da402aaf44cad940105596689c04454f45e1"},
+  "earlier_test_commit": "ee8ba05 (readmission refused while a Run executes with unresolved work; relink decision unit test)",
+  "unplanned_restart_runs": 5,
+  "unplanned_restart_passed": 5,
+  "tool_bug_before_fix": "3 of 4 earlier runs failed with BUSY: the harness took HOST_NOT_RESTARTED, recorded while the baselined boot was still running, as the restarted Host's read and requested the binding re-admission before the plain approval was consumed. The harness now waits for MISSING_COMMIT.",
+  "counterfactual": {"image": "same sources without the engine change", "result": "binding re-admission naming the restarted generation refused 409 CONTINUITY_UNPROVEN"},
+  "regression": {"binding_commit": "PASS"},
+  "workspace_tests": {"passed": 439, "failed": 0},
+  "clippy_workspace": "PASS",
+  "fmt": "PASS",
+  "repository_checks": "PASS",
+  "not_exercised": ["P restart adoption (decision pending)", "qualification activation and Python skill execution after apply (design constraint recorded)", "engine-level test of a binding re-admission (no engine fixture creates a change with a binding plan)"],
+  "physical_equipment": "NOT_OPERATED"
+}

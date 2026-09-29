@@ -1,0 +1,5 @@
+    Checking rx-application v0.1.0 (<workspace>/rx-platform/crates/rx-application)
+    Checking rx-protocol-adapter v0.1.0 (<workspace>/rx-platform/crates/rx-protocol-adapter)
+    Checking rx-runtime v0.1.0 (<workspace>/rx-platform/crates/rx-runtime)
+    Checking rx-api v0.1.0 (<workspace>/rx-platform/crates/rx-api)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 3.31s

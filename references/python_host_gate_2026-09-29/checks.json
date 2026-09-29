@@ -1,0 +1,19 @@
+{
+  "scope": "Actual Host gate + Python adapter + offline fixture SDK; not registered service deployment",
+  "host_tests": "PASS",
+  "host_all_features": "PASS",
+  "clippy": "PASS",
+  "python_runner_tests": 5,
+  "python_environment_tests": 2,
+  "physical_execution": "NOT_PERFORMED",
+  "original_log_hashes": {
+    "python-host-suite-final.log": {
+      "sha256": "0da5d3d2ff113f43f164547ea267e4b03fb53f693e3d1115d090ce9adb7d0865"
+    },
+    "python-host-clippy-final.log": {
+      "sha256": "e8e10a3e38411a4937083aa3e41cef920eda90a08ff96fecf96f787abb77d3f8"
+    }
+  },
+  "gate_log_source": "excerpt of python-host-suite-final.log",
+  "solutions_commit": "9049b4873cbeb7e7b00bfb9d217eccc8a1538ce9"
+}

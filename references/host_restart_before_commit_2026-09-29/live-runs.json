@@ -1,0 +1,73 @@
+{
+  "unplanned-1": {
+    "status": "PASS",
+    "stop_exit_code": 0,
+    "binding_readmission_names_restarted_boot": true,
+    "restarted_boot": "76280c67-b3a2-4f9d-b06f-a721ba837dc0",
+    "plain_approval_binding": null,
+    "issue_after_plain_readmission": "MISSING_COMMIT",
+    "refresh_before_commit": "CONTINUITY_UNPROVEN",
+    "binding_readmission_naming_baseline_boot": "CONTINUITY_UNPROVEN",
+    "binding_readmission_previous_boot": "76280c67-b3a2-4f9d-b06f-a721ba837dc0",
+    "first_match_boot": "65fcb579-9213-41c0-8ff4-1021e5996c44",
+    "applied_state": "APPLIED_UNQUALIFIED"
+  },
+  "unplanned-2": {
+    "status": "PASS",
+    "stop_exit_code": 0,
+    "binding_readmission_names_restarted_boot": true,
+    "restarted_boot": "b352e205-3f15-4661-b696-adcd6ca65f90",
+    "plain_approval_binding": null,
+    "issue_after_plain_readmission": "MISSING_COMMIT",
+    "refresh_before_commit": "CONTINUITY_UNPROVEN",
+    "binding_readmission_naming_baseline_boot": "CONTINUITY_UNPROVEN",
+    "binding_readmission_previous_boot": "b352e205-3f15-4661-b696-adcd6ca65f90",
+    "first_match_boot": "a4d3498f-d391-4e16-a688-0839a3b487f0",
+    "applied_state": "APPLIED_UNQUALIFIED"
+  },
+  "unplanned-3": {
+    "status": "PASS",
+    "stop_exit_code": 0,
+    "binding_readmission_names_restarted_boot": true,
+    "restarted_boot": "fd7b27aa-ffbb-41ce-a0de-ad4eca553db4",
+    "plain_approval_binding": null,
+    "issue_after_plain_readmission": "MISSING_COMMIT",
+    "refresh_before_commit": "CONTINUITY_UNPROVEN",
+    "binding_readmission_naming_baseline_boot": "CONTINUITY_UNPROVEN",
+    "binding_readmission_previous_boot": "fd7b27aa-ffbb-41ce-a0de-ad4eca553db4",
+    "first_match_boot": "6b1bbeb7-2b43-4441-85a3-5aef66463072",
+    "applied_state": "APPLIED_UNQUALIFIED"
+  },
+  "unplanned-4": {
+    "status": "PASS",
+    "stop_exit_code": 0,
+    "binding_readmission_names_restarted_boot": true,
+    "restarted_boot": "5a0901a9-928c-46e4-8914-6c4ad5316e5d",
+    "plain_approval_binding": null,
+    "issue_after_plain_readmission": "MISSING_COMMIT",
+    "refresh_before_commit": "CONTINUITY_UNPROVEN",
+    "binding_readmission_naming_baseline_boot": "CONTINUITY_UNPROVEN",
+    "binding_readmission_previous_boot": "5a0901a9-928c-46e4-8914-6c4ad5316e5d",
+    "first_match_boot": "e180c605-3797-49d4-ad04-bbe8278262aa",
+    "applied_state": "APPLIED_UNQUALIFIED"
+  },
+  "unplanned-5": {
+    "status": "PASS",
+    "stop_exit_code": 0,
+    "binding_readmission_names_restarted_boot": true,
+    "restarted_boot": "0f095f4e-9353-417a-9735-0b8fcfc1eed0",
+    "plain_approval_binding": null,
+    "issue_after_plain_readmission": "MISSING_COMMIT",
+    "refresh_before_commit": "CONTINUITY_UNPROVEN",
+    "binding_readmission_naming_baseline_boot": "CONTINUITY_UNPROVEN",
+    "binding_readmission_previous_boot": "0f095f4e-9353-417a-9735-0b8fcfc1eed0",
+    "first_match_boot": "6388052d-5d44-4b9e-98b5-bfb195304150",
+    "applied_state": "APPLIED_UNQUALIFIED"
+  },
+  "regression-binding-commit": {
+    "status": "PASS",
+    "stop_exit_code": 0,
+    "unplanned_restart": null,
+    "applied_state": "APPLIED_UNQUALIFIED"
+  }
+}

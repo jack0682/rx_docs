@@ -1,0 +1,16 @@
+{
+  "sources": {
+    "rx-platform": "5999f4b71b3bcc550f2d97834525412863e14987",
+    "rx-solutions": "1857da402aaf44cad940105596689c04454f45e1"
+  },
+  "binding_revision": 3,
+  "policy_tests": 4,
+  "live_intent_issuance": "PASS",
+  "release_manager_required": true,
+  "changed_request_key_rejected": true,
+  "domain_application_tests": "PASS",
+  "host_tests": "PASS",
+  "sdk_files_matched": 118,
+  "worker_collection": "NOT_WIRED",
+  "deployment_admission": "STILL_BLOCKED"
+}

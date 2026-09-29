@@ -1,0 +1,29 @@
+{
+  "sources": {
+    "rx-platform": "988628636f5b2c9260c8db405b3aa05304781e00",
+    "rx-solutions": "1857da402aaf44cad940105596689c04454f45e1"
+  },
+  "platform_image": "sha256:0e1ad5daea834db6e3f4a1b9614af78882b64ef885dd5e0c49bac1eedbe6d921",
+  "live_runs_with_host": 3,
+  "preparation_with_current_baseline": "PASS",
+  "host_fence_acknowledged": "PASS",
+  "configure_hosts": "REFUSED_409_CAPABILITY_MISSING",
+  "preparation_without_baseline": "REFUSED_409_CAPABILITY_MISSING",
+  "stop_outcomes_observed": {
+    "exit_0_no_attention": 1,
+    "exit_2_host_fence_unconfirmed": 2
+  },
+  "workspace_tests_failed": 0,
+  "clippy_workspace": "PASS",
+  "fmt": "PASS",
+  "repository_checks": "PASS",
+  "sdk_files_matched": 118,
+  "not_exercised": [
+    "Host stop/commit/restart against live P",
+    "refresh after replacement",
+    "configuration dispatch and apply",
+    "P restart adoption"
+  ],
+  "activation_authorized": false,
+  "physical_equipment": "NOT_OPERATED"
+}

@@ -1,0 +1,15 @@
+{
+  "sources": {
+    "rx-platform": "c3141b9e8c8e2c10aabaa8ee040d8d65f1051a14",
+    "rx-solutions": "0584c8ec0b159aa03d29e08f39dd586ea0c803e8"
+  },
+  "optional_binding_revision": 2,
+  "frozen_base_manifests": "UNCHANGED",
+  "sdk_files_matched": 118,
+  "domain_application_tests": "PASS",
+  "host_tests": "PASS",
+  "clippy": "PASS",
+  "api_tests": "COMPILED_NOT_EXECUTED",
+  "actual_mtls_configuration_read": "PASS",
+  "p_confirmation_policy": "NOT_IMPLEMENTED"
+}

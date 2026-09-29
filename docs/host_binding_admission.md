@@ -10,7 +10,7 @@
 | S1 기준 수집 | P worker | 등록된 현재 Host 세대의 bounded read, 교체 전 cohort·설치 identity·두 저널 | 구현 |
 | S2 준비·fence | ReleaseManager | 모든 계획 Host가 **BaselineCurrent**(기준이 현재 등록 세대의 것) 또는 **CommitCurrent** | 이번 구현 |
 | S3 Host 정지·commit | Host 운영자 | fence 확인 뒤 정상 정지, 같은 요청 ID로 commit, 제안 구성으로 재기동 | Host 구현, P 연동 시험 미완 |
-| S4 교체 확인 | P worker | 새 boot, 같은 두 저널, commit 요청/계획/구성/설치 identity 일치 → MetadataMatched | 정책 구현, 실시간 시험 미완 |
+| S4 교체 확인 | P worker | 새 boot, 같은 두 저널, commit 요청/계획/구성/설치 identity 일치 → MetadataMatched | **차단: 재기동 Host 재수용 경로 없음(아래)** |
 | S5 준비 갱신 | ReleaseManager | 재기동 뒤 이전 fence 확인은 옛 boot의 것이므로 refresh로 새 세대에 다시 fence | 기존 경로 재사용, 시험 미완 |
 | S6 구성 전달 | P | 모든 계획 Host가 **CommitCurrent**, 확인이 현재 P runtime·현재 등록 세션의 것, 최종 재검증 | 미구현 (barrier 유지) |
 | S7 적용 | ReleaseManager | 기존 적용 조건 + Host의 정확한 commit 대상 수신 확인 | 미구현 |
@@ -55,3 +55,17 @@ binding 계획이 있는 변경에는 `HOST_BINDING_CHANGE_REQUIRED`(적용 경�
 - commit 뒤 재기동 → MetadataMatched, CommitCurrent, refresh 허용, 구성 전달은 S6 전까지 거절.
 - commit 확인 뒤 Host 재시작 → CommitUnconfirmed로 하강.
 - P 재시작 → RuntimeChanged, 명시적 인수 전까지 진행 불가.
+
+## S4 차단 원인과 결정 (2026-09-29)
+
+S3–S5 실시간 시험을 준비하며 코드로 확인한 사실이다.
+
+- P는 재기동한 Host(새 boot)를 같은 셀에 다시 등록하는 경로가 없다. host link 준비(`prepare_host_link`)와 등록 저장(`engine/configuration.rs`)은 기존 등록과 boot·세션이 다르면 `CONTINUITY_UNPROVEN`으로 거절한다("Do not silently turn a restarted Host into a prepared one"). 명시적 Host recovery도 같은 boot의 P↔Host 통신 복구만 다룬다. 이는 [핵심 미결](implementation/critical_open_items.md) O04(명시적 재개·새 운전 등록)의 현재 형태다.
+- 재기동한 Host는 binding commit 뒤 변경 후 definition을 가지므로, 셀의 현재 구성과 같은 definition을 요구하는 등록 조건도 통과하지 못한다.
+- 교체 확인(`observe_host_binding_intent`)은 현재 등록 세션을 요구하므로, 등록이 없으면 새 boot를 읽을 수 없다. 설계 표의 S4 조건은 이 전제를 빠뜨렸다.
+
+사용자 결정: **전이 등록** 방향을 택했다. staged 변경의 변경 후 definition과 P가 발급한 요청과 일치하는 binding commit을 가진 Host만, 작업 권한 없이 등록한다. 기존 등록 규칙은 일반 경로에서 그대로 유지한다.
+
+조사 결과 이 결정은 단독으로 구현할 수 없고 O04의 일부를 요구한다. 전이 등록이 되려면 먼저 "새 boot Host를 명시적 승인과 저널 연속성 증거로 재수용하는" 경로가 있어야 하며, binding 전이는 그 경로에서 definition 조건만 staged 변경의 변경 후 값으로 바꾼 변형이다. 또 S5(새 boot fence)와 S6(구성 전달)가 등록을 요구하므로 전이 등록은 관측 전용일 수 없고 fence와 구성 수신까지는 허용하되 작업 전달은 막아야 한다.
+
+제안 순서: (1) 재기동 Host 재수용의 최소 규칙 정의 — ReleaseManager 승인, Host StopSeal과 delivery·evidence 저널 연속성, 이전 boot의 미결 작업 없음, 셀은 차단 유지 (2) 그 변형으로 binding 전이 등록 (3) S3–S5 실시간 시험.

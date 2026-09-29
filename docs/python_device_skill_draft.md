@@ -108,3 +108,9 @@ P의 Host 설정 worker가 등록된 Host 세션에 보이는 교체 요청을 �
 ## 진행: 기준을 잡은 Host 세대에만 준비·fence 허용
 
 binding 계획이 있는 변경의 준비를 일괄 거절하던 조건을 [Host binding 교체의 P 진행 조건](host_binding_admission.md)의 standing으로 바꿨다. 모든 계획 Host의 기준이 현재 등록된 세대의 것이거나 현재 세대의 교체가 확인된 경우에만 P가 셀을 fence한다. 변경 상세에는 `HOST_BINDING_CHANGE_REQUIRED`와 함께 Host별 `HOST_BINDING_BASELINE_REQUIRED` 또는 `HOST_BINDING_COMMIT_UNCONFIRMED`를 표시한다. 실제 이미지 시험 3회에서 준비와 Host의 fence 확인이 성립했고 구성 전달은 409로 거절됐다. 기준이 없으면 준비가 409로 거절된다. [검증 기록](../references/host_binding_admission_2026-09-29/README.md)을 참조한다. 구성 전달·적용, Host 교체 commit의 실시간 확인, P 재시작 인수는 아직 미구현이다.
+
+## 진행: 반복 관측 저장 결함 수정과 S4 차단 확인
+
+독립 검토에서 설정 worker가 매 단계 같은 binding 관측을 다시 저장하고 이벤트를 남겨, 교체를 기다리는 동안 요청당 시간당 약 7,200건씩 원장이 커지는 결함이 드러났다(rx-platform 75f01ce). 읽기 시작 시각만 다른 재관측은 저장하지 않도록 고쳤고(824e1fe), Host standing 판정을 순수 함수로 분리해 모든 standing과 하강을 단위 시험으로 고정했다. boot·세션 비교를 제거하는 변이는 시험을 실패시킨다. 관측 no-op 자체의 엔진 수준 시험은 아직 없고 실제 이미지 회귀 시험(연결 3회, 도달 불가 1회, Host 없음 1회)으로만 확인했다.
+
+S3–S5를 준비하며 P에 재기동 Host를 다시 등록하는 경로가 없음을 확인했다. 자세한 원인과 사용자 결정은 [P 진행 조건](host_binding_admission.md#s4-차단-원인과-결정-2026-09-29)에 적었다.

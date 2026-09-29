@@ -1,0 +1,2 @@
+2026-09-29T13:06:16.506798668Z {"cell":"cell/a","code":"Unauthenticated","event":"rx.host-connection-error.v1","host":"host/sim","read_timing":null,"stage":"BOOTSTRAP"}
+2026-09-29T13:06:16.822741710Z {"cell":"cell/a","code":"ContinuityUnproven","event":"rx.host-connection-error.v1","host":"host/sim","read_timing":{"configuration_age_at_error_ns":2248375,"configuration_roundtrip_ns":564292,"configuration_to_source_ns":35708,"source_age_at_error_ns":1648375,"source_capture_after_start_ns":221917},"stage":"PREPARE_LINK"}

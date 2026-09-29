@@ -149,7 +149,7 @@ ROS 코어는 통신을 연결하고, RX 코어는 작업 책임을 관리한다
 - 코어 모듈과 cell·production 모듈을 그룹으로 나눈다.
 - cell 도메인 port trait을 둔다.
 - Cell 구조를 저장 형식 그대로 분리한다.
-- 경계 검사를 CI에 넣는다.
+- 경계 검사를 CI에 넣는다. **구현(rx-platform #47)**: 모듈 52개를 core·cell·change_control 세 그룹에 배정하고, 현재의 역방향 참조 18곳(31회)을 줄이기만 할 수 있는 목록으로 기록한다. 텍스트 경로 분석이며 타입 해석은 하지 않는다.
 
 **종료 기준**
 - 헌장과 개념 문서가 승인된다.
@@ -162,7 +162,7 @@ ROS 코어는 통신을 연결하고, RX 코어는 작업 책임을 관리한다
 | 영역 | 내용 |
 |---|---|
 | 재시작 인수 | A안을 구현한다. "이번 boot에서 재확인"을 따로 두고, 준비되지 않은 상태를 승인 철회와 구분한다. **구현(rx-platform #42)**: Store 소유자 영속, 정책 불변 시 generation 재사용. `Unavailable` 구분은 남음 |
-| 재자격 연속 | 정책 등록은 매 boot 재구성으로 유지된다(변경 불필요). 남은 것은 2번 경로(cell_delivery 고정물에서 변경 후 구성 사전 계산)의 E2E — 타당성 조사 중 |
+| 재자격 연속 | 정책 등록은 매 boot 재구성으로 유지된다(변경 불필요). 2번 경로(cell_delivery 고정물에서 변경 후 구성 사전 계산) 타당성: 연쇄의 Id는 모두 클라이언트가 정하므로 미리 발급할 수 있다. 걸림돌은 장치 검토 Version digest에 들어간 P 기록 시각이었다. 이 시각이 plan digest → compile input → package → 변경 후 구성으로 전파됐다. **해소(#49)**: digest v2에서 기록 시각을 제외했다. 장치 검토는 릴리스 태그에 없어 호환 경로를 두지 않았다. 2번 경로는 설치 전에 계획한 binding만 다룬다. 설치 뒤에 정한 변경은 1번 경로(새 정책으로 재시작)나 새 설치가 필요하므로 두 경로는 보완 관계다. E2E는 진행 중 |
 | 재시작 연속성 행렬 | 재시작 때 잃는 항목을 영속 / 재확인 / 의도적 소멸로 분류하고 시험한다 |
 | 중단 없는 writer | 단일 writer 경로의 panic 가능 지점을 없앤다. 명령 단위 오류와 서비스 정지를 구분한다. **구현(#43)**: unwrap 제거, `clippy::unwrap_used` deny, 티켓 TTL 상수 |
 | 백업·복원 | 복원하면 store generation을 새로 발급해 Host가 롤백을 감지하게 한다. 모든 버전→최신 업그레이드를 시험한다. **구현(#46)**: `rx-platformd backup/restore`, `rx.store-restore.v1` 기록, 스키마 1–5 업그레이드 시험 |
@@ -172,7 +172,7 @@ ROS 코어는 통신을 연결하고, RX 코어는 작업 책임을 관리한다
 | 관리 축 연결 | 등록·준비·업무 사용을 supervisor와 platform 사이에서 끝까지 연결한다 |
 | 호스트 실행 자원 | 실행 요구를 cgroup v2(CPU·메모리)와 장치 접근으로 적용하고 보고한다. 지원하지 않는 요구는 거절한다 |
 | **P 재시작 뒤 유지된 Host의 운영 rebind** | P만 재시작하고 Host는 그대로이면 운영 등록이 옛 세션에 묶여 셀이 link를 되찾지 못했다([기록](../references/p_restart_adoption_2026-09-29/README.md)). **구현(#45)**: 재수용이 세션 만료된 같은 boot를 교체, grant 만료 대기, 소비 시 work 재검사, 이력 키에 세션. 실제 이미지 3회 연속 통과([기록](../references/p_restart_rebind_2026-09-29/README.md)) |
-| Host 재시작 뒤 복귀 | 무효화 origin 기록을 둔다. **DeviceRestart block 해제 경로**를 만든다(현재는 해제 경로가 없어 재시작한 Host의 셀이 계속 막힘). 재기동 Host의 결과를 아는 작업을 정산한다(settlement v2). 모두 재수용 기록을 기준으로 한다([비교표](implementation/host_readmission_delta.md)) |
+| Host 재시작 뒤 복귀 | 무효화 origin 기록을 둔다. **DeviceRestart block 해제 경로**를 만든다. 재기동 Host의 결과를 아는 작업을 정산한다(settlement v2). 모두 재수용 기록을 기준으로 한다([비교표](implementation/host_readmission_delta.md)). **origin·해제 구현(#48)**: 재link(기록된 epoch 이후의 bound link) 뒤 재자격 선택으로만 해제. settlement v2는 남음 |
 | 관측 전용 참여 | observation-only binding(P와 Host). 제어 권한 없이 관측만 제공하는 구성요소를 참여시킨다 |
 | 시험 신뢰성 | 시간에 의존하는 불안정 시험을 결정적 대기로 바꾼다(예: platformd 기동 8초 타임아웃) |
 

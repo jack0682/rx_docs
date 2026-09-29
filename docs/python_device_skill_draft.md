@@ -122,3 +122,9 @@ P에 재기동 Host 재수용과 binding 전이 등록을 추가했고, 연결�
 ## 진행: binding 교체의 구성 전달과 적용
 
 모든 계획 Host가 교체를 확인한 현재 세대일 때만 구성 전달·적용을 허용하도록 연결했고, 실제 이미지에서 요청 발급부터 APPLIED_UNQUALIFIED 적용까지 5회 연속 통과했다. [검증 기록](../references/host_binding_apply_live_2026-09-29/README.md). 자격 활성화와 적용된 Python 스킬의 실제 실행, P 재시작 인수는 남는다.
+
+## 진행: commit 전 무계획 재시작과 재자격 연결 조사
+
+기준 수집 뒤 commit 전에 Host가 교체 없이 재시작하면 변경을 끝낼 수 없던 막다른 경로를 고쳤다(rx-platform 82cee39). 실제 이미지에서 재시작 → 일반 재수용 → commit 미확인 → 재시작 세대로 binding 재수용 → 적용을 5회 연속 확인했고, 수정 전 이미지는 거절한다. [검증 기록](../references/host_restart_before_commit_2026-09-29/README.md).
+
+적용된 binding 변경을 재자격으로 활성화하는 경로는 현재 설계로 바로 이을 수 없다. 재자격 정책은 P 시작 때 고정되고 변경 후 구성의 정확한 digest와 모든 의존 artifact 바이트를 요구하는데, binding 변경의 구성은 실행 중에 만들어진다. 선택지와 권장안은 [P 진행 조건](host_binding_admission.md#재자격-연결의-설계-제약-2026-09-29-결정-필요)에 적었다. P 재시작 인수의 결정(A/B)도 남아 있다.

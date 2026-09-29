@@ -51,7 +51,7 @@ binding 계획이 있는 변경에는 `HOST_BINDING_CHANGE_REQUIRED`(적용 경�
 
 - 기준 없이 준비 요청 → 거절, 준비 없음. (구현 시험)
 - 기준 수집 뒤 준비 → fence가 현재 Host에 도달하고 확인됨, `HOST_BINDING_COMMIT_UNCONFIRMED` 표시, 구성 전달 거절. (구현 시험)
-- 기준 수집 뒤 Host를 교체 없이 재시작 → CommitUnconfirmed, 준비 refresh 거절.
+- 기준 수집 뒤 Host를 교체 없이 재시작 → CommitUnconfirmed, 준비 refresh 거절. 재수용 뒤에도 commit을 확인해야 진행한다(아래 2026-09-29 절, 실제 이미지 시험).
 - commit 뒤 재기동 → MetadataMatched, CommitCurrent, refresh 허용, 구성 전달은 S6 전까지 거절.
 - commit 확인 뒤 Host 재시작 → CommitUnconfirmed로 하강.
 - P 재시작 → RuntimeChanged, 명시적 인수 전까지 진행 불가.
@@ -101,3 +101,29 @@ S3–S5 실시간 시험을 준비하며 코드로 확인한 사실이다.
 실제 이미지에서 fence 뒤 P를 재시작하면 요청이 `HOST_BINDING_BASELINE_REQUIRED`로 보고되고, refresh와 역할 없는 인수는 거절됐다. 그러나 인수 자체가 `QUALIFICATION_REQUIRED`로 거절됐다. 원인은 binding과 무관한 기존 동작이다. P가 시작할 때마다 package intake 서비스를 새 `generation`(무작위 ID)으로 등록하고, 장치 검토 context가 그 등록 전체를 비교하므로 모든 장치 검토와 그에 의존하는 공정 검토가 재시작 후 current가 아니다(`REVIEW_NO_LONGER_APPROVED`). 따라서 현재는 P 재시작 뒤 staged 변경을 이어갈 수 없다.
 
 결정 필요: (A) 정책·store 소유자·정책 파일이 같으면 generation을 재시작 사이에 유지해 검토가 살아남게 한다. (B) 현재대로 재시작은 재검토를 요구하고, binding 교체 도중이면 새 변경·새 요청과 Host 쪽 되돌림 절차를 설계한다.
+
+## 커밋 전 무계획 재시작 (2026-09-29)
+
+코드 검토로 막다른 경로를 찾았다. 기준 수집·fence 뒤, Host binding commit 전에 Host가 교체 없이 재시작하면(정전·업데이트 등) 다음이 겹쳐 변경을 끝낼 수 없었다.
+
+- 새 boot는 일반 재수용으로 등록할 수 있고, 요청은 `MISSING_COMMIT`으로 읽혀 CommitUnconfirmed가 된다. refresh는 거절된다(의도된 동작).
+- 이후 운영자가 Host 쪽 commit을 해도, binding 재수용은 교체될 세대가 **기준 boot**여야 했다. 그런데 승인은 현재 등록 세대의 boot를 명명해야 하므로 두 조건을 동시에 만족할 수 없었다. 변경을 버리고 새로 staged할 수밖에 없었다.
+
+수정(rx-platform 82cee39): commit 확인 전(BASELINE_RECORDED)에는 교체될 세대가 기준과 같은 delivery·evidence 저널을 가진 현재 등록 세대면 된다. boot 일치는 확인된 commit 세대(METADATA_MATCHED)에만 요구한다. 근거: 중간 세대는 이미 별도 재수용(ReleaseManager 승인, 두 저널 연속성)을 거쳤고, commit 확인은 여전히 commit 기록의 이전 installation identity가 기준과 같을 것을 요구하므로 중간에 다른 교체가 끼었다면 `INSTALLATION_CHANGED`로 거절된다(코드로 확인, 시험하지 않음).
+
+실제 이미지 `--host-restart-before-commit`: 재시작 → 일반 재수용(binding 없음) → `MISSING_COMMIT`, 기준 유지 → refresh `CONTINUITY_UNPROVEN` → 기준 boot를 명명한 binding 재수용 409 → 재시작 세대를 명명한 binding 재수용 → Host commit → `METADATA_MATCHED` → S5–S7 → `APPLIED_UNQUALIFIED`. 5회 연속 통과, 수정 전 코드의 이미지는 마지막 재수용을 `CONTINUITY_UNPROVEN`으로 거절([검증 기록](../references/host_restart_before_commit_2026-09-29/README.md)).
+
+## 재자격 연결의 설계 제약 (2026-09-29, 결정 필요)
+
+적용 뒤 기존 재자격 경로(`POST /api/v1/qualification-reviews` → 6영역 보고 → 독립 승인 → Host 수락 → 활성화)로 이어가려 했으나, 현재 설계에서는 binding 변경에 바로 쓸 수 없음을 코드로 확인했다.
+
+- 재자격 정책(`rx.requalification-policy.v2`)은 P 시작 설정에 digest로 고정된다. 재자격 요청은 셀·**변경 후 구성의 정확한 digest**·envelope·definition·환경이 모두 같은 profile을 요구하고, 구성이 요구하는 모든 의존 artifact(definition·envelope·recipe·site·profile 등)의 참조를 선언해야 한다. 보고서는 그 바이트를 모두 담아야 한다.
+- binding 변경의 변경 후 구성은 실행 중에 만들어진다(장치 계획 ID, 검토 결과). 따라서 정책을 미리 고정할 수 없다. 기존 cell_delivery 흐름은 목표 구성을 오프라인에서 미리 계산하고 "불일치 시 새 설치, 운영 중 정책 교체 금지"를 규칙으로 둔다.
+- 현재 binding smoke 고정물의 definition·site·profile digest는 합성 값이라 바이트가 없다. 실행기(executor) 컨테이너도 없다.
+
+선택지:
+1. **P 재시작으로 정책 추가**: 적용 뒤 변경 후 구성에 맞는 정책을 작성해 설정에 고정하고 P를 재시작한다. 재시작은 설계상 허용되는 정책 교체 경로다(활성 자격은 이력으로 남고 재검토 요구). 단, 실제 바이트가 있는 고정물로 바꿔야 하고 P 재시작 인수 결정(A/B)과 얽힌다.
+2. **cell_delivery 고정물로 이동**: 실제 artifact·자격 정책·실행기·운전 UI가 있는 delivery 흐름에 Python binding 목표를 오프라인으로 미리 계산해 넣는다. 결정적 ID가 필요하고 가장 크지만 운영 규칙을 그대로 지킨다.
+3. **정책 모델 변경**: profile이 정확한 구성 digest 대신 셀·definition·검토된 변경 계열을 가리키게 한다. 자격 권한의 의미가 바뀌므로 가장 신중해야 한다.
+
+현재 권장은 2다. 정책 권한을 넓히지 않고 기존 운영 규칙을 지키기 때문이다.

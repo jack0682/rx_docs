@@ -167,7 +167,7 @@ ROS 코어는 통신을 연결하고, RX 코어는 작업 책임을 관리한다
 | 중단 없는 writer | 단일 writer 경로의 panic 가능 지점을 없앤다. 명령 단위 오류와 서비스 정지를 구분한다. **구현(#43)**: unwrap 제거, `clippy::unwrap_used` deny, 티켓 TTL 상수 |
 | 백업·복원 | 복원하면 store generation을 새로 발급해 Host가 롤백을 감지하게 한다. 모든 버전→최신 업그레이드를 시험한다. **구현(#46)**: `rx-platformd backup/restore`, `rx.store-restore.v1` 기록, 스키마 1–5 업그레이드 시험 |
 | 성장 상한 | 무한히 커지는 목록과 전체 prefix 조회를 상한·페이지 단위로 바꾼다 |
-| 이벤트 스트림 | journal 구독과 SSE로 규범을 이행한다 |
+| 이벤트 스트림 | 두 단계로 나눈다. (1) 운영자 BFF의 SSE(`/api/v1/events`): 제어 journal의 변경 알림으로 3초 폴링을 대체한다. 공개 계약이 아니다. (2) gRPC `Journal.Subscribe`/`GetSnapshot` 등록: rx-platform `CONTROL_JOURNAL.md`가 밝힌 공개 매핑(CellJournalRecord·SnapshotEntity, cursor·보존·gap·구독자 상한)이 끝나야 등록한다. 매핑 없이 등록하면 동결 계약 적합성을 주장하는 것이 되므로 하지 않는다 |
 | API 수명주기 | 미구현 RPC를 구현 / 삭제 / 예약으로 판정한다. deprecation 절차를 둔다 |
 | 관리 축 연결 | 등록·준비·업무 사용을 supervisor와 platform 사이에서 끝까지 연결한다 |
 | 호스트 실행 자원 | 실행 요구를 cgroup v2(CPU·메모리)와 장치 접근으로 적용하고 보고한다. 지원하지 않는 요구는 거절한다 |

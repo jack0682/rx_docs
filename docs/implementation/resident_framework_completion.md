@@ -48,8 +48,8 @@ RF14와 광역 규모 실증을 소프트웨어 모의 시험으로 닫지 않�
 
 ## R1 — 공통 구성요소 신원 값 타입
 
-2026-10-01. [Platform 변경](https://github.com/jack0682/rx-platform/commit/8a178fa)과
-[Solutions 변경](https://github.com/jack0682/rx-solutions/commit/88903c6)은 Supervisor에 있던
+2026-10-01. [Platform 변경](https://github.com/jack0682/rx-platform/commit/8a178fa4f412747383c1d63ff10a72a1acab34b6)과
+[Solutions 변경](https://github.com/jack0682/rx-solutions/commit/88903c6ccf26ef9ba8a53f48bcda98575e8b0ad2)은 Supervisor에 있던
 CatalogReference·Declaration·RegistrationState·Registration·VersionedRegistration·Binding을
 `rx-domain::component` 원본과 생성 SDK로 공유한다. 기존 Supervisor import 경로는 re-export로 유지한다.
 새 API, 등록 소유권 이행, 실행 권한 또는 persisted schema 변경은 아직 없다.

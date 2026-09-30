@@ -49,7 +49,7 @@
 
 | 개념 명세 책임(6절) | 현재 코드 | 상태 |
 |---|---|---|
-| 구성요소 등록과 지원 정보 | supervisor `registration.db`(F2·F7), platform 패키지 intake·검토 | 소유자 미확정 → OD08(44 §14.2) 권장: P 소유, supervisor는 실행 인스턴스 원장 |
+| 구성요소 등록과 지원 정보 | supervisor `registration.db`(F2·F7), platform 패키지 intake·검토 | [실행 모델 r1](45_resident_framework_execution_model.md): P는 등록·선언, supervisor는 실행 사실을 소유하는 구현 기준안. 등록 이행·통합은 미완 |
 | 프로세스 생성·종료·실행 소유 | `rx-solutionsd` supervisor | 코어(호스트 실행 관리) |
 | OS 정책 적용 상태 | supervisor F1·F8(RLIMIT_AS) | cgroup v2·장치 접근은 Phase 2 |
 | 작업·담당·결과·미결 | Engine generic + cell 도메인 | 코어 |

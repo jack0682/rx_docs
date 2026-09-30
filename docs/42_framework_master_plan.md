@@ -4,6 +4,10 @@
 
 이 문서는 순서와 기준을 정할 뿐이다. 구현 완료나 검증 결과를 선언하지 않는다. 현재 구현·검증 상태의 기준은 [초안 인계](implementation/draft_handoff.md)와 [핵심 미결](implementation/critical_open_items.md)이다. 실물 설비는 NOT_COMMISSIONED 상태를 유지한다.
 
+2026-10-01의 상주 프레임워크 초안 완성 작업은 [실행 모델](45_resident_framework_execution_model.md)과
+[완료 원장](implementation/resident_framework_completion.md)으로 추적한다. 아래 단계와 품질 게이트를 축소하지 않으며,
+모델 기준안·구현·실행 검증을 별도로 판정한다. 릴리스 버전 번호는 단계 완료 증거가 아니다.
+
 ## 1. 목적과 소개
 
 **목적 (사용자 확정)**
@@ -143,7 +147,7 @@ ROS 코어는 통신을 연결하고, RX 코어는 작업 책임을 관리한다
 **개념 명세 채택** ([44](44_resident_framework_concept.md), 2026-09-29)
 - 사전 연구의 상주 프레임워크 개념 명세(2026-09-23)를 이 저장소로 옮겼다.
 - OD01–OD06 확정. Cell은 협업·권한 구성이며 구성요소의 존재 조건이 아니다(OD03). 첫 전환 수준은 다음 작업부터다(OD04). OD07은 Phase 4·6에서 정한다.
-- 구성요소 등록의 소유자(OD08): 권장안은 P가 등록 신원·선언·standing을 소유하고 supervisor가 실행 인스턴스·자원 적용 사실을 소유해 보고하는 것이다. 사용자 확인 대기.
+- 구성요소 등록의 소유자(OD08): P가 등록 신원·선언·standing을 소유하고 supervisor가 실행 인스턴스·자원 적용 사실을 기록·보고하는 안을 2026-10-01 [실행 모델](45_resident_framework_execution_model.md)의 구현 기준안으로 구체화했다. 과거 사용자 확정으로 소급하지 않으며 이행·검증은 남아 있다.
 
 **Engine 내부 봉합선** (동작 변화 없이)
 - 코어 모듈과 cell·production 모듈을 그룹으로 나눈다.

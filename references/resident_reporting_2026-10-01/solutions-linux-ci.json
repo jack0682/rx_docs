@@ -1,0 +1,58 @@
+{
+  "headSha": "507f07eaf4421f4beaf4f0efbad4f7fba4f983a5",
+  "event": "pull_request",
+  "status": "completed",
+  "conclusion": "success",
+  "url": "https://github.com/jack0682/rx-solutions/actions/runs/36792596286",
+  "merge_commit": "12d6c1bbbe8f985a2361765ed78615ccd18b5cb2",
+  "rust_workspace": {
+    "passed": 458,
+    "failed": 0,
+    "ignored": 22
+  },
+  "jobs": [
+    {
+      "name": "Repository and GitFlow",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/jack0682/rx-solutions/actions/runs/36792596286/job/110148702104"
+    },
+    {
+      "name": "Operator app",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/jack0682/rx-solutions/actions/runs/36792596286/job/110148702415"
+    },
+    {
+      "name": "DYNAMIXEL helper boundary",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/jack0682/rx-solutions/actions/runs/36792596286/job/110148702422"
+    },
+    {
+      "name": "Installed skills (arm64)",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/jack0682/rx-solutions/actions/runs/36792596286/job/110148702466"
+    },
+    {
+      "name": "Installed skills (amd64)",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/jack0682/rx-solutions/actions/runs/36792596286/job/110148702470"
+    },
+    {
+      "name": "Rust",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/jack0682/rx-solutions/actions/runs/36792596286/job/110148702489"
+    },
+    {
+      "name": "CI",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/jack0682/rx-solutions/actions/runs/36792596286/job/110150223690"
+    }
+  ],
+  "scope": "Ubuntu CI; standalone mTLS test and workspace regressions. Separate real Supervisor/P cross-repository scene remains macOS evidence."
+}

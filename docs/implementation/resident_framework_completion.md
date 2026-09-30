@@ -18,7 +18,7 @@
 | ID | 완료 요구 | 완료를 입증할 근거 | 현재 상태 |
 |---|---|---|---|
 | RF01 | OD08·RR01–RR03과 공통 신원/수명/판단 모델 완결 | 상태·전이·소유자·부분 실패·양성 복귀를 CN/AC/MC와 대조한 검토 및 구현 대응 | 실행 모델 r1 작성, 검증 미완 |
-| RF02 | P 등록 소유와 S 실행 관리의 단일 연결 | 외부 작성자의 등록→실행→상실→조회·복귀, stable ID/이력 이행, 이중 writer 반례 | 공통 값 타입 R1 통합. P의 새 선언 저작 경로 R2가 Linux CI를 거쳐 develop에 통합됨; S 실행 연결·기존 신원 이행 미완 |
+| RF02 | P 등록 소유와 S 실행 관리의 단일 연결 | 외부 작성자의 등록→실행→상실→조회·복귀, stable ID/이력 이행, 이중 writer 반례 | R1 공통 타입·R2 P 선언·R3 범위 제한 실행 보고가 Linux CI를 거쳐 develop에 통합됨; 자동 보고·배정·기존 신원 이행 미완 |
 | RF03 | 논리·호스트·장비 자원 묶음 수락 | 실제 집행과 준비/commit/유실/거절/회수 행렬, 두 작업의 충돌·진행 가능성 | 요구 타입과 부분 OS 집행 존재; 전체 경로 미완 |
 | RF04 | 공통 의존 결합과 관측 전용 참여 | 매 사용 검증, provider 교체·stale·상실 전파, 제어권 없이 관측 등록 | 부분 모델 존재; 공통 연결 미완 |
 | RF05 | 작업·권한·결과·인계 계약 충족 | 양성 업무 완료 및 실제 반례, OI08/11/17 포함 책임별 검증 | 모의 경로 있음; 계약 공백 남음 |
@@ -119,8 +119,23 @@ Solutions `507f07eaf4421f4beaf4f0efbad4f7fba4f983a5`의 깨끗한 작업 트리�
 mTLS와 별도 빌드한 Supervisor의 소프트웨어 자식 실행·정상 종료 및 응답 유실 복구를 통과했다.
 소유자의 HTTP 범위 관리, 순서/출처 위조·권한 거절, 재시작 전후 양성/음성 대조와
 저장 실패 rollback도 검사했다. 전체 로컬 시험·추가 시험의 정확한 범위는 해당 기록에 둔다.
-현재는 feature PR 검토 단계이며 Linux CI와 develop 통합을 아직 완료로 표시하지 않는다.
+[Platform #63](https://github.com/jack0682/rx-platform/pull/63)과
+[Solutions #72](https://github.com/jack0682/rx-solutions/pull/72)의 Linux CI·DCO가 통과한 뒤
+문서 → Platform → Solutions 순서로 develop에 통합했다. Linux workspace 시험은 각각
+509 passed / 0 failed / 17 ignored, 458 passed / 0 failed / 22 ignored다.
+Solutions amd64·arm64 설치 번들 검사도 통과했다. 별도 S/P 실제 자식 통합 장면은 macOS
+근거이며 Linux에서 같은 장면을 실행했다고 주장하지 않는다.
+
+통합 커밋: Platform `ca6045a46303cfde5802e4e3fb4e4d0b8c6f2e4a`,
+Solutions `12d6c1bbbe8f985a2361765ed78615ccd18b5cb2`.
+통합 트리와 시험한 feature 트리의 제품 내용이 같고 SDK 124개 파일이 일치함을 확인했다.
 
 남은 의무: shipped daemon의 자동 보고와 영속 outbox, reporter/P 재시작 후 기존 instance
 정산, P의 실행 배정, 검증된 내용 수용, 기존 S ID/이력 이행과 이전 writer 차단, 등록 발견/조회.
 R3 통로만으로 RF02 또는 전체 상주 프레임워크 Goal을 완료하지 않는다.
+
+
+다음 구현에서는 현 `rx-solutionsd`의 50ms 로컬 관리 루프를 네트워크 송신 대기로 막지 않는
+보고 경로와 미전송 요청의 지속 보존을 먼저 연결한다. 동일 요청 복구, 송신 실패 중 정상 종료,
+큐 포화·저장 실패의 표시, 재시작 후 과거 관측과 현재 신원의 구분을 검증해야 한다.
+이후 실행 배정과 등록 writer 이행을 연결한다. 보고 성공을 그 두 기능의 대체로 취급하지 않는다.

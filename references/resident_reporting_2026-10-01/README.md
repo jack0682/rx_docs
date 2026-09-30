@@ -34,3 +34,18 @@ No automatic shipped-daemon report loop, durable reporting outbox, old-instance
 reconciliation, content verification, registration writer migration, P-directed
 launch, Linux cross-repository passage, long-running soak or physical qualification
 is established here. RF02 and the full resident framework remain open.
+
+## Linux CI and integration
+
+[Platform CI](platform-linux-ci.json) records 509 passed / 0 failed / 17 ignored;
+[Solutions CI](solutions-linux-ci.json) records 458 passed / 0 failed / 22 ignored.
+Both required PR CI aggregates and DCO passed. Solutions installed release jobs
+passed on Ubuntu amd64 and arm64. These are existing installed-skill regressions,
+not an automatically connected resident reporter daemon. The separate S/P child
+passage above remains macOS evidence.
+
+Documentation PR 74, Platform PR 63 and Solutions PR 72 were merged into develop
+through the repository merge helper, with verified OpenPGP merge signatures and
+matching author DCO. Exact integration commits and workflow links are in the JSON
+records. The integrated product trees match the exercised feature trees, and the
+124-file SDK comparison passed again after integration.

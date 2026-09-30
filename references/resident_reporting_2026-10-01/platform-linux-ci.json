@@ -1,0 +1,52 @@
+{
+  "headSha": "223c353bcee782e71afa10a5e8886c3c165b74b5",
+  "event": "pull_request",
+  "status": "completed",
+  "conclusion": "success",
+  "url": "https://github.com/jack0682/rx-platform/actions/runs/36792594537",
+  "merge_commit": "ca6045a46303cfde5802e4e3fb4e4d0b8c6f2e4a",
+  "rust_workspace": {
+    "passed": 509,
+    "failed": 0,
+    "ignored": 17
+  },
+  "jobs": [
+    {
+      "name": "Repository and GitFlow",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/jack0682/rx-platform/actions/runs/36792594537/job/110148697094"
+    },
+    {
+      "name": "Rust",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/jack0682/rx-platform/actions/runs/36792594537/job/110148697343"
+    },
+    {
+      "name": "Client libraries",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/jack0682/rx-platform/actions/runs/36792594537/job/110148697442"
+    },
+    {
+      "name": "GitHub configuration audit (manual)",
+      "status": "completed",
+      "conclusion": "skipped",
+      "url": "https://github.com/jack0682/rx-platform/actions/runs/36792594537/job/110148698225"
+    },
+    {
+      "name": "SDK freshness audit (manual)",
+      "status": "completed",
+      "conclusion": "skipped",
+      "url": "https://github.com/jack0682/rx-platform/actions/runs/36792594537/job/110148698337"
+    },
+    {
+      "name": "CI",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/jack0682/rx-platform/actions/runs/36792594537/job/110150077613"
+    }
+  ],
+  "scope": "Ubuntu CI; standalone mTLS test and workspace regressions. Separate real Supervisor/P cross-repository scene remains macOS evidence."
+}

@@ -1,0 +1,13 @@
+   Compiling rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/.build/release-platform/crates/rx-application)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 7.35s
+     Running tests/transactions.rs (/Users/ojaehong/RX_automation/rx_ws/.build/resident-contract-platform-target/debug/deps/transactions-ce5865c51613ce4c)
+
+running 5 tests
+test resident_reporting_tests::declaration_retirement_preserves_diagnostic_reports_but_never_marks_the_revision_current ... ok
+test resident_reporting_tests::report_storage_failure_rolls_back_and_current_role_is_checked_before_cached_reply ... ok
+test resident_reporting_tests::reporting_scope_rejects_wrong_role_certificate_source_and_revocation ... ok
+test resident_reporting_tests::reporter_replay_is_attributed_sequenced_and_not_work_authority ... ok
+test resident_reporting_tests::source_restart_and_p_restart_do_not_promote_historical_observations ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 290 filtered out; finished in 0.04s
+

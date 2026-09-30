@@ -113,10 +113,13 @@ P의 선언 ID와 기존 S 등록/run/instance ID를 모두 유지하고 명시�
 값 타입·binding을 P에서 정의해 S SDK로 내보낸다. 기존 S ExecutionState 경로는 re-export로
 유지한다. 기존 클라이언트나 daemon이 자동으로 보고하게 되는 변경은 아니다.
 
-구현·시험은 두 코드 저장소의 feature 변경으로 진행 중이다. 실제 mTLS, 소유자의 HTTP
-범위 관리, 원 요청 응답 복구, 순서/출처 위조·권한 거절, 재시작 전후 양성/음성 대조,
-별도 빌드한 Supervisor의 실제 소프트웨어 자식 실행·정상 종료를 검증한다.
-최종 커밋·명령 결과는 후속 검증 기록에 연결한다.
+[검증 기록](../../references/resident_reporting_2026-10-01/README.md):
+Platform `223c353bcee782e71afa10a5e8886c3c165b74b5`,
+Solutions `507f07eaf4421f4beaf4f0efbad4f7fba4f983a5`의 깨끗한 작업 트리에서 실제
+mTLS와 별도 빌드한 Supervisor의 소프트웨어 자식 실행·정상 종료 및 응답 유실 복구를 통과했다.
+소유자의 HTTP 범위 관리, 순서/출처 위조·권한 거절, 재시작 전후 양성/음성 대조와
+저장 실패 rollback도 검사했다. 전체 로컬 시험·추가 시험의 정확한 범위는 해당 기록에 둔다.
+현재는 feature PR 검토 단계이며 Linux CI와 develop 통합을 아직 완료로 표시하지 않는다.
 
 남은 의무: shipped daemon의 자동 보고와 영속 outbox, reporter/P 재시작 후 기존 instance
 정산, P의 실행 배정, 검증된 내용 수용, 기존 S ID/이력 이행과 이전 writer 차단, 등록 발견/조회.

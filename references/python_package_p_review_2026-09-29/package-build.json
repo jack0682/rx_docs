@@ -1,0 +1,6 @@
+{
+  "installation": "b8f8a34a-0d30-4b96-9ef3-756eb791ffd7",
+  "image": "sha256:f9eb7b83fae0d3e2a6cf9ddfb54983d3a3346c652e6a187a695ab79c7c2d9428",
+  "scope": "Actual Linux SDK environment and signed Python package; no runtime dispatch",
+  "private_key_mounted": false
+}

@@ -1,0 +1,16 @@
+{
+  "rx-platform": {
+    "base": "18288f7c991c895520cbdf2fc92c3341320d017d",
+    "modified_sources": {
+      "crates/rx-platformd/tests/support/delivery/finalize.rs": "d39eec9299a2b79d6912988051e67751f3205d83ef4625af3dfae1e852e4ca1b",
+      "crates/rx-platformd/tests/support/delivery/seed.rs": "f9d4647f2c6d85514883c8330ffff4ba1eaf561c0fb604201d5801c4190bbf85",
+      "tools/cell_delivery/installation.py": "8fa6ccd6d3ca4a233336f3487d71fe57bfa26b5aa6a326967a1fbf602117e90e",
+      "tools/cell_delivery/materials.py": "503fcfa0fabffdff973ecf383ba63733b191c4a93cc4f5d9617843f0e972b8ee",
+      "tools/test_runtime_skills.py": "8d1ddd9fe221b80d4e053c3be23c1fdc622bec4ceb5452713e5841741c1ddf86"
+    }
+  },
+  "rx-solutions": {
+    "base": "e312fda0707516207253bb4e1438384b0a021e69",
+    "modified_sources": {}
+  }
+}

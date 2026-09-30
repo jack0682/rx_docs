@@ -1,0 +1,17 @@
+{
+  "rx-platform": {
+    "base": "8c81b545f8aa071945d97868edf1cfb23747d4c0",
+    "modified_sources": {
+      "tools/test_runtime_skills.py": "76030b8d425659944746f10d606cb2e2abda28e10b410383e6c64e42f5b2c407"
+    }
+  },
+  "rx-solutions": {
+    "base": "3a9ac0f60f08863455a93995ef7eb022c2147287",
+    "modified_sources": {
+      "deployment/local-skills/RUNTIME.md": "cd2b7dba2bdc629707a6067578915ef9946a5ca7fabe03bfe70aeff30ee6d980",
+      "deployment/local-skills/runtime_client.py": "8d36d93f1673a83199b7af175e5b5bc0dfcb84015c13c08607f42cfb26f911f0",
+      "deployment/local-skills/rx": "19a8991b961ca3aca01369339854006327fed14fb1342bb91b9d478b5fec8762",
+      "tools/test_runtime_skill_client.py": "21f1195a67acf6c1833611fb014e25142e0146c4c1f78b263a9d3896d2210793"
+    }
+  }
+}

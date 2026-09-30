@@ -1,0 +1,602 @@
+{
+  "schema": "rx.platform-image-smoke.v1",
+  "status": "PASS",
+  "image_id": "sha256:7cbbd17e986e117c3259b74bfcae75ca56c06f008c8dca7ba6452f3703bfe3fd",
+  "os": "linux",
+  "architecture": "arm64",
+  "user": "10001:10001",
+  "read_only_root": true,
+  "cap_drop": [
+    "ALL"
+  ],
+  "https_health": {
+    "admission_open": true,
+    "mode": "TERMINAL_HTTPS",
+    "service": "rx-platform",
+    "start_requires_user_terminal_and_runtime_conditions": true,
+    "writer_available": true
+  },
+  "startup": {
+    "installation_id": "b8f8a34a-0d30-4b96-9ef3-756eb791ffd7",
+    "phase": "SOFTWARE_READY_UNCOMMISSIONED",
+    "physical_shutdown_assessed": false,
+    "qualification_authority": "NOT_CONNECTED",
+    "runtime_boot": "01a0e8ab-44c6-7398-8d31-a252fb476084",
+    "schema": "rx.platform-process-status.v1",
+    "stop": null
+  },
+  "stop": {
+    "installation_id": "b8f8a34a-0d30-4b96-9ef3-756eb791ffd7",
+    "phase": "PROCESS_STOPPED",
+    "physical_shutdown_assessed": false,
+    "qualification_authority": "NOT_CONNECTED",
+    "runtime_boot": "01a0e8ab-44c6-7398-8d31-a252fb476084",
+    "schema": "rx.platform-process-status.v1",
+    "stop": {
+      "attention": [],
+      "attention_count": "0",
+      "lifecycle": {
+        "phase": "STOP_COMMITTED",
+        "requested_at": {
+          "clock_id": "linux-boottime/77b29bdb-828f-4daf-8c4d-b1e2da9530fd",
+          "ticks_ns": "383557563344"
+        },
+        "runtime_boot": "01a0e8ab-44c6-7398-8d31-a252fb476084",
+        "stop_id": "01a0e8ab-47c6-762a-ab8f-7c72e2dde702",
+        "stopped_at": {
+          "clock_id": "linux-boottime/77b29bdb-828f-4daf-8c4d-b1e2da9530fd",
+          "ticks_ns": "383560051052"
+        }
+      },
+      "physical_shutdown_assessed": false,
+      "truncated": false
+    }
+  },
+  "package_intake": {
+    "status": "PASS",
+    "receipt": {
+      "device_catalog": {
+        "sha256": "3dd71056a6bf29e9f5313ea2fdda56c947374183c13f94be44bdf702b743bed6",
+        "schema_id": "rx.device-operation-catalog.v1",
+        "size_bytes": "2252"
+      },
+      "id": "84d6b3c9-3881-4a48-8aab-fc9453af8732",
+      "cell": "cell/a",
+      "title": "Image acceptance package",
+      "object": {
+        "manifest": "bdcd80facf7f4c3101c7deec22ccee2eaa23968be364df9cf45ffff289ff5e4a",
+        "signature": "81fd02b28675cafcbc25bd84d38ca26fb968c4e78a3fcc23dac0b237693bf8e0"
+      },
+      "configuration_digest": "cd9290731b18788a9e151e1b81d56364ae1e9ec1d40b11890fcc8db3aaa0b275",
+      "registration": {
+        "generation": "01a0e8ab-44cd-7572-8ee6-a178f4ca814c",
+        "store_owner": "62b152a2-d6c3-4e29-a1d8-a1b7787af3f4",
+        "policy_fingerprint": "6705ca24466721d9d0bd07925d19b3084bfed4783559efa5a588cd889e757945",
+        "policy_file_digest": "dfd881a1ab6f8b92b06d11240c46a8ed87e7a13c9c49ad1e63dac7a00f3c4124"
+      },
+      "manifest": {
+        "schema": "rx.package.v2",
+        "package": "test/python-sdk",
+        "version": "1.0.0",
+        "publisher": "test",
+        "contracts": {
+          "base": "d32519ffd33cc02f5e6f82406ad2fe253421527dc047b807c11beb11a8f7583c",
+          "cell": "5e75ab4d3d72d4b22082003dbec5e2ca54562cc4302d2e306b07ce64d215d71b",
+          "package_abi": "rx.package-abi.v2"
+        },
+        "targets": [
+          {
+            "os": "LINUX",
+            "architecture": "ARM64",
+            "ros_distribution": null
+          }
+        ],
+        "entry": {
+          "kind": "DEVICE_REFERENCE",
+          "family": "family.json",
+          "profiles": [
+            "profile.json"
+          ],
+          "adapter": "adapter.json"
+        },
+        "permissions": [
+          {
+            "kind": "ARTIFACT_READ"
+          },
+          {
+            "kind": "NATIVE_ENDPOINT",
+            "role": "python-sdk"
+          }
+        ],
+        "dependencies": [],
+        "assets": [
+          {
+            "sha256": "2f259df32d6fb4f28f674972a11970ecc93731652ba626de3aa78f7cdaf03e4e",
+            "schema_id": "rx.python-environment.v1",
+            "size_bytes": "166508"
+          },
+          {
+            "sha256": "36060134d807a85bd4de45d03754fc36d6f73b2349587345f0f71b5548caeaee",
+            "schema_id": "rx.python-input.v1",
+            "size_bytes": "11"
+          }
+        ],
+        "files": [
+          {
+            "path": "adapter.json",
+            "sha256": "de779fa03ebc98bdeb831df1d5470d0de44044812ad25946bb72aa7c9eb09e43",
+            "size_bytes": "161",
+            "executable": false
+          },
+          {
+            "path": "authoring/assembly.json",
+            "sha256": "c4f006eb4ef13680506fdd9b4886e46c624c7c0e531a8458ad1eb93b6ea2a8e4",
+            "size_bytes": "1082",
+            "executable": false
+          },
+          {
+            "path": "device-catalog.json",
+            "sha256": "3dd71056a6bf29e9f5313ea2fdda56c947374183c13f94be44bdf702b743bed6",
+            "size_bytes": "2252",
+            "executable": false
+          },
+          {
+            "path": "environment.json",
+            "sha256": "2f259df32d6fb4f28f674972a11970ecc93731652ba626de3aa78f7cdaf03e4e",
+            "size_bytes": "166508",
+            "executable": false
+          },
+          {
+            "path": "family.json",
+            "sha256": "a2adb3d18b7af1f6a9dae9ca8f8a468f86b451471ab3783830b43e4a010d7d01",
+            "size_bytes": "118",
+            "executable": false
+          },
+          {
+            "path": "operations.json",
+            "sha256": "22ad8b413c0475794a812e9f5da3f7f31cfaf059127c46660de77a20ac70fea3",
+            "size_bytes": "750",
+            "executable": false
+          },
+          {
+            "path": "outcomes.json",
+            "sha256": "b05fb20bb47e4b5894a85952a7579c5a1e27bd036d04e5191998faf4e7500dd2",
+            "size_bytes": "259",
+            "executable": false
+          },
+          {
+            "path": "profile.json",
+            "sha256": "4d7c52859203562acc0ae1032e3ba7b3c389664a94f14953c8d6b6bb25c4d0e0",
+            "size_bytes": "1026",
+            "executable": false
+          }
+        ]
+      },
+      "submitted_by": "admin",
+      "terminal": "panel/a",
+      "submitted_at": {
+        "clock_id": "linux-boottime/77b29bdb-828f-4daf-8c4d-b1e2da9530fd",
+        "ticks_ns": "382900163177"
+      },
+      "state": "AWAITING_REVIEW"
+    },
+    "view": {
+      "receipt": {
+        "device_catalog": {
+          "sha256": "3dd71056a6bf29e9f5313ea2fdda56c947374183c13f94be44bdf702b743bed6",
+          "schema_id": "rx.device-operation-catalog.v1",
+          "size_bytes": "2252"
+        },
+        "id": "84d6b3c9-3881-4a48-8aab-fc9453af8732",
+        "cell": "cell/a",
+        "title": "Image acceptance package",
+        "object": {
+          "manifest": "bdcd80facf7f4c3101c7deec22ccee2eaa23968be364df9cf45ffff289ff5e4a",
+          "signature": "81fd02b28675cafcbc25bd84d38ca26fb968c4e78a3fcc23dac0b237693bf8e0"
+        },
+        "configuration_digest": "cd9290731b18788a9e151e1b81d56364ae1e9ec1d40b11890fcc8db3aaa0b275",
+        "registration": {
+          "generation": "01a0e8ab-44cd-7572-8ee6-a178f4ca814c",
+          "store_owner": "62b152a2-d6c3-4e29-a1d8-a1b7787af3f4",
+          "policy_fingerprint": "6705ca24466721d9d0bd07925d19b3084bfed4783559efa5a588cd889e757945",
+          "policy_file_digest": "dfd881a1ab6f8b92b06d11240c46a8ed87e7a13c9c49ad1e63dac7a00f3c4124"
+        },
+        "manifest": {
+          "schema": "rx.package.v2",
+          "package": "test/python-sdk",
+          "version": "1.0.0",
+          "publisher": "test",
+          "contracts": {
+            "base": "d32519ffd33cc02f5e6f82406ad2fe253421527dc047b807c11beb11a8f7583c",
+            "cell": "5e75ab4d3d72d4b22082003dbec5e2ca54562cc4302d2e306b07ce64d215d71b",
+            "package_abi": "rx.package-abi.v2"
+          },
+          "targets": [
+            {
+              "os": "LINUX",
+              "architecture": "ARM64",
+              "ros_distribution": null
+            }
+          ],
+          "entry": {
+            "kind": "DEVICE_REFERENCE",
+            "family": "family.json",
+            "profiles": [
+              "profile.json"
+            ],
+            "adapter": "adapter.json"
+          },
+          "permissions": [
+            {
+              "kind": "ARTIFACT_READ"
+            },
+            {
+              "kind": "NATIVE_ENDPOINT",
+              "role": "python-sdk"
+            }
+          ],
+          "dependencies": [],
+          "assets": [
+            {
+              "sha256": "2f259df32d6fb4f28f674972a11970ecc93731652ba626de3aa78f7cdaf03e4e",
+              "schema_id": "rx.python-environment.v1",
+              "size_bytes": "166508"
+            },
+            {
+              "sha256": "36060134d807a85bd4de45d03754fc36d6f73b2349587345f0f71b5548caeaee",
+              "schema_id": "rx.python-input.v1",
+              "size_bytes": "11"
+            }
+          ],
+          "files": [
+            {
+              "path": "adapter.json",
+              "sha256": "de779fa03ebc98bdeb831df1d5470d0de44044812ad25946bb72aa7c9eb09e43",
+              "size_bytes": "161",
+              "executable": false
+            },
+            {
+              "path": "authoring/assembly.json",
+              "sha256": "c4f006eb4ef13680506fdd9b4886e46c624c7c0e531a8458ad1eb93b6ea2a8e4",
+              "size_bytes": "1082",
+              "executable": false
+            },
+            {
+              "path": "device-catalog.json",
+              "sha256": "3dd71056a6bf29e9f5313ea2fdda56c947374183c13f94be44bdf702b743bed6",
+              "size_bytes": "2252",
+              "executable": false
+            },
+            {
+              "path": "environment.json",
+              "sha256": "2f259df32d6fb4f28f674972a11970ecc93731652ba626de3aa78f7cdaf03e4e",
+              "size_bytes": "166508",
+              "executable": false
+            },
+            {
+              "path": "family.json",
+              "sha256": "a2adb3d18b7af1f6a9dae9ca8f8a468f86b451471ab3783830b43e4a010d7d01",
+              "size_bytes": "118",
+              "executable": false
+            },
+            {
+              "path": "operations.json",
+              "sha256": "22ad8b413c0475794a812e9f5da3f7f31cfaf059127c46660de77a20ac70fea3",
+              "size_bytes": "750",
+              "executable": false
+            },
+            {
+              "path": "outcomes.json",
+              "sha256": "b05fb20bb47e4b5894a85952a7579c5a1e27bd036d04e5191998faf4e7500dd2",
+              "size_bytes": "259",
+              "executable": false
+            },
+            {
+              "path": "profile.json",
+              "sha256": "4d7c52859203562acc0ae1032e3ba7b3c389664a94f14953c8d6b6bb25c4d0e0",
+              "size_bytes": "1026",
+              "executable": false
+            }
+          ]
+        },
+        "submitted_by": "admin",
+        "terminal": "panel/a",
+        "submitted_at": {
+          "clock_id": "linux-boottime/77b29bdb-828f-4daf-8c4d-b1e2da9530fd",
+          "ticks_ns": "382900163177"
+        },
+        "state": "AWAITING_REVIEW"
+      },
+      "review_context_current": true,
+      "content_reverification_required": true,
+      "activation_authorized": false
+    },
+    "repeat_returns_identical_receipt": true,
+    "no_run_or_qualification": true,
+    "policy_sha256": "dfd881a1ab6f8b92b06d11240c46a8ed87e7a13c9c49ad1e63dac7a00f3c4124",
+    "device_catalog": {
+      "cell": "cell/a",
+      "intake": "84d6b3c9-3881-4a48-8aab-fc9453af8732",
+      "object": {
+        "manifest": "bdcd80facf7f4c3101c7deec22ccee2eaa23968be364df9cf45ffff289ff5e4a",
+        "signature": "81fd02b28675cafcbc25bd84d38ca26fb968c4e78a3fcc23dac0b237693bf8e0"
+      },
+      "reference": {
+        "sha256": "3dd71056a6bf29e9f5313ea2fdda56c947374183c13f94be44bdf702b743bed6",
+        "schema_id": "rx.device-operation-catalog.v1",
+        "size_bytes": "2252"
+      },
+      "catalog": {
+        "schema": "rx.device-operation-catalog.v1",
+        "installation": "b8f8a34a-0d30-4b96-9ef3-756eb791ffd7",
+        "cell": "cell/a",
+        "target": "device/python-sdk",
+        "environment": "SIMULATION",
+        "profile_digest": "40b3a40b1672818e5c06f40722783243bbb98d87762af52ced3ff50a3eb3138c",
+        "condition_ids": [
+          "sim/ready"
+        ],
+        "operations": {
+          "skill/run": {
+            "kind": "FINITE_ACTION",
+            "target": "device/python-sdk",
+            "profile_digest": "40b3a40b1672818e5c06f40722783243bbb98d87762af52ced3ff50a3eb3138c",
+            "site_config_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+            "calibration_digests": [],
+            "resource_set": [
+              "resource/python-sdk"
+            ],
+            "execution_timeout_ms": "2000",
+            "prepare_validity_ms": "1000",
+            "completion_rule": "rx.python.returned.v1",
+            "cancel_rule": "python/unknown",
+            "body": {
+              "program": {
+                "program": {
+                  "sha256": "2f259df32d6fb4f28f674972a11970ecc93731652ba626de3aa78f7cdaf03e4e",
+                  "schema_id": "rx.python-environment.v1",
+                  "size_bytes": "166508"
+                },
+                "parameter_set": {
+                  "sha256": "36060134d807a85bd4de45d03754fc36d6f73b2349587345f0f71b5548caeaee",
+                  "schema_id": "rx.python-input.v1",
+                  "size_bytes": "11"
+                }
+              }
+            }
+          }
+        },
+        "outcomes": {
+          "schema": "rx.native-outcome-table.v1",
+          "profile_digest": "40b3a40b1672818e5c06f40722783243bbb98d87762af52ced3ff50a3eb3138c",
+          "completion_rule": "rx.python.returned.v1",
+          "cases": [
+            {
+              "status_schema": "rx.python.returned.v1",
+              "statuses": [
+                "0"
+              ],
+              "conclusion": "SUCCEEDED"
+            }
+          ]
+        },
+        "documents": {
+          "adapter": {
+            "path": "adapter.json",
+            "artifact": {
+              "sha256": "de779fa03ebc98bdeb831df1d5470d0de44044812ad25946bb72aa7c9eb09e43",
+              "schema_id": "rx.native-driver-reference.v1",
+              "size_bytes": "161"
+            }
+          },
+          "family": {
+            "path": "family.json",
+            "artifact": {
+              "sha256": "a2adb3d18b7af1f6a9dae9ca8f8a468f86b451471ab3783830b43e4a010d7d01",
+              "schema_id": "rx.device-family.v1",
+              "size_bytes": "118"
+            }
+          },
+          "operations": {
+            "path": "operations.json",
+            "artifact": {
+              "sha256": "22ad8b413c0475794a812e9f5da3f7f31cfaf059127c46660de77a20ac70fea3",
+              "schema_id": "rx.python-operations.v1",
+              "size_bytes": "750"
+            }
+          },
+          "outcomes": {
+            "path": "outcomes.json",
+            "artifact": {
+              "sha256": "b05fb20bb47e4b5894a85952a7579c5a1e27bd036d04e5191998faf4e7500dd2",
+              "schema_id": "rx.native-outcome-table.v1",
+              "size_bytes": "259"
+            }
+          },
+          "profile": {
+            "path": "profile.json",
+            "artifact": {
+              "sha256": "4d7c52859203562acc0ae1032e3ba7b3c389664a94f14953c8d6b6bb25c4d0e0",
+              "schema_id": "rx.python-skill-registration.v1",
+              "size_bytes": "1026"
+            }
+          }
+        }
+      },
+      "review_context_current": true,
+      "content_reverification_required": true,
+      "manufacturer_validation_required": true,
+      "activation_authorized": false
+    },
+    "device_review": {
+      "request": {
+        "schema": "rx.device-review-request.v1",
+        "id": "abd96f95-e620-4f1d-bdea-647304e8c056",
+        "intake": "84d6b3c9-3881-4a48-8aab-fc9453af8732",
+        "installation": "b8f8a34a-0d30-4b96-9ef3-756eb791ffd7",
+        "cell": "cell/a",
+        "package_manifest": "bdcd80facf7f4c3101c7deec22ccee2eaa23968be364df9cf45ffff289ff5e4a",
+        "package_signature": "81fd02b28675cafcbc25bd84d38ca26fb968c4e78a3fcc23dac0b237693bf8e0",
+        "catalog": {
+          "sha256": "3dd71056a6bf29e9f5313ea2fdda56c947374183c13f94be44bdf702b743bed6",
+          "schema_id": "rx.device-operation-catalog.v1",
+          "size_bytes": "2252"
+        },
+        "configuration_digest": "cd9290731b18788a9e151e1b81d56364ae1e9ec1d40b11890fcc8db3aaa0b275",
+        "package_policy_fingerprint": "6705ca24466721d9d0bd07925d19b3084bfed4783559efa5a588cd889e757945",
+        "package_policy_file_digest": "dfd881a1ab6f8b92b06d11240c46a8ed87e7a13c9c49ad1e63dac7a00f3c4124",
+        "verification_authority_digest": "5cefc53cd1e0e400c11b544f60d523d9b757774d37cbfde3f7c3f9d429b91e7e"
+      },
+      "report": {
+        "activation_authorized": false,
+        "physical_validation": "NOT_PERFORMED",
+        "report_digest": "c5e1652cb83b11a65bddeb468df53d72e7079414ec447e1576855eb612b07e02",
+        "software_checks_passed": true,
+        "status": "UNSIGNED_DEVICE_SOFTWARE_REPORT"
+      },
+      "version": {
+        "review": "abd96f95-e620-4f1d-bdea-647304e8c056",
+        "cell": "cell/a",
+        "revision": "1",
+        "review_digest": "202d08208556d8d0f73864d6d34c5e8c4dc0bd2e074a752d43c2d1b1f9aa2d1e",
+        "checker_digest": "d394c2012bb295f8d9c62aac8a32f9ae014703ff6c99214625323c60b5f5ffc2",
+        "report_digest": "c5e1652cb83b11a65bddeb468df53d72e7079414ec447e1576855eb612b07e02",
+        "report": {
+          "schema": "rx.device-verification-report.v1",
+          "request": {
+            "schema": "rx.device-review-request.v1",
+            "id": "abd96f95-e620-4f1d-bdea-647304e8c056",
+            "intake": "84d6b3c9-3881-4a48-8aab-fc9453af8732",
+            "installation": "b8f8a34a-0d30-4b96-9ef3-756eb791ffd7",
+            "cell": "cell/a",
+            "package_manifest": "bdcd80facf7f4c3101c7deec22ccee2eaa23968be364df9cf45ffff289ff5e4a",
+            "package_signature": "81fd02b28675cafcbc25bd84d38ca26fb968c4e78a3fcc23dac0b237693bf8e0",
+            "catalog": {
+              "sha256": "3dd71056a6bf29e9f5313ea2fdda56c947374183c13f94be44bdf702b743bed6",
+              "schema_id": "rx.device-operation-catalog.v1",
+              "size_bytes": "2252"
+            },
+            "configuration_digest": "cd9290731b18788a9e151e1b81d56364ae1e9ec1d40b11890fcc8db3aaa0b275",
+            "package_policy_fingerprint": "6705ca24466721d9d0bd07925d19b3084bfed4783559efa5a588cd889e757945",
+            "package_policy_file_digest": "dfd881a1ab6f8b92b06d11240c46a8ed87e7a13c9c49ad1e63dac7a00f3c4124",
+            "verification_authority_digest": "5cefc53cd1e0e400c11b544f60d523d9b757774d37cbfde3f7c3f9d429b91e7e"
+          },
+          "validator_digest": "fb9d18ed9afb5e17fad5b8e9d0298b84a037212789f607291982cff951e6d54f",
+          "validator_policy_file_digest": "dfd881a1ab6f8b92b06d11240c46a8ed87e7a13c9c49ad1e63dac7a00f3c4124",
+          "scope": "DEVICE_PACKAGE_SOFTWARE",
+          "checks": {
+            "CONTENT_SIGNATURE": "PASSED",
+            "DEVICE_SOURCE_CONSISTENCY": "PASSED",
+            "CATALOG_REQUEST_BINDING": "PASSED"
+          },
+          "issues": []
+        },
+        "signature": {
+          "key": "test/key",
+          "signature": "ea2624e2644558d5b8687419239c1148b8a194badaaef6f77a6b7f449c6e99a76f9d9242dbaccbcc5ff6184389970d2f301895933c5dacaf4060e4283fc7c70f"
+        },
+        "ready_for_software_approval": true,
+        "recorded_by": "admin",
+        "recorded_at": {
+          "clock_id": "linux-boottime/77b29bdb-828f-4daf-8c4d-b1e2da9530fd",
+          "ticks_ns": "383537035510"
+        }
+      },
+      "detail": {
+        "job": {
+          "request": {
+            "schema": "rx.device-review-request.v1",
+            "id": "abd96f95-e620-4f1d-bdea-647304e8c056",
+            "intake": "84d6b3c9-3881-4a48-8aab-fc9453af8732",
+            "installation": "b8f8a34a-0d30-4b96-9ef3-756eb791ffd7",
+            "cell": "cell/a",
+            "package_manifest": "bdcd80facf7f4c3101c7deec22ccee2eaa23968be364df9cf45ffff289ff5e4a",
+            "package_signature": "81fd02b28675cafcbc25bd84d38ca26fb968c4e78a3fcc23dac0b237693bf8e0",
+            "catalog": {
+              "sha256": "3dd71056a6bf29e9f5313ea2fdda56c947374183c13f94be44bdf702b743bed6",
+              "schema_id": "rx.device-operation-catalog.v1",
+              "size_bytes": "2252"
+            },
+            "configuration_digest": "cd9290731b18788a9e151e1b81d56364ae1e9ec1d40b11890fcc8db3aaa0b275",
+            "package_policy_fingerprint": "6705ca24466721d9d0bd07925d19b3084bfed4783559efa5a588cd889e757945",
+            "package_policy_file_digest": "dfd881a1ab6f8b92b06d11240c46a8ed87e7a13c9c49ad1e63dac7a00f3c4124",
+            "verification_authority_digest": "5cefc53cd1e0e400c11b544f60d523d9b757774d37cbfde3f7c3f9d429b91e7e"
+          },
+          "registration": {
+            "generation": "01a0e8ab-44cd-7572-8ee6-a178f4ca814c",
+            "store_owner": "62b152a2-d6c3-4e29-a1d8-a1b7787af3f4",
+            "policy_fingerprint": "6705ca24466721d9d0bd07925d19b3084bfed4783559efa5a588cd889e757945",
+            "policy_file_digest": "dfd881a1ab6f8b92b06d11240c46a8ed87e7a13c9c49ad1e63dac7a00f3c4124"
+          },
+          "submitted_by": "admin",
+          "requested_by": "admin",
+          "created_at": {
+            "clock_id": "linux-boottime/77b29bdb-828f-4daf-8c4d-b1e2da9530fd",
+            "ticks_ns": "382909375760"
+          }
+        },
+        "version": {
+          "review": "abd96f95-e620-4f1d-bdea-647304e8c056",
+          "cell": "cell/a",
+          "revision": "1",
+          "review_digest": "202d08208556d8d0f73864d6d34c5e8c4dc0bd2e074a752d43c2d1b1f9aa2d1e",
+          "checker_digest": "d394c2012bb295f8d9c62aac8a32f9ae014703ff6c99214625323c60b5f5ffc2",
+          "report_digest": "c5e1652cb83b11a65bddeb468df53d72e7079414ec447e1576855eb612b07e02",
+          "report": {
+            "schema": "rx.device-verification-report.v1",
+            "request": {
+              "schema": "rx.device-review-request.v1",
+              "id": "abd96f95-e620-4f1d-bdea-647304e8c056",
+              "intake": "84d6b3c9-3881-4a48-8aab-fc9453af8732",
+              "installation": "b8f8a34a-0d30-4b96-9ef3-756eb791ffd7",
+              "cell": "cell/a",
+              "package_manifest": "bdcd80facf7f4c3101c7deec22ccee2eaa23968be364df9cf45ffff289ff5e4a",
+              "package_signature": "81fd02b28675cafcbc25bd84d38ca26fb968c4e78a3fcc23dac0b237693bf8e0",
+              "catalog": {
+                "sha256": "3dd71056a6bf29e9f5313ea2fdda56c947374183c13f94be44bdf702b743bed6",
+                "schema_id": "rx.device-operation-catalog.v1",
+                "size_bytes": "2252"
+              },
+              "configuration_digest": "cd9290731b18788a9e151e1b81d56364ae1e9ec1d40b11890fcc8db3aaa0b275",
+              "package_policy_fingerprint": "6705ca24466721d9d0bd07925d19b3084bfed4783559efa5a588cd889e757945",
+              "package_policy_file_digest": "dfd881a1ab6f8b92b06d11240c46a8ed87e7a13c9c49ad1e63dac7a00f3c4124",
+              "verification_authority_digest": "5cefc53cd1e0e400c11b544f60d523d9b757774d37cbfde3f7c3f9d429b91e7e"
+            },
+            "validator_digest": "fb9d18ed9afb5e17fad5b8e9d0298b84a037212789f607291982cff951e6d54f",
+            "validator_policy_file_digest": "dfd881a1ab6f8b92b06d11240c46a8ed87e7a13c9c49ad1e63dac7a00f3c4124",
+            "scope": "DEVICE_PACKAGE_SOFTWARE",
+            "checks": {
+              "CONTENT_SIGNATURE": "PASSED",
+              "DEVICE_SOURCE_CONSISTENCY": "PASSED",
+              "CATALOG_REQUEST_BINDING": "PASSED"
+            },
+            "issues": []
+          },
+          "signature": {
+            "key": "test/key",
+            "signature": "ea2624e2644558d5b8687419239c1148b8a194badaaef6f77a6b7f449c6e99a76f9d9242dbaccbcc5ff6184389970d2f301895933c5dacaf4060e4283fc7c70f"
+          },
+          "ready_for_software_approval": true,
+          "recorded_by": "admin",
+          "recorded_at": {
+            "clock_id": "linux-boottime/77b29bdb-828f-4daf-8c4d-b1e2da9530fd",
+            "ticks_ns": "383537035510"
+          }
+        },
+        "decision": null,
+        "latest_report_revision": "1",
+        "is_latest": true,
+        "context_current": true,
+        "approval_matches_current_review": false,
+        "activation_authorized": false
+      },
+      "repeat_returns_same_report_version": true
+    }
+  },
+  "limitations": [
+    "uncommissioned draft authority",
+    "no Host/controller launch",
+    "no physical shutdown qualification",
+    "config/data volumes and test certificates were disposable"
+  ]
+}

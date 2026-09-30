@@ -1,0 +1,10 @@
+    Checking rx-domain v0.1.0 (<workspace>/rx-solutions/sdk/crates/rx-domain)
+   Compiling rx-protocol v0.1.0 (<workspace>/rx-solutions/sdk/crates/rx-protocol)
+   Compiling rx-host v0.1.0 (<workspace>/rx-solutions/runtime/rx-host)
+    Checking rx-ports v0.1.0 (<workspace>/rx-solutions/sdk/crates/rx-ports)
+    Checking rx-process-contract v0.1.0 (<workspace>/rx-solutions/sdk/crates/rx-process-contract)
+    Checking rx-package v0.1.0 (<workspace>/rx-solutions/sdk/crates/rx-package)
+    Checking rx-storage v0.1.0 (<workspace>/rx-solutions/sdk/crates/rx-storage)
+    Checking rx-service-status v0.1.0 (<workspace>/rx-solutions/runtime/rx-service-status)
+    Checking rx-solution-catalog v0.1.0 (<workspace>/rx-solutions/runtime/rx-solution-catalog)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 3.09s

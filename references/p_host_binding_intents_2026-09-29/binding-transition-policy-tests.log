@@ -1,0 +1,17 @@
+   Compiling rx-domain v0.1.0 (<workspace>/rx-platform/crates/rx-domain)
+   Compiling rx-ports v0.1.0 (<workspace>/rx-platform/crates/rx-ports)
+   Compiling rx-process-contract v0.1.0 (<workspace>/rx-platform/crates/rx-process-contract)
+   Compiling rx-package v0.1.0 (<workspace>/rx-platform/crates/rx-package)
+   Compiling rx-storage v0.1.0 (<workspace>/rx-platform/crates/rx-storage)
+   Compiling rx-application v0.1.0 (<workspace>/rx-platform/crates/rx-application)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 7.63s
+     Running tests/host_binding_transition.rs (<workspace>/.build/skill-runtime-bridge/debug/deps/host_binding_transition-a7559c1106ccf04d)
+
+running 4 tests
+test exact_original_intent_matches_only_fresh_current_metadata ... ok
+test an_already_committed_request_cannot_supply_its_own_before_baseline ... ok
+test absent_baseline_identity_stale_boot_cohort_and_permission_claim_are_rejected ... ok
+test request_plan_configuration_and_both_journals_are_not_interchangeable ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

@@ -1,0 +1,10 @@
+Excerpt from python-host-suite-final.log
+     Running tests/python_skill.rs (<workspace>/.build/python-host-bridge/debug/deps/python_skill-97d82d53e1c126ba)
+
+running 3 tests
+test altered_python_environment_is_refused_before_sdk_effect ... ok
+test sdk_runs_only_after_host_authorization_and_duplicates_are_receipt_reads ... ok
+test sdk_timeout_keeps_send_entered_and_refuses_handover_without_reexecution ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.84s
+

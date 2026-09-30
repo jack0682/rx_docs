@@ -1,0 +1,31 @@
+{
+  "sources": {
+    "rx-platform": "75f01ce3470ebb49f053ec7960a4d0d7c2d18b94",
+    "rx-solutions": "1857da402aaf44cad940105596689c04454f45e1"
+  },
+  "images": {
+    "platform": "sha256:853e389f71abfa2bdc56d1f2fd06d84a62770d95a28863fddd2fc61b3906641c",
+    "host": "sha256:b59b19f4ef96847821e2beca970353fb41d22f912b494904f3788f4ed2b226bb"
+  },
+  "worker_collection": "PASS",
+  "live_runs_with_host": 3,
+  "live_run_without_host": "PASS_AWAITING_BASELINE",
+  "regression_tests": {
+    "packages": [
+      "rx-application",
+      "rx-host-client",
+      "rx-runtime",
+      "rx-api"
+    ],
+    "passed": 319,
+    "failed": 0
+  },
+  "clippy_workspace": "PASS",
+  "fmt": "PASS",
+  "repository_checks": "PASS",
+  "sdk_files_matched": 118,
+  "stop_with_registered_unfenced_host": "EXIT_2_HOST_FENCE_UNCONFIRMED",
+  "activation_authorized": false,
+  "deployment_admission": "STILL_BLOCKED",
+  "physical_equipment": "NOT_OPERATED"
+}

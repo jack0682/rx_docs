@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "checks": [
+    "clean-installer-and-cli-link",
+    "client-worker-authentication-separation",
+    "external-code-executed-once-and-original-request-replayed",
+    "key-version-and-physical-scope-refusals",
+    "lost-admission-body-recovered-by-original-id",
+    "real-exception-output-schema-and-timeout",
+    "four-skill-process-dataflow-identity-failure-unknown-and-versioned-metrics",
+    "persistent-installation-restart",
+    "killed-worker-quarantined-original-and-accepted-distinct-next-run",
+    "non-root-readonly-no-devices-no-docker-socket",
+    "lost-database-refused-and-preserved-original-restored",
+    "lost-volume-refused-without-recreating-ledger"
+  ],
+  "release": {
+    "schema": "rx.local-sim.release.v1",
+    "version": "0.4.0-dev.1",
+    "architecture": "arm64",
+    "image": "rx-local-skills:0.4.0-dev.1-arm64",
+    "image_id": "sha256:045dafed9478191d9f0a8d3d7c82824f6a462791b4f744b7be4f55ef80aef96e",
+    "image_sha256": "46ae5c607baa2ddfa3b9c7c2cce0c0d2621c8a12440f4f940318e9632c31ef90",
+    "platform_commit": "e08fd1a45e2782d10f222d00ef1962a675463609",
+    "solutions_commit": "29714bf18d152697860de698ccb28f47c023ec05",
+    "source_dirty": false,
+    "physical_execution": "NOT_SUPPORTED"
+  },
+  "normal_result": {
+    "duration_ms": 83,
+    "error": null,
+    "finished_ms": 1790559974819,
+    "operation": {
+      "disposition": "HELD",
+      "evidence_ids": [
+        "634689c4-5853-4ad3-b1ad-d8d5a6719a72"
+      ],
+      "execution_knowledge": "ENDED",
+      "integrity": "VALID",
+      "intent_digest": "bedceea748f413b183b156ca9e44ae236d5ecb9f0d088f867ef13b2e5b62f558",
+      "operation_id": "46412b5c-1d7e-462a-92df-95186020c7e3",
+      "outcome": "SUCCEEDED",
+      "phase": "SETTLED",
+      "revision": "3"
+    },
+    "output": {
+      "receipt": "f83d3fbf-e681-4e58-ab70-b11978a09532",
+      "total": 14
+    },
+    "package_digest": "9fddcdb72e850da6e93e55f624d3890135b9b9fe0af643335e6cafdb6ad5e165",
+    "request": {
+      "input": {
+        "values": [
+          2,
+          4,
+          8
+        ]
+      },
+      "request_id": "46412b5c-1d7e-462a-92df-95186020c7e3",
+      "skill": "external-sum",
+      "version": "1.0.0"
+    },
+    "started_ms": 1790559974731,
+    "submitted_ms": 1790559974705,
+    "worker": "dda0b26e-f7f9-43ed-9baa-055f904c8ebc"
+  },
+  "physical_execution": "NOT_PERFORMED"
+}

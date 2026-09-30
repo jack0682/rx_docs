@@ -1,0 +1,27 @@
+{
+  "solutions_commit": "9af2497ab2780ba61133a64ae08639878ea0ce49",
+  "scope": "Local Host/service FILE_SIMULATION binding commit",
+  "host_all_features": "PASS",
+  "clippy": "PASS",
+  "actual_sigkill_boundaries": [
+    "INTENT_RECORDED",
+    "NATIVE_READY",
+    "DESCRIPTOR_PUBLISHED"
+  ],
+  "preserved": [
+    "delivery_journal",
+    "evidence_journal",
+    "old_native_device_session"
+  ],
+  "rejections": [
+    "pending startup",
+    "pending/committed cancellation",
+    "changed request",
+    "corrupted generation",
+    "wrong configuration acknowledgement",
+    "Arm before P configuration"
+  ],
+  "p_confirmation": "NOT_IMPLEMENTED",
+  "installed_python_swap": "NOT_TESTED",
+  "physical_execution": "NOT_PERFORMED"
+}

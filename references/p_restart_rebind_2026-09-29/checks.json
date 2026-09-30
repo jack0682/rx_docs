@@ -1,0 +1,24 @@
+{
+ "sources": {
+  "rx-platform": "7b36e69 (feature/retained-host-rebind: 6a78074 rebind, 7b36e69 history key)",
+  "binding_host_image_from_rx-solutions": "1857da402aaf44cad940105596689c04454f45e1"
+ },
+ "platform_image": "sha256:589aae463f723adb4977efb20f089f5a66fd34c05345c25a28e5a8150c83c748",
+ "binding_host_image": "sha256:b59b19f4ef96847821e2beca970353fb41d22f912b494904f3788f4ed2b226bb",
+ "scenario": "tools/test_platform_image.py --binding-commit --restart-platform",
+ "runs_at_7b36e69": 3,
+ "passed": 3,
+ "run_at_6a78074": "failed at COMMIT_LINK REVISION_CONFLICT (registration history key), see first-run-6a78074.failure.json",
+ "engine_tests": "453 passed, 0 failed, 16 ignored (57 suites)",
+ "not_exercised": [
+  "DeviceRestart release",
+  "physical equipment"
+ ],
+ "physical_equipment": "NOT_OPERATED",
+ "combined_run_at_7b36e69": {
+  "scenario": "tools/test_platform_image.py --binding-commit --restart-platform --host-restart-before-commit",
+  "passed": 1,
+  "runs": 1,
+  "evidence": "live-api-combined-host-restart-before-commit.json"
+ }
+}

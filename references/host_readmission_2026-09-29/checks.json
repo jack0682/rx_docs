@@ -1,0 +1,34 @@
+{
+  "sources": {
+    "rx-platform": "85d0218c4ba5dee0f0e068b9c5fe9b7883b81376",
+    "rx-solutions": "1857da402aaf44cad940105596689c04454f45e1"
+  },
+  "engine_tests": [
+    "restarted_host_needs_explicit_readmission_and_its_cell_stays_blocked",
+    "readmission_requires_the_named_generation_and_both_kept_journals",
+    "a_binding_readmission_needs_an_existing_intent_for_the_named_generation"
+  ],
+  "mutations_killed": [
+    "covers() without delivery journal comparison"
+  ],
+  "mutations_surviving": [
+    "covers() without per-cell single-use check (redundant with boot comparison)"
+  ],
+  "workspace_tests_failed": 0,
+  "clippy_workspace": "PASS",
+  "fmt": "PASS",
+  "repository_checks": "PASS",
+  "sdk_files_matched": 118,
+  "live_regression": {
+    "connected_host_runs": 2,
+    "unreachable_host": "PASS",
+    "without_host": "PASS"
+  },
+  "live_binding_commit": "STOPPED_AT_HOST_PYTHON_PACKAGE_ACQUISITION",
+  "not_tested": [
+    "approval refusal with unresolved work",
+    "binding variant at engine level",
+    "S4 confirmation, S5 refresh and demotion in the live image"
+  ],
+  "physical_equipment": "NOT_OPERATED"
+}

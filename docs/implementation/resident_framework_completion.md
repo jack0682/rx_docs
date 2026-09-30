@@ -18,7 +18,7 @@
 | ID | 완료 요구 | 완료를 입증할 근거 | 현재 상태 |
 |---|---|---|---|
 | RF01 | OD08·RR01–RR03과 공통 신원/수명/판단 모델 완결 | 상태·전이·소유자·부분 실패·양성 복귀를 CN/AC/MC와 대조한 검토 및 구현 대응 | 실행 모델 r1 작성, 검증 미완 |
-| RF02 | P 등록 소유와 S 실행 관리의 단일 연결 | 외부 작성자의 등록→실행→상실→조회·복귀, stable ID/이력 이행, 이중 writer 반례 | S Registry 존재; P 통합·이행 미완 |
+| RF02 | P 등록 소유와 S 실행 관리의 단일 연결 | 외부 작성자의 등록→실행→상실→조회·복귀, stable ID/이력 이행, 이중 writer 반례 | S Registry 존재. 공통 값 타입 이관은 아래 R1에서 검증 중; P 통합·이행 미완 |
 | RF03 | 논리·호스트·장비 자원 묶음 수락 | 실제 집행과 준비/commit/유실/거절/회수 행렬, 두 작업의 충돌·진행 가능성 | 요구 타입과 부분 OS 집행 존재; 전체 경로 미완 |
 | RF04 | 공통 의존 결합과 관측 전용 참여 | 매 사용 검증, provider 교체·stale·상실 전파, 제어권 없이 관측 등록 | 부분 모델 존재; 공통 연결 미완 |
 | RF05 | 작업·권한·결과·인계 계약 충족 | 양성 업무 완료 및 실제 반례, OI08/11/17 포함 책임별 검증 | 모의 경로 있음; 계약 공백 남음 |
@@ -45,3 +45,21 @@ RF14와 광역 규모 실증을 소프트웨어 모의 시험으로 닫지 않�
 5. 장애·교체·복원·확장·저작·운영 검증을 이어 간다. 쉬운 정상 경로만을 완료 기준으로 재정의하지 않는다.
 
 다음 실제 구현 대상으로 RF02를 선택한다. RF01 문서 검사는 RF02 구현 완료를 뜻하지 않는다.
+
+## R1 — 공통 구성요소 신원 값 타입
+
+2026-10-01. [Platform 변경](https://github.com/jack0682/rx-platform/commit/8a178fa)과
+[Solutions 변경](https://github.com/jack0682/rx-solutions/commit/88903c6)은 Supervisor에 있던
+CatalogReference·Declaration·RegistrationState·Registration·VersionedRegistration·Binding을
+`rx-domain::component` 원본과 생성 SDK로 공유한다. 기존 Supervisor import 경로는 re-export로 유지한다.
+새 API, 등록 소유권 이행, 실행 권한 또는 persisted schema 변경은 아직 없다.
+
+실행한 로컬 검증: rx-domain 전체 시험과 v1 JSON 호환/권한 필드 거절 시험, rx-supervisor의
+all-features 시험·doctest, 두 패키지의 all-targets/all-features clippy, formatter, 저장소·기존 계약
+해시·SDK export 회귀·120개 파일 source 비교. 명령들은 성공했다. 실행 환경은 macOS이며 Linux 전용
+시험은 로컬 결과로 주장하지 않는다. 전체 Linux workspace 검사는 각 PR CI의 별도 근거다.
+
+관련 PR: [Platform #61](https://github.com/jack0682/rx-platform/pull/61),
+[Solutions #71](https://github.com/jack0682/rx-solutions/pull/71).
+이 단계는 타입의 원본을 공유한 것이며 RF02 전체 완료가 아니다. 후속 P 등록 트랜잭션·API·S 실행 보고·
+기존 등록 ID 이행·단일 writer 보장·positive 사용 경로가 필요하다.

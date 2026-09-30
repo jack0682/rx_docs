@@ -18,7 +18,7 @@
 | ID | 완료 요구 | 완료를 입증할 근거 | 현재 상태 |
 |---|---|---|---|
 | RF01 | OD08·RR01–RR03과 공통 신원/수명/판단 모델 완결 | 상태·전이·소유자·부분 실패·양성 복귀를 CN/AC/MC와 대조한 검토 및 구현 대응 | 실행 모델 r1 작성, 검증 미완 |
-| RF02 | P 등록 소유와 S 실행 관리의 단일 연결 | 외부 작성자의 등록→실행→상실→조회·복귀, stable ID/이력 이행, 이중 writer 반례 | 공통 값 타입 R1 통합. P의 새 선언 저작 경로 R2 구현·검토 중; S 실행 연결·기존 신원 이행 미완 |
+| RF02 | P 등록 소유와 S 실행 관리의 단일 연결 | 외부 작성자의 등록→실행→상실→조회·복귀, stable ID/이력 이행, 이중 writer 반례 | 공통 값 타입 R1 통합. P의 새 선언 저작 경로 R2가 Linux CI를 거쳐 develop에 통합됨; S 실행 연결·기존 신원 이행 미완 |
 | RF03 | 논리·호스트·장비 자원 묶음 수락 | 실제 집행과 준비/commit/유실/거절/회수 행렬, 두 작업의 충돌·진행 가능성 | 요구 타입과 부분 OS 집행 존재; 전체 경로 미완 |
 | RF04 | 공통 의존 결합과 관측 전용 참여 | 매 사용 검증, provider 교체·stale·상실 전파, 제어권 없이 관측 등록 | 부분 모델 존재; 공통 연결 미완 |
 | RF05 | 작업·권한·결과·인계 계약 충족 | 양성 업무 완료 및 실제 반례, OI08/11/17 포함 책임별 검증 | 모의 경로 있음; 계약 공백 남음 |
@@ -85,7 +85,7 @@ Cell 없이 새 구성요소 ID를 만들고, 작성자/관리자의 현재 권�
 로컬 macOS 검증: 전체 workspace/all-features 시험 501 passed / 0 failed / 16 ignored.
 추가 owner/ID 거절 단언 뒤 대상 application·HTTP 시험을 재실행해 통과했다. 전체 workspace/all-targets/
 all-features clippy, formatter, 저장소 검사/시험, 기존 계약 hash, SDK 120개 일치가 통과했다.
-기존 Engine 역방향 경계 18곳/31회는 늘지 않았다. Linux PR CI 결과는 별도 확인한다.
+기존 Engine 역방향 경계 18곳/31회는 늘지 않았다. 이후 Platform PR #62의 Linux workspace CI와 DCO가 통과했고 develop에 통합했다. CI의 적용 범위는 이 선언 경로와 기존 회귀 시험이며, 전체 RF02를 닫지 않는다.
 
 Accepted는 작성자의 선언이 기록됐다는 뜻이다. 패키지 내용 검증·프로세스 소유·업무 허가는 응답에
 NOT_ESTABLISHED/NOT_ESTABLISHED_BY_REGISTRATION/NOT_EVALUATED로 명시한다.

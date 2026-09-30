@@ -96,3 +96,31 @@ R2를 RF02 완료나 상주 프레임워크 전체 완성으로 표시하지 않
 신원과 구성요소별 보고/실행 범위로 연결하고, 등록 변경 권한과 실행 관측 보고 권한을 분리한다.
 기존 S 등록의 이행은 이전 writer의 등록 쓰기 차단, 원본 ID/버전/이력, P 수용, 확인 응답 유실과 재시작을
 함께 검증해야 한다. 출처·권한 세대를 표시하지 않은 두 원장의 단순 복제는 대안으로 채택하지 않는다.
+
+## R3 — 범위가 제한된 Supervisor 보고 통로
+
+2026-10-01. [보고 계약 revision 1](../contracts/resident-reporting/v1/README.md)은
+별도 Observer-only mTLS 세션과 작성자/관리자가 발급한 구성요소별 보고 범위를 정의한다.
+P의 선언 ID와 기존 S 등록/run/instance ID를 모두 유지하고 명시적인 범위로 관계를 기록한다.
+이 관계는 등록 writer 이행이나 실행 배정이 아니다.
+
+보고 원본은 REPORTED_REGISTRY_SNAPSHOT이다. 수신 시간은 관측 시간이 아니며, PID·Running
+또는 현재 세션이라는 표시로 OS 소유권·현재 생존·readiness·업무 허가를 만들지 않는다.
+선언 변경/퇴역 후에도 활성 범위에서 진단 이력을 수신하되 등록 버전을 noncurrent로 표시한다.
+범위 철회·Reporter/P 재시작·현재 자격 철회 후에는 보고를 거절한다. 과거 결과는 보존한다.
+
+호환 영향: 동결된 base/cell wire와 manifest는 변경하지 않는다. 새 optional proto와 공통
+값 타입·binding을 P에서 정의해 S SDK로 내보낸다. 기존 S ExecutionState 경로는 re-export로
+유지한다. 기존 클라이언트나 daemon이 자동으로 보고하게 되는 변경은 아니다.
+
+[검증 기록](../../references/resident_reporting_2026-10-01/README.md):
+Platform `223c353bcee782e71afa10a5e8886c3c165b74b5`,
+Solutions `507f07eaf4421f4beaf4f0efbad4f7fba4f983a5`의 깨끗한 작업 트리에서 실제
+mTLS와 별도 빌드한 Supervisor의 소프트웨어 자식 실행·정상 종료 및 응답 유실 복구를 통과했다.
+소유자의 HTTP 범위 관리, 순서/출처 위조·권한 거절, 재시작 전후 양성/음성 대조와
+저장 실패 rollback도 검사했다. 전체 로컬 시험·추가 시험의 정확한 범위는 해당 기록에 둔다.
+현재는 feature PR 검토 단계이며 Linux CI와 develop 통합을 아직 완료로 표시하지 않는다.
+
+남은 의무: shipped daemon의 자동 보고와 영속 outbox, reporter/P 재시작 후 기존 instance
+정산, P의 실행 배정, 검증된 내용 수용, 기존 S ID/이력 이행과 이전 writer 차단, 등록 발견/조회.
+R3 통로만으로 RF02 또는 전체 상주 프레임워크 Goal을 완료하지 않는다.

@@ -1,0 +1,21 @@
+{
+  "sources": {
+    "platform": {
+      "commit": "223c353bcee782e71afa10a5e8886c3c165b74b5",
+      "working_tree_changes": []
+    },
+    "solutions": {
+      "commit": "507f07eaf4421f4beaf4f0efbad4f7fba4f983a5",
+      "working_tree_changes": []
+    }
+  },
+  "os": "Darwin",
+  "architecture": "arm64",
+  "status": "PASS_SCOPED_REPORTING",
+  "physical_execution": "NOT_PERFORMED",
+  "limits": [
+    "Test-owned locally approved software child; not Platform-directed launch",
+    "Attributed registry snapshots, not current OS ownership or work permission",
+    "Legacy registration migration and automatic daemon reporting are not exercised"
+  ]
+}

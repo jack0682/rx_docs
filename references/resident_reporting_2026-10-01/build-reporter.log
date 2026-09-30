@@ -1,0 +1,3 @@
+   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/.build/linux-install-bundle/sdk/crates/rx-protocol)
+   Compiling rx-supervisor v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/.build/linux-install-bundle/runtime/rx-supervisor)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 3.07s

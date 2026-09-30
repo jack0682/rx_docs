@@ -18,7 +18,7 @@
 | ID | 완료 요구 | 완료를 입증할 근거 | 현재 상태 |
 |---|---|---|---|
 | RF01 | OD08·RR01–RR03과 공통 신원/수명/판단 모델 완결 | 상태·전이·소유자·부분 실패·양성 복귀를 CN/AC/MC와 대조한 검토 및 구현 대응 | 실행 모델 r1 작성, 검증 미완 |
-| RF02 | P 등록 소유와 S 실행 관리의 단일 연결 | 외부 작성자의 등록→실행→상실→조회·복귀, stable ID/이력 이행, 이중 writer 반례 | S Registry 존재. 공통 값 타입 이관은 아래 R1에서 develop 통합; P 등록 소유·이행 미완 |
+| RF02 | P 등록 소유와 S 실행 관리의 단일 연결 | 외부 작성자의 등록→실행→상실→조회·복귀, stable ID/이력 이행, 이중 writer 반례 | 공통 값 타입 R1 통합. P의 새 선언 저작 경로 R2 구현·검토 중; S 실행 연결·기존 신원 이행 미완 |
 | RF03 | 논리·호스트·장비 자원 묶음 수락 | 실제 집행과 준비/commit/유실/거절/회수 행렬, 두 작업의 충돌·진행 가능성 | 요구 타입과 부분 OS 집행 존재; 전체 경로 미완 |
 | RF04 | 공통 의존 결합과 관측 전용 참여 | 매 사용 검증, provider 교체·stale·상실 전파, 제어권 없이 관측 등록 | 부분 모델 존재; 공통 연결 미완 |
 | RF05 | 작업·권한·결과·인계 계약 충족 | 양성 업무 완료 및 실제 반례, OI08/11/17 포함 책임별 검증 | 모의 경로 있음; 계약 공백 남음 |
@@ -70,3 +70,29 @@ Solutions `f08dd8846ca4b727e41f357fc149291bab571e51`. 통합 후 원본과 SDK 1
 다음 작업은 RF02의 P 등록 소유 경로다. 공개 등록 명령의 권한/내용 수용, 기존 S 등록의 이행 차단,
 P 등록과 S 실행 보고의 연결을 함께 설계·구현한다. 등록만으로 실행·업무 권한을 만들거나
 P와 S가 같은 등록을 독립적으로 변경하는 경로를 내놓지 않는다. 이미 확인한 재자격 WIP는 별도로 보존한다.
+
+## R2 — Platform 원장의 새 등록 선언
+
+2026-10-01. [후보 계약](../contracts/resident-registration/v1/README.md)과
+[Platform 구현](https://github.com/jack0682/rx-platform/commit/7608043ee50137fd2736a064728e0b6a37388131),
+[PR #62](https://github.com/jack0682/rx-platform/pull/62).
+
+Cell 없이 새 구성요소 ID를 만들고, 작성자/관리자의 현재 권한으로 조회·변경·퇴역한다.
+선언·과거 버전·감사·원 요청 결과는 기존 application writer의 한 트랜잭션에서 기록한다.
+응답 유실 후 원 요청 복구, 재시작 후 기존 ID 유지, stale revision·다른 작성자·권한 철회·client namespace
+별칭 공격, 퇴역 후 재활성화와 권한 필드 주입을 검사했다. 실제 HTTP ingress에서 같은 writer로 연결된다.
+
+로컬 macOS 검증: 전체 workspace/all-features 시험 501 passed / 0 failed / 16 ignored.
+추가 owner/ID 거절 단언 뒤 대상 application·HTTP 시험을 재실행해 통과했다. 전체 workspace/all-targets/
+all-features clippy, formatter, 저장소 검사/시험, 기존 계약 hash, SDK 120개 일치가 통과했다.
+기존 Engine 역방향 경계 18곳/31회는 늘지 않았다. Linux PR CI 결과는 별도 확인한다.
+
+Accepted는 작성자의 선언이 기록됐다는 뜻이다. 패키지 내용 검증·프로세스 소유·업무 허가는 응답에
+NOT_ESTABLISHED/NOT_ESTABLISHED_BY_REGISTRATION/NOT_EVALUATED로 명시한다.
+기존 S UUID 수입, S 실행 보고·배정, 검증된 package 내용 수용, 발견/페이지 조회가 아직 남아 있으므로
+R2를 RF02 완료나 상주 프레임워크 전체 완성으로 표시하지 않는다.
+
+후속 연결의 조건: Supervisor에는 작성자의 일반 Engineer 계정을 넘기지 않는다. 설치가 신뢰한 서비스
+신원과 구성요소별 보고/실행 범위로 연결하고, 등록 변경 권한과 실행 관측 보고 권한을 분리한다.
+기존 S 등록의 이행은 이전 writer의 등록 쓰기 차단, 원본 ID/버전/이력, P 수용, 확인 응답 유실과 재시작을
+함께 검증해야 한다. 출처·권한 세대를 표시하지 않은 두 원장의 단순 복제는 대안으로 채택하지 않는다.

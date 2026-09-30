@@ -2,6 +2,9 @@
 
 > 2026-09-29부터 전체 작업 순서와 단계별 종료 기준은 [RX 프레임워크 마스터 플랜](42_framework_master_plan.md)을 따른다. 아래 N1–N6 제안과 상주 프레임워크 조각의 기록은 그 계획의 입력으로 유지한다.
 
+2026-10-01 현재 진행 중인 초안 완성 작업의 모델·이행·검증 상태는
+[실행 모델](45_resident_framework_execution_model.md)과 [완료 원장](implementation/resident_framework_completion.md)에서 확인한다.
+
 기준일: 2026-09-16. 목표는 [이기종 로봇과 시설의 협업](01_product_definition.md)이다. 인계 사례의 N1 정의, N2 경계 판정, N3 문서 반례, N4 모의 명령 추적과 N5의 실제 ROS 컨트롤러·모의 하드웨어 시험을 기준으로 후속 구현·검증을 구체화한다.
 
 ## 다음 서비스 검증 제안

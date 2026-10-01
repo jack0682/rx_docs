@@ -1,0 +1,8 @@
+   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/.build/linux-install-bundle/sdk/crates/rx-protocol)
+    Checking rx-storage v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/.build/linux-install-bundle/sdk/crates/rx-storage)
+   Compiling rx-host v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/.build/linux-install-bundle/runtime/rx-host)
+    Checking rx-process-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/.build/linux-install-bundle/runtime/rx-process-package)
+    Checking rx-supervisor v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/.build/linux-install-bundle/runtime/rx-supervisor)
+    Checking rx-executor v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/.build/linux-install-bundle/runtime/rx-executor)
+    Checking rx-device-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/.build/linux-install-bundle/runtime/rx-device-package)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 12.84s

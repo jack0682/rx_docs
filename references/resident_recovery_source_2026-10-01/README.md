@@ -46,3 +46,14 @@ in an installer. Direct-child exit and scoped non-running facts do not establish
 descendant/resource recovery, external supervisor closure, business completion or
 functional safety. Whole-state rollback, other boot/namespace transitions and
 full RF01–RF14 remain unfinished.
+
+## Integration
+
+Documentation #86, Platform #69 and Solutions #78 are merged in that order after
+their exact PR CI and DCO passed. [Integration](integration.json) records the
+verified OpenPGP/author-DCO merge commits and identical tested/integrated code
+trees. SDK 130 files match. Linux workspace totals are P 530/0/22 and S 475/0/22
+passed/failed/ignored; S installed-skill checks pass on amd64 and arm64.
+Canceled earlier PR runs are not used as success evidence. The source investigation
+is integrated; owner reconciliation, fresh execution after unknown and a new
+installer remain unfinished.

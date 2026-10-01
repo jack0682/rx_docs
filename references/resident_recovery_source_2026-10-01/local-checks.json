@@ -1,0 +1,38 @@
+{
+  "scope": "Local macOS checks; actual Linux scenes are separate",
+  "sdk_files_matched": 130,
+  "platform": {
+    "workspace_tests": {
+      "passed": 529,
+      "failed": 0,
+      "ignored": 19
+    },
+    "logs": {
+      "tests": {
+        "sha256_before_path_redaction": "0110ce12dae2bd462712a1fc51f76435d0dbd90d73568003a447e2fcea08df3d"
+      },
+      "clippy": {
+        "sha256_before_path_redaction": "9b1519c59c50e944001ff1cbfd061f04e8e9365c3134d5069faf04fdf4328692"
+      }
+    },
+    "clippy": "PASS",
+    "format": "PASS"
+  },
+  "solutions": {
+    "workspace_tests": {
+      "passed": 430,
+      "failed": 0,
+      "ignored": 19
+    },
+    "logs": {
+      "tests": {
+        "sha256_before_path_redaction": "61d6f4749d0e1b957faec1970f2a8ba8144726f3aa031904d5f0c6da5a4b7210"
+      },
+      "clippy": {
+        "sha256_before_path_redaction": "27614a59304474f08908aa3ac3ddb17ddb31c214532896e71e96c967d9a5390e"
+      }
+    },
+    "clippy": "PASS",
+    "format": "PASS"
+  }
+}

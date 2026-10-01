@@ -1,0 +1,32 @@
+{
+  "images": {
+    "builder": {
+      "reference": "rx-resident-reporting-builder:r4-arm64-final",
+      "id": "sha256:d2d2dac768616145aadf98591824b651777a576e5382929a7c2cb4479ffbd319",
+      "architecture": "arm64"
+    },
+    "runtime": {
+      "reference": "rx-resident-reporting-runtime:r4-arm64-signed",
+      "id": "sha256:1f9a144174c6759e768adcfff8665577f25ae22583e859318e6e1ce1dbad4cd6",
+      "architecture": "arm64"
+    }
+  },
+  "status": "PASS_SOFTWARE_EXECUTION_AND_SOURCE_INVESTIGATION",
+  "scenes": [
+    "normal exit inspection",
+    "outage exit inspection preserving pending delivery",
+    "cold manager loss with original children still present"
+  ],
+  "source_snapshots": "sources.json",
+  "network": "container loopback only",
+  "runtime_user": "10001:10001",
+  "read_only_root": true,
+  "physical_execution": "NOT_PERFORMED",
+  "limits": [
+    "Current source-built daemon; program content comes from the signed runtime image, not a newly released daemon package",
+    "P test server uses the actual writer/HTTP/mTLS and actual shared Linux clock, not a full platformd deployment",
+    "No work permission, physical completion or independent OS attestation",
+    "Source investigation does not release P claims or resume execution; original children in the cold scene are destroyed only with their private container",
+    "Active-unknown recovery and full RF01-RF14 remain open"
+  ]
+}

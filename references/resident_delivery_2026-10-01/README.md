@@ -1,6 +1,6 @@
 # R4 resident delivery evidence
 
-2026-10-01. Clean source identities and exact exercised scope are in
+2026-10-01. Initial scene source identities and exact exercised scope are in
 [scope.json](scope.json). The separately built Supervisor fixture uses the same
 Resident worker as rx-solutionsd, its actual SQLite journal and a real software
 status child. The Platform side uses the real application writer and mTLS ingress.
@@ -18,12 +18,12 @@ extension, six focused outbox tests passed, including discovery of an old run's
 unsent snapshot, and complete S workspace clippy passed. Seven P reporting engine
 tests cover scope sequencing, source identity, current credentials, revocation,
 transaction rollback and P/reporter restart with owner-approved continuation.
-The final two cross-repository scenes passed against the clean commits above.
+The initial two cross-repository scenes passed at that cut; the final rerun is linked below.
 
 Generation, frozen contract and optional binding checks and 124-file SDK source
 comparison passed. These are structural/copy checks, not independent semantic
-verification. Linux daemon entrypoint and PR CI evidence are pending and are not
-claimed by these local results. Full process recovery, P launch assignment,
+verification. These local results do not establish the Linux daemon entrypoint or
+PR CI; separate evidence for both is recorded below. Full process recovery, P launch assignment,
 legacy registration writer migration, content intake and physical qualification
 remain open.
 
@@ -73,3 +73,11 @@ therefore remains an installation concern; no hash was weakened to pass.
 
 The native image build and status services do not close complete ROBOTIS bundle
 qualification, physical operation, controller integration, or field maintenance.
+
+## Integration
+
+[Integration identities](integration.json) record the signed merges and final PR
+CI runs. Documentation, Platform and Solutions were merged in that order. Product
+trees match the tested feature heads; all 124 SDK files match again. R4's bounded
+report-delivery work is integrated. Full RF02 and the resident framework are not
+complete; registration ownership migration and P execution assignment are next.

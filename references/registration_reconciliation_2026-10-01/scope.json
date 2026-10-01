@@ -1,0 +1,22 @@
+{
+  "sources": {
+    "platform": {
+      "commit": "e91f8697416e8eff4bab86d7cadab7622590e4d4",
+      "changes": []
+    },
+    "solutions": {
+      "commit": "7020cbee500a51e7a17b205caf40c17c1acc6811",
+      "changes": []
+    }
+  },
+  "source_unchanged": true,
+  "source_inventory": {
+    "registration.db": "64d99055162ee5fd6ba46da2b795e4ff1833b94f98e89c7380932161ccc03974"
+  },
+  "prior_reader": {
+    "source_commit": "58e5fcb",
+    "sha256": "037541ec35533f76432c02d092c2527a73eec0e3c94dd28ffa124f2bad153611",
+    "reader_format_max": 7
+  },
+  "scope": "actual S source, no-Cell P writer/HTTP intake and scoped mTLS acceptance reconciliation; no execution authority"
+}

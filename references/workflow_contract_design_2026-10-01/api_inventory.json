@@ -1,0 +1,1240 @@
+{
+  "schema": "rx.workflow-contract-design-source-inventory.v1",
+  "date": "2026-10-01",
+  "scope": "Static route and implementation design inventory; not a public API specification, conformance test or runtime support declaration. An alternative ingress may have different roles and authority requirements.",
+  "platform_commit": "cc9829197fe8435ccd0195ae20b23e22260a3487",
+  "solutions_commit": "3e72f45430600652291e20fb089380192bb000c5",
+  "platform_files": {
+    "crates/rx-api/src/routes.rs": "7ea1a37294f0e160b7625259e66b849c4b86bd381cfba543ad348a060347c87b",
+    "crates/rx-api/src/grpc/mod.rs": "9a9edf9ce8d2a612d7cce9ea94b12e8ea2b9b4f60c1b03a15bb166060c06be3d",
+    "crates/rx-api/src/grpc/workflow.rs": "61fd0bf216e8ce512d4a352704be287e8c97cdb63eacc71ce0f7c59ce8681e3a",
+    "crates/rx-api/src/grpc/operation.rs": "47714df5903cb6830447f2e7c0f76e5f3f6ca97dd512aae5b6bce6fe09477a12",
+    "crates/rx-api/src/grpc/cell_negotiation.rs": "b7b36c10452d2640e322fc13b6a30f75223c07d9d44966cbbe6d34f159d975a8",
+    "crates/rx-process-contract/src/model.rs": "b3350dcadd1351af6917964ca0ba95f46f420243d88bd2e477d484f0bc8418ee",
+    "crates/rx-process-contract/src/compile_input.rs": "2e4b2e1f3541300b5063eea444a404be89841c0f059f51db55253d7395d5452f",
+    "crates/rx-process-contract/src/frontier.rs": "f28e75fcd6b813153810489e2b850efd1c51780dcfac904db8bf8f9a5954fd4b",
+    "crates/rx-domain/src/condition.rs": "46e7f3a5e87b77bf4bc8d9c88883460f9c170c7e7bb575900b23c5634a3acd3f",
+    "crates/rx-application/src/model.rs": "b9de080cd34ba3b8567f69e69fccce1441dfb5acf88332cf97a50ebbc7a479b2"
+  },
+  "solutions_files": {
+    "runtime/rx-process/src/compile.rs": "44c487bb0c029895c6585c25e384e176a478591a9cfe99337dee4b782edb6591",
+    "runtime/rx-process/src/bt_xml.rs": "fd207720d5164ffb533bc86fb4fa4569329bb74d60d0e50d665c1152a28a358c",
+    "runtime/rx-host/src/service/factory.rs": "f995e110340edc09346340a845ce2150aa642bc7392c1ef530920a3bf9326176",
+    "runtime/rx-host/src/service/config.rs": "90c6173eb46acfa09504a3e0f250ad4ac13b57c68b595a91ccdfe38df8e48582"
+  },
+  "http_routes": [
+    {
+      "path": "/api/v1/health",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "health"
+        }
+      ],
+      "source_line": 116,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/resident-executions",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "resident_execution::propose"
+        }
+      ],
+      "source_line": 117,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/resident-execution",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "resident_execution::get"
+        }
+      ],
+      "source_line": 121,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/resident-executions/approve",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "resident_execution::approve"
+        }
+      ],
+      "source_line": 122,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/resident-executions/stop",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "resident_execution::stop"
+        }
+      ],
+      "source_line": 126,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/registration-source",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "component_intake::context"
+        }
+      ],
+      "source_line": 130,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/registration-transfers",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "component_intake::import"
+        }
+      ],
+      "source_line": 134,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/registration-transfer",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "component_intake::progress"
+        }
+      ],
+      "source_line": 138,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/registration-transfer/receipt",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "component_intake::receipt"
+        }
+      ],
+      "source_line": 142,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/registration-transfer/history",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "component_intake::history"
+        }
+      ],
+      "source_line": 146,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/session",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "login"
+        },
+        {
+          "method": "GET",
+          "handler": "profile"
+        }
+      ],
+      "source_line": 150,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/session/end",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "logout"
+        }
+      ],
+      "source_line": 151,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/overview",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "overview"
+        }
+      ],
+      "source_line": 152,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/runtime-skills",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "runtime_skills"
+        }
+      ],
+      "source_line": 153,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/runtime-skill-result",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "runtime_skill_result"
+        }
+      ],
+      "source_line": 154,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/host-recovery-context",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "host_recovery::context"
+        }
+      ],
+      "source_line": 155,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/host-recoveries",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "host_recovery::list"
+        },
+        {
+          "method": "POST",
+          "handler": "host_recovery::propose"
+        }
+      ],
+      "source_line": 156,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/host-recovery",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "host_recovery::get"
+        }
+      ],
+      "source_line": 160,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/host-recovery/approve",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "host_recovery::approve"
+        }
+      ],
+      "source_line": 161,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/host-recovery/progress",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "host_recovery::progress"
+        }
+      ],
+      "source_line": 165,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/host-recovery/query",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "host_recovery::query"
+        }
+      ],
+      "source_line": 169,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/package-intake-context",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "package_intake_context"
+        }
+      ],
+      "source_line": 170,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/package-intakes",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "package_intakes"
+        },
+        {
+          "method": "POST",
+          "handler": "submit_package_intake"
+        }
+      ],
+      "source_line": 174,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/qualification-activations",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "issue_qualification"
+        }
+      ],
+      "source_line": 178,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/qualification-activation",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "get_qualification_batch"
+        }
+      ],
+      "source_line": 182,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/qualification-activation/activate",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "activate_qualification"
+        }
+      ],
+      "source_line": 186,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/qualification-activation/suspend",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "suspend_qualification"
+        }
+      ],
+      "source_line": 190,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/qualification-reviews",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "begin_requalification"
+        }
+      ],
+      "source_line": 194,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/qualification-review",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "get_requalification"
+        }
+      ],
+      "source_line": 195,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/qualification-review/reports",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "submit_requalification"
+        }
+      ],
+      "source_line": 196,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/qualification-review/decisions",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "decide_requalification"
+        }
+      ],
+      "source_line": 200,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/qualification-review/artifact",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "requalification_artifact"
+        }
+      ],
+      "source_line": 204,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/package-intake",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "get_package_intake"
+        }
+      ],
+      "source_line": 208,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/device-binding-plans",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "device_binding::list"
+        },
+        {
+          "method": "POST",
+          "handler": "device_binding::propose"
+        }
+      ],
+      "source_line": 209,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/device-binding-plan",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "device_binding::get"
+        }
+      ],
+      "source_line": 213,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/device-binding-plan/impact-review",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "device_binding::review"
+        }
+      ],
+      "source_line": 214,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/device-reviews",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "device_review::list"
+        },
+        {
+          "method": "POST",
+          "handler": "device_review::create"
+        }
+      ],
+      "source_line": 218,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/device-review",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "device_review::get"
+        }
+      ],
+      "source_line": 222,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/device-review/reports",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "device_review::report"
+        }
+      ],
+      "source_line": 223,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/device-review/decisions",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "device_review::decide"
+        }
+      ],
+      "source_line": 224,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/package-intake/device-catalog",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "get_package_device_catalog"
+        }
+      ],
+      "source_line": 228,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/process-reviews",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "list_process_reviews"
+        },
+        {
+          "method": "POST",
+          "handler": "create_process_review"
+        }
+      ],
+      "source_line": 232,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/process-review",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "get_process_review"
+        }
+      ],
+      "source_line": 236,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/recovery-settlements",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "settlement::approve"
+        }
+      ],
+      "source_line": 237,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/process-changes",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "propose_process_change"
+        }
+      ],
+      "source_line": 238,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/process-change",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "get_process_change"
+        }
+      ],
+      "source_line": 239,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/process-change/host-binding-intents",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "issue_host_binding_intents"
+        }
+      ],
+      "source_line": 240,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/hosts/readmission",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "approve_host_readmission"
+        }
+      ],
+      "source_line": 244,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/process-change/host-binding-intents/adopt",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "adopt_host_binding_intents"
+        }
+      ],
+      "source_line": 245,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/process-change/apply",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "apply_process_change"
+        }
+      ],
+      "source_line": 249,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/process-change/configure-hosts",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "authorize_host_configuration"
+        }
+      ],
+      "source_line": 250,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/process-change/impact-review",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "review_change_impact"
+        }
+      ],
+      "source_line": 254,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/process-change/stage",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "stage_process_change"
+        }
+      ],
+      "source_line": 258,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/process-change/prepare",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "begin_change_preparation"
+        }
+      ],
+      "source_line": 259,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/process-review/reports",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "submit_review_report"
+        }
+      ],
+      "source_line": 263,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/process-review/decisions",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "decide_process_review"
+        }
+      ],
+      "source_line": 264,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/process-drafts",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "process_drafts"
+        },
+        {
+          "method": "POST",
+          "handler": "save_process_draft"
+        }
+      ],
+      "source_line": 268,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/process-draft",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "process_draft"
+        }
+      ],
+      "source_line": 272,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/process-draft-compile-input",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "draft_compile_input"
+        }
+      ],
+      "source_line": 273,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/process-draft/binding-options",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "draft_binding_catalog"
+        },
+        {
+          "method": "POST",
+          "handler": "draft_device_binding_catalog"
+        }
+      ],
+      "source_line": 277,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/process-draft-bindings",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "draft_bindings"
+        },
+        {
+          "method": "POST",
+          "handler": "save_draft_bindings"
+        }
+      ],
+      "source_line": 281,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/cell",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "cell"
+        }
+      ],
+      "source_line": 285,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/runtime-restrictions",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "runtime_restrictions"
+        }
+      ],
+      "source_line": 286,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/device-restrictions",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "device_restrictions"
+        }
+      ],
+      "source_line": 287,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/cell/v1/cells/{cell_id}/inspect",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "cell_context"
+        }
+      ],
+      "source_line": 288,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/cells",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "install_cell"
+        }
+      ],
+      "source_line": 289,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/components",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "resident_components::create_component"
+        }
+      ],
+      "source_line": 290,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/component",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "resident_components::get_component"
+        }
+      ],
+      "source_line": 294,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/component/reporting-scope",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "resident_components::get_reporting_scope"
+        }
+      ],
+      "source_line": 295,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/components/reporting",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "resident_components::issue_reporting"
+        }
+      ],
+      "source_line": 299,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/components/reporting/continue",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "resident_components::continue_reporting"
+        }
+      ],
+      "source_line": 303,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/components/reporting/revoke",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "resident_components::revoke_reporting"
+        }
+      ],
+      "source_line": 307,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/component/report",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "resident_components::get_report"
+        }
+      ],
+      "source_line": 311,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/components/update",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "resident_components::update_component"
+        }
+      ],
+      "source_line": 315,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/components/retire",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "resident_components::retire_component"
+        }
+      ],
+      "source_line": 319,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/runs",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "create_run"
+        }
+      ],
+      "source_line": 323,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/run/start-context",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "operator_start_context"
+        }
+      ],
+      "source_line": 324,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/run/start-attempt",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "operator_start_attempt"
+        }
+      ],
+      "source_line": 325,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/run/checkpoint",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "run_checkpoint"
+        }
+      ],
+      "source_line": 326,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/run/checkpoint/artifact",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "checkpoint_artifact"
+        }
+      ],
+      "source_line": 327,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/runs/start",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "start_run"
+        }
+      ],
+      "source_line": 328,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/runs/abandon",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "abandon_run"
+        }
+      ],
+      "source_line": 329,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/cells/hold",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "hold"
+        }
+      ],
+      "source_line": 330,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/cases",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "cases"
+        }
+      ],
+      "source_line": 331,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/case",
+      "methods": [
+        {
+          "method": "GET",
+          "handler": "case_detail"
+        }
+      ],
+      "source_line": 332,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/cases/open",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "open_case"
+        }
+      ],
+      "source_line": 333,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/cases/acknowledge",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "acknowledge_case"
+        }
+      ],
+      "source_line": 334,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/cases/procedure",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "record_procedure"
+        }
+      ],
+      "source_line": 335,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/cases/close-preparations",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "prepare_close"
+        }
+      ],
+      "source_line": 336,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    },
+    {
+      "path": "/api/v1/cases/close-without-restart",
+      "methods": [
+        {
+          "method": "POST",
+          "handler": "close_without_restart"
+        }
+      ],
+      "source_line": 337,
+      "classification": "ROUTE_PRESENT_NOT_END_TO_END_QUALIFIED"
+    }
+  ],
+  "grpc_explicitly_unimplemented": [
+    {
+      "file": "crates/rx-api/src/grpc/cell_negotiation.rs",
+      "method": "evaluate",
+      "source_line": 117,
+      "messages": [
+        "This cell method is not enabled in this binding"
+      ],
+      "classification": "EXPLICITLY_UNIMPLEMENTED_ON_THIS_SURFACE"
+    },
+    {
+      "file": "crates/rx-api/src/grpc/cell_negotiation.rs",
+      "method": "start_run",
+      "source_line": 126,
+      "messages": [
+        "This cell method is not enabled in this binding"
+      ],
+      "classification": "EXPLICITLY_UNIMPLEMENTED_ON_THIS_SURFACE"
+    },
+    {
+      "file": "crates/rx-api/src/grpc/cell_negotiation.rs",
+      "method": "get_start_attempt",
+      "source_line": 135,
+      "messages": [
+        "This cell method is not enabled in this binding"
+      ],
+      "classification": "EXPLICITLY_UNIMPLEMENTED_ON_THIS_SURFACE"
+    },
+    {
+      "file": "crates/rx-api/src/grpc/cell_negotiation.rs",
+      "method": "hold",
+      "source_line": 294,
+      "messages": [
+        "This cell method is not enabled in this binding"
+      ],
+      "classification": "EXPLICITLY_UNIMPLEMENTED_ON_THIS_SURFACE"
+    },
+    {
+      "file": "crates/rx-api/src/grpc/cell_negotiation.rs",
+      "method": "clear_transient_block",
+      "source_line": 303,
+      "messages": [
+        "This cell method is not enabled in this binding"
+      ],
+      "classification": "EXPLICITLY_UNIMPLEMENTED_ON_THIS_SURFACE"
+    },
+    {
+      "file": "crates/rx-api/src/grpc/cell_negotiation.rs",
+      "method": "set_recovery_plan",
+      "source_line": 492,
+      "messages": [
+        "This cell method is not enabled in this binding"
+      ],
+      "classification": "EXPLICITLY_UNIMPLEMENTED_ON_THIS_SURFACE"
+    },
+    {
+      "file": "crates/rx-api/src/grpc/cell_negotiation.rs",
+      "method": "prepare_restart",
+      "source_line": 501,
+      "messages": [
+        "This cell method is not enabled in this binding"
+      ],
+      "classification": "EXPLICITLY_UNIMPLEMENTED_ON_THIS_SURFACE"
+    },
+    {
+      "file": "crates/rx-api/src/grpc/cell_negotiation.rs",
+      "method": "get_restart_preparation",
+      "source_line": 510,
+      "messages": [
+        "This cell method is not enabled in this binding"
+      ],
+      "classification": "EXPLICITLY_UNIMPLEMENTED_ON_THIS_SURFACE"
+    },
+    {
+      "file": "crates/rx-api/src/grpc/cell_negotiation.rs",
+      "method": "prepare_close",
+      "source_line": 519,
+      "messages": [
+        "This cell method is not enabled in this binding"
+      ],
+      "classification": "EXPLICITLY_UNIMPLEMENTED_ON_THIS_SURFACE"
+    },
+    {
+      "file": "crates/rx-api/src/grpc/cell_negotiation.rs",
+      "method": "restart_run",
+      "source_line": 528,
+      "messages": [
+        "This cell method is not enabled in this binding"
+      ],
+      "classification": "EXPLICITLY_UNIMPLEMENTED_ON_THIS_SURFACE"
+    },
+    {
+      "file": "crates/rx-api/src/grpc/cell_negotiation.rs",
+      "method": "close_without_restart",
+      "source_line": 537,
+      "messages": [
+        "This cell method is not enabled in this binding"
+      ],
+      "classification": "EXPLICITLY_UNIMPLEMENTED_ON_THIS_SURFACE"
+    },
+    {
+      "file": "crates/rx-api/src/grpc/cell_negotiation.rs",
+      "method": "record_change",
+      "source_line": 546,
+      "messages": [
+        "This cell method is not enabled in this binding"
+      ],
+      "classification": "EXPLICITLY_UNIMPLEMENTED_ON_THIS_SURFACE"
+    },
+    {
+      "file": "crates/rx-api/src/grpc/cell_negotiation.rs",
+      "method": "register_qualification",
+      "source_line": 555,
+      "messages": [
+        "This cell method is not enabled in this binding"
+      ],
+      "classification": "EXPLICITLY_UNIMPLEMENTED_ON_THIS_SURFACE"
+    },
+    {
+      "file": "crates/rx-api/src/grpc/cell_negotiation.rs",
+      "method": "get_material",
+      "source_line": 601,
+      "messages": [
+        "This cell method is not enabled in this binding"
+      ],
+      "classification": "EXPLICITLY_UNIMPLEMENTED_ON_THIS_SURFACE"
+    },
+    {
+      "file": "crates/rx-api/src/grpc/operation.rs",
+      "method": "submit",
+      "source_line": 33,
+      "messages": [
+        "use the mandatory cell admission contract"
+      ],
+      "classification": "EXPLICITLY_UNIMPLEMENTED_ON_THIS_SURFACE"
+    },
+    {
+      "file": "crates/rx-api/src/grpc/operation.rs",
+      "method": "lookup",
+      "source_line": 41,
+      "messages": [
+        "Cell.SubmitOperation replies are recovered by retrying the same cell request"
+      ],
+      "classification": "EXPLICITLY_UNIMPLEMENTED_ON_THIS_SURFACE"
+    },
+    {
+      "file": "crates/rx-api/src/grpc/operation.rs",
+      "method": "request_cancel",
+      "source_line": 49,
+      "messages": [
+        "cancel binding is not enabled"
+      ],
+      "classification": "EXPLICITLY_UNIMPLEMENTED_ON_THIS_SURFACE"
+    },
+    {
+      "file": "crates/rx-api/src/grpc/workflow.rs",
+      "method": "create_run",
+      "source_line": 42,
+      "messages": [
+        "This workflow mutation is not enabled"
+      ],
+      "classification": "EXPLICITLY_UNIMPLEMENTED_ON_THIS_SURFACE"
+    },
+    {
+      "file": "crates/rx-api/src/grpc/workflow.rs",
+      "method": "start_run",
+      "source_line": 50,
+      "messages": [
+        "cell start requires the cell authorization contract"
+      ],
+      "classification": "EXPLICITLY_UNIMPLEMENTED_ON_THIS_SURFACE"
+    },
+    {
+      "file": "crates/rx-api/src/grpc/workflow.rs",
+      "method": "abandon_run",
+      "source_line": 103,
+      "messages": [
+        "This workflow mutation is not enabled"
+      ],
+      "classification": "EXPLICITLY_UNIMPLEMENTED_ON_THIS_SURFACE"
+    }
+  ],
+  "counts": {
+    "http_paths": 90,
+    "http_method_bindings": 99,
+    "grpc_explicitly_unimplemented": 20
+  }
+}

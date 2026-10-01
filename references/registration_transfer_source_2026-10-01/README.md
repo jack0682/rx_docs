@@ -25,3 +25,16 @@ revisions/history, acceptance recovery and P execution assignment remain require
 The current CLI is a development tool and is not invoked/installed automatically.
 It has no unseal or P-acceptance command. Whole-store restore/privileged schema
 replacement are outside this per-file fence and remain separate framework work.
+
+## Linux CI and source-boundary integration
+
+[Platform CI](platform-linux-ci.json) passed 514 tests with 0 failures and 18
+ignored; [Solutions CI](solutions-linux-ci.json) passed 467 with 0 failures and
+22 ignored. Both complete workspace lint checks passed. Solutions installed-skill
+jobs passed on Ubuntu amd64 and arm64, separately from the prior-reader scene.
+
+[Integration](integration.json) records documentation PR 78, Platform PR 65 and
+Solutions PR 74, merged in that order through required CI/DCO and verified signed
+merges. Tested and integrated product trees match, with all 125 SDK files matching.
+This lands the source-side prerequisite; R5 target intake, acceptance recovery
+and P-directed execution remain unfinished.

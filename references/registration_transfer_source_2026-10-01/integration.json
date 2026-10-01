@@ -1,0 +1,21 @@
+{
+  "docs_merge": "93ac6dcdc11826edc2487afb16759824838a53f5",
+  "platform": {
+    "pr": 65,
+    "merge": "2db27621e025e97345b21d3a6d819f3067a1d418"
+  },
+  "solutions": {
+    "pr": 74,
+    "merge": "47e848a419e65895a020cd06f5831752b9cd858f"
+  },
+  "checks": {
+    "required_ci_and_dco": "PASS",
+    "merge_signatures": "VERIFIED_OPENPGP_AND_AUTHOR_DCO",
+    "tested_tree_equals_integrated_tree": true,
+    "sdk_files_matched": 125
+  },
+  "scope": "Source-side freeze and legacy reader refusal only",
+  "platform_acceptance_implemented": false,
+  "execution_assignment_implemented": false,
+  "full_framework_complete": false
+}

@@ -1,0 +1,56 @@
+{
+  "headSha": "58e5fcbaef534eb7703e57e709ca7c859aa454ac",
+  "event": "pull_request",
+  "status": "completed",
+  "conclusion": "success",
+  "url": "https://github.com/jack0682/rx-solutions/actions/runs/36803592020",
+  "rust_workspace": {
+    "passed": 467,
+    "failed": 0,
+    "ignored": 22
+  },
+  "jobs": [
+    {
+      "name": "Repository and GitFlow",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/jack0682/rx-solutions/actions/runs/36803592020/job/110183044412"
+    },
+    {
+      "name": "Installed skills (arm64)",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/jack0682/rx-solutions/actions/runs/36803592020/job/110183044627"
+    },
+    {
+      "name": "Operator app",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/jack0682/rx-solutions/actions/runs/36803592020/job/110183044632"
+    },
+    {
+      "name": "DYNAMIXEL helper boundary",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/jack0682/rx-solutions/actions/runs/36803592020/job/110183044700"
+    },
+    {
+      "name": "Rust",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/jack0682/rx-solutions/actions/runs/36803592020/job/110183044702"
+    },
+    {
+      "name": "Installed skills (amd64)",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/jack0682/rx-solutions/actions/runs/36803592020/job/110183044740"
+    },
+    {
+      "name": "CI",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/jack0682/rx-solutions/actions/runs/36803592020/job/110184041321"
+    }
+  ]
+}

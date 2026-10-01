@@ -1,7 +1,7 @@
 # 0F 레이저 셀의 버전 있는 데이터 모델
 
-2026-10-01. 이 문서를 갱신하며 모델·API·CLI 우선 세로 경로를 추적한다. 현재는 **M1 로컬 사전 검증 통과·통합 검증 중**이며
-사용자 수락·게시·운영·RC 완료를 뜻하지 않는다. [WF 요구](../46_workflow_product_experience.md),
+2026-10-02. **M1 사용자 수락 완료, M2 로컬 사전 검증 통과·통합 검증 중**이다.
+M2 사용자 수락·게시·운영·RC 완료를 뜻하지 않는다. [WF 요구](../46_workflow_product_experience.md),
 [전체 계획](framework_delivery_plan.md), [코어 헌장](../43_core_charter.md), RF 원장은 변경하지 않는다.
 
 ## 범위와 단계
@@ -146,3 +146,76 @@ idempotence, supply 24 / dense 2400 / my-tray 20, UI Calculate points와의 결�
 
 ②③은 기존 API의 클라이언트 표시·진단 보완이다. 공개 응답 형태, 코어/SDK, 기존 저장본의 의미를
 변경하지 않는다. ①의 실제 파생 계산·정합 제약은 M2 구현에 남으며 문서 결정만으로 완료 처리하지 않는다.
+
+## M2 구현 경계 — 버전 있는 Workflow 모델과 해석 보고서
+
+2026-10-02, 로컬 사전 검증 완료·통합 중. 기존 M1 Definition/PointPattern JSON과 API는 그대로 유지한다.
+M2는 같은 카탈로그 권한·writer 위에 별도의 versioned Workflow 모델을 추가한다. 기존 Task
+선언을 실행 계약으로 소급 해석하지 않는다. 새 모델은 명시적인 schema로 Task 계약·규칙·제약과
+순서 있는 node→Task 참조를 저장한다. 각 member의 신원은 Workflow의 정확한 revision/digest와
+member ID로 고정한다. 다른 규칙을 수정해도 기존 Workflow revision의 member는 변하지 않는다.
+
+- Task 계약: 사용 context 슬롯/허용 type/단일·다중, Property Registry 참조와 순서 있는 source
+  chain, required capability, Skill→primitive/parameter mapping, timeout 속성, done 관측 계약,
+  알려진 실패의 stop과 UNKNOWN의 hold/reconcile 정책. 지원·완료 관측은 선언이며 실제 권한이 아니다.
+- 규칙: 이름 있는 유한 DAG. field/property/rule lookup, 같은 단위의 덧셈·뺄셈·min/max,
+  unitless 배율, vector 성분, 명시된 quaternion을 따르는 pose offset만 지원한다.
+  임의 스크립트·네트워크·시간·수식 문자열 평가는 없다. cycle·복잡도 초과는 오류다.
+- 값: 단위와 scalar/vector/text/bool을 구별한다. 수치 구간은 min/max를 유지하고 제약은
+  가장 불리한 조합으로 검사한다. 제공된 잘못된 Override/입력을 낮은 우선순위 값으로 덮지 않는다.
+- 출처: 선택된 source tier, 정확한 정의/Workflow/member 참조, 사용한 입력과 규칙을 보존한다.
+  제약은 Override 선택 이후 검사하고 node/property 위치와 이유를 반환한다.
+- 슬롯 위치·표면 z는 M1의 full pose에서 얻는다. 접근은 선언한 로컬 방향과 part/clearance로
+  계산하고 그 결과의 z를 읽는다. legacy surface_height를 추가 offset이나 실행값 원본으로 쓰지 않는다.
+- M2 해석 요청은 선택한 part/model·resource·property set·Override·실행 입력과 slot index를
+  고정한다. 한 부품의 모든 node 값을 해석한다. N개 부품의 순서·runtime binding·실행은 M3에서
+  각 부품의 동일한 해석 경로와 원 보고서 참조로 연결한다.
+
+새 `/api/v1/workflow-models`, `/api/v1/workflow-model`은 원 요청/CAS/불변 revision으로 모델을
+저장·조회한다. `/api/v1/workflow-resolutions`는 권한을 확인한 정확한 자료로 계산하고 immutable
+보고서를 저장하며, `/api/v1/workflow-resolution`은 같은 보고서를 조회한다. 새 자료는 별도 record
+schema/index를 사용하여 M1 목록·decoder에 새 enum/필드를 섞지 않는다. 카탈로그 권한·원장·DB를
+따로 만들지 않는다. 모든 CLI/UI는 이 API를 사용한다. M2 사전 검증 근거는 아래에 제한하며 사용자 수락을 대신하지 않는다.
+
+## M2 데이터와 사전 검증
+
+M1 58개 정의를 보존하고 M2 정의 46개를 추가했다. Workflow 데이터는 Task 8개, 규칙 23개,
+제약 23개이며 pick→load→clamp→close-door→process→open-door→unload→place를 선언한다.
+타입·속성·품목·트레이·지그·그리퍼·기계 이름과 수치는 Solutions 패키지에만 있다. Platform은
+자료 조회·단위/타입/frame 검사·유한 규칙 해석·구간 제약·권한/불변 보고서 저장만 제공한다.
+레이저 전용 코어 분기는 추가하지 않았다. 기존 Normative v1.1 계약의 의미·해시는 변경하지 않았다.
+
+### 슬롯 높이와 접촉 기준
+
+새 M2 트레이 Type은 legacy surface_height를 포함하지 않는다. Model은 TRAY_LOCAL의 슬롯
+입구 원점 [0,0,0]과 형상을, Instance는 world frame·origin·orientation을 함께 선언한다.
+슬롯 입구 pose를 위치 원본으로 삼으며 z는 파생 성분이다. 지그 표면은 지그 원점에서 명시한
+로컬 법선 방향으로 지그 높이만큼 이동한다. 별도 독립 높이 측정값은 이번 데이터에 없다.
+
+접촉 위치는 모의 부품 중심을 datum으로 하여 `입구 + 법선 × (부품 높이/2 - 안착 깊이)`,
+접근 위치는 `입구 + 법선 × (부품 높이 - 안착 깊이 + clearance)`다. 실측 TCP·기하 적합성·충돌
+검증을 뜻하지 않는다. 힘/폭/질량·피치·트레이/지그 크기·안착 깊이·planning frame·동작 시간·지그
+family 제약은 Override 적용 후 평가한다. 범위 연산은 외향 반올림하고 독립 최악 조합으로 검사한다.
+
+### 실행한 반례와 경계
+
+- ECC_51-14 / ECC_99-14의 pick 폭 47/77 mm, 힘 25/17.5 N, 접근 z 795/825 mm와 load
+  접근 z 885/915 mm를 독립 기대값과 대조했다. open-door의 false와 수치 0을 누락으로 바꾸지 않는다.
+- dense tray, 힘 60 N/0 N, 폭 70..130 mm, 잘못된 힘 단위 kg, 상충 Property Set를 위치와
+  함께 차단했다. 폭 100 mm Override가 그리퍼 최대폭 검사만 통과했던 반례를 발견하고 **패키지
+  제약**에 슬롯 pitch 검사를 추가했다. 코어에 트레이 전용 조건을 넣지 않았다.
+- 안전 구간 20..40 N도 concrete=false / BOUNDED_INPUT_NOT_EXECUTABLE로 보존한다.
+  값이 모두 고정되고 제약을 통과해도 RESOLVED_NOT_QUALIFIED다. 게시·운전 권한이 아니다.
+- 세 번째 Object Type/Model과 회전한 트레이 Model/Instance를 데이터로만 추가하고 같은
+  Workflow revision/rules로 재해석했다. 개발자의 실제 10분 측정과 실행 증거는 아직 없다.
+- 실제 임시 SQLite/API 서버에서 커밋 후 응답 유실·원 요청 복구·프로세스 재시작·저장 보고서
+  재조회/목록을 확인했다. 해석 중 권한 철회, 잘못된 digest·타 catalog 참조는 별도 시험으로 거절했다.
+  이 응답 유실은 저작 API 시험이며 장비 UNKNOWN/자원 보유/운전자 복구 시험이 아니다.
+- UI는 CLI가 저장한 같은 보고서를 재열어 8개 노드의 101개 값·단위·선택 source를 대조했다.
+  정의/규칙의 pinned 이름과 입력 출처, 위반 클릭의 node 이동을 확인했다. report 목록은 서로
+  구분되는 전체 ID를 표시한다. UI 계산 경로는 없다.
+
+Platform 전체 workspace 시험·Clippy, SDK 137개 파일의 원본 일치, CLI 요청 복구 6개 시험,
+UI 77개 시험·typecheck/build와 실제 API 회귀가 통과했다. PR의 정확한 head CI와 통합 상태는
+병합 결과로 따로 기록한다. 사용자 M2 수락, Preview/게시/actual-part runtime binding/모의
+운전·UNKNOWN 복구, 최종 RC와 Linux 45분 재현은 미완이다. 기존 RF/WF 완료 판정은 올리지 않는다.

@@ -1,0 +1,109 @@
+{
+  "cell_count": 0,
+  "history_records": 14,
+  "old_reader_refused": true,
+  "original_freeze": {
+    "declarations": [
+      {
+        "document": {
+          "schema": "rx.component-registration.v1",
+          "value": {
+            "declaration": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "label": "source-history-revised"
+            },
+            "id": "6f092f7c-ca5b-4360-8d3c-ab9b6b187288",
+            "state": "ACCEPTED"
+          }
+        },
+        "key": "components/registration/6f092f7c-ca5b-4360-8d3c-ab9b6b187288",
+        "revision": "2"
+      },
+      {
+        "document": {
+          "schema": "rx.component-registration.v1",
+          "value": {
+            "declaration": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "label": "second"
+            },
+            "id": "d77c5fe4-d18c-44ab-9b89-047b01fa949b",
+            "state": "ACCEPTED"
+          }
+        },
+        "key": "components/registration/d77c5fe4-d18c-44ab-9b89-047b01fa949b",
+        "revision": "1"
+      }
+    ],
+    "local_declaration_writer": "PERMANENTLY_FROZEN",
+    "platform_acceptance": "NOT_ESTABLISHED",
+    "process_ownership": "NOT_TRANSFERRED",
+    "record": {
+      "declaration_count": "2",
+      "declarations_digest": "61690d3166ba1fbec32b3852d34a633b6fb379ea7d3e380e4e4c24b36381f474",
+      "history_head": "14",
+      "request": {
+        "id": "5d933bf3-0118-4dfa-8c23-b79824be2c44",
+        "target_installation": "bb8a86ef-77eb-4eb5-8111-f140da295cd5"
+      }
+    },
+    "selection_index": {
+      "document": {
+        "schema": "rx.resident-selections.v1",
+        "value": [
+          {
+            "registration": "6f092f7c-ca5b-4360-8d3c-ab9b6b187288",
+            "selection": "first"
+          },
+          {
+            "registration": "d77c5fe4-d18c-44ab-9b89-047b01fa949b",
+            "selection": "second"
+          }
+        ]
+      },
+      "key": "components/resident-selections",
+      "revision": "1"
+    }
+  },
+  "physical_execution": "NOT_PERFORMED",
+  "process_ownership": "NOT_TRANSFERRED",
+  "receipt": {
+    "content_verification": "NOT_ESTABLISHED",
+    "execution_ownership": "NOT_ESTABLISHED_BY_REGISTRATION",
+    "id": "5d933bf3-0118-4dfa-8c23-b79824be2c44",
+    "imported_at": {
+      "clock_id": "reporter-test-clock",
+      "ticks_ns": "1000"
+    },
+    "imported_by": "admin",
+    "input": {
+      "expected_binding": "d5840cf592a285b00b4723854743ce6f2d6d39a233bbcebe058496015246f350",
+      "freeze": "5d933bf3-0118-4dfa-8c23-b79824be2c44",
+      "source": "source"
+    },
+    "original": {
+      "declaration_count": "2",
+      "declarations_digest": "61690d3166ba1fbec32b3852d34a633b6fb379ea7d3e380e4e4c24b36381f474",
+      "history_head": "14",
+      "request": {
+        "id": "5d933bf3-0118-4dfa-8c23-b79824be2c44",
+        "target_installation": "bb8a86ef-77eb-4eb5-8111-f140da295cd5"
+      }
+    },
+    "owner": "admin",
+    "source": "source",
+    "source_binding": {
+      "location": "2d684710cd20a4dbbcee2c6a7c2545d4530edbff1eb1470eecbd10e8e5775cbd",
+      "owner": "admin"
+    },
+    "work_use_permission": "NOT_EVALUATED"
+  },
+  "source_offline_recovery": true,
+  "status": "PASS_TARGET_INTAKE"
+}

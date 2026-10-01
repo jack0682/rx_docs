@@ -1,0 +1,8 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.09s
+     Running tests/resident_reporting.rs (<workspace>/resident-contract-platform-target/debug/deps/resident_reporting-50c867a2cdeef8f7)
+
+running 1 test
+test actual_registration_source_is_imported_through_authenticated_http_and_original_request_recovery ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 3 filtered out; finished in 0.85s
+

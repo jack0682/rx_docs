@@ -1,0 +1,130 @@
+{
+  "environment": {
+    "system": "Darwin",
+    "machine": "arm64",
+    "macos": "27.0"
+  },
+  "scope": "local software validation; no physical execution",
+  "sdk_files_matched": 126,
+  "checks": {
+    "platform/check_contract_baselines": {
+      "status": "PASS",
+      "log_sha256": "1eba710610e4c8b2ba9e1d8954b5731f9980482f26158df7ce3f93862c340999"
+    },
+    "platform/check_engine_boundaries": {
+      "status": "PASS",
+      "log_sha256": "17404ac9446bfa8117c5f7caaf2a3d1616cee4b5017a201869db0176c9cfe7fb"
+    },
+    "platform/check_invariant_traceability": {
+      "status": "PASS",
+      "log_sha256": "d05417a12a752c64d02ea98934a1071b2b9816c82fc99ffcdfae42618451c238"
+    },
+    "platform/check_repository": {
+      "status": "PASS",
+      "log_sha256": "d37bc5c2ed7cb32930f91434809cd200a89c683174b3abd6a085896079307977"
+    },
+    "platform/clippy": {
+      "status": "PASS",
+      "log_sha256": "b6faab87ba6d14fbc05e18e2bcd20aef876c574bd84267701bd3faa3bb5cae9b"
+    },
+    "platform/fmt": {
+      "status": "PASS",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "platform/test": {
+      "status": "PASS",
+      "log_sha256": "acc6583f494695b0b432060245f8841bd547d40e21184dbd089bad76c3240704"
+    },
+    "platform/test_commit_policy": {
+      "status": "PASS",
+      "log_sha256": "5291e8f52698b1c5d4cab4aa07dda333c41f816e88c5af89bf82477e6ae520c5"
+    },
+    "platform/test_export_host_sdk": {
+      "status": "PASS",
+      "log_sha256": "b83282d5c25c0f3e7478e7338b6c61ba7b4cfc27af2541fee137c1c504677387"
+    },
+    "platform/test_repository": {
+      "status": "PASS",
+      "log_sha256": "729d2d181714dbd66a9573d932ac929ec0d9c69b87e934bc5366387039cb23e6"
+    },
+    "platform/update_assignment_binding": {
+      "status": "PASS",
+      "log_sha256": "e953c4b4b13e050b2e6b08bfdeefda698eabb1f6602c819241f629e776af6c34"
+    },
+    "platform/update_executor_plan_binding": {
+      "status": "PASS",
+      "log_sha256": "da89b0ef3f95e404fa77fcd828d05287cf37e7ec325de0978891274b66e3db95"
+    },
+    "platform/update_executor_read_binding": {
+      "status": "PASS",
+      "log_sha256": "1df128f66f6c38d8ec177c150aadfa3a63ead5ebdc87fee57aed6042c4f2939d"
+    },
+    "platform/update_host_configuration_binding": {
+      "status": "PASS",
+      "log_sha256": "1e4966ab1ef905c7a4d7e72cec1ee3669ad66de7b4ad6032716f77f7fa415973"
+    },
+    "platform/update_host_qualification_binding": {
+      "status": "PASS",
+      "log_sha256": "f3179340101915fd7a6a2f11fe7ce6c15fccad96c83d4ca89dd6188bc87a4ee9"
+    },
+    "platform/update_host_read_binding": {
+      "status": "PASS",
+      "log_sha256": "48a8175ce6ce7ce2c5d7846d38eb72143ae794f34edf18d1b7f7381a2a2e34a3"
+    },
+    "platform/update_production_binding": {
+      "status": "PASS",
+      "log_sha256": "b3cb1a31104198ea777faff39e887bee58370c39f9f24709c4e84831c7f1d594"
+    },
+    "platform/update_resident_reporting_binding": {
+      "status": "PASS",
+      "log_sha256": "485073bfe7c8882a3a71c4436fded3748ae003afcc06e358421222c497330081"
+    },
+    "solutions/check_device_catalog_sources": {
+      "status": "PASS",
+      "log_sha256": "7b17ca719b21aea65999ce34d62c67fe523516ce8bf4555feec7d993d0c4f816"
+    },
+    "solutions/check_invariant_traceability": {
+      "status": "PASS",
+      "log_sha256": "7adcde7095392748f18d327cfaa4d183f4f512856c6ff1c76d6d4a83ed0ebaa1"
+    },
+    "solutions/check_repository": {
+      "status": "PASS",
+      "log_sha256": "54ffc51d32593d57dc83f383f5b1f384925c7d48e1373f9304ad6a4191b87a4b"
+    },
+    "solutions/clippy": {
+      "status": "PASS",
+      "log_sha256": "3238dc9935d1ce365cb5c081a62acec2417a4aa9470113cd523a14e21fbb56fc"
+    },
+    "solutions/fmt": {
+      "status": "PASS",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "cargo fmt --all; subsequent clean tree and CI formatting check required"
+    },
+    "solutions/test": {
+      "status": "PASS",
+      "log_sha256": "652865ce0384d3bb5e16d7c72e68778283422084f05fde05def3df441423d7bd"
+    },
+    "solutions/test_commit_policy": {
+      "status": "PASS",
+      "log_sha256": "8d8c07b141df0d9567e0577854cf0af0e36f00dfa7a9adacbe98672c4a3e7d8e"
+    },
+    "solutions/test_native_inventory": {
+      "status": "PASS",
+      "log_sha256": "fe545670dae01592fe5606f4934f28d582c72443756537a9730e3fbfe4f258e2"
+    },
+    "solutions/test_repository": {
+      "status": "PASS",
+      "log_sha256": "aae7e3727dd8d7de7ec76244d42ca239e07d6e37378489a36b419a4533d5d222"
+    }
+  },
+  "platform": {
+    "passed": 521,
+    "failed": 0,
+    "ignored": 19
+  },
+  "solutions": {
+    "passed": 422,
+    "failed": 0,
+    "ignored": 19
+  }
+}

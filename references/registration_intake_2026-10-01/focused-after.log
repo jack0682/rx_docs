@@ -1,0 +1,14 @@
+   Compiling rx-application v0.1.0 (<workspace>/release-platform/crates/rx-application)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.41s
+     Running tests/transactions.rs (<workspace>/resident-contract-platform-target/debug/deps/transactions-ce5865c51613ce4c)
+
+running 6 tests
+test component_intake_tests::a_cached_import_receipt_does_not_bypass_current_authorization ... ok
+test component_intake_tests::canonical_import_requires_revoking_diagnostic_alias_and_prevents_recreation ... ok
+test component_intake_tests::source_and_current_authority_failures_cannot_publish_imports ... ok
+test component_intake_tests::identity_collision_and_inconsistent_history_leave_no_usable_new_registration ... ok
+test component_intake_tests::a_new_boot_reauthorizes_and_resumes_the_same_partial_intake ... ok
+test component_intake_tests::original_identity_revisions_and_events_are_atomic_visible_only_after_acceptance ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 297 filtered out; finished in 0.09s
+

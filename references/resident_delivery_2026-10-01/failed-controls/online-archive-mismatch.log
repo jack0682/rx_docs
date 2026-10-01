@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/Users/ojaehong/RX_automation/rx_ws/.build/linux-install-bundle/tools/prepare_dhi_sources.py", line 133, in <module>
+    main()
+    ~~~~^^
+  File "/Users/ojaehong/RX_automation/rx_ws/.build/linux-install-bundle/tools/prepare_dhi_sources.py", line 99, in main
+    raise ValueError("DHI_ARCHIVE_CONTENT_MISMATCH: " + name)
+ValueError: DHI_ARCHIVE_CONTENT_MISMATCH: dynamixel_sdk

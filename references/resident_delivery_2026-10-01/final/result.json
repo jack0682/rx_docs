@@ -1,0 +1,85 @@
+{
+  "local_stop_ms": 37,
+  "recovered": {
+    "accepted_at": {
+      "clock_id": "reporter-test-clock",
+      "ticks_ns": "1000"
+    },
+    "basis": "REPORTED_REGISTRY_SNAPSHOT",
+    "component": "01a0f4ed-6346-77e1-a637-d2eb16b9d7df",
+    "component_revision": "1",
+    "execution_ownership": "NOT_ESTABLISHED_BY_REPORT",
+    "id": "01a0f4ed-652f-73f6-899e-fae4e510c257",
+    "report": {
+      "detail": "supervisor phase ProcessReady; no additional lifecycle error; functional readiness and work-use permission are not assessed",
+      "pid": 45007,
+      "scope": "01a0f4ed-6347-774e-9039-dd907063fb2a",
+      "sequence": "1",
+      "source": {
+        "catalog": {
+          "digest": "6c9bea721b034923c84db18f06b7b37d45b94d6be2a969f3008218175ba53393",
+          "program": "test/resident-status"
+        },
+        "instance": "3106263f-490f-41d0-afba-75bd5bb2de50",
+        "registration": "25a5073e-c29c-49da-8fcc-1b5778e31d9c",
+        "registration_revision": "1",
+        "run": "d1e8cf95-ba6a-4b98-ace6-2a690d13bc58",
+        "selection": "status"
+      },
+      "state": "RUNNING"
+    },
+    "reporter": {
+      "authentication_binding": "c69c2cb5fa7bead0f681a580c415b4f4b56c1013588941d9251450f3863cc92b",
+      "id": "01a0f4ed-6263-714f-a80f-1d19b31fe4d3",
+      "installation": "a4a43396-4c65-48fb-a2de-16822e5bc062",
+      "peer_boot": "49dd7361-124c-42d4-b031-a51e8296722d",
+      "principal": "reporter",
+      "runtime_boot": "01a0f4ed-5ff4-717e-89f4-b91da87003a6",
+      "store_generation": "01a0f4ed-5ff6-7392-9b9e-0f3980576160"
+    },
+    "work_use_permission": "NOT_EVALUATED"
+  },
+  "retained_during_outage": false,
+  "scope": "Actual locally approved non-actuating Supervisor child and attributed mTLS reports; not Platform launch authority or registry migration",
+  "status": "PASS",
+  "stopped": {
+    "accepted_at": {
+      "clock_id": "reporter-test-clock",
+      "ticks_ns": "1000"
+    },
+    "basis": "REPORTED_REGISTRY_SNAPSHOT",
+    "component": "01a0f4ed-6346-77e1-a637-d2eb16b9d7df",
+    "component_revision": "1",
+    "execution_ownership": "NOT_ESTABLISHED_BY_REPORT",
+    "id": "01a0f4ed-67a0-73cd-9f84-67a0657b2c04",
+    "report": {
+      "detail": "supervisor phase Exited; no additional lifecycle error; functional readiness and work-use permission are not assessed",
+      "exit_code": 0,
+      "pid": 45007,
+      "scope": "01a0f4ed-6347-774e-9039-dd907063fb2a",
+      "sequence": "2",
+      "source": {
+        "catalog": {
+          "digest": "6c9bea721b034923c84db18f06b7b37d45b94d6be2a969f3008218175ba53393",
+          "program": "test/resident-status"
+        },
+        "instance": "3106263f-490f-41d0-afba-75bd5bb2de50",
+        "registration": "25a5073e-c29c-49da-8fcc-1b5778e31d9c",
+        "registration_revision": "1",
+        "run": "d1e8cf95-ba6a-4b98-ace6-2a690d13bc58",
+        "selection": "status"
+      },
+      "state": "EXITED"
+    },
+    "reporter": {
+      "authentication_binding": "c69c2cb5fa7bead0f681a580c415b4f4b56c1013588941d9251450f3863cc92b",
+      "id": "01a0f4ed-6263-714f-a80f-1d19b31fe4d3",
+      "installation": "a4a43396-4c65-48fb-a2de-16822e5bc062",
+      "peer_boot": "49dd7361-124c-42d4-b031-a51e8296722d",
+      "principal": "reporter",
+      "runtime_boot": "01a0f4ed-5ff4-717e-89f4-b91da87003a6",
+      "store_generation": "01a0f4ed-5ff6-7392-9b9e-0f3980576160"
+    },
+    "work_use_permission": "NOT_EVALUATED"
+  }
+}

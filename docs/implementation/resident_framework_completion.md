@@ -142,7 +142,7 @@ R3 통로만으로 RF02 또는 전체 상주 프레임워크 Goal을 완료하�
 
 ## R4 — 지속 보고와 진단 이력의 명시적 연속
 
-2026-10-01, 구현·검증 진행 중. 변경 범위는 P의 기존 보고 writer/HTTP/mTLS 경로,
+2026-10-01, 구현·범위별 검증 완료, develop 통합 대기. 변경 범위는 P의 기존 보고 writer/HTTP/mTLS 경로,
 S의 reporting client·영속 outbox·별도 전달 worker와 기존 rx-solutionsd 진입점이다.
 새 프로세스 관리자나 업무 권한 원장을 만들지 않는다. [보고 계약 revision 2](../contracts/resident-reporting/v1/README.md)는
 소유자가 이전 범위를 원자적으로 폐기하고 같은 출처의 후속 범위를 승인하는 절차와 scoped head 조회를 추가한다.
@@ -160,5 +160,13 @@ Supervisor를 호출하거나 프로세스 권한을 만들지 않는다. 로컬
 
 현재 시험은 P 재시작/소유자 재승인, 후속 범위의 단일성·원자성·순서 보존,
 S 저장 실패·응답 유실·재개·포화와 실제 Supervisor 소프트웨어 자식/mTLS 전달·RPC 지연 중 종료·
-보고 worker 재시작/재승인 장면을 포함한다. 최종 소스와 Linux daemon 진입점 결과, 전체 CI/통합 여부는
-후속 근거로 고정한다. 이 항목의 구현이 P 실행 배정, S 등록 writer 이행, 패키지 내용 수용 또는 RF02 전체 완료를 뜻하지 않는다.
+보고 worker 재시작/재승인 장면을 포함한다. [현재 검증 근거](../../references/resident_delivery_2026-10-01/README.md)는
+Platform `4be79f3f56d21674ceff0c0b5ac18ef055c31cec`와 Solutions
+`24c541f134b41e3f8f3b0e8e5b6d590574c068c4`의 깨끗한 소스로 통합 장면을 다시 실행한 결과다.
+최종 지연 장면의 로컬 자식 종료는 30ms였으며 이는 해당 모의 장면의 관찰값이다.
+Ubuntu 24.04 arm64 정식 이미지에서 실제 daemon 진입점, 보고 불가 상태의 두 상태 서비스
+준비·정상 종료, 미전송 Exited 기록 보존도 통과했다. 서명·자원 제한·네이티브 설치 감사는 유지했다.
+Linux CI는 P 511 passed / 0 failed / 18 ignored, S 465 passed / 0 failed / 22 ignored이며
+S의 amd64·arm64 설치 번들 검사도 통과했다. 통합 PR은
+[Platform #64](https://github.com/jack0682/rx-platform/pull/64),
+[Solutions #73](https://github.com/jack0682/rx-solutions/pull/73)이다. 이 항목의 구현이 P 실행 배정, S 등록 writer 이행, 패키지 내용 수용 또는 RF02 전체 완료를 뜻하지 않는다.

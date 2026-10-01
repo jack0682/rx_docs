@@ -298,3 +298,34 @@ S의 Program은 릴리스 카탈로그에서만 구성되며 Deserialize를 제�
 RegisteredBackend의 배정 기록 후 OS 생성 경로를 연결하고, 원 등록/배정/instance·자원·의존 조건과
 응답 유실·P/S 상실 후 조회/복귀를 검증한다. 이번 TargetAcceptance와 Observer 보고 세션을 실행 허가로
 승격하지 않는다. 자동 설치·일반 검색/관리·이행 실패 복구 및 RF01–RF14는 계속 열려 있다.
+
+## R6 — P가 배정하고 S가 실제 실행하는 경로
+
+2026-10-01, 구현·검증 진행 중. [실행 계약 r1](../contracts/resident-execution/v1/README.md)은
+기존 P writer와 S RegisteredSupervisor/OS 집행 경로를 연결한다. 별도 Supervisor-only mTLS 세션과
+설치가 승인한 registry/release/program digest를 사용하며 Observer 보고·이관 확인을 실행 권한으로 바꾸지 않는다.
+P 소유자가 현재 구성요소 revision·파라미터·의존 선택을 제안하고, S가 실제 서명된 릴리스와 카탈로그로
+준비한 내용을 확인한 뒤 승인한다. P가 run/instance를 고정하고, S는 단 한 번의 live grant를 받아
+원래 배정 기록 → OS 요구 집행 → 생성 순서를 따른다. 일반 JSON 또는 저장된 grant로 live 권한을 복원하지 않는다.
+
+현재 Linux arm64 컨테이너 장면에서 실제 rx-solutionsd의 두 상태 서비스 실행·OS 주소공간 상한 적용·P 중지·
+종료 보고/점유 해제가 통과했다. 승인 및 관측 응답 유실도 복구했다. P 지연/거절 장면에서는 로컬 종료 후
+원 미전송 종료 기록과 P의 미해결 점유를 보존했다. 같은 원 배정의 daemon 재실행은 거절되고 이전 이력이
+변하지 않았다. 이는 실제 소프트웨어/전송/커널 근거이며 물리 작업·기능 안전·business work 성공은 아니다.
+최종 커밋 기준 실행 결과·회귀·CI는 검증 기록에 연결한다.
+
+불명인 실행이나 잔여 의무는 TTL/PID로 해제하지 않는다. 부여된 점유가 남아 있을 때 선언 변경/퇴역은
+현재 경로에서 거절한다. 운영 중 교체의 일반 모델은 RF06 후속이다. 새 운영 저장소는 schema 9로
+구버전 writer를 거절하며, ordinary 6/source 7/intake 8 저장소는 필요할 때만 단조롭게 승격한다.
+이관된 구성요소는 원 registry/cut과 S 확인을 요구하며, 새 빈 DB로 기존 실행 책임을 피하지 않는다.
+
+아직 active-unknown 실행의 명시적 복귀, 전체 자원 묶음/의존/업무 사용 연결, 열린 작성자 패키지,
+자동 설치/배포 및 전체 RF01–RF14를 완료한 것은 아니다. 이번 검증은 현재 소스 빌드한 명령과
+기존 서명된 프로그램 콘텐츠를 사용한 것으로, 새로운 서명 설치 릴리스 배포를 뜻하지 않는다.
+
+R6의 현재 최종 로컬 검사: P 529 passed / 0 failed / 19 ignored,
+S 425 passed / 0 failed / 19 ignored, 두 전체 workspace clippy·format 통과.
+추가 시험은 원 registry/cut 불일치, P 재시작 후 이전 문맥 거절/점유 보존,
+Supervisor 역할로 바뀐 계정의 기존 일반 세션 사용 거절, grant 만료·변경된 launch·
+다른 로컬 소유자의 재소비와 이력 덮어쓰기 거절, schema 9의 단조 승격을 포함한다.
+이 수치에 별도 Linux 실제 명령 장면을 섞지 않는다. source snapshot/커밋/CI 근거는 별도로 남긴다.

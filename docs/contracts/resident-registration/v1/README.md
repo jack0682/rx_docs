@@ -1,4 +1,4 @@
-# Resident registration authoring — candidate extension revision 1
+# Resident registration authoring — candidate extension revision 2
 
 Status: implementation contract for new Platform-owned declarations, not a frozen
 base/cell protocol, package verification, execution permission or completed RF02
@@ -67,12 +67,24 @@ creation/change source and times. Restart invalidates old authenticated sessions
 as before but preserves component ID and history. A response snapshot provides no
 freshness or operating permission merely because it survived restart.
 
-There is no import endpoint, client-selected component ID or automatic legacy
-database adoption. S continues to own its existing standalone registrations until
-the explicit write-freeze/import/confirmation protocol is implemented. A P
-declaration must not be silently installed as an independent S registration with
-another ID. Discovery/pagination, cross-author sharing policy, verified package
-intake, S execution reports and assignment are still unfinished integration work.
+There is no client-selected ID or automatic legacy adoption through this authoring
+endpoint. The separate registration-transfer protocol preserves existing IDs and
+history through explicit source freeze, target intake and source acknowledgement.
+A P declaration must not be silently installed as an independent S registration
+with another ID.
+
+Revision 2 coordinates these declarations with optional resident execution. An
+issued, unresolved execution holds a logical component claim; new declaration
+changes and retirement are refused until that assignment is stopped/reconciled.
+Historical mutation-response recovery remains historical and cannot change the
+active declaration. The execution view carries its separately attributed content
+checkpoint and start/outcome records; this declaration-only view still does not
+establish content, ownership or work permission.
+
+The new operational path and Supervisor role opt into reader format 9, refusing
+older writers that would ignore claims. Ordinary declaration stores stay at their
+existing floor. Full live replacement, discovery/pagination, cross-author sharing,
+generic content extensibility and complete RF02 remain open.
 
 ## Required checks
 

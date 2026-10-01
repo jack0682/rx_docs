@@ -1,4 +1,4 @@
-# Registration transfer boundary, revision 3
+# Registration transfer boundary, revision 4
 
 Status: source preparation, target intake and explicit Supervisor acceptance
 reconciliation are integrated with scoped validation evidence. Content acceptance
@@ -66,7 +66,7 @@ entities remain opaque archive data and do not become live control state.
 The original resident-selection index is retained as provenance, not as a new
 execution assignment.
 
-Intake begins by promoting the target store to reader schema 8 in the same
+Intake begins by promoting the target store to at least reader schema 8 in the same
 transaction as its Receiving record. Schema-7 and older readers refuse the target.
 Chunked staged component rows are inaccessible through normal component
 read/write/report-scope paths until final acceptance. An existing P UUID is never
@@ -107,8 +107,9 @@ All routes use the existing authenticated browser/CSRF boundary:
 
 The shared FreezeRequest/FreezeRecord DTOs move to rx-domain and the generated SDK;
 Supervisor re-exports retain the old import path and serialized shape. Ordinary
-stores stay at schema 6, source-only sealing uses 7, target intake explicitly uses
-8, and readers refuse 9+. No frozen base/cell protobuf or manifest changes.
+stores stay at schema 6, source-only sealing uses 7 and target intake explicitly requires at least 8.
+Revision 4 preserves the optional resident-execution floor of 9; readers refuse
+10+. Source guard definitions are still checked on sealed format-9 stores. No frozen base/cell protobuf or manifest changes.
 The new development CLI is not automatically invoked or installed by the existing
 installer. The optional P source configuration defaults to empty.
 
@@ -146,3 +147,11 @@ historical acknowledgement and still refuse local declaration/assignment writes.
 The CLI's new process boot replaces an earlier reporting session for the same
 principal under the existing single-current-peer rule; use the installation's
 reviewed reporter identity and explicitly approve the new scope.
+
+
+Revision 4 does not change the source freeze or target acceptance wire values.
+It makes reader promotions monotonic when the execution extension is enabled.
+P assignments retain the imported component's original registry binding and
+frozen cut. An enrolled Supervisor must match them before preparation; another
+empty registry cannot replace unresolved legacy execution history. Managed
+snapshots stay outside the permanently sealed legacy author namespaces.

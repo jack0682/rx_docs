@@ -1,0 +1,8 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.09s
+     Running tests/resident_reporting.rs (<workspace>/resident-contract-platform-target/debug/deps/resident_reporting-207d262c37c12afe)
+
+running 1 test
+test actual_reporter_outage_preserves_local_stop_and_owner_approved_restart ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 3 filtered out; finished in 8.37s
+

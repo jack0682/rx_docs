@@ -1,0 +1,8 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.08s
+     Running tests/resident_reporting.rs (<workspace>/resident-contract-platform-target/debug/deps/resident_reporting-207d262c37c12afe)
+
+running 1 test
+test actual_supervisor_child_reports_running_and_owned_exit_through_the_scoped_client ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 3 filtered out; finished in 1.83s
+

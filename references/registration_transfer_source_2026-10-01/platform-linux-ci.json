@@ -1,0 +1,50 @@
+{
+  "headSha": "238c183e0338638553c3b492109a66c65dc0e1ac",
+  "event": "pull_request",
+  "status": "completed",
+  "conclusion": "success",
+  "url": "https://github.com/jack0682/rx-platform/actions/runs/36803590438",
+  "rust_workspace": {
+    "passed": 514,
+    "failed": 0,
+    "ignored": 18
+  },
+  "jobs": [
+    {
+      "name": "Client libraries",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/jack0682/rx-platform/actions/runs/36803590438/job/110183039850"
+    },
+    {
+      "name": "Repository and GitFlow",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/jack0682/rx-platform/actions/runs/36803590438/job/110183040045"
+    },
+    {
+      "name": "Rust",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/jack0682/rx-platform/actions/runs/36803590438/job/110183040181"
+    },
+    {
+      "name": "SDK freshness audit (manual)",
+      "status": "completed",
+      "conclusion": "skipped",
+      "url": "https://github.com/jack0682/rx-platform/actions/runs/36803590438/job/110183041291"
+    },
+    {
+      "name": "GitHub configuration audit (manual)",
+      "status": "completed",
+      "conclusion": "skipped",
+      "url": "https://github.com/jack0682/rx-platform/actions/runs/36803590438/job/110183041325"
+    },
+    {
+      "name": "CI",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/jack0682/rx-platform/actions/runs/36803590438/job/110184073206"
+    }
+  ]
+}

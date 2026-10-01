@@ -18,7 +18,7 @@
 | ID | 완료 요구 | 완료를 입증할 근거 | 현재 상태 |
 |---|---|---|---|
 | RF01 | OD08·RR01–RR03과 공통 신원/수명/판단 모델 완결 | 상태·전이·소유자·부분 실패·양성 복귀를 CN/AC/MC와 대조한 검토 및 구현 대응 | 실행 모델 r1 작성, 검증 미완 |
-| RF02 | P 등록 소유와 S 실행 관리의 단일 연결 | 외부 작성자의 등록→실행→상실→조회·복귀, stable ID/이력 이행, 이중 writer 반례 | R1 공통 타입·R2 P 선언·R3 보고 통로·R4 지속 보고/진단 연속이 develop에 통합됨; 실행 배정·내용 수용·기존 신원 이행 미완 |
+| RF02 | P 등록 소유와 S 실행 관리의 단일 연결 | 외부 작성자의 등록→실행→상실→조회·복귀, stable ID/이력 이행, 이중 writer 반례 | R1–R4와 R5 원본 동결 경계 통합. P 수용·기존 신원/이력 이행·실행 배정·내용 수용 미완 |
 | RF03 | 논리·호스트·장비 자원 묶음 수락 | 실제 집행과 준비/commit/유실/거절/회수 행렬, 두 작업의 충돌·진행 가능성 | 요구 타입과 부분 OS 집행 존재; 전체 경로 미완 |
 | RF04 | 공통 의존 결합과 관측 전용 참여 | 매 사용 검증, provider 교체·stale·상실 전파, 제어권 없이 관측 등록 | 부분 모델 존재; 공통 연결 미완 |
 | RF05 | 작업·권한·결과·인계 계약 충족 | 양성 업무 완료 및 실제 반례, OI08/11/17 포함 책임별 검증 | 모의 경로 있음; 계약 공백 남음 |
@@ -203,7 +203,12 @@ S는 원 UUID·revision·선택 mapping·history cut을 보존하며 원 요청 
 동결 후 downgrade 거절, 원 요청 복구, 변경된 target 거절, SQL DML 차단과 비대상 키의 정상 쓰기,
 transaction rollback과 기존 ID/이력 보존을 검사한다. [현재 실행 근거](../../references/registration_transfer_source_2026-10-01/README.md)는
 Platform `238c183`과 Solutions `58e5fcb`의 깨끗한 코드, 실제 이전 배포 reader의 양성/거절 결과,
-원본 파일 해시 보존을 담는다. 원격 CI와 통합 상태는 해당 source PR에서 이어서 확인한다.
+원본 파일 해시 보존을 담는다. Linux CI는 P 514 passed / 0 failed / 18 ignored, S 467 passed / 0 failed / 22 ignored이며
+S amd64·arm64 설치 번들 검사도 통과했다. 문서 [#78](https://github.com/jack0682/rx_docs/pull/78),
+P [#65](https://github.com/jack0682/rx-platform/pull/65), S [#74](https://github.com/jack0682/rx-solutions/pull/74)
+순서로 통합했다. P `2db27621e025e97345b21d3a6d819f3067a1d418`,
+S `47e848a419e65895a020cd06f5831752b9cd858f`의 내용은 시험한 코드와 같고 SDK 125개도 일치했다.
+[통합 기록](../../references/registration_transfer_source_2026-10-01/integration.json).
 
 **R5는 아직 미완이다.** P의 신뢰된 source 검증·수용, 원본 revision/history 이식, 응답 유실 정산,
 S의 P 수용 확인 및 P 실행 배정이 남아 있다. 준비 CLI만으로 현재 운영 registry를 이행 완료했다고

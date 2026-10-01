@@ -1,7 +1,7 @@
 # Registration transfer boundary, revision 2
 
-Status: source preparation is integrated. Target intake is implemented and under
-validation. Supervisor acceptance reconciliation, content acceptance and
+Status: source preparation and target intake are integrated with scoped validation
+evidence. Supervisor acceptance reconciliation, content acceptance and
 Platform-directed execution remain required; this is not full RF02 closure.
 
 ## Source preparation

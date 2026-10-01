@@ -61,3 +61,18 @@ performed. Receiving transfers with inconsistent source data stay unusable and
 have no implicit abort/rebind/unseal. Privileged whole-file restoration and hostile
 parent-directory replacement remain outside this local source trust boundary.
 R5/RF02 and the full framework goal remain unfinished.
+
+
+## Linux CI and integration
+
+[Platform Linux CI](platform-linux-ci.json) passed 522 tests, zero failures and
+19 ignored. [Solutions Linux CI](solutions-linux-ci.json) passed 467, zero failures
+and 22 ignored, including successful installed-skill checks on Ubuntu amd64 and
+arm64. These jobs do not execute the separately ignored target-intake scene.
+
+[Integration](integration.json) records docs #80, Platform #66 and Solutions #75
+merged in that order after required CI/DCO, with verified OpenPGP/author-signoff
+merges. The tested and integrated code trees match and all 126 SDK files match.
+This closes the target-intake slice; S acceptance reconciliation, execution
+assignment, content verification and the complete resident model remain open.
+The local log hashes identify original output before path-prefix redaction.

@@ -18,7 +18,7 @@
 | ID | 완료 요구 | 완료를 입증할 근거 | 현재 상태 |
 |---|---|---|---|
 | RF01 | OD08·RR01–RR03과 공통 신원/수명/판단 모델 완결 | 상태·전이·소유자·부분 실패·양성 복귀를 CN/AC/MC와 대조한 검토 및 구현 대응 | 실행 모델 r1 작성, 검증 미완 |
-| RF02 | P 등록 소유와 S 실행 관리의 단일 연결 | 외부 작성자의 등록→실행→상실→조회·복귀, stable ID/이력 이행, 이중 writer 반례 | R1–R4와 R5 원본 동결 경계 통합. P 수용·기존 신원/이력 이행·실행 배정·내용 수용 미완 |
+| RF02 | P 등록 소유와 S 실행 관리의 단일 연결 | 외부 작성자의 등록→실행→상실→조회·복귀, stable ID/이력 이행, 이중 writer 반례 | R1–R4 및 R5 원본 동결·P 수용/기존 신원·이력 이행 통합. S 수용 확인·실행 배정·내용 수용 미완 |
 | RF03 | 논리·호스트·장비 자원 묶음 수락 | 실제 집행과 준비/commit/유실/거절/회수 행렬, 두 작업의 충돌·진행 가능성 | 요구 타입과 부분 OS 집행 존재; 전체 경로 미완 |
 | RF04 | 공통 의존 결합과 관측 전용 참여 | 매 사용 검증, provider 교체·stale·상실 전파, 제어권 없이 관측 등록 | 부분 모델 존재; 공통 연결 미완 |
 | RF05 | 작업·권한·결과·인계 계약 충족 | 양성 업무 완료 및 실제 반례, OI08/11/17 포함 책임별 검증 | 모의 경로 있음; 계약 공백 남음 |
@@ -238,3 +238,19 @@ S 422 passed / 0 failed / 19 ignored다. 전체 clippy·format·저장소·계�
 P의 이 수용은 S의 확인 완료, package 내용 검증, 프로세스 소유권 이행 또는 실행 배정이 아니다.
 일부 staging 뒤 충돌/불일치가 발견되면 Receiving 상태와 이력을 보존하며 자동 unseal·abort·rebind는
 하지 않는다. 운영 복구 절차와 이행 도구 설치, 등록 발견/조회, RF02의 나머지 및 전체 RF01–RF14는 열려 있다.
+
+
+R5 target intake 통합: [문서 #80](https://github.com/jack0682/rx_docs/pull/80),
+[Platform #66](https://github.com/jack0682/rx-platform/pull/66),
+[Solutions #75](https://github.com/jack0682/rx-solutions/pull/75)을 이 순서로 필수 CI·DCO 확인 후 병합했다.
+Linux workspace 시험은 P 522 passed / 0 failed / 19 ignored, S 467 passed / 0 failed / 22 ignored다.
+S의 Ubuntu amd64·arm64 설치 번들 검사도 통과했다. [검증 근거](../../references/registration_intake_2026-10-01/README.md)와
+[통합 기록](../../references/registration_intake_2026-10-01/integration.json)은 시험/병합 트리 동일성과 SDK 126개 일치를 보존한다.
+이는 실제 Linux daemon의 target intake 또는 신규 설치 릴리스 배포를 검증했다는 뜻이 아니다.
+
+다음 연결은 **S가 인증된 P 수용 결과를 원 freeze/설치/source cut과 대조해 지속 기록하는 절차**와
+**P의 일반 구성요소 실행 배정**이다. 현재 S의 Registry::assign/assign_with_resume은 동결 후 거절된다.
+이 거절을 해제해 로컬 writer를 부활시키지 않는다. P의 package intake는 Cell 문맥이고,
+S의 programs_from_release는 검증된 릴리스에서 Program을 구성하므로 등록의 CatalogReference만으로
+내용 수용이 끝났다고 표시하지 않는다. 두 기존 경계의 연결, 현재 자원/의존/실행 조건, 양성 실행과
+상실 후 복귀를 같은 원 ID 경로로 검증해야 한다. RF02와 전체 Goal은 계속 미완이다.

@@ -219,3 +219,27 @@ Platform 전체 workspace 시험·Clippy, SDK 137개 파일의 원본 일치, CL
 UI 77개 시험·typecheck/build와 실제 API 회귀가 통과했다. PR의 정확한 head CI와 통합 상태는
 병합 결과로 따로 기록한다. 사용자 M2 수락, Preview/게시/actual-part runtime binding/모의
 운전·UNKNOWN 복구, 최종 RC와 Linux 45분 재현은 미완이다. 기존 RF/WF 완료 판정은 올리지 않는다.
+
+## M2 사용자 CLI 확인과 인계 보완 — 2026-10-02
+
+사용자는 A/B 값·상태, dense/60 N/100 mm/kg의 BLOCKED(rc=2), 20..40 N의 구간 상태,
+report와 resolve 출력 일치, 기존 출력 파일 보호를 직접 확인했다. UI는 인계용 M1/M2 리스너
+네 개가 종료되어 확인하지 못했다. crash 로그 없이 함께 종료된 현상은 exec 수명 연동이
+의심되지만 원인으로 확정하지 않는다. 따라서 M2 전체 수락과 M3 시작 조건은 아직 미충족이다.
+
+CLI 출력 보호의 시점을 보완했다. `resolve --output` 대상이 이미 있으면 로그인·조회·해석 요청
+전에 rc=1로 거절하고 출력 경로 충돌임을 설명한다. 서버에 보고서를 만든 뒤 파일 충돌을 알리는
+기존 동작과 구별된다. 요청 이후 발생하는 별도 I/O 실패는 원 요청 journal로 복구한다.
+유효한 고정값은 rc=0, BLOCKED는 rc=2, BOUNDED_INPUT_NOT_EXECUTABLE은 rc=3으로 구별한다.
+report/recover도 같은 상태 코드를 사용한다. text는 고정값·구간을 읽기 쉽게 표시하고, 한 속성의
+동일 provenance만 중복 표시하지 않는다. 저장 JSON·규칙·계산 결과는 변경하지 않는다.
+
+macOS 개발 인계 서비스는 사용자 launchd domain에서 실행하여 터미널/exec 수명과 분리했다.
+기존 DB를 재사용하고 네 프로세스의 parent PID=1·HTTP 응답을 확인했다. 로컬 RUN_M2에는
+정확한 시작·상태·종료 명령과 로그 위치를 기록한다. 로그인 시 자동 시작·물리 장비 연결은 없으며
+로그아웃/재부팅 후 다시 시작해야 한다. 이는 최종 Linux RC 설치 방식에 대한 증거가 아니다.
+
+출력 경로의 일반 파일·디렉터리·dangling symlink를 접속 전에 거절하는 시험과 text 보존 시험을
+포함해 workflow CLI 8개 시험이 통과했다. 실제 임시 API/CLI 시험에서 기존 출력 충돌 전후의
+서버 보고서 목록이 동일했고, concrete/blocked/bounded 종료 코드 0/2/3 및 구간 보고서 재조회가
+일치했다. 사용자 UI의 보고서 선택·위반 이동·새로고침 재열기는 재확인 대기다.

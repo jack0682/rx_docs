@@ -1,0 +1,26 @@
+{
+  "docs": {
+    "pr": 76,
+    "merge": "5692300dede2bf2a41ef63b9198e9fb8ebfc21d9"
+  },
+  "platform": {
+    "pr": 64,
+    "tested_source": "4be79f3f56d21674ceff0c0b5ac18ef055c31cec",
+    "merge": "1fcac11dc091425ee07008baa26073c6c0fa68b7",
+    "latest_pr_ci": "https://github.com/jack0682/rx-platform/actions/runs/36798692415"
+  },
+  "solutions": {
+    "pr": 73,
+    "tested_source": "24c541f134b41e3f8f3b0e8e5b6d590574c068c4",
+    "merge": "443dde3bf7a1055cad8253c163ba9c1ce09c0836",
+    "latest_pr_ci": "https://github.com/jack0682/rx-solutions/actions/runs/36798696071"
+  },
+  "checks": {
+    "required_ci_and_dco": "PASS",
+    "merge_signatures": "VERIFIED_OPENPGP_AND_AUTHOR_DCO",
+    "tested_tree_equals_integrated_tree": true,
+    "sdk_files_matched": 124
+  },
+  "full_framework_complete": false,
+  "physical_qualification": "NOT_PERFORMED"
+}

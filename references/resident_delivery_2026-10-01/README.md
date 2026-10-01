@@ -73,3 +73,11 @@ therefore remains an installation concern; no hash was weakened to pass.
 
 The native image build and status services do not close complete ROBOTIS bundle
 qualification, physical operation, controller integration, or field maintenance.
+
+## Integration
+
+[Integration identities](integration.json) record the signed merges and final PR
+CI runs. Documentation, Platform and Solutions were merged in that order. Product
+trees match the tested feature heads; all 124 SDK files match again. R4's bounded
+report-delivery work is integrated. Full RF02 and the resident framework are not
+complete; registration ownership migration and P execution assignment are next.

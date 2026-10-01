@@ -213,3 +213,28 @@ S `47e848a419e65895a020cd06f5831752b9cd858f`의 내용은 시험한 코드와 �
 **R5는 아직 미완이다.** P의 신뢰된 source 검증·수용, 원본 revision/history 이식, 응답 유실 정산,
 S의 P 수용 확인 및 P 실행 배정이 남아 있다. 준비 CLI만으로 현재 운영 registry를 이행 완료했다고
 취급하지 않는다. 임의 JSON 동결 주장이나 진단 보고를 P의 수용 근거로 승격하지 않는다.
+
+## R5 후속 — Platform의 실제 원본 수용
+
+2026-10-01. [이행 계약 revision 2](../contracts/registration-transfer/v1/README.md)는
+신뢰된 시작 설정의 source 이름·경로·소유자와 사용자의 원 수입 요청을 구분한다.
+현재 권한 검사 후 실제 동결 원본을 잠가 읽고, 기존 application writer에 원 UUID·revision·이력을
+분할 저장한다. 수용 완료 전 등록은 일반 조회·변경·보고 범위 발급에서 사용할 수 없다.
+최종 수용·감사·원 요청 결과는 함께 확정하며, 그 뒤 원본이 없어도 원 응답을 복구한다.
+P 수용 대상 DB만 reader schema 8로 올려 구버전의 pending 등록 접근을 거절한다.
+
+추가 반례에서 이관 중인 S ID를 다른 P 진단 구성요소에 다시 연결할 수 있음을 확인했다.
+등록 staging과 보고 범위 발급/연장을 같은 writer에서 검사하도록 고쳤고, 기존 별칭의 명시적
+철회 → 이관 중 별칭 재발급 거절 → 수용 후 원 ID 보고 범위 발급을 검증했다.
+출처 이력의 문서가 P 제어 객체처럼 보여도 실제 업무 상태로 해석하지 않고 원본으로 보관한다.
+
+현재 로컬 macOS 전체 workspace 시험은 P 521 passed / 0 failed / 19 ignored,
+S 422 passed / 0 failed / 19 ignored다. 전체 clippy·format·저장소·계약·SDK 검사도 통과했다.
+실제 S API로 수정·동결한 R4 registry 복제본에서 P application writer와 인증 HTTP router를
+연결한 별도 시험도 통과했다. 이 시험은 in-process HTTP 경로이며 실제 TLS socket이나 Linux
+배포 daemon에서 수행한 이관 시험으로 주장하지 않는다. 커밋 기준 재실행·Linux CI와 통합 기록은
+후속 검증 근거에 기록한다.
+
+P의 이 수용은 S의 확인 완료, package 내용 검증, 프로세스 소유권 이행 또는 실행 배정이 아니다.
+일부 staging 뒤 충돌/불일치가 발견되면 Receiving 상태와 이력을 보존하며 자동 unseal·abort·rebind는
+하지 않는다. 운영 복구 절차와 이행 도구 설치, 등록 발견/조회, RF02의 나머지 및 전체 RF01–RF14는 열려 있다.

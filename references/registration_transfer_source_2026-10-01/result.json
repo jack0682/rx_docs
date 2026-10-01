@@ -1,0 +1,86 @@
+{
+  "status": "PASS_SOURCE_FREEZE_AND_LEGACY_REFUSAL",
+  "legacy_image": "sha256:1f9a144174c6759e768adcfff8665577f25ae22583e859318e6e1ce1dbad4cd6",
+  "legacy_daemon_sha256": "12a2535ca102175ceccf911fb7be2ecd30ae5e8d3079e35e3432c9f54daf7c43",
+  "source_registration_ids": [
+    "6f092f7c-ca5b-4360-8d3c-ab9b6b187288",
+    "d77c5fe4-d18c-44ab-9b89-047b01fa949b"
+  ],
+  "freeze": {
+    "record": {
+      "request": {
+        "id": "1bfdefea-d0bf-456f-b9f5-51d6e56f61a6",
+        "target_installation": "0cb4931b-6473-42f0-9dbb-c8f3d44c5686"
+      },
+      "declarations_digest": "6639ca4fa5c805595253773dfb49de00459a4c24dd9977409f73d8796b367f74",
+      "declaration_count": "2",
+      "history_head": "13"
+    },
+    "declarations": [
+      {
+        "key": "components/registration/6f092f7c-ca5b-4360-8d3c-ab9b6b187288",
+        "revision": "1",
+        "document": {
+          "schema": "rx.component-registration.v1",
+          "value": {
+            "declaration": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "label": "first"
+            },
+            "id": "6f092f7c-ca5b-4360-8d3c-ab9b6b187288",
+            "state": "ACCEPTED"
+          }
+        }
+      },
+      {
+        "key": "components/registration/d77c5fe4-d18c-44ab-9b89-047b01fa949b",
+        "revision": "1",
+        "document": {
+          "schema": "rx.component-registration.v1",
+          "value": {
+            "declaration": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "label": "second"
+            },
+            "id": "d77c5fe4-d18c-44ab-9b89-047b01fa949b",
+            "state": "ACCEPTED"
+          }
+        }
+      }
+    ],
+    "selection_index": {
+      "key": "components/resident-selections",
+      "revision": "1",
+      "document": {
+        "schema": "rx.resident-selections.v1",
+        "value": [
+          {
+            "registration": "6f092f7c-ca5b-4360-8d3c-ab9b6b187288",
+            "selection": "first"
+          },
+          {
+            "registration": "d77c5fe4-d18c-44ab-9b89-047b01fa949b",
+            "selection": "second"
+          }
+        ]
+      }
+    },
+    "local_declaration_writer": "PERMANENTLY_FROZEN",
+    "platform_acceptance": "NOT_ESTABLISHED",
+    "process_ownership": "NOT_TRANSFERRED"
+  },
+  "history_records": 13,
+  "history_head": "13",
+  "cli_sha256": "037541ec35533f76432c02d092c2527a73eec0e3c94dd28ffa124f2bad153611",
+  "source_unchanged": true,
+  "original_source_inventory_sha256": "54bcf6d461b4a2f2992f347918e88674f140be97a753234a37e23953e9148129",
+  "platform_acceptance": "NOT_PERFORMED",
+  "process_ownership_transfer": "NOT_PERFORMED",
+  "physical_execution": "NOT_PERFORMED"
+}

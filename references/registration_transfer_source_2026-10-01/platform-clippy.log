@@ -1,0 +1,10 @@
+    Checking rx-storage v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/.build/release-platform/crates/rx-storage)
+   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/.build/release-platform/crates/rx-protocol)
+    Checking rx-application v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/.build/release-platform/crates/rx-application)
+    Checking rx-package v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/.build/release-platform/crates/rx-package)
+    Checking rx-runtime v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/.build/release-platform/crates/rx-runtime)
+    Checking rx-protocol-adapter v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/.build/release-platform/crates/rx-protocol-adapter)
+    Checking rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/.build/release-platform/crates/rx-api)
+    Checking rx-host-client v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/.build/release-platform/crates/rx-host-client)
+    Checking rx-platformd v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/.build/release-platform/crates/rx-platformd)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 8.95s

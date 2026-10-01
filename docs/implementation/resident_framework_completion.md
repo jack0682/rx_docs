@@ -201,7 +201,9 @@ S는 원 UUID·revision·선택 mapping·history cut을 보존하며 원 요청 
 
 현재 검증은 원본 R4 자료를 수정하지 않은 복제본에서 진행한다. 실제 이전 배포 daemon의 양성 읽기와
 동결 후 downgrade 거절, 원 요청 복구, 변경된 target 거절, SQL DML 차단과 비대상 키의 정상 쓰기,
-transaction rollback과 기존 ID/이력 보존을 검사한다. 최종 커밋/CI 근거는 이어서 고정한다.
+transaction rollback과 기존 ID/이력 보존을 검사한다. [현재 실행 근거](../../references/registration_transfer_source_2026-10-01/README.md)는
+Platform `238c183`과 Solutions `58e5fcb`의 깨끗한 코드, 실제 이전 배포 reader의 양성/거절 결과,
+원본 파일 해시 보존을 담는다. 원격 CI와 통합 상태는 해당 source PR에서 이어서 확인한다.
 
 **R5는 아직 미완이다.** P의 신뢰된 source 검증·수용, 원본 revision/history 이식, 응답 유실 정산,
 S의 P 수용 확인 및 P 실행 배정이 남아 있다. 준비 CLI만으로 현재 운영 registry를 이행 완료했다고

@@ -1,0 +1,196 @@
+[
+  {
+    "label": "old-reader-positive",
+    "argv": [
+      "docker",
+      "run",
+      "--name",
+      "rx-transfer-952a21489f8c",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-transfer-old-reader-final/baseline:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-delivery-full-linux-daemon/startup.json:/config/startup.json:ro",
+      "--entrypoint",
+      "/opt/rx/bin/rx-solutionsd",
+      "sha256:1f9a144174c6759e768adcfff8665577f25ae22583e859318e6e1ce1dbad4cd6",
+      "run",
+      "/config/startup.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "freeze",
+    "argv": [
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-contract-solutions-target/debug/rx-registration-transfer",
+      "freeze",
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-transfer-old-reader-final/fenced/managed/registration.db",
+      "1bfdefea-d0bf-456f-b9f5-51d6e56f61a6",
+      "0cb4931b-6473-42f0-9dbb-c8f3d44c5686"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "same-request-recovery",
+    "argv": [
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-contract-solutions-target/debug/rx-registration-transfer",
+      "freeze",
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-transfer-old-reader-final/fenced/managed/registration.db",
+      "1bfdefea-d0bf-456f-b9f5-51d6e56f61a6",
+      "0cb4931b-6473-42f0-9dbb-c8f3d44c5686"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "different-target-refused",
+    "argv": [
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-contract-solutions-target/debug/rx-registration-transfer",
+      "freeze",
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-transfer-old-reader-final/fenced/managed/registration.db",
+      "1bfdefea-d0bf-456f-b9f5-51d6e56f61a6",
+      "0643ab4c-a996-4dc7-8704-af22fa13221c"
+    ],
+    "exit_code": 1
+  },
+  {
+    "label": "old-reader-refused",
+    "argv": [
+      "docker",
+      "run",
+      "--name",
+      "rx-transfer-363910748ffc",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-transfer-old-reader-final/fenced:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-delivery-full-linux-daemon/startup.json:/config/startup.json:ro",
+      "--entrypoint",
+      "/opt/rx/bin/rx-solutionsd",
+      "sha256:1f9a144174c6759e768adcfff8665577f25ae22583e859318e6e1ce1dbad4cd6",
+      "run",
+      "/config/startup.json"
+    ],
+    "exit_code": 1
+  },
+  {
+    "label": "after-old-reader",
+    "argv": [
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-contract-solutions-target/debug/rx-registration-transfer",
+      "inspect",
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-transfer-old-reader-final/fenced/managed/registration.db"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "history-0",
+    "argv": [
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-contract-solutions-target/debug/rx-registration-transfer",
+      "history",
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-transfer-old-reader-final/fenced/managed/registration.db",
+      "1bfdefea-d0bf-456f-b9f5-51d6e56f61a6",
+      "0",
+      "2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "history-2",
+    "argv": [
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-contract-solutions-target/debug/rx-registration-transfer",
+      "history",
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-transfer-old-reader-final/fenced/managed/registration.db",
+      "1bfdefea-d0bf-456f-b9f5-51d6e56f61a6",
+      "2",
+      "2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "history-4",
+    "argv": [
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-contract-solutions-target/debug/rx-registration-transfer",
+      "history",
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-transfer-old-reader-final/fenced/managed/registration.db",
+      "1bfdefea-d0bf-456f-b9f5-51d6e56f61a6",
+      "4",
+      "2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "history-6",
+    "argv": [
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-contract-solutions-target/debug/rx-registration-transfer",
+      "history",
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-transfer-old-reader-final/fenced/managed/registration.db",
+      "1bfdefea-d0bf-456f-b9f5-51d6e56f61a6",
+      "6",
+      "2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "history-8",
+    "argv": [
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-contract-solutions-target/debug/rx-registration-transfer",
+      "history",
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-transfer-old-reader-final/fenced/managed/registration.db",
+      "1bfdefea-d0bf-456f-b9f5-51d6e56f61a6",
+      "8",
+      "2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "history-10",
+    "argv": [
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-contract-solutions-target/debug/rx-registration-transfer",
+      "history",
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-transfer-old-reader-final/fenced/managed/registration.db",
+      "1bfdefea-d0bf-456f-b9f5-51d6e56f61a6",
+      "10",
+      "2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "history-12",
+    "argv": [
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-contract-solutions-target/debug/rx-registration-transfer",
+      "history",
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-transfer-old-reader-final/fenced/managed/registration.db",
+      "1bfdefea-d0bf-456f-b9f5-51d6e56f61a6",
+      "12",
+      "2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "history-13",
+    "argv": [
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-contract-solutions-target/debug/rx-registration-transfer",
+      "history",
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-transfer-old-reader-final/fenced/managed/registration.db",
+      "1bfdefea-d0bf-456f-b9f5-51d6e56f61a6",
+      "13",
+      "2"
+    ],
+    "exit_code": 0
+  }
+]

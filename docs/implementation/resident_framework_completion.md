@@ -186,3 +186,23 @@ Solutions `443dde3bf7a1055cad8253c163ba9c1ce09c0836`의 제품 내용은 시험�
 설치 측 남은 사실: 이번 native image는 보존된 정확한 DHI archives로 빌드했다. 새 온라인 archive가
 기존 pin과 다르므로 전체 개발 패키지의 재현 가능한 소스 공급도 후속 설치 작업에 포함한다.
 전체 RF01–RF14 및 Goal은 여전히 미완이다.
+
+## R5 — 등록 소유권 이행: 원본 동결 경계부터 구현 중
+
+2026-10-01. 기존 package intake와 Executor assignment는 Cell 문맥이므로 일반 구성요소의
+이행/실행 권한으로 재명명하지 않는다. [원본 이행 계약 r1](../contracts/registration-transfer/v1/README.md)은
+이전 등록 writer를 차단한 원본 cut과 P 수용을 구분한다. 현재 첫 구현은 source-side 준비다.
+
+P 소유 storage adapter에 선택적 namespace seal을 추가했다. 동결 marker와 SQL 쓰기 차단을
+같은 transaction으로 확정하고 그 데이터베이스만 schema 7로 올린다. 보통 DB는 schema 6을 유지한다.
+S는 원 UUID·revision·선택 mapping·history cut을 보존하며 원 요청 재호출은 같은 결과로 돌아온다.
+이전 schema-6 reader는 거절되고, 새 코드에서도 로컬 선언/신규 배정/새 업무 commit은 막힌다.
+기존 실행 관측과 과거 결과 조회는 유지한다. 동결 자료를 P 수용이나 프로세스 소유권으로 표시하지 않는다.
+
+현재 검증은 원본 R4 자료를 수정하지 않은 복제본에서 진행한다. 실제 이전 배포 daemon의 양성 읽기와
+동결 후 downgrade 거절, 원 요청 복구, 변경된 target 거절, SQL DML 차단과 비대상 키의 정상 쓰기,
+transaction rollback과 기존 ID/이력 보존을 검사한다. 최종 커밋/CI 근거는 이어서 고정한다.
+
+**R5는 아직 미완이다.** P의 신뢰된 source 검증·수용, 원본 revision/history 이식, 응답 유실 정산,
+S의 P 수용 확인 및 P 실행 배정이 남아 있다. 준비 CLI만으로 현재 운영 registry를 이행 완료했다고
+취급하지 않는다. 임의 JSON 동결 주장이나 진단 보고를 P의 수용 근거로 승격하지 않는다.

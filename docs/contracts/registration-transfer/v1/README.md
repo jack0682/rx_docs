@@ -1,8 +1,8 @@
 # Registration transfer boundary, revision 3
 
-Status: source preparation and target intake are integrated with scoped validation
-evidence. Supervisor acceptance reconciliation, content acceptance and
-Platform-directed execution remain required; this is not full RF02 closure.
+Status: source preparation, target intake and explicit Supervisor acceptance
+reconciliation are integrated with scoped validation evidence. Content acceptance
+and Platform-directed execution remain required; this is not full RF02 closure.
 
 ## Source preparation
 
@@ -117,12 +117,12 @@ authority, validate package content or prove functional safety. Arbitrary
 privileged schema edits, copying an older database over the source, hostile
 parent-directory replacement and whole-installation rollback are outside this
 local source boundary and require the separate upgrade/restore contract.
-S still needs authenticated reconciliation of P acceptance and the general P
-execution-assignment path. Those obligations, registration discovery, installation
+S acknowledgement is provided by the revision-3 addition below. The general P
+execution-assignment path, content acceptance, registration discovery, installation
 integration and full RF01–RF14 verification remain open.
 
 
-## Source reconciliation addition (revision 3, implementation in progress)
+## Source reconciliation addition (revision 3, integrated with scoped validation)
 
 After P intake, the source owner may authorize an Observer-only reporter scope
 for an imported canonical component. The optional reporting service's

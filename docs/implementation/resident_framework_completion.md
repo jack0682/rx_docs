@@ -18,7 +18,7 @@
 | ID | 완료 요구 | 완료를 입증할 근거 | 현재 상태 |
 |---|---|---|---|
 | RF01 | OD08·RR01–RR03과 공통 신원/수명/판단 모델 완결 | 상태·전이·소유자·부분 실패·양성 복귀를 CN/AC/MC와 대조한 검토 및 구현 대응 | 실행 모델 r1 작성, 검증 미완 |
-| RF02 | P 등록 소유와 S 실행 관리의 단일 연결 | 외부 작성자의 등록→실행→상실→조회·복귀, stable ID/이력 이행, 이중 writer 반례 | R1–R4 및 R5 원본 동결·P 수용/기존 신원·이력 이행 통합. S 수용 확인·실행 배정·내용 수용 미완 |
+| RF02 | P 등록 소유와 S 실행 관리의 단일 연결 | 외부 작성자의 등록→실행→상실→조회·복귀, stable ID/이력 이행, 이중 writer 반례 | R1–R4 및 R5 원본 동결·P 수용/기존 신원·이력 이행·S 수용 확인 통합. 실행 배정·내용 수용 및 일반 운영 경로 미완 |
 | RF03 | 논리·호스트·장비 자원 묶음 수락 | 실제 집행과 준비/commit/유실/거절/회수 행렬, 두 작업의 충돌·진행 가능성 | 요구 타입과 부분 OS 집행 존재; 전체 경로 미완 |
 | RF04 | 공통 의존 결합과 관측 전용 참여 | 매 사용 검증, provider 교체·stale·상실 전파, 제어권 없이 관측 등록 | 부분 모델 존재; 공통 연결 미완 |
 | RF05 | 작업·권한·결과·인계 계약 충족 | 양성 업무 완료 및 실제 반례, OI08/11/17 포함 책임별 검증 | 모의 경로 있음; 계약 공백 남음 |
@@ -282,3 +282,19 @@ P 재시작 뒤 이전 peer 거절·새 승인 후 같은 수용 결과 조회, 
 보고 binding revision 3은 P/S 동시 업그레이드와 현재 세션/범위를 요구한다.
 P의 일반 구성요소 실행 배정, 검증된 프로그램 내용·자원·의존 조건 연결, 운영 복구,
 설치/검색/관리 흐름과 전체 RF01–RF14는 계속 미완이다.
+
+
+S 수용 확인 통합: [문서 #82](https://github.com/jack0682/rx_docs/pull/82),
+[Platform #67](https://github.com/jack0682/rx-platform/pull/67),
+[Solutions #76](https://github.com/jack0682/rx-solutions/pull/76)을 필수 CI·DCO 확인 후 이 순서로 병합했다.
+Linux workspace 시험은 P 523 passed / 0 failed / 19 ignored, S 468 passed / 0 failed / 22 ignored다.
+S Ubuntu amd64·arm64 설치 검사도 통과했다. [검증 근거](../../references/registration_reconciliation_2026-10-01/README.md)와
+[통합 기록](../../references/registration_reconciliation_2026-10-01/integration.json)은 시험/병합 코드 트리 동일성,
+서명·DCO 및 SDK 126개 일치를 담는다. 새 설치 릴리스 배포나 실제 Linux daemon 이관을 수행한 것은 아니다.
+
+다음 구현은 **검증된 프로그램 내용과 연결된 P의 일반 구성요소 실행 배정**이다.
+S의 Program은 릴리스 카탈로그에서만 구성되며 Deserialize를 제공하지 않는다.
+이 경계를 풀어 site JSON이나 선언 digest를 검증 근거로 삼지 않는다. 기존 VerifiedRelease/카탈로그 검증과
+RegisteredBackend의 배정 기록 후 OS 생성 경로를 연결하고, 원 등록/배정/instance·자원·의존 조건과
+응답 유실·P/S 상실 후 조회/복귀를 검증한다. 이번 TargetAcceptance와 Observer 보고 세션을 실행 허가로
+승격하지 않는다. 자동 설치·일반 검색/관리·이행 실패 복구 및 RF01–RF14는 계속 열려 있다.

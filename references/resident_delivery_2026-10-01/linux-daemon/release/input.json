@@ -1,0 +1,9 @@
+{
+  "source_commit": "24c541f134b41e3f8f3b0e8e5b6d590574c068c4",
+  "source_dirty": false,
+  "unsigned_image": "sha256:b91beb3e204d7978836445a59a2df9d42a601c009caba5023cab16ed337e85ab",
+  "architecture": "arm64",
+  "daemon_sha256": "12a2535ca102175ceccf911fb7be2ecd30ae5e8d3079e35e3432c9f54daf7c43",
+  "version": 1790816042,
+  "scope": "Current Solutions.Dockerfile runtime; signed development release; physical qualification not performed"
+}

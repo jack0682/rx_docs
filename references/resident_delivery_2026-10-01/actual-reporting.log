@@ -1,0 +1,12 @@
+   Compiling rx-protocol v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/.build/release-platform/crates/rx-protocol)
+   Compiling rx-protocol-adapter v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/.build/release-platform/crates/rx-protocol-adapter)
+   Compiling rx-api v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/.build/release-platform/crates/rx-api)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.49s
+     Running tests/resident_reporting.rs (/Users/ojaehong/RX_automation/rx_ws/.build/resident-contract-platform-target/debug/deps/resident_reporting-82dd4d19600258e8)
+
+running 2 tests
+test actual_supervisor_child_reports_running_and_owned_exit_through_the_scoped_client ... ok
+test actual_reporter_outage_preserves_local_stop_and_owner_approved_restart ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 1 filtered out; finished in 8.92s
+

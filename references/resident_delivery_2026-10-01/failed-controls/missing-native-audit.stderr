@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/opt/rx/tools/solutions_status.py", line 42, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/opt/rx/tools/solutions_status.py", line 25, in main
+    p=argparse.ArgumentParser();p.add_argument('mode',choices=['inspect','serve'],nargs='?',default='serve');p.add_argument('--bind',default='0.0.0.0');p.add_argument('--port',type=int,default=8081);a=p.parse_args();report=inspect()
+                                                                                                                                                                                                                               ^^^^^^^^^
+  File "/opt/rx/tools/solutions_status.py", line 14, in inspect
+    audit=json.loads((ROOT/'manifests/native-install-audit.json').read_text())
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/pathlib.py", line 1059, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/pathlib.py", line 1045, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/rx/manifests/native-install-audit.json'

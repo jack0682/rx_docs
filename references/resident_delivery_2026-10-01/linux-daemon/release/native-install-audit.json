@@ -1,0 +1,47 @@
+{
+  "schema": "rx.native-install-audit.v1",
+  "status": "PASS",
+  "elf": [
+    {
+      "path": "bin/rx-hostd",
+      "sha256": "09787c48d53df15fa7c6e049f34f6c60673c8f34f7e9badea78bb15bdba76e2c"
+    },
+    {
+      "path": "bin/rx-executor-service",
+      "sha256": "82dfdb1f8d83bf302117682879d0256a343fd15b46238ecbb98531bb7c12d406"
+    },
+    {
+      "path": "bin/rx-process-compile",
+      "sha256": "bae72cb6ca325825c3589c804676da28f23b339dbb57af330d8e9ff9a3ab767e"
+    },
+    {
+      "path": "bin/rx-solutionsd",
+      "sha256": "12a2535ca102175ceccf911fb7be2ecd30ae5e8d3079e35e3432c9f54daf7c43"
+    },
+    {
+      "path": "bin/rx-process-package",
+      "sha256": "a9a23e7c4a6321bd14f17de7c14b0823b9548e6a33f37d620a6d506ef4165014"
+    },
+    {
+      "path": "bin/rx-device-package",
+      "sha256": "2737c2ec77aced3287ff822fa9d658d06ccaeb413f48100ffd86612bad2a16ff"
+    },
+    {
+      "path": "bin/rx-bt-engine",
+      "sha256": "4ba155d7dfdc48552826a48f1baf6b3df907ce775710d846aad613dd6fbd5385"
+    },
+    {
+      "path": "bin/rx-ros-jtc-bridge",
+      "sha256": "7bf3cde7367e0923246f3f58647ea9006a24bf731066ae24056e13caa8aeb601"
+    },
+    {
+      "path": "bin/rx-dynamixel-ping",
+      "sha256": "95cb5b1902bbeab0af2d984b9f7c38210b48254be2b0d43720ba5e66d11db51c"
+    }
+  ],
+  "native_packages": 678,
+  "catalog_sha256": "669aaf825d542bf3173ab49072350b488e2f71826dfd9492e006d059a3c2ccbd",
+  "hardware_plugins_instantiated": false,
+  "ros_nodes_started": false,
+  "physical_qualification": "NOT_PERFORMED"
+}

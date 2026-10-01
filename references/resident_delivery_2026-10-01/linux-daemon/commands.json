@@ -1,0 +1,93 @@
+[
+  {
+    "label": "image",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "rx-resident-reporting-runtime:r4-arm64-signed"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "first-launcher",
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "rx-resident-first-db66bc730ecd",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--tmpfs",
+      "/tmp:rw",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-delivery-full-linux-daemon/data:/var/lib/rx-solutions",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-delivery-full-linux-daemon/startup.json:/config/startup.json:ro",
+      "-v",
+      "/Users/ojaehong/RX_automation/rx_ws/.build/resident-delivery-full-signed/rx-solutionsd:/test/rx-solutionsd:ro",
+      "--entrypoint",
+      "/test/rx-solutionsd",
+      "sha256:1f9a144174c6759e768adcfff8665577f25ae22583e859318e6e1ce1dbad4cd6",
+      "run",
+      "/config/startup.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "first-owner",
+    "argv": [
+      "docker",
+      "exec",
+      "rx-resident-first-db66bc730ecd",
+      "/usr/bin/python3",
+      "-c",
+      "from pathlib import Path; print(Path(\"/proc/1/cmdline\").read_bytes().decode().replace(chr(0),\" \"))"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "first-stop",
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "15",
+      "rx-resident-first-db66bc730ecd"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "first-logs",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-resident-first-db66bc730ecd"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "retained-rx-resident-first-db66bc730ecd",
+    "argv": [
+      "docker",
+      "logs",
+      "rx-resident-first-db66bc730ecd"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "cleanup-remove-rx-resident-first-db66bc730ecd",
+    "argv": [
+      "docker",
+      "rm",
+      "rx-resident-first-db66bc730ecd"
+    ],
+    "exit_code": 0
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "schema": "rx.solutions-startup.v1",
+  "state_subdirectory": "managed",
+  "plan": {
+    "schema": "rx.solutions-process-plan.v1",
+    "id": "e749b312-0eb0-4b59-a9aa-9745b7143b98",
+    "environment": "SIMULATION",
+    "profiles": [
+      "SIM-JTC-6DOF"
+    ],
+    "processes": [
+      {
+        "id": "first",
+        "program": "rx/status-http",
+        "parameters": {
+          "bind": "127.0.0.1",
+          "port": "8081"
+        },
+        "depends_on": [],
+        "startup_timeout_ms": "10000",
+        "shutdown_timeout_ms": "5000",
+        "restart_limit": "0",
+        "restart_backoff_ms": "500"
+      },
+      {
+        "id": "second",
+        "program": "rx/status-http",
+        "parameters": {
+          "bind": "127.0.0.1",
+          "port": "8082"
+        },
+        "depends_on": [],
+        "startup_timeout_ms": "10000",
+        "shutdown_timeout_ms": "5000",
+        "restart_limit": "0",
+        "restart_backoff_ms": "500"
+      }
+    ]
+  },
+  "reporting": {
+    "connection": "/intentionally/absent-report-connection.json",
+    "scopes": "/intentionally/absent-report-scopes.json"
+  }
+}

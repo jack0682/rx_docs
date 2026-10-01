@@ -1,0 +1,88 @@
+[
+  {
+    "schema": "rx.resident-report-outbox.v1",
+    "value": {
+      "accepted": null,
+      "latest": {
+        "binding": {
+          "catalog": {
+            "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+            "program": "rx/status-http"
+          },
+          "instance": "fff14ace-b7fc-4382-b50f-19ba6d16ea96",
+          "registration": "6f092f7c-ca5b-4360-8d3c-ab9b6b187288",
+          "registration_revision": "1",
+          "run": "e749b312-0eb0-4b59-a9aa-9745b7143b98",
+          "selection": "first"
+        },
+        "last_observed": {
+          "detail": "supervisor phase Exited; no additional lifecycle error; functional readiness and work-use permission are not assessed",
+          "exit_code": 0,
+          "pid": 19,
+          "process_identity": {
+            "pid": 19,
+            "scope": {
+              "boot": "3efc9ecd-eceb-4447-bbe2-4be89f764417",
+              "euid": 10001,
+              "init_start_ticks": 221733,
+              "mount_namespace": "mnt:[4026532566]",
+              "pid_namespace": "pid:[4026532569]",
+              "proc_mount": "159 157 0:62 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw",
+              "time_namespace": "time:[4026532699]",
+              "time_offsets": "monotonic           0         0\nboottime            0         0\n",
+              "uid": 10001,
+              "user_namespace": "user:[4026531837]"
+            },
+            "start_ticks": 221772
+          },
+          "state": "EXITED"
+        }
+      },
+      "pending": null,
+      "unresolved_deliveries": "0"
+    }
+  },
+  {
+    "schema": "rx.resident-report-outbox.v1",
+    "value": {
+      "accepted": null,
+      "latest": {
+        "binding": {
+          "catalog": {
+            "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+            "program": "rx/status-http"
+          },
+          "instance": "4b342d8b-447d-4e54-aea4-38d633cf14a9",
+          "registration": "d77c5fe4-d18c-44ab-9b89-047b01fa949b",
+          "registration_revision": "1",
+          "run": "e749b312-0eb0-4b59-a9aa-9745b7143b98",
+          "selection": "second"
+        },
+        "last_observed": {
+          "detail": "supervisor phase Exited; no additional lifecycle error; functional readiness and work-use permission are not assessed",
+          "exit_code": 0,
+          "pid": 20,
+          "process_identity": {
+            "pid": 20,
+            "scope": {
+              "boot": "3efc9ecd-eceb-4447-bbe2-4be89f764417",
+              "euid": 10001,
+              "init_start_ticks": 221733,
+              "mount_namespace": "mnt:[4026532566]",
+              "pid_namespace": "pid:[4026532569]",
+              "proc_mount": "159 157 0:62 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw",
+              "time_namespace": "time:[4026532699]",
+              "time_offsets": "monotonic           0         0\nboottime            0         0\n",
+              "uid": 10001,
+              "user_namespace": "user:[4026531837]"
+            },
+            "start_ticks": 221774
+          },
+          "state": "EXITED"
+        }
+      },
+      "pending": null,
+      "unresolved_deliveries": "0"
+    }
+  }
+]

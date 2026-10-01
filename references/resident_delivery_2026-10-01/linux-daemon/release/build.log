@@ -1,0 +1,35 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 142B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/rx-resident-reporting-runtime:r4-arm64
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 841B done
+#4 DONE 0.0s
+
+#5 [1/2] FROM docker.io/library/rx-resident-reporting-runtime:r4-arm64@sha256:b91beb3e204d7978836445a59a2df9d42a601c009caba5023cab16ed337e85ab
+#5 resolve docker.io/library/rx-resident-reporting-runtime:r4-arm64@sha256:b91beb3e204d7978836445a59a2df9d42a601c009caba5023cab16ed337e85ab done
+#5 DONE 0.0s
+
+#6 [2/2] COPY metadata/ /opt/rx/manifests/
+#6 DONE 0.0s
+
+#7 exporting to image
+#7 exporting layers 0.0s done
+#7 exporting manifest sha256:6a6198f7221eebd919638d832bed26477b5fe9c12282c3eb7d405f953448b995 done
+#7 exporting config sha256:83c50c8d29dea67be431e560d46b01e56e02476af7ce923e2241153a7ee94b0b done
+#7 exporting attestation manifest sha256:d565a039124c94234c573058649a9ed14f7553393b45b2e7cc38dee5f0e46f6d done
+#7 exporting manifest list sha256:1f9a144174c6759e768adcfff8665577f25ae22583e859318e6e1ce1dbad4cd6 done
+#7 naming to docker.io/library/rx-resident-reporting-runtime:r4-arm64-signed done
+#7 unpacking to docker.io/library/rx-resident-reporting-runtime:r4-arm64-signed done
+#7 DONE 0.1s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/ov0kbyy9f4ft0e8dyb1hc1u8v

@@ -1,0 +1,16 @@
+{
+  "normal": {
+    "source_binding_preserved": true,
+    "old_receipt_preserved": true,
+    "reporter_changed": false,
+    "local_stop_ms": 28,
+    "physical_execution": "NOT_PERFORMED"
+  },
+  "outage": {
+    "source_binding_preserved": true,
+    "old_receipt_preserved": true,
+    "reporter_changed": true,
+    "local_stop_ms": 26,
+    "physical_execution": "NOT_PERFORMED"
+  }
+}

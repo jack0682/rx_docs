@@ -1,0 +1,15 @@
+   Compiling rx-supervisor v0.1.0 (/Users/ojaehong/RX_automation/rx_ws/.build/linux-install-bundle/runtime/rx-supervisor)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.55s
+     Running unittests src/lib.rs (/Users/ojaehong/RX_automation/rx_ws/.build/resident-contract-solutions-target/debug/deps/rx_supervisor-5624789531f576f3)
+
+running 7 tests
+test reporting::outbox::tests::unsent_prior_run_is_discoverable_after_reopen_without_current_run_input ... ok
+test reporting::outbox::tests::same_sequence_different_receipt_and_restored_store_require_reconciliation ... ok
+test reporting::outbox::tests::forged_ack_and_regressed_server_head_never_advance_sequence ... ok
+test reporting::outbox::tests::storage_rollback_and_lost_ack_commit_preserve_exact_request ... ok
+test reporting::outbox::tests::pending_bytes_survive_new_snapshot_and_database_reopen ... ok
+test reporting::outbox::tests::restart_needs_owner_continuation_and_preserves_unknown_prior_delivery ... ok
+test reporting::outbox::tests::pending_capacity_refuses_new_request_without_losing_existing_requests ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 14 filtered out; finished in 0.67s
+

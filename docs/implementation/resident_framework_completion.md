@@ -18,7 +18,7 @@
 | ID | 완료 요구 | 완료를 입증할 근거 | 현재 상태 |
 |---|---|---|---|
 | RF01 | OD08·RR01–RR03과 공통 신원/수명/판단 모델 완결 | 상태·전이·소유자·부분 실패·양성 복귀를 CN/AC/MC와 대조한 검토 및 구현 대응 | 실행 모델 r1 작성, 검증 미완 |
-| RF02 | P 등록 소유와 S 실행 관리의 단일 연결 | 외부 작성자의 등록→실행→상실→조회·복귀, stable ID/이력 이행, 이중 writer 반례 | R1–R4 및 R5 원본 동결·P 수용/기존 신원·이력 이행·S 수용 확인 통합. 실행 배정·내용 수용 및 일반 운영 경로 미완 |
+| RF02 | P 등록 소유와 S 실행 관리의 단일 연결 | 외부 작성자의 등록→실행→상실→조회·복귀, stable ID/이력 이행, 이중 writer 반례 | R1–R5 등록·보고·소유권 이행과 R6 P 배정/검증된 내용/실제 소프트웨어 실행 통합. 불명 실행 정산·복귀, 일반 작성·운영 경로 미완 |
 | RF03 | 논리·호스트·장비 자원 묶음 수락 | 실제 집행과 준비/commit/유실/거절/회수 행렬, 두 작업의 충돌·진행 가능성 | 요구 타입과 부분 OS 집행 존재; 전체 경로 미완 |
 | RF04 | 공통 의존 결합과 관측 전용 참여 | 매 사용 검증, provider 교체·stale·상실 전파, 제어권 없이 관측 등록 | 부분 모델 존재; 공통 연결 미완 |
 | RF05 | 작업·권한·결과·인계 계약 충족 | 양성 업무 완료 및 실제 반례, OI08/11/17 포함 책임별 검증 | 모의 경로 있음; 계약 공백 남음 |
@@ -301,7 +301,7 @@ RegisteredBackend의 배정 기록 후 OS 생성 경로를 연결하고, 원 등
 
 ## R6 — P가 배정하고 S가 실제 실행하는 경로
 
-2026-10-01, 구현·검증 진행 중. [실행 계약 r1](../contracts/resident-execution/v1/README.md)은
+2026-10-01, 아래 범위의 구현·검증 및 develop 통합 완료. [실행 계약 r1](../contracts/resident-execution/v1/README.md)은
 기존 P writer와 S RegisteredSupervisor/OS 집행 경로를 연결한다. 별도 Supervisor-only mTLS 세션과
 설치가 승인한 registry/release/program digest를 사용하며 Observer 보고·이관 확인을 실행 권한으로 바꾸지 않는다.
 P 소유자가 현재 구성요소 revision·파라미터·의존 선택을 제안하고, S가 실제 서명된 릴리스와 카탈로그로
@@ -312,7 +312,7 @@ P 소유자가 현재 구성요소 revision·파라미터·의존 선택을 제�
 종료 보고/점유 해제가 통과했다. 승인 및 관측 응답 유실도 복구했다. P 지연/거절 장면에서는 로컬 종료 후
 원 미전송 종료 기록과 P의 미해결 점유를 보존했다. 같은 원 배정의 daemon 재실행은 거절되고 이전 이력이
 변하지 않았다. 이는 실제 소프트웨어/전송/커널 근거이며 물리 작업·기능 안전·business work 성공은 아니다.
-최종 커밋 기준 실행 결과·회귀·CI는 검증 기록에 연결한다.
+최종 커밋 기준 실행 결과·회귀·CI는 [검증 기록](../../references/resident_execution_2026-10-01/README.md)에 연결한다.
 
 불명인 실행이나 잔여 의무는 TTL/PID로 해제하지 않는다. 부여된 점유가 남아 있을 때 선언 변경/퇴역은
 현재 경로에서 거절한다. 운영 중 교체의 일반 모델은 RF06 후속이다. 새 운영 저장소는 schema 9로
@@ -329,3 +329,19 @@ S 425 passed / 0 failed / 19 ignored, 두 전체 workspace clippy·format 통과
 Supervisor 역할로 바뀐 계정의 기존 일반 세션 사용 거절, grant 만료·변경된 launch·
 다른 로컬 소유자의 재소비와 이력 덮어쓰기 거절, schema 9의 단조 승격을 포함한다.
 이 수치에 별도 Linux 실제 명령 장면을 섞지 않는다. source snapshot/커밋/CI 근거는 별도로 남긴다.
+
+R6 통합: [문서 #84](https://github.com/jack0682/rx_docs/pull/84),
+[Platform #68](https://github.com/jack0682/rx-platform/pull/68),
+[Solutions #77](https://github.com/jack0682/rx-solutions/pull/77)을 필수 CI·DCO 확인 후 이 순서로 병합했다.
+Linux workspace 시험은 P 530 passed / 0 failed / 21 ignored, S 470 passed / 0 failed / 22 ignored다.
+S의 amd64·arm64 설치 검사도 통과했다. 두 병합 커밋의 OpenPGP 서명·작성자 DCO와
+CI 대상 트리 동일성, P/S SDK 130개 파일 일치를 확인했다.
+[통합 기록](../../references/resident_execution_2026-10-01/integration.json)에 정확한 커밋과 CI를 남긴다.
+실제 Linux 장면의 P 소스와 통합 소스는 클라이언트 생성 검사 한 파일만 다르며,
+추가 IDL의 개수·포함 검사 외에 런타임 변경은 없다. S는 실제 장면의 소스와 같은 트리다.
+
+다음 구현은 **통신/프로세스 상실 뒤 원 실행을 정산하고 같은 설치에서 새 승인 실행으로 복귀하는 경로**다.
+원 실행의 미전송 종료 근거, 현재 권한과 source/registry/instance 신원, 실제 소유·잔여 의무를 대조해야 한다.
+단순 사용자 확인·TTL·PID 부재를 종료 근거로 받아 점유를 해제하거나 원 grant를 재사용하지 않는다.
+이 경로를 통해 복구되는 경우와 확인 불가로 계속 보류되는 경우를 모두 검증한다.
+전체 자원·기능 의존·업무 계약·열린 확장·운영 도구·설치 패키지 및 RF01–RF14는 계속 미완이다.

@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-01",
+  "docs_contract_evidence_merge": "d3118b6ccaee338e05fd0824c0e9e02a6ea195c4",
+  "checks": {
+    "required_exact_pr_ci_and_dco": "PASS",
+    "merge_signatures": "VERIFIED_OPENPGP_AND_AUTHOR_DCO",
+    "sdk_files_matched": 130
+  },
+  "new_installer_release": false,
+  "physical_work_performed": false,
+  "full_framework_complete": false,
+  "platform": {
+    "pr": 68,
+    "runtime_tested_source": "26eed02ae523e342f15f4aa5aa9d4b4217959f97",
+    "ci_tested_head": "dc1e92e7993a06e36438beb32c9f724da75534fd",
+    "merge": "0c55201e6f64792b9b6af67152d254b8bc77089b",
+    "merge_tree": "40ac9513827c474c1a35013fd523bfbe7385d85b",
+    "ci_head_tree_equals_integrated_tree": true,
+    "runtime_source_tree_equals_integrated_tree": false,
+    "runtime_source_to_integrated_changed_paths": [
+      "tools/test_prepare_clients.py"
+    ],
+    "pr_ci_url": "https://github.com/jack0682/rx-platform/actions/runs/36824607247",
+    "linux_workspace": {
+      "passed": 530,
+      "failed": 0,
+      "ignored": 21
+    },
+    "downloaded_ci_log_sha256": "8cdbb577bf15a2f0c7aa5fb5cb72997e80c90591736acd263c0346f5111a5371",
+    "runtime_source_difference": "Only the client-preparation regression guard changed: count 10 to 11 and explicit execution proto membership; complete byte-map equality is retained. No runtime implementation changed."
+  },
+  "solutions": {
+    "pr": 77,
+    "runtime_tested_source": "9274e1285a963d808343f7660db388da7a7dec55",
+    "ci_tested_head": "9274e1285a963d808343f7660db388da7a7dec55",
+    "merge": "319bf23beaf0553c1260f2fd29d99a1bdb77f473",
+    "merge_tree": "5e90a5d21f2f894427dd15f170aacfc76d3d9632",
+    "ci_head_tree_equals_integrated_tree": true,
+    "runtime_source_tree_equals_integrated_tree": true,
+    "runtime_source_to_integrated_changed_paths": [],
+    "pr_ci_url": "https://github.com/jack0682/rx-solutions/actions/runs/36824247224",
+    "linux_workspace": {
+      "passed": 470,
+      "failed": 0,
+      "ignored": 22
+    },
+    "downloaded_ci_log_sha256": "55fa4dd6e38d420a1b1151af35c4275fc012866c13f8dd417c8090bcb32257b7"
+  }
+}

@@ -1,4 +1,9 @@
-# Resident execution binding, revision 1 (implementation in progress)
+# Resident execution binding, revision 1
+
+The bounded software execution path is integrated in develop. See the
+[runtime evidence](../../../../references/resident_execution_2026-10-01/README.md)
+and [integration record](../../../../references/resident_execution_2026-10-01/integration.json).
+This status does not close the remaining framework requirements below.
 
 This contract connects P-owned component declarations to S-owned process creation.
 It does not turn a registration, reporting scope or transfer acknowledgement into

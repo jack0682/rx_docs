@@ -67,3 +67,18 @@ completion, no active-unknown automatic recovery, no whole-state rollback proof,
 no complete framework-wide resource bundles/functional dependencies, no general
 live replacement, no arbitrary author package extension and no new paired
 installer release. R6 is a concrete execution connection; RF01–RF14 is not closed.
+
+## Develop integration
+
+[Platform #68](https://github.com/jack0682/rx-platform/pull/68) and
+[Solutions #77](https://github.com/jack0682/rx-solutions/pull/77) are merged after
+the exact PR CI and DCO passed. Linux workspace results are P 530 passed / 0 failed /
+21 ignored and S 470 passed / 0 failed / 22 ignored; S installed-skill checks pass
+for amd64 and arm64. These do not replace the separately executed Linux scenes above.
+
+The [integration record](integration.json) identifies merge commits, verified
+OpenPGP/author DCO, matching CI-head trees and 130 synchronized SDK files. P's
+runtime-tested source differs from its integrated tree only in the client-preparation
+test: the expected IDL count is 11 and the new execution proto must be present.
+Full generated-byte equality remains checked. No runtime code differs. S's entire
+runtime-tested tree equals its integrated tree. No new installer was released.

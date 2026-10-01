@@ -59,3 +59,19 @@ is historical, not current process/authorization state. This development CLI is
 not automatically installed or run by the shipped daemon. P-directed execution,
 verified content, operational recovery, installer integration and RF01–RF14 remain
 unfinished. No physical completion or functional-safety qualification is claimed.
+
+
+## Linux CI and integration
+
+[Platform Linux CI](platform-linux-ci.json) passed 523 tests, zero failures and
+19 ignored. [Solutions Linux CI](solutions-linux-ci.json) passed 468, zero failures
+and 22 ignored. Full lint and installed-skill jobs on Ubuntu amd64/arm64 passed.
+Those installation jobs use their pinned P baseline and do not run the separately
+ignored new reconciliation scene or establish a new paired installer release.
+
+[Integration](integration.json) records docs #82, Platform #67 and Solutions #76
+merged in that order after required CI/DCO and verified OpenPGP/signoff checks.
+The tested and integrated code trees match, as do 126 SDK files. The final Linux
+workspace runs include the final P restart assertions and S source layout.
+This establishes explicit source acknowledgement, not P execution assignment,
+verified program content, automatic migration or full framework completion.

@@ -1,0 +1,26 @@
+{
+  "docs_merge": "7f37e86098958c464ad49084419b1dedcdfcf314",
+  "checks": {
+    "required_ci_and_dco": "PASS",
+    "merge_signatures": "VERIFIED_OPENPGP_AND_AUTHOR_DCO",
+    "sdk_files_matched": 126
+  },
+  "source_acknowledgement_implemented": true,
+  "reporting_binding_revision": 3,
+  "execution_assignment_implemented": false,
+  "content_verification_established": false,
+  "automatic_installer_migration": false,
+  "full_framework_complete": false,
+  "platform": {
+    "pr": 67,
+    "tested_source": "e91f8697416e8eff4bab86d7cadab7622590e4d4",
+    "merge": "12d5d39c8854f5eac3cacd8d221710b9549d3f01",
+    "tested_tree_equals_integrated_tree": true
+  },
+  "solutions": {
+    "pr": 76,
+    "tested_source": "7020cbee500a51e7a17b205caf40c17c1acc6811",
+    "merge": "73e724e88f90c7ce5e308133154aa7baf2494155",
+    "tested_tree_equals_integrated_tree": true
+  }
+}

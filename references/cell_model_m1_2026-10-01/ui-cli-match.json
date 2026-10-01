@@ -1,0 +1,22 @@
+{
+  "status": "MATCH",
+  "rows": 24,
+  "subject": {
+    "catalog": "a86ea3cc-8431-58ac-8401-5c2c63cb532c",
+    "id": "692dea49-b4b8-49de-8e21-615a3840dd1f",
+    "revision": "2",
+    "digest": "ef996f1da8d196e184c19a94258e562ab2cadd4dfbc65988a8a31473090a3b4b"
+  },
+  "rule": {
+    "catalog": "a86ea3cc-8431-58ac-8401-5c2c63cb532c",
+    "id": "cd0b38dd-0f2c-5269-8396-67abd4401f14",
+    "revision": "1",
+    "digest": "3d5cf928760f3de7b7a2ca14636ee0b9da2f84437e8aa6f90206cb202cea6dd7"
+  },
+  "orientation_xyzw": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+  ]
+}

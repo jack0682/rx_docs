@@ -1,0 +1,10 @@
+{
+  "platform_commit": "aee48699acd879c8f6bf84dd38c994909a7d7d66",
+  "solutions_commit": "dca80d659f5b2fa036fa3eb49ea3d23cafa18a8e",
+  "environment": "macOS arm64; loopback development API; SQLite; no device control",
+  "user_acceptance": "NOT_PERFORMED",
+  "files": {
+    "ui-cli-match.json": "d6b39ebeca9ce6762d89ec4b95ee1bb0c1095c8da6ead71e1a78a4165d9ff795",
+    "api-acceptance.json": "51ce9cbbc5b6b072ab5ad6e6c2fb6be4fa1769add5e798b98a24ce0ec28f251a"
+  }
+}

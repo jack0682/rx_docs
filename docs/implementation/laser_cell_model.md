@@ -1,6 +1,6 @@
 # 0F 레이저 셀의 버전 있는 데이터 모델
 
-2026-10-01. 이 문서를 갱신하며 모델·API·CLI 우선 세로 경로를 추적한다. 현재는 **M1 구현 중**이며
+2026-10-01. 이 문서를 갱신하며 모델·API·CLI 우선 세로 경로를 추적한다. 현재는 **M1 로컬 사전 검증 통과·통합 검증 중**이며
 사용자 수락·게시·운영·RC 완료를 뜻하지 않는다. [WF 요구](../46_workflow_product_experience.md),
 [전체 계획](framework_delivery_plan.md), [코어 헌장](../43_core_charter.md), RF 원장은 변경하지 않는다.
 
@@ -35,8 +35,10 @@ ECC_51/ECC_99/CVR_F/FLANGE_L/FLANGE_R 명칭, 14/17형 구분과 지그 대응�
   전체 패키지가 단일 transaction이라는 주장은 하지 않는다. 중단 시 적용된 정의와 미적용 정의를
   구분하고 동일 요청으로 이어간다. 이 단계의 패키지 적용은 저작 자료의 적용이며 실행 패키지 게시가 아니다.
 - M1의 위치 생성은 버전 있는 **유한 Cartesian point pattern** 규칙이다. 규칙 데이터가 대상
-  Resource Type, 원점 필드, 좌표계 필드, 축별 개수·피치 필드와 방향을 지정한다.
-  서버는 `원점 + Σ(축 index × pitch × direction)`을 계산한다. 마지막 축이 가장 빠르게 변한다.
+  Resource Type, 원점·자세·좌표계 필드, 축별 개수·피치 필드와 로컬 방향을 지정한다.
+  서버는 `원점 + R(q) × Σ(축 index × pitch × direction)`을 계산한다.
+  q는 명시된 unitless 단위 quaternion `[x,y,z,w]`이며 출력 자세에도 보존한다.
+  자세가 누락되거나 단위 quaternion이 아니면 오류이며 identity 회전을 추정하지 않는다. 마지막 축이 가장 빠르게 변한다.
   트레이/품목 이름·특정 행열 수·실측값은 알고리즘에 넣지 않는다.
 - 원점/피치는 명시된 동일 길이 단위, 축 개수는 양의 정수/unitless, 방향은 단위 벡터를 요구한다.
   누락·단위 불일치·유한성·타입 불일치·과대 개수는 위치를 포함한 오류다. 좌표계를 추정하지 않는다.
@@ -65,7 +67,7 @@ M1 검증은 다음을 실행한 근거로만 갱신한다: 모델/인스턴스 
 
 2026-10-01. 기존 definition-catalog 브랜치에서 범용 PointPattern 정의·입력 검사·출처를 포함한
 페이지 조회 API를 추가했다. 기존 `rx`에 definitions apply/show/points를 연결하고 셀의 모의 정의
-54개와 새 트레이 모델 데이터 예시를 작성했다. 이 변경은 아직 코드 PR 통합 전이다.
+54개와 새 트레이 모델 데이터 예시를 작성했다. 이 변경은 아직 코드 PR 통합 전이었다.
 
 API crate의 all-targets check와 개발 API binary build는 통과했다. 카탈로그 대상 시험 7개가
 통과했으며, 추가 시험은 고밀도 모델 2,400점의 전체 페이지·마지막 좌표, 상속/덮어쓰기 출처,
@@ -75,6 +77,44 @@ API crate의 all-targets check와 개발 API binary build는 통과했다. 카�
 실제 CLI 적용은 개발 API 로그인에서 HTTP 403으로 두 번 거절됐다. 패키지 저장 전에 실패했고,
 사용자의 동일 문제 두 번 중단 조건에 따라 인계한다. 서버 Host 정책과 CLI의 transport/public-origin
 구성이 어긋난 것으로 정적 분석했다. urllib는 unredirected header를 우선하므로 뒤늦은 일반 Host
-header 지정이 이를 교체하지 못한다. 수정 후 실행은 아직 하지 않았다.
+header 지정이 이를 교체하지 못한다. 이 시점에는 수정 후 실행을 하지 않았다.
 다음 한 단계는 서버 정책을 유지한 채 CLI 개발 transport를 수정·검증하는 것이다.
 M1 사용자 실행 준비·SDK 동기화·UI 연결·사용자 수락은 계속 미완이다.
+
+
+## M1 API·CLI·UI 사전 검증
+
+동일한 2026-10-01 후속 작업에서 Host 헤더 문제를 수정했다. 공개 host/origin과 실제 연결 주소를
+구분하며 서버 ingress 정책과 TLS Terminal 경계를 유지한다. urllib의 실제 header 우선순위를
+재현하는 테스트와 새 API 설치의 실제 요청이 통과했다.
+
+- Platform 소스: `aee48699acd879c8f6bf84dd38c994909a7d7d66`.
+- Solutions 소스: `dca80d659f5b2fa036fa3eb49ea3d23cafa18a8e`.
+- [셀 패키지와 CLI 순서](https://github.com/jack0682/rx-solutions/blob/dca80d659f5b2fa036fa3eb49ea3d23cafa18a8e/examples/definitions/0f-laser-simulation/README.md).
+- [API 실행 검증 결과](../../references/cell_model_m1_2026-10-01/api-acceptance.json).
+- [CLI와 UI의 동일 revision·행 대조](../../references/cell_model_m1_2026-10-01/ui-cli-match.json).
+
+셀 패키지는 58개 정의이며 0F 품목 ECC_51-14/ECC_99-14, 일반/고밀도 트레이,
+척, PART1/14 지그, 단일 그리퍼, 문, pick/place station과 품목별 Property Set을 제공한다.
+Task 실행값 해석과 장비 운전은 포함하지 않았다. 일반 트레이 24점, 고밀도 2,400점,
+별도 JSON으로 추가한 새 모델 15점을 같은 서버 규칙으로 생성했다.
+
+실제 새 SQLite/API 프로세스에서 전체 데이터 적용·같은 요청 재적용·상속과 덮어쓰기 출처,
+고밀도 전 페이지·회전된 모델·잘못된 quaternion 거절·digest 변조 거절을 확인했다.
+실제 서버 commit 뒤 클라이언트에 응답 유실을 주입하고 동일 요청으로 revision 하나를 복구했다.
+서버 프로세스를 종료·재시작한 뒤 같은 pinned pose report가 바이트 의미상 일치했다.
+장비/executor 결함 주입과 UNKNOWN 복구(M3)는 아직 수행하지 않았다.
+
+기존 Definitions 화면에서 CLI 자료를 열고 별도 검증용 인스턴스의 원점과 높이를 수정·저장했다.
+서버가 만든 r2의 24개 좌표를 CLI 응답과 전부 대조했고, 좌표계·quaternion·주체/규칙 revision이
+일치했다. UI는 API 결과를 표시하며 자체 좌표 계산을 추가하지 않았다.
+
+현재 로컬 검사: P 전체 workspace 541 passed / 0 failed / 19 ignored 및 Clippy 통과;
+S UI 68시험·번들 3시험·타입/format/build 통과; 정의 CLI 4시험·기존 runtime CLI 8시험 통과;
+생성 SDK 133파일 원본 일치와 저장소/계약/불변식 참조/경계 검사를 확인했다.
+19개 제외 시험, Linux CI 결과, 최종 RC 설치와 사용자 수락을 이 로컬 결과로 대신하지 않는다.
+
+공통 코어에 추가한 것은 카탈로그 ACL·불변 정의/참조 저장·타입 상속/값 출처·유한 Cartesian pose
+규칙과 조회다. 트레이·척·품목 이름/치수/작업 순서에 따른 분기는 없으며 셀 자료는 S 패키지에 둔다.
+기존 Definitions WIP를 재사용했고 이번 작업에서 새 시각 디자인·CSS 개선을 하지 않았다.
+WF/RF 장기 항목은 완료로 표시하지 않는다. 사용자 M1 수락 전 M2를 시작하지 않는다.

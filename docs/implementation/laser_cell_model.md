@@ -1,7 +1,7 @@
 # 0F 레이저 셀의 버전 있는 데이터 모델
 
-2026-10-02. **M1 사용자 수락 완료, M2 로컬 사전 검증 통과·통합 검증 중**이다.
-M2 사용자 수락·게시·운영·RC 완료를 뜻하지 않는다. [WF 요구](../46_workflow_product_experience.md),
+2026-10-02. **M1·M2 사용자 수락 완료, M3 구현 중**이다.
+게시·운영·RC 완료를 뜻하지 않는다. [WF 요구](../46_workflow_product_experience.md),
 [전체 계획](framework_delivery_plan.md), [코어 헌장](../43_core_charter.md), RF 원장은 변경하지 않는다.
 
 ## 범위와 단계
@@ -243,3 +243,38 @@ macOS 개발 인계 서비스는 사용자 launchd domain에서 실행하여 터
 포함해 workflow CLI 8개 시험이 통과했다. 실제 임시 API/CLI 시험에서 기존 출력 충돌 전후의
 서버 보고서 목록이 동일했고, concrete/blocked/bounded 종료 코드 0/2/3 및 구간 보고서 재조회가
 일치했다. 사용자 UI의 보고서 선택·위반 이동·새로고침 재열기는 재확인 대기다.
+
+
+## M2 수락과 M3 첫 연결 — 2026-10-02
+
+사용자가 M2 전체를 명시적으로 수락했다. CLI receipt ID의 A/B 보고서 선택과 값 일치,
+Sources and rules의 label/revision/member 경로, 60 N 위반에서 다른 node 선택 후 pick 이동,
+새로고침 후 같은 보고서 재열기와 CLI 수정 세 건을 직접 확인했다. M2 수락 조건은 충족됐으며
+다시 수락을 요청하지 않는다. 이는 M3나 최종 RC 수락을 뜻하지 않는다.
+
+비차단 UI 보완은 위반 property 행의 focus·스크롤·강조, worst-case 양변의 값/단위 표시,
+보고서 목록의 context·Override·생성 시각이다. 기존 목록 응답을 바꾸지 않고 명시적
+`view=details` 읽기 projection을 추가했다. 정확한 저장 Workflow defaults와 요청 context를
+결합하고 보고서에 고정된 이름을 표시한다. created_at은 monotonic clock이므로 달력 시각으로
+변환하지 않는다. 서버가 생성한 UUIDv7의 시각을 'record ID clock'으로 표시하고 원 clock/ticks를
+보존한다. 과거 보고서와 기본 CLI JSON은 소급 수정하지 않는다.
+
+M3 첫 연결은 Solutions의 기존 rx-process 컴파일러에 저장 해석 보고서를 입력하는 경로다.
+정확한 보고서 reference/digest·slot·node·Skill parameter mapping으로 content-addressed
+parameter artifact를 만들고, 기존 ProcessSource→ResolvedProcess→BT XML 경로를 사용한다.
+패키지 template이 host·program·resource set·단위/frame·timeout 상한을 제공한다. 보고서의
+실행값은 새로 계산하지 않는다. 현재 compiler profile은 Task당 Skill 한 개만 지원하며 다른
+구조를 조용히 평탄화하지 않는다. 결과는 **COMPILED_NOT_QUALIFIED**다.
+
+컴파일 입력과 template은 신뢰되지 않은 저작 자료다. report digest 일치만으로 서버 발행이나
+운전 허가가 증명되지 않는다. 실제 게시 경로에서는 저장 보고서 재조회와 package 검증이 필요하다.
+현재 개발 시험의 program/profile은 test fixture이며 실행 가능한 장비 구현이 아니다.
+독립적인 A/B 기대값(폭 47/77 mm, 힘 25/17.5 N)과 8개 node의 parameter 파일 hash/size,
+원 report/slot 연결을 실제 컴파일 명령으로 확인했다. 원본 참조 위조, 범위값, unit/frame 불일치,
+누락 매핑, timeout 상한 초과를 거절하는 시험이 있다.
+
+아직 구현되지 않은 M3 부분은 같은 compiled version의 모의 Preview 실행·게시,
+실제 품목 입력 시 재해석/제약 검사, N개 실행과 장비 무응답 UNKNOWN/자원 보유/정산/다음 품목,
+Linux RC와 최종 사람의 45분/10분 재현이다. 기존 runtime CLI는 BOUND_CONFIGURATION이고
+Host 입력은 고정된 parameter artifact에 연결되므로 이 경계를 실제로 연결해야 한다.
+LOCAL_SIM Python 순차 실행이나 UI의 예시 trace로 이를 대체하지 않는다.

@@ -1,0 +1,824 @@
+{
+  "approval_reply_loss_recovered": true,
+  "approved": {
+    "assignment": {
+      "content": {
+        "basis": "ENROLLED_SUPERVISOR_VERIFIED_RELEASE",
+        "preparation": {
+          "assignment": "01a0f645-bf38-73a3-b1e8-e5ebad067731",
+          "intent_digest": "8db099473fb9a7e70425b3e83b6263ecb7bd4af3784b4b8df1cd73658b287ad1",
+          "legacy_source": null,
+          "peer": {
+            "authentication_binding": "fc308353f3c020816123378a8fa99e600a196a4a12e2223ba827fa2de0bd443d",
+            "enrollment": "d9173656008ac158aba4a5e774795a9dee3f68567a4c0927a4a2b07cdeea4ed5",
+            "id": "01a0f645-d3dd-763e-80e8-d96e26ba05af",
+            "installation": "b36b9941-b26d-4e9d-8574-69074d72128d",
+            "peer_boot": "bfc19409-8b5e-48f6-98be-333953ea7833",
+            "principal": "supervisor",
+            "registry": "62bcdb93d9bcaf0d19f1d5cda4dfbaa1841f38ad673e007c49281c6147fc6b2f",
+            "runtime_boot": "01a0f645-bcb2-7292-b8ae-a11b01ef988b",
+            "store_generation": "01a0f645-bcb3-739d-8aae-72de98999f30"
+          },
+          "plan_digest": "55416e010761779e4522920bfa5a7b03e40b55f347ebdd09c5f8e4aab82d1995",
+          "programs": {
+            "first": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "effect": "NON_ACTUATING"
+            },
+            "second": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "effect": "NON_ACTUATING"
+            }
+          },
+          "release": "2f80fb30d42853feeb68077cea91f9ead1f2d8f3e34b14ebb6d43f80806d3971"
+        },
+        "recorded_at": {
+          "clock_id": "linux-boottime/b7cf7eb8-3e19-4b40-9237-44e8a4101404",
+          "ticks_ns": "575165683137"
+        }
+      },
+      "grant": {
+        "assignment": "01a0f645-bf38-73a3-b1e8-e5ebad067731",
+        "id": "01a0f645-d3ea-719a-9885-1dd67e721757",
+        "intent_digest": "8db099473fb9a7e70425b3e83b6263ecb7bd4af3784b4b8df1cd73658b287ad1",
+        "issued_at": {
+          "clock_id": "linux-boottime/b7cf7eb8-3e19-4b40-9237-44e8a4101404",
+          "ticks_ns": "575170222595"
+        },
+        "peer": {
+          "authentication_binding": "fc308353f3c020816123378a8fa99e600a196a4a12e2223ba827fa2de0bd443d",
+          "enrollment": "d9173656008ac158aba4a5e774795a9dee3f68567a4c0927a4a2b07cdeea4ed5",
+          "id": "01a0f645-d3dd-763e-80e8-d96e26ba05af",
+          "installation": "b36b9941-b26d-4e9d-8574-69074d72128d",
+          "peer_boot": "bfc19409-8b5e-48f6-98be-333953ea7833",
+          "principal": "supervisor",
+          "registry": "62bcdb93d9bcaf0d19f1d5cda4dfbaa1841f38ad673e007c49281c6147fc6b2f",
+          "runtime_boot": "01a0f645-bcb2-7292-b8ae-a11b01ef988b",
+          "store_generation": "01a0f645-bcb3-739d-8aae-72de98999f30"
+        },
+        "preparation_digest": "c63b1c811808624d03b7eeeded338042dd05b495c31b4d985a08adf04cea89bd",
+        "valid_until": {
+          "clock_id": "linux-boottime/b7cf7eb8-3e19-4b40-9237-44e8a4101404",
+          "ticks_ns": "585170222595"
+        }
+      },
+      "intent": {
+        "created_at": {
+          "clock_id": "linux-boottime/b7cf7eb8-3e19-4b40-9237-44e8a4101404",
+          "ticks_ns": "569871123385"
+        },
+        "environment": "SIMULATION",
+        "id": "01a0f645-bf38-73a3-b1e8-e5ebad067731",
+        "nodes": {
+          "first": {
+            "instance": "01a0f645-bf38-73a3-b1e8-e5e9a05c911e",
+            "origin": null,
+            "registration": {
+              "declaration": {
+                "catalog": {
+                  "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                  "program": "rx/status-http"
+                },
+                "label": "first"
+              },
+              "id": "01a0f645-bf36-7095-be89-2804a223d6cc",
+              "state": "ACCEPTED"
+            },
+            "revision": "1",
+            "selection": {
+              "component": "01a0f645-bf36-7095-be89-2804a223d6cc",
+              "depends_on": [],
+              "expected_revision": "1",
+              "parameters": {
+                "bind": "127.0.0.1",
+                "port": "34003"
+              },
+              "shutdown_timeout_ms": "2000",
+              "startup_timeout_ms": "5000"
+            }
+          },
+          "second": {
+            "instance": "01a0f645-bf38-73a3-b1e8-e5eac38f37ca",
+            "origin": null,
+            "registration": {
+              "declaration": {
+                "catalog": {
+                  "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                  "program": "rx/status-http"
+                },
+                "label": "second"
+              },
+              "id": "01a0f645-bf37-71e8-823e-17d4923ec683",
+              "state": "ACCEPTED"
+            },
+            "revision": "1",
+            "selection": {
+              "component": "01a0f645-bf37-71e8-823e-17d4923ec683",
+              "depends_on": [
+                "first"
+              ],
+              "expected_revision": "1",
+              "parameters": {
+                "bind": "127.0.0.1",
+                "port": "39307"
+              },
+              "shutdown_timeout_ms": "2000",
+              "startup_timeout_ms": "5000"
+            }
+          }
+        },
+        "owner": "admin",
+        "profiles": [],
+        "run": "01a0f645-bf38-73a3-b1e8-e5ecd84e248d",
+        "supervisor": "supervisor"
+      },
+      "observed": null,
+      "phase": "GRANTED",
+      "stop_requested": false
+    },
+    "claims_held": true,
+    "peer_current": true,
+    "revision": "3"
+  },
+  "delivery": {
+    "accepted": {
+      "observation": {
+        "assignment": "01a0f645-bf38-73a3-b1e8-e5ebad067731",
+        "grant": "01a0f645-d3ea-719a-9885-1dd67e721757",
+        "nodes": {
+          "first": {
+            "detail": "supervisor Exited; no additional lifecycle error; process lifecycle only, work use not granted",
+            "exit_code": 0,
+            "instance": "01a0f645-bf38-73a3-b1e8-e5e9a05c911e",
+            "pid": 17,
+            "state": "EXITED"
+          },
+          "second": {
+            "detail": "supervisor Exited; no additional lifecycle error; process lifecycle only, work use not granted",
+            "exit_code": 0,
+            "instance": "01a0f645-bf38-73a3-b1e8-e5eac38f37ca",
+            "pid": 18,
+            "state": "EXITED"
+          }
+        },
+        "reconciliation_required": false,
+        "sequence": "7"
+      },
+      "observer": {
+        "authentication_binding": "fc308353f3c020816123378a8fa99e600a196a4a12e2223ba827fa2de0bd443d",
+        "enrollment": "d9173656008ac158aba4a5e774795a9dee3f68567a4c0927a4a2b07cdeea4ed5",
+        "id": "01a0f645-d3dd-763e-80e8-d96e26ba05af",
+        "installation": "b36b9941-b26d-4e9d-8574-69074d72128d",
+        "peer_boot": "bfc19409-8b5e-48f6-98be-333953ea7833",
+        "principal": "supervisor",
+        "registry": "62bcdb93d9bcaf0d19f1d5cda4dfbaa1841f38ad673e007c49281c6147fc6b2f",
+        "runtime_boot": "01a0f645-bcb2-7292-b8ae-a11b01ef988b",
+        "store_generation": "01a0f645-bcb3-739d-8aae-72de98999f30"
+      },
+      "recorded_at": {
+        "clock_id": "linux-boottime/b7cf7eb8-3e19-4b40-9237-44e8a4101404",
+        "ticks_ns": "576988217388"
+      }
+    },
+    "assignment": "01a0f645-bf38-73a3-b1e8-e5ebad067731",
+    "grant": "01a0f645-d3ea-719a-9885-1dd67e721757",
+    "latest": {
+      "assignment": "01a0f645-bf38-73a3-b1e8-e5ebad067731",
+      "grant": "01a0f645-d3ea-719a-9885-1dd67e721757",
+      "nodes": {
+        "first": {
+          "detail": "supervisor Exited; no additional lifecycle error; process lifecycle only, work use not granted",
+          "exit_code": 0,
+          "instance": "01a0f645-bf38-73a3-b1e8-e5e9a05c911e",
+          "pid": 17,
+          "state": "EXITED"
+        },
+        "second": {
+          "detail": "supervisor Exited; no additional lifecycle error; process lifecycle only, work use not granted",
+          "exit_code": 0,
+          "instance": "01a0f645-bf38-73a3-b1e8-e5eac38f37ca",
+          "pid": 18,
+          "state": "EXITED"
+        }
+      },
+      "reconciliation_required": false,
+      "sequence": "0"
+    },
+    "peer": {
+      "authentication_binding": "fc308353f3c020816123378a8fa99e600a196a4a12e2223ba827fa2de0bd443d",
+      "enrollment": "d9173656008ac158aba4a5e774795a9dee3f68567a4c0927a4a2b07cdeea4ed5",
+      "id": "01a0f645-d3dd-763e-80e8-d96e26ba05af",
+      "installation": "b36b9941-b26d-4e9d-8574-69074d72128d",
+      "peer_boot": "bfc19409-8b5e-48f6-98be-333953ea7833",
+      "principal": "supervisor",
+      "registry": "62bcdb93d9bcaf0d19f1d5cda4dfbaa1841f38ad673e007c49281c6147fc6b2f",
+      "runtime_boot": "01a0f645-bcb2-7292-b8ae-a11b01ef988b",
+      "store_generation": "01a0f645-bcb3-739d-8aae-72de98999f30"
+    },
+    "pending": null
+  },
+  "final": {
+    "assignment": {
+      "content": {
+        "basis": "ENROLLED_SUPERVISOR_VERIFIED_RELEASE",
+        "preparation": {
+          "assignment": "01a0f645-bf38-73a3-b1e8-e5ebad067731",
+          "intent_digest": "8db099473fb9a7e70425b3e83b6263ecb7bd4af3784b4b8df1cd73658b287ad1",
+          "legacy_source": null,
+          "peer": {
+            "authentication_binding": "fc308353f3c020816123378a8fa99e600a196a4a12e2223ba827fa2de0bd443d",
+            "enrollment": "d9173656008ac158aba4a5e774795a9dee3f68567a4c0927a4a2b07cdeea4ed5",
+            "id": "01a0f645-d3dd-763e-80e8-d96e26ba05af",
+            "installation": "b36b9941-b26d-4e9d-8574-69074d72128d",
+            "peer_boot": "bfc19409-8b5e-48f6-98be-333953ea7833",
+            "principal": "supervisor",
+            "registry": "62bcdb93d9bcaf0d19f1d5cda4dfbaa1841f38ad673e007c49281c6147fc6b2f",
+            "runtime_boot": "01a0f645-bcb2-7292-b8ae-a11b01ef988b",
+            "store_generation": "01a0f645-bcb3-739d-8aae-72de98999f30"
+          },
+          "plan_digest": "55416e010761779e4522920bfa5a7b03e40b55f347ebdd09c5f8e4aab82d1995",
+          "programs": {
+            "first": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "effect": "NON_ACTUATING"
+            },
+            "second": {
+              "catalog": {
+                "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                "program": "rx/status-http"
+              },
+              "effect": "NON_ACTUATING"
+            }
+          },
+          "release": "2f80fb30d42853feeb68077cea91f9ead1f2d8f3e34b14ebb6d43f80806d3971"
+        },
+        "recorded_at": {
+          "clock_id": "linux-boottime/b7cf7eb8-3e19-4b40-9237-44e8a4101404",
+          "ticks_ns": "575165683137"
+        }
+      },
+      "grant": {
+        "assignment": "01a0f645-bf38-73a3-b1e8-e5ebad067731",
+        "id": "01a0f645-d3ea-719a-9885-1dd67e721757",
+        "intent_digest": "8db099473fb9a7e70425b3e83b6263ecb7bd4af3784b4b8df1cd73658b287ad1",
+        "issued_at": {
+          "clock_id": "linux-boottime/b7cf7eb8-3e19-4b40-9237-44e8a4101404",
+          "ticks_ns": "575170222595"
+        },
+        "peer": {
+          "authentication_binding": "fc308353f3c020816123378a8fa99e600a196a4a12e2223ba827fa2de0bd443d",
+          "enrollment": "d9173656008ac158aba4a5e774795a9dee3f68567a4c0927a4a2b07cdeea4ed5",
+          "id": "01a0f645-d3dd-763e-80e8-d96e26ba05af",
+          "installation": "b36b9941-b26d-4e9d-8574-69074d72128d",
+          "peer_boot": "bfc19409-8b5e-48f6-98be-333953ea7833",
+          "principal": "supervisor",
+          "registry": "62bcdb93d9bcaf0d19f1d5cda4dfbaa1841f38ad673e007c49281c6147fc6b2f",
+          "runtime_boot": "01a0f645-bcb2-7292-b8ae-a11b01ef988b",
+          "store_generation": "01a0f645-bcb3-739d-8aae-72de98999f30"
+        },
+        "preparation_digest": "c63b1c811808624d03b7eeeded338042dd05b495c31b4d985a08adf04cea89bd",
+        "valid_until": {
+          "clock_id": "linux-boottime/b7cf7eb8-3e19-4b40-9237-44e8a4101404",
+          "ticks_ns": "585170222595"
+        }
+      },
+      "intent": {
+        "created_at": {
+          "clock_id": "linux-boottime/b7cf7eb8-3e19-4b40-9237-44e8a4101404",
+          "ticks_ns": "569871123385"
+        },
+        "environment": "SIMULATION",
+        "id": "01a0f645-bf38-73a3-b1e8-e5ebad067731",
+        "nodes": {
+          "first": {
+            "instance": "01a0f645-bf38-73a3-b1e8-e5e9a05c911e",
+            "origin": null,
+            "registration": {
+              "declaration": {
+                "catalog": {
+                  "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                  "program": "rx/status-http"
+                },
+                "label": "first"
+              },
+              "id": "01a0f645-bf36-7095-be89-2804a223d6cc",
+              "state": "ACCEPTED"
+            },
+            "revision": "1",
+            "selection": {
+              "component": "01a0f645-bf36-7095-be89-2804a223d6cc",
+              "depends_on": [],
+              "expected_revision": "1",
+              "parameters": {
+                "bind": "127.0.0.1",
+                "port": "34003"
+              },
+              "shutdown_timeout_ms": "2000",
+              "startup_timeout_ms": "5000"
+            }
+          },
+          "second": {
+            "instance": "01a0f645-bf38-73a3-b1e8-e5eac38f37ca",
+            "origin": null,
+            "registration": {
+              "declaration": {
+                "catalog": {
+                  "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+                  "program": "rx/status-http"
+                },
+                "label": "second"
+              },
+              "id": "01a0f645-bf37-71e8-823e-17d4923ec683",
+              "state": "ACCEPTED"
+            },
+            "revision": "1",
+            "selection": {
+              "component": "01a0f645-bf37-71e8-823e-17d4923ec683",
+              "depends_on": [
+                "first"
+              ],
+              "expected_revision": "1",
+              "parameters": {
+                "bind": "127.0.0.1",
+                "port": "39307"
+              },
+              "shutdown_timeout_ms": "2000",
+              "startup_timeout_ms": "5000"
+            }
+          }
+        },
+        "owner": "admin",
+        "profiles": [],
+        "run": "01a0f645-bf38-73a3-b1e8-e5ecd84e248d",
+        "supervisor": "supervisor"
+      },
+      "observed": {
+        "observation": {
+          "assignment": "01a0f645-bf38-73a3-b1e8-e5ebad067731",
+          "grant": "01a0f645-d3ea-719a-9885-1dd67e721757",
+          "nodes": {
+            "first": {
+              "detail": "supervisor Exited; no additional lifecycle error; process lifecycle only, work use not granted",
+              "exit_code": 0,
+              "instance": "01a0f645-bf38-73a3-b1e8-e5e9a05c911e",
+              "pid": 17,
+              "state": "EXITED"
+            },
+            "second": {
+              "detail": "supervisor Exited; no additional lifecycle error; process lifecycle only, work use not granted",
+              "exit_code": 0,
+              "instance": "01a0f645-bf38-73a3-b1e8-e5eac38f37ca",
+              "pid": 18,
+              "state": "EXITED"
+            }
+          },
+          "reconciliation_required": false,
+          "sequence": "7"
+        },
+        "observer": {
+          "authentication_binding": "fc308353f3c020816123378a8fa99e600a196a4a12e2223ba827fa2de0bd443d",
+          "enrollment": "d9173656008ac158aba4a5e774795a9dee3f68567a4c0927a4a2b07cdeea4ed5",
+          "id": "01a0f645-d3dd-763e-80e8-d96e26ba05af",
+          "installation": "b36b9941-b26d-4e9d-8574-69074d72128d",
+          "peer_boot": "bfc19409-8b5e-48f6-98be-333953ea7833",
+          "principal": "supervisor",
+          "registry": "62bcdb93d9bcaf0d19f1d5cda4dfbaa1841f38ad673e007c49281c6147fc6b2f",
+          "runtime_boot": "01a0f645-bcb2-7292-b8ae-a11b01ef988b",
+          "store_generation": "01a0f645-bcb3-739d-8aae-72de98999f30"
+        },
+        "recorded_at": {
+          "clock_id": "linux-boottime/b7cf7eb8-3e19-4b40-9237-44e8a4101404",
+          "ticks_ns": "576988217388"
+        }
+      },
+      "phase": "EXITED",
+      "stop_requested": true
+    },
+    "claims_held": false,
+    "peer_current": true,
+    "revision": "11"
+  },
+  "functional_work_permission": "NOT_GRANTED",
+  "inspection_preserved_source_outbox_and_platform_outcomes": true,
+  "listing": {
+    "basis": "ACTUAL_RELEASE_VERIFIED_AT_CHECKPOINT; NOT_EXECUTION_PERMISSION",
+    "enrollment": {
+      "programs": {
+        "rx/ai-sapiens-asset-simulation": {
+          "digest": "e90c335795ed412cd8c56680deb5bccc62d38973ad545b8eb36b4ea0d9899d4f",
+          "effect": "NON_ACTUATING"
+        },
+        "rx/ai-worker-l3-simulation": {
+          "digest": "cf352a7e0420eeca33340f095495a76959771fc8a02d14d792fd393141351413",
+          "effect": "NON_ACTUATING"
+        },
+        "rx/dhi-pty-simulation": {
+          "digest": "6c94d28bfde1cf6eb56788f8e454dfc624664026a0cc3a8460edee0346fd03b0",
+          "effect": "NON_ACTUATING"
+        },
+        "rx/open-manipulator-l3-simulation": {
+          "digest": "e5688e93d30004953a89fa731119c0f5f3d5a9971cc882300735cd5622bfef08",
+          "effect": "NON_ACTUATING"
+        },
+        "rx/status-http": {
+          "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+          "effect": "NON_ACTUATING"
+        }
+      },
+      "registry": "62bcdb93d9bcaf0d19f1d5cda4dfbaa1841f38ad673e007c49281c6147fc6b2f",
+      "releases": [
+        "2f80fb30d42853feeb68077cea91f9ead1f2d8f3e34b14ebb6d43f80806d3971"
+      ]
+    },
+    "schema": "rx.resident-execution-catalog.v1"
+  },
+  "local_stop_ms": 472,
+  "observation_reply_loss_recovered": true,
+  "original_assignment_restart_refused": true,
+  "outage": false,
+  "physical_execution": "NOT_PERFORMED",
+  "prepared": {
+    "peer": {
+      "authentication_binding": "fc308353f3c020816123378a8fa99e600a196a4a12e2223ba827fa2de0bd443d",
+      "enrollment": "d9173656008ac158aba4a5e774795a9dee3f68567a4c0927a4a2b07cdeea4ed5",
+      "id": "01a0f645-d3dd-763e-80e8-d96e26ba05af",
+      "installation": "b36b9941-b26d-4e9d-8574-69074d72128d",
+      "peer_boot": "bfc19409-8b5e-48f6-98be-333953ea7833",
+      "principal": "supervisor",
+      "registry": "62bcdb93d9bcaf0d19f1d5cda4dfbaa1841f38ad673e007c49281c6147fc6b2f",
+      "runtime_boot": "01a0f645-bcb2-7292-b8ae-a11b01ef988b",
+      "store_generation": "01a0f645-bcb3-739d-8aae-72de98999f30"
+    },
+    "preparation": {
+      "assignment": "01a0f645-bf38-73a3-b1e8-e5ebad067731",
+      "intent_digest": "8db099473fb9a7e70425b3e83b6263ecb7bd4af3784b4b8df1cd73658b287ad1",
+      "legacy_source": null,
+      "peer": {
+        "authentication_binding": "fc308353f3c020816123378a8fa99e600a196a4a12e2223ba827fa2de0bd443d",
+        "enrollment": "d9173656008ac158aba4a5e774795a9dee3f68567a4c0927a4a2b07cdeea4ed5",
+        "id": "01a0f645-d3dd-763e-80e8-d96e26ba05af",
+        "installation": "b36b9941-b26d-4e9d-8574-69074d72128d",
+        "peer_boot": "bfc19409-8b5e-48f6-98be-333953ea7833",
+        "principal": "supervisor",
+        "registry": "62bcdb93d9bcaf0d19f1d5cda4dfbaa1841f38ad673e007c49281c6147fc6b2f",
+        "runtime_boot": "01a0f645-bcb2-7292-b8ae-a11b01ef988b",
+        "store_generation": "01a0f645-bcb3-739d-8aae-72de98999f30"
+      },
+      "plan_digest": "55416e010761779e4522920bfa5a7b03e40b55f347ebdd09c5f8e4aab82d1995",
+      "programs": {
+        "first": {
+          "catalog": {
+            "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+            "program": "rx/status-http"
+          },
+          "effect": "NON_ACTUATING"
+        },
+        "second": {
+          "catalog": {
+            "digest": "785789b99853948c548b13c95d34903c8d0241c703d6343e07dbd47acf913d66",
+            "program": "rx/status-http"
+          },
+          "effect": "NON_ACTUATING"
+        }
+      },
+      "release": "2f80fb30d42853feeb68077cea91f9ead1f2d8f3e34b14ebb6d43f80806d3971"
+    },
+    "schema": "rx.resident-execution-prepared.v1",
+    "state": "AWAITING_OWNER_APPROVAL"
+  },
+  "running": {
+    "assignment": "01a0f645-bf38-73a3-b1e8-e5ebad067731",
+    "delivery": {
+      "delivered_sequence": "2",
+      "error": null,
+      "pending": false,
+      "stop_requested": false,
+      "stopped": false
+    },
+    "schema": "rx.resident-execution-runtime-status.v1",
+    "supervisor": {
+      "all_exited": false,
+      "blocked": [],
+      "control_prepared": false,
+      "execution_admission": {
+        "first": {
+          "application": {
+            "receipt": {
+              "evidence": {
+                "basis": "LINUX_RLIMIT",
+                "observation": {
+                  "capacity_reservation": "NONE_CREATED",
+                  "hard_bytes": "268435456",
+                  "instance": "01a0f645-bf38-73a3-b1e8-e5e9a05c911e",
+                  "observer": "OWNING_PARENT_PROCFS_AFTER_EXEC",
+                  "physical_handover": "NOT_ASSESSED",
+                  "pid": 17,
+                  "previous_hard_bytes": null,
+                  "previous_soft_bytes": null,
+                  "request": {
+                    "instance": "01a0f645-bf38-73a3-b1e8-e5e9a05c911e",
+                    "plan_digest": "55416e010761779e4522920bfa5a7b03e40b55f347ebdd09c5f8e4aab82d1995",
+                    "process": "first",
+                    "program": "rx/status-http",
+                    "requirements": {
+                      "status/address-space": {
+                        "amount": "268435456",
+                        "meaning": "UPPER_BOUND",
+                        "resource": "ADDRESS_SPACE_BYTES"
+                      }
+                    }
+                  },
+                  "requirement": "status/address-space",
+                  "resource": "ADDRESS_SPACE_BYTES",
+                  "scope": "PER_PROCESS_VIRTUAL_ADDRESS_SPACE_UPPER_BOUND",
+                  "soft_bytes": "268435456"
+                }
+              },
+              "request": {
+                "instance": "01a0f645-bf38-73a3-b1e8-e5e9a05c911e",
+                "plan_digest": "55416e010761779e4522920bfa5a7b03e40b55f347ebdd09c5f8e4aab82d1995",
+                "process": "first",
+                "program": "rx/status-http",
+                "requirements": {
+                  "status/address-space": {
+                    "amount": "268435456",
+                    "meaning": "UPPER_BOUND",
+                    "resource": "ADDRESS_SPACE_BYTES"
+                  }
+                }
+              }
+            },
+            "state": "REPORTED_AT_START"
+          },
+          "not_applied_reasons": [],
+          "requested": {
+            "status/address-space": {
+              "amount": "268435456",
+              "meaning": "UPPER_BOUND",
+              "resource": "ADDRESS_SPACE_BYTES"
+            }
+          }
+        },
+        "second": {
+          "application": {
+            "receipt": {
+              "evidence": {
+                "basis": "LINUX_RLIMIT",
+                "observation": {
+                  "capacity_reservation": "NONE_CREATED",
+                  "hard_bytes": "268435456",
+                  "instance": "01a0f645-bf38-73a3-b1e8-e5eac38f37ca",
+                  "observer": "OWNING_PARENT_PROCFS_AFTER_EXEC",
+                  "physical_handover": "NOT_ASSESSED",
+                  "pid": 18,
+                  "previous_hard_bytes": null,
+                  "previous_soft_bytes": null,
+                  "request": {
+                    "instance": "01a0f645-bf38-73a3-b1e8-e5eac38f37ca",
+                    "plan_digest": "55416e010761779e4522920bfa5a7b03e40b55f347ebdd09c5f8e4aab82d1995",
+                    "process": "second",
+                    "program": "rx/status-http",
+                    "requirements": {
+                      "status/address-space": {
+                        "amount": "268435456",
+                        "meaning": "UPPER_BOUND",
+                        "resource": "ADDRESS_SPACE_BYTES"
+                      }
+                    }
+                  },
+                  "requirement": "status/address-space",
+                  "resource": "ADDRESS_SPACE_BYTES",
+                  "scope": "PER_PROCESS_VIRTUAL_ADDRESS_SPACE_UPPER_BOUND",
+                  "soft_bytes": "268435456"
+                }
+              },
+              "request": {
+                "instance": "01a0f645-bf38-73a3-b1e8-e5eac38f37ca",
+                "plan_digest": "55416e010761779e4522920bfa5a7b03e40b55f347ebdd09c5f8e4aab82d1995",
+                "process": "second",
+                "program": "rx/status-http",
+                "requirements": {
+                  "status/address-space": {
+                    "amount": "268435456",
+                    "meaning": "UPPER_BOUND",
+                    "resource": "ADDRESS_SPACE_BYTES"
+                  }
+                }
+              }
+            },
+            "state": "REPORTED_AT_START"
+          },
+          "not_applied_reasons": [],
+          "requested": {
+            "status/address-space": {
+              "amount": "268435456",
+              "meaning": "UPPER_BOUND",
+              "resource": "ADDRESS_SPACE_BYTES"
+            }
+          }
+        }
+      },
+      "guarded_shutdown_confirmed": false,
+      "physical_shutdown_assessed": false,
+      "reconciliation_required": false,
+      "schema": "rx.supervisor-status.v1",
+      "state": {
+        "plan": "01a0f645-bf38-73a3-b1e8-e5ecd84e248d",
+        "plan_digest": "55416e010761779e4522920bfa5a7b03e40b55f347ebdd09c5f8e4aab82d1995",
+        "records": {
+          "first": {
+            "attempts": "1",
+            "error": null,
+            "exit_code": null,
+            "id": "first",
+            "instance": "01a0f645-bf38-73a3-b1e8-e5e9a05c911e",
+            "phase": "PROCESS_READY",
+            "pid": 17,
+            "process_identity": {
+              "pid": 17,
+              "scope": {
+                "boot": "b7cf7eb8-3e19-4b40-9237-44e8a4101404",
+                "euid": 10001,
+                "init_start_ticks": 56395,
+                "mount_namespace": "mnt:[4026532566]",
+                "pid_namespace": "pid:[4026532569]",
+                "proc_mount": "159 157 0:62 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw",
+                "time_namespace": "time:[4026532699]",
+                "time_offsets": "monotonic           0         0\nboottime            0         0\n",
+                "uid": 10001,
+                "user_namespace": "user:[4026531837]"
+              },
+              "start_ticks": 57573
+            },
+            "resources": {
+              "capacity_reservation": "NONE_CREATED",
+              "current_enforcement": "NOT_ESTABLISHED_BY_HISTORY",
+              "last_observed": {
+                "capacity_reservation": "NONE_CREATED",
+                "hard_bytes": "268435456",
+                "instance": "01a0f645-bf38-73a3-b1e8-e5e9a05c911e",
+                "physical_handover": "NOT_ASSESSED",
+                "pid": 17,
+                "requirement": "status/address-space",
+                "scope": "PER_PROCESS_VIRTUAL_ADDRESS_SPACE_UPPER_BOUND",
+                "soft_bytes": "268435456"
+              },
+              "lifetime": "OBSERVED_AT_START",
+              "physical_handover": "NOT_ASSESSED"
+            }
+          },
+          "second": {
+            "attempts": "1",
+            "error": null,
+            "exit_code": null,
+            "id": "second",
+            "instance": "01a0f645-bf38-73a3-b1e8-e5eac38f37ca",
+            "phase": "PROCESS_READY",
+            "pid": 18,
+            "process_identity": {
+              "pid": 18,
+              "scope": {
+                "boot": "b7cf7eb8-3e19-4b40-9237-44e8a4101404",
+                "euid": 10001,
+                "init_start_ticks": 56395,
+                "mount_namespace": "mnt:[4026532566]",
+                "pid_namespace": "pid:[4026532569]",
+                "proc_mount": "159 157 0:62 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw",
+                "time_namespace": "time:[4026532699]",
+                "time_offsets": "monotonic           0         0\nboottime            0         0\n",
+                "uid": 10001,
+                "user_namespace": "user:[4026531837]"
+              },
+              "start_ticks": 57625
+            },
+            "resources": {
+              "capacity_reservation": "NONE_CREATED",
+              "current_enforcement": "NOT_ESTABLISHED_BY_HISTORY",
+              "last_observed": {
+                "capacity_reservation": "NONE_CREATED",
+                "hard_bytes": "268435456",
+                "instance": "01a0f645-bf38-73a3-b1e8-e5eac38f37ca",
+                "physical_handover": "NOT_ASSESSED",
+                "pid": 18,
+                "requirement": "status/address-space",
+                "scope": "PER_PROCESS_VIRTUAL_ADDRESS_SPACE_UPPER_BOUND",
+                "soft_bytes": "268435456"
+              },
+              "lifetime": "OBSERVED_AT_START",
+              "physical_handover": "NOT_ASSESSED"
+            }
+          }
+        },
+        "schema": "rx.supervisor-state.v1",
+        "stop_requested": false
+      }
+    },
+    "work_use_permission": "NOT_GRANTED_BY_PROCESS_EXECUTION"
+  },
+  "source_history_unchanged_after_replay_attempt": true,
+  "source_inspection": {
+    "assignment": "01a0f645-bf38-73a3-b1e8-e5ebad067731",
+    "current_peer": {
+      "authentication_binding": "fc308353f3c020816123378a8fa99e600a196a4a12e2223ba827fa2de0bd443d",
+      "enrollment": "d9173656008ac158aba4a5e774795a9dee3f68567a4c0927a4a2b07cdeea4ed5",
+      "id": "01a0f646-0385-7257-b431-87be50fd80b9",
+      "installation": "b36b9941-b26d-4e9d-8574-69074d72128d",
+      "peer_boot": "4b4cbebe-9c13-452f-ab03-ebed1dec6d8f",
+      "principal": "supervisor",
+      "registry": "62bcdb93d9bcaf0d19f1d5cda4dfbaa1841f38ad673e007c49281c6147fc6b2f",
+      "runtime_boot": "01a0f645-bcb2-7292-b8ae-a11b01ef988b",
+      "store_generation": "01a0f645-bcb3-739d-8aae-72de98999f30"
+    },
+    "grant": "01a0f645-d3ea-719a-9885-1dd67e721757",
+    "inspected_at": {
+      "clock_id": "linux-boottime/b7cf7eb8-3e19-4b40-9237-44e8a4101404",
+      "ticks_ns": "587365963018"
+    },
+    "limitations": [
+      "Source investigation only; P owner reconciliation and a new assignment are still required",
+      "Stored records rely on the installed verifier and local OS/storage; whole-state rollback is not detected",
+      "No process adoption, termination, grant restoration or original outbox rewrite"
+    ],
+    "nodes": {
+      "first": {
+        "finding": {
+          "basis": "RECORDED_DIRECT_CHILD_EXIT",
+          "exit_code": 0,
+          "pid": 17
+        },
+        "instance": "01a0f645-bf38-73a3-b1e8-e5e9a05c911e",
+        "original": {
+          "digest": "6d80a9a51dabb2738a4dfd8a70d929242d2441bb8989a21ccab974c34f36d65e",
+          "instance": "01a0f645-bf38-73a3-b1e8-e5e9a05c911e",
+          "registration": "01a0f645-bf36-7095-be89-2804a223d6cc",
+          "revision": "5"
+        },
+        "phase": "EXITED",
+        "recorded_outcome": "EXITED",
+        "residuals": [
+          "direct child exit does not assess descendants or external resources"
+        ]
+      },
+      "second": {
+        "finding": {
+          "basis": "RECORDED_DIRECT_CHILD_EXIT",
+          "exit_code": 0,
+          "pid": 18
+        },
+        "instance": "01a0f645-bf38-73a3-b1e8-e5eac38f37ca",
+        "original": {
+          "digest": "e9b54e3acaa070d6edadb1f3eb7412622f8b3eb7d2fc5dd17b826e7871a3cf7e",
+          "instance": "01a0f645-bf38-73a3-b1e8-e5eac38f37ca",
+          "registration": "01a0f645-bf37-71e8-823e-17d4923ec683",
+          "revision": "5"
+        },
+        "phase": "EXITED",
+        "recorded_outcome": "EXITED",
+        "residuals": [
+          "direct child exit does not assess descendants or external resources"
+        ]
+      }
+    },
+    "operating_permission": "NOT_GRANTED; ORIGINAL_CLAIMS_AND_OUTCOMES_UNCHANGED",
+    "original_peer": {
+      "authentication_binding": "fc308353f3c020816123378a8fa99e600a196a4a12e2223ba827fa2de0bd443d",
+      "enrollment": "d9173656008ac158aba4a5e774795a9dee3f68567a4c0927a4a2b07cdeea4ed5",
+      "id": "01a0f645-d3dd-763e-80e8-d96e26ba05af",
+      "installation": "b36b9941-b26d-4e9d-8574-69074d72128d",
+      "peer_boot": "bfc19409-8b5e-48f6-98be-333953ea7833",
+      "principal": "supervisor",
+      "registry": "62bcdb93d9bcaf0d19f1d5cda4dfbaa1841f38ad673e007c49281c6147fc6b2f",
+      "runtime_boot": "01a0f645-bcb2-7292-b8ae-a11b01ef988b",
+      "store_generation": "01a0f645-bcb3-739d-8aae-72de98999f30"
+    },
+    "preparation_digest": "c63b1c811808624d03b7eeeded338042dd05b495c31b4d985a08adf04cea89bd",
+    "schema": "rx.resident-execution-source-inspection.v1",
+    "start_window_expired": true,
+    "supervisor_digest": "bd23113e13ea571e28cec5e03ee945f6d12b4eaf1946c5f72979780f6054a7f3",
+    "supervisor_revision": "15"
+  },
+  "status": "PASS_P_ASSIGNED_ACTUAL_SOFTWARE_EXECUTION",
+  "stopped": {
+    "assignment": "01a0f645-bf38-73a3-b1e8-e5ebad067731",
+    "delivery": {
+      "delivered_sequence": "7",
+      "error": null,
+      "pending": false,
+      "stop_requested": true,
+      "stopped": true
+    },
+    "reconciliation_required": false,
+    "schema": "rx.resident-execution-stopped.v1",
+    "source_stopped": true,
+    "work_use_permission": "NOT_GRANTED_BY_PROCESS_EXECUTION"
+  }
+}

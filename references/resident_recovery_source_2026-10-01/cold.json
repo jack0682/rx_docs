@@ -1,0 +1,102 @@
+{
+  "original_assignment_and_claims_unchanged": true,
+  "physical_execution": "NOT_PERFORMED",
+  "process_adoption_or_termination": "NOT_PERFORMED",
+  "source_history_unchanged": true,
+  "source_inspection": {
+    "assignment": "01a0f646-9d62-74ec-a572-497a82328447",
+    "current_peer": {
+      "authentication_binding": "0cfe221be2eebe3e20da70289584b2e0327ded7a8f9c5b6e06c350b4f9a181ed",
+      "enrollment": "ed71485dcbb49299945fb45f23b0f460f368f4f914ccf3288d23e5718d471138",
+      "id": "01a0f646-cc36-720a-950b-2a40868f356b",
+      "installation": "8827583d-79b7-4a0c-87df-7c63ffb0df3c",
+      "peer_boot": "8d09a8d7-d837-4ac3-9e68-21c64212f8b4",
+      "principal": "supervisor",
+      "registry": "093a6d328566a1dac61fc0f60fdd5d4775b4e6348631fea360c7b31eb0c66599",
+      "runtime_boot": "01a0f646-9aab-748b-bb17-8eee238b1e60",
+      "store_generation": "01a0f646-9aad-754a-babf-83698f690828"
+    },
+    "grant": "01a0f646-b2ae-75a9-9d29-b76c43893afe",
+    "inspected_at": {
+      "clock_id": "linux-boottime/b7cf7eb8-3e19-4b40-9237-44e8a4101404",
+      "ticks_ns": "638741315457"
+    },
+    "limitations": [
+      "Source investigation only; P owner reconciliation and a new assignment are still required",
+      "Stored records rely on the installed verifier and local OS/storage; whole-state rollback is not detected",
+      "No process adoption, termination, grant restoration or original outbox rewrite"
+    ],
+    "nodes": {
+      "first": {
+        "finding": {
+          "basis": "SCOPED_INVESTIGATION",
+          "evidence_digest": "d29265ad90406d09627a4054597d914058d77110461d94660437ae8dfbda1729",
+          "observed_at": {
+            "clock_id": "unix-utc-ns",
+            "ticks_ns": "1790838230079039087"
+          },
+          "outcome": {
+            "state": "MATCHING_PROCESS_PRESENT"
+          }
+        },
+        "instance": "01a0f646-9d62-74ec-a572-497844aa41ec",
+        "original": {
+          "digest": "3605d2fb1ec2a33e0dad1d2b9d9759525df4a0ec166d644a4100a643454a4dbd",
+          "instance": "01a0f646-9d62-74ec-a572-497844aa41ec",
+          "registration": "01a0f646-9d5f-76aa-8cec-7c8a7f4bcb4c",
+          "revision": "3"
+        },
+        "phase": "PROCESS_READY",
+        "recorded_outcome": "RUNNING",
+        "residuals": [
+          "original start window remains open",
+          "scoped process investigation preserves the unresolved past outcome and does not assess descendants or resources"
+        ]
+      },
+      "second": {
+        "finding": {
+          "basis": "SCOPED_INVESTIGATION",
+          "evidence_digest": "33acddb826f685735a0b0f98a54743c1fe13df1d17fe43fbf35c748b0d1ac324",
+          "observed_at": {
+            "clock_id": "unix-utc-ns",
+            "ticks_ns": "1790838230080145378"
+          },
+          "outcome": {
+            "state": "MATCHING_PROCESS_PRESENT"
+          }
+        },
+        "instance": "01a0f646-9d62-74ec-a572-4979d6a7e6e3",
+        "original": {
+          "digest": "58b91b4d627afbdc63aff846636dc8586181e6b247a4b537fb25b2358e4a6fa9",
+          "instance": "01a0f646-9d62-74ec-a572-4979d6a7e6e3",
+          "registration": "01a0f646-9d60-7645-bf99-e11e483022b7",
+          "revision": "3"
+        },
+        "phase": "PROCESS_READY",
+        "recorded_outcome": "RUNNING",
+        "residuals": [
+          "original start window remains open",
+          "scoped process investigation preserves the unresolved past outcome and does not assess descendants or resources"
+        ]
+      }
+    },
+    "operating_permission": "NOT_GRANTED; ORIGINAL_CLAIMS_AND_OUTCOMES_UNCHANGED",
+    "original_peer": {
+      "authentication_binding": "0cfe221be2eebe3e20da70289584b2e0327ded7a8f9c5b6e06c350b4f9a181ed",
+      "enrollment": "ed71485dcbb49299945fb45f23b0f460f368f4f914ccf3288d23e5718d471138",
+      "id": "01a0f646-b2a1-740a-bf9b-dbe60b2563b2",
+      "installation": "8827583d-79b7-4a0c-87df-7c63ffb0df3c",
+      "peer_boot": "63d00009-ef54-4030-81ce-e0bc172fecfe",
+      "principal": "supervisor",
+      "registry": "093a6d328566a1dac61fc0f60fdd5d4775b4e6348631fea360c7b31eb0c66599",
+      "runtime_boot": "01a0f646-9aab-748b-bb17-8eee238b1e60",
+      "store_generation": "01a0f646-9aad-754a-babf-83698f690828"
+    },
+    "preparation_digest": "66cb0eabdf126f226573d84cc962794e19bf1c231164fc8de467176284f19c53",
+    "schema": "rx.resident-execution-source-inspection.v1",
+    "start_window_expired": false,
+    "supervisor_digest": "2ac7eae15819ad2be8a7b0ab34f875ded2c31b73dfa0d19d12b7b07c4eed1310",
+    "supervisor_revision": "10"
+  },
+  "status": "PASS_COLD_SOURCE_INVESTIGATION"
+}

@@ -1,0 +1,25 @@
+{
+  "docs_merge": "960ec6a3df5b7b72401fa34c0e761f01f0604d13",
+  "checks": {
+    "required_ci_and_dco": "PASS",
+    "merge_signatures": "VERIFIED_OPENPGP_AND_AUTHOR_DCO",
+    "sdk_files_matched": 126
+  },
+  "platform_acceptance_implemented": true,
+  "supervisor_acceptance_acknowledgement_implemented": false,
+  "execution_assignment_implemented": false,
+  "content_verification_established": false,
+  "full_framework_complete": false,
+  "platform": {
+    "pr": 66,
+    "tested_source": "644f63bbcfb22bc20c58bdca5fa1c38f1d11a381",
+    "merge": "4c41bbcb7f890a7e3bc96ede4433c13bc20632f9",
+    "tested_tree_equals_integrated_tree": true
+  },
+  "solutions": {
+    "pr": 75,
+    "tested_source": "d0108aaf97ff3c2d0638f8a3590c74f6a2fc5292",
+    "merge": "a445b4bac0d5b0f327785e3e753c1aa7cc96d56b",
+    "tested_tree_equals_integrated_tree": true
+  }
+}

@@ -71,7 +71,7 @@ Graph는 entry, nodes, typed output ports, edges, 중첩 제어 scope를 갖는�
 | Branch | 조건 포트의 명시적 우선순위에서 첫 PASS; 이전 조건이 전부 FAIL일 때만 뒤 포트 선택 | 앞선 조건 UNKNOWN이면 뒤/default로 우회하지 않음; default는 모두 FAIL일 때만 |
 | Condition | 기존 All/Any/Eq/Range/SetContains의 삼값 의미 재사용 | Any는 유효 PASS가 있으면 다른 UNKNOWN과 함께 PASS 가능; 이를 Branch 우선순위와 혼동하지 않음 |
 | Parallel All | 같은 activation에서 자식별 신원으로 실행, 모두 성공/의무 정산 후 성공 | 한 실패 시 신규 자식 시작 중지, 실행 중 자식의 정지/종료·잔여 의무 추적 |
-| Parallel Any | 최초 committed 성공이 승자; 동시 후보는 원장 commit 순서로 결정 | 나머지 cancel/완료/정산 확인 전 성공 전이를 내보내지 않음; 취소 미지원이면 대기/개입 |
+| Parallel Any | 최초 committed 성공이 승자; 동시 후보는 원장 commit 순서로 결정; 승자 확정 후 후속 경로 진행 가능 | 나머지 cancel/완료/정산 의무는 유지; 후속의 충돌 자원 사용과 전체 Run 종결은 정산 전 거절 |
 | Wait | 시간/조건/이벤트/자원별 조건을 만족한 committed 판단으로 전이 | deadline 만료는 해당 scope timeout; 자원 관측 PASS는 실제 claim 취득을 대체하지 않음 |
 | Loop | 횟수 또는 각 회차 시작의 조건, max_iterations와 deadline, 반복별 visit | UNKNOWN은 재판정/보류, 상한 도달은 명시적 제한 결과; 무한 반복 기본값 없음 |
 | Call | 정확한 하위 Workflow revision, 명시적 입력/결과 매핑, 독립 call path | 재귀 거절; 오류 위치에 전체 call path 보존 |
@@ -79,9 +79,12 @@ Graph는 entry, nodes, typed output ports, edges, 중첩 제어 scope를 갖는�
 | End | scope 결과를 반환, root는 관련 수행/인계 의무까지 검사 | 미결 obligation을 건너뛰어 전체 성공으로 닫지 않음 |
 
 Task의 Event 출력은 계약에 정의한 상관 event만 받는다. 이벤트 도착이 Task/operation 완료를
-의미하지 않는다. 이벤트 경로로 나가려면 해당 Task의 종료/정산 barrier를 만족해야 한다.
-작업과 동시에 이벤트를 관찰하는 흐름은 Parallel 안의 Event Wait로 명시한다.
-이 제한과 취소 미지원 시 대기 사유는 Inspector/Preview에 보인다.
+의미하지 않는다. 한 node visit의 전이 결정은 첫 유효 trigger의 commit으로 한 번만 소비한다.
+Event가 선택되면 후속 경로는 진행할 수 있지만 원 operation은 계속 추적하는 의무로 남는다.
+그 뒤 도착한 success/failure는 같은 visit의 두 번째 경로를 만들지 않고 원 결과/미결 의무를 갱신한다.
+원 작업의 후발 실패는 정의된 실패정책/개입에 연결하고, 충돌 자원 사용과 전체 성공 종결을 재검사한다.
+서로 독립적인 이벤트 감시 경로 여러 개는 Parallel 안의 Event Wait로 명시한다.
+의무·자원 충돌로 대기하는 이유와 아직 실행 중인 원 Task를 Inspector/Preview에 함께 표시한다.
 
 Failure/Timeout 출력은 오류 정책이 소비한 뒤의 명시적 분기다. 동일 실패에서 자동 retry와
 failure edge를 동시에 시작하지 않는다. Retry/Rebind/Reassign은 유한 예산을 소모하며 원 시도와
@@ -132,7 +135,7 @@ ConstraintReport는 대상/자원 자체의 적합성과 robot Capability/Skill 
 | 회전 정렬 | 독립 station readiness/점유/detect/rotate/aligned/stopped | 손목 회전 대체 금지; unknown stopped는 regrip을 통과시키지 않음 |
 | 품목/작업면 | ECC 계열→PART1, CVR_F front→PART2/back→PART3, FLANGE_L→PART4, FLANGE_R→PART2 | 장착 지그·툴링·교정 대조; 자료 색상을 실제 핑거 ID로 사용하지 않음 |
 | Failure/Timeout | 알려진 정렬 실패는 개입 경로, 요청 유실은 원 operation 조사 | 오류 branch 이동과 물리 명령 replay를 구분 |
-| Parallel Any | 대체 관측 두 경로 중 첫 성공 | 다른 수행 종료/정산 안 되면 다음 공유 자원 작업 보류 |
+| Parallel Any | 대체 관측 두 경로 중 첫 성공 | 독립 후속 작업은 진행; 다른 수행이 점유한 공유 자원 작업과 전체 종결은 정산까지 보류 |
 | 영역 간 공급/처리 | domain A 원 물체/작업 → domain B scoped 수락 | ACK 유실 후 원 인계 조회; 중복 소유·새 효과 금지 |
 
 실제 파지/회전 지지 방법과 수치가 없으므로 물리 실행 profile은 incomplete다. software profile은

@@ -1,0 +1,22 @@
+{
+  "sources": {
+    "platform": {
+      "commit": "e91f8697416e8eff4bab86d7cadab7622590e4d4",
+      "working_tree_changes": []
+    },
+    "solutions": {
+      "commit": "7020cbee500a51e7a17b205caf40c17c1acc6811",
+      "working_tree_changes": []
+    }
+  },
+  "os": "Darwin",
+  "architecture": "arm64",
+  "status": "PASS_SCOPED_REPORTING",
+  "physical_execution": "NOT_PERFORMED",
+  "limits": [
+    "Test-owned locally approved software child; not Platform-directed launch",
+    "Attributed registry snapshots, not current OS ownership or work permission",
+    "Production reporting worker exercised; packaged rx-solutionsd command path is not exercised",
+    "Legacy registration migration, process ownership recovery and physical qualification remain open"
+  ]
+}

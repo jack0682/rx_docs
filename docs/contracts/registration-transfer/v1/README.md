@@ -1,4 +1,4 @@
-# Registration transfer boundary, revision 2
+# Registration transfer boundary, revision 3
 
 Status: source preparation and target intake are integrated with scoped validation
 evidence. Supervisor acceptance reconciliation, content acceptance and
@@ -120,3 +120,29 @@ local source boundary and require the separate upgrade/restore contract.
 S still needs authenticated reconciliation of P acceptance and the general P
 execution-assignment path. Those obligations, registration discovery, installation
 integration and full RF01–RF14 verification remain open.
+
+
+## Source reconciliation addition (revision 3, implementation in progress)
+
+After P intake, the source owner may authorize an Observer-only reporter scope
+for an imported canonical component. The optional reporting service's
+ReadAcceptance returns the target's immutable original transfer decision only
+within that current scope. S must authenticate that result, match its complete
+local FreezeRecord and component membership, and persist the first matching
+evidence atomically with a local history event. An arbitrary serialized receipt
+or local boolean is not accepted by the public source reconciliation API.
+
+Source inspect may report RECORDED_FROM_AUTHENTICATED_PLATFORM with the preserved
+first evidence. This is historical acknowledgement only. Local declarations and
+assignments remain refused, the original frozen history cut stays unchanged, and
+current execution/content/work authority remains unestablished. On changed or
+missing target acceptance, keep historical evidence and require investigation;
+do not replay an operation or silently reset either side.
+
+Source acknowledgement adds an optional `acceptance` field to the source inspect
+view and a separately keyed history record; it does not upgrade the SQLite reader
+format or alter the original frozen cut. Older source readers can ignore this
+historical acknowledgement and still refuse local declaration/assignment writes.
+The CLI's new process boot replaces an earlier reporting session for the same
+principal under the existing single-current-peer rule; use the installation's
+reviewed reporter identity and explicitly approve the new scope.

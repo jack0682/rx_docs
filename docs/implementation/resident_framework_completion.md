@@ -254,3 +254,31 @@ S의 Ubuntu amd64·arm64 설치 번들 검사도 통과했다. [검증 근거](.
 S의 programs_from_release는 검증된 릴리스에서 Program을 구성하므로 등록의 CatalogReference만으로
 내용 수용이 끝났다고 표시하지 않는다. 두 기존 경계의 연결, 현재 자원/의존/실행 조건, 양성 실행과
 상실 후 복귀를 같은 원 ID 경로로 검증해야 한다. RF02와 전체 Goal은 계속 미완이다.
+
+## R5 후속 — Supervisor의 인증된 수용 확인
+
+2026-10-01. [보고 계약 revision 3](../contracts/resident-reporting/v1/README.md)과
+[등록 이행 계약 revision 3](../contracts/registration-transfer/v1/README.md)는 기존 Observer-only mTLS
+세션과 소유자가 발급한 원 ID 보고 범위로 P의 과거 수용 기록을 조회하도록 연결한다.
+별도 관리자 자격을 S에 주지 않으며, P의 기존 writer가 현재 인증서/세션/범위와 원 이관 관계를 확인한다.
+S는 정확한 원 FreezeRecord·대상 설치·구성요소 소속을 대조한 typed 결과만 받아 최초 근거와 이력 이벤트를
+원자적으로 기록한다. 다른 결과로의 덮어쓰기는 거절하며, 새 peer로 다시 조회해도 최초 근거는 보존한다.
+
+명시적 `rx-registration-transfer reconcile` 명령은 하나의 새 reporting process session을 열고,
+소유자가 승인한 component/scope 입력을 받은 뒤 실제 mTLS 조회·기록을 수행한다. `inspect`는
+RECORDED_FROM_AUTHENTICATED_PLATFORM과 최초 근거를 표시한다. 원 source cut은 변하지 않으며,
+로컬 등록·배정 금지는 유지한다. 자동 daemon 이행이나 설치 도구 기본 실행으로 연결한 것은 아니다.
+
+현재 macOS 전체 workspace 시험은 P 522 passed / 0 failed / 19 ignored,
+S 423 passed / 0 failed / 19 ignored다. 전체 clippy·format과 저장소·계약·SDK 검사도 통과했다.
+P 재시작 뒤 이전 peer 거절·새 승인 후 같은 수용 결과 조회, S commit 전 rollback·commit 후 응답 유실과
+재개·변경된 receipt 거절을 대상 시험으로 확인했다. 실제 TLS 서버와 별도 S CLI의 첫 기록/재시작 후
+재확인, 다른 인증서·범위·freeze·binding 거절 및 수용 조회 응답 유실 복구도 통과했다.
+기존 실제 S 보고와 서버 장애 중 로컬 정지/재승인 시험도 각각 통과했다.
+보고 실행 스크립트의 광범위한 시험 이름 필터가 별도 원본 이관 시험까지 선택하던 오류를
+정확한 두 시험 이름 지정으로 수정했다. 최종 커밋/CI/통합 근거는 후속 기록에 연결한다.
+
+이 근거는 metadata custody 확인이며 execution/content/work 권한이 아니다.
+보고 binding revision 3은 P/S 동시 업그레이드와 현재 세션/범위를 요구한다.
+P의 일반 구성요소 실행 배정, 검증된 프로그램 내용·자원·의존 조건 연결, 운영 복구,
+설치/검색/관리 흐름과 전체 RF01–RF14는 계속 미완이다.

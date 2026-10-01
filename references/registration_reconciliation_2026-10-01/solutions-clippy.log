@@ -1,0 +1,5 @@
+    Checking rx-supervisor v0.1.0 (<workspace>/linux-install-bundle/runtime/rx-supervisor)
+    Checking rx-device-package v0.1.0 (<workspace>/linux-install-bundle/runtime/rx-device-package)
+    Checking rx-host v0.1.0 (<workspace>/linux-install-bundle/runtime/rx-host)
+    Checking rx-executor v0.1.0 (<workspace>/linux-install-bundle/runtime/rx-executor)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 2.95s

@@ -1,6 +1,8 @@
-# 0F Workflow 세로 경로 — M1 착수 조사와 중단 사유
+# 0F Workflow 세로 경로 — 이전 목표의 착수 조사
 
-2026-10-01. 사용자 목표는 한 품목·단일 그리퍼의 pick → load → clamp → close →
+2026-10-01 후속 사용자 목표가 모델·API·CLI 우선으로 교체되었다. 아래는 이전 목표의 조사 기록이며, 현재 범위와 M1은 [셀 모델](laser_cell_model.md)을 따른다.
+
+당시 사용자 목표는 한 품목·단일 그리퍼의 pick → load → clamp → close →
 process(done 대기) → open → unload → place를 모의 장비에서 작성·게시·운영하는 것이다.
 이 기록은 [장기 계획](framework_delivery_plan.md), [WF 요구](../46_workflow_product_experience.md),
 [RF 원장](resident_framework_completion.md)을 변경하거나 완료로 승격하지 않는다.

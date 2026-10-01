@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-01",
+  "docs_merge": "f8136088ca82341a90b2a70b3daa1ceabb283426",
+  "checks": {
+    "exact_pr_ci_and_dco": "PASS",
+    "signatures": "VERIFIED_OPENPGP_AND_AUTHOR_DCO",
+    "sdk_files_matched": 130
+  },
+  "source_investigation_implemented": true,
+  "owner_reconciliation_implemented": false,
+  "new_execution_after_unknown_implemented": false,
+  "new_installer_release": false,
+  "full_framework_complete": false,
+  "platform": {
+    "pr": 69,
+    "tested_source": "6b56a433dec69b6377f5088ea615463cf0948ecb",
+    "merge": "cc9829197fe8435ccd0195ae20b23e22260a3487",
+    "tested_tree_equals_integrated_tree": true,
+    "exact_pr_ci_url": "https://github.com/jack0682/rx-platform/actions/runs/36828398247",
+    "linux_workspace": {
+      "passed": 530,
+      "failed": 0,
+      "ignored": 22
+    },
+    "raw_ci_log_sha256": "c66202422d11c61212e1d4523be5db1b7cd8b90097c2284b700a19606692109c"
+  },
+  "solutions": {
+    "pr": 78,
+    "tested_source": "0dc5259d1d21a516be292207c9b965a0b00352ab",
+    "merge": "3e72f45430600652291e20fb089380192bb000c5",
+    "tested_tree_equals_integrated_tree": true,
+    "exact_pr_ci_url": "https://github.com/jack0682/rx-solutions/actions/runs/36828439383",
+    "linux_workspace": {
+      "passed": 475,
+      "failed": 0,
+      "ignored": 22
+    },
+    "raw_ci_log_sha256": "17a93260311794431504fb91dce111e9ad20a2bfee6b37d63fed23f281a83972"
+  }
+}

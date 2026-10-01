@@ -1,0 +1,23 @@
+{
+  "status": "PRECHECK_PASSED",
+  "profile": "SIMULATION",
+  "definitions": 58,
+  "checks": [
+    "full package applied and replayed without new revisions",
+    "instance inheritance, overridden model provenance and complete poses",
+    "2400 dense slots paged exactly once in declared order",
+    "new and rotated tray models added as data with unchanged code/rule",
+    "invalid quaternion blocks point generation with a source location",
+    "real committed response loss recovered with the original request and one revision",
+    "server refuses tampered pinned definition digest",
+    "server restart preserves definitions, provenance and identical pinned point report"
+  ],
+  "not_performed": [
+    "user acceptance",
+    "workflow execution resolution",
+    "preview",
+    "publish",
+    "run",
+    "physical devices"
+  ]
+}

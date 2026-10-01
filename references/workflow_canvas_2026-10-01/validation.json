@@ -1,0 +1,93 @@
+{
+  "scope": "W02 structured v1 graph and atomic draft presentation; not new workflow semantics, physical operation or release qualification",
+  "sources": {
+    "platform": {
+      "commit": "44c200a301e4c8dd10ef0cd2107bf039f3d5185d",
+      "tree": "b5cc42c30a38e8e48d45d916d86eed482121dd67",
+      "integrated_commit": "7b838764ec6f5e7223b9b9f21a2d1b94f9e86439"
+    },
+    "solutions": {
+      "commit": "087c87229600294cec6da2b74dab0849d9dfbcbd",
+      "tree": "58371392609f7f29ebaff3971c0edb351115ee7c",
+      "integrated_commit": "1f0b519772c3890bf1191c364bb580db14157c5e"
+    }
+  },
+  "platform_local_workspace": {
+    "passed": 530,
+    "failed": 0,
+    "ignored": 19
+  },
+  "ui_unit": 57,
+  "ui_bundle": 3,
+  "sdk_synchronized_files": 130,
+  "browser": {
+    "browser-persistence.json": {
+      "before": "left: 348px; top: 338px; width: 218px;",
+      "saved": "left: 368px; top: 358px; width: 218px;",
+      "restored": "left: 368px; top: 358px; width: 218px;",
+      "edges": [
+        {
+          "from": "node/0",
+          "to": "node/2"
+        },
+        {
+          "from": "node/2",
+          "to": "node/1"
+        }
+      ],
+      "revision": "1",
+      "scope": "Actual UI copy, keyboard move, sequence reorder, save and page reload; no device execution"
+    },
+    "browser-after-server-restart.json": {
+      "style": "left: 368px; top: 358px; width: 218px;",
+      "edges": [
+        {
+          "from": "node/0",
+          "to": "node/2"
+        },
+        {
+          "from": "node/2",
+          "to": "node/1"
+        }
+      ],
+      "revision": "1",
+      "reauthenticated": true,
+      "scope": "Read same draft after actual API restart; no device execution",
+      "observation": "Invalidated prior session showed Cannot validate the response format before sign-in; improve session-expiry messaging separately"
+    }
+  },
+  "ci": {
+    "platform": {
+      "run": 36852757828,
+      "url": "https://github.com/jack0682/rx-platform/actions/runs/36852757828",
+      "status": "completed",
+      "conclusion": "success",
+      "event": "pull_request",
+      "headSha": "44c200a301e4c8dd10ef0cd2107bf039f3d5185d",
+      "rust_totals": {
+        "passed": 531,
+        "failed": 0,
+        "ignored": 22
+      }
+    },
+    "solutions": {
+      "run": 36852850291,
+      "url": "https://github.com/jack0682/rx-solutions/actions/runs/36852850291",
+      "status": "completed",
+      "conclusion": "success",
+      "event": "pull_request",
+      "headSha": "087c87229600294cec6da2b74dab0849d9dfbcbd",
+      "rust_totals": {
+        "passed": 475,
+        "failed": 0,
+        "ignored": 22
+      }
+    }
+  },
+  "not_performed": [
+    "full Python browser suite",
+    "physical equipment",
+    "full framework acceptance",
+    "new installer publication"
+  ]
+}

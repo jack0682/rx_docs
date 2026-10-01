@@ -162,6 +162,25 @@ admission은 중지한다. 사용 중 작업의 종료/불명/보호는 해당 �
 
 ## 7. 후속 구현 게이트
 
+### W03의 기존 cell draft library 확장
+
+새 영역 저작 scope는 W04/W19의 명시적 권한 계약으로 남긴다. W03은 현재 cell에 속한 초안의
+목록/분류/보관/이력을 기존 writer에 연결한다. site/service는 이 단계에서 **분류용 label**이며
+새 영역/현장 등록, 존재 검증, 접근 권한 부여가 아니다. 후속 Definition/ScopedRef로의 연결은 별도다.
+
+- Save/Version/Summary에 optional `library {site, service, archived}`를 더한다. 생략 시 기존 값을
+  유지하고 오래된 기록은 분류 없음/활성 초안으로 읽는다. 보관도 같은 원 요청·CAS·불변 revision이다.
+- 보관된 초안은 조회/이력/복제가 가능하다. 기존 client의 library 생략 저장은 보관을 풀거나 편집하지 못한다.
+  `archived=false`를 명시한 복원 이후 편집한다. 복제는 새 ID의 활성 초안이며 원본을 바꾸지 않는다.
+- 목록의 q/site/service/archived 조건은 권한을 확인한 cell 안에서 pagination 전에 적용한다.
+  조건을 생략한 기존 API의 전체 목록 의미는 유지하고 UI는 활성/보관/전체를 명시적으로 선택한다.
+- `/api/v1/process-draft-history`는 cell/id/before revision으로 최대 50개의 최신순 summary를 반환한다.
+  원 document/layout은 기존 정확한 revision 조회로 읽는다. 과거 버전 편집은 새 초안 복제로 한다.
+- 분류/보관은 source digest, 설치된 configuration, 실행/게시 상태를 바꾸지 않는다. Published 상태는
+  W14의 실제 게시 계약 전에는 만들지 않는다. 새 optional 필드를 읽는 strict client는 함께 갱신한다.
+- 수락 시험: 50개보다 뒤에 있는 검색 결과, cell/역할 격리, 같은 key 복구, stale revision,
+  보관 뒤 old-client 편집 거절/명시적 복원, 변경 전 이력·좌표 보존, 실제 UI 검색/보관/복원/이력 복제.
+
 - W02: 기존 v1 저작/좌표 저장을 검증·통합한다. 신규 그래프 의미의 지원으로 표시하지 않는다.
 - W03/W04: 영역 authoring scope 및 새 draft/definition 저장 계열을 연결한다. 새 권한 scope가 닫힌
   상태를 UI에서 설명하고 기존 cell authoring은 보존한다.

@@ -258,3 +258,8 @@ reader from ignoring v2 obligations. v1 unresolved work must be settled under it
 original authority before an installation switches; rollback while v2 obligations
 exist is refused. Changing any decision here requires a documented revision and
 impact cases before the corresponding implementation change.
+
+
+The [Host qualification acknowledgement contract](host-qualification.md) fixes how
+the reviewed derived domain binds to the accepted v2 configuration, while preserving
+legacy receipts, explicit activation and new-operation permits.

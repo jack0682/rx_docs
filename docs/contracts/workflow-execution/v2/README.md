@@ -44,8 +44,12 @@ Changing any table, entry, template or input changes the publication identity.
 The deterministic v2 execution report commits to the complete pinned input
 closure, variant/slot identity, status, values, units/frames, provenance,
 constraints and every node's concrete parameter bytes/hash/size and invariant
-Intent fields. Report content excludes receipt UUID, creation clock, Run/Part IDs
-and operation IDs. Those are stored in separate linked records. Generated
+Intent fields. Report content excludes receipt UUID, creation clock, Run/Part IDs,
+runtime object-instance identity and operation IDs. Those are stored in separate
+linked records. Runtime object identity/revision and the checked value-bearing
+projection are retained in the selection record; their exclusion from reusable
+report bytes does not exclude them from authorization or currentness checks.
+Generated
 parameters refer to deterministic report *inputs* and selection identity, not
 to their containing report digest (no circular hash). Existing v1 report and
 parameter formats are not silently rewritten. Numeric representation, map

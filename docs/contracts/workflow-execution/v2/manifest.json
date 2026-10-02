@@ -1,0 +1,12 @@
+{
+  "schema": "rx.contract-revision.v1",
+  "contract_version": "execution-v2",
+  "revision_procedure": "v1.1",
+  "revision": "2026-10-02.1",
+  "status": "AUTHORIZED_DECISIONS_FIXED_IMPLEMENTATION_PENDING",
+  "files": {
+    "README.md": "006f34ba20829e193c03ac53b134d423c39fb5cd69c8adf849c84a961d8a900f"
+  },
+  "legacy_v1": "UNCHANGED",
+  "runtime_conformance": "NOT_YET_TESTED"
+}

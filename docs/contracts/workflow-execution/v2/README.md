@@ -275,3 +275,5 @@ binding current actual objects, reserved slots and approved materialized artifac
 The [operation admission and delivery contract](operation-admission.md) binds the
 selected values to ordinary operation/resource/permit semantics and explicit Host-v2
 transport, while keeping the original operation recoverable under UNKNOWN.
+
+The bounded no-effect retry implementation is specified in [retry-admission.md](retry-admission.md).

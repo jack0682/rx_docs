@@ -345,7 +345,37 @@ concrete parameter는 38,400개, reference 배열만 5,284,801 bytes다. 현재 
 dense 실제 해석/성능 시험이 아니다. 기존 dense geometry는 계속 BLOCKED다.
 자격 검증은 index 한 개로 계산이 사라지는 것이 아니다. A/B의 공통 정의 82개를 포함한
 전체 입력 closure를 검사하고 4800회 해석·제약 검사, 최대 38,400개 parameter 생성을
-수행해 index를 대조한다. 시간 비용은 v2 구현 뒤 측정하며, 그 전에는 빠르다고 주장하지 않는다.
+수행해 index를 대조한다.
+
+2026-10-02 [2400-slot 실측](../../references/execution_v2_design_2026-10-02/dense-performance.json)은
+M2의 A/B 품목·8개 Task·해석 규칙을 그대로 사용했다. 원본 dense는 두 품목 모두 pitch
+위반으로 BLOCKED임을 확인했다. 성공 경로 측정은 별도 임시 DB에서 **새 model/instance**를
+만들어 40×60개 슬롯을 유지하고 pitch를 80 mm, 외곽을 4800×3200 mm로 설정한
+SIMULATION 데이터다. 원본 패키지·운영 DB를 바꾸거나 원본 dense를 적합 판정하지 않았다.
+
+Apple M5/16 GiB, macOS 27.0, Rust 1.98.1 release 빌드의 단일 측정(빌드 시간 제외):
+
+| 측정 구간 | wall-clock 시간 | 실제 수행 범위 |
+|---|---:|---|
+| Preview 생성·저장 | 89.866943 s | 4800개 report, 38,400개 parameter 생성 |
+| 게시 | 0.086322 s | 저장 Preview/currentness 확인, 서명 package 재검증·commit |
+| 자격 보고서 검증 계산 | 92.219652 s | 서명·의존성 검사와 4800개 report 전수 재계산·index 대조 |
+
+검증 의존성은 108개(상한 1024), 검증 입력 artifact는 19개/541,885 bytes였다. 입력 closure
+114,686 bytes, index 362,633 bytes, policy 21,502 bytes다. 검증 계산은 600 s ticket
+상한의 15.37%이며 계산상 여유는 507.780348 s다. 이는 해당 환경에서의 계산 비용 비교다.
+fixture의 서명·6개 영역 증거·권한 clock은 시험용이며 실제 ticket 발급/취득/commit,
+reviewed change 적용·Host 확인, 독립 승인, Linux 지연이나 실행 자격을 입증하지 않는다.
+첫 관문은 이 측정만으로 통과하지 않으며 실제 ticket 경로 확인은 남아 있다.
+
+재현은 P의 `external_dense_publication_and_qualification_timing` ignored test를 사용한다.
+S 입력 commit/hash, P 측정 코드와 fixture hash는 위 실측 JSON에 고정했다.
+`RX_DENSE_FIXTURE`를 해당 S checkout의 `examples/definitions/0f-laser-simulation`으로 지정하고
+P에서 다음을 실행한다. 2-slot fixture preflight 값은 2400-slot 성능 근거로 사용하지 않는다.
+
+```sh
+RX_DENSE_MEASUREMENT_SLOTS=2400 cargo test --release --locked -p rx-application --test transactions external_dense_publication_and_qualification_timing -- --ignored --nocapture
+```
 
 UNKNOWN은 원 operation의 효과가 확인될 때까지 자원을 보유하고 진도를 막는다.
 적용·완료가 확인되면 같은 Part/slot의 남은 node만 진행한다. 무효과와 안전한 이전 상태가

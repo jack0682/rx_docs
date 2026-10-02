@@ -1,0 +1,111 @@
+{
+  "status": "MEASURED_VERIFIER_PRECHECK_NOT_QUALIFICATION_ACTIVATION",
+  "date": "2026-10-02",
+  "environment_and_sources": {
+    "platform_base_commit": "89f3aa9998a592697c31a73ebbeaa0d5bf6151b2",
+    "platform_worktree_diff_sha256": "2f7cea5448f2de30dfa8c4f13b7c900a781b141389e8e77ea9f12c3bff24a615",
+    "scenario_commit": "24a581543f35656c2fabc7895537e85fb2028c06",
+    "scenario_files": {
+      "cell.json": "c9eb256c15027d223b80dc4eb911887f2a23df86e48228d5bacb4c4ad6535cdd",
+      "m2-definitions.json": "d0d07d2dbe7da9e29cfc2c16e239aa339e55dec6eed6d33ebfc62a4cab38e160",
+      "workflow.json": "08145b18eb19b71b4a71c69fed28f34fbc521c6e48820a3f4c5fa9b002525664"
+    },
+    "environment": {
+      "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+      "cpu": "Apple M5",
+      "memory_bytes": 17179869184,
+      "profile": "cargo test --release (optimized), Rust 1.98.1",
+      "concurrent_cargo_build": false
+    },
+    "positive_control": {
+      "new_private_definition_ids": true,
+      "rows": 40,
+      "columns": 60,
+      "row_pitch_mm": 80,
+      "column_pitch_mm": 80,
+      "width_mm": 4800,
+      "depth_mm": 3200,
+      "supply_and_output": "new instance of copied dense-site, same origin and orientation",
+      "parts": [
+        "ECC_51-14",
+        "ECC_99-14"
+      ],
+      "nodes": 8
+    },
+    "negative_control": "Original 20mm-pitch dense remains BLOCKED for both parts; checked before positive fixture. No installed source or database modified.",
+    "debug_attempt": "Aborted after >7 minutes while still computing Preview; no full timing or failure conclusion. Raw log dense-2400-timing.log.",
+    "harness_sources": {
+      "crates/rx-application/tests/support/execution_dense_measurement.rs": "2afc75559a002219736aec0c12535e07608c44bb91bdf5cb528639e3f3ee3086",
+      "crates/rx-application/tests/support/workflow_model_tests.rs": "41fe279adfb33e99281327c4b91f8e8436f2dffa9affa93fa057d63fec981e0c",
+      "crates/rx-application/tests/support/execution_template_package.rs": "1cb70cab08eff1abaa0e12f51f129a01be27a8baf8fc6f08e246f0e179e23de2"
+    },
+    "measurement_source_state": "89f3aa9 plus the pinned uncommitted measurement harness and durable-dispatch WIP; timings do not exercise the dispatcher.",
+    "measured_code": {
+      "crates/rx-application/src/workflow_publication.rs": "616f172c33bcc6842686aadaea46f5eebaf6bdc4ea877a233948a9a5aa065f6f",
+      "crates/rx-application/src/engine/workflow_publication.rs": "6cd86073d43ef9debceae6e541ddaef33d4827ee187dbe9b296e1074878692a5",
+      "crates/rx-application/src/execution_qualification.rs": "5f81be5ba7e6cea1220d58ef89fd2dee5f0ccef8d96a86f970a8fd90f5a5308f",
+      "crates/rx-application/src/requalification.rs": "39b37c710c27c10b42bb4b1d37d18ecc45b1e1e7a5c61f4701d2e81ec4fa9675",
+      "crates/rx-process-contract/src/execution_v2/materialize.rs": "af7c35ef3806d92aa7a9a48d9b51c43283f658fdd6c38943ba4eb2bc628d520c"
+    }
+  },
+  "result": {
+    "fixture": "external-laser-simulation-valid-tray",
+    "index_bytes": 362633,
+    "input_bytes": 114686,
+    "limitations": "real publication and signed qualification verifier; test-only signature/evidence and manual clock; no applied change, decision ticket, runtime authority or native execution",
+    "nodes": 8,
+    "parameter_materializations_per_pass": 38400,
+    "policy_bytes": 21502,
+    "preview_seconds": 89.866943208,
+    "publish_seconds": 0.086321584,
+    "qualification_blob_bytes": 541885,
+    "qualification_blob_count": 19,
+    "qualification_verify_seconds": 92.219651666,
+    "reports": 4800,
+    "ticket_headroom_seconds": 507.780348334,
+    "ticket_limit_seconds": 600,
+    "verification": {
+      "candidates": "2",
+      "compiler_digest": "3e2a1be066fd2ea4c5640984c765e922c84701b353372d52994d7149408b2677",
+      "configuration": {
+        "schema_id": "rx.cell-configuration.v2",
+        "sha256": "baf20d2981b94f271e58fd38cd473ab1e4082a1151f3d02939a609e6d4d62589",
+        "size_bytes": "18024"
+      },
+      "dependencies": "108",
+      "index": {
+        "schema_id": "rx.execution-report-index.v2",
+        "sha256": "b4ca817908a60786b75d74a84b14068e080dfb005910423746854054970a66ff",
+        "size_bytes": "362633"
+      },
+      "policy": {
+        "schema_id": "rx.execution-policy.v2",
+        "sha256": "0b06c6981e9617214ad9cc27dfc6d46ab7ae401c2badd3bfdd8ba05f384d5434",
+        "size_bytes": "21502"
+      },
+      "publication": {
+        "catalog": "01a0fb1f-1cf4-77e1-987a-286c4dcb6514",
+        "digest": "d336fea12dab8f00ede38fbaa962f10c6d05d740773b3fa1a3c02944f22cf601",
+        "id": "01a0fb20-7cff-72a6-a268-3056a94d2426",
+        "revision": "1"
+      },
+      "reports_checked": "4800",
+      "schema": "rx.execution-domain-verification.v2",
+      "slots": "2400"
+    }
+  },
+  "ticket_fraction": 0.15369941944333335,
+  "test_wall_seconds": 280.55,
+  "test_wall_note": "Includes untimed fixture setup and a second full pass to reconstruct the published index for the qualification fixture; not the sum of the three measured production stages. Build time excluded.",
+  "exclusions": [
+    "live600s ticket issuance, artifact acquisition and commit",
+    "reviewed/applied change and Host acknowledgement",
+    "independent reviewer/activation",
+    "Linux latency, native effects and M3 acceptance"
+  ],
+  "earlier_attempts": [
+    "debug Preview interrupted after >7min; incomplete",
+    "release fixture duplicate asset rejected",
+    "release fixture legacy predecessor links rejected; then fixed and two-slot preflight passed"
+  ]
+}

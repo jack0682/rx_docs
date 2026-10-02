@@ -70,7 +70,7 @@ comparison is to the prior approval, not a new digest supplied by the caller.
 | Boundary | v2 limit / action |
 |---|---|
 | Candidate variants | 1–8 per publication |
-| Ordered slots | 1–2400 per publication; one Run uses a prefix of the published order |
+| Ordered slots | 1–2400 per publication; one Run uses the first N jointly unused slots in published order |
 | Report pairs | At most 19,200; full Cartesian coverage required |
 | Action nodes | At most 16, one bounded Skill per Task in this profile |
 | Index canonical artifact | At most 2 MiB, checked before parsing/allocation |
@@ -132,7 +132,7 @@ Existing reviewer/operator separation, permit/fence and resource rules still app
 The published order rule selects slots. In this slice it is the data-declared
 zero-based row-major order (row then column), with the exact generated order
 committed in publication. P reserves the next unused slot and commits its ordinal
-with Run/Part binding before dispatch. N selects a prefix, not arbitrary indices.
+with Run/Part binding before dispatch. N selects the first N jointly unused entries in published order, not arbitrary indices.
 Executor, UI, barcode input and operator cannot override or skip the slot.
 The server owns concurrent reservation/consumption for a tray instance across
 Runs; a new Run cannot reset occupancy or reuse a consumed slot by changing its
@@ -263,3 +263,7 @@ impact cases before the corresponding implementation change.
 The [Host qualification acknowledgement contract](host-qualification.md) fixes how
 the reviewed derived domain binds to the accepted v2 configuration, while preserving
 legacy receipts, explicit activation and new-operation permits.
+
+The [runtime binding and slot custody contract](runtime-binding.md) distinguishes
+actual ObjectInstance values, Run-local ordinals, publication slot ordinals and
+resource identity across Runs, including explicit quiet replenishment.

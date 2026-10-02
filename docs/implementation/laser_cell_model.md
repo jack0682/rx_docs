@@ -310,3 +310,52 @@ P/Executor 연결, 실제 품목 바인딩과 N개 슬롯별 선택, 무응답/�
 그것의 실제 runtime/schema/Host/qualification/frontier 연결은 아직 없으므로, 고정 Intent 비교를
 삭제하거나 다른 값을 opaque 참조 뒤에 숨겨 통과시키지 않는다. 기존 v1의 의미/bytes를 유지하는
 명시적 버전 경계를 먼저 설계해야 한다.
+
+## M3 실행 v2 개정 결정 — 2026-10-02
+
+사용자가 명시적 실행 v2 계약 개정을 승인했다. 구현 전 결정은
+[공통 실행 v2 계약](../contracts/workflow-execution/v2/README.md)에 고정한다.
+**v2는 계약 버전**, **v1.1은 기존 계약 개정 절차의 이름**이다. 기존 v1 bytes와
+exact-Intent 의미를 유지하며 새 형식을 명시적으로 협상한다. 이 절은 구현/수락 완료가 아니다.
+
+1. 승인 표현은 **template·rule·입력 closure와 전체 report digest index 승인 + 서버의
+   결정적 재계산 일치 검사**다. concrete ArtifactRef를 슬롯마다 나열하지 않는다.
+   게시 때 모든 후보를 해석·검증하고, 실행 직전에 선택 후보를 다시 검사한다.
+   실제 품목 instance의 값이 승인 candidate와 다르면 새 resolve·Preview·게시가 필요하다.
+   결과 hash만 같다는 이유로 Run 권리를 재사용할 수 없다.
+2. slot은 **게시된 row-major 순서 규칙으로 P가 선택**한다. 운전자는 실제 품목 instance와
+   수량을 입력하고 P가 입력 주체·원 요청·Run/Part·품목 revision·slot을 기록한다.
+   임의 slot 선택/건너뛰기는 지원하지 않는다. Run을 새로 만들어 소비된 slot을 재사용할 수 없다.
+3. 게시된 의존 정의의 현재 revision이 바뀌면 **새 효과를 차단**한다. 값이 같아도 차단하며
+   무관한 정의 변경은 영향이 없다. 이미 접수한 원 operation의 조회·정산은 계속 가능하다.
+   새 값은 resolve → Preview → publish·재자격 후 새 Run으로만 사용한다.
+4. 반례 2는 **현재 설치된 Linux v0.4.0-rc.1의 v1 P/Executor/Host/UI 원본 bytes**를
+   고정해 v2 계획을 주입한다. 이 설치의 runtime은 현재 정지돼 있고 M2 macOS 개발 서버와
+   구분한다. 현재 코드의 legacy 분기나 구버전 소스 재빌드로 대체하지 않는다.
+
+상한은 후보 8개 × slot 2400개 × node 16개, index 2 MiB, 보고서 900,000 bytes,
+node parameter 64 KiB, 정책 envelope 128 KiB다. 정의 closure는 512개/16 MiB,
+전체 자격 의존성은 1024개 이하다. 기존 64-choice 순수 정책과 Python package 32-asset
+상한을 임의로 올리지 않고 v2 파생 의존성을 명시한다.
+
+[크기 산출 근거](../../references/execution_v2_design_2026-10-02/sizing.json): A/B × 2400 × 8에서
+concrete parameter는 38,400개, reference 배열만 5,284,801 bytes다. 현재 v1 payload를
+외삽하면 parameter 48,499,200 bytes, report 929,577,600 bytes다. 선택한 report index는
+362,633 bytes이고 8개 후보 상한에서는 1,450,373 bytes다. 이는 직렬화 크기 산출이며
+dense 실제 해석/성능 시험이 아니다. 기존 dense geometry는 계속 BLOCKED다.
+자격 검증은 index 한 개로 계산이 사라지는 것이 아니다. A/B의 공통 정의 82개를 포함한
+전체 입력 closure를 검사하고 4800회 해석·제약 검사, 최대 38,400개 parameter 생성을
+수행해 index를 대조한다. 시간 비용은 v2 구현 뒤 측정하며, 그 전에는 빠르다고 주장하지 않는다.
+
+UNKNOWN은 원 operation의 효과가 확인될 때까지 자원을 보유하고 진도를 막는다.
+적용·완료가 확인되면 같은 Part/slot의 남은 node만 진행한다. 무효과와 안전한 이전 상태가
+증명되면 복구 권한으로 같은 node를 **최대 한 번 명시적으로 재시도**할 수 있다.
+새 operation은 원 정산 ID와 같은 선택을 연결하고 현재 revision/제약/permit을 다시 검사한다.
+한 Part의 모든 done이 끝나기 전 다음 slot은 금지한다. 부분 효과·충돌·불명 상태나 abort에서
+자동으로 다음 slot을 고르지 않는다. 다른 Run 승인 재사용과 정산 후 retry/next-slot 혼동을
+각각 반례 9·10으로 추가했다.
+
+구현 순서는 **계약·P·Executor(반례 1–5) → Host → UI**, 릴리스는 대응 버전을 담은
+단일 묶음이다. 반례 2의 옛 Host/UI 시험과 새 Host/UI 구현을 구분한다.
+기존 반례 8(실제 P↔Host 무응답, UNKNOWN/보유/원 정산/다음 품목)은 **M3 사용자 수락**으로
+분리한다. 이번 문서 고정으로 M3 또는 최종 RC를 수락 처리하지 않는다.

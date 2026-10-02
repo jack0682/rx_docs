@@ -361,7 +361,7 @@ Apple M5/16 GiB, macOS 27.0, Rust 1.98.1 release 빌드의 단일 측정(빌드 
 | 게시 | 0.086322 s | 저장 Preview/currentness 확인, 서명 package 재검증·commit |
 | 자격 보고서 검증 계산 | 92.219652 s | 서명·의존성 검사와 4800개 report 전수 재계산·index 대조 |
 
-검증 의존성은 108개(상한 1024), 취득한 artifact는 19개/541,885 bytes였다. 입력 closure
+검증 의존성은 108개(상한 1024), 검증 입력 artifact는 19개/541,885 bytes였다. 입력 closure
 114,686 bytes, index 362,633 bytes, policy 21,502 bytes다. 검증 계산은 600 s ticket
 상한의 15.37%이며 계산상 여유는 507.780348 s다. 이는 해당 환경에서의 계산 비용 비교다.
 fixture의 서명·6개 영역 증거·권한 clock은 시험용이며 실제 ticket 발급/취득/commit,

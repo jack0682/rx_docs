@@ -2,12 +2,13 @@
   "schema": "rx.contract-revision.v1",
   "contract_version": "execution-v2",
   "revision_procedure": "v1.1",
-  "revision": "2026-10-02.3",
+  "revision": "2026-10-02.4",
   "status": "AUTHORIZED_DECISIONS_FIXED_IMPLEMENTATION_PENDING",
   "files": {
-    "README.md": "5854f9e2bd22c86f47ade73c0c6cbc94832f39bcaa52221c3e4b959017cdbb92",
+    "README.md": "ee1a81afb7fbf6b1d9871a7a651d41fe984dd61e6100eddeef65416b85f63003",
     "host-qualification.md": "9309967da7dfb6fd5556caeae327c69d7ffa159347f0531a222b163c37208ccd",
-    "runtime-binding.md": "a723941e86eef419a308241bfc4b31ced1a5651557d3138b7a7e878edb61eac8"
+    "runtime-binding.md": "a723941e86eef419a308241bfc4b31ced1a5651557d3138b7a7e878edb61eac8",
+    "executor-admission.md": "4f2443681ad2346decadc46a96f4f14dd86e3ad39a99fef34eab6558d7ee2700"
   },
   "legacy_v1": "UNCHANGED",
   "runtime_conformance": "NOT_YET_TESTED"

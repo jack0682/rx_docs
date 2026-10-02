@@ -278,3 +278,35 @@ parameter artifact를 만들고, 기존 ProcessSource→ResolvedProcess→BT XML
 Linux RC와 최종 사람의 45분/10분 재현이다. 기존 runtime CLI는 BOUND_CONFIGURATION이고
 Host 입력은 고정된 parameter artifact에 연결되므로 이 경계를 실제로 연결해야 한다.
 LOCAL_SIM Python 순차 실행이나 UI의 예시 trace로 이를 대체하지 않는다.
+
+## M3 값 소비 모의 장비 — 구현 중
+
+기존 FILE_SIMULATION 기본 장치는 Intent 내용을 사용하지 않고 완료 capture를 기록한다.
+따라서 그것만으로는 해석된 좌표·힘·시간이 장비에 쓰였다고 할 수 없다. 새 0F 모의 장비 프로그램은
+기존 Host Python 실행기 뒤에서 `rx.workflow-parameters.v1`을 소비하고 독립 상태/효과 파일을
+갱신한다. 공정 순서는 P/Executor의 책임으로 유지하며 별도 Workflow 실행기를 만들지 않는다.
+
+공통 추가는 한 Host의 단일 지원/불명 상태 관리 아래 여러 고정 Python 입력을 선택하는 기능이다.
+새 `rx.python-skill-library.v1`과 `PYTHON_SKILL_LIBRARY_PACKAGE`를 사용하고 기존 단일 프로그램
+형식은 바꾸지 않는다. 한 서명된 DEVICE_REFERENCE 패키지의 모든 프로그램·입력·원본·operation
+선언을 재조립/대조한다. 라이브러리는 한 environment의 고정 프로그램 최대 16개, 입력당 64 KiB로
+제한한다. 바뀐 입력·서명만 유효한 불일치 선언·미승인 Intent는 거절한다. 한 프로그램이 불명이면
+다른 프로그램의 자원 인계도 막는다. 물리 환경은 지원하지 않는다.
+
+시나리오 코드는 Solutions의 `examples/process/laser-heat-treatment/simulation/`에 둔다.
+입력 pose/force/width로 모의 상태를 바꾸고, clamp의 명시적 release_gripper와 door/process
+순서를 검사하며 process duration을 실제로 기다린다. 상태 파일은 Host journal과 분리된다.
+정규화된 quaternion·단위/frame·고정값·상태 전이를 검사하지만 실제 충돌/접촉/열전달이나
+기능 안전을 모델링한 것은 아니다. 이미 소비된 슬롯을 반복 사용하지 않는다.
+
+Host prepare/authorize와 실제 Python 프로세스를 사용한 시험에서 A/B 각각 8개 효과와
+폭 47/77 mm, 힘 25/17.5 N, contact z 760/767.5 mm, clamp/door/holding 전이 및 5/7초
+대기를 대조했다. prepare는 장비 효과를 만들지 않았고 원 요청 재조회도 효과를 추가하지 않았다.
+다른 입력을 선택하는 라이브러리 시험과 타임아웃 후 공유 자원 인계 거절 시험도 통과했다.
+이는 직접 Host 시험이며 P 등록·mTLS·Executor까지 포함한 전체 경로 시험을 대체하지 않는다.
+
+P/Executor 연결, 실제 품목 바인딩과 N개 슬롯별 선택, 무응답/정산/다음 품목, 최종 RC는 미완이다.
+기존 `program_inputs::Policy`는 develop/SDK에 이미 있는 순수 bounded-selection primitive다.
+그것의 실제 runtime/schema/Host/qualification/frontier 연결은 아직 없으므로, 고정 Intent 비교를
+삭제하거나 다른 값을 opaque 참조 뒤에 숨겨 통과시키지 않는다. 기존 v1의 의미/bytes를 유지하는
+명시적 버전 경계를 먼저 설계해야 한다.

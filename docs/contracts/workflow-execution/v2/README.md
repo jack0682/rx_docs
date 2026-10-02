@@ -271,3 +271,7 @@ resource identity across Runs, including explicit quiet replenishment.
 The [Executor session and Part admission contract](executor-admission.md) preserves
 the existing start/mandate/budget path while explicitly negotiating v2 and atomically
 binding current actual objects, reserved slots and approved materialized artifacts.
+
+The [operation admission and delivery contract](operation-admission.md) binds the
+selected values to ordinary operation/resource/permit semantics and explicit Host-v2
+transport, while keeping the original operation recoverable under UNKNOWN.

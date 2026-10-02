@@ -267,3 +267,7 @@ legacy receipts, explicit activation and new-operation permits.
 The [runtime binding and slot custody contract](runtime-binding.md) distinguishes
 actual ObjectInstance values, Run-local ordinals, publication slot ordinals and
 resource identity across Runs, including explicit quiet replenishment.
+
+The [Executor session and Part admission contract](executor-admission.md) preserves
+the existing start/mandate/budget path while explicitly negotiating v2 and atomically
+binding current actual objects, reserved slots and approved materialized artifacts.

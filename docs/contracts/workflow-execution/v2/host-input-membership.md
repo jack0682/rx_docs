@@ -100,3 +100,6 @@ original-request replay/lost response; retained UNKNOWN custody; and no effects 
 permission. Host membership checks must exercise the Host's own saved approval material,
 not use an assertion from a P fixture as the expected answer. These are applications of
 existing approval/compatibility obligations, not additional milestone gates.
+
+The authorized native-completion.md revision defines common entry/completion separation.
+Profile-specific entry evidence does not replace any Host-owned input membership check.

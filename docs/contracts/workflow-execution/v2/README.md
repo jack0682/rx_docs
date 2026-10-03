@@ -283,3 +283,9 @@ The [Host-owned input membership contract](host-input-membership.md) specifies
 provider-independent checks against the Host's qualification-linked approval material.
 The [Python execution profile](python-execution-profile.md) contains only Python
 environment/program pins and reuses those common semantics and the existing runner.
+
+## Native entry and completion revision
+
+Revision 2026-10-03.3 separates common entry/completion meaning in native-completion.md
+from each provider profile's accepted entry evidence. Python evidence is defined in
+python-execution-profile.md. Existing freshness limits and execution-v2 wire states remain.

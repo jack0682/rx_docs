@@ -1,0 +1,80 @@
+{
+  "active_selection": {
+    "candidate": 0,
+    "inputs": {
+      "schema_id": "rx.execution-input-closure.v2",
+      "sha256": "f21f81c15d3fa9e3bd8d1576bb88dcafedaa2bbb68313b09ffa49945206816e3",
+      "size_bytes": "120635"
+    },
+    "slot": 0,
+    "templates_digest": "c2b71e01ea764c08b61982764c5a2e259d4500226bc8e29b50c6d927cd445404"
+  },
+  "active_slot": 0,
+  "alignment": {
+    "aligned": true,
+    "measured_deg": 95,
+    "requested_deg": 95,
+    "tolerance_deg": 0.5
+  },
+  "available_slots": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "clamp_force": 30,
+  "clamped": false,
+  "completed_slots": [
+    0
+  ],
+  "door_closed": false,
+  "effects": 9,
+  "environment": "FILE_SIMULATION",
+  "holding": false,
+  "motion": {
+    "approach": [
+      800,
+      200,
+      795
+    ],
+    "force": 25,
+    "frame": "SIMULATION/world",
+    "orientation": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "target": [
+      800,
+      200,
+      760
+    ],
+    "width": 47
+  },
+  "observed_duration_s": 5.004813002014998,
+  "phase": "SUPPLY",
+  "process_done": false,
+  "requested_duration_s": 5,
+  "robot_clear": true,
+  "schema": "rx.tending-simulation-state.v1"
+}

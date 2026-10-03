@@ -1,0 +1,125 @@
+{
+  "run": "01a10104-2ad8-73f4-bef6-10d9ae311b12",
+  "state": "COMPLETED",
+  "environment": "SIMULATION",
+  "operations": [
+    {
+      "node": "clamp",
+      "outcome": "SUCCEEDED",
+      "disposition": "RELEASED",
+      "parameter": {
+        "schema_id": "rx.workflow-parameters.v2",
+        "sha256": "01289bea0ed73dd9a6875fa3388415c6b52e6fd0182cee23a8a25356dcda9bb1",
+        "size_bytes": "1107"
+      }
+    },
+    {
+      "node": "process",
+      "outcome": "SUCCEEDED",
+      "disposition": "RELEASED",
+      "parameter": {
+        "schema_id": "rx.workflow-parameters.v2",
+        "sha256": "0b6fdfa1f6f5986bc4843dfeb09239703ad387ceea50b2066d4cf601222471b2",
+        "size_bytes": "933"
+      }
+    },
+    {
+      "node": "place",
+      "outcome": "SUCCEEDED",
+      "disposition": "RELEASED",
+      "parameter": {
+        "schema_id": "rx.workflow-parameters.v2",
+        "sha256": "9403256ceecaf0037335a3d75e289869bd7b7f31a86989d9cb61c6c6969c149e",
+        "size_bytes": "1642"
+      }
+    },
+    {
+      "node": "rotate-align",
+      "outcome": "SUCCEEDED",
+      "disposition": "RELEASED",
+      "parameter": {
+        "schema_id": "rx.workflow-parameters.v2",
+        "sha256": "970938830555845875c91a4d4df941ce8eab54d63b5bec00c33fcef38b792027",
+        "size_bytes": "1055"
+      }
+    },
+    {
+      "node": "open-door",
+      "outcome": "SUCCEEDED",
+      "disposition": "RELEASED",
+      "parameter": {
+        "schema_id": "rx.workflow-parameters.v2",
+        "sha256": "89377792e5411a27d3904a5e883953bb4bdd21411efaec22ee117879db650cc4",
+        "size_bytes": "925"
+      }
+    },
+    {
+      "node": "load",
+      "outcome": "SUCCEEDED",
+      "disposition": "RELEASED",
+      "parameter": {
+        "schema_id": "rx.workflow-parameters.v2",
+        "sha256": "4bd47e12d1ab5352848491a229344c9aff9bb37d6e7392aff6e680d31ae7f45c",
+        "size_bytes": "1638"
+      }
+    },
+    {
+      "node": "unload",
+      "outcome": "SUCCEEDED",
+      "disposition": "RELEASED",
+      "parameter": {
+        "schema_id": "rx.workflow-parameters.v2",
+        "sha256": "32284743489d252a882f18315dddca61be686e48b72842c67d9c95a1aa15d044",
+        "size_bytes": "1646"
+      }
+    },
+    {
+      "node": "close-door",
+      "outcome": "SUCCEEDED",
+      "disposition": "RELEASED",
+      "parameter": {
+        "schema_id": "rx.workflow-parameters.v2",
+        "sha256": "55bfd0587f4e125aff91a3cbd03b5f2ae3d0535af3351841ec5beaafe84d3faf",
+        "size_bytes": "925"
+      }
+    },
+    {
+      "node": "pick",
+      "outcome": "SUCCEEDED",
+      "disposition": "RELEASED",
+      "parameter": {
+        "schema_id": "rx.workflow-parameters.v2",
+        "sha256": "8ccaf8d70564397760991093d3e5280a9593f3d101476464248f76d853c3daeb",
+        "size_bytes": "1640"
+      }
+    }
+  ],
+  "native_order": [
+    "pick",
+    "load",
+    "rotate-align",
+    "clamp",
+    "close-door",
+    "process",
+    "open-door",
+    "unload",
+    "place"
+  ],
+  "effects": 9,
+  "requested_duration_s": 5,
+  "observed_duration_s": 5.000141002004966,
+  "alignment": {
+    "aligned": true,
+    "measured_deg": 95,
+    "requested_deg": 95,
+    "tolerance_deg": 0.5
+  },
+  "reports": [
+    "eb0c7da54e65285d97931ba2bbbf209ce867e98c35676e0b9b02934965baff3d"
+  ],
+  "runtime_arch": "linux/arm64",
+  "runtime_container": "rx-f1-cp1r9-h",
+  "product_receipt_sha256": "a6f24d3dc248855fa3c1d6c160d40a26d17301c8e8c4f00f312e78815784ed75",
+  "reopened_reports_equal": true,
+  "replay_no_added_effects": true
+}

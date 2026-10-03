@@ -1,0 +1,91 @@
+{
+  "schema": "rx.execution-v2.frozen-ui-injection.v1",
+  "frozen_ui_result": "FAIL",
+  "test_boundary": "transport substitutes real Plan2 reference and matching displayed Run recipe digest in overview/start-context; P authoritative state and outgoing Start body unchanged; not proof honest v2 P serves that read",
+  "plan": {
+    "schema_id": "rx.execution-plan.v2",
+    "sha256": "746c0fbab6ac53eb9fb8052779ba904eeb79ce29bef1a3a0e09fc96dbd28fe6d",
+    "size_bytes": "1880"
+  },
+  "actual_run": {
+    "revision": "9",
+    "value": {
+      "id": "01a0ffa1-14a8-7371-a48b-2717c2ee31c9",
+      "cell": "cell/a",
+      "recipe_digest": "e7040a95ab13e4d4819b06a458bb2298fec190f16ea0ee72eab236490279ac84",
+      "envelope_digest": "79c16b46d9ca9bf00a912a2a2bdf89d01daf2ee6eabb4fe4ac9e91fe3565c4f9",
+      "purpose": "PRODUCTION",
+      "state": "COMPLETED",
+      "budget": {
+        "unit": "PART_ATTEMPT",
+        "limit": "1",
+        "revision": "2",
+        "consumptions": [
+          {
+            "PART_ATTEMPT": "01a0ffa2-80d5-715a-8107-73b520136741"
+          }
+        ]
+      },
+      "executor_session": "01a0ff9e-5125-772c-b691-caa10854cf44",
+      "mandate": "01a0ffa2-8085-7558-a954-2a9ca416f3cb",
+      "part_ids": [
+        "01a0ffa2-80d5-715a-8107-73b520136741"
+      ],
+      "pending_attempt": null
+    }
+  },
+  "outgoing_start": {
+    "request_key": "4e304950-036c-4498-8093-cb1d144e21ab",
+    "command": {
+      "run": "01a0ffa1-14a8-7371-a48b-2717c2ee31c9",
+      "envelope_digest": "79c16b46d9ca9bf00a912a2a2bdf89d01daf2ee6eabb4fe4ac9e91fe3565c4f9",
+      "purpose": "PRODUCTION",
+      "budget_unit": "PART_ATTEMPT",
+      "budget_limit": "1",
+      "expected_cell": "9",
+      "expected_run": "1"
+    }
+  },
+  "native_effect_count_before": 6,
+  "native_effect_count_after": 8,
+  "new_effects": [
+    {
+      "capture": {
+        "captured_at": {
+          "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+          "ticks_ns": "125901911587825"
+        },
+        "device_session": "49c0b590-dd1f-4e47-98e2-1910d00ae9f4",
+        "native_id": "3c76e375-c5ba-41d5-bd94-5404b19d3414",
+        "status": 0,
+        "status_schema": "rx.sim.completed.v1"
+      },
+      "invocation": "3c76e375-c5ba-41d5-bd94-5404b19d3414",
+      "operation": "01a0ffa2-8171-7312-81e1-80db9054e5bb"
+    },
+    {
+      "capture": {
+        "captured_at": {
+          "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+          "ticks_ns": "125902366321700"
+        },
+        "device_session": "49c0b590-dd1f-4e47-98e2-1910d00ae9f4",
+        "native_id": "e6cbe42c-b973-477e-a07a-567729e15df5",
+        "status": 0,
+        "status_schema": "rx.sim.completed.v1"
+      },
+      "invocation": "e6cbe42c-b973-477e-a07a-567729e15df5",
+      "operation": "01a0ffa2-834b-728b-842b-17da7204d755"
+    }
+  ],
+  "approved_response": "version-pinned installation isolation and independent P legacy Start refusal, human approved 2026-10-03",
+  "new_ui_refusals": {
+    "v2_recipe": "PASS",
+    "legacy_envelope_extra_execution_policy": "PASS",
+    "native_effect_count_after": 8
+  },
+  "new_ui_bundle_sha256": "6021e7afe219ec55adb5a1097a70fdadd9a6773d6b6fec8677e0850b90076e2f",
+  "new_ui_positive_control": "PENDING",
+  "frozen_other_consumers": "PENDING",
+  "gate": "NOT_PASSED"
+}

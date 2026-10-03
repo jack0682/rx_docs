@@ -1,0 +1,177 @@
+{
+  "schema": "rx.execution-v2.frozen-runtime-injection.v1",
+  "result": "PASS_WITH_SEPARATELY_RECORDED_FROZEN_UI_FAILURE_AND_APPROVED_ISOLATION",
+  "oracle": "unchanged installed Linux v0.4.0-rc.1 image IDs from legacy-freeze.json; no old consumer rebuilt",
+  "positive_control": "each isolated installation completed public signed/reviewed v1 commissioning plus 2 Runs / 4 independent FILE_SIMULATION captures; Executor used the same transparent mTLS proxy before injection",
+  "platform": {
+    "results": [
+      {
+        "case": "new-schema",
+        "status": 404,
+        "body": {
+          "code": "NOT_FOUND",
+          "outcome_unknown": false
+        }
+      },
+      {
+        "case": "extra-policy",
+        "status": 400,
+        "body": {
+          "code": "INVALID_INPUT",
+          "outcome_unknown": false
+        }
+      }
+    ],
+    "no_cell_run_work_changes": true,
+    "positive_control": "same installation public reviewed process-change followed by 2 completed Runs / 4 native captures"
+  },
+  "host": {
+    "positive_original_request_replay": "PASS",
+    "results": [
+      {
+        "case": "plan-v2",
+        "status": "INVALID_ARGUMENT",
+        "details": "configuration payload integrity"
+      },
+      {
+        "case": "v1-envelope-extra-policy",
+        "status": "INVALID_ARGUMENT",
+        "details": "configuration payload shape"
+      },
+      {
+        "case": "/rx.host.configuration.v2.HostConfigurationService/Inspect",
+        "status": "UNIMPLEMENTED"
+      },
+      {
+        "case": "/rx.host.execution.v2.HostExecutionService/Prepare",
+        "status": "UNIMPLEMENTED"
+      }
+    ],
+    "configuration_and_custody_snapshot_unchanged": true,
+    "new_native_effects": 0
+  },
+  "executor": [
+    {
+      "mode": "plan-v2",
+      "run": {
+        "revision": "5",
+        "value": {
+          "id": "01a0ffab-619a-76ec-9dba-17ba6cf314d9",
+          "cell": "cell/a",
+          "recipe_digest": "74365e9fd6cae67b4404ba4483f89699d887d0573ed598f6f2a4a32356befe7e",
+          "envelope_digest": "79c16b46d9ca9bf00a912a2a2bdf89d01daf2ee6eabb4fe4ac9e91fe3565c4f9",
+          "purpose": "PRODUCTION",
+          "state": "PAUSED",
+          "budget": {
+            "unit": "PART_ATTEMPT",
+            "limit": "1",
+            "revision": "2",
+            "consumptions": [
+              {
+                "PART_ATTEMPT": "01a0ffab-6252-7629-822f-635c8dac5b11"
+              }
+            ]
+          },
+          "executor_session": null,
+          "mandate": "01a0ffab-6218-752e-ba8a-fe2383a4c3f0",
+          "part_ids": [
+            "01a0ffab-6252-7629-822f-635c8dac5b11"
+          ],
+          "pending_attempt": null
+        }
+      },
+      "operation_count": 0,
+      "new_native_effects": 0,
+      "native_effect_count": 4,
+      "request_methods": {
+        "/rx.executor.assignment.v1.ExecutorAssignmentService/Inspect": 5,
+        "/rx.executor.production.v1.ProductionService/Inspect": 2,
+        "/rx.executor.v1.ExecutorReadService/GetArtifact": 5,
+        "/rx.cell.v1.CellService/BeginPartAttempt": 1,
+        "/rx.contract.v1.WorkflowService/GetRun": 2,
+        "/rx.executor.v1.ExecutorReadService/GetSnapshot": 1,
+        "/rx.contract.v1.WorkflowService/PauseRun": 1
+      },
+      "journal_methods": [
+        "BEGIN_PART"
+      ],
+      "journal_outbox_count": 0,
+      "stopped_on": "invalid P data: invalid input: unknown field `binding`, expected one of `schema`, `package_digest`, `source_digest`, `process`, `root`, `bindings`, `conditions`"
+    },
+    {
+      "mode": "extra-policy",
+      "run": {
+        "revision": "6",
+        "value": {
+          "id": "01a0ffad-9dd5-774f-b1cd-d080a3f9c776",
+          "cell": "cell/a",
+          "recipe_digest": "82053d9a111bbec41f87903789f149e8224001544432c9277e1c4e8dda568253",
+          "envelope_digest": "79c16b46d9ca9bf00a912a2a2bdf89d01daf2ee6eabb4fe4ac9e91fe3565c4f9",
+          "purpose": "PRODUCTION",
+          "state": "RECOVERY_REQUIRED",
+          "budget": {
+            "unit": "PART_ATTEMPT",
+            "limit": "1",
+            "revision": "2",
+            "consumptions": [
+              {
+                "PART_ATTEMPT": "01a0ffad-9e3e-77cc-b2b5-6456d4f91936"
+              }
+            ]
+          },
+          "executor_session": null,
+          "mandate": "01a0ffad-9e0f-7233-b0bb-a2db65538a61",
+          "part_ids": [
+            "01a0ffad-9e3e-77cc-b2b5-6456d4f91936"
+          ],
+          "pending_attempt": null
+        }
+      },
+      "operation_count": 0,
+      "new_native_effects": 0,
+      "native_effect_count": 4,
+      "request_methods": {
+        "/rx.executor.assignment.v1.ExecutorAssignmentService/Inspect": 3,
+        "/rx.executor.production.v1.ProductionService/Inspect": 2,
+        "/rx.executor.v1.ExecutorReadService/GetArtifact": 5,
+        "/rx.cell.v1.CellService/BeginPartAttempt": 1,
+        "/rx.contract.v1.WorkflowService/GetRun": 2,
+        "/rx.executor.v1.ExecutorReadService/GetSnapshot": 1,
+        "/rx.contract.v1.WorkflowService/PauseRun": 1
+      },
+      "journal_methods": [
+        "BEGIN_PART"
+      ],
+      "journal_outbox_count": 0,
+      "stopped_on": "invalid P data: invalid input: unknown field `execution`, expected one of `schema`, `package_digest`, `source_digest`, `process`, `root`, `bindings`, `conditions`"
+    }
+  ],
+  "mixed": {
+    "old_platform_v2_negotiation": "UNIMPLEMENTED",
+    "authenticated_transport": "same Executor certificate as completed positive-control runs",
+    "request_sha256": "5701650e95f3d181eee56bae044d08826ff4f445aae518827f9f0feb9dc3f44a"
+  },
+  "new_p_old_ui": "PASS: installed_bundle_version_isolation loads exact frozen manifest hash and rejects it, current bundle loads",
+  "old_p_new_ui": "rx-platformd: operator manifest schema, count, index or sorted paths invalid",
+  "limits": [
+    "Test transports substitute bytes; no P database/authority or old consumer code is patched.",
+    "Executor allocates a legacy Part before reading the injected plan: one budget charge remains recorded. It creates no operation/permit/effect; pause/recovery-required and the unfinished Part are retained, not silently reset.",
+    "No pre-existing unresolved native operation was injected in these cases; native-v2 UNKNOWN recovery is transferred with M3b.",
+    "The first HTTP probe used a nonexistent draft route and is excluded; final probe uses the real v2 configuration route.",
+    "An initial attempt to repoint an already initialized Executor was refused by its installation pin. Final probe installs its proxy URI before init and first qualification."
+  ],
+  "evidence_sha256": {
+    "v1-rpc-transport/proxy.py": "f50ebfc4f2b18c6fe4c3dd78719b88c71462cc3a782dd881602446e8e653d011",
+    "v1-rpc-transport/run-installed.py": "fdf65e65744f385d330a22c39a99a4e696260d6913f11f1a166f1d7460969afa",
+    "v1-rpc-transport/host-probes.py": "9110bdb15357865f0e08cff1cd712ed65a9ee1b6b9eee577734a3e13a1617057",
+    "v1-rpc-transport/platform-probes.py": "9df1cd5c7608f2c7f464bb4899e4d007a63681a2b8757d90925156ed6e9ffe6b",
+    "v1-rpc-transport/mixed-probe.py": "73beb63182cc84aa50c16b1e96bfd08a86b746b468e2866d81aa9e915c8fe1f1",
+    "v1-rpc-transport/calls.jsonl": "f1bc157df817651b5c3fba324d05a18ebe56a162245d5e42c5b988d843b0b53f",
+    "v1-rpc-transport/host-result.json": "aa1a4bcc0fbd61ac7667e5626e00c9115f6e591e1ae15b7cc8738ac00709fb71",
+    "v1-rpc-transport/platform-probes-final/result.json": "3949decb81b3ced1225aa0e62d2711c1d8989f23fca9ce3cb1a05d4b350a15f0",
+    "v1-rpc-transport/executor-plan-v2/executor.log": "2af87f7cb6d4c426b7f629c10079059a27dce1a4940d59dd3a1a18a16c778137",
+    "v1-rpc-transport/executor-extra-policy-02/executor.log": "546d3cc60b3baa5b6b1a8fc6c445b7b216666021a6ac0d02aea088b833775c48",
+    "v1-rpc-transport/effects-after-executor.jsonl": "3d8a4d9a0de83de1b90c0277131991d1599431ea76d0ca6d77f567256686f826",
+    "v1-rpc-transport/effects-after-executor-extra.jsonl": "a296f56e0f834921ea5431f517cc3295a36454a43d75d5fcbdeec111f8a89918"
+  }
+}

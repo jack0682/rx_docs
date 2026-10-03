@@ -1,0 +1,85 @@
+{
+  "schema": "rx.f1-checkpoint-1-evidence.v1",
+  "status": "NOT_READY",
+  "environment": "SIMULATION",
+  "workflow": "S2 nine-step rotation-tending",
+  "implementation": {
+    "platform": "3d60fd22bce105ada82f7670bdbe668e30abdaf1",
+    "solutions": "5efde01ebccf40594c7c6c564c0db619fd45b648",
+    "merged": false
+  },
+  "measured_at": "2026-10-03T17:20:27.854201+09:00",
+  "execution_snapshot_round_trip": {
+    "limit_ms": 100,
+    "limit_changed": false,
+    "measurements": [
+      {
+        "runtime_arch": "linux/amd64",
+        "host_arch": "linux/arm64",
+        "emulated": true,
+        "source": "amd64-read-observations.json",
+        "scope": "Read-only existing Executor session GetSnapshot observer; EXECUTING Run, no operation emission by observer",
+        "samples": [
+          {
+            "kind": "snapshot",
+            "elapsed_ms": 111.306791,
+            "age_at_receive_ms": 63.763292,
+            "remaining_ms": 36.236708,
+            "admission": true,
+            "reason": null,
+            "payload_bytes": 15575
+          },
+          {
+            "kind": "snapshot",
+            "elapsed_ms": 114.14875,
+            "age_at_receive_ms": 55.88875,
+            "remaining_ms": 44.11125,
+            "admission": true,
+            "reason": null,
+            "payload_bytes": 15575
+          }
+        ]
+      },
+      {
+        "runtime_arch": "linux/arm64",
+        "host_arch": "linux/arm64",
+        "emulated": false,
+        "source": "arm64-read-observations.json",
+        "scope": "Read-only existing Executor session GetSnapshot observer; RECOVERY_REQUIRED Run after process timeout, no operation emission by observer; not equal-load comparison with amd64",
+        "samples": [
+          {
+            "kind": "snapshot",
+            "elapsed_ms": 5.581584,
+            "age_at_receive_ms": 5.221,
+            "remaining_ms": 94.779,
+            "admission": false,
+            "reason": "NOT_COMMISSIONED",
+            "payload_bytes": 21058
+          },
+          {
+            "kind": "snapshot",
+            "elapsed_ms": 4.788416,
+            "age_at_receive_ms": 4.582209,
+            "remaining_ms": 95.417791,
+            "admission": false,
+            "reason": "NOT_COMMISSIONED",
+            "payload_bytes": 21058
+          }
+        ]
+      }
+    ]
+  },
+  "latest_product_run": {
+    "runtime_arch": "linux/arm64",
+    "run": "01a100ce-431e-77e7-bd2d-9850fa80f38b",
+    "state": "RECOVERY_REQUIRED",
+    "operations": 6,
+    "settled_succeeded_released": 5,
+    "receipt": "Local retained product receipt; full record contains installation paths and is not copied into this public interim report."
+  },
+  "blocker": "5-second process holds Host native-submit gate; fixed 3-second Host RPC timeout and 2-second ready-source freshness expire. Process outcome remains UNKNOWN/QUARANTINED in P; no replay or forced completion.",
+  "next_contract_decision": {
+    "status": "AWAITING_USER",
+    "recommendation": "Keep existing gate through confirmed native entry; collect same operation/invocation completion through existing Host journal/evidence without holding gate during the finite program. Preserve 100ms and existing freshness/timeout bounds."
+  }
+}

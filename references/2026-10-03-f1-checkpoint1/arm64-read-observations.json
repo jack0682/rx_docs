@@ -1,0 +1,27 @@
+{
+  "runtime_arch": "linux/arm64",
+  "host_arch": "linux/arm64",
+  "emulated": false,
+  "source": "arm64-read-observations.json",
+  "scope": "Read-only existing Executor session GetSnapshot observer; RECOVERY_REQUIRED Run after process timeout, no operation emission by observer; not equal-load comparison with amd64",
+  "samples": [
+    {
+      "kind": "snapshot",
+      "elapsed_ms": 5.581584,
+      "age_at_receive_ms": 5.221,
+      "remaining_ms": 94.779,
+      "admission": false,
+      "reason": "NOT_COMMISSIONED",
+      "payload_bytes": 21058
+    },
+    {
+      "kind": "snapshot",
+      "elapsed_ms": 4.788416,
+      "age_at_receive_ms": 4.582209,
+      "remaining_ms": 95.417791,
+      "admission": false,
+      "reason": "NOT_COMMISSIONED",
+      "payload_bytes": 21058
+    }
+  ]
+}

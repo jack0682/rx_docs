@@ -1,0 +1,97 @@
+{
+  "status": "PASS",
+  "runs": {
+    "normal": {
+      "actual_object_wait_checked": true,
+      "budget_consumed": "2",
+      "evidence_boundary": "real P signed-publication/qualification APIs, enrolled mTLS, real S worker/service; synthetic registered Host receipts/evidence, frozen test clock; not native Host or M3",
+      "executor_binary_sha256": "0e74877eb087b5428b1fad470a7273a91496c053896f13d325aaae030bc85e79",
+      "mode": "normal",
+      "negative_rpc_checks": [
+        "v2-binding-mismatch",
+        "v1-snapshot-refusal",
+        "foreign-part-artifact"
+      ],
+      "operations": [
+        "01a0ffb0-b253-712e-b354-840dd199d8f6",
+        "01a0ffb0-b77f-7534-90f8-7588f33055c2"
+      ],
+      "parts": [
+        "01a0ffb0-b0ff-757e-81bb-ea38d57056b1",
+        "01a0ffb0-b62d-7591-a606-881de969f552"
+      ],
+      "reply_loss_injected": false,
+      "run": "01a0ffb0-ac17-72fc-a745-600ed6719991",
+      "status": "REGISTERED_P_EXECUTOR_V2_PASS"
+    },
+    "begin": {
+      "actual_object_wait_checked": true,
+      "budget_consumed": "2",
+      "evidence_boundary": "real P signed-publication/qualification APIs, enrolled mTLS, real S worker/service; synthetic registered Host receipts/evidence, frozen test clock; not native Host or M3",
+      "executor_binary_sha256": "0e74877eb087b5428b1fad470a7273a91496c053896f13d325aaae030bc85e79",
+      "mode": "begin",
+      "negative_rpc_checks": [
+        "v2-binding-mismatch",
+        "v1-snapshot-refusal",
+        "foreign-part-artifact"
+      ],
+      "operations": [
+        "01a0ffb0-cad9-7064-aef4-5df6b1216dac",
+        "01a0ffb0-d00a-774a-8d67-e482d0591fcb"
+      ],
+      "parts": [
+        "01a0ffb0-c920-77f4-abf7-0e65decbed6b",
+        "01a0ffb0-ceb7-74ff-84c6-024382573eac"
+      ],
+      "reply_loss_injected": true,
+      "run": "01a0ffb0-c6a2-70f5-b86d-fbda9c0f16b4",
+      "status": "REGISTERED_P_EXECUTOR_V2_PASS"
+    },
+    "submit": {
+      "actual_object_wait_checked": true,
+      "budget_consumed": "2",
+      "evidence_boundary": "real P signed-publication/qualification APIs, enrolled mTLS, real S worker/service; synthetic registered Host receipts/evidence, frozen test clock; not native Host or M3",
+      "executor_binary_sha256": "0e74877eb087b5428b1fad470a7273a91496c053896f13d325aaae030bc85e79",
+      "mode": "submit",
+      "negative_rpc_checks": [
+        "v2-binding-mismatch",
+        "v1-snapshot-refusal",
+        "foreign-part-artifact"
+      ],
+      "operations": [
+        "01a0ffb0-e235-7207-bd54-af13ddb5b10d",
+        "01a0ffb0-e766-70e9-acaa-d1b64f7de07d"
+      ],
+      "parts": [
+        "01a0ffb0-e0e2-73c3-bbbc-a9c6f4f989a6",
+        "01a0ffb0-e614-70a8-8d67-2f6beed3e71c"
+      ],
+      "reply_loss_injected": true,
+      "run": "01a0ffb0-de63-7085-a0e2-8fe54769f28f",
+      "status": "REGISTERED_P_EXECUTOR_V2_PASS"
+    },
+    "complete": {
+      "actual_object_wait_checked": true,
+      "budget_consumed": "2",
+      "evidence_boundary": "real P signed-publication/qualification APIs, enrolled mTLS, real S worker/service; synthetic registered Host receipts/evidence, frozen test clock; not native Host or M3",
+      "executor_binary_sha256": "0e74877eb087b5428b1fad470a7273a91496c053896f13d325aaae030bc85e79",
+      "mode": "complete",
+      "negative_rpc_checks": [
+        "v2-binding-mismatch",
+        "v1-snapshot-refusal",
+        "foreign-part-artifact"
+      ],
+      "operations": [
+        "01a0ffb0-f9a0-7708-a881-c795b74190ef",
+        "01a0ffb0-ff07-7188-bb0a-86157a24d046"
+      ],
+      "parts": [
+        "01a0ffb0-f84d-72d6-bc76-a26432cd5e75",
+        "01a0ffb0-fd7d-733e-8377-7a6237c1e54d"
+      ],
+      "reply_loss_injected": true,
+      "run": "01a0ffb0-f5ce-7474-985c-2abb290acd67",
+      "status": "REGISTERED_P_EXECUTOR_V2_PASS"
+    }
+  }
+}

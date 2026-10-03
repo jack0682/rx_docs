@@ -478,3 +478,6 @@ P → S 순서로 merge한다. merge된 head로 환경을 재생성하여 사용
 고정 v1 UI 주입에서 검토한 v2 참조와 실제 v1 Start 사이의 불일치가 관측됐다. 사용자는
 [설치 격리 및 명시적 거절](../contracts/workflow-execution/v2/legacy-isolation.md)을 승인했다.
 고정 원본의 FAIL은 보존하며, 승인된 격리 검증 전에는 첫 관문을 통과로 표시하지 않는다.
+
+기존 첫 관문의 구현 검증은 [M3a 첫 관문 기록](m3a_first_gate.md)에 모았다. 고정 UI FAIL과
+승인된 격리 결과를 분리했다. 다음은 최종 commit/CI/P→S merge와 merge 후 사용자 smoke다.

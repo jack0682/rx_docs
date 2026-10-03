@@ -1,6 +1,6 @@
 {
   "schema": "rx.execution-v2.legacy-freeze.v1",
-  "status": "FROZEN_NOT_YET_INJECTION_TESTED",
+  "status": "FROZEN_INJECTION_RECORDED_UI_FAIL_ISOLATION_APPROVED",
   "baseline": "existing installed Linux v0.4.0-rc.1 images, currently stopped; not rebuilt",
   "installation": {
     "schema": "rx.dev-installation.v1",
@@ -54,6 +54,6 @@
     "tree_sha256": "2563af9bc8145e27c0e7ef96d616a17f1f0067a8fcbff31aa35b02220b393070",
     "files": 568,
     "size_bytes": 7378746,
-    "inventory_algorithm": "SHA256 of compact sorted-key JSON map of all operator-relative paths to {sha256,size_bytes}; UTF-8"
+    "inventory_algorithm": "SHA256 of compact sorted-key JSON map of frozen-root-relative paths including the operator/ prefix to {sha256,size_bytes}; UTF-8"
   }
 }

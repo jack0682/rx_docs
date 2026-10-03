@@ -85,7 +85,7 @@
     "native_effect_count_after": 8
   },
   "new_ui_bundle_sha256": "6021e7afe219ec55adb5a1097a70fdadd9a6773d6b6fec8677e0850b90076e2f",
-  "new_ui_positive_control": "PENDING",
-  "frozen_other_consumers": "PENDING",
-  "gate": "NOT_PASSED"
+  "new_ui_positive_control": "PASS: completed valid-v1 Run; effects 8 -> 10",
+  "frozen_other_consumers": "see legacy-runtime-injection.json",
+  "gate": "APPROVED_ISOLATION_CHECKS_PASSED_PENDING_FINAL_SOURCE_CHECKS"
 }

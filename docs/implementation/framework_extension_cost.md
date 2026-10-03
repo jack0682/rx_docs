@@ -1,0 +1,366 @@
+# F0 — 외부 확장 비용 기준선
+
+2026-10-03. 사용자가 M3a smoke를 수락한 뒤 요청한 **측정만** 수행했다.
+제품 코드는 수정하지 않았다. **사용자가 F0를 수락했다.** 아래 1–6절은 측정 당시의 근거이며,
+수락 후 새 순서와 F1′ 검토용 계획은 7–8절에 기록한다. F1′ 계획은 아래의 체크포인트별 수락 조건으로 승인됐다. 현재 착수 범위는 체크포인트 1이며,
+계약 개정이 필요한 부분은 별도 승인 전까지 구현하지 않는다. M3b/M3c의 이관 기록은 유지한다.
+
+**관측 결론:** S3는 데이터만으로 추가·해석됐다. S2의 새 Task 이름·속성·규칙·Skill 매핑도
+기존 저작/해석/컴파일 경로가 받아들였다. S1의 독립 backend는 배포 Host의 닫힌 선택지에서
+막혔다. 다만 Python finite-skill로 감싸는 대안은 이미 있다. 이 대안을 새 NativeAdapter 등록의
+성공으로 바꾸어 기록하지 않는다. 세 확장의 전체 운전/UNKNOWN 복구는 입증하지 않았다.
+
+## 1. 기준과 측정 방법
+
+| 항목 | 고정 값 |
+|---|---|
+| Platform develop | `f8913d8a70a08afb682f619cb7d008f967713bdb` |
+| Solutions develop | `606e9add28c9ab44f92e11dad260bb96780f2df9` |
+| Docs develop | `df8efadbeff7f2d6484e210cde3f73ccc7356600` |
+| Scratch | 각 저장소 `feature/f0-extension-baseline`; merge하지 않음 |
+| 외부 패키지 원본 | 로컬 `rx_ws/.build/framework-f0/extensions`, 별도 Git scratch commit `e01a05a` |
+| 저작 환경 | 별도 새 LocalInstallation, loopback API 8093. 기존 M3a/M1/M2 저장소 미사용 |
+| 실행 코드 | 위 develop에서 빌드한 `rx-hostd`, `rx-process-compile`, `rx-device-package` 및 해당 source의 `rx` CLI |
+| 경계 검사 | 전후 모두 63 modules / 79 files / 18 seam pairs / 31 references |
+
+줄 수는 위 외부 패키지 **실제 UTF-8 파일의 물리 행 수(빈 행 포함)**다. JSON은 2칸 들여쓰기다.
+이는 시도에 작성한 양이지 완성된 생산용 확장 비용이 아니다. 생성된 환경/manifest/receipt/
+컴파일 산출물과 원래 workflow 복사본은 별도다. 미래 코어 구현의 추가·삭제 LOC는 작성하지
+않았으므로 **미측정**이다. 이를 0 또는 임의의 예상 숫자로 채우지 않는다.
+
+명령 수는 `commands.jsonl`에 기록한 시나리오 실행 호출 수다. 제품 명령, 작성 보조,
+컴포넌트 측정, 잘못된 호출의 재시도를 구분했다. 검색·편집·Git·문서 검사는 이 수에 포함하지
+않는다. 공통 초기화/빌드는 16회(성공 12, 시작 직후 연결 및 그 후속 입력 부재 실패 4)이며
+각 시나리오에 중복 합산하지 않았다. 사용자 본인의 소요 시간은 아직 측정하지 않았다.
+
+## 2. 시나리오별 비용 표
+
+| 시나리오 | 실제 제품/코어 변경 | 확인된 필요 변경 또는 차단 경계 | 외부 개발자 작성 파일·행 | 명령 수 | 실제 도달한 지점 / 막힌 지점 |
+|---|---|---|---|---|---|
+| **S1 공압 척 I/O backend** | **0파일 / +0 −0행** | 같은 배포 `rx-hostd`에 새 backend를 넣으려면 최소 **2파일·6개 닫힌 선택 지점**의 변경이 필요. 추가/삭제 LOC는 미측정. 아래 소스 표 참조 | 독립 backend 시도 3파일/26행 + Python skill 대안 3파일/37행 = **6파일/63행** | **12회** = 제품·작성 보조 7 + 측정 fixture 3 + 호출 실수 2 | 실제 `rx-hostd inspect`가 새 backend를 거절(rc=1). Python 대안은 unsigned DEVICE_REFERENCE 조립 및 Host 컴포넌트에서 clamp/unclamp 값 소비 성공. 독립 adapter 등록·센서 관측·custody 공급 경로가 아님 |
+| **S2 rotation-align Task/Skill** | **0파일 / +0 −0행** | **새 Task 유형 때문에 필요한 코어 변경은 관측되지 않음(0파일/0행)**. 게시 v2를 실제 Host에서 운전하는 공통 연결 미완료는 별도이며 필요한 LOC 미측정 | **6파일/570행** | **15회** = 제품·작성 보조 11 + 측정 fixture 2 + 호출 실수 2 | 새 Task를 넣은 9단계 workflow 저장·해석·컴파일, unsigned package 조립, Host 컴포넌트에서 95°/0.5° 소비 성공. signed 설치·자격·P→Executor→Host의 전체 실행은 미검증 |
+| **S3 세 번째 부품·fixture 유형** | **0파일 / +0 −0행** | 요청한 데이터 추가/해석 범위에서 **0파일/0행** | **1파일/152행**, 6개 정의 | **4회** = apply / resolve / 동일 요청 재적용 / report 재열기 | ObjectType/Model/Instance와 ResourceType/Model/Instance를 추가하고 기존 8단계 workflow에서 해석. 재적용 receipt 동일. 데이터 확장 회귀 PASS; 장비 실행/qualification PASS는 아님 |
+
+**숫자 해석:** S1의 2파일은 현재 Builtin 구성 방식을 유지할 때 확인한 최소 변경 접점이다.
+완성된 외부-process 프로토콜, restart/custody 연계, 패키지 검증에 필요한 전체 파일·LOC를
+측정했다는 뜻이 아니다. S2/S3의 0은 관측한 단계의 수치이며 전체 운영 경로 완성을 뜻하지 않는다.
+
+패키지 외에 공통 작성 보조 2파일/27행(`compile-inputs.py` 16, `prepare-library.py` 11)을
+썼다. 보고서→정확한 template/input/environment 참조를 조립하는 코드이며, 생성 산출물로
+숨기지 않고 공통 저작 비용으로 남긴다. Host 권한을 만드는 측정 fixture는 이 비용과 분리했다.
+
+| 외부 원본 파일 | 행 수 |
+|---|---:|
+| S1 `adapter.json` / `adapter.py` / `backend.json` | 13 / 7 / 6 |
+| S1 Python 대안 `recipe.json` / `skill.json` / `skill.py` | 13 / 8 / 16 |
+| S2 `definitions.json` / `task.json` / `compose.py` | 372 / 141 / 12 |
+| S2 `recipe.json` / `skill.json` / `skill.py` | 13 / 8 / 24 |
+| S3 `definitions.json` | 152 |
+
+S2는 기준 workflow 3,125행을 수정하지 않고 12행 composition 보조로 새 package를 생성했다.
+생성된 전체 workflow는 3,266행이며 570행 작성량에 다시 합산하지 않았다.
+명령 실행 wall-time 합은 S1 7.31초 / S2 7.88초 / S3 1.42초다. 파일 작성·탐색·사람의 판단
+시간을 제외하므로 설치 시간이나 사용자 작업 시간으로 해석하면 안 된다.
+
+## 3. 실제 시도와 경계
+
+### S1 — 닫힌 backend와 이미 있는 finite-skill 대안을 구분
+
+새 모의 backend의 명령은 `clamp`, `unclamp`, 관측은 `chuck.clamped`로 선언했다.
+`EXTERNAL_PROCESS`는 현재 지원된 규격이라고 가정한 이름이 아니라 외부 adapter 등록을
+시도한 명시적 입력이다. 기존 `FILE_SIMULATION`을 같은 제품 CLI로 읽는 양성 대조는 통과했다.
+현재 develop의 실제 `rx-hostd inspect` 결과:
+
+```text
+unknown variant `EXTERNAL_PROCESS`, expected one of
+FILE_SIMULATION, PYTHON_SKILL_SIMULATION, PYTHON_SKILL_PACKAGE,
+PYTHON_SKILL_LIBRARY_PACKAGE, JTC_PACKAGE, MELSEC_PACKAGE, VALIDATED_DRIVER
+```
+
+별도의 Python skill 대안으로 기존 report에서 나온 `clamp` 및 `unload` 입력을 소비했다.
+원래 8단계 workflow에는 독립 `unclamp` Task가 없고 `unload` primitive 내부에 unclamp가 있다.
+따라서 대안 시험에서 `unload` 입력을 unclamp I/O로 매핑했지만, 이것으로 로봇의 unload 전체나
+물품 지지/인계를 구현했다고 주장하지 않는다. 외부 장치 기록은 다음 두 건이다.
+
+```json
+{"node":"clamp","coil_clamp":true,"sensor_clamped":true}
+{"node":"unload","coil_clamp":false,"sensor_clamped":false}
+```
+
+Linux 환경을 실제 준비한 뒤 현재 `rx-device-package python-library-assemble`로 조립한
+후보는 `UNSIGNED_CANDIDATE`, `activation_authorized=false`였다. 독립 backend 선언은
+채택되지 않았고, 성공한 것은 기존 Python backend가 실행할 finite program 대안이다.
+Python adapter의 source observation은 support adapter에 위임되며 외부 skill의 I/O 관측을
+새 NativeAdapter 관측/인계 계약으로 등록하지 않는다.
+
+### S2 — 새 이름과 새 인자는 이미 데이터 경로를 통과
+
+Object 쪽 `nominal_angle=90 deg`, `angle_tolerance=0.8 deg`와 fixture 쪽
+`rotation_offset=5 deg`, `angle_tolerance=0.5 deg`를 패키지로 등록했다.
+새 Task `rotate-align`은 ADD/MIN rule을 통해 각각 **95 deg**, **0.5 deg**를 받는다.
+각 값의 저장 provenance에는 rule member와 해당 object/resource reference·revision이 남았다.
+새 Skill implementation은 `f0.rotation-align`, primitive는 `rotate-align`이다.
+
+기존 load와 clamp 사이에 새 Task를 넣어 9개 step을 저장했다. 서버 report는
+`RESOLVED_NOT_QUALIFIED`, 실제 compiler 산출물은 `COMPILED_NOT_QUALIFIED`였다.
+특수 Task enum이나 각도 전용 Rust 분기를 추가하지 않았다. 준비된 Python 프로그램이 실제
+subprocess에서 95/0.5를 읽어 independent file-device record를 썼고 Host receipt는
+`RESULT_CAPTURED`였다. 이것은 아래에 제한한 컴포넌트 시험이며 전체 workflow 실행은 아니다.
+Linux용 unsigned DEVICE_REFERENCE 후보 조립도 통과했다.
+
+### S3 — 데이터만으로 되는 회귀 확인
+
+`type.f0-third → part.f0-third → object.f0-001`과
+`type.f0-fixture → fixture.f0-model → fixture.f0-site`를 한 정의 package에 추가했다.
+기존 type 상속·규칙을 사용하되 부품 55×30 mm, fixture family `F0/70`을 선언했다.
+제품 CLI로 기존 workflow의 `part`와 `jig` context를 새 instance에 바인딩해 8단계 report를
+얻었다. 이는 실제 서버 저장·검증·해석이며 로컬 JSON 계산으로 대체하지 않았다.
+동일 apply 재시도는 같은 reference/revision/receipt를 반환했고 저장 report도 재열렸다.
+
+### 공통 미완료와 측정 fixture의 한계
+
+M3a 수락은 authoring/resolution smoke와 계약·P·Executor landing이었다. native Host의
+execution-v2 서비스 연결은 M3b와 함께 이관됐다. 현재 Host RPC router에는 v1 구성·자격·실행
+서비스가 등록돼 있고 execution-v2 SDK가 생겼다는 사실만으로 v2 Host 구현이 생기지 않는다.
+이 공통 미완료를 S1/S2가 각각 새로 요구한 코어 비용으로 중복 계산하지 않았다.
+
+Host 컴포넌트 측정은 제품의 `Host::prepare/authorize`, 기존 PythonSkill 및 실제 subprocess를
+사용했지만, 측정용 caller/permit과 ManualClock을 사용했다. P enrollment, signed package
+설치·software review·qualification, 실제 Executor의 9단계 운전, 무응답/UNKNOWN 정산은
+수행하지 않았다. 직접 `rx skill run` 또는 LOCAL_SIM 별도 runner를 전체 제품 실행으로
+대체하지도 않았다. 새 프로토콜·registry·핸들러 구현은 하지 않았다.
+
+Linux 환경 준비에는 보존된 amd64 이미지의 Python 인터프리터만 사용했고, 실행한 `rx`/
+preparation source는 현재 develop을 읽기 전용으로 mount했다. Host 값 소비 시험은 macOS
+네이티브 환경으로 별도 수행했다. Linux 후보가 실제 배포 Host에 설치·실행됐다는 주장이 아니다.
+
+호출 실수도 비용에서 숨기지 않았다. S1/S2 각 2회는 `rx skill` 하위 명령 누락과 컨테이너
+Python 경로 오기였다. 이를 framework 기능 차단으로 분류하지 않는다. 실제 S1 backend
+거절 2회(typed decoder와 제품 CLI)는 동일한 닫힌 등록 경계의 관측이다.
+
+## 4. 변경 접점 — 미래 LOC와 기존 소스 위치를 혼동하지 않기
+
+아래 링크는 측정 기준 commit에 고정돼 있다. 제품 소스 diff는 끝까지 0이다.
+
+| 범위 | 확인한 기존 파일·위치 | 무엇을 바꿔야 하거나 재사용해야 하는가 |
+|---|---|---|
+| S1 같은 배포 Host에서 새 backend 선택 | [config.rs L50–83](https://github.com/jack0682/rx-solutions/blob/606e9add28c9ab44f92e11dad260bb96780f2df9/runtime/rx-host/src/service/config.rs#L50) | 닫힌 Backend 선언 34행. 이 구간에 추가 가능한 package 식별 경계가 현재 없음. **34행을 수정해야 한다는 뜻은 아님** |
+| S1 현재 factory의 새 adapter 연결 | [factory.rs](https://github.com/jack0682/rx-solutions/blob/606e9add28c9ab44f92e11dad260bb96780f2df9/runtime/rx-host/src/service/factory.rs#L10) | BuiltinAdapter L10, delegate L17, validate L74, initialize_metadata L109, open_passive L159: 5개 선택 지점 |
+| S1 가능한 다른 배포 선택 | [AdapterFactory L31](https://github.com/jack0682/rx-solutions/blob/606e9add28c9ab44f92e11dad260bb96780f2df9/runtime/rx-host/src/service/mod.rs#L31), [rx-hostd L112/124](https://github.com/jack0682/rx-solutions/blob/606e9add28c9ab44f92e11dad260bb96780f2df9/runtime/rx-host/src/bin/rx-hostd.rs#L112) | 공개 trait/initialize_with/run_with는 이미 있음. 외부 Rust factory를 묶은 별도 Host release는 가능한 대안이지만 현재 binary에 package를 추가하는 경로가 아니며 이번에 구현·검증하지 않음. 모든 가능한 설계가 코어 수정을 강제한다고 단정하지 않음 |
+| 패키지 교체 신원·인계 검토 | [NativeInstallation L86](https://github.com/jack0682/rx-solutions/blob/606e9add28c9ab44f92e11dad260bb96780f2df9/runtime/rx-host/src/service/mod.rs#L86), [binding_change.rs L25](https://github.com/jack0682/rx-solutions/blob/606e9add28c9ab44f92e11dad260bb96780f2df9/runtime/rx-host/src/service/binding_change.rs#L25) | 향후 generic registry가 실제로 닿을 때 검토할 기존 의미 경계. 지금 필수 patch 파일/LOC로 확정하지 않음 |
+| S2 타입/규칙/컴파일 | [workflow model](https://github.com/jack0682/rx-platform/blob/f8913d8a70a08afb682f619cb7d008f967713bdb/crates/rx-domain/src/workflow/model.rs), [workflow compiler L116](https://github.com/jack0682/rx-solutions/blob/606e9add28c9ab44f92e11dad260bb96780f2df9/runtime/rx-process/src/workflow.rs#L116) | 이번 Task/각도/허용오차에 수정 불필요. 기존 typed resolver와 정확한 implementation/version/primitive mapping을 재사용 |
+| 공통 v2 실제 실행 연결 | [Host RPC router L99](https://github.com/jack0682/rx-solutions/blob/606e9add28c9ab44f92e11dad260bb96780f2df9/runtime/rx-host/src/rpc/mod.rs#L99), [python_skill.rs L80](https://github.com/jack0682/rx-solutions/blob/606e9add28c9ab44f92e11dad260bb96780f2df9/runtime/rx-host/src/python_skill.rs#L80) | 선택된 원 operation의 parameter bytes를 기존 Host gate/runner로 연결해야 함. 현재 Python 등록은 고정 input/Intent digest와 일치해야 함. 새 Task마다 별도 실행 경로를 추가할 근거가 아님 |
+| S3 타입·instance 상속 | [definition.rs L184](https://github.com/jack0682/rx-platform/blob/f8913d8a70a08afb682f619cb7d008f967713bdb/crates/rx-domain/src/definition.rs#L184) | 데이터 추가로 통과; 수정 불필요 |
+
+## 5. F0 측정 당시의 범용 메커니즘 후보
+
+1. **배포 Host의 adapter package 등록·선택 경계.** 이미 있는 NativeAdapter/AdapterFactory를
+   버리고 새 Host를 만드는 대신, package의 외부 구현을 기존 관문에 연결할 registry와
+   프로세스 프로토콜의 범위를 정해야 한다. package 신원·원 호출·관측·중단/인계·UNKNOWN은
+   Host가 계속 소유한다. 이는 K-a/K-b/K-c/K-d에 닿는 공통 기능이며 공압 전용 core 분기는 아니다.
+2. **기존 v2 선택값을 기존 Host 실행으로 전달하는 공통 연결.** Task별 새 실행 경로보다
+   기존 typed resolver/compiler, 승인된 selection/parameter identity와 Host gate를 연결하는
+   것이 관측된 공통 장애물이다. 새 Task 이름/각도 자료형 때문에 별도 Task DSL/enum을 추가할
+   근거는 이번 측정에서 나오지 않았다. F2 범위는 이 사실을 보고 다시 정해야 한다.
+3. **선언·환경·template·고정 input을 조립하는 저작 도구.** 공통 27행 glue와 여러 CLI를
+   확장 작성자가 반복해야 했다. 기존 package 조립/검증 API 위의 scaffold/pack/conformance
+   흐름이 후보이며 새 권한·원장을 만드는 이유가 아니다. S3는 지금의 데이터 경로를 유지한다.
+
+이 목록은 검토용 제안이다. F1/F2/F3 구현, source 이동, 새 gate/반례, SDK 배포 방식 변경을
+시작하지 않았다. seam 수와 실행 경로 수를 줄였다고도 주장하지 않는다.
+
+## 6. 직접 읽을 제품 명령과 증거 위치
+
+```sh
+source /Users/ojaehong/RX_automation/rx_ws/.build/framework-f0/cli.sh
+f0flow --format text report "$F0_HOME/s2-report.receipt.json"
+f0flow --format text report "$F0_HOME/s3-report.receipt.json"
+```
+
+S1 등록 차단을 같은 제품 CLI로 재확인하는 명령(rc=1 예상):
+
+```sh
+/Users/ojaehong/RX_automation/rx_ws/.build/linux-install-bundle-target/debug/rx-hostd inspect /Users/ojaehong/RX_automation/rx_ws/.build/framework-f0/host-s1.json
+```
+
+작업 root는 `rx_ws/.build/framework-f0`다. `baseline.json`에 기준 SHA,
+`commands.jsonl`에 정확한 argv·rc·시간, `cost.json`에 파일별 행 수·SHA와 source diff가 있다.
+`evidence/s1`, `evidence/s2`, `evidence/s3`의 stdout/stderr를 보존했다.
+`device-s1/effects.jsonl`, `device-s2/alignment.json`은 별도 file-device 기록이다.
+`extensions`는 원본이고 `s1-candidate`, `s2-candidate`, `*-environment`, `*-compiled`는
+생성 산출물이다. 측정 harness는 별도 `probe`와 helper 파일에 있으며 실제 배포 비용으로
+숨겨 넣거나 제품 실행 증거로 승격하지 않았다.
+
+**F0 측정 종료 당시:** 제품 수정 0, scratch merge 0, 신규 parking 0. 이후 사용자 수락과
+재계획은 아래에 기록한다.
+
+
+## 7. F0 수락 후 재계획 — 2026-10-03 사용자 결정
+
+**원래 F2(Task 유형 패키지화)를 삭제한다.** S2는 새 Task·각도/허용오차·resolution rule·Skill
+매핑을 코어 0줄로 선언·해석·컴파일할 수 있음을 보였다. 따라서 별도 Task 유형 체계나 DSL을
+새로 만드는 단계를 두지 않는다. 다만 F0 컴포넌트 시험을 전체 운전 성공으로 승격하지 않는다.
+현재 우선 장애물은 v2에서 선택한 실제 값이 기존 Host 실행·복구 경로 끝까지 도달하지 않는 점이다.
+
+| 새 순서 | 목표 | 종료 기준 |
+|---|---|---|
+| **F1′ 끝까지 실행** | 기존 v2 선택값을 기존 Host gate/runner에 연결한다. 새 실행 경로는 만들지 않는다 | 사용자가 S2 9단계의 게시된 workflow를 N개 운전하고, 무응답→UNKNOWN→원 operation 정산→다음 Part 완료와 연결된 Run 기록을 제품 CLI로 확인 |
+| **F2′ adapter registry** | S1을 외부 adapter package로 등록하고 같은 운전·복구 경로에서 사용 | S1 확장 개발자의 코어 변경 0줄. 범용 registry 자체의 코어 개발량과 확장량을 분리 기록 |
+| **F3′ 저작 도구** | 선언·환경·template·package 작성 반복을 줄인다 | 같은 S2를 다시 작성해 F0의 파일/행/명령 수와 비교하고, 외부 개발자 1명이 S1을 직접 수행. 생성 파일·공통 준비·사람의 시간은 같은 기준으로 분리 |
+
+프라임(′)은 변경된 milestone 순서를 구분한다. execution **v2 계약 버전**과 **v1.1 계약 개정
+절차**를 바꾸는 표기가 아니다. F0 scratch 브랜치는 merge하지 않는다. 구현 승인 후에는 현재
+명세·기준 develop을 확인하여 구현용 feature 브랜치를 사용하고 Docs → P → S 절차를 따른다.
+
+## 8. F1′ 승인 계획 — 체크포인트별 직접 수락
+
+### 목표와 실행 경로
+
+S2의 `pick → load → rotate-align → clamp → close-door → process → open-door → unload → place`
+9단계를 하나의 게시 버전으로 N개 실제 ObjectInstance/예약 slot에 실행한다. 최초 사용자 수락
+표본은 **N=3**을 제안한다: Part 1 정상 완료, Part 2의 `rotate-align`에서 무응답, 원 operation
+정산과 남은 단계 완료, Part 3 정상 완료. N을 고정한 별도 실행기를 만들지는 않는다.
+
+경로는 **기존 P의 선택·admission·outbox → 명시적 Host-v2 ingress → 기존 Host prepare/
+authorize·journal → 기존 Python/native runner → 기존 receipt/evidence·정산·handover**다.
+이미 계약에 있는 v2 RPC는 ingress에서 기존 경로로 연결한다. 별도 workflow loop, 새 권한
+원장, Task 전용 executor, CLI가 Part를 순회하며 장치를 직접 호출하는 경로는 만들지 않는다.
+
+### 연결할 최소 범위
+
+- **설치/자격:** 기존 signed package, v2 configuration acceptance와 qualification acknowledgement를
+  실제 Host에 연결한다. SDK에 DTO가 있다는 것과 Host가 이를 집행하는 것을 구분한다.
+- **선택값 소비:** Host는 승인된 template/환경과 Run·Part·node·operation binding 및 실제
+  parameter bytes/schema/size/digest를 확인한다. 준비 receipt와 같은 원 operation에 영속화하고,
+  Authorize에서는 같은 binding과 기존 permit/grant/epoch/expiry 조건을 재검사한다. 전역 mutable
+  input 교체나 승인된 모든 slot의 고정 input을 미리 나열하는 방식으로 우회하지 않는다.
+- **기존 runner 재사용:** 검증된 concrete input을 기존 실행 호출에 전달한다. 레이저/rotation
+  이름에 따른 코어 분기는 금지한다. v2 입력 envelope를 읽는 역할과 모의 장치 의미는 서명된
+  시나리오 package에 둔다. canonical input을 몰래 v1로 바꾸거나 digest를 다시 승인하지 않는다.
+- **S2 package 구성:** 기존 tending 기능과 rotation skill을 기존 Python 환경/package 방식으로
+  구성한다. 한 native 호출이 한 승인된 primitive만 수행하며, package 내부에 9단계 순회기를
+  만들지 않는다. F0의 unsigned 후보와 test permit은 실제 설치·운전 자격으로 사용하지 않는다.
+- **사용자 표면:** 기존 `rx` CLI에서 설치/게시 버전 적용, 객체 바인딩, N개 시작, 상태/UNKNOWN
+  조회, 원 요청 정산 및 Run 기록 읽기를 이어 준다. 정확한 명령은 각 연결을 실제 실행한 뒤
+  제공한다. 아래 계획의 동작 이름을 지금 존재하는 CLI 명령으로 주장하지 않는다.
+
+주 변경 대상은 S의 Host RPC 연결·기존 gate/journal의 binding 보존·PythonSkill 입력 경계다.
+P/Executor는 이미 있는 선택·전송·frontier·정산 경로를 재사용하고 실제 연결을 막는 부분만
+수정한다. registry, 새 Task 체계, 저작 도구 재설계, 새 UI 운전 화면, RC installer 작업은
+이번 단계에 넣지 않는다. 기존 승인된 호환성·권한·복구 검증을 유지하며 새 관문을 추가하지 않는다.
+
+### 세 구현 단위와 실행 가능한 체크포인트
+
+| 순서 | 구현 단위 | 종료 시 사용자에게 보일 제품 결과 |
+|---|---|---|
+| **1. 실제 Host로 1 Part** | 기존 v2 구성·자격·실행 요청을 Host에 연결하고 S2 package의 9단계 입력을 전달 | 제품 CLI로 게시 버전/실제 객체를 선택해 N=1 실행. 9개의 실제 native 호출·완료/인계 기록과 95°/0.5° 등 선택값의 소비를 확인. 합성 Host receipt나 cargo test를 실행 가능 결과로 대체하지 않음 |
+| **2. 같은 Run에서 N Part** | 기존 객체/slot 예약, 순서, budget, Part 완료와 다음 객체 대기를 연결 | 제품 CLI로 N=3 정상 운전. Part마다 object/slot/parameter 참조와 단계 순서가 고정되고, 다음 Part가 현재 권한/참조 검사 뒤에만 시작됨을 확인 |
+| **3. 무응답·UNKNOWN·정산** | 아래 하나의 fault를 실제 연결에 주입하고 기존 복구·기록 경로를 끝까지 연결 | Part 2에서 UNKNOWN/보유를 확인하고 원 operation을 정산. 같은 Part의 잔여 단계와 Part 3 완료를 확인. Run 기록에서 사용한 게시/정의/규칙/report/parameter 버전과 원 operation/invocation·정산 근거를 다시 열기 |
+
+각 체크포인트는 정확한 head의 CI·DCO 통과 후 **develop에 P → S 순서로 병합한 뒤** 넘긴다.
+관련 Docs 변경은 먼저 반영한다. 장기 draft PR을 만들지 않는다. 종료 시 **반드시 멈추고**
+사용자가 직접 실행할 제품 CLI 명령과 receipt를 제공한다. **사용자가 해당 체크포인트를
+수락하기 전에는 다음 체크포인트를 시작하지 않는다.** 모든 실행 receipt에 실제 대상인
+**S2 9단계 workflow 및 SIMULATION 장치**를 명시한다.
+단위 하나가 약 하루 내 실행 가능한 체크포인트로 내려오지 않으면, 막힌 연결 한 곳과 현재
+실행 가능한 범위를 먼저 보고한다. 다른 범용 메커니즘을 추가하며 체크포인트를 미루지 않는다.
+F1′ 전체는 세 체크포인트의 사용자 직접 수락으로 닫는다. 체크포인트 3 수락 전에는 F2′에
+착수하지 않는다. 체크포인트 3의 UNKNOWN·자원/slot 보유·정산 결과는 **제품 CLI 상태 조회와
+저장 기록**에 보여야 한다. 테스트 로그는 사용자 수락 증거가 아니다.
+
+### fault와 정산의 정확한 의미
+
+선택한 Part 2 operation의 Host native 호출이 시작된 뒤 **P가 결과를 받지 못하도록 통신을
+차단**한다. Host와 Python worker는 유지하여 실제 완료와 원 receipt를 남길 수 있게 한다.
+별도 evidence publisher가 먼저 결과를 전달하여 시험이 무응답을 건너뛰지 않도록, 같은
+operation의 결과 전달도 관측 창 동안 보류한다. 이것은 SIMULATION 시험의 전송 제어이며,
+결과·receipt·P 상태를 조작해 UNKNOWN을 만든다는 뜻이 아니다.
+
+P/CLI에서 UNKNOWN과 operation 자원·slot 보유, 다음 Part 미시작을 먼저 관측한다.
+통신 복구 후 **동일 operation/invocation을 조회·정산**한다. 이 수락 시나리오는 원 호출이
+완료된 근거를 회수하는 경우다. native 호출을 다시 발행하지 않고, 완료 및 인계 증거가
+모인 뒤 같은 Part의 남은 단계와 다음 Part를 진행한다. 모의 장치 효과 기록으로 중복 호출이
+없음을 확인한다. 이 경로에서 호스트 재부팅/콜드 복구나 자동 재시도 지원을 주장하지 않는다.
+
+완료 근거가 없거나 상충하면 UNKNOWN/보유를 유지한다. 운영자의 확인 버튼·idle 상태·timeout만으로
+완료나 미실행을 만들지 않는다. 정산을 임의의 같은-slot 재시도 또는 다음-slot 이동 허가로
+간주하지 않으며, 기존 [operation 계약](../contracts/workflow-execution/v2/operation-admission.md)과
+[retry 계약](../contracts/workflow-execution/v2/retry-admission.md)의 증거/권한 경계를 유지한다.
+
+### 수락과 중단 기준
+
+체크포인트 1은 N=1의 9단계, 체크포인트 2는 같은 Run의 N Part, 체크포인트 3은 위 N=3
+fault/정산 시나리오를 사용자가 각각 제품 CLI로 실행하고 수락한다. 저장된 Run 기록에서
+동일한 버전·값·원 operation·정산 연결을 확인한다. 자동 시험/CI는 각 수락 전의 검증이다.
+구현한 공통 기능과 시나리오 package 변경량은 따로 기록하고 seam 기준 18쌍/31참조는 늘리지 않는다.
+
+첫 구현 단위에 앞서 기존 v2 계약이 package 환경·입력 envelope·복구 연결을 표현하는지
+대조한다. 계약 변경, 별도 실행 경로 또는 domain-specific core 분기가 필요하면 구체적인
+불일치와 한 가지 권고를 먼저 제시하고 중단한다. F0의 custom Host factory 재빌드 대안을
+승인 없이 다른 배포 방식으로 채택하지 않는다. 신규 아이디어는 실제 F1′ 차단 근거가 없으면
+parking으로 보낸다.
+
+추가 요청된 **dense/my-tray의 슬롯 z와 surface_height 불일치**는 [parking](parking.md)에
+기록했다. F1′ 수락은 기존 M2 supply-site의 명시적 pose를 사용하며 해당 두 데이터를 조용히
+고치거나, 그 높이 정합성 제약이 적용됐다고 주장하지 않는다.
+
+**승인 상태:** F0 수락 및 F1′ 계획 승인. 체크포인트별 직접 CLI 수락·develop 병합·중단 조건을
+반영했다. 현재는 체크포인트 1의 계약 대조 중이며, 아래 개정 판단 전 제품 코드는 변경하지 않았다.
+F0 scratch merge 0. 높이 정합성 parking 1건은 유지하며 이번 승인 반영에서 신규 추가는 0건이다.
+
+
+## 9. 체크포인트 1 계약 대조 — Python 실행 profile의 명시적 opt-in 필요
+
+상태: **권고안 검토 대기. 규범/제품 구현 미변경.** 사용자 조건에 따라 계약 개정이 필요한
+지점에서 멈췄다. 이 절은 정식 계약 개정이나 실행 권한 부여가 아니다.
+
+### 확인한 간극
+
+- 공통 `rx.execution-template-catalog.v2`는 template ActionBinding과 NodeContract, 서명된
+  family/profile/adapter 문서 참조를 선언한다. 하지만 Python 환경과 이 template들을 연결하는
+  native Python profile 형식·기존 고정 입력 profile과의 구분은 아직 정의되지 않았다.
+- 현재 [Python package documents](https://github.com/jack0682/rx-solutions/blob/606e9add28c9ab44f92e11dad260bb96780f2df9/runtime/rx-host/src/service/python_package.rs#L43)는
+  `rx.python-skill-registration.v1`과 실제 고정 `input`의 digest/size가 ProgramGoal.parameter_set과
+  같아야 한다. [Library binding 검사](https://github.com/jack0682/rx-solutions/blob/606e9add28c9ab44f92e11dad260bb96780f2df9/runtime/rx-host/src/service/python_library.rs#L119)는
+  configured Intent 집합과 등록된 프로그램 집합을 비교한다.
+- 기존 [PythonSkill guard](https://github.com/jack0682/rx-solutions/blob/606e9add28c9ab44f92e11dad260bb96780f2df9/runtime/rx-host/src/python_skill.rs#L319)는
+  전체 Intent digest로 고정 프로그램을 찾는다. 동일 환경이라도 v2가 선택한 parameter digest가
+  달라지면 등록된 고정 Intent와 달라진다. 이는 v1의 정상적인 제한이다.
+
+따라서 v1 package를 그대로 둔 채 입력만 바꾸거나, 값 하나를 미리 고정한 N=1 성공으로
+일반 선택값 전달을 대체하지 않는다. 이미 정의된 v2 ingress만 구현하는 것과, Python package가
+승인하는 입력 범위를 새로 표현하는 것은 별개다.
+
+### 권고안 하나: 명시적인 Python execution profile v2 추가
+
+기존 execution-v2 계약의 **Python package profile 명세를 추가**한다. 새 wire RPC나 권한 모델을
+만들지 않고, 이미 승인된 template/operation-binding 의미를 기존 Python 실행 경계에 연결한다.
+
+| 명세에 고정할 내용 | 제안 범위 |
+|---|---|
+| 명시적 버전 선택 | 별도 `rx.python-execution-profile.v2`와 그 adapter/assembly 식별자로 opt-in. 기존 registration/library v1의 고정 입력·digest 의미와 reader 거절을 유지 |
+| 불변 프로그램 선언 | SIMULATION, installation/Host/cell, 준비된 환경과 program artifact의 정확한 pin, signed template catalog 및 각 NodeContract를 결합. 경로·실행 파일은 runtime input이 선택하지 않음 |
+| operation별 실제 입력 | 기존 HostExecutionService Prepare의 binding 및 canonical parameter bytes를 확인한 뒤, 기존 operation 준비 기록에 같은 원 신원으로 보존. Authorize는 같은 binding과 기존 permit/grant/epoch/expiry를 요구 |
+| 실행·조회·복구 | 기존 Host prepare/authorize/journal, Python runner와 원 operation/invocation의 receipt/query/reconcile 경로를 재사용. 다른 원장·Task 실행기·전역 mutable input 또는 자동 재호출 없음 |
+| 기존 범위 유지 | 이미 승인된 v2의 노드·입력 크기·SIM 제한 사용. 고정 library의 16개 input 제한을 늘리거나 모든 Part 입력을 나열해 우회하지 않음. registry는 F2′에 남음 |
+| 수락 표시 | 제품 CLI receipt/조회에서 S2 9단계 게시 버전 및 SIMULATION을 권위 있는 구성/기록과 연결하여 표시. 테스트용 qualification/permit을 제품 권한으로 사용하지 않음 |
+
+개정 승인 후 v1.1 절차로 profile 명세·호환성·영향과 해시를 먼저 고정하고, Docs → P(필요한
+공통 경계만) → S 순서로 체크포인트 1을 구현한다. 기존 승인된 회귀와 호환성 검사를 적용하며
+새 milestone/gate를 만들지 않는다. 체크포인트 2/3 구현에는 착수하지 않는다.
+
+
+## 10. Profile 개정 승인 — 체크포인트 1 착수
+
+사용자가 `rx.python-execution-profile.v2` 개정을 승인했다. Host는 Prepare bytes가 자기
+qualification acknowledgement에 연결된 승인 집합에 속하는지 직접 대조한다. 입력 envelope·
+binding·집합 대조는 공통 execution-v2 계약에 두며 Python profile에는 환경/program pin만 둔다.
+F2′ adapter가 같은 의미를 재개정 없이 사용해야 한다. 추가 범위는 없다.
+
+[공통 Host 입력 대조](../contracts/workflow-execution/v2/host-input-membership.md)와
+[Python 고유 profile](../contracts/workflow-execution/v2/python-execution-profile.md)을 분리하고
+v1.1 절차의 revision `2026-10-03.2` 및 파일 해시를 고정한다. F0 scratch는 merge하지 않고,
+승인된 측정/계획 문서만 현재 develop 기반 구현 문서 브랜치로 복사해 이어 쓴다.
+현재 구현 범위는 **체크포인트 1(N=1, S2 9단계, SIMULATION)**뿐이다. 정확한 head CI·DCO 후
+P → S develop 병합, 제품 CLI 명령/receipt 제공, 중단 및 사용자 수락 대기 순서를 유지한다.
+체크포인트 2/3은 아직 착수하지 않는다.

@@ -1,0 +1,119 @@
+{
+  "required": 20,
+  "passed": 20,
+  "failed": 0,
+  "runs": [
+    {
+      "run": 1,
+      "exit_code": 0,
+      "seconds": 6.622199499979615
+    },
+    {
+      "run": 2,
+      "exit_code": 0,
+      "seconds": 6.048370833043009
+    },
+    {
+      "run": 3,
+      "exit_code": 0,
+      "seconds": 5.995572709012777
+    },
+    {
+      "run": 4,
+      "exit_code": 0,
+      "seconds": 6.031751458067447
+    },
+    {
+      "run": 5,
+      "exit_code": 0,
+      "seconds": 6.091751416912302
+    },
+    {
+      "run": 6,
+      "exit_code": 0,
+      "seconds": 6.082892999984324
+    },
+    {
+      "run": 7,
+      "exit_code": 0,
+      "seconds": 6.1127860840642825
+    },
+    {
+      "run": 8,
+      "exit_code": 0,
+      "seconds": 6.023593874997459
+    },
+    {
+      "run": 9,
+      "exit_code": 0,
+      "seconds": 6.055120792007074
+    },
+    {
+      "run": 10,
+      "exit_code": 0,
+      "seconds": 6.051964750047773
+    },
+    {
+      "run": 11,
+      "exit_code": 0,
+      "seconds": 6.055838417029008
+    },
+    {
+      "run": 12,
+      "exit_code": 0,
+      "seconds": 6.04615704191383
+    },
+    {
+      "run": 13,
+      "exit_code": 0,
+      "seconds": 6.024813500000164
+    },
+    {
+      "run": 14,
+      "exit_code": 0,
+      "seconds": 6.03946008393541
+    },
+    {
+      "run": 15,
+      "exit_code": 0,
+      "seconds": 6.08116558403708
+    },
+    {
+      "run": 16,
+      "exit_code": 0,
+      "seconds": 6.069777291966602
+    },
+    {
+      "run": 17,
+      "exit_code": 0,
+      "seconds": 6.08469404198695
+    },
+    {
+      "run": 18,
+      "exit_code": 0,
+      "seconds": 6.042641333071515
+    },
+    {
+      "run": 19,
+      "exit_code": 0,
+      "seconds": 6.084181584068574
+    },
+    {
+      "run": 20,
+      "exit_code": 0,
+      "seconds": 6.018584915902466
+    }
+  ],
+  "p_binary_sha256": "d0482add8a9af71bd61e713f5a26e450546c8cebe75f646a442974538e279560",
+  "s_binary_sha256": "63d9aabadf07b0181e143a62dbfd34842c1dc94007a3b3b5b5622bb39d40eb65",
+  "schema": "rx.m3a.handover-repeat.v1",
+  "scenario": "registered P and S, two Parts, synthetic Host evidence, explicit next-object binding",
+  "snapshot_bound_ms": 100,
+  "profile": "unoptimized; P debug symbols disabled to retain disk headroom",
+  "scope": "20 consecutive completions, not frozen-v1 injection or M3 product acceptance",
+  "earlier_failed_series": {
+    "passed": 3,
+    "failed": 1,
+    "finding": "handover completed, then CompletePart read expiry became visible as STATE_UNAVAILABLE/PAUSE_OBSERVED"
+  }
+}

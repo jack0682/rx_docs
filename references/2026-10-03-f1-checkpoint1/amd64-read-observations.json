@@ -1,0 +1,27 @@
+{
+  "runtime_arch": "linux/amd64",
+  "host_arch": "linux/arm64",
+  "emulated": true,
+  "source": "amd64-read-observations.json",
+  "scope": "Read-only existing Executor session GetSnapshot observer; EXECUTING Run, no operation emission by observer",
+  "samples": [
+    {
+      "kind": "snapshot",
+      "elapsed_ms": 111.306791,
+      "age_at_receive_ms": 63.763292,
+      "remaining_ms": 36.236708,
+      "admission": true,
+      "reason": null,
+      "payload_bytes": 15575
+    },
+    {
+      "kind": "snapshot",
+      "elapsed_ms": 114.14875,
+      "age_at_receive_ms": 55.88875,
+      "remaining_ms": 44.11125,
+      "admission": true,
+      "reason": null,
+      "payload_bytes": 15575
+    }
+  ]
+}

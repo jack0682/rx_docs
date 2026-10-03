@@ -364,3 +364,46 @@ v1.1 절차의 revision `2026-10-03.2` 및 파일 해시를 고정한다. F0 scr
 현재 구현 범위는 **체크포인트 1(N=1, S2 9단계, SIMULATION)**뿐이다. 정확한 head CI·DCO 후
 P → S develop 병합, 제품 CLI 명령/receipt 제공, 중단 및 사용자 수락 대기 순서를 유지한다.
 체크포인트 2/3은 아직 착수하지 않는다.
+
+## 11. CP1 중간 연결 검증과 정상 5초 호출의 경계
+
+사용자 요청에 따라 CP1 완료 전 중간 커밋을 남겼다. P `3d60fd2`, S `5efde01`은
+서명·DCO 커밋이며 아직 병합하지 않았다. Host 자체 승인 집합/parameter bytes 대조,
+기존 v2 cell coordination 선택, 원 Run에 연결된 보고서 읽기를 포함한다.
+
+실제 Linux arm64 P/Executor/Host와 서명 S2 패키지의 제품 CLI에서 pick, load,
+rotate-align, clamp, close-door의 5개 operation이 SUCCEEDED/RELEASED로 정산됐다.
+95°/0.5°를 받는 rotation을 포함해 장치 호출에 도달했다. 5초 process 호출에서는
+Host가 native submit의 반환까지 gate를 점유했고, 현재 Host RPC의 고정 3초 timeout과
+ready source의 2초 freshness를 초과하여 P가 UNKNOWN/QUARANTINED,
+Run을 RECOVERY_REQUIRED로 유지했다. 실제 장치 기록은 process까지 6건이다.
+완료/해제를 강제하거나 원 호출을 재발행하지 않았으며, CP1 완료나 CP3 수락으로 세지 않는다.
+
+실행 snapshot의 100ms 경계는 변경하지 않는다. [중간 CP1 receipt](../../references/2026-10-03-f1-checkpoint1/receipt.json)는 NOT_READY를 명시한다. amd64 에뮬레이션의 GetSnapshot 왕복
+111.306791/114.148750ms는 arch와 실제 관측 상태를 구분해 CP1 receipt에 기록한다.
+arm64 native에서는 RECOVERY_REQUIRED 상태의 같은 읽기 RPC가 5.581584/4.788416ms였다.
+두 측정은 Run 상태/부하가 달라 동등 부하 비교가 아니다. 이 수치는 정상 5초 호출의
+RPC timeout과 별도 관측이며, 그 원인을 단독으로 입증하지 않는다.
+
+현재 [Host gate 계약](../contracts/v1.0/02_identity_durability_recovery.md)은 gate 안의
+검사와 native 진입 사이에 fence/취소가 끼어드는 것을 금지하며, 진입한 호출이 반환하지
+않으면 자원을 새 소유자에게 넘기지 못하게 한다. 승인된
+[입력 경계](../contracts/workflow-execution/v2/host-input-membership.md)는 기존 freshness·epoch·
+자격·admission 상한을 늘리지 못하게 한다.
+
+**검토할 권고안 하나:** 공통 execution-v2에 기존 runner의 native 진입 확인과 완료 회수를
+분리하는 경계를 명시한다. 최종 검증·SEND_ENTERED·native 진입 확인까지 같은 gate를
+유지하고, 이후 동일 operation/invocation의 완료를 기존 Host journal/evidence 경로로
+회수한다. 진행 중에는 자원을 보유하고 새 명령/재실행/인계 권한을 만들지 않는다.
+진입 또는 완료의 근거를 잃으면 UNKNOWN을 유지한다. 100ms, 기존 freshness 및 timeout
+상한을 늘리지 않고 Python profile의 환경/program pin과 자체 승인 집합 대조도 유지한다.
+새 실행기나 독립 원장을 추가하지 않는다. 이 반환·완료 경계의 명세/호환성/해시는 사용자
+검토 후 v1.1 절차로 고정해야 하며, 이 단락은 규범 개정이나 구현 착수 승인 자체가 아니다.
+
+## 12. Native 완료 경계 개정 승인
+
+사용자는 2026-10-03에 진입·완료 분리 개정을 승인했다. 공통 의미는 execution-v2에,
+진입 확인 근거는 profile별로 두며 Python 근거는 Python profile에 고정한다. 외부 adapter는
+공통 계약 개정 없이 자기 근거를 정의해 재사용한다. 명세·호환성·해시 revision
+2026-10-03.3을 먼저 고정한다. 구현 범위는 5초 process를 포함한 CP1 9단계 정상 완료,
+CI·DCO 후 P→S develop 병합과 제품 CLI 인계까지다. CP2/3은 시작하지 않는다.

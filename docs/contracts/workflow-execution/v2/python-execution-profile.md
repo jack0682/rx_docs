@@ -52,3 +52,31 @@ They cannot implicitly opt into this profile. Unsupported profile/adapter identi
 closed refusal; there is no fallback that strips v2 fields into a v1 invocation. The existing
 package ABI and execution-v2 wire services are retained; binding identities track the
 common semantic revision before coordinated deployment.
+
+## Python-specific native entry evidence
+
+Revision 2026-10-03.3 uses the common native-completion.md meaning. Python defines entry
+as the pinned runner's acceptance of this finite invocation after verifying the pinned
+environment, interpreter and skill source, checking the dispatch deadline, and durably
+recording the original request before any skill import or main call.
+
+The existing runner's explicit execution-v2 entry mode sends a bounded
+rx.python-native-entry.v2 acknowledgement on the private, freshly owned process channel.
+It identifies operation, invocation, Intent digest, environment digest and device session,
+and hashes the exact request bytes received on that channel. Host must compare all fields
+with its dispatched request while retaining the gate. The runner syncs the request and
+entry record before sending this acknowledgement; then it continues that same invocation.
+This is Python submission acceptance, not a claim of physical device entry or completion.
+
+Only the acknowledgement from the currently owned, release-pinned runner is entry evidence.
+Spawn success, PID existence, a directory/marker, or a stored acknowledgement by itself is
+insufficient. Reopening these files never restores live process custody. An existing
+request is looked up without re-importing or re-executing the skill.
+
+The Host retains the owned process group and original request until its bounded reply,
+process exit and group reaping are established. Completion waiting must not hold the Host
+command gate or prevent ordinary source observations. Passive collection writes the same
+correlated native capture and Host evidence as the existing Python runner. Failure or
+residual process-group custody retains UNKNOWN/held resources; it does not permit replay.
+The existing synchronous execute/lookup behavior remains for Python v1. All interpreter,
+runner and verifier files remain pinned by the release; no request selects another program.

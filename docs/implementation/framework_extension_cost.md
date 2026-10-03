@@ -451,3 +451,21 @@ SUCCEEDED/RELEASED, SIM 효과 9건, process 실측 5.004813초로 완료됐다.
 P/Host/Executor는 Docker daemon에 분리되어 실행 중이다. 사용자용 별도 object instance는
 미사용으로 남겨 두었다. **사용자 CP1 수락은 아직 받지 않았으며 여기서 멈춘다.**
 CP2/3, F2′/F3′는 시작하지 않았다.
+
+## 14. CP1 사용자 수락 및 CP2 착수 — 2026-10-04
+
+사용자가 제품 CLI로 CP1을 직접 실행하여 수락했다. SIM/COMPLETED, 9/9
+SUCCEEDED·RELEASED, 단계 순서, process 5초 완료, 장치 기록의 95°/0.5° 소비,
+정확히 9줄 증가 및 inspect 일치를 확인했다고 보고했다.
+
+CP2 범위는 **같은 Run의 N=3 S2 9단계 SIM 정상 운전**이다. 기존 P의
+객체/slot 예약·budget·Part 전이와 Host/Executor 경로를 사용하고 제품 CLI를 연결한다.
+사용자 추가 요청에 따라 모의 effects.jsonl에 원 operation/invocation ID를 기록한다.
+이는 중복 효과를 P의 기존 Run/Part/operation 기록과 대조하기 위한 로그 상관 정보이며,
+권한·승인된 parameter bytes·main(inputs)·wire 의미를 바꾸지 않는다.
+원 ID는 runner가 이미 보유한 private request에서 전달한다. 새로운 실행 경로나
+권한 원장은 추가하지 않는다.
+
+CP2는 정확한 head CI·DCO 후 develop에 병합하고, 병합된 환경의 제품 CLI 명령을
+제공한 뒤 중단한다. P 변경이 실제로 필요하면 P → S 순서를 지킨다.
+CP3의 무응답 주입·UNKNOWN·정산 구현은 아직 시작하지 않는다.

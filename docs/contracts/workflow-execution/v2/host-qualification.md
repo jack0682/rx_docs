@@ -116,3 +116,10 @@ Tests use protocol fixtures before new Host implementation, and are labelled as
 such. Frozen installed v1 binaries still provide counterexample2; current v1 source
 branches are not substitutes. New Host and UI remain after contract/P/Executor
 cases1–5, followed by the single compatible release and separate human M3 acceptance.
+
+
+## Host-owned approval material — revision 2026-10-03.2
+
+Acceptance must bind the Host's own verified approval material as specified in
+[Host input membership](host-input-membership.md). A P assertion or matching caller
+hashes cannot replace that local record. This requirement is provider-independent.

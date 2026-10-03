@@ -86,3 +86,11 @@ node/instance/slot, stale state after CPU verification, cross-Run approval reuse
 idempotent lost replies, v1-only transport refusal, preserved resources on UNKNOWN,
 and no frontier/completion advancement from parameter materialization alone. Protocol
 fixtures are not deployed Host effects; frozen-v1 and final M3 evidence stay separate.
+
+
+## Local membership before native input handoff — revision 2026-10-03.2
+
+[Host input membership](host-input-membership.md) requires Host to regenerate the
+selected report from its qualification-linked local domain and compare Prepare bytes
+to the locally derived node input before using the existing gate/runner lifecycle.
+The common envelope and binding are shared by Python and future external adapters.

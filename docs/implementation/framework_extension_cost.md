@@ -379,7 +379,7 @@ ready source의 2초 freshness를 초과하여 P가 UNKNOWN/QUARANTINED,
 Run을 RECOVERY_REQUIRED로 유지했다. 실제 장치 기록은 process까지 6건이다.
 완료/해제를 강제하거나 원 호출을 재발행하지 않았으며, CP1 완료나 CP3 수락으로 세지 않는다.
 
-실행 snapshot의 100ms 경계는 변경하지 않는다. [중간 CP1 receipt](../../references/2026-10-03-f1-checkpoint1/receipt.json)는 NOT_READY를 명시한다. amd64 에뮬레이션의 GetSnapshot 왕복
+실행 snapshot의 100ms 경계는 변경하지 않는다. [중간 CP1 receipt](../../references/2026-10-03-f1-checkpoint1/interim-receipt.json)는 NOT_READY를 명시한다. amd64 에뮬레이션의 GetSnapshot 왕복
 111.306791/114.148750ms는 arch와 실제 관측 상태를 구분해 CP1 receipt에 기록한다.
 arm64 native에서는 RECOVERY_REQUIRED 상태의 같은 읽기 RPC가 5.581584/4.788416ms였다.
 두 측정은 Run 상태/부하가 달라 동등 부하 비교가 아니다. 이 수치는 정상 5초 호출의
@@ -407,3 +407,47 @@ RPC timeout과 별도 관측이며, 그 원인을 단독으로 입증하지 않�
 공통 계약 개정 없이 자기 근거를 정의해 재사용한다. 명세·호환성·해시 revision
 2026-10-03.3을 먼저 고정한다. 구현 범위는 5초 process를 포함한 CP1 9단계 정상 완료,
 CI·DCO 후 P→S develop 병합과 제품 CLI 인계까지다. CP2/3은 시작하지 않는다.
+
+## 13. CP1 develop 병합·제품 실행 완료 — 사용자 수락 대기
+
+공통 계약 revision 2026-10-03.3은 [Docs #106](https://github.com/jack0682/rx_docs/pull/106)으로
+명세·호환성·해시를 먼저 고정했다. Host는 자체 qualification 승인 집합과 실제 Prepare bytes를
+대조하며, 공통 native entry/completion 경계를 사용한다. Python profile은 검증된 환경과
+원 요청의 내구 기록 후 소유된 채널에서 받은 원 신원·요청 byte hash 일치 응답을 진입 근거로
+정의한다. 같은 자식 프로세스의 완료와 회수만 관찰하며, Host의 기존 writer가 capture를
+commit한 뒤 자원 보유를 해제할 수 있다. v2 전송 전 내부 reader marker 3을 기록하여
+이 의무를 모르는 reader 2의 재개를 거절한다.
+
+병합 전 제품 CLI Run은 [premerge summary](../../references/2026-10-03-f1-checkpoint1/premerge-product-summary.json)에
+기록했다. S2 9단계 모두 SUCCEEDED/RELEASED, FILE_SIMULATION 효과 9건, rotation
+95°/0.5°, process 요청 5초·실측 5.000141초다. 저장 보고서 재열기는 동일 승인 bytes와
+일치했고 원 request ID 재조회는 추가 효과를 만들지 않았다. 이 정상 실행 증거는
+N-Part 또는 UNKNOWN 정산 수락을 대신하지 않는다.
+
+P/S 전체 all-feature workspace test, all-target/all-feature Clippy, 실제 Python subprocess
+6건, SDK 162파일 동기화와 기존 repository/contract 검사가 통과했다.
+P [#76](https://github.com/jack0682/rx-platform/pull/76)과
+S [#88](https://github.com/jack0682/rx-solutions/pull/88)에 commit-range별 범위를 기록했다.
+
+실행 snapshot 100ms 경계는 그대로다. 기존 amd64 emulated와 arm64 native 왕복 실측은
+arch·관측 상태를 분리해 보존한다. 두 관측을 동등 부하 성능 비교로 해석하지 않는다.
+기존 실패 Run, UNKNOWN 및 거절 기록은 보존했으며 수동 완료나 DB 변경은 하지 않았다.
+
+정확한 PR head의 CI·DCO를 확인한 뒤 P → S 순서로 develop에 병합했다.
+
+| 저장소 | 검증한 PR head | develop merge |
+|---|---|---|
+| P #76 | 4ae6d58 | 00fd6599bd3be983ff3cdbead5ef9e5e2e023b80 |
+| S #88 | 2d807ff | 889ba434772fc1335e7107ffbc572f9c21f4a418 |
+
+두 merged head로 이미지를 다시 구성하고 새로운 전용 P/Host/Executor와 데이터 볼륨을
+설치했다. 실제 제품 CLI Run 01a1010d-e81f-77a0-89af-52d5c41f538d는 9단계 모두
+SUCCEEDED/RELEASED, SIM 효과 9건, process 실측 5.004813초로 완료됐다.
+원 request 재조회는 효과를 추가하지 않았고 inspect --reports는 같은 승인 보고서를 열었다.
+
+[최종 receipt](../../references/2026-10-03-f1-checkpoint1/receipt.json),
+[제품 CLI 원문 receipt](../../references/2026-10-03-f1-checkpoint1/product-receipt.json),
+[직접 실행·재열기 명령](../../references/2026-10-03-f1-checkpoint1/RUN_CP1.md)에 head·arch·보고서 참조를 고정했다.
+P/Host/Executor는 Docker daemon에 분리되어 실행 중이다. 사용자용 별도 object instance는
+미사용으로 남겨 두었다. **사용자 CP1 수락은 아직 받지 않았으며 여기서 멈춘다.**
+CP2/3, F2′/F3′는 시작하지 않았다.

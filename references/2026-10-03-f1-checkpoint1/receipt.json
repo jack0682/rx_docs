@@ -1,14 +1,24 @@
 {
   "schema": "rx.f1-checkpoint-1-evidence.v1",
-  "status": "NOT_READY",
+  "status": "READY_FOR_USER_ACCEPTANCE",
   "environment": "SIMULATION",
   "workflow": "S2 nine-step rotation-tending",
   "implementation": {
-    "platform": "3d60fd22bce105ada82f7670bdbe668e30abdaf1",
-    "solutions": "5efde01ebccf40594c7c6c564c0db619fd45b648",
-    "merged": false
+    "platform": "00fd6599bd3be983ff3cdbead5ef9e5e2e023b80",
+    "solutions": "889ba434772fc1335e7107ffbc572f9c21f4a418",
+    "merged": true,
+    "reviewed_platform_head": "4ae6d58bd207316d02ec073e78dbd7965a73f68e",
+    "reviewed_solutions_head": "2d807ffe416e790c333a1745d4f0778f646f5985",
+    "platform_pr": "https://github.com/jack0682/rx-platform/pull/76",
+    "solutions_pr": "https://github.com/jack0682/rx-solutions/pull/88",
+    "platform_merged_at": "2026-10-03T09:16:05Z",
+    "solutions_merged_at": "2026-10-03T09:16:15Z",
+    "merge_order": [
+      "platform",
+      "solutions"
+    ]
   },
-  "measured_at": "2026-10-03T17:20:27.854201+09:00",
+  "measured_at": "2026-10-03T09:18:46.488301+00:00",
   "execution_snapshot_round_trip": {
     "limit_ms": 100,
     "limit_changed": false,
@@ -17,7 +27,7 @@
         "runtime_arch": "linux/amd64",
         "host_arch": "linux/arm64",
         "emulated": true,
-        "source": "amd64-read-observations.json",
+        "source": "read-diagnostic/result.log",
         "scope": "Read-only existing Executor session GetSnapshot observer; EXECUTING Run, no operation emission by observer",
         "samples": [
           {
@@ -44,7 +54,7 @@
         "runtime_arch": "linux/arm64",
         "host_arch": "linux/arm64",
         "emulated": false,
-        "source": "arm64-read-observations.json",
+        "source": "read-diagnostic/arm64-result.log",
         "scope": "Read-only existing Executor session GetSnapshot observer; RECOVERY_REQUIRED Run after process timeout, no operation emission by observer; not equal-load comparison with amd64",
         "samples": [
           {
@@ -70,16 +80,171 @@
     ]
   },
   "latest_product_run": {
+    "run": "01a1010d-e81f-77a0-89af-52d5c41f538d",
+    "state": "COMPLETED",
+    "environment": "SIMULATION",
+    "operations": [
+      {
+        "node": "process",
+        "outcome": "SUCCEEDED",
+        "disposition": "RELEASED",
+        "parameter": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "0b6fdfa1f6f5986bc4843dfeb09239703ad387ceea50b2066d4cf601222471b2",
+          "size_bytes": "933"
+        }
+      },
+      {
+        "node": "open-door",
+        "outcome": "SUCCEEDED",
+        "disposition": "RELEASED",
+        "parameter": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "89377792e5411a27d3904a5e883953bb4bdd21411efaec22ee117879db650cc4",
+          "size_bytes": "925"
+        }
+      },
+      {
+        "node": "pick",
+        "outcome": "SUCCEEDED",
+        "disposition": "RELEASED",
+        "parameter": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "8ccaf8d70564397760991093d3e5280a9593f3d101476464248f76d853c3daeb",
+          "size_bytes": "1640"
+        }
+      },
+      {
+        "node": "rotate-align",
+        "outcome": "SUCCEEDED",
+        "disposition": "RELEASED",
+        "parameter": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "970938830555845875c91a4d4df941ce8eab54d63b5bec00c33fcef38b792027",
+          "size_bytes": "1055"
+        }
+      },
+      {
+        "node": "place",
+        "outcome": "SUCCEEDED",
+        "disposition": "RELEASED",
+        "parameter": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "9403256ceecaf0037335a3d75e289869bd7b7f31a86989d9cb61c6c6969c149e",
+          "size_bytes": "1642"
+        }
+      },
+      {
+        "node": "unload",
+        "outcome": "SUCCEEDED",
+        "disposition": "RELEASED",
+        "parameter": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "32284743489d252a882f18315dddca61be686e48b72842c67d9c95a1aa15d044",
+          "size_bytes": "1646"
+        }
+      },
+      {
+        "node": "load",
+        "outcome": "SUCCEEDED",
+        "disposition": "RELEASED",
+        "parameter": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "4bd47e12d1ab5352848491a229344c9aff9bb37d6e7392aff6e680d31ae7f45c",
+          "size_bytes": "1638"
+        }
+      },
+      {
+        "node": "close-door",
+        "outcome": "SUCCEEDED",
+        "disposition": "RELEASED",
+        "parameter": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "55bfd0587f4e125aff91a3cbd03b5f2ae3d0535af3351841ec5beaafe84d3faf",
+          "size_bytes": "925"
+        }
+      },
+      {
+        "node": "clamp",
+        "outcome": "SUCCEEDED",
+        "disposition": "RELEASED",
+        "parameter": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "01289bea0ed73dd9a6875fa3388415c6b52e6fd0182cee23a8a25356dcda9bb1",
+          "size_bytes": "1107"
+        }
+      }
+    ],
+    "native_order": [
+      "pick",
+      "load",
+      "rotate-align",
+      "clamp",
+      "close-door",
+      "process",
+      "open-door",
+      "unload",
+      "place"
+    ],
+    "effects": 9,
+    "requested_duration_s": 5,
+    "observed_duration_s": 5.004813002014998,
+    "alignment": {
+      "aligned": true,
+      "measured_deg": 95,
+      "requested_deg": 95,
+      "tolerance_deg": 0.5
+    },
+    "reports": [
+      "eb0c7da54e65285d97931ba2bbbf209ce867e98c35676e0b9b02934965baff3d"
+    ],
     "runtime_arch": "linux/arm64",
-    "run": "01a100ce-431e-77e7-bd2d-9850fa80f38b",
-    "state": "RECOVERY_REQUIRED",
-    "operations": 6,
-    "settled_succeeded_released": 5,
-    "receipt": "Local retained product receipt; full record contains installation paths and is not copied into this public interim report."
+    "runtime_container": "rx-f1-cp1r10-h",
+    "product_receipt_sha256": "71e19aa55f2afadf168856cd15829c8bca2fbc71b6905534d70b99573f4ca494",
+    "reopened_reports_equal": true,
+    "replay_no_added_effects": true
   },
-  "blocker": "5-second process holds Host native-submit gate; fixed 3-second Host RPC timeout and 2-second ready-source freshness expire. Process outcome remains UNKNOWN/QUARANTINED in P; no replay or forced completion.",
-  "next_contract_decision": {
-    "status": "AWAITING_USER",
-    "recommendation": "Keep existing gate through confirmed native entry; collect same operation/invocation completion through existing Host journal/evidence without holding gate during the finite program. Preserve 100ms and existing freshness/timeout bounds."
+  "contract": {
+    "revision": "2026-10-03.3",
+    "procedure": "v1.1",
+    "version": "execution-v2",
+    "docs_merge": "31862b1c3115d848314f022f0d7ca64a09565d96"
+  },
+  "checks": {
+    "platform_pr_ci": "https://github.com/jack0682/rx-platform/actions/runs/37112012524",
+    "solutions_pr_ci": "https://github.com/jack0682/rx-solutions/actions/runs/37112015507",
+    "exact_pr_head_ci": "PASS",
+    "DCO": "PASS",
+    "signed_merge": "VERIFIED",
+    "local_workspace_tests": "PASS: P/S --workspace --all-features --locked",
+    "local_clippy": "PASS: P/S --workspace --all-targets --all-features",
+    "sdk_files": 162
+  },
+  "runtime_arch": "linux/arm64",
+  "user_acceptance": "NOT_RUN",
+  "next_checkpoints": "CP2/CP3 and F2-prime/F3-prime NOT_STARTED",
+  "handoff": {
+    "commands": "RUN_CP1.md",
+    "state": "services running detached under Docker daemon",
+    "unused_object": "author10/object-acceptance.json",
+    "request_id": "700ccbe2-af66-4d88-a9ef-0bd032696453"
+  },
+  "images": {
+    "platform": {
+      "Id": "sha256:9a0e439d484c796455cff7cc2ba410923a25cbd3233fe6ec3e42b089eeaa5a8a",
+      "Os": "linux",
+      "Architecture": "arm64"
+    },
+    "solutions": {
+      "Id": "sha256:c93c824125300cba01a562c113e95d6c003f851b6899c6201ef7896e0cea0f0e",
+      "Os": "linux",
+      "Architecture": "arm64"
+    }
+  },
+  "published_evidence": {
+    "product-receipt.json": "71e19aa55f2afadf168856cd15829c8bca2fbc71b6905534d70b99573f4ca494",
+    "product-summary.json": "3eee2a4de26c11f1e9d8a48f905092773fe9d2b850f71b23e05dbdd6eea9101a",
+    "device-state.json": "0d12fef5931b1b6921ade30cf8b3a4ec3e015af7d7fe08efeae88fae18811b22",
+    "effects.jsonl": "b7da40386211201e423b1d2b496d6db81ed725fa03619af8850694f40777cd44"
   }
 }

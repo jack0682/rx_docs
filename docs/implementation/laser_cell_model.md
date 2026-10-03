@@ -400,8 +400,8 @@ M3를 아래 세 checkpoint로 나눈다. 각 checkpoint는 사용자가 직접 
 | Checkpoint | 동결할 범위와 산출물 | 사용자 수락 |
 |---|---|---|
 | **M3a Land** | #75/#87은 기존 첫 관문(계약·P·Executor, 반례 1–5)에 필요한 코드·수정·근거만 포함한다. missing handover 원인 조사에 최대 3시간을 쓰고, 미확정이면 관측/미확정/다음 판단을 보고하고 중단한다. 원인 수정, 기존 관문 통과, commit-range별 문제·변경·근거 요약, 정확한 head CI 확인 후 P → S 순서로 develop에 merge한다. 새 Host/UI 및 추가 rigor 작업은 착수하지 않는다. | merge된 head에서 재생성한 개발 환경과 **제품 CLI**로 기존 M1/M2 A/B 해석·위반 차단·저장 보고서 재열기 smoke를 제공한다. 사용자가 이를 실행하고 landing을 확인한다. 실행 전에 정확한 환경/명령을 문서에 고정하며, 아직 실행되지 않은 명령을 “지금 가능”으로 제시하지 않는다. |
-| **M3b Operate** | 이미 게시된 workflow를 CLI로 N개 실제 ObjectInstance에 바인딩하여 SIM device에서 실행한다. P↔Host 무응답 1회를 주입하고 UNKNOWN·자원 보유를 확인한다. 원 operation을 정산한 뒤 같은 Part의 남은 단계와 다음 Part가 완료되고, Run record에서 게시/정의/규칙/report/parameter 버전이 일치해야 한다. 그 다음 기존 UI에서 같은 경로를 제공한다. | 사용자가 문서의 제품 CLI 명령을 먼저 실행한 뒤 UI에서 같은 Run·UNKNOWN·정산·다음 Part·기록을 확인한다. API fixture, 합성 Host evidence, cargo 시험은 수락을 대체하지 않는다. 기존 승인된 복구 규칙만 구현·검증하고 추가 변형은 parking으로 보낸다. |
-| **M3c Ship** | 호환 P/S/UI를 담은 단일 RC installer와 QUICKSTART를 제공한다. main 릴리스는 별도 사용자 지시 전에는 하지 않는다. 깨끗한 Linux에서 M1–M3를 재현하고 새 part/tray를 package data만으로 추가한다. | 사용자가 QUICKSTART만으로 M1–M3를 45분 이내에, 세 번째 part/new tray 추가를 10분 이내에 수행한다. 마지막에 설치시간·명령 수·데이터 추가시간·package 파일/줄 수·generic/domain core 변경량·SIM/실물 경계를 한 번 기록한다. |
+| **M3b Operate — 이관** | 이미 게시된 workflow를 CLI로 N개 실제 ObjectInstance에 바인딩하여 SIM device에서 실행한다. P↔Host 무응답 1회를 주입하고 UNKNOWN·자원 보유를 확인한다. 원 operation을 정산한 뒤 같은 Part의 남은 단계와 다음 Part가 완료되고, Run record에서 게시/정의/규칙/report/parameter 버전이 일치해야 한다. 그 다음 기존 UI에서 같은 경로를 제공한다. | 사용자가 문서의 제품 CLI 명령을 먼저 실행한 뒤 UI에서 같은 Run·UNKNOWN·정산·다음 Part·기록을 확인한다. API fixture, 합성 Host evidence, cargo 시험은 수락을 대체하지 않는다. 기존 승인된 복구 규칙만 구현·검증하고 추가 변형은 parking으로 보낸다. |
+| **M3c Ship — 이관** | 호환 P/S/UI를 담은 단일 RC installer와 QUICKSTART를 제공한다. main 릴리스는 별도 사용자 지시 전에는 하지 않는다. 깨끗한 Linux에서 M1–M3를 재현하고 새 part/tray를 package data만으로 추가한다. | 사용자가 QUICKSTART만으로 M1–M3를 45분 이내에, 세 번째 part/new tray 추가를 10분 이내에 수행한다. 마지막에 설치시간·명령 수·데이터 추가시간·package 파일/줄 수·generic/domain core 변경량·SIM/실물 경계를 한 번 기록한다. |
 
 **M3a 범위 동결:** 현재 PR #75의 기반 head는 `6442e76`, #87은 `7983bfe`다. 이후 미커밋
 등록 mTLS fixture, 첫 관문에 필요한 고정 v1 주입 및 missing-handover 수정만 이 landing에
@@ -449,3 +449,32 @@ reference/model·Run·ordinal·slot·pool 소유를 검사한다. 새 효과의 
 이 결과는 frozen clock·합성 Host 완료/인계 증거를 사용한 P/S integration precheck다.
 고정 v1 주입 관문, exact-head CI/commit-range 요약/merge, merge 후 제품 smoke는 아직 남아 있다.
 따라서 M3a 또는 이후 checkpoint의 사용자 수락으로 표시하지 않는다.
+
+### 현재 진단 후 일시정지 — 2026-10-03
+
+사용자의 중단 지시에 따라 위 진단과 기존 수정/20회 반복 근거까지만 보존하고 일시정지한다.
+수정은 P/S 작업 트리에 있으며 아직 merge되지 않았다. 고정 v1 P/Executor/Host/UI에 대한
+v2 주입은 미완료이고 첫 관문을 통과했다고 주장하지 않는다. M3 제품 실행 명령은 **none yet**다.
+재개 후 단일 다음 작업은 기존 고정 v1 주입 관문을 마치는 것이다. 이후 M3a의 commit-range
+요약·정확한 head CI·P→S merge·제품 smoke 순서를 유지하며, 사용자 수락 전 M3b를 시작하지 않는다.
+M3b는 CLI→UI 운전/UNKNOWN 정산/다음 Part/버전 참조 기록, M3c는 깨끗한 Linux의
+RC installer+QUICKSTART 재현으로 끝낸다. 각 단계는 사용자가 실행한 뒤에만 수락한다.
+
+정리 기록상 `.build/workflow-platform-target/debug/deps`, `debug/incremental`과 미참조 이미지
+`3ac0aa417604`, `f26dfa5727aa`, `566320238338`을 삭제했다. 이번 중단 시점에 여유 공간
+90.75 GB를 재확인했다. 신규 parking 항목은 0개이며 기존 M3 재계획의 4개 보류 항목을 유지한다.
+
+
+### M3a만 재개 — 2026-10-03 사용자 지시
+
+현재 작업은 M3a만 끝내고 멈춘다. 기존 고정 v1 주입 및 첫 관문만 완료하고 새 관문을
+추가하지 않는다. PR 본문에 commit-range 요약을 작성하고 정확한 head CI 확인 후
+P → S 순서로 merge한다. merge된 head로 환경을 재생성하여 사용자가 실행할 M1/M2
+제품 CLI smoke(A/B 해석, 위반 차단, 저장 보고서 재열기)를 제공한다.
+
+**M3b/M3c는 다음 프레임워크 작업으로 이관**하며 이 작업에서 시작하지 않는다. 위 표의
+운전/복구/RC 내용은 이관 대상의 기록이다. 신규 아이디어는 parking으로 보낸다.
+
+고정 v1 UI 주입에서 검토한 v2 참조와 실제 v1 Start 사이의 불일치가 관측됐다. 사용자는
+[설치 격리 및 명시적 거절](../contracts/workflow-execution/v2/legacy-isolation.md)을 승인했다.
+고정 원본의 FAIL은 보존하며, 승인된 격리 검증 전에는 첫 관문을 통과로 표시하지 않는다.

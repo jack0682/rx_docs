@@ -469,3 +469,38 @@ CP2 범위는 **같은 Run의 N=3 S2 9단계 SIM 정상 운전**이다. 기존 P
 CP2는 정확한 head CI·DCO 후 develop에 병합하고, 병합된 환경의 제품 CLI 명령을
 제공한 뒤 중단한다. P 변경이 실제로 필요하면 P → S 순서를 지킨다.
 CP3의 무응답 주입·UNKNOWN·정산 구현은 아직 시작하지 않는다.
+
+## 15. CP2 같은 Run N=3 제품 검증
+
+병합 전 실제 제품 CLI Run 01a1042c-247a-71ab-be6c-f30ce8768a41에서 3개 Part가
+CONFIRMED_COMPLETED, 27개 operation이 SUCCEEDED/RELEASED로 완료됐다.
+[병합 전 요약](../../references/2026-10-04-f1-checkpoint2/premerge-summary.json)은
+각 Part의 실제 object·slot·parameter·report 참조와 원 operation/invocation을 기록한다.
+각 Part의 장치 순서는 S2 9단계와 같고 rotation은 95°/0.5°를 소비했다.
+process의 선택값은 각각 5초다. inspect --reports는 같은 보고서를 열었고
+원 요청 재조회 후 장치 기록은 27줄, 고유 operation/invocation 쌍도 27개였다.
+
+P의 기존 예약·budget·Part·현재 권한/참조 검사를 사용했다. P와 Rust Host/Executor
+변경은 0줄이다. S 변경은 제품 CLI의 순서 있는 객체 공급, runner의 두 로그용 ID,
+모의 skill의 두 effect 필드, 관련 검증/사용 설명에 한정한다.
+runner가 제공하는 ID는 원 private request의 상관 정보이며 승인 입력이나 권한이 아니다.
+main(inputs)와 승인된 parameter bytes, 공통 계약/manifest/wire는 변경하지 않았다.
+구버전으로 조립된 패키지의 runner digest 불일치는 실행 전 거절됐으며,
+동일 소스 조립 도구로 재생성·서명한 패키지를 새 설치에서 사용했다.
+
+S [#89](https://github.com/jack0682/rx-solutions/pull/89)의 정확한 head
+214307154849dd9d188bd96d6fd26cf20a28ced1에서 CI·DCO를 확인한 뒤
+develop dbbefebdccab0343dc4398b0848a07c6890aa122에 병합했다.
+P는 변경 없이 이미 병합·검증된 00fd6599bd3be983ff3cdbead5ef9e5e2e023b80을 유지한다.
+
+병합된 소스로 이미지를 다시 구성하고 전용 새 설치에서 제품 CLI Run
+01a10436-2771-77fd-8ee7-3cd5d441bab0를 실행했다. 같은 Run의 3개 Part,
+27/27 SUCCEEDED/RELEASED, Part별 순서 및 27개의 고유 operation/invocation 쌍 일치를
+확인했다. 저장 보고서 재열기와 원 요청 재조회도 일치했고 추가 효과는 0건이었다.
+
+[최종 CP2 receipt](../../references/2026-10-04-f1-checkpoint2/receipt.json),
+[제품 receipt](../../references/2026-10-04-f1-checkpoint2/product-receipt.json),
+[장치 기록](../../references/2026-10-04-f1-checkpoint2/effects.jsonl),
+[직접 실행·조회 명령](../../references/2026-10-04-f1-checkpoint2/RUN_CP2.md)을 남겼다.
+사용자용 세 객체는 미사용이며 서비스는 Docker daemon에 분리되어 실행 중이다.
+**CP2 사용자 수락 대기에서 멈춘다. CP3는 시작하지 않았다.**

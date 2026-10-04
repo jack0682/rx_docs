@@ -1,0 +1,349 @@
+{
+  "environment": "SIMULATION",
+  "runtime_arch": "linux/arm64",
+  "workflow": "s2/rotation-tending-SIM",
+  "run": "01a1042c-247a-71ab-be6c-f30ce8768a41",
+  "state": "COMPLETED",
+  "parts": [
+    {
+      "ordinal": 1,
+      "part": "01a1042c-2743-76db-bff2-e63045ff6740",
+      "object": {
+        "catalog": "a86ea3cc-8431-58ac-8401-5c2c63cb532c",
+        "id": "2e63aeb4-6ee6-4da4-8ac4-a76586bb28ee",
+        "revision": "1",
+        "digest": "9da3c846cb84f22aba16c7cdc4f7ce4e1608df7ab865c6e726f9a97d7b5cff47"
+      },
+      "slot": 0,
+      "nodes": [
+        "pick",
+        "load",
+        "rotate-align",
+        "clamp",
+        "close-door",
+        "process",
+        "open-door",
+        "unload",
+        "place"
+      ],
+      "operation_invocation_pairs": [
+        {
+          "operation": "01a1042c-28a5-7515-ba04-1733ce1c277f",
+          "invocation": "c6c755be-22a6-4ab4-8e12-ff132d5eba2c"
+        },
+        {
+          "operation": "01a1042c-2d2f-72a4-9ade-25f90f97df93",
+          "invocation": "c4412fa2-b2a0-4fe4-bc13-6ff7b43195bb"
+        },
+        {
+          "operation": "01a1042c-31c0-77b0-a1ff-dbe446890445",
+          "invocation": "12096af4-f6b9-4ff6-ba8c-da33ed8d0367"
+        },
+        {
+          "operation": "01a1042c-3649-7029-9e21-56d83bd46fe6",
+          "invocation": "d1732a5d-ed64-4096-b3ed-e3cb0d20a4d8"
+        },
+        {
+          "operation": "01a1042c-3aaa-7021-8720-4a65be11e74f",
+          "invocation": "1012bf50-d47f-4392-b77f-3951f3977891"
+        },
+        {
+          "operation": "01a1042c-3f36-7376-88a0-c272ff4f0bce",
+          "invocation": "e3481785-54ca-423a-b4d9-68ee736d9d47"
+        },
+        {
+          "operation": "01a1042c-57a9-73b5-9bb4-8b335a14b4b6",
+          "invocation": "cb973a1e-0017-4cd3-9110-26da400824d9"
+        },
+        {
+          "operation": "01a1042c-5c15-7722-86c4-1ce71d607c83",
+          "invocation": "dff72276-5ec8-4c8f-a326-d3b6b1e8ea05"
+        },
+        {
+          "operation": "01a1042c-607a-7607-8fde-8fc45bbe7a9a",
+          "invocation": "1877fbad-06a0-49bb-ac78-cd8ea261305a"
+        }
+      ],
+      "parameters": {
+        "open-door": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "2855323349c6ce74f73d1a48a09124acc8bd677bb99c920cb80678e84eafb19a",
+          "size_bytes": "925"
+        },
+        "close-door": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "e996d4399683a7c89b1be5ba7d27c05ab7391b48c675f9a86c5fbbcef2917d7b",
+          "size_bytes": "925"
+        },
+        "place": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "56f1e4f32d098561c4ce5c186376e1d0b73982df8cf52bf4da11ced1d1d70675",
+          "size_bytes": "1642"
+        },
+        "process": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "e0c34b73af0fd5d8739c06407fee3633735593cbacc3be398535b03fad3ba140",
+          "size_bytes": "933"
+        },
+        "clamp": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "c9e408f311c94444459c4ba494862b11dc58a21cfbbcb45db68c32b126ec889a",
+          "size_bytes": "1107"
+        },
+        "load": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "5794783a7e24531ccc6d4d3bf81b3e18616734a4c105e2f986e1ce1b7a4086c3",
+          "size_bytes": "1638"
+        },
+        "unload": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "8117eac9f3403d585da6788296aa4979021a56e461129487459accc6f70e1505",
+          "size_bytes": "1646"
+        },
+        "rotate-align": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "9b9c4d31187936c1e6e4a7d071c99d4c9cf2d6892615ae303cbc35f55bd3a469",
+          "size_bytes": "1055"
+        },
+        "pick": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "3189a861d5568ac7159e5caddaabf028834b772b5ad90a89b065a89c22d036c4",
+          "size_bytes": "1640"
+        }
+      },
+      "reports": [
+        "92c63b2fd70966f952572af1bbd3f4c3b9b79af4c6da1215c0f461f7933b946c"
+      ]
+    },
+    {
+      "ordinal": 2,
+      "part": "01a1042c-65e1-768d-92ac-72ea0b7df3ca",
+      "object": {
+        "catalog": "a86ea3cc-8431-58ac-8401-5c2c63cb532c",
+        "id": "b01feb8e-4b80-4d23-b682-7ec7b428a587",
+        "revision": "1",
+        "digest": "9db19943061b757f81739440fa074057e50c23681e6ccc7236bf35bd9222d7f8"
+      },
+      "slot": 1,
+      "nodes": [
+        "pick",
+        "load",
+        "rotate-align",
+        "clamp",
+        "close-door",
+        "process",
+        "open-door",
+        "unload",
+        "place"
+      ],
+      "operation_invocation_pairs": [
+        {
+          "operation": "01a1042c-674b-7344-8d98-4a04af08c64a",
+          "invocation": "c6e04779-0853-4526-800a-e6e256d438c3"
+        },
+        {
+          "operation": "01a1042c-6bc0-766d-8933-815bcfd265a0",
+          "invocation": "b34ce5db-9f4a-47e9-b517-c183ce3aedf2"
+        },
+        {
+          "operation": "01a1042c-702b-7665-88a6-e15d90231b80",
+          "invocation": "1e9a1411-ca54-46d5-999e-427f34809c9d"
+        },
+        {
+          "operation": "01a1042c-7551-75f3-bcc6-39656cb7a40b",
+          "invocation": "bb25da5d-5b03-4be7-8941-ebc4504aa06c"
+        },
+        {
+          "operation": "01a1042c-79c2-700a-9df5-4fe1ed843dbd",
+          "invocation": "3c1df2bb-c0dc-47cb-a769-0d4e87129b48"
+        },
+        {
+          "operation": "01a1042c-7efa-750a-a080-337179595d45",
+          "invocation": "eb7496b9-01a3-4a3b-8581-ef9142918bfb"
+        },
+        {
+          "operation": "01a1042c-974c-71d5-b824-bd39016341da",
+          "invocation": "b4344a96-7d96-4636-a7bd-346244292802"
+        },
+        {
+          "operation": "01a1042c-9be1-712a-b9c6-2cf09820468c",
+          "invocation": "1addb56d-51d2-4546-aff1-02462e40987e"
+        },
+        {
+          "operation": "01a1042c-a05e-7567-97ad-ea6af15ac93d",
+          "invocation": "07f2f57b-eb91-41f0-a5d1-f2a5ccb56fe1"
+        }
+      ],
+      "parameters": {
+        "process": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "ef6ebb1dabd52eedc9f48dcf56db85b3191d2457b84864c0adbf8aa9182bdf1e",
+          "size_bytes": "933"
+        },
+        "rotate-align": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "7bdc96a0d982194a4f6ca07c1a322efc672cb8609a69738fec6a024b56d583ef",
+          "size_bytes": "1055"
+        },
+        "pick": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "74f9f67040f55c9ef26d24ba55133e951ee29744bf680f5e3d37adae566a671d",
+          "size_bytes": "1640"
+        },
+        "close-door": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "32438a73bba7d9e228a9baa5850512538b8ea8078d3b3b256fcdefd6cc5847c3",
+          "size_bytes": "925"
+        },
+        "unload": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "dc62f7692db8b1fe2f6d06368da082af0834f605a6dfe6ddc091fab24101f3cc",
+          "size_bytes": "1646"
+        },
+        "clamp": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "45e98c69ed2574be86e60dd97b0c6fe65348a26a9564586e35c4878af8861f95",
+          "size_bytes": "1107"
+        },
+        "open-door": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "27101728c789dbfc46bcf016a589d90cb813d6f8906c1e3f7b861ef4a6dd8a70",
+          "size_bytes": "925"
+        },
+        "place": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "54f788f8a2f6c4b177536f2fd26bbc7fc0f633bdbd165c3afa5147820bdd3eed",
+          "size_bytes": "1642"
+        },
+        "load": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "c6fa0e336a8f0fad4719a8a8556a24ed0233bf373967cec767327b9d0543682d",
+          "size_bytes": "1638"
+        }
+      },
+      "reports": [
+        "73b406597d1e5f672bcaade9be7c3e99f89aaf2ac1b94d91bbc7c87e0820024d"
+      ]
+    },
+    {
+      "ordinal": 3,
+      "part": "01a1042c-a6d6-758e-a0a9-860a4a700370",
+      "object": {
+        "catalog": "a86ea3cc-8431-58ac-8401-5c2c63cb532c",
+        "id": "704b6695-1557-423b-94c2-8fb5f8cf9a38",
+        "revision": "1",
+        "digest": "7274980b30b0c39b54007cbdb7b8619859fd69dbbc628885d7acd6aadf504a62"
+      },
+      "slot": 2,
+      "nodes": [
+        "pick",
+        "load",
+        "rotate-align",
+        "clamp",
+        "close-door",
+        "process",
+        "open-door",
+        "unload",
+        "place"
+      ],
+      "operation_invocation_pairs": [
+        {
+          "operation": "01a1042c-a85b-71be-a8e7-bdb6d4e1a9f0",
+          "invocation": "00c82963-104c-4a22-857b-764720425ab9"
+        },
+        {
+          "operation": "01a1042c-acf7-712c-bb23-a4697c4e0ab1",
+          "invocation": "e1519946-81f5-4854-8eba-3e418c896711"
+        },
+        {
+          "operation": "01a1042c-b192-72e2-9363-dc97373c38d7",
+          "invocation": "3c254f2f-ce06-4861-8582-32c6a06c3f5c"
+        },
+        {
+          "operation": "01a1042c-b605-77ed-b734-9ed13bd8440a",
+          "invocation": "2756ee25-1055-40d5-b545-da973974dd46"
+        },
+        {
+          "operation": "01a1042c-baa9-72bb-9207-5e86148259e2",
+          "invocation": "c01dae34-5871-4c4b-b8bc-934306eefff5"
+        },
+        {
+          "operation": "01a1042c-bf4d-76a0-911c-1ae14a58736d",
+          "invocation": "6dbbb11b-f57c-4cad-8666-03982079256f"
+        },
+        {
+          "operation": "01a1042c-d7ce-7179-be1c-dd9314a5646a",
+          "invocation": "3d9fdc9f-b0b1-4691-859d-09671b58ee6b"
+        },
+        {
+          "operation": "01a1042c-dc77-7092-a57d-66900029973d",
+          "invocation": "5d7c5c38-e4e8-4707-b2b7-3b7d520a5b39"
+        },
+        {
+          "operation": "01a1042c-e114-7087-88cb-5006e55883a5",
+          "invocation": "3586e3b6-a978-4d7b-a3d1-7167c0dfa1df"
+        }
+      ],
+      "parameters": {
+        "load": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "ce41155d08f86637429e068c2b48cf4ecac86411eec958cdf2da207a1641e6be",
+          "size_bytes": "1638"
+        },
+        "close-door": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "c916a202e8006619dc02e6d3db449858f52950f7b39c9a57d99158e3c658a276",
+          "size_bytes": "925"
+        },
+        "unload": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "0633ba09e12a4f8e3a6bbb754fe116cf107a062e845520ef415acdedd03e9eb2",
+          "size_bytes": "1646"
+        },
+        "process": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "bc7b6f16d1cda7e8020b9148a840d695e73bbf02f0f55c72a2cfff82c4fb1e78",
+          "size_bytes": "933"
+        },
+        "clamp": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "962c6cb31d07549f2ef277bffc44ae25034427be6ec7fab5e2877e1e84f87dce",
+          "size_bytes": "1107"
+        },
+        "rotate-align": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "d383bfcc8b27bf85ab589d1faef4b29711f6feaf7433da95b7e0e6c556694518",
+          "size_bytes": "1055"
+        },
+        "place": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "633ebe8b72fad3441a0831ae112445a9963aee1b1f11728905b55752a5eb1052",
+          "size_bytes": "1642"
+        },
+        "pick": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "678af15270cd066023c40186dcc072df8cb9c7fa05c509ead61ad1d142f1613e",
+          "size_bytes": "1640"
+        },
+        "open-door": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "2b3d892802d7a522b7a97ac58bcd537762a693fc012eb02968b4d82eb15811a2",
+          "size_bytes": "925"
+        }
+      },
+      "reports": [
+        "ec2d16adc29cc00df7287ea6e02fcf1a281534dd328471d59b6527c2670d655e"
+      ]
+    }
+  ],
+  "effect_rows": 27,
+  "unique_operations": 27,
+  "unique_operation_invocation_pairs": 27,
+  "native_order_matches_each_part": true,
+  "device_ids_match_product_records": true,
+  "reopened_reports_equal": true,
+  "same_request_replay_added_effects": 0,
+  "receipt_sha256": "aec7840a6c0db091c06169826add9d1d319c1fa6910fc5c104fc5e86f383629d",
+  "effects_sha256": "b4ccbe9e687e28c3e44bd796e88084739473e7c50d6dd505bb61cd8e8218dcc5",
+  "cp3_started": false
+}

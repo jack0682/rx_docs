@@ -1,0 +1,349 @@
+{
+  "environment": "SIMULATION",
+  "runtime_arch": "linux/arm64",
+  "workflow": "s2/rotation-tending-SIM",
+  "run": "01a10436-2771-77fd-8ee7-3cd5d441bab0",
+  "state": "COMPLETED",
+  "parts": [
+    {
+      "ordinal": 1,
+      "part": "01a10436-2b99-708e-bdad-f6c58e5e66a5",
+      "object": {
+        "catalog": "a86ea3cc-8431-58ac-8401-5c2c63cb532c",
+        "id": "ca485127-28ac-4707-8e36-2b8bc3e9e7b3",
+        "revision": "1",
+        "digest": "f74450033991b00f0ea027581b2e3f2b4929483487c3a3bed1507743c83ebcce"
+      },
+      "slot": 0,
+      "nodes": [
+        "pick",
+        "load",
+        "rotate-align",
+        "clamp",
+        "close-door",
+        "process",
+        "open-door",
+        "unload",
+        "place"
+      ],
+      "operation_invocation_pairs": [
+        {
+          "operation": "01a10436-2d21-769a-8c03-bae6ae78c7e4",
+          "invocation": "f02ade70-c50d-4711-b172-4d461fb8944e"
+        },
+        {
+          "operation": "01a10436-31ef-75e3-9ff3-ffe6bbb7b768",
+          "invocation": "df780eac-a0cd-48d8-aa09-5600f9a77006"
+        },
+        {
+          "operation": "01a10436-36be-768a-b082-e19c1dc75265",
+          "invocation": "7dd15fe9-e736-473a-a013-0120ceffa8b7"
+        },
+        {
+          "operation": "01a10436-3b7b-7089-84a0-a2e8b6ecdb98",
+          "invocation": "0e013c49-a700-4189-b3eb-bb758e61336b"
+        },
+        {
+          "operation": "01a10436-4044-7727-ae09-73b504cf5d24",
+          "invocation": "08479fc0-e68d-4db8-a2c3-e2a0e47ea915"
+        },
+        {
+          "operation": "01a10436-44e1-7355-8520-0f9cf4a758be",
+          "invocation": "a9298749-38df-450b-bcf7-b4d6cae5b6e5"
+        },
+        {
+          "operation": "01a10436-5cf3-75c2-9f80-3c3806efdb85",
+          "invocation": "82558312-8038-4e9d-bfd7-32f22d99d6a6"
+        },
+        {
+          "operation": "01a10436-61c2-7112-8690-ec4f68bf133e",
+          "invocation": "2cbe32d4-cb5f-4a9d-a2ba-6ff1a1c3a0fc"
+        },
+        {
+          "operation": "01a10436-665b-70ba-92a1-7ca938454c94",
+          "invocation": "4a96314f-2068-4be4-ba94-f55ebf2b324a"
+        }
+      ],
+      "parameters": {
+        "clamp": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "c9e408f311c94444459c4ba494862b11dc58a21cfbbcb45db68c32b126ec889a",
+          "size_bytes": "1107"
+        },
+        "place": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "56f1e4f32d098561c4ce5c186376e1d0b73982df8cf52bf4da11ced1d1d70675",
+          "size_bytes": "1642"
+        },
+        "pick": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "3189a861d5568ac7159e5caddaabf028834b772b5ad90a89b065a89c22d036c4",
+          "size_bytes": "1640"
+        },
+        "close-door": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "e996d4399683a7c89b1be5ba7d27c05ab7391b48c675f9a86c5fbbcef2917d7b",
+          "size_bytes": "925"
+        },
+        "unload": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "8117eac9f3403d585da6788296aa4979021a56e461129487459accc6f70e1505",
+          "size_bytes": "1646"
+        },
+        "rotate-align": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "9b9c4d31187936c1e6e4a7d071c99d4c9cf2d6892615ae303cbc35f55bd3a469",
+          "size_bytes": "1055"
+        },
+        "process": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "e0c34b73af0fd5d8739c06407fee3633735593cbacc3be398535b03fad3ba140",
+          "size_bytes": "933"
+        },
+        "load": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "5794783a7e24531ccc6d4d3bf81b3e18616734a4c105e2f986e1ce1b7a4086c3",
+          "size_bytes": "1638"
+        },
+        "open-door": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "2855323349c6ce74f73d1a48a09124acc8bd677bb99c920cb80678e84eafb19a",
+          "size_bytes": "925"
+        }
+      },
+      "reports": [
+        "92c63b2fd70966f952572af1bbd3f4c3b9b79af4c6da1215c0f461f7933b946c"
+      ]
+    },
+    {
+      "ordinal": 2,
+      "part": "01a10436-6d64-77c1-bdaf-a4bc97d72b2b",
+      "object": {
+        "catalog": "a86ea3cc-8431-58ac-8401-5c2c63cb532c",
+        "id": "44a82536-e0d1-4908-af0a-94fa5bd2fa05",
+        "revision": "1",
+        "digest": "3f7b7e113f83b6650dc9eeca695907e0a2dc86b949986448c9abc2cd57a7f4c6"
+      },
+      "slot": 1,
+      "nodes": [
+        "pick",
+        "load",
+        "rotate-align",
+        "clamp",
+        "close-door",
+        "process",
+        "open-door",
+        "unload",
+        "place"
+      ],
+      "operation_invocation_pairs": [
+        {
+          "operation": "01a10436-6eea-72c4-9526-191e13de9d84",
+          "invocation": "ed785c74-9cb2-4a73-8f3b-0bab46f8d006"
+        },
+        {
+          "operation": "01a10436-73b2-77c9-ba76-22e22cfadf1b",
+          "invocation": "b6740f4c-a814-4247-90eb-6aeda9cdc2ce"
+        },
+        {
+          "operation": "01a10436-7855-722c-9b82-eb074c26f3b7",
+          "invocation": "f32cee4f-32a2-479a-a85f-2886cd0baca0"
+        },
+        {
+          "operation": "01a10436-7dc0-7042-bc96-414060ccace0",
+          "invocation": "bb6fa604-f24b-4e62-9c71-9d194305ee69"
+        },
+        {
+          "operation": "01a10436-8299-75fa-a2f8-1ee81955e377",
+          "invocation": "4d9679ef-b811-4a87-aab5-8fcc58246816"
+        },
+        {
+          "operation": "01a10436-8742-7567-945c-ff6cfc00bfdc",
+          "invocation": "3be7efea-7233-4c3c-8130-e21f3604571c"
+        },
+        {
+          "operation": "01a10436-9f6f-7741-bf38-3b1404ea3ab0",
+          "invocation": "6882185e-faf8-485f-9816-c89d3c61116f"
+        },
+        {
+          "operation": "01a10436-a41b-722a-9937-452490f45d0a",
+          "invocation": "17e365f1-670e-483c-a768-41a7d0c467eb"
+        },
+        {
+          "operation": "01a10436-a8c1-77ee-8317-a07cde71d304",
+          "invocation": "0c7a7485-d25f-4804-8ce2-f788f0988226"
+        }
+      ],
+      "parameters": {
+        "process": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "ef6ebb1dabd52eedc9f48dcf56db85b3191d2457b84864c0adbf8aa9182bdf1e",
+          "size_bytes": "933"
+        },
+        "place": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "54f788f8a2f6c4b177536f2fd26bbc7fc0f633bdbd165c3afa5147820bdd3eed",
+          "size_bytes": "1642"
+        },
+        "clamp": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "45e98c69ed2574be86e60dd97b0c6fe65348a26a9564586e35c4878af8861f95",
+          "size_bytes": "1107"
+        },
+        "unload": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "dc62f7692db8b1fe2f6d06368da082af0834f605a6dfe6ddc091fab24101f3cc",
+          "size_bytes": "1646"
+        },
+        "load": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "c6fa0e336a8f0fad4719a8a8556a24ed0233bf373967cec767327b9d0543682d",
+          "size_bytes": "1638"
+        },
+        "open-door": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "27101728c789dbfc46bcf016a589d90cb813d6f8906c1e3f7b861ef4a6dd8a70",
+          "size_bytes": "925"
+        },
+        "rotate-align": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "7bdc96a0d982194a4f6ca07c1a322efc672cb8609a69738fec6a024b56d583ef",
+          "size_bytes": "1055"
+        },
+        "pick": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "74f9f67040f55c9ef26d24ba55133e951ee29744bf680f5e3d37adae566a671d",
+          "size_bytes": "1640"
+        },
+        "close-door": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "32438a73bba7d9e228a9baa5850512538b8ea8078d3b3b256fcdefd6cc5847c3",
+          "size_bytes": "925"
+        }
+      },
+      "reports": [
+        "73b406597d1e5f672bcaade9be7c3e99f89aaf2ac1b94d91bbc7c87e0820024d"
+      ]
+    },
+    {
+      "ordinal": 3,
+      "part": "01a10436-aeb3-7671-b10b-1b0038dcad38",
+      "object": {
+        "catalog": "a86ea3cc-8431-58ac-8401-5c2c63cb532c",
+        "id": "e0731772-674f-4265-99ad-68cd4b5eedcb",
+        "revision": "1",
+        "digest": "ae8be10fc6448e5f6337aa03b7f84a7759e4921dbacfbe64e796a7d231c6e373"
+      },
+      "slot": 2,
+      "nodes": [
+        "pick",
+        "load",
+        "rotate-align",
+        "clamp",
+        "close-door",
+        "process",
+        "open-door",
+        "unload",
+        "place"
+      ],
+      "operation_invocation_pairs": [
+        {
+          "operation": "01a10436-b04b-7246-9a6e-cfb9f956736d",
+          "invocation": "5559e6fa-588c-4350-a861-adf1f95971e6"
+        },
+        {
+          "operation": "01a10436-b514-770c-897b-ca452a648d42",
+          "invocation": "4c251873-46c6-4e4a-b643-499e1d61258a"
+        },
+        {
+          "operation": "01a10436-b9cc-7096-849a-57397c6c0cda",
+          "invocation": "eaf5687e-7dc6-4320-b086-2240de82838a"
+        },
+        {
+          "operation": "01a10436-be77-771c-8fd5-3558f421163c",
+          "invocation": "89b91e44-0665-443b-af17-9be60658773d"
+        },
+        {
+          "operation": "01a10436-c367-74a1-b258-04d7697bf3f8",
+          "invocation": "cad62be2-9bc3-4683-9675-fd8aefb5a203"
+        },
+        {
+          "operation": "01a10436-c811-7451-a8ca-80c779795238",
+          "invocation": "7958d2a0-7114-4665-a386-5f77f93ca1b8"
+        },
+        {
+          "operation": "01a10436-e0e6-7775-abbc-2ce2e9929341",
+          "invocation": "7f79b00d-1def-481d-a6bc-416fed11da11"
+        },
+        {
+          "operation": "01a10436-e5a8-73fc-b126-0a8a824fba84",
+          "invocation": "204f6b43-57f6-4605-9eb3-285e22276ef3"
+        },
+        {
+          "operation": "01a10436-eae5-71bd-8887-0d14f64d2c1c",
+          "invocation": "d0354d54-5f62-4a89-851e-43e40c09fac4"
+        }
+      ],
+      "parameters": {
+        "load": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "ce41155d08f86637429e068c2b48cf4ecac86411eec958cdf2da207a1641e6be",
+          "size_bytes": "1638"
+        },
+        "unload": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "0633ba09e12a4f8e3a6bbb754fe116cf107a062e845520ef415acdedd03e9eb2",
+          "size_bytes": "1646"
+        },
+        "rotate-align": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "d383bfcc8b27bf85ab589d1faef4b29711f6feaf7433da95b7e0e6c556694518",
+          "size_bytes": "1055"
+        },
+        "open-door": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "2b3d892802d7a522b7a97ac58bcd537762a693fc012eb02968b4d82eb15811a2",
+          "size_bytes": "925"
+        },
+        "close-door": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "c916a202e8006619dc02e6d3db449858f52950f7b39c9a57d99158e3c658a276",
+          "size_bytes": "925"
+        },
+        "clamp": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "962c6cb31d07549f2ef277bffc44ae25034427be6ec7fab5e2877e1e84f87dce",
+          "size_bytes": "1107"
+        },
+        "pick": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "678af15270cd066023c40186dcc072df8cb9c7fa05c509ead61ad1d142f1613e",
+          "size_bytes": "1640"
+        },
+        "place": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "633ebe8b72fad3441a0831ae112445a9963aee1b1f11728905b55752a5eb1052",
+          "size_bytes": "1642"
+        },
+        "process": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "bc7b6f16d1cda7e8020b9148a840d695e73bbf02f0f55c72a2cfff82c4fb1e78",
+          "size_bytes": "933"
+        }
+      },
+      "reports": [
+        "ec2d16adc29cc00df7287ea6e02fcf1a281534dd328471d59b6527c2670d655e"
+      ]
+    }
+  ],
+  "effect_rows": 27,
+  "unique_operations": 27,
+  "unique_operation_invocation_pairs": 27,
+  "native_order_matches_each_part": true,
+  "device_ids_match_product_records": true,
+  "reopened_reports_equal": true,
+  "same_request_replay_added_effects": 0,
+  "receipt_sha256": "aadb31cb58667baead2b10aaf31de56326dad9268195e53d54504c0bccf6539e",
+  "effects_sha256": "2a12ceea210fa3aa65140d0ed92c203aa3791ee562f9d37064b388f2efbeb124",
+  "cp3_started": false
+}

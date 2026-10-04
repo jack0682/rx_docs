@@ -1,0 +1,97 @@
+{
+  "schema": "rx.f2-checkpoint1-design-baseline.v1",
+  "date": "2026-10-04",
+  "checkpoint": "CP1_DOCS_ONLY",
+  "status": "READY_FOR_USER_REVIEW",
+  "user_acceptance": "NOT_ACCEPTED",
+  "execution_provenance": {
+    "author_and_precheck_executor": "Codex",
+    "acceptance_decision_by": "User"
+  },
+  "platform": "4fd1c16631d819b9eb776de92d7fc366af4439f3",
+  "solutions": "45dc6eac4befbffd38615575477152baa5361411",
+  "docs_base": "08993578",
+  "retained_first_commit": "cc121ef3ac0a493bef94df709cd1f86db1b82225",
+  "cp1_cp2_provenance_commit": "d0371ca8315b7b591a1efc8a174f938eaccf0dfc",
+  "cp1_product_source_changes": {
+    "platform_files": 0,
+    "solutions_files": 0,
+    "added_lines": 0,
+    "deleted_lines": 0
+  },
+  "seams": {
+    "pairs": 18,
+    "references": 31,
+    "command": "python3 tools/check_engine_boundaries.py",
+    "result": "PASS",
+    "limitation": "Static boundary check, not type resolution or runtime proof"
+  },
+  "f0_s1": {
+    "files": 6,
+    "physical_lines": 63,
+    "commands": 12,
+    "backend_probe": {
+      "files": 3,
+      "lines": 26
+    },
+    "python_alternative": {
+      "files": 3,
+      "lines": 37
+    },
+    "outcome": "Independent backend refused; Python alternative is not external adapter registration"
+  },
+  "registry_cost": null,
+  "s1_extension_cost": null,
+  "unmeasured_reason": "Registry and S1 implementation await CP1 user acceptance",
+  "existing_execution_v2_sha256": {
+    "docs/contracts/workflow-execution/v2/README.md": "41d0e5bea9d0bee97bcffcefa3fe400b385d6d81b7f487e678c66046071acb5c",
+    "docs/contracts/workflow-execution/v2/executor-admission.md": "4f2443681ad2346decadc46a96f4f14dd86e3ad39a99fef34eab6558d7ee2700",
+    "docs/contracts/workflow-execution/v2/host-input-membership.md": "1511434e3b6d39a42acf2281dc92ee8d2ebb77893df440284e46b3da49e8f8a6",
+    "docs/contracts/workflow-execution/v2/host-qualification.md": "9937b0cc88625d532af29bbc916cf623764d112f5fa1983f82b75090b8701e59",
+    "docs/contracts/workflow-execution/v2/legacy-isolation.md": "646f35bd88a4e85da4e3a33f6c26528be8c77cae6bb617b0b806f4edfc4a08b4",
+    "docs/contracts/workflow-execution/v2/manifest.json": "ec37b11a61fdeebd909a0dbe0ccb8048e3a396ed134e6ec4a87bdeb24d403ae1",
+    "docs/contracts/workflow-execution/v2/native-completion.md": "31bd14d52b058c725dc4e28794d24030bc08cce9bdc0b8761f03a5beda2af66a",
+    "docs/contracts/workflow-execution/v2/operation-admission.md": "813ca82370d054d75b0a8256d1f9091fc450a5436a3859a2f31c08c9cdd7c50e",
+    "docs/contracts/workflow-execution/v2/python-execution-profile.md": "6392f21da91161b0e9f6a67a1c0c2bcc4991307b7dffd08e069affb2fc6a6ae7",
+    "docs/contracts/workflow-execution/v2/retry-admission.md": "e8ea94f5f6d9a9d58a9189985a271465e9b902046ff6d52f74ed87234032dca5",
+    "docs/contracts/workflow-execution/v2/runtime-binding.md": "a723941e86eef419a308241bfc4b31ced1a5651557d3138b7a7e878edb61eac8"
+  },
+  "decisions": {
+    "unclamp": "Separate node after confirmed same-Part support; 11 nodes total",
+    "held_replacement": "REFUSE",
+    "restart": "Original completion evidence AND current custody evidence; restart alone never clears UNKNOWN",
+    "positive_cp3_fault_window": "After native entry and durable SIM completion, before Host/P completion acceptance; actual adapter kill/hang"
+  },
+  "validation_boundary": "Documentation checks only; no registry, external authoring or recovery execution claimed",
+  "new_parking_items": 1,
+  "cp2_started": false,
+  "cp3_started": false,
+  "prechecks": [
+    {
+      "command": "python3 tools/check_repository.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python3 .github/test_repository.py",
+      "result": "PASS",
+      "tests": 24
+    },
+    {
+      "command": "python3 .github/test_commit_policy.py",
+      "result": "PASS",
+      "tests": 17
+    },
+    {
+      "command": "python3 tools/check_document_tables.py",
+      "result": "PASS"
+    },
+    {
+      "command": "git diff --check",
+      "result": "PASS"
+    },
+    {
+      "check": "Existing execution-v2 files equal Docs base bytes and recorded SHA-256",
+      "result": "PASS"
+    }
+  ]
+}

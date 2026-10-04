@@ -30,3 +30,7 @@
 - dense/my-tray 슬롯 z=0.0 vs surface_height 900/850 불일치, 정합 제약 미적용. 사용자가 보류 기록을 요청했으며 이번 F1′ 계획 작성에서 데이터나 계산식을 수정하지 않는다.
 - F1′에서 확인한 Cargo 캐시/복사 파일 mtime 불일치의 다른 Docker 빌드 경로 전수 점검: 체크포인트 1에 쓰는 RuntimeSkillValidation 경로만 수정하며, 그 밖의 빌드·캐시 강화는 별도 후속 작업으로 보류한다.
 - amd64 에뮬레이션 111–114ms 관측
+
+## F2′ CP1 범위 결정 — 2026-10-04
+
+- held/UNKNOWN operation의 adapter hot replacement·migration: F2′에서는 선택된 package 교체를 거절하고 동일 digest의 passive restart만 기존 증거·custody 검증으로 다룬다.

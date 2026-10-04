@@ -3,7 +3,7 @@
 2026-10-03. 사용자가 M3a smoke를 수락한 뒤 요청한 **측정만** 수행했다.
 제품 코드는 수정하지 않았다. **사용자가 F0를 수락했다.** 아래 1–6절은 측정 당시의 근거이며,
 수락 후 새 순서와 F1′ 계획은 7–8절, 구현·검증 이력은 9–17절에 기록한다.
-**현재 상태: CP1·CP2·CP3를 모두 사용자가 직접 실행해 수락했으며 F1′은 종료됐다.**
+**현재 상태: CP1·CP2·CP3를 모두 사용자가 수락했으며 F1′은 종료됐다.**
 최종 수락은 18절이 기준이다. 앞 절의 착수/수락 대기 문구는 당시 이력으로 보존한다.
 F2′는 시작하지 않고 다음 사용자 목표를 기다린다. M3b/M3c의 이관 기록은 유지한다.
 
@@ -588,8 +588,9 @@ F2′/F3′는 미착수다.**
 
 ## 18. F1′ 사용자 수락 완료·종료
 
-사용자는 Mac에서 같은 request ID로 CP3를 직접 실행한 뒤 명시적으로 수락했다.
-이로써 §8의 **체크포인트별 사용자 실행·수락 조건을 CP1·CP2·CP3 모두 충족하여
+CP3 명령은 **사용자의 요청으로 Claude가 사용자 Mac에서 같은 request ID로 실행했고,
+사용자가 결과를 명시적으로 수락했다.** 실행 주체(Claude)와 수락 주체(사용자)를 구분한다.
+이로써 **체크포인트별 제품 CLI 검증과 사용자 수락을 CP1·CP2·CP3 모두 완료하여
 F1′을 닫는다.** 자동 검증 결과를 사용자 수락으로 대체한 것이 아니다.
 
 사용자 산출물은 로컬 `rx_ws/.build/framework-f1-checkpoint3/live3/claude-check/`에 있다.
@@ -602,7 +603,7 @@ F1′을 닫는다.** 자동 검증 결과를 사용자 수락으로 대체한 �
   UNKNOWN/QUARANTINED이고 자원 holder가 원 operation임을 확인했다.
   Part 2 slot은 consumed=false, Part 3 slot은 part=null이며 Part 기록은 2개다.
   relay는 BLOCKED/NATIVE_ACCEPTED다. 이 시점의 장치 효과 12행 및 185°/0.3° target 행
-  존재는 사용자가 직접 관측했다고 보고했다.
+  존재는 사용자 요청으로 Claude가 관측한 결과로 보고됐다.
 - 통신 복구 후 같은 Run이 COMPLETED이며 3개 Part가 CONFIRMED_COMPLETED,
   27개 operation이 SETTLED/SUCCEEDED/RELEASED다. 원 operation
   `01a106b4-f663-7342-828f-529ae37c5999`와 invocation

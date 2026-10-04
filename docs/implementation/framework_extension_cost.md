@@ -504,3 +504,22 @@ P는 변경 없이 이미 병합·검증된 00fd6599bd3be983ff3cdbead5ef9e5e2e02
 [직접 실행·조회 명령](../../references/2026-10-04-f1-checkpoint2/RUN_CP2.md)을 남겼다.
 사용자용 세 객체는 미사용이며 서비스는 Docker daemon에 분리되어 실행 중이다.
 **CP2 사용자 수락 대기에서 멈춘다. CP3는 시작하지 않았다.**
+
+## 16. CP2 사용자 수락 및 CP3 착수
+
+사용자가 CP2 제품 CLI 실행으로 SIM/COMPLETED, 3개 CONFIRMED_COMPLETED Part,
+27/27 SUCCEEDED·RELEASED, Part별 순서·실제 객체·slot 3/4/5, 신규 27행의
+operation/invocation 27쌍 일치 및 보고서 재열기를 확인하고 수락했다.
+
+CP3는 §8의 결과 전달 손실 경로만 진행한다. N=3을 ECC_51 / ECC_99 / ECC_51로
+구성하고, Part 2 rotate-align에서 실제 native 진입 후 P로의 receipt/result와
+같은 operation의 evidence 전달을 보류한다. Host·worker와 보통의 source 관측은
+유지한다. P 상태나 결과를 조작하지 않는 외부 SIM 전송 제어를 사용한다.
+제품 CLI에서 UNKNOWN·실제 자원/slot 보유·Part 3 미시작을 확인한 뒤 통신을 복구하고,
+원 operation/invocation의 기존 조회·정산으로 Part 2 잔여 단계 및 Part 3을 완료한다.
+재발행과 새 operation을 통한 대체는 하지 않는다.
+
+혼합 모델의 기존 치수·힘·process 시간은 유지하고, rotation용 object 속성은
+서명 패키지 데이터로 구분한다. 각 Part의 실제 선택값과 원 ID를 장치 기록 및
+재열린 Run/report/parameter 참조에 대조한다. 다른 항목은 추가하지 않으며
+CI·DCO 후 P→S develop 병합과 제품 CLI 인계 뒤 사용자 수락 대기에서 멈춘다.

@@ -1,0 +1,57 @@
+{
+  "schema": "rx.f1-user-acceptance.v1",
+  "status": "ACCEPTED_AND_CLOSED",
+  "accepted_by": "User explicitly in this conversation",
+  "recorded_at": "2026-10-04T11:42:09.340807+00:00",
+  "scope": "F1-prime checkpoints 1, 2 and 3; SIM only",
+  "cp3_run": "01a106b4-968e-752f-897a-7a2f0294f165",
+  "request_id": "f071c378-3f18-4bfc-a1f0-4a4d42d6a026",
+  "target_operation": "01a106b4-f663-7342-828f-529ae37c5999",
+  "target_invocation": "1883b13c-7c9c-49cc-b6db-73d6d5164af8",
+  "user_report": {
+    "host": "Mac",
+    "first_exit_code": 2,
+    "unknown_effect_rows": 12,
+    "target_185_deg_0_3_deg_effect_already_present": true
+  },
+  "artifact_checks": {
+    "unknown_target_only": true,
+    "original_resource_holder": true,
+    "part2_slot_held": true,
+    "part3_not_started": true,
+    "completed_parts": 3,
+    "settled_succeeded_released_operations": 27,
+    "new_effect_rows": 27,
+    "unique_operation_invocation_pairs": 27,
+    "matching_invocations": true,
+    "target_effect_rows": 1,
+    "mixed_model_values_and_order_match": true,
+    "reconciliation": "COMPLETE",
+    "reopen_changed_paths": [
+      "result.observed_at.ticks_ns",
+      "result.snapshot_id"
+    ],
+    "approved_reports_equal": true
+  },
+  "local_source": "rx_ws/.build/framework-f1-checkpoint3/live3/claude-check/",
+  "source_sha256": {
+    "arm.json": "5eff82c6d77c3a2deca49cc0b831d0c9b9574cbb517310fc62b72d4c2b214938",
+    "completed.json": "bc8173ecda49b69c3893207f17a629faf9f50691dfc3a038c4895710dd3021f9",
+    "completed.stderr": "d1e8bf8d0aa4defebf0d09a7b1740d639f4a69860614c43891e8cf17c6788da7",
+    "completed.stdout": "4fa5316fde3071f14c825bbd642d34f2ba502a2d13f0edde5eaea53e5842ab2f",
+    "effects-after.jsonl": "d9c51c9da65312c4319a2d0095fa3f94725c7d0b82b48b02e78c714e513ac806",
+    "effects-before.txt": "932ab0a0e4191d32c0af7b3f565b7b180dbe9869378abc5816f9add54b806e7f",
+    "fault-status.json": "60229f29d0757dd3ed9a9ea1c395d14496a23921bd5c708e01f1869eb17cd413",
+    "held.json": "63f4bdd8039cb36379fc6871b74063c5c78524f2cbc34c02e4ae6f2d9390b636",
+    "held.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "release.json": "32c893a6f8f61f8d037bd04332d56468e1ae2dc91dec0c07e644520c12e4660a",
+    "reopened.json": "dfbe48acc9747aeda3a3f070621e453104ed33e0761b4dd7266c8dd5533a19a1",
+    "reopened.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "unknown.json": "06a12beb4b8fd8e2dfefb24e4bf149571ba99ff47d25c6a31efafae3bca34175",
+    "unknown.stderr": "d1e8bf8d0aa4defebf0d09a7b1740d639f4a69860614c43891e8cf17c6788da7",
+    "unknown.stdout": "7727c0818478d688d65692e9df323bcefa8ad2a5f141f8d17f98c577acf8b43b"
+  },
+  "next_work": "WAIT_FOR_NEXT_GOAL",
+  "F2_prime": "NOT_STARTED",
+  "F3_prime": "NOT_STARTED"
+}

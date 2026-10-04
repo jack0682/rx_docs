@@ -2,10 +2,12 @@
 
 2026-10-03. 사용자가 M3a smoke를 수락한 뒤 요청한 **측정만** 수행했다.
 제품 코드는 수정하지 않았다. **사용자가 F0를 수락했다.** 아래 1–6절은 측정 당시의 근거이며,
-수락 후 새 순서와 F1′ 검토용 계획은 7–8절에 기록한다. F1′ 계획은 아래의 체크포인트별 수락 조건으로 승인됐다. 현재 착수 범위는 체크포인트 1이며,
-계약 개정이 필요한 부분은 별도 승인 전까지 구현하지 않는다. M3b/M3c의 이관 기록은 유지한다.
+수락 후 새 순서와 F1′ 계획은 7–8절, 구현·검증 이력은 9–17절에 기록한다.
+**현재 상태: CP1·CP2·CP3를 모두 사용자가 직접 실행해 수락했으며 F1′은 종료됐다.**
+최종 수락은 18절이 기준이다. 앞 절의 착수/수락 대기 문구는 당시 이력으로 보존한다.
+F2′는 시작하지 않고 다음 사용자 목표를 기다린다. M3b/M3c의 이관 기록은 유지한다.
 
-**관측 결론:** S3는 데이터만으로 추가·해석됐다. S2의 새 Task 이름·속성·규칙·Skill 매핑도
+**F0 측정 당시 관측 결론:** S3는 데이터만으로 추가·해석됐다. S2의 새 Task 이름·속성·규칙·Skill 매핑도
 기존 저작/해석/컴파일 경로가 받아들였다. S1의 독립 backend는 배포 Host의 닫힌 선택지에서
 막혔다. 다만 Python finite-skill로 감싸는 대안은 이미 있다. 이 대안을 새 NativeAdapter 등록의
 성공으로 바꾸어 기록하지 않는다. 세 확장의 전체 운전/UNKNOWN 복구는 입증하지 않았다.
@@ -582,3 +584,32 @@ SUCCEEDED/RELEASED 및 reconciliation COMPLETE가 됐다. Part 3은 UNKNOWN 중
 사용자용 혼합 세 객체는 미사용이며 네 서비스는 Docker daemon에 분리 실행 중이다.
 **CP3 사용자 수락 대기에서 멈춘다. F1′ 전체 수락은 아직 주장하지 않는다.
 F2′/F3′는 미착수다.**
+
+
+## 18. F1′ 사용자 수락 완료·종료
+
+사용자는 Mac에서 같은 request ID로 CP3를 직접 실행한 뒤 명시적으로 수락했다.
+이로써 §8의 **체크포인트별 사용자 실행·수락 조건을 CP1·CP2·CP3 모두 충족하여
+F1′을 닫는다.** 자동 검증 결과를 사용자 수락으로 대체한 것이 아니다.
+
+사용자 산출물은 로컬 `rx_ws/.build/framework-f1-checkpoint3/live3/claude-check/`에 있다.
+[수락 기록](../../references/2026-10-04-f1-checkpoint3/user-acceptance.json)에 사용자 보고,
+읽기 전용으로 대조한 결과, 원 파일별 SHA-256을 구분해 남겼다.
+사용자 Run은 `01a106b4-968e-752f-897a-7a2f0294f165`, request는
+`f071c378-3f18-4bfc-a1f0-4a4d42d6a026`이다.
+
+- 최초 run은 사용자 보고상 rc=2였다. 저장된 제품 기록에서 Part 2 rotate-align만
+  UNKNOWN/QUARANTINED이고 자원 holder가 원 operation임을 확인했다.
+  Part 2 slot은 consumed=false, Part 3 slot은 part=null이며 Part 기록은 2개다.
+  relay는 BLOCKED/NATIVE_ACCEPTED다. 이 시점의 장치 효과 12행 및 185°/0.3° target 행
+  존재는 사용자가 직접 관측했다고 보고했다.
+- 통신 복구 후 같은 Run이 COMPLETED이며 3개 Part가 CONFIRMED_COMPLETED,
+  27개 operation이 SETTLED/SUCCEEDED/RELEASED다. 원 operation
+  `01a106b4-f663-7342-828f-529ae37c5999`와 invocation
+  `1883b13c-7c9c-49cc-b6db-73d6d5164af8`가 유지되고 reconciliation은 COMPLETE다.
+- 신규 27개 장치 행의 operation/invocation 쌍이 제품 기록과 모두 일치하고 target 효과는
+  한 행뿐이다. ECC_51/ECC_99/ECC_51의 값과 Part별 9단계 순서도 일치했다.
+  재열린 제품 result는 snapshot_id와 observed_at.ticks_ns만 달랐고 승인 보고서는 같았다.
+
+이 수락은 기록된 SIM 경로에 대한 것이다. 기존 실패·수정·이관·parking 근거는 보존한다.
+**F2′·F3′는 시작하지 않는다. 다음 사용자 목표가 올 때까지 추가 구현이나 계획을 진행하지 않는다.**

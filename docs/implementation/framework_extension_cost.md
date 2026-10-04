@@ -3,9 +3,10 @@
 2026-10-03. 사용자가 M3a smoke를 수락한 뒤 요청한 **측정만** 수행했다.
 제품 코드는 수정하지 않았다. **사용자가 F0를 수락했다.** 아래 1–6절은 측정 당시의 근거이며,
 수락 후 새 순서와 F1′ 계획은 7–8절, 구현·검증 이력은 9–17절에 기록한다.
-**현재 상태: CP1·CP2·CP3를 모두 사용자가 직접 실행해 수락했으며 F1′은 종료됐다.**
+**현재 상태: CP1·CP2·CP3를 모두 사용자가 수락했으며 F1′은 종료됐다.**
 최종 수락은 18절이 기준이다. 앞 절의 착수/수락 대기 문구는 당시 이력으로 보존한다.
-F2′는 시작하지 않고 다음 사용자 목표를 기다린다. M3b/M3c의 이관 기록은 유지한다.
+F2′는 2026-10-04 후속 목표로 재개했으며 현재 CP1 Docs 검토 단계다(19절).
+M3b/M3c의 이관 기록은 유지한다.
 
 **F0 측정 당시 관측 결론:** S3는 데이터만으로 추가·해석됐다. S2의 새 Task 이름·속성·규칙·Skill 매핑도
 기존 저작/해석/컴파일 경로가 받아들였다. S1의 독립 backend는 배포 Host의 닫힌 선택지에서
@@ -456,7 +457,8 @@ CP2/3, F2′/F3′는 시작하지 않았다.
 
 ## 14. CP1 사용자 수락 및 CP2 착수 — 2026-10-04
 
-사용자가 제품 CLI로 CP1을 직접 실행하여 수락했다. SIM/COMPLETED, 9/9
+CP1 제품 CLI 명령은 사용자의 요청으로 Claude가 사용자 Mac에서 실행했고,
+사용자가 결과를 수락했다. SIM/COMPLETED, 9/9
 SUCCEEDED·RELEASED, 단계 순서, process 5초 완료, 장치 기록의 95°/0.5° 소비,
 정확히 9줄 증가 및 inspect 일치를 확인했다고 보고했다.
 
@@ -509,9 +511,10 @@ P는 변경 없이 이미 병합·검증된 00fd6599bd3be983ff3cdbead5ef9e5e2e02
 
 ## 16. CP2 사용자 수락 및 CP3 착수
 
-사용자가 CP2 제품 CLI 실행으로 SIM/COMPLETED, 3개 CONFIRMED_COMPLETED Part,
+CP2 제품 CLI 명령은 사용자의 요청으로 Claude가 사용자 Mac에서 실행했고,
+사용자가 결과를 수락했다. SIM/COMPLETED, 3개 CONFIRMED_COMPLETED Part,
 27/27 SUCCEEDED·RELEASED, Part별 순서·실제 객체·slot 3/4/5, 신규 27행의
-operation/invocation 27쌍 일치 및 보고서 재열기를 확인하고 수락했다.
+operation/invocation 27쌍 일치 및 보고서 재열기가 확인된 것으로 보고됐다.
 
 CP3는 §8의 결과 전달 손실 경로만 진행한다. N=3을 ECC_51 / ECC_99 / ECC_51로
 구성하고, Part 2 rotate-align에서 실제 native 진입 후 P로의 receipt/result와
@@ -588,8 +591,9 @@ F2′/F3′는 미착수다.**
 
 ## 18. F1′ 사용자 수락 완료·종료
 
-사용자는 Mac에서 같은 request ID로 CP3를 직접 실행한 뒤 명시적으로 수락했다.
-이로써 §8의 **체크포인트별 사용자 실행·수락 조건을 CP1·CP2·CP3 모두 충족하여
+CP3 명령은 **사용자의 요청으로 Claude가 사용자 Mac에서 같은 request ID로 실행했고,
+사용자가 결과를 명시적으로 수락했다.** 실행 주체(Claude)와 수락 주체(사용자)를 구분한다.
+이로써 **체크포인트별 제품 CLI 검증과 사용자 수락을 CP1·CP2·CP3 모두 완료하여
 F1′을 닫는다.** 자동 검증 결과를 사용자 수락으로 대체한 것이 아니다.
 
 사용자 산출물은 로컬 `rx_ws/.build/framework-f1-checkpoint3/live3/claude-check/`에 있다.
@@ -602,7 +606,7 @@ F1′을 닫는다.** 자동 검증 결과를 사용자 수락으로 대체한 �
   UNKNOWN/QUARANTINED이고 자원 holder가 원 operation임을 확인했다.
   Part 2 slot은 consumed=false, Part 3 slot은 part=null이며 Part 기록은 2개다.
   relay는 BLOCKED/NATIVE_ACCEPTED다. 이 시점의 장치 효과 12행 및 185°/0.3° target 행
-  존재는 사용자가 직접 관측했다고 보고했다.
+  존재는 사용자 요청으로 Claude가 관측한 결과로 보고됐다.
 - 통신 복구 후 같은 Run이 COMPLETED이며 3개 Part가 CONFIRMED_COMPLETED,
   27개 operation이 SETTLED/SUCCEEDED/RELEASED다. 원 operation
   `01a106b4-f663-7342-828f-529ae37c5999`와 invocation
@@ -613,3 +617,29 @@ F1′을 닫는다.** 자동 검증 결과를 사용자 수락으로 대체한 �
 
 이 수락은 기록된 SIM 경로에 대한 것이다. 기존 실패·수정·이관·parking 근거는 보존한다.
 **F2′·F3′는 시작하지 않는다. 다음 사용자 목표가 올 때까지 추가 구현이나 계획을 진행하지 않는다.**
+
+Superseded by the F2′ goal (2026-10-04)
+
+위 대기는 후속 목표가 설정될 때까지만 유효했다. F2′ 목표가 현재 범위를 결정하며,
+F3′는 계속 미착수다.
+
+## 19. F2′ CP1 — 외부 adapter 계약 검토
+
+2026-10-04 후속 F2′ 목표를 적용했다. CP1은 **Docs만 작성하고 사용자 수락을 기다린다**.
+F1′ 종료와 그 SIM 근거는 유지한다. CP3 실행 주체 정정 `cc121ef3`를 보존하고,
+CP1·CP2의 실행 주체(사용자 요청으로 Claude)와 수락 주체(사용자)도 별도 커밋으로 정정했다.
+수락 전 검증 receipt의 당시 NOT_RUN/READY 상태와 측정값은 덮어쓰지 않았다.
+
+[CP1 계약 제안](f2_adapter_registry_cp1.md)에 package identity/서명/설치·명령/관측 타입,
+Host 소유 protocol과 evidence 조회·재시작 거절 조건을 고정했다.
+**원 완료 증거와 현재 custody 증거가 모두 필요하며 adapter 재시작만으로 UNKNOWN을 해제하지 않는다.**
+unclamp 독립 노드는 포함하고, 보유 중 package 교체는 거절하며 hot replacement는 parking으로 보냈다.
+공통 registry 자체의 P/S 비용과 B1 동결 후 S1 외부 작성 비용을 분리하여
+F0의 6파일/63행/12명령과 비교한다. 아직 registry 구현량·S1 확장량은 미측정이다.
+
+현재 제안은 common execution-v2의 provider별 증거 확장점을 사용하고 기존 Python v2는
+다른 finite skill에 그대로 사용한다. 기존 계약/manifest/trait·P/S 제품 코드 변경은 없다.
+새 ledger/권한/상태기계 또는 seam 증가가 필요해지면 구현하지 않고 중단·질문한다.
+[RUN_CP1](../../references/2026-10-04-f2-checkpoint1/RUN_CP1.md)과
+[기준선 receipt](../../references/2026-10-04-f2-checkpoint1/baseline.json)를 남긴다.
+**CP1 사용자 수락 전 CP2를 시작하지 않는다. 자동 검증 PASS는 수락이 아니다.**

@@ -456,7 +456,8 @@ CP2/3, F2′/F3′는 시작하지 않았다.
 
 ## 14. CP1 사용자 수락 및 CP2 착수 — 2026-10-04
 
-사용자가 제품 CLI로 CP1을 직접 실행하여 수락했다. SIM/COMPLETED, 9/9
+CP1 제품 CLI 명령은 사용자의 요청으로 Claude가 사용자 Mac에서 실행했고,
+사용자가 결과를 수락했다. SIM/COMPLETED, 9/9
 SUCCEEDED·RELEASED, 단계 순서, process 5초 완료, 장치 기록의 95°/0.5° 소비,
 정확히 9줄 증가 및 inspect 일치를 확인했다고 보고했다.
 
@@ -509,9 +510,10 @@ P는 변경 없이 이미 병합·검증된 00fd6599bd3be983ff3cdbead5ef9e5e2e02
 
 ## 16. CP2 사용자 수락 및 CP3 착수
 
-사용자가 CP2 제품 CLI 실행으로 SIM/COMPLETED, 3개 CONFIRMED_COMPLETED Part,
+CP2 제품 CLI 명령은 사용자의 요청으로 Claude가 사용자 Mac에서 실행했고,
+사용자가 결과를 수락했다. SIM/COMPLETED, 3개 CONFIRMED_COMPLETED Part,
 27/27 SUCCEEDED·RELEASED, Part별 순서·실제 객체·slot 3/4/5, 신규 27행의
-operation/invocation 27쌍 일치 및 보고서 재열기를 확인하고 수락했다.
+operation/invocation 27쌍 일치 및 보고서 재열기가 확인된 것으로 보고됐다.
 
 CP3는 §8의 결과 전달 손실 경로만 진행한다. N=3을 ECC_51 / ECC_99 / ECC_51로
 구성하고, Part 2 rotate-align에서 실제 native 진입 후 P로의 receipt/result와

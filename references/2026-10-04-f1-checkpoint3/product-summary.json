@@ -1,0 +1,228 @@
+{
+  "environment": "SIMULATION",
+  "runtime_arch": "linux/arm64",
+  "run": "01a1066b-a7c2-73a3-b77a-4c1500330421",
+  "state": "COMPLETED",
+  "parts": [
+    {
+      "ordinal": 1,
+      "model": "ECC_51",
+      "object": {
+        "catalog": "a86ea3cc-8431-58ac-8401-5c2c63cb532c",
+        "id": "e250012d-2255-4d6f-adab-aab457350d2f",
+        "revision": "1",
+        "digest": "920d0d54b0a8d80d3f505ed98e09b1ddb8d26fe959ff5f389f8f6a2c2db2d795"
+      },
+      "slot": 0,
+      "grasp_width_mm": 47,
+      "grip_force_N": 25,
+      "angle_deg": 95,
+      "tolerance_deg": 0.5,
+      "duration_s": 5,
+      "operations": [
+        {
+          "node": "pick",
+          "operation": "01a1066b-af8e-7405-9174-187122722571",
+          "invocation": "03028b9b-5b5a-4a05-8c21-9dd38682ef93"
+        },
+        {
+          "node": "load",
+          "operation": "01a1066b-b5e5-7023-ab1c-5b1b0fce12ef",
+          "invocation": "266b06c0-f8b9-43e2-b976-e2859a250b16"
+        },
+        {
+          "node": "rotate-align",
+          "operation": "01a1066b-bc3e-7636-b94d-bca56ec74678",
+          "invocation": "6b56a891-cbfa-40b5-b61c-4d600e9412bb"
+        },
+        {
+          "node": "clamp",
+          "operation": "01a1066b-c17c-7112-ba81-b8e9817b4e5c",
+          "invocation": "2d29a298-3963-4cf8-860d-f1280f3dd920"
+        },
+        {
+          "node": "close-door",
+          "operation": "01a1066b-c6c0-7482-922d-f6da454b62f4",
+          "invocation": "5f4fe900-ef2d-4371-b9ec-34e923315eab"
+        },
+        {
+          "node": "process",
+          "operation": "01a1066b-cc25-778e-bb1c-0a028e356aa8",
+          "invocation": "2f004002-d53d-426e-8748-b4d23e881ff9"
+        },
+        {
+          "node": "open-door",
+          "operation": "01a1066b-e614-7573-851d-e3f08fd8c5f5",
+          "invocation": "a1aa06c3-baa5-474d-9b74-89e0d710781c"
+        },
+        {
+          "node": "unload",
+          "operation": "01a1066b-ec73-766a-84a3-e92fe8a25365",
+          "invocation": "8944a106-6002-490d-93bc-63773b463f32"
+        },
+        {
+          "node": "place",
+          "operation": "01a1066b-f2ea-7534-9fa9-e0c8481a7003",
+          "invocation": "81b4a8a0-7ae2-43d7-b255-d00e6f3a32b0"
+        }
+      ]
+    },
+    {
+      "ordinal": 2,
+      "model": "ECC_99",
+      "object": {
+        "catalog": "a86ea3cc-8431-58ac-8401-5c2c63cb532c",
+        "id": "fed630bc-2971-4252-9226-eb9ab3293b81",
+        "revision": "1",
+        "digest": "58d1c315909d6f480fc427f3834e181caec627cbc1e87430bf37cbee8942dfca"
+      },
+      "slot": 1,
+      "grasp_width_mm": 77,
+      "grip_force_N": 17.5,
+      "angle_deg": 185,
+      "tolerance_deg": 0.3,
+      "duration_s": 7,
+      "operations": [
+        {
+          "node": "pick",
+          "operation": "01a1066b-fb9c-77c5-97ac-00fbe5aa1fc0",
+          "invocation": "440f0231-9f47-4530-9660-b136e75bb3f6"
+        },
+        {
+          "node": "load",
+          "operation": "01a1066c-0210-769e-b3f5-7a55ddbd5b10",
+          "invocation": "e81cbefd-f7e5-45a6-815f-ec20be48baf8"
+        },
+        {
+          "node": "rotate-align",
+          "operation": "01a1066c-075e-7362-ba64-d31c8a6c46ce",
+          "invocation": "1aa0619a-6362-407e-91aa-beafdff2de32"
+        },
+        {
+          "node": "clamp",
+          "operation": "01a1066d-07e4-75fe-a3e9-f64a26514847",
+          "invocation": "1ba4a505-3bca-4ffb-83ad-fd6e0d16902f"
+        },
+        {
+          "node": "close-door",
+          "operation": "01a1066d-0e4b-73dd-94f6-284812ddb1c2",
+          "invocation": "0a80b903-a68c-4646-9714-d2c1b2e5473c"
+        },
+        {
+          "node": "process",
+          "operation": "01a1066d-13a0-75e9-879a-0ee3f1ee8073",
+          "invocation": "4d2dc322-4d87-4a28-838f-16efa9d3f28d"
+        },
+        {
+          "node": "open-door",
+          "operation": "01a1066d-350e-77ad-8d08-6b32ec7f5896",
+          "invocation": "9afbe9f6-69dd-41d9-b547-1f945e75a4d8"
+        },
+        {
+          "node": "unload",
+          "operation": "01a1066d-3a70-74e5-9b80-3eb349cae0aa",
+          "invocation": "1dc98362-b54a-4062-9452-bd40649aacdf"
+        },
+        {
+          "node": "place",
+          "operation": "01a1066d-3fcb-7339-aec8-b6f48859ecd1",
+          "invocation": "35f1cb77-82eb-423c-918b-db6732aecfeb"
+        }
+      ]
+    },
+    {
+      "ordinal": 3,
+      "model": "ECC_51",
+      "object": {
+        "catalog": "a86ea3cc-8431-58ac-8401-5c2c63cb532c",
+        "id": "45cf57d2-22bb-4b64-a64c-5190060d3699",
+        "revision": "1",
+        "digest": "1cd41ac9184834bec3cecf583e4dd6bedc7e4a48ebdbb1aecf3ca8713113e998"
+      },
+      "slot": 2,
+      "grasp_width_mm": 47,
+      "grip_force_N": 25,
+      "angle_deg": 95,
+      "tolerance_deg": 0.5,
+      "duration_s": 5,
+      "operations": [
+        {
+          "node": "pick",
+          "operation": "01a1066d-4834-720e-8a1e-14bdec55ad82",
+          "invocation": "c9e1f06a-86d9-4dc0-9722-2dc25de621bc"
+        },
+        {
+          "node": "load",
+          "operation": "01a1066d-4d92-7427-a7c7-8f8bede6a58f",
+          "invocation": "fe04bc7a-cc25-4edb-a25e-3a51c4eeb5e7"
+        },
+        {
+          "node": "rotate-align",
+          "operation": "01a1066d-5452-71ea-99ae-34dc4184c821",
+          "invocation": "f77f9507-45e1-410e-95b9-21abd11f6b55"
+        },
+        {
+          "node": "clamp",
+          "operation": "01a1066d-59a7-7653-a8e0-2dc5e24fc428",
+          "invocation": "fed245fd-f6a8-4442-a2fb-32d0bd91892f"
+        },
+        {
+          "node": "close-door",
+          "operation": "01a1066d-5f03-712a-b885-93d06ca696a1",
+          "invocation": "c3fccf0c-60d0-43cd-bce0-1c5c438b08a6"
+        },
+        {
+          "node": "process",
+          "operation": "01a1066d-647d-77d0-8e18-65e7cd391ac7",
+          "invocation": "381289c1-4cb2-46db-828b-d8d4abb442bf"
+        },
+        {
+          "node": "open-door",
+          "operation": "01a1066d-7e01-723e-a75c-20370a22e94b",
+          "invocation": "10ffcccc-1511-457d-b314-e8806fd392d2"
+        },
+        {
+          "node": "unload",
+          "operation": "01a1066d-835d-772a-a62f-3cd1dc52b381",
+          "invocation": "3c1ea736-0575-41cb-9bb3-ff09ba123b39"
+        },
+        {
+          "node": "place",
+          "operation": "01a1066d-88c1-7597-9f5c-31fb5592deae",
+          "invocation": "648c90e0-9527-41ce-b1b6-fbc300c14e3c"
+        }
+      ]
+    }
+  ],
+  "unknown": {
+    "operation": "01a1066c-075e-7362-ba64-d31c8a6c46ce",
+    "invocation": "1aa0619a-6362-407e-91aa-beafdff2de32",
+    "knowledge": "UNKNOWN",
+    "disposition": "QUARANTINED",
+    "resource_holder_matches": true,
+    "part2_slot_held": true,
+    "part3_not_started": true,
+    "effect_rows": 12
+  },
+  "recovered": {
+    "operation": "01a1066c-075e-7362-ba64-d31c8a6c46ce",
+    "invocation": "1aa0619a-6362-407e-91aa-beafdff2de32",
+    "state": "SUCCEEDED/RELEASED",
+    "reconciliation": {
+      "cell": "cell/a",
+      "generation": "1",
+      "host": "host/sim",
+      "id": "01a1066d-056c-7405-a66c-e17b1a01a528",
+      "issue": null,
+      "operation": "01a1066c-075e-7362-ba64-d31c8a6c46ce",
+      "requested_by": "executor",
+      "state": "COMPLETE"
+    },
+    "authorization_forward_count": 1
+  },
+  "effect_rows": 27,
+  "unique_operation_invocation_pairs": 27,
+  "device_ids_match_product_records": true,
+  "receipt_sha256": "ac49e6461d8515bc468b0d4d389d4f2fad069717717142abe0692d2da52b38d4",
+  "effects_sha256": "09af97c21ddb93f4c4921b05ca6711540149013501dafdf3283a19616c230d28"
+}

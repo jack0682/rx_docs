@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-05",
+  "executor": "Codex",
+  "acceptance_decision_by": "User",
+  "cp1_acceptance": "ACCEPTED_WITH_THREE_CONDITIONS",
+  "cp2_acceptance": "NOT_ACCEPTED",
+  "scope": "Product CLI inspection only; no two-Host Run",
+  "host_binary_sha256": "f0e2792bf2e3511b93889a0e27f6dfc3d53c2856bbdb308533333c1857fa8993",
+  "baseline": {
+    "condition_ids": [
+      "sim/ready"
+    ],
+    "rc": 0,
+    "native_processes_started": 0
+  },
+  "support_guard": {
+    "condition_ids": [
+      "sim/ready",
+      "gripper.part_held"
+    ],
+    "rc": 1,
+    "stderr": "Error: \"Python execution template bindings differ\"\n"
+  },
+  "environment": {
+    "network": "none",
+    "mounts": "existing Host volumes, all read-only",
+    "writes": "temporary config copies in disposable container"
+  },
+  "products_modified": [],
+  "two_host_run": "NOT_PERFORMED",
+  "registry_implementation": "NOT_STARTED",
+  "s1_authoring": "NOT_STARTED",
+  "stop_condition": "User condition 2: current support observations/robot primitives insufficient",
+  "record_kind": "Summary transcribed from the observed product CLI output"
+}

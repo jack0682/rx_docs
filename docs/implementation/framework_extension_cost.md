@@ -5,7 +5,7 @@
 수락 후 새 순서와 F1′ 계획은 7–8절, 구현·검증 이력은 9–17절에 기록한다.
 **현재 상태: CP1·CP2·CP3를 모두 사용자가 수락했으며 F1′은 종료됐다.**
 최종 수락은 18절이 기준이다. 앞 절의 착수/수락 대기 문구는 당시 이력으로 보존한다.
-F2′는 2026-10-04 후속 목표로 재개했으며 현재 CP1 Docs 검토 단계다(19절).
+F2′는 2026-10-05 CP1 조건부 수락 후 CP2 선행 점검에서 지원 관측 연결의 차단점을 확인했다(20절).
 M3b/M3c의 이관 기록은 유지한다.
 
 **F0 측정 당시 관측 결론:** S3는 데이터만으로 추가·해석됐다. S2의 새 Task 이름·속성·규칙·Skill 매핑도
@@ -643,3 +643,20 @@ F0의 6파일/63행/12명령과 비교한다. 아직 registry 구현량·S1 확�
 [RUN_CP1](../../references/2026-10-04-f2-checkpoint1/RUN_CP1.md)과
 [기준선 receipt](../../references/2026-10-04-f2-checkpoint1/baseline.json)를 남긴다.
 **CP1 사용자 수락 전 CP2를 시작하지 않는다. 자동 검증 PASS는 수락이 아니다.**
+
+## 20. F2′ CP1 조건부 수락·CP2 선행 점검 — 2026-10-05
+
+사용자가 CP1을 세 조건으로 수락했다. CP2 외부 저작 전에 코드 변경 없이 제품 CLI로
+같은 Run의 두 Host 분산 실행을 입증하고, unclamp 전 지지는 기존 관측/guard/로봇 primitive로만
+표현한다. 불충분하면 중단·질문하며 multi-Host 수정은 registry 비용에 포함하지 않는다.
+CP3에는 Host B clamp UNKNOWN 동안 Host A 미진행과, 완료 기록 전 adapter 종료 후
+UNKNOWN·무재발행·Run 미진행을 유지하는 별도 미완료 사례를 포함한다.
+
+Codex가 설치 제품 `rx-hostd inspect`로 지원 guard 선행 검사를 실행했다.
+원 Python 설정 rc=0, 복사한 binding에 `gripper.part_held`를 추가한 설정 rc=1
+(`Python execution template bindings differ`)이었다. 기존 Python builtin의 native source는
+ready/sim/ready에 한정되고 S2의 지지 확보·unclamp·인출은 unload 내부에 함께 있다.
+조건 2에 따라 여기서 구현을 중단한다. **두 Host 실제 Run은 아직 미검증**이며
+registry 또는 S1 작성, P/S 수정, CP3 주입은 하지 않았다.
+[근거·재현·단일 권고안](f2_cp2_prerequisites.md)을 검토 후 다음 범위를 결정한다.
+실행 주체는 Codex, CP1 수락 주체는 사용자다. 이번 선행 검사는 CP2 수락이 아니다.

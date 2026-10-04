@@ -1,12 +1,20 @@
 # F2′ CP1 — external adapter package contract proposal
 
-2026-10-04 · Docs only · **READY FOR USER REVIEW; NOT ACCEPTED; NOT IMPLEMENTED**.
+2026-10-04 · Docs only · **ACCEPTED WITH CONDITIONS on 2026-10-05; NOT IMPLEMENTED**.
+
+The user accepted CP1 with three conditions: prove one Run across two existing Hosts by
+product CLI before CP2 authoring, without code changes; express support before unclamp only
+through existing observations/guards and robot primitives; and add a separate CP3 kill
+after entry but before durable completion that remains UNKNOWN without reissue/advancement.
+CP3 must also show Host A does not advance while Host B's clamp is UNKNOWN. If the first
+two prerequisites need changes or new semantics, stop and ask; multi-Host changes cannot
+be charged to registry cost. [Current prerequisite finding](f2_cp2_prerequisites.md).
 
 The purpose is to add the S1 simulated pneumatic chuck through an installed package to
 the same released `rx-hostd`, without S1-specific platform or solutions source changes.
 The general registry is framework work; its cost is measured separately. CP1 fixes the
 design and measurement boundary. It does not establish that registration or recovery works.
-The user must accept this checkpoint before CP2 starts. Review steps are in
+That conditional acceptance permits CP2 prerequisite checks, not bypass of a failed prerequisite. Review steps are in
 [RUN_CP1.md](../../references/2026-10-04-f2-checkpoint1/RUN_CP1.md).
 
 ## 1. Existing meaning and ownership remain fixed

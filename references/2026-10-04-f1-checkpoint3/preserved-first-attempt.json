@@ -1,0 +1,16 @@
+{
+  "failed_run": "01a10642-19b2-7222-a808-f57ef6caa071",
+  "target_operation": "01a10642-7f3d-729d-ba31-f294b8c56e83",
+  "target_invocation": "2d4d6068-a5d0-47cf-b4c0-20bddcbf2b14",
+  "target_reconciled": "SUCCEEDED/RELEASED/COMPLETE",
+  "later_clamp": "01a10643-807b-7341-a4f2-4a911a819463",
+  "permit_issued_boottime_ns": 237115909605056,
+  "permit_expires_boottime_ns": 237116909605056,
+  "host_prepare_boottime_ns": 237116389142764,
+  "estimated_runner_open_boottime_ns": 237116906632745,
+  "estimated_remaining_ms": 2.972311,
+  "estimate_assumption": "filesystem wall time converted using current wall-to-boottime offset; assumes no wall step",
+  "read_only_environment_verify_ms": 54.453125019790605,
+  "state": "UNKNOWN retained; no forced completion or retry",
+  "fix": "same existing dispatcher drains Prepare receipt then one Authorize immediately, each with a fresh writer plan. Permit/freshness/100ms unchanged."
+}

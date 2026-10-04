@@ -1,0 +1,13 @@
+{
+  "authorize_request_sha256": "9022e5b3b15b91b3f42854c03daefe291c0ca790be4d12f0ef47d2d85dad9dc5",
+  "generation": "682c7bba-8999-47f1-9d58-c6013bba77ca",
+  "invocation": "1aa0619a-6362-407e-91aa-beafdff2de32",
+  "native_entry_state": "HOST_RECEIPT_STATE_NATIVE_ACCEPTED",
+  "node": "rotate-align",
+  "operation": "01a1066c-075e-7362-ba64-d31c8a6c46ce",
+  "ordinal": 2,
+  "phase": "BLOCKED",
+  "publication": "cc547434-4e24-4210-aa82-fa2ec78fe0b8",
+  "run": "01a1066b-a7c2-73a3-b77a-4c1500330421",
+  "schema": "rx.sim-result-loss.v1"
+}

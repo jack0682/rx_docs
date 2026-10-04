@@ -523,3 +523,62 @@ CP3는 §8의 결과 전달 손실 경로만 진행한다. N=3을 ECC_51 / ECC_9
 서명 패키지 데이터로 구분한다. 각 Part의 실제 선택값과 원 ID를 장치 기록 및
 재열린 Run/report/parameter 참조에 대조한다. 다른 항목은 추가하지 않으며
 CI·DCO 후 P→S develop 병합과 제품 CLI 인계 뒤 사용자 수락 대기에서 멈춘다.
+
+## 17. CP3 혼합 모델 결과 손실·원 호출 정산 검증
+
+P의 기존 Run 조회에 현재 resource holder와 원 reconciliation 기록을 노출하고,
+CLI에 UNKNOWN에서 관측을 반환하는 옵션과 해당 Run의 slot 보유 조회를 연결했다.
+외부 SIM gRPC 중계기는 payload를 재작성하지 않고 실제 native 진입 응답을 받은 뒤
+원 receipt/result·evidence 전달만 보류한다. Host/worker, 보통 source 조회, 기존
+qualification·fence·grant 경로는 유지하며 결과나 P/Host DB 상태를 조작하지 않는다.
+
+첫 시도에서는 원 rotate-align의 UNKNOWN→동일 invocation 성공·해제·정산 COMPLETE까지
+성립했으나 다음 clamp가 native 진입 확인 응답을 받기 전에 permit 시간을 소진했다.
+[보존한 첫 시도](../../references/2026-10-04-f1-checkpoint3/preserved-first-attempt.json)에
+1초 permit, Host Prepare 시점, 파일 wall time을 현재 boottime offset으로 변환한
+약 3ms 잔여 시간 추정과 그 가정을 분리해 기록했다. 이 실패를 완료 처리하거나 재발행하지 않았다.
+기존 sender가 Prepare와 Authorize를 다른 순회에서 처리하던 대기를 제거하여,
+준비 receipt를 기록한 직후 한 번의 Authorize를 이어 처리하도록 수정했다.
+두 단계 모두 writer의 현재 권한 검사를 새로 거치며, 불확실한 전송은 계속 원 receipt만 조회한다.
+permit/freshness/100ms 상한과 공통 계약·wire 의미는 변경하지 않았다.
+
+수정 후 [병합 전 제품 검증](../../references/2026-10-04-f1-checkpoint3/premerge-summary.json)에서
+같은 Run의 ECC_51/ECC_99/ECC_51 순서로 Part 2 rotate-align이 UNKNOWN·보유 상태가 됐고
+Part 3은 생성되지 않았으며 장치 기록은 12행이었다. 통신 복구 후 동일 operation/invocation이
+SUCCEEDED/RELEASED 및 reconciliation COMPLETE가 되었고 잔여 단계와 Part 3까지
+27/27 완료했다. 원 target Authorize 전달은 1회이며 모든 장치 ID 쌍이 제품 기록과 일치했다.
+Run/report를 다시 열고 원 request를 재조회해도 추가 효과가 없었다.
+
+| Part 모델 | grasp width | grip force | rotation/tolerance | process |
+|---|---:|---:|---:|---:|
+| ECC_51 | 47mm | 25N | 95°/0.5° | 5s |
+| ECC_99 | 77mm | 17.5N | 185°/0.3° | 7s |
+| ECC_51 | 47mm | 25N | 95°/0.5° | 5s |
+
+각 값은 실제 장치 기록의 소비 값과 일치했다. 모델 변경은 패키지 데이터이며
+레이저/ECC 이름 분기를 코어에 넣지 않았다.
+
+정확한 PR head CI·DCO를 확인하여 [P #77](https://github.com/jack0682/rx-platform/pull/77) →
+[S #90](https://github.com/jack0682/rx-solutions/pull/90) 순서로 develop에 병합했다.
+
+| 저장소 | 검증 head | develop merge |
+|---|---|---|
+| P | c511ab4d4412b7ae8ab49c4b7384d44be383ea67 | 4fd1c16631d819b9eb776de92d7fc366af4439f3 |
+| S | ce7ed3aa64d4175f43123b559ec74297a0a6ba7f | 45dc6eac4befbffd38615575477152baa5361411 |
+
+병합된 소스로 이미지를 다시 구성하고 전용 새 설치에서 Run
+01a1066b-a7c2-73a3-b77a-4c1500330421에 같은 전체 fault·복구 절차를 실행했다.
+원 operation 01a1066c-075e-7362-ba64-d31c8a6c46ce / invocation
+1aa0619a-6362-407e-91aa-beafdff2de32가 UNKNOWN·보유를 거친 뒤 같은 ID로
+SUCCEEDED/RELEASED 및 reconciliation COMPLETE가 됐다. Part 3은 UNKNOWN 중
+시작하지 않았고, 복구 후 3개 Part와 27개 효과가 완료됐다.
+원 Authorize 전달 1회, 고유 ID 쌍 27개, 혼합 선택값 일치 및 Run/report 재열기를 확인했다.
+
+[최종 receipt](../../references/2026-10-04-f1-checkpoint3/receipt.json),
+[UNKNOWN 제품 기록](../../references/2026-10-04-f1-checkpoint3/unknown-product-receipt.json),
+[완료 제품 기록](../../references/2026-10-04-f1-checkpoint3/completed-product-receipt.json),
+[장치 기록](../../references/2026-10-04-f1-checkpoint3/effects.jsonl),
+[사용자 실행·조회 절차](../../references/2026-10-04-f1-checkpoint3/RUN_CP3.md)를 남겼다.
+사용자용 혼합 세 객체는 미사용이며 네 서비스는 Docker daemon에 분리 실행 중이다.
+**CP3 사용자 수락 대기에서 멈춘다. F1′ 전체 수락은 아직 주장하지 않는다.
+F2′/F3′는 미착수다.**

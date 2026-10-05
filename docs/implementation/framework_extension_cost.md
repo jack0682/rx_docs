@@ -771,3 +771,19 @@ verifier가 환경을 거절했고, 또 다른 Run은 Part 2 Python 진입 대�
 CP3에는 Host B UNKNOWN 동안 Host A 미진행, 원 완료+현재 custody로 정산하는 회복 가능 사례,
 entry 후 durable completion 전 종료해서 UNKNOWN·무재발행·미진행을 유지하는 별도 사례가 남는다.
 **여기서 멈추고 CP2 사용자 수락을 기다린다.**
+
+## 24. F2′ CP2 미수락 — 2026-10-05
+
+사용자 요청으로 **Claude가 사용자 Mac에서 실행**한 수락 Run
+`01a10af3-3889-7271-b57c-722737f97e6d`가 무주입 정상 경로에서 UNKNOWN으로 멈췄다.
+사용자가 CP2를 수락하지 않았으며 §23의 수락 대기 상태를 이 기록으로 갱신한다.
+이후 읽기 전용 진단의 실행 주체는 Codex다.
+
+원 Run·request·operation·invocation과 보유 자원·slot을 유지한다. release, 재발행,
+녹색 결과를 위한 요청 교체, 기존 background stack 중단은 하지 않는다.
+[실패 경계·시간 예산·CPU 진단](../../references/2026-10-05-f2-cp2-not-accepted/DIAGNOSIS.md)에
+확인 사실과 아직 측정하지 못한 구간을 구분했다. 후보 수정은 계약 시간 제한과
+진입·완료 의미를 유지하며 검증 중이다. **CP3는 미착수**다.
+
+재제출 기준은 기존 stack을 그대로 둔 N=3 정상 운전 5회 연속 성공과 별도의 사용자
+수락 실행 1회다. 모든 시도와 실패를 기록한다. 아직 이 기준을 달성하지 않았다.

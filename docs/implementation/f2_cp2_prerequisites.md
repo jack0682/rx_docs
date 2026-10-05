@@ -1,6 +1,16 @@
 # F2′ CP2 prerequisite finding — support observation is not connected
 
-2026-10-05. **STOPPED FOR SCOPE DECISION; CP2 NOT DELIVERED**.
+2026-10-05. **SCOPE DECIDED: PACKAGE SPLIT AND ORDERING ONLY; CP2 NOT DELIVERED**.
+
+The user superseded the support stop below: allow a separately committed S2 example-package
+split into `acquire-support` and `withdraw`, charged separately from registry cost. Do not
+connect gripper state to `python_skill.rs`/`simulation.rs`. For this SIM scenario, unclamp
+follows the same Part's SETTLED/SUCCEEDED acquire-support operation through the existing Run
+path. **There is no fresh support observation; ordering alone is weaker than a real cell
+requires.** Docs and receipts must state that limitation. A registry-declared gripper
+observation and unclamp guard are parked until the registry works. Conditions 1 and 3 remain
+unchanged: first prove the code-free two-Host Run before S1 authoring; stop and ask if it fails.
+The old observation-path recommendation below is historical and was explicitly NOT approved.
 CP1 was accepted by the user with three conditions. Codex performed the checks below;
 there is no claim that the user executed these commands or accepted CP2.
 
@@ -76,8 +86,9 @@ Any common/Python contract or NativeAdapter revision discovered during that desi
 requires separate approval. After approval, keep the code-free multi-Host Run check ahead
 of any S1 authoring; a failure there must again stop and ask.
 
-No new parking item. The accepted CP3 pre-completion negative case remains required and
-is not parked. The next action is the user's scope decision, not CP2 implementation.
+The original stop added no parking item. The subsequent scope decision adds one follow-up:
+registry-declared gripper support observation and unclamp guard. The accepted CP3 pre-completion
+negative case remains required and is not parked. Next: code-free two-Host Run prerequisite.
 
 ## Reproduce this limited inspection
 

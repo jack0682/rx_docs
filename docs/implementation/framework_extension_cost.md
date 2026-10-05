@@ -5,7 +5,7 @@
 수락 후 새 순서와 F1′ 계획은 7–8절, 구현·검증 이력은 9–17절에 기록한다.
 **현재 상태: CP1·CP2·CP3를 모두 사용자가 수락했으며 F1′은 종료됐다.**
 최종 수락은 18절이 기준이다. 앞 절의 착수/수락 대기 문구는 당시 이력으로 보존한다.
-F2′는 지원 범위 결정 후 예제 패키지 분리와 코드 변경 없는 두 Host 선행 검증을 진행한다(21절).
+F2′는 예제 패키지 분리를 병합했고 코드 변경 없는 두 Host 선행 검증을 통과했다(21–22절).
 M3b/M3c의 이관 기록은 유지한다.
 
 **F0 측정 당시 관측 결론:** S3는 데이터만으로 추가·해석됐다. S2의 새 Task 이름·속성·규칙·Skill 매핑도
@@ -674,3 +674,24 @@ S2 패키지 분리 비용은 registry 비용과 분리한다: skill.py +18/−2
 관측이나 Run 순서를 입증하지 않는다. 실제 Run의 settled 순서·두 Host dispatch는 별도로 확인한다.
 조건 1(코드 변경 없는 두 Host Run, 실패 시 중단)과 조건 3(CP3 완료 전 종료 negative case)은 유지한다.
 S1 외부 저작은 두 Host 선행 검증 전 시작하지 않는다.
+
+## 22. 코드 변경 없는 두 Host Run 선행 검증
+
+Docs #115 → S #91 순서로 범위 기록·패키지 분리를 병합했다. S의 별도 scenario commit은
+`2c6b4cb`, develop merge는 `438d4371a63289662c86ff1822f3d524f66a1811`이다.
+정확한 head CI·DCO가 통과했다. 이 패키지 분리는 registry 비용이 아니다.
+
+Codex가 기존 F1 P `4fd1c16` / S runtime `45dc6ea` 이미지로 새로운 SIM 설치를 구성했다.
+두 Host 모두 기존 Python builtin이고 하나의 S2 9단계 Run에서 A는 clamp 이외, B는 clamp를
+수행한다. 이는 registry 없이 기존 P/Executor dispatch를 검증하기 위한 별도 선행 측정이다.
+새 package 구현·core patch 없이 Host별 signed template/catalog·설치 configuration만 변경했다.
+설치용 서명에는 기존 test-only fixture signer를 사용했으며 S1 외부 저작 경로의 증거로 세지 않는다.
+
+제품 CLI Run `01a10a14-0c8c-72b7-8810-d08b5a0440cf`는 rc=0/COMPLETED, 1 Part,
+9개 SETTLED/SUCCEEDED/RELEASED operation이다. 실제 effect 순서 A 3 → B clamp → A 5와
+고유 operation/invocation 9쌍이 Run 기록에 일치했다. 제품 CLI inspect --reports 재열기도 같다.
+두 Host 바이너리 SHA-256은 동일하고 P/Host/Executor source 변경은 0줄이다.
+[명령·receipt·제한](../../references/2026-10-05-f2-two-host/RUN.md)을 남겼다.
+이 검증은 split-support 11단계·registry·S1·UNKNOWN/CP3의 수락을 뜻하지 않는다.
+fresh support observation은 없고, 이후 SIM unclamp에는 같은 Part의 완료 순서만 사용한다.
+사용자 CP2 수락은 아직이며 다음 작업은 공통 registry 구현이다.

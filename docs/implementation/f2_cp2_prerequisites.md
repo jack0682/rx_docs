@@ -11,6 +11,14 @@ requires.** Docs and receipts must state that limitation. A registry-declared gr
 observation and unclamp guard are parked until the registry works. Conditions 1 and 3 remain
 unchanged: first prove the code-free two-Host Run before S1 authoring; stop and ask if it fails.
 The old observation-path recommendation below is historical and was explicitly NOT approved.
+
+**Two-Host prerequisite passed later on 2026-10-05.** Codex ran the installed product CLI
+against a new isolated SIM installation with unchanged F1 P/Host/Executor binaries. One
+published nine-step S2 Run completed across Python Host A (8 nodes) and Python Host B (clamp).
+The earlier NOT_PERFORMED statements below preserve the original support-stop finding.
+[Product receipt, exact commands and limitations](../../references/2026-10-05-f2-two-host/RUN.md).
+This is not registry/S1 or CP2 acceptance evidence. S1 authoring may proceed only on the later
+frozen registry baseline; the two-Host prerequisite itself required zero runtime source changes.
 CP1 was accepted by the user with three conditions. Codex performed the checks below;
 there is no claim that the user executed these commands or accepted CP2.
 

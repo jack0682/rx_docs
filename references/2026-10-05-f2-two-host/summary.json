@@ -1,0 +1,87 @@
+{
+  "schema": "rx.f2-two-host-prerequisite.v1",
+  "status": "PRODUCT_CLI_PRECHECK_PASSED",
+  "command_executor": "Codex",
+  "user_acceptance": "NOT_REQUESTED_FOR_THIS_PRECHECK",
+  "environment": "SIMULATION",
+  "run": "01a10a14-0c8c-72b7-8810-d08b5a0440cf",
+  "request_id": "0f359b7d-3c14-483f-aca8-ff63f8a807f6",
+  "parts": 1,
+  "operations": 9,
+  "state": "COMPLETED",
+  "sequence": [
+    {
+      "node": "pick",
+      "host": "host/sim",
+      "operation": "01a10a14-12d1-777c-b466-51b85c0ec1d2",
+      "invocation": "2bebd199-ca82-419e-8865-0bdeec770d0c"
+    },
+    {
+      "node": "load",
+      "host": "host/sim",
+      "operation": "01a10a14-1947-739c-bcaf-e04a0292d3f5",
+      "invocation": "c40c4946-91c5-40ee-b1dc-2ff35bf16143"
+    },
+    {
+      "node": "rotate-align",
+      "host": "host/sim",
+      "operation": "01a10a14-1eba-763d-ae2d-7dcb69054466",
+      "invocation": "cb0979c1-5fbb-4ab6-b863-ffc579538973"
+    },
+    {
+      "node": "clamp",
+      "host": "host/sim-b",
+      "operation": "01a10a14-2423-72cc-a57e-9c1553b431ef",
+      "invocation": "68babd57-2662-4c13-a8ac-8291351218b9"
+    },
+    {
+      "node": "close-door",
+      "host": "host/sim",
+      "operation": "01a10a14-2a7d-7763-8a7f-3ddc22bfb682",
+      "invocation": "b6d60126-2141-47a1-bba2-daa17c3784b9"
+    },
+    {
+      "node": "process",
+      "host": "host/sim",
+      "operation": "01a10a14-2feb-7151-8945-f2e93aba38ad",
+      "invocation": "ed1db456-90b9-439b-a3a9-51cd63555778"
+    },
+    {
+      "node": "open-door",
+      "host": "host/sim",
+      "operation": "01a10a14-4946-7706-b8d7-9dc1a3d30939",
+      "invocation": "0f41aec2-2b96-425c-9ba6-b0a17405b7ad"
+    },
+    {
+      "node": "unload",
+      "host": "host/sim",
+      "operation": "01a10a14-4ed0-71cb-9153-fa71788f28a5",
+      "invocation": "22c4bdcb-db8a-4905-9cf7-0b61b3eade8b"
+    },
+    {
+      "node": "place",
+      "host": "host/sim",
+      "operation": "01a10a14-54cb-75ed-b997-6e929a8c05c8",
+      "invocation": "605bbcec-e020-4781-a230-4710ca7f4ab8"
+    }
+  ],
+  "same_host_binary_sha256": {
+    "a": "f0e2792bf2e3511b93889a0e27f6dfc3d53c2856bbdb308533333c1857fa8993",
+    "b": "f0e2792bf2e3511b93889a0e27f6dfc3d53c2856bbdb308533333c1857fa8993"
+  },
+  "platform": "4fd1c16631d819b9eb776de92d7fc366af4439f3",
+  "solutions_runtime": "45dc6eac4befbffd38615575477152baa5361411",
+  "runtime_source_changes": 0,
+  "unique_effect_pairs": 9,
+  "effect_pairs_match_run": true,
+  "reopened_run_parts_work_reports_equal": true,
+  "fresh_support_observation": false,
+  "registry_implementation": "NOT_STARTED",
+  "s1_authoring": "NOT_STARTED",
+  "setup_limitations": [
+    "Existing test-only fixture signer used for SIM installation setup; not an external S1 authoring demonstration",
+    "Both Hosts use existing Python builtin; this proves P/Executor multi-Host dispatch only",
+    "N=1 with historical nine-step S2; split support actions not exercised here",
+    "Disposable setup CA keyUsage and origin port mistakes corrected before Run; no verification bypass"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "executor": "Codex",
+  "argv": [
+    "python3",
+    "/Users/ojaehong/RX_automation/rx_ws/.build/framework-f2-two-host/live3/verification/installed-client/rx",
+    "execution",
+    "--connection",
+    "/Users/ojaehong/RX_automation/rx_ws/.build/framework-f2-two-host/live3/operator.json",
+    "--state-dir",
+    "/Users/ojaehong/RX_automation/rx_ws/.build/framework-f2-two-host/live3/operator-client",
+    "run",
+    "/Users/ojaehong/RX_automation/rx_ws/.build/framework-f2-two-host/author3/publication.json",
+    "--count",
+    "1",
+    "--object",
+    "/Users/ojaehong/RX_automation/rx_ws/.build/framework-f2-two-host/author3/object-precheck-1.json",
+    "--request-id",
+    "0f359b7d-3c14-483f-aca8-ff63f8a807f6",
+    "--wait-seconds",
+    "120",
+    "--output",
+    "/Users/ojaehong/RX_automation/rx_ws/.build/framework-f2-two-host/live3/two-host-run.json"
+  ],
+  "runtime_binaries_changed": false
+}

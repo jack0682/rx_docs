@@ -5,7 +5,7 @@
 수락 후 새 순서와 F1′ 계획은 7–8절, 구현·검증 이력은 9–17절에 기록한다.
 **현재 상태: CP1·CP2·CP3를 모두 사용자가 수락했으며 F1′은 종료됐다.**
 최종 수락은 18절이 기준이다. 앞 절의 착수/수락 대기 문구는 당시 이력으로 보존한다.
-F2′는 예제 패키지 분리를 병합했고 코드 변경 없는 두 Host 선행 검증을 통과했다(21–22절).
+F2′ CP2 정상 운전 사전 검증을 마쳤으며 사용자 수락을 기다린다(23절). CP3는 미착수다.
 M3b/M3c의 이관 기록은 유지한다.
 
 **F0 측정 당시 관측 결론:** S3는 데이터만으로 추가·해석됐다. S2의 새 Task 이름·속성·규칙·Skill 매핑도
@@ -695,3 +695,79 @@ Codex가 기존 F1 P `4fd1c16` / S runtime `45dc6ea` 이미지로 새로운 SIM 
 이 검증은 split-support 11단계·registry·S1·UNKNOWN/CP3의 수락을 뜻하지 않는다.
 fresh support observation은 없고, 이후 SIM unclamp에는 같은 Part의 완료 순서만 사용한다.
 사용자 CP2 수락은 아직이며 다음 작업은 공통 registry 구현이다.
+
+## 23. F2′ CP2 — 외부 S1 등록·혼합 N=3 정상 운전
+
+**사용자 수락 대기에서 멈춘다.** Codex가 명령을 실행했고 아직 사용자는 CP2를 수락하지 않았다.
+[RUN_CP2](../../references/2026-10-05-f2-checkpoint2/RUN_CP2.md)에 사용하지 않은 수락용
+ECC_51/ECC_99/ECC_51 객체와 제품 CLI 명령을 제공한다. SIM이며 fresh gripper support
+observation은 없다. 같은 Part의 acquire-support SETTLED/SUCCEEDED 이후 unclamp 순서만 사용한다.
+실제 셀에 필요한 보장보다 약하며, 기존 parking의 registry observation/guard 후속은 유지한다.
+
+### 병합과 B1 동결
+
+S #92의 공통 registry를 `54ddf257`에 병합했다. 설치 CLI에 없던 기존 API 전달·qualification
+서명 입력 생성만 최소로 노출한 P #78 → S #93은 각각 `22d8b18d` / `0fed87b5`에 병합했다.
+모든 정확한 PR head CI·DCO를 확인했다. 새 권한·원장·P API·공통 계약은 추가하지 않았다.
+공유 SDK 162개 파일은 P export와 같은 바이트이며 engine seam은 18쌍/31참조 그대로다.
+S2 예제 분리 S #91은 이 비용에서 별도다.
+
+[B1](../../references/2026-10-05-f2-checkpoint2/B1.json)에 merged source, 설치 이미지,
+SDK/client/Host 해시를 동결한 뒤 S1 저작을 시작했다. 외부 디렉터리에서 설치된 package tool,
+SDK/client, 공개 export 데이터와 OpenSSL만 사용했다. P/S source checkout을 mount하거나
+import하지 않았고 Cargo/test signer를 호출하지 않았다. 설치 API의 낮은 수준 JSON 조립과
+서명·qualification 입력은 작성 helper로 계상했다. F3′ 저작 UX 작업은 시작하지 않았다.
+
+### 실제 결과
+
+동일 B1 rx-hostd에서 등록 S1 inspect rc=0, 미등록/unsigned/tampered는 각각 rc=1이었다.
+S1 프로그램은 clamp/unclamp와 typed `chuck.clamped`를 패키지로 선언한다. Robot은 기존
+Python builtin, chuck은 registry provider로 같은 Run을 수행했다.
+
+Run `01a10ac1-d3af-728b-a228-a7b6ea06565d`는 3개 Part, 33개
+SETTLED/SUCCEEDED/RELEASED operation으로 COMPLETED다. 장치 33행의 고유 operation/invocation
+33쌍이 Run 기록에 일치하며 Host B의 clamp/unclamp는 6개다. Part별 11단계 순서와
+47/77/47 mm, 25/17.5/25 N, 95/185/95°, 0.5/0.3/0.5°, 5/7/5 s가 일치했다.
+지원 확보와 unclamp는 같은 Part에 속하고 순서도 일치한다. report 재열기의 Run/Part/work와
+승인 보고서가 같았다. P에서 `chuck.clamped`의 host/sim-b, boolean/v1, usable=true 관측을 확인했다.
+
+두 Host의 SHA-256은 B1과 같은 `1332000944c7d4b4fc1c615c117cedb77d9c8c4d0291e6f54f05282b140538b7`이다.
+**S1 저작 구간의 P/S diff는 각각 0파일/+0 −0행**이다. 아래 공통 개발 비용을 숨겨서 0이라고
+부르는 것이 아니다. [제품 요약](../../references/2026-10-05-f2-checkpoint2/summary.json)과
+[원문·파일 해시](../../references/2026-10-05-f2-checkpoint2/sha256.json)를 보존했다.
+
+### 비용 — 공통 구현과 외부 작성 분리
+
+| 범위 | 파일 / 물리 행 | 명령·해석 |
+|---|---|---|
+| F0 S1 기준선 | 6 / 63 | 12회. 독립 backend 실패 + Python 대안; 전체 운전 경로가 아니었다 |
+| 공통 registry + 최소 설치 저작 연결 P | 2파일 / +38 −1 | 코드 1파일 +25 −1, 설명 1파일 +13. 기존 qualification 서명 메시지 export |
+| 공통 registry + 최소 설치 저작 연결 S | 25파일 / +2497 −2 | runtime·CLI·SDK·테스트·설명·빌드 포함. 파일별 값은 B1에 분리 기록 |
+| S2 별도 scenario 분리 | 3파일 / +135 −2 | skill +18 −2, README +16, 테스트 +101. S1/registry 비용과 구분 |
+| S1 runtime 원본 | 1파일 / 87행 | 외부 adapter.py. 설치 SDK와 제공된 S2 모델을 사용하며 core source import 없음 |
+| 외부 저작 전체 원본 | 22파일 / 1296행 | S1 원본 + launch 선언 + workflow composition + signing/provision/review helper와 실패 재개 helper 포함 |
+| 외부 시도 전체의 기록된 leaf 명령 | 725회 | setup 328회와 나머지 397회를 포함. 최종 설치 시도 157회(setup 80/나머지 77) |
+| S1 고유 core diff | P/S 각각 0파일 / +0 −0 | B1 이후 core 수정·binary 교체 없음 |
+
+[세부 cost](../../references/2026-10-05-f2-checkpoint2/cost.json)는 파일별 행 수와 네 시도별
+명령·rc를 남긴다. 중첩 helper 실행은 leaf와 중복 합산하지 않고 따로 표시했다. 임의의 읽기 전용
+진단·검색·편집·Git/문서 검사 호출은 이 명령 계수에 포함하지 않아 총 사람 작업량의 하한이다.
+nonzero에는 의도한 거절도 있으므로 모두 오류라고 세지 않는다. 제공/복사 SDK·client·S2 환경과
+helper에서 생성한 JSON·package·report는 별도 산출물이며 원본 행에 이중 합산하지 않는다.
+F0와 작업 범위가 다르므로 비용 감소율을 주장하지 않는다. 실제 수동 저작/설치 부담은 크다.
+
+### 실패 보존과 한계
+
+한 설치는 외부 보고서 helper의 필드 오기로 validator 정책을 수정·재기동한 뒤 Host continuity가
+증명되지 않아 자격화 전 멈췄다. 다음 Run은 venv/lib64 심볼릭 링크를 복사에서 펼친 탓에 기존
+verifier가 환경을 거절했고, 또 다른 Run은 Part 2 Python 진입 대기 중 만료 가까이에서 멈췄다.
+각 UNKNOWN operation과 장치·원장을 보존하고 Docker pause로 메모리/상태를 남긴 채 부하를
+분리했다. 권한 시간 경계, 결과, 자원 소유, core 코드는 수정하지 않았다. 마지막 정상 검증은
+별도 SIM 장치/설치이며 앞선 UNKNOWN을 정산했다고 주장하지 않는다.
+[보존 기록](../../references/2026-10-05-f2-checkpoint2/preserved-attempts.json)을 확인한다.
+
+수동 API 응답 형태·서명 policy·환경 복사·호출 pacing의 저작 마찰은 F3′ 근거다. 이 사전 검증은
+독립 외부 개발자의 시연, physical support, 임의 부하 성능, S1 failure/restart 검증이 아니다.
+CP3에는 Host B UNKNOWN 동안 Host A 미진행, 원 완료+현재 custody로 정산하는 회복 가능 사례,
+entry 후 durable completion 전 종료해서 UNKNOWN·무재발행·미진행을 유지하는 별도 사례가 남는다.
+**여기서 멈추고 CP2 사용자 수락을 기다린다.**

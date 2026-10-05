@@ -1,0 +1,8 @@
+{
+  "copied_sources": "Measured authored files only; no private keys/config credentials/installed SDK duplicates",
+  "source_origin": "Outside P/S; SDK/client/data consumed as installed/exported artifacts",
+  "core_code_changed_after_B1": false,
+  "independent_external_human_trial": false,
+  "author": "Codex",
+  "fresh_support_observation": false
+}

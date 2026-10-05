@@ -1,0 +1,44 @@
+{
+  "positive": {
+    "rc": 0,
+    "stderr": "",
+    "inspection": {
+      "activation_authorized": false,
+      "backend": {
+        "adapter": "example/pneumatic-chuck",
+        "kind": "EXTERNAL_PROCESS_PACKAGE",
+        "registry": {
+          "path": "/author/registry.json",
+          "sha256": "79ab7e0f0db8d3c2f716b25b430dd8bdb5093bfc002fec3f8c7f19f9af8b0ba0"
+        }
+      },
+      "binding_cells": [
+        "cell/a"
+      ],
+      "control_provider": "BUILTIN",
+      "host": "host/sim-b",
+      "identity": "2e5975698319ee499f375fa7b7136b11260e70d3d1d7de3fade8896970cbbc9b",
+      "installation": "76101293-8083-4bdb-8e62-bee811eb1bd6",
+      "native_processes_started": 0,
+      "physical_backend_available": false,
+      "physical_qualification_verified": false,
+      "runtime_qualification_required": false,
+      "schema": "rx.host-installation-inspection.v1"
+    }
+  },
+  "unregistered": {
+    "rc": 1,
+    "stderr": "Error: \"UNREGISTERED_ADAPTER\"\n",
+    "inspection": null
+  },
+  "unsigned": {
+    "rc": 1,
+    "stderr": "Error: Invalid(\"manifest.sig.json missing\")\n",
+    "inspection": null
+  },
+  "tampered": {
+    "rc": 1,
+    "stderr": "Error: Content(\"program.json\")\n",
+    "inspection": null
+  }
+}

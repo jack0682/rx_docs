@@ -1,0 +1,464 @@
+{
+  "schema": "rx.cell-diagnostics.v1",
+  "display_valid_for_ns": "1859536625",
+  "sources": [
+    {
+      "source": "ready",
+      "host": "host/sim",
+      "expected_generation": "b937052d-e6a6-4e38-bde0-e9a2ed7ab980",
+      "maximum_age_ns": "2000000000",
+      "maximum_uncertainty_ns": "0",
+      "age_ns": "140463375",
+      "usable": true,
+      "issues": [],
+      "observation": {
+        "cell": "cell/a",
+        "id": "ready",
+        "source_host": "host/sim",
+        "source_generation": "b937052d-e6a6-4e38-bde0-e9a2ed7ab980",
+        "schema": "boolean/v1",
+        "unit": "unitless",
+        "acquired_at": {
+          "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+          "ticks_ns": "312782282356162"
+        },
+        "maximum_age_ns": "2000000000",
+        "acquisition_uncertainty_ns": "0",
+        "quality_good": true,
+        "origin_age_bounded": true,
+        "disputed": false,
+        "value": {
+          "boolean": true
+        },
+        "evidence_id": "50d308d0-937c-4b3b-af01-1314d7043461"
+      }
+    },
+    {
+      "source": "sim/ready",
+      "host": "host/sim-b",
+      "expected_generation": "430af93f-87bd-4404-8d26-416bd7a5c190",
+      "maximum_age_ns": "2000000000",
+      "maximum_uncertainty_ns": "0",
+      "age_ns": "80251000",
+      "usable": true,
+      "issues": [],
+      "observation": {
+        "cell": "cell/a",
+        "id": "sim/ready",
+        "source_host": "host/sim-b",
+        "source_generation": "430af93f-87bd-4404-8d26-416bd7a5c190",
+        "schema": "boolean/v1",
+        "unit": "unitless",
+        "acquired_at": {
+          "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+          "ticks_ns": "312782342568537"
+        },
+        "maximum_age_ns": "2000000000",
+        "acquisition_uncertainty_ns": "0",
+        "quality_good": true,
+        "origin_age_bounded": true,
+        "disputed": false,
+        "value": {
+          "boolean": true
+        },
+        "evidence_id": "66ccca17-5ed0-4899-a337-85289ef98550"
+      }
+    },
+    {
+      "source": "chuck.clamped",
+      "host": "host/sim-b",
+      "expected_generation": "430af93f-87bd-4404-8d26-416bd7a5c190",
+      "maximum_age_ns": "2000000000",
+      "maximum_uncertainty_ns": "0",
+      "age_ns": "80262709",
+      "usable": true,
+      "issues": [],
+      "observation": {
+        "cell": "cell/a",
+        "id": "chuck.clamped",
+        "source_host": "host/sim-b",
+        "source_generation": "430af93f-87bd-4404-8d26-416bd7a5c190",
+        "schema": "boolean/v1",
+        "unit": "unitless",
+        "acquired_at": {
+          "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+          "ticks_ns": "312782342556828"
+        },
+        "maximum_age_ns": "2000000000",
+        "acquisition_uncertainty_ns": "0",
+        "quality_good": true,
+        "origin_age_bounded": true,
+        "disputed": false,
+        "value": {
+          "boolean": false
+        },
+        "evidence_id": "6ac3f24f-d780-460d-8b9b-a3ac2b4b8508"
+      }
+    }
+  ],
+  "hosts": [
+    {
+      "runtime": {
+        "schema": "rx.host-service-health.v1",
+        "availability": "FRESH",
+        "sampled_at": {
+          "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+          "ticks_ns": "312782398820328"
+        },
+        "valid_for_ns": "2860601583",
+        "connection": "BOUND",
+        "observation": "RECEIVED",
+        "delivery": "ACTIVE",
+        "last_observation_at": {
+          "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+          "ticks_ns": "312782283421120"
+        },
+        "last_delivery_pass_at": {
+          "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+          "ticks_ns": "312782343041203"
+        },
+        "observation_recent": true,
+        "delivery_recent": true,
+        "delivery_error_history": true
+      },
+      "host": "host/sim",
+      "context": "CURRENT",
+      "grant_valid_until": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312791042174203"
+      }
+    },
+    {
+      "runtime": {
+        "schema": "rx.host-service-health.v1",
+        "availability": "FRESH",
+        "sampled_at": {
+          "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+          "ticks_ns": "312782398821745"
+        },
+        "valid_for_ns": "2920169458",
+        "connection": "BOUND",
+        "observation": "RECEIVED",
+        "delivery": "ACTIVE",
+        "last_observation_at": {
+          "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+          "ticks_ns": "312782345851203"
+        },
+        "last_delivery_pass_at": {
+          "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+          "ticks_ns": "312782342988995"
+        },
+        "observation_recent": true,
+        "delivery_recent": true,
+        "delivery_error_history": true
+      },
+      "host": "host/sim-b",
+      "context": "CURRENT",
+      "grant_valid_until": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312792072529370"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "path": "Start//1",
+      "group": "START",
+      "step": null,
+      "expression": {
+        "op": "EQ",
+        "fact": "ready",
+        "schema": "boolean/v1",
+        "unit": "unitless",
+        "expected": {
+          "boolean": true
+        }
+      },
+      "verdict": "PASS",
+      "reason": "SATISFIED",
+      "evidence_ids": [
+        "50d308d0-937c-4b3b-af01-1314d7043461"
+      ],
+      "valid_until": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312784282356162"
+      }
+    },
+    {
+      "path": "Maintained//1",
+      "group": "MAINTAINED",
+      "step": null,
+      "expression": {
+        "op": "EQ",
+        "fact": "ready",
+        "schema": "boolean/v1",
+        "unit": "unitless",
+        "expected": {
+          "boolean": true
+        }
+      },
+      "verdict": "PASS",
+      "reason": "SATISFIED",
+      "evidence_ids": [
+        "50d308d0-937c-4b3b-af01-1314d7043461"
+      ],
+      "valid_until": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312784282356162"
+      }
+    },
+    {
+      "path": "Operation/node/639ea56f5ad905b9f49ee05ee149611e9dcd055ad38824db023653a79bb20d5b/1",
+      "group": "OPERATION",
+      "step": "node/639ea56f5ad905b9f49ee05ee149611e9dcd055ad38824db023653a79bb20d5b",
+      "expression": {
+        "op": "EQ",
+        "fact": "ready",
+        "schema": "boolean/v1",
+        "unit": "unitless",
+        "expected": {
+          "boolean": true
+        }
+      },
+      "verdict": "PASS",
+      "reason": "SATISFIED",
+      "evidence_ids": [
+        "50d308d0-937c-4b3b-af01-1314d7043461"
+      ],
+      "valid_until": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312784282356162"
+      }
+    },
+    {
+      "path": "Operation/node/fcf801f2bdecb04bd8895c4a4b5637efe7c39a34e895d2726c71fb31a249c946/1",
+      "group": "OPERATION",
+      "step": "node/fcf801f2bdecb04bd8895c4a4b5637efe7c39a34e895d2726c71fb31a249c946",
+      "expression": {
+        "op": "EQ",
+        "fact": "ready",
+        "schema": "boolean/v1",
+        "unit": "unitless",
+        "expected": {
+          "boolean": true
+        }
+      },
+      "verdict": "PASS",
+      "reason": "SATISFIED",
+      "evidence_ids": [
+        "50d308d0-937c-4b3b-af01-1314d7043461"
+      ],
+      "valid_until": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312784282356162"
+      }
+    },
+    {
+      "path": "Operation/node/90d4fd92cdc5b2163f3ca5c45eac16afbffca82da1efd57d9262af58eec9146b/1",
+      "group": "OPERATION",
+      "step": "node/90d4fd92cdc5b2163f3ca5c45eac16afbffca82da1efd57d9262af58eec9146b",
+      "expression": {
+        "op": "EQ",
+        "fact": "ready",
+        "schema": "boolean/v1",
+        "unit": "unitless",
+        "expected": {
+          "boolean": true
+        }
+      },
+      "verdict": "PASS",
+      "reason": "SATISFIED",
+      "evidence_ids": [
+        "50d308d0-937c-4b3b-af01-1314d7043461"
+      ],
+      "valid_until": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312784282356162"
+      }
+    },
+    {
+      "path": "Operation/node/b93384a36c034ece36dfb0ef1807a113f469902d015c751718a750be13f3f81a/1",
+      "group": "OPERATION",
+      "step": "node/b93384a36c034ece36dfb0ef1807a113f469902d015c751718a750be13f3f81a",
+      "expression": {
+        "op": "EQ",
+        "fact": "sim/ready",
+        "schema": "boolean/v1",
+        "unit": "unitless",
+        "expected": {
+          "boolean": true
+        }
+      },
+      "verdict": "PASS",
+      "reason": "SATISFIED",
+      "evidence_ids": [
+        "66ccca17-5ed0-4899-a337-85289ef98550"
+      ],
+      "valid_until": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312784342568537"
+      }
+    },
+    {
+      "path": "Operation/node/6475ced9296b38a149b3bf2e420526f0393acd97144cb1dd0a84723c9217df3c/1",
+      "group": "OPERATION",
+      "step": "node/6475ced9296b38a149b3bf2e420526f0393acd97144cb1dd0a84723c9217df3c",
+      "expression": {
+        "op": "EQ",
+        "fact": "ready",
+        "schema": "boolean/v1",
+        "unit": "unitless",
+        "expected": {
+          "boolean": true
+        }
+      },
+      "verdict": "PASS",
+      "reason": "SATISFIED",
+      "evidence_ids": [
+        "50d308d0-937c-4b3b-af01-1314d7043461"
+      ],
+      "valid_until": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312784282356162"
+      }
+    },
+    {
+      "path": "Operation/node/e6b55366382e2b7305c6d654068c217a5d4c6ea198d630156546630551966f9d/1",
+      "group": "OPERATION",
+      "step": "node/e6b55366382e2b7305c6d654068c217a5d4c6ea198d630156546630551966f9d",
+      "expression": {
+        "op": "EQ",
+        "fact": "ready",
+        "schema": "boolean/v1",
+        "unit": "unitless",
+        "expected": {
+          "boolean": true
+        }
+      },
+      "verdict": "PASS",
+      "reason": "SATISFIED",
+      "evidence_ids": [
+        "50d308d0-937c-4b3b-af01-1314d7043461"
+      ],
+      "valid_until": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312784282356162"
+      }
+    },
+    {
+      "path": "Operation/node/6b8ba97b5bfa996bc4841f22f604b588694dcf91c218c9acbc068d05f74dee26/1",
+      "group": "OPERATION",
+      "step": "node/6b8ba97b5bfa996bc4841f22f604b588694dcf91c218c9acbc068d05f74dee26",
+      "expression": {
+        "op": "EQ",
+        "fact": "ready",
+        "schema": "boolean/v1",
+        "unit": "unitless",
+        "expected": {
+          "boolean": true
+        }
+      },
+      "verdict": "PASS",
+      "reason": "SATISFIED",
+      "evidence_ids": [
+        "50d308d0-937c-4b3b-af01-1314d7043461"
+      ],
+      "valid_until": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312784282356162"
+      }
+    },
+    {
+      "path": "Operation/node/dbb7b7c05598c2cf719241982fd2f988a64ce5b2cb3cc2611248d264e55b317a/1",
+      "group": "OPERATION",
+      "step": "node/dbb7b7c05598c2cf719241982fd2f988a64ce5b2cb3cc2611248d264e55b317a",
+      "expression": {
+        "op": "EQ",
+        "fact": "ready",
+        "schema": "boolean/v1",
+        "unit": "unitless",
+        "expected": {
+          "boolean": true
+        }
+      },
+      "verdict": "PASS",
+      "reason": "SATISFIED",
+      "evidence_ids": [
+        "50d308d0-937c-4b3b-af01-1314d7043461"
+      ],
+      "valid_until": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312784282356162"
+      }
+    },
+    {
+      "path": "Operation/node/f7ce90420146ddd33955a1ab9e43ef3afbf81d069220dc866722cdbab91eb5d0/1",
+      "group": "OPERATION",
+      "step": "node/f7ce90420146ddd33955a1ab9e43ef3afbf81d069220dc866722cdbab91eb5d0",
+      "expression": {
+        "op": "EQ",
+        "fact": "sim/ready",
+        "schema": "boolean/v1",
+        "unit": "unitless",
+        "expected": {
+          "boolean": true
+        }
+      },
+      "verdict": "PASS",
+      "reason": "SATISFIED",
+      "evidence_ids": [
+        "66ccca17-5ed0-4899-a337-85289ef98550"
+      ],
+      "valid_until": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312784342568537"
+      }
+    },
+    {
+      "path": "Operation/node/b92248795de8a0a784edd925fda74dbb38c11dcfc2b04dc133c4a13fd7d7bf74/1",
+      "group": "OPERATION",
+      "step": "node/b92248795de8a0a784edd925fda74dbb38c11dcfc2b04dc133c4a13fd7d7bf74",
+      "expression": {
+        "op": "EQ",
+        "fact": "ready",
+        "schema": "boolean/v1",
+        "unit": "unitless",
+        "expected": {
+          "boolean": true
+        }
+      },
+      "verdict": "PASS",
+      "reason": "SATISFIED",
+      "evidence_ids": [
+        "50d308d0-937c-4b3b-af01-1314d7043461"
+      ],
+      "valid_until": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312784282356162"
+      }
+    },
+    {
+      "path": "Operation/node/486c6af5b76680b520b506b0b60cab2381e58cd29cddcf498be7673055500656/1",
+      "group": "OPERATION",
+      "step": "node/486c6af5b76680b520b506b0b60cab2381e58cd29cddcf498be7673055500656",
+      "expression": {
+        "op": "EQ",
+        "fact": "ready",
+        "schema": "boolean/v1",
+        "unit": "unitless",
+        "expected": {
+          "boolean": true
+        }
+      },
+      "verdict": "PASS",
+      "reason": "SATISFIED",
+      "evidence_ids": [
+        "50d308d0-937c-4b3b-af01-1314d7043461"
+      ],
+      "valid_until": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312784282356162"
+      }
+    }
+  ]
+}

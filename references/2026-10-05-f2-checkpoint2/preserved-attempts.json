@@ -1,0 +1,64 @@
+{
+  "failed_installation_before_run": "framework-f2-author: validator policy restart left Host continuity unproven; no main Run/effects",
+  "runs": [
+    {
+      "attempt": "framework-f2-author2",
+      "run": "01a10aa8-a743-71cc-86ac-9fb2b3059633",
+      "request_id": "c3dffd5f-ac49-46bc-b0f1-ee7838f22969",
+      "unknown": [
+        {
+          "host": "host/sim",
+          "node": "pick",
+          "ordinal": "1",
+          "operation": {
+            "disposition": "QUARANTINED",
+            "evidence_ids": [],
+            "execution_knowledge": "UNKNOWN",
+            "integrity": "VALID",
+            "intent_digest": "9bb279fc2854d594dc999079cd0d32f69bbe313924aaa870a67d7824222437ac",
+            "operation_id": "01a10aa8-af44-7275-9b24-eea70d205a35",
+            "outcome": "NONE",
+            "phase": "RECONCILING",
+            "revision": "2"
+          },
+          "invocation": "c5c594f6-af49-404d-a431-926de9dc59b6"
+        }
+      ],
+      "reason": "Authoring copy dereferenced venv/lib64; verifier refused",
+      "preserved": true,
+      "domain_release_or_reissue": false,
+      "containers": "rx-f2-s1b-*",
+      "runtime_state": "docker paused; journals, memory and volumes retained"
+    },
+    {
+      "attempt": "framework-f2-author3",
+      "run": "01a10ab4-a008-7137-ad92-1571fd6f216e",
+      "request_id": "b121eb61-5ef6-4a56-853f-328fc397de26",
+      "unknown": [
+        {
+          "host": "host/sim",
+          "node": "rotate-align",
+          "ordinal": "2",
+          "operation": {
+            "disposition": "QUARANTINED",
+            "evidence_ids": [],
+            "execution_knowledge": "UNKNOWN",
+            "integrity": "VALID",
+            "intent_digest": "b68c1be78d23e5816bc7292d35e3f14963dc72d55ccd9ca758e98f847400c563",
+            "operation_id": "01a10ab5-27bf-77ea-800e-25e624d6603d",
+            "outcome": "NONE",
+            "phase": "RECONCILING",
+            "revision": "2"
+          },
+          "invocation": "70d4eba1-182d-42b6-94cd-7e8978077527"
+        }
+      ],
+      "reason": "Python entry acknowledgement deadline under concurrent failed-SIM load; entry file time approximately 7ms before deadline",
+      "preserved": true,
+      "domain_release_or_reissue": false,
+      "containers": "rx-f2-s1c-*",
+      "runtime_state": "docker paused; journals, memory and volumes retained"
+    }
+  ],
+  "interpretation": "No definitive non-execution claim. Later success uses a separate SIM device/store, not settlement of these requests. No authority time bounds changed."
+}

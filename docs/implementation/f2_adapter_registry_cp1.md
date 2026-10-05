@@ -7,8 +7,16 @@ product CLI before CP2 authoring, without code changes; express support before u
 through existing observations/guards and robot primitives; and add a separate CP3 kill
 after entry but before durable completion that remains UNKNOWN without reissue/advancement.
 CP3 must also show Host A does not advance while Host B's clamp is UNKNOWN. If the first
-two prerequisites need changes or new semantics, stop and ask; multi-Host changes cannot
+   two prerequisites need changes or new semantics, stop and ask; multi-Host changes cannot
 be charged to registry cost. [Current prerequisite finding](f2_cp2_prerequisites.md).
+
+Support scope decision, 2026-10-05: the S2 example may split unload into acquire-support and
+withdraw in a separate scenario-authoring commit. Python Host observation code stays unchanged.
+For this SIM only, unclamp waits for the same Part's acquire-support to be SETTLED/SUCCEEDED;
+there is **no fresh support observation**. This ordering is weaker than a real cell requires
+and must be stated in docs/receipts. Registry-declared gripper observation and an unclamp guard
+are a parked follow-up. This supersedes sensor/support-observation requirements in the original
+CP1 proposal, not the two-Host prerequisite or the CP3 pre-completion negative case.
 
 The purpose is to add the S1 simulated pneumatic chuck through an installed package to
 the same released `rx-hostd`, without S1-specific platform or solutions source changes.
@@ -188,13 +196,13 @@ than introduce a new ledger or quietly weaken the requested fault.
 | Decision | In scope / parked | Consequence |
 |---|---|---|
 | Standalone unclamp | **IN** | Separate published node, operation/invocation and effect row; no `unload` → unclamp alias that claims robot unloading |
-| Support around unclamp | **IN**, scenario data | Split the old unload into acquire/support → unclamp → withdrawal/unload. Support must be confirmed for the same Part by the existing qualified observation/handover path before unclamp; `chuck.clamped=false` alone is insufficient |
+| Ordering around unclamp | **IN**, scenario package | Split unload into acquire-support → unclamp → withdraw. Unclamp waits for same-Part acquire-support SETTLED/SUCCEEDED through the existing Run path. No fresh support observation; weaker than a real cell |
 | Replacement while held | **DENY** | Refuse activation/rebinding/removal/GC of the selected package or executable/dependency/protocol identity while any affected operation is pending, UNKNOWN, quarantined or otherwise held |
 | Same-package passive restart | **IN** | Same pinned identity and journal; satisfies §4 only, never bypasses the replacement refusal |
 | Hot replacement/migration of held work | **PARKED** | New unselected bytes may be stored as candidates; selection waits for ordinary release and reconfiguration/qualification |
 
 The resulting SIM sequence is pick → load → rotate-align → clamp → close-door → process →
-open-door → acquire/support → unclamp → withdrawal/unload → place: **11 nodes**, within
+open-door → acquire-support → unclamp → withdraw → place: **11 nodes**, within
 the existing 16-node ceiling. N=3 remains ECC_51/ECC_99/ECC_51. Expect 33 node operations,
 including six S1 clamp/unclamp effects. This deliberate scenario split is charged to external
 authoring cost. It does not revise the accepted historical F1 nine-step receipts.
@@ -203,8 +211,8 @@ Use two Host instances of the **same installed rx-hostd binary** if needed: the 
 Python builtin for remaining finite S2 skills and the generic registry for S1. Existing
 published host/template bindings select the destination; do not add a composite runner.
 The old builtin cannot issue hidden clamp/unclamp effects in the split scenario. CP2 must
-demonstrate actual support/observation routing through existing qualification; if doing so
-requires new common semantics or a new seam, stop and ask before implementing it.
+demonstrate the same-Part settled-operation order and explicitly record the absence of a
+fresh support observation. New common semantics or a new seam still require a stop and approval.
 
 ## 6. Measurement plan and baseline
 

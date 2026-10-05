@@ -5,7 +5,7 @@
 수락 후 새 순서와 F1′ 계획은 7–8절, 구현·검증 이력은 9–17절에 기록한다.
 **현재 상태: CP1·CP2·CP3를 모두 사용자가 수락했으며 F1′은 종료됐다.**
 최종 수락은 18절이 기준이다. 앞 절의 착수/수락 대기 문구는 당시 이력으로 보존한다.
-F2′는 2026-10-05 CP1 조건부 수락 후 CP2 선행 점검에서 지원 관측 연결의 차단점을 확인했다(20절).
+F2′는 지원 범위 결정 후 예제 패키지 분리와 코드 변경 없는 두 Host 선행 검증을 진행한다(21절).
 M3b/M3c의 이관 기록은 유지한다.
 
 **F0 측정 당시 관측 결론:** S3는 데이터만으로 추가·해석됐다. S2의 새 Task 이름·속성·규칙·Skill 매핑도
@@ -660,3 +660,17 @@ ready/sim/ready에 한정되고 S2의 지지 확보·unclamp·인출은 unload �
 registry 또는 S1 작성, P/S 수정, CP3 주입은 하지 않았다.
 [근거·재현·단일 권고안](f2_cp2_prerequisites.md)을 검토 후 다음 범위를 결정한다.
 실행 주체는 Codex, CP1 수락 주체는 사용자다. 이번 선행 검사는 CP2 수락이 아니다.
+
+## 21. 지원 범위 결정 — 순서만 사용하는 SIM 제한
+
+사용자는 S2 예제 unload의 acquire-support/withdraw 분리만 별도 커밋·별도 비용으로 허용했다.
+Python Host 관측 경로 연결은 허용하지 않았다. 이번 SIM의 unclamp는 **같은 Part의
+acquire-support가 SETTLED/SUCCEEDED인 뒤 기존 Run 경로로 진행하는 순서 보장만 사용한다**.
+fresh support observation은 없으며 실제 셀에 필요한 보장보다 약하다. 문서·receipt에 이를
+명시하고 registry 완성 후 gripper 지원 관측을 선언·연결해 unclamp guard로 쓰는 후속을 보류한다.
+
+S2 패키지 분리 비용은 registry 비용과 분리한다: skill.py +18/−2행, README +16행,
+패키지 동작 테스트 101행(별도). Host/P/Executor 구현 변경은 0행이다. 테스트는 실제 장치
+관측이나 Run 순서를 입증하지 않는다. 실제 Run의 settled 순서·두 Host dispatch는 별도로 확인한다.
+조건 1(코드 변경 없는 두 Host Run, 실패 시 중단)과 조건 3(CP3 완료 전 종료 negative case)은 유지한다.
+S1 외부 저작은 두 Host 선행 검증 전 시작하지 않는다.

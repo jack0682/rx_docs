@@ -1,0 +1,10 @@
+{
+  "state": "RECOVERY_REQUIRED after original Executor exit",
+  "arch": "linux/arm64 on Mac arm64",
+  "samples": 20,
+  "median_ms": 13.025792,
+  "max_ms": 21.376166,
+  "validity_limit_ms": 100,
+  "admission": false,
+  "comparable_to_failed_active_run": false
+}

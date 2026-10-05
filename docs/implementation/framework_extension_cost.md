@@ -787,3 +787,9 @@ entry 후 durable completion 전 종료해서 UNKNOWN·무재발행·미진행�
 
 재제출 기준은 기존 stack을 그대로 둔 N=3 정상 운전 5회 연속 성공과 별도의 사용자
 수락 실행 1회다. 모든 시도와 실패를 기록한다. 아직 이 기준을 달성하지 않았다.
+
+진단 중 원 Executor가 snapshot 만료로 자체 종료하여 Run은 RECOVERY_REQUIRED로
+전이했으며 원 UNKNOWN/보유는 유지됐다. 병렬 빌드 중 paused 과거 P 2개도 OOM 종료했다.
+환경 변화는 [진단 기록](../../references/2026-10-05-f2-cp2-not-accepted/DIAGNOSIS.md)에 남겼다.
+기존과 같은 부하라고 간주할 수 없어 정상 재검증은 **0회**이며, 부하 재현 방식에 대한
+사용자 결정 전 5회 성공을 세지 않는다. CP3 미착수·develop 미병합 상태다.

@@ -1,0 +1,224 @@
+{
+  "schema": "rx.f2-extension-cost.v1",
+  "runtime_source": {
+    "path": "s1/adapter.py",
+    "physical_lines": 87,
+    "sha256": "4903b8f1e6c9cb6bdfd74ea3b3d9be24dd01b03c1f874b8aeaf80f9354719f6c"
+  },
+  "authored_files_including_scenario_and_install_helpers": 22,
+  "authored_physical_lines": 1296,
+  "by_file": [
+    {
+      "path": "activate.py",
+      "physical_lines": 36,
+      "sha256": "f431bbdea6a932fab4fb35da40359644c7b13a9b94475d9caf5e485272580fee"
+    },
+    {
+      "path": "api.py",
+      "physical_lines": 40,
+      "sha256": "d48aa5fa2e73f5fb02eb84920340fd797c91bd65ef31787155c3c4005b61e677"
+    },
+    {
+      "path": "apply_process.py",
+      "physical_lines": 17,
+      "sha256": "3b31c80be6b9830220cad318fdbbe83ce933e70f5be164a6ef2795b68c39e831"
+    },
+    {
+      "path": "author_workflow.py",
+      "physical_lines": 84,
+      "sha256": "3f0f3fa2e84062285ad6aee3ffd8c15682291479daf1f98a49d7380988a039c6"
+    },
+    {
+      "path": "commands.py",
+      "physical_lines": 42,
+      "sha256": "dccb88e1813a264a8b0f42760ebedca47799ec6e514c79f97fdf3ebf82caf501"
+    },
+    {
+      "path": "commission_process.py",
+      "physical_lines": 88,
+      "sha256": "30c9831b4a5f343940c908c25d95bf6109032eca8178323a8f26576157f8353a"
+    },
+    {
+      "path": "compose.py",
+      "physical_lines": 80,
+      "sha256": "d9a6eb04d2961a90042c70eab24bdf325b8987a1653bb9f4dde46198af0cfdc1"
+    },
+    {
+      "path": "configure_runtime.py",
+      "physical_lines": 127,
+      "sha256": "86f0d5084a71fb303f55d1b666d446c04ff88cc40ef69a3eab7b680025d44ccf"
+    },
+    {
+      "path": "continue_process.py",
+      "physical_lines": 29,
+      "sha256": "881a2a2dfa3f2d5c6a55163c4d54c26016f625b77809cbaa9e4b6ea846916f0b"
+    },
+    {
+      "path": "continue_qualification.py",
+      "physical_lines": 64,
+      "sha256": "545021a92e16c224e675ab4a200f5c4496952e4ea0bfc207b1fffa97fd4d9365"
+    },
+    {
+      "path": "inspect_package.py",
+      "physical_lines": 48,
+      "sha256": "41e2f1332ad22d5ac4dc4e91093507e9e344fa29381e1dd7fb24fac218f6710f"
+    },
+    {
+      "path": "installation.py",
+      "physical_lines": 130,
+      "sha256": "c044439499ab6168f08d0ca254b7e01270ab72c9cbe2f2aece2f15a5335a0a7f"
+    },
+    {
+      "path": "normal_evidence.py",
+      "physical_lines": 42,
+      "sha256": "5e1281ed9c9c029e86da5dcca6b8b1db39e5d0c25e67216374669225f0e21505"
+    },
+    {
+      "path": "publish.py",
+      "physical_lines": 62,
+      "sha256": "199a2fad0971ae8f42b0606c95a3b008175233f8f1768b489726b5150afda7ec"
+    },
+    {
+      "path": "qualify.py",
+      "physical_lines": 91,
+      "sha256": "ac8f609497dc28b503951e74c2a5c93b5d9952d023b1d267ed08284e08931b99"
+    },
+    {
+      "path": "qualify2.py",
+      "physical_lines": 91,
+      "sha256": "73793935448258b90e875defbe3c4b526aff05bb15d73411aed85f0045cb2a8c"
+    },
+    {
+      "path": "run.py",
+      "physical_lines": 54,
+      "sha256": "08a78b725a89fbea023db576dd2d63333bc33549b0b23b056794c9f8fa4ff7d2"
+    },
+    {
+      "path": "scenario.py",
+      "physical_lines": 10,
+      "sha256": "c97442091106a07eb6400e959446b3a4adaf7ecceda9621517380a09a2f2d892"
+    },
+    {
+      "path": "sign.py",
+      "physical_lines": 62,
+      "sha256": "9474de10dc89474369d80f2886fee4a72ab16cb4547a370210635661a11cae11"
+    },
+    {
+      "path": "s1/adapter.py",
+      "physical_lines": 87,
+      "sha256": "4903b8f1e6c9cb6bdfd74ea3b3d9be24dd01b03c1f874b8aeaf80f9354719f6c"
+    },
+    {
+      "path": "s1/arguments.json",
+      "physical_lines": 6,
+      "sha256": "e053e0cc6aacd79cde78449cce4caffd65133be0e298cd518cbd758f781fac11"
+    },
+    {
+      "path": "s1/dependencies.json",
+      "physical_lines": 6,
+      "sha256": "41716a64120ef3bfe86bb0dd18355c147323cf4b69fc7e880c18840e320f0817"
+    }
+  ],
+  "leaf_commands_total_all_attempts": 725,
+  "leaf_commands_final_attempt": 157,
+  "by_category_all_attempts": {
+    "product": 351,
+    "artifact": 25,
+    "signer": 20,
+    "setup": 328,
+    "observation": 1
+  },
+  "attempts": [
+    {
+      "directory": "framework-f2-author",
+      "leaf_commands": 233,
+      "categories": {
+        "product": 110,
+        "artifact": 23,
+        "signer": 11,
+        "setup": 89
+      },
+      "nonzero_leaf_commands": 8
+    },
+    {
+      "directory": "framework-f2-author2",
+      "leaf_commands": 175,
+      "categories": {
+        "product": 91,
+        "setup": 79,
+        "signer": 3,
+        "artifact": 2
+      },
+      "nonzero_leaf_commands": 8
+    },
+    {
+      "directory": "framework-f2-author3",
+      "leaf_commands": 160,
+      "categories": {
+        "product": 77,
+        "setup": 80,
+        "signer": 3
+      },
+      "nonzero_leaf_commands": 3
+    },
+    {
+      "directory": "framework-f2-author4",
+      "leaf_commands": 157,
+      "categories": {
+        "product": 73,
+        "setup": 80,
+        "signer": 3,
+        "observation": 1
+      },
+      "nonzero_leaf_commands": 2
+    }
+  ],
+  "top_level_helper_invocations_final_attempt": [
+    {
+      "helper": "installation.py",
+      "rc": 0,
+      "wall_seconds": 1.3260977079626173
+    },
+    {
+      "helper": "author_workflow.py",
+      "rc": 0,
+      "wall_seconds": 2.8146607920061797
+    },
+    {
+      "helper": "publish.py",
+      "rc": 0,
+      "wall_seconds": 11.561341625172645
+    },
+    {
+      "helper": "configure_runtime.py",
+      "rc": 0,
+      "wall_seconds": 8.934380165999755
+    },
+    {
+      "helper": "commission_process.py",
+      "rc": 0,
+      "wall_seconds": 42.15918141696602
+    },
+    {
+      "helper": "qualify.py",
+      "rc": 0,
+      "wall_seconds": 30.482049917103723
+    },
+    {
+      "helper": "activate.py",
+      "rc": 0,
+      "wall_seconds": 18.738617999944836
+    },
+    {
+      "helper": "run.py",
+      "rc": 0,
+      "wall_seconds": 77.51158908405341
+    }
+  ],
+  "command_count_definition": "Logged leaf process invocations across all attempts; helper launch counts shown separately to avoid double counting nested calls. Ad hoc diagnostic/tool calls and file edits are not included. Errors and repeated setup attempts are retained.",
+  "excluded": "Installed SDK/client, provided S2 example/environment, copied baseline data, generated JSON/candidates/packages/reports and runtime-public duplicates are listed as provided/generated, not hand-written source.",
+  "f0_comparison": "F0 6 files/63 lines/12 commands included a failed native probe and finite-Python alternative, not this full signed multi-Host N=3 path. No reduction ratio claimed.",
+  "fresh_support_observation": false,
+  "s1_core_changed_files": 0,
+  "nonzero_status_note": "Includes expected refusals; nonzero status is not automatically an authoring failure."
+}

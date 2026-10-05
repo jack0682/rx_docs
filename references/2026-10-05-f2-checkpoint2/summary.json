@@ -1,0 +1,1484 @@
+{
+  "schema": "rx.f2-cp2-product-precheck.v1",
+  "status": "READY_FOR_USER_ACCEPTANCE",
+  "command_executor": "Codex",
+  "acceptance_decision_by": "User",
+  "user_acceptance": "NOT_YET",
+  "environment": "SIMULATION",
+  "run": "01a10ac1-d3af-728b-a228-a7b6ea06565d",
+  "request_id": "0a7e3694-cd58-4aad-b957-108b7b17d0b7",
+  "parts": [
+    {
+      "ordinal": "1",
+      "nodes": [
+        "pick",
+        "load",
+        "rotate-align",
+        "clamp",
+        "close-door",
+        "process",
+        "open-door",
+        "acquire-support",
+        "unclamp",
+        "withdraw",
+        "place"
+      ],
+      "effect_pairs": [
+        {
+          "operation": "01a10ac1-dbc9-7016-be82-03b301344cf7",
+          "invocation": "be1b3f4e-0416-4f17-a7a9-044f73c3139d",
+          "host": "host/sim"
+        },
+        {
+          "operation": "01a10ac1-e330-77c8-887c-586de8e2155e",
+          "invocation": "0f874d84-2bb9-4053-b34c-c17b6d2d4b45",
+          "host": "host/sim"
+        },
+        {
+          "operation": "01a10ac1-e948-7285-a59c-798979736bae",
+          "invocation": "3a4954bf-edd6-4023-a958-bda63239e384",
+          "host": "host/sim"
+        },
+        {
+          "operation": "01a10ac1-ef5c-72fd-be2e-3d914b65ac2f",
+          "invocation": "079982bb-3b52-4eab-a4a9-49c288c8524f",
+          "host": "host/sim-b"
+        },
+        {
+          "operation": "01a10ac1-f5e5-765a-9739-e4a6854840da",
+          "invocation": "25c92f3c-0727-4741-b521-663b07909ae4",
+          "host": "host/sim"
+        },
+        {
+          "operation": "01a10ac1-fc0c-73c5-b9ce-5a3183e8b9b7",
+          "invocation": "aa3644d7-3330-4863-af8c-7e621645c7f9",
+          "host": "host/sim"
+        },
+        {
+          "operation": "01a10ac2-1587-7173-972a-4d6093876f9a",
+          "invocation": "a136d062-09f4-48f0-91c2-d116571da16d",
+          "host": "host/sim"
+        },
+        {
+          "operation": "01a10ac2-1be2-77a8-a4bb-9697c61684ae",
+          "invocation": "2d8b9a75-d642-42a0-ad5e-f1407c3ba0c3",
+          "host": "host/sim"
+        },
+        {
+          "operation": "01a10ac2-232f-7223-baf8-bc5c148e5943",
+          "invocation": "44149529-6eff-482b-a21a-84bbf50e393c",
+          "host": "host/sim-b"
+        },
+        {
+          "operation": "01a10ac2-2a40-7430-a806-15b0f45fefbb",
+          "invocation": "c1cdd6b6-bdc7-4e10-a482-398472fc8eb9",
+          "host": "host/sim"
+        },
+        {
+          "operation": "01a10ac2-30a1-7698-bbef-6dd619cf2155",
+          "invocation": "f3cc55a7-1e08-45b7-bfea-759acbfb8efd",
+          "host": "host/sim"
+        }
+      ],
+      "selected_values": [
+        {
+          "node": "pick",
+          "parameters": {
+            "approach_position": {
+              "frame": "SIMULATION/world",
+              "value": {
+                "data": {
+                  "kind": "VECTOR",
+                  "ranges": [
+                    {
+                      "max": 100,
+                      "min": 100
+                    },
+                    {
+                      "max": 200,
+                      "min": 200
+                    },
+                    {
+                      "max": 795,
+                      "min": 795
+                    }
+                  ]
+                },
+                "unit": "mm"
+              }
+            },
+            "force": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 25,
+                    "min": 25
+                  }
+                },
+                "unit": "N"
+              }
+            },
+            "frame": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "TEXT",
+                  "value": "SIMULATION/world"
+                },
+                "unit": "unitless"
+              }
+            },
+            "orientation": {
+              "frame": "SIMULATION/world",
+              "value": {
+                "data": {
+                  "kind": "VECTOR",
+                  "ranges": [
+                    {
+                      "max": 0,
+                      "min": 0
+                    },
+                    {
+                      "max": 0,
+                      "min": 0
+                    },
+                    {
+                      "max": 0,
+                      "min": 0
+                    },
+                    {
+                      "max": 1,
+                      "min": 1
+                    }
+                  ]
+                },
+                "unit": "unitless"
+              }
+            },
+            "target_position": {
+              "frame": "SIMULATION/world",
+              "value": {
+                "data": {
+                  "kind": "VECTOR",
+                  "ranges": [
+                    {
+                      "max": 100,
+                      "min": 100
+                    },
+                    {
+                      "max": 200,
+                      "min": 200
+                    },
+                    {
+                      "max": 760,
+                      "min": 760
+                    }
+                  ]
+                },
+                "unit": "mm"
+              }
+            },
+            "timeout_s": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 30,
+                    "min": 30
+                  }
+                },
+                "unit": "s"
+              }
+            },
+            "width": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 47,
+                    "min": 47
+                  }
+                },
+                "unit": "mm"
+              }
+            }
+          },
+          "device": {
+            "alignment": null,
+            "clamped": false,
+            "door_closed": false,
+            "holding": true,
+            "motion": {
+              "approach": [
+                100,
+                200,
+                795
+              ],
+              "force": 25,
+              "frame": "SIMULATION/world",
+              "orientation": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "target": [
+                100,
+                200,
+                760
+              ],
+              "width": 47
+            },
+            "phase": "HOLDING",
+            "process_done": false
+          }
+        },
+        {
+          "node": "rotate-align",
+          "parameters": {
+            "angle_deg": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 95,
+                    "min": 95
+                  }
+                },
+                "unit": "deg"
+              }
+            },
+            "timeout_s": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 30,
+                    "min": 30
+                  }
+                },
+                "unit": "s"
+              }
+            },
+            "tolerance_deg": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 0.5,
+                    "min": 0.5
+                  }
+                },
+                "unit": "deg"
+              }
+            }
+          },
+          "device": {
+            "alignment": {
+              "aligned": true,
+              "measured_deg": 95,
+              "requested_deg": 95,
+              "tolerance_deg": 0.5
+            },
+            "clamped": false,
+            "door_closed": false,
+            "holding": true,
+            "motion": {
+              "approach": [
+                600,
+                500,
+                885
+              ],
+              "force": 25,
+              "frame": "SIMULATION/world",
+              "orientation": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "target": [
+                600,
+                500,
+                850
+              ],
+              "width": 47
+            },
+            "phase": "SEATED",
+            "process_done": false
+          }
+        },
+        {
+          "node": "clamp",
+          "parameters": {
+            "force": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 30,
+                    "min": 30
+                  }
+                },
+                "unit": "N"
+              }
+            },
+            "release_gripper": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "BOOLEAN",
+                  "value": true
+                },
+                "unit": "unitless"
+              }
+            },
+            "state": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "BOOLEAN",
+                  "value": true
+                },
+                "unit": "unitless"
+              }
+            },
+            "timeout_s": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 30,
+                    "min": 30
+                  }
+                },
+                "unit": "s"
+              }
+            }
+          },
+          "device": {
+            "alignment": {
+              "aligned": true,
+              "measured_deg": 95,
+              "requested_deg": 95,
+              "tolerance_deg": 0.5
+            },
+            "clamped": true,
+            "door_closed": false,
+            "holding": false,
+            "motion": {
+              "approach": [
+                600,
+                500,
+                885
+              ],
+              "force": 25,
+              "frame": "SIMULATION/world",
+              "orientation": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "target": [
+                600,
+                500,
+                885
+              ],
+              "width": 47
+            },
+            "phase": "CLAMPED",
+            "process_done": false
+          }
+        },
+        {
+          "node": "process",
+          "parameters": {
+            "duration_s": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 5,
+                    "min": 5
+                  }
+                },
+                "unit": "s"
+              }
+            },
+            "timeout_s": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 30,
+                    "min": 30
+                  }
+                },
+                "unit": "s"
+              }
+            }
+          },
+          "device": {
+            "alignment": {
+              "aligned": true,
+              "measured_deg": 95,
+              "requested_deg": 95,
+              "tolerance_deg": 0.5
+            },
+            "clamped": true,
+            "door_closed": true,
+            "holding": false,
+            "motion": {
+              "approach": [
+                600,
+                500,
+                885
+              ],
+              "force": 25,
+              "frame": "SIMULATION/world",
+              "orientation": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "target": [
+                600,
+                500,
+                885
+              ],
+              "width": 47
+            },
+            "phase": "PROCESSED",
+            "process_done": true
+          }
+        }
+      ],
+      "same_part_support_before_unclamp": true
+    },
+    {
+      "ordinal": "2",
+      "nodes": [
+        "pick",
+        "load",
+        "rotate-align",
+        "clamp",
+        "close-door",
+        "process",
+        "open-door",
+        "acquire-support",
+        "unclamp",
+        "withdraw",
+        "place"
+      ],
+      "effect_pairs": [
+        {
+          "operation": "01a10ac2-3a73-754c-8f7c-bf71efa98dc3",
+          "invocation": "5975aba2-6b70-4a48-8b3a-5ea33f784edd",
+          "host": "host/sim"
+        },
+        {
+          "operation": "01a10ac2-40a7-7461-a29b-2a4f190461c9",
+          "invocation": "ca34a923-02b0-42be-adf1-5c632d500d36",
+          "host": "host/sim"
+        },
+        {
+          "operation": "01a10ac2-46f3-724f-b1b1-25a5d9249114",
+          "invocation": "eb314bd9-9051-458c-a3bc-105d70b72ca7",
+          "host": "host/sim"
+        },
+        {
+          "operation": "01a10ac2-4d2d-7123-973d-4c193c2ad02c",
+          "invocation": "a088757f-20aa-46d2-a980-9b74f3e94691",
+          "host": "host/sim-b"
+        },
+        {
+          "operation": "01a10ac2-53c6-7243-9f3b-f2826afab4b6",
+          "invocation": "5157e2fc-0056-419a-ae66-eb89a0c14507",
+          "host": "host/sim"
+        },
+        {
+          "operation": "01a10ac2-5a18-723a-9605-5493bcb1462c",
+          "invocation": "496a78cc-c0f3-4fdd-a000-5e747a1e5e3d",
+          "host": "host/sim"
+        },
+        {
+          "operation": "01a10ac2-7b7d-72ce-bb8b-d6825b67d822",
+          "invocation": "49e2a6c2-23fd-458c-847a-7156960c4eb0",
+          "host": "host/sim"
+        },
+        {
+          "operation": "01a10ac2-81dc-7657-afd2-17780d48b45c",
+          "invocation": "b67a6706-d6d7-4c55-a69a-e4a1e253c7ce",
+          "host": "host/sim"
+        },
+        {
+          "operation": "01a10ac2-897f-71c3-9ada-5f89153403d7",
+          "invocation": "a6f0bdee-6c69-4f4b-8cdf-3597d48bd356",
+          "host": "host/sim-b"
+        },
+        {
+          "operation": "01a10ac2-9080-76a9-ac9e-2ec45f198f95",
+          "invocation": "e8d3545a-1a3a-497f-9bb4-c1208f69c824",
+          "host": "host/sim"
+        },
+        {
+          "operation": "01a10ac2-9700-7441-ab35-79cccf56e96c",
+          "invocation": "26591c35-5199-415e-969b-fe565c95e165",
+          "host": "host/sim"
+        }
+      ],
+      "selected_values": [
+        {
+          "node": "pick",
+          "parameters": {
+            "approach_position": {
+              "frame": "SIMULATION/world",
+              "value": {
+                "data": {
+                  "kind": "VECTOR",
+                  "ranges": [
+                    {
+                      "max": 180,
+                      "min": 180
+                    },
+                    {
+                      "max": 200,
+                      "min": 200
+                    },
+                    {
+                      "max": 825,
+                      "min": 825
+                    }
+                  ]
+                },
+                "unit": "mm"
+              }
+            },
+            "force": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 17.5,
+                    "min": 17.5
+                  }
+                },
+                "unit": "N"
+              }
+            },
+            "frame": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "TEXT",
+                  "value": "SIMULATION/world"
+                },
+                "unit": "unitless"
+              }
+            },
+            "orientation": {
+              "frame": "SIMULATION/world",
+              "value": {
+                "data": {
+                  "kind": "VECTOR",
+                  "ranges": [
+                    {
+                      "max": 0,
+                      "min": 0
+                    },
+                    {
+                      "max": 0,
+                      "min": 0
+                    },
+                    {
+                      "max": 0,
+                      "min": 0
+                    },
+                    {
+                      "max": 1,
+                      "min": 1
+                    }
+                  ]
+                },
+                "unit": "unitless"
+              }
+            },
+            "target_position": {
+              "frame": "SIMULATION/world",
+              "value": {
+                "data": {
+                  "kind": "VECTOR",
+                  "ranges": [
+                    {
+                      "max": 180,
+                      "min": 180
+                    },
+                    {
+                      "max": 200,
+                      "min": 200
+                    },
+                    {
+                      "max": 767.5,
+                      "min": 767.5
+                    }
+                  ]
+                },
+                "unit": "mm"
+              }
+            },
+            "timeout_s": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 30,
+                    "min": 30
+                  }
+                },
+                "unit": "s"
+              }
+            },
+            "width": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 77,
+                    "min": 77
+                  }
+                },
+                "unit": "mm"
+              }
+            }
+          },
+          "device": {
+            "alignment": null,
+            "clamped": false,
+            "door_closed": false,
+            "holding": true,
+            "motion": {
+              "approach": [
+                180,
+                200,
+                825
+              ],
+              "force": 17.5,
+              "frame": "SIMULATION/world",
+              "orientation": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "target": [
+                180,
+                200,
+                767.5
+              ],
+              "width": 77
+            },
+            "phase": "HOLDING",
+            "process_done": false
+          }
+        },
+        {
+          "node": "rotate-align",
+          "parameters": {
+            "angle_deg": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 185,
+                    "min": 185
+                  }
+                },
+                "unit": "deg"
+              }
+            },
+            "timeout_s": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 30,
+                    "min": 30
+                  }
+                },
+                "unit": "s"
+              }
+            },
+            "tolerance_deg": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 0.3,
+                    "min": 0.3
+                  }
+                },
+                "unit": "deg"
+              }
+            }
+          },
+          "device": {
+            "alignment": {
+              "aligned": true,
+              "measured_deg": 185,
+              "requested_deg": 185,
+              "tolerance_deg": 0.3
+            },
+            "clamped": false,
+            "door_closed": false,
+            "holding": true,
+            "motion": {
+              "approach": [
+                600,
+                500,
+                915
+              ],
+              "force": 17.5,
+              "frame": "SIMULATION/world",
+              "orientation": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "target": [
+                600,
+                500,
+                857.5
+              ],
+              "width": 77
+            },
+            "phase": "SEATED",
+            "process_done": false
+          }
+        },
+        {
+          "node": "clamp",
+          "parameters": {
+            "force": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 21,
+                    "min": 21
+                  }
+                },
+                "unit": "N"
+              }
+            },
+            "release_gripper": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "BOOLEAN",
+                  "value": true
+                },
+                "unit": "unitless"
+              }
+            },
+            "state": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "BOOLEAN",
+                  "value": true
+                },
+                "unit": "unitless"
+              }
+            },
+            "timeout_s": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 30,
+                    "min": 30
+                  }
+                },
+                "unit": "s"
+              }
+            }
+          },
+          "device": {
+            "alignment": {
+              "aligned": true,
+              "measured_deg": 185,
+              "requested_deg": 185,
+              "tolerance_deg": 0.3
+            },
+            "clamped": true,
+            "door_closed": false,
+            "holding": false,
+            "motion": {
+              "approach": [
+                600,
+                500,
+                915
+              ],
+              "force": 17.5,
+              "frame": "SIMULATION/world",
+              "orientation": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "target": [
+                600,
+                500,
+                915
+              ],
+              "width": 77
+            },
+            "phase": "CLAMPED",
+            "process_done": false
+          }
+        },
+        {
+          "node": "process",
+          "parameters": {
+            "duration_s": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 7,
+                    "min": 7
+                  }
+                },
+                "unit": "s"
+              }
+            },
+            "timeout_s": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 30,
+                    "min": 30
+                  }
+                },
+                "unit": "s"
+              }
+            }
+          },
+          "device": {
+            "alignment": {
+              "aligned": true,
+              "measured_deg": 185,
+              "requested_deg": 185,
+              "tolerance_deg": 0.3
+            },
+            "clamped": true,
+            "door_closed": true,
+            "holding": false,
+            "motion": {
+              "approach": [
+                600,
+                500,
+                915
+              ],
+              "force": 17.5,
+              "frame": "SIMULATION/world",
+              "orientation": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "target": [
+                600,
+                500,
+                915
+              ],
+              "width": 77
+            },
+            "phase": "PROCESSED",
+            "process_done": true
+          }
+        }
+      ],
+      "same_part_support_before_unclamp": true
+    },
+    {
+      "ordinal": "3",
+      "nodes": [
+        "pick",
+        "load",
+        "rotate-align",
+        "clamp",
+        "close-door",
+        "process",
+        "open-door",
+        "acquire-support",
+        "unclamp",
+        "withdraw",
+        "place"
+      ],
+      "effect_pairs": [
+        {
+          "operation": "01a10ac2-a3e6-72cf-a911-4810ba4eefe7",
+          "invocation": "0412de99-4eac-4ee8-8be0-3c4fb70ea797",
+          "host": "host/sim"
+        },
+        {
+          "operation": "01a10ac2-aa57-744e-9bf3-43a4d0a09cf4",
+          "invocation": "b1c40383-91b3-4b4f-a409-303cf1788f39",
+          "host": "host/sim"
+        },
+        {
+          "operation": "01a10ac2-b0c6-7707-8ef6-6147caf381b6",
+          "invocation": "7c051abf-d6df-45c1-9ac0-f37d0721eaf4",
+          "host": "host/sim"
+        },
+        {
+          "operation": "01a10ac2-b8b6-7206-92f7-5ad26cd74ebd",
+          "invocation": "b087af73-24d2-438f-8006-5b55a7bb87a1",
+          "host": "host/sim-b"
+        },
+        {
+          "operation": "01a10ac2-bf63-7688-8589-0c8a1a6adf9c",
+          "invocation": "75f9ed4e-ac15-4d0f-a951-fc40a7181d6b",
+          "host": "host/sim"
+        },
+        {
+          "operation": "01a10ac2-c5f1-73e7-90e8-e36f6bb68614",
+          "invocation": "c4364441-e24b-47c0-9bee-5db7b30a16d2",
+          "host": "host/sim"
+        },
+        {
+          "operation": "01a10ac2-df5c-761c-97dd-97d1a1d1bdd5",
+          "invocation": "4389e465-c5fa-4e30-bb72-d1f2db2d3ce2",
+          "host": "host/sim"
+        },
+        {
+          "operation": "01a10ac2-e61e-7121-90ab-45a8bdca8bef",
+          "invocation": "24edb8ea-aca4-4676-b639-a96370719ad3",
+          "host": "host/sim"
+        },
+        {
+          "operation": "01a10ac2-ecc3-767d-b31d-5168520ed8e1",
+          "invocation": "2a333adc-9528-4f6f-83ca-2d56c101e119",
+          "host": "host/sim-b"
+        },
+        {
+          "operation": "01a10ac2-f3fb-737c-ad6a-7c9d0e87ce18",
+          "invocation": "604c629a-c855-4534-82ee-7f38eeac4c7f",
+          "host": "host/sim"
+        },
+        {
+          "operation": "01a10ac2-fa96-75cb-95f0-adf1ee02a73e",
+          "invocation": "3127abc1-1460-4d38-9519-b8225896e533",
+          "host": "host/sim"
+        }
+      ],
+      "selected_values": [
+        {
+          "node": "pick",
+          "parameters": {
+            "approach_position": {
+              "frame": "SIMULATION/world",
+              "value": {
+                "data": {
+                  "kind": "VECTOR",
+                  "ranges": [
+                    {
+                      "max": 260,
+                      "min": 260
+                    },
+                    {
+                      "max": 200,
+                      "min": 200
+                    },
+                    {
+                      "max": 795,
+                      "min": 795
+                    }
+                  ]
+                },
+                "unit": "mm"
+              }
+            },
+            "force": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 25,
+                    "min": 25
+                  }
+                },
+                "unit": "N"
+              }
+            },
+            "frame": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "TEXT",
+                  "value": "SIMULATION/world"
+                },
+                "unit": "unitless"
+              }
+            },
+            "orientation": {
+              "frame": "SIMULATION/world",
+              "value": {
+                "data": {
+                  "kind": "VECTOR",
+                  "ranges": [
+                    {
+                      "max": 0,
+                      "min": 0
+                    },
+                    {
+                      "max": 0,
+                      "min": 0
+                    },
+                    {
+                      "max": 0,
+                      "min": 0
+                    },
+                    {
+                      "max": 1,
+                      "min": 1
+                    }
+                  ]
+                },
+                "unit": "unitless"
+              }
+            },
+            "target_position": {
+              "frame": "SIMULATION/world",
+              "value": {
+                "data": {
+                  "kind": "VECTOR",
+                  "ranges": [
+                    {
+                      "max": 260,
+                      "min": 260
+                    },
+                    {
+                      "max": 200,
+                      "min": 200
+                    },
+                    {
+                      "max": 760,
+                      "min": 760
+                    }
+                  ]
+                },
+                "unit": "mm"
+              }
+            },
+            "timeout_s": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 30,
+                    "min": 30
+                  }
+                },
+                "unit": "s"
+              }
+            },
+            "width": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 47,
+                    "min": 47
+                  }
+                },
+                "unit": "mm"
+              }
+            }
+          },
+          "device": {
+            "alignment": null,
+            "clamped": false,
+            "door_closed": false,
+            "holding": true,
+            "motion": {
+              "approach": [
+                260,
+                200,
+                795
+              ],
+              "force": 25,
+              "frame": "SIMULATION/world",
+              "orientation": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "target": [
+                260,
+                200,
+                760
+              ],
+              "width": 47
+            },
+            "phase": "HOLDING",
+            "process_done": false
+          }
+        },
+        {
+          "node": "rotate-align",
+          "parameters": {
+            "angle_deg": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 95,
+                    "min": 95
+                  }
+                },
+                "unit": "deg"
+              }
+            },
+            "timeout_s": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 30,
+                    "min": 30
+                  }
+                },
+                "unit": "s"
+              }
+            },
+            "tolerance_deg": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 0.5,
+                    "min": 0.5
+                  }
+                },
+                "unit": "deg"
+              }
+            }
+          },
+          "device": {
+            "alignment": {
+              "aligned": true,
+              "measured_deg": 95,
+              "requested_deg": 95,
+              "tolerance_deg": 0.5
+            },
+            "clamped": false,
+            "door_closed": false,
+            "holding": true,
+            "motion": {
+              "approach": [
+                600,
+                500,
+                885
+              ],
+              "force": 25,
+              "frame": "SIMULATION/world",
+              "orientation": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "target": [
+                600,
+                500,
+                850
+              ],
+              "width": 47
+            },
+            "phase": "SEATED",
+            "process_done": false
+          }
+        },
+        {
+          "node": "clamp",
+          "parameters": {
+            "force": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 30,
+                    "min": 30
+                  }
+                },
+                "unit": "N"
+              }
+            },
+            "release_gripper": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "BOOLEAN",
+                  "value": true
+                },
+                "unit": "unitless"
+              }
+            },
+            "state": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "BOOLEAN",
+                  "value": true
+                },
+                "unit": "unitless"
+              }
+            },
+            "timeout_s": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 30,
+                    "min": 30
+                  }
+                },
+                "unit": "s"
+              }
+            }
+          },
+          "device": {
+            "alignment": {
+              "aligned": true,
+              "measured_deg": 95,
+              "requested_deg": 95,
+              "tolerance_deg": 0.5
+            },
+            "clamped": true,
+            "door_closed": false,
+            "holding": false,
+            "motion": {
+              "approach": [
+                600,
+                500,
+                885
+              ],
+              "force": 25,
+              "frame": "SIMULATION/world",
+              "orientation": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "target": [
+                600,
+                500,
+                885
+              ],
+              "width": 47
+            },
+            "phase": "CLAMPED",
+            "process_done": false
+          }
+        },
+        {
+          "node": "process",
+          "parameters": {
+            "duration_s": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 5,
+                    "min": 5
+                  }
+                },
+                "unit": "s"
+              }
+            },
+            "timeout_s": {
+              "frame": null,
+              "value": {
+                "data": {
+                  "kind": "NUMBER",
+                  "range": {
+                    "max": 30,
+                    "min": 30
+                  }
+                },
+                "unit": "s"
+              }
+            }
+          },
+          "device": {
+            "alignment": {
+              "aligned": true,
+              "measured_deg": 95,
+              "requested_deg": 95,
+              "tolerance_deg": 0.5
+            },
+            "clamped": true,
+            "door_closed": true,
+            "holding": false,
+            "motion": {
+              "approach": [
+                600,
+                500,
+                885
+              ],
+              "force": 25,
+              "frame": "SIMULATION/world",
+              "orientation": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "target": [
+                600,
+                500,
+                885
+              ],
+              "width": 47
+            },
+            "phase": "PROCESSED",
+            "process_done": true
+          }
+        }
+      ],
+      "same_part_support_before_unclamp": true
+    }
+  ],
+  "part_count": 3,
+  "operations": 33,
+  "device_effects": 33,
+  "unique_operation_invocation_pairs": 33,
+  "matching_invocations": true,
+  "host_b_clamp_unclamp_effects": 6,
+  "reopened_run_parts_work_reports_equal": true,
+  "support_basis": "SAME_PART_ACQUIRE_SUPPORT_SETTLED_SUCCEEDED_ORDER",
+  "fresh_support_observation": false,
+  "physical_support_claim": false,
+  "cp3_started": false,
+  "limitations": [
+    "Operation ordering only; weaker than a real cell",
+    "Host A waiting for Host B UNKNOWN and both external process fault windows remain CP3",
+    "Prior failed SIM installations and UNKNOWN operations preserved; not retried or force-released"
+  ],
+  "selected_values": [
+    {
+      "ordinal": 1,
+      "width_mm": 47,
+      "grip_force_N": 25,
+      "angle_deg": 95,
+      "tolerance_deg": 0.5,
+      "process_s": 5
+    },
+    {
+      "ordinal": 2,
+      "width_mm": 77,
+      "grip_force_N": 17.5,
+      "angle_deg": 185,
+      "tolerance_deg": 0.3,
+      "process_s": 7
+    },
+    {
+      "ordinal": 3,
+      "width_mm": 47,
+      "grip_force_N": 25,
+      "angle_deg": 95,
+      "tolerance_deg": 0.5,
+      "process_s": 5
+    }
+  ],
+  "chuck_observation": {
+    "source": "chuck.clamped",
+    "host": "host/sim-b",
+    "expected_generation": "430af93f-87bd-4404-8d26-416bd7a5c190",
+    "maximum_age_ns": "2000000000",
+    "maximum_uncertainty_ns": "0",
+    "age_ns": "80262709",
+    "usable": true,
+    "issues": [],
+    "observation": {
+      "cell": "cell/a",
+      "id": "chuck.clamped",
+      "source_host": "host/sim-b",
+      "source_generation": "430af93f-87bd-4404-8d26-416bd7a5c190",
+      "schema": "boolean/v1",
+      "unit": "unitless",
+      "acquired_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312782342556828"
+      },
+      "maximum_age_ns": "2000000000",
+      "acquisition_uncertainty_ns": "0",
+      "quality_good": true,
+      "origin_age_bounded": true,
+      "disputed": false,
+      "value": {
+        "boolean": false
+      },
+      "evidence_id": "6ac3f24f-d780-460d-8b9b-a3ac2b4b8508"
+    }
+  },
+  "state": "COMPLETED",
+  "s1_core_diff": {
+    "platform": {
+      "head": "22d8b18dc9770d552608d2c2cf48c93f4b2cbf59",
+      "changed_files": 0,
+      "added_lines": 0,
+      "deleted_lines": 0
+    },
+    "solutions": {
+      "head": "0fed87b5f7e4bee0925613af9db4d515769a61ea",
+      "changed_files": 0,
+      "added_lines": 0,
+      "deleted_lines": 0
+    }
+  },
+  "host_binary_sha256": {
+    "ha": "1332000944c7d4b4fc1c615c117cedb77d9c8c4d0291e6f54f05282b140538b7",
+    "hb": "1332000944c7d4b4fc1c615c117cedb77d9c8c4d0291e6f54f05282b140538b7"
+  }
+}

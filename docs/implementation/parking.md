@@ -35,3 +35,4 @@
 
 - held/UNKNOWN operation의 adapter hot replacement·migration: F2′에서는 선택된 package 교체를 거절하고 동일 digest의 passive restart만 기존 증거·custody 검증으로 다룬다.
 - SIM unclamp의 fresh support observation 부재: 현재는 같은 Part acquire-support의 SETTLED/SUCCEEDED 순서만 사용한다. Registry가 동작한 뒤 gripper support를 registry-declared observation으로 제공하고 unclamp를 그 관측으로 gate한다. Python Host에 같은 관측 기능을 중복 구현하지 않는다.
+- F3′ 저작 근거: 외부 package의 저수준 API/서명 policy/qualification 문서 조립과 심볼릭 링크 보존·CLI 호출 pacing에 수동 마찰이 있었다. CP2의 22파일/1296행과 기록된 725 leaf 호출(반복 설치 포함)을 개선 비교 대상으로 보존하며 지금 F3′ 도구를 시작하지 않는다.

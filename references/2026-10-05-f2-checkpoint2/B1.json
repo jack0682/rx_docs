@@ -1,0 +1,182 @@
+{
+  "schema": "rx.f2-registry-b1-freeze.v1",
+  "frozen_before_s1_authoring": true,
+  "platform": "22d8b18dc9770d552608d2c2cf48c93f4b2cbf59",
+  "solutions": "0fed87b5f7e4bee0925613af9db4d515769a61ea",
+  "docs": "af538cf966f7e57055b2778b5835bd6713e2d28a",
+  "images": {
+    "platform": {
+      "Id": "sha256:44b0cac77a73684cd12317eef081cfcca17c680928418d623adb59fb61aa6723",
+      "Architecture": "arm64",
+      "Os": "linux"
+    },
+    "solutions": {
+      "Id": "sha256:8c3657f091e63c4a9b6b179452a7c5494ec4f5cbc10f661c38b31ee18ecea83a",
+      "Architecture": "arm64",
+      "Os": "linux"
+    }
+  },
+  "installed_files": {
+    "/opt/rx/bin/rx-hostd": "1332000944c7d4b4fc1c615c117cedb77d9c8c4d0291e6f54f05282b140538b7",
+    "/opt/rx/bin/rx-device-package": "ce7b7ccb024ced59933176a514019772d9241d8a51c9af184a4a68d83a803b66",
+    "/opt/rx/client/rx": "8adf3c55f861a90bb6b8b80bc243140e2a8a281b7b0f27ebf6148ba09e3e245b",
+    "/opt/rx/client/runtime_client.py": "505dcc72642ac57bace05696ba4949b7570b01ef28c149bb4b0431f22d2ba3ef"
+  },
+  "common_platform_cost": {
+    "files": 2,
+    "added": 38,
+    "deleted": 1,
+    "by_file": [
+      {
+        "file": "crates/rx-platformd/README.md",
+        "added": 13,
+        "deleted": 0
+      },
+      {
+        "file": "crates/rx-platformd/src/bin/rx-package-store.rs",
+        "added": 25,
+        "deleted": 1
+      }
+    ]
+  },
+  "common_solutions_cost_excluding_s2": {
+    "files": 25,
+    "added": 2497,
+    "deleted": 2,
+    "by_file": [
+      {
+        "file": ".github/workflows/ci.yml",
+        "added": 3,
+        "deleted": 0
+      },
+      {
+        "file": "deployment/external-adapters/README.md",
+        "added": 99,
+        "deleted": 0
+      },
+      {
+        "file": "deployment/external-adapters/rx_external_adapter.py",
+        "added": 192,
+        "deleted": 0
+      },
+      {
+        "file": "deployment/local-skills/RUNTIME.md",
+        "added": 25,
+        "deleted": 0
+      },
+      {
+        "file": "deployment/local-skills/runtime_client.py",
+        "added": 17,
+        "deleted": 0
+      },
+      {
+        "file": "deployment/local-skills/rx",
+        "added": 22,
+        "deleted": 0
+      },
+      {
+        "file": "docker/RuntimeSkillValidation.Dockerfile",
+        "added": 3,
+        "deleted": 0
+      },
+      {
+        "file": "docker/Solutions.Dockerfile",
+        "added": 1,
+        "deleted": 0
+      },
+      {
+        "file": "runtime/rx-device-package/src/bin/rx-device-package.rs",
+        "added": 45,
+        "deleted": 1
+      },
+      {
+        "file": "runtime/rx-device-package/src/external.rs",
+        "added": 66,
+        "deleted": 0
+      },
+      {
+        "file": "runtime/rx-device-package/src/lib.rs",
+        "added": 20,
+        "deleted": 0
+      },
+      {
+        "file": "runtime/rx-device-package/src/review.rs",
+        "added": 3,
+        "deleted": 0
+      },
+      {
+        "file": "runtime/rx-device-package/tests/external.rs",
+        "added": 239,
+        "deleted": 0
+      },
+      {
+        "file": "runtime/rx-host/src/external_process/mod.rs",
+        "added": 522,
+        "deleted": 0
+      },
+      {
+        "file": "runtime/rx-host/src/external_process/owned.rs",
+        "added": 211,
+        "deleted": 0
+      },
+      {
+        "file": "runtime/rx-host/src/external_process/profile.rs",
+        "added": 208,
+        "deleted": 0
+      },
+      {
+        "file": "runtime/rx-host/src/external_process/wire.rs",
+        "added": 93,
+        "deleted": 0
+      },
+      {
+        "file": "runtime/rx-host/src/lib.rs",
+        "added": 3,
+        "deleted": 0
+      },
+      {
+        "file": "runtime/rx-host/src/service/config.rs",
+        "added": 5,
+        "deleted": 0
+      },
+      {
+        "file": "runtime/rx-host/src/service/external_package.rs",
+        "added": 289,
+        "deleted": 0
+      },
+      {
+        "file": "runtime/rx-host/src/service/factory.rs",
+        "added": 50,
+        "deleted": 1
+      },
+      {
+        "file": "runtime/rx-host/src/service/mod.rs",
+        "added": 8,
+        "deleted": 0
+      },
+      {
+        "file": "runtime/rx-host/tests/external_process.rs",
+        "added": 222,
+        "deleted": 0
+      },
+      {
+        "file": "tools/test_api_transport.py",
+        "added": 62,
+        "deleted": 0
+      },
+      {
+        "file": "tools/test_external_adapter.py",
+        "added": 89,
+        "deleted": 0
+      }
+    ]
+  },
+  "scenario_commit_separate": "2c6b4cb",
+  "engine_seams": {
+    "pairs": 18,
+    "references": 31
+  },
+  "fresh_support_observation": false,
+  "two_host_prerequisite_run": "01a10a14-0c8c-72b7-8810-d08b5a0440cf",
+  "s1_started": false
+}

@@ -1,0 +1,306 @@
+{
+  "schema": "rx.evidence-manifest.v1",
+  "template_only": false,
+  "record_id": "f2-cp2-not-accepted-publication-index-2026-10-07",
+  "record_kind": "HISTORICAL_EVIDENCE_PUBLICATION_INDEX",
+  "created_at_utc": "2026-10-06T17:44:59.355489+00:00",
+  "actors": {
+    "requester": "user requested the original acceptance Run and later migration publication work",
+    "executor": "Claude executed the original acceptance commands; Codex executed the historical diagnosis",
+    "execution_host": "user Mac; Linux arm64 containers as recorded",
+    "verifier": "Codex coupling_measurement on maintainer Mac",
+    "verification_scope": "Read-only source publication review and recorded-data recalculation; no runtime re-execution",
+    "acceptor": "user; original decision NOT ACCEPTED"
+  },
+  "sources": [
+    {
+      "repository": "jack0682/rx_docs",
+      "commit": "293aff75e49fe1551adbdefe9090c314f94bcb57",
+      "path": "references/2026-10-05-f2-cp2-not-accepted/",
+      "role": "original rejected-Run diagnosis evidence"
+    },
+    {
+      "repository": "jack0682/rx-platform",
+      "commit": "22d8b18dc9770d552608d2c2cf48c93f4b2cbf59",
+      "role": "historical B1 runtime source declared by freeze record"
+    },
+    {
+      "repository": "jack0682/rx-solutions",
+      "commit": "0fed87b5f7e4bee0925613af9db4d515769a61ea",
+      "role": "historical B1 runtime source declared by freeze record"
+    }
+  ],
+  "source_linkage_basis": "https://github.com/jack0682/rx_docs/blob/4384ed49e384c53e645f71757ce597292b928eb6/references/2026-10-05-f2-checkpoint2/B1.json",
+  "artifacts": [
+    {
+      "name": "platform",
+      "kind": "DOCKER_IMAGE_ID",
+      "digest": "sha256:44b0cac77a73684cd12317eef081cfcca17c680928418d623adb59fb61aa6723",
+      "architecture": "arm64",
+      "os": "linux",
+      "verification": "Recorded B1 identifier agrees with environment-change capture; archive/binary not rehashed or executed during publication review"
+    },
+    {
+      "name": "solutions",
+      "kind": "DOCKER_IMAGE_ID",
+      "digest": "sha256:8c3657f091e63c4a9b6b179452a7c5494ec4f5cbc10f661c38b31ee18ecea83a",
+      "architecture": "arm64",
+      "os": "linux",
+      "verification": "Recorded B1 identifier agrees with environment-change capture; archive/binary not rehashed or executed during publication review"
+    }
+  ],
+  "candidate": {
+    "baseline_refs": [
+      "22d8b18dc9770d552608d2c2cf48c93f4b2cbf59",
+      "0fed87b5f7e4bee0925613af9db4d515769a61ea"
+    ],
+    "candidate_refs": [
+      {
+        "repository": "jack0682/rx-platform",
+        "commit": "108f1cbd3b901950ea98c7e0b9c64fd3bea7ca7e",
+        "state_at_record": "UNMERGED_UNACCEPTED"
+      },
+      {
+        "repository": "jack0682/rx-solutions",
+        "commit": "6773cdd445e4e2e07039d0603df4d1f5e4ed954c",
+        "state_at_record": "UNMERGED_UNACCEPTED"
+      }
+    ],
+    "actually_executed_artifacts_during_publication_review": [],
+    "review_host_confirmation_qualification": "NOT_RUN_DURING_PUBLICATION_REVIEW"
+  },
+  "operation_identity": {
+    "run": "01a10af3-3889-7271-b57c-722737f97e6d",
+    "request": "45fc67b5-3112-426d-9b28-fc24bfcab56f",
+    "operation": "01a10af4-3c83-7188-b378-68e9fa79b8be",
+    "invocation": "3e5f80fc-0069-4a5d-a862-a2cbac92d008"
+  },
+  "clock": {
+    "initial_diagnosis_capture_at_utc": "2026-10-05T07:34:16.867602+00:00",
+    "later_capture_common_timestamp": null,
+    "later_capture_common_timestamp_reason": "Later evidence files retain their own event timestamps; no single shared captured_at is established",
+    "monotonic_clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+    "monotonic_unit": "nanoseconds",
+    "mapping_method_and_uncertainty": "DIAGNOSIS describes realtime file-mtime minus BOOTTIME capture mapping; ten records span 1.917788 ms. This is reconstruction, not an instrumented native-entry duration."
+  },
+  "execution": {
+    "command_and_cwd": {
+      "source_ref": "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/DIAGNOSIS.md",
+      "scope": "Historical command and capture description; not executed by this publication step"
+    },
+    "exit_code": null,
+    "raw_output_refs": [
+      "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/DIAGNOSIS.md",
+      "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/after-executor-exit.json",
+      "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/containers.txt",
+      "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/cpu.txt",
+      "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/environment-change.json",
+      "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/native-timings.json",
+      "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/passive-latency.json",
+      "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/platform-logs.txt.stderr",
+      "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/provenance.json",
+      "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/python-timings.json",
+      "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/snapshot-latency.jsonl",
+      "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/snapshot-summary.json",
+      "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/target-boundaries.json"
+    ],
+    "environment_and_load": "Historical executor self-exit and two paused P OOM exits preserved in environment-change.json; exact old active load not recreated",
+    "scope": [
+      "HISTORICAL_SIMULATION_DIAGNOSIS",
+      "DOCS_PUBLICATION_REVIEW"
+    ],
+    "result": "UNKNOWN",
+    "current_runtime_observation": "NOT_RUN",
+    "limits": [
+      "No native-entry proof for target; SEND_ENTERED is not native entry",
+      "No new release, retry, replacement request, load reproduction, or CP3",
+      "No proof that proposed source candidates fix the original failure",
+      "Static recalculation is not a fresh product execution"
+    ],
+    "exit_code_reason": "This publication index covers multiple historical commands and is not a new execution"
+  },
+  "publication_review": {
+    "result": "PASS",
+    "scope": "Original three commit signatures/DCO, docs-only paths, original-file hashes, publication suitability and recorded-data consistency",
+    "product_builds_runtime_physical": "NOT_RUN",
+    "user_acceptance_effect": "NONE"
+  },
+  "acceptance": {
+    "decision": "REJECTED",
+    "decider": "user",
+    "decision_at_utc": null,
+    "source_ref": "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/provenance.json",
+    "note": "Original recorded decision, not a new decision during publication",
+    "decision_at_utc_reason": "The original provenance records the user decision but does not give its timestamp"
+  },
+  "custody_and_unknown": {
+    "state": "UNKNOWN/QUARANTINED; Run RECOVERY_REQUIRED as recorded",
+    "original_obligations": [
+      "original operation retains resource hold",
+      "slot not released through this publication",
+      "normal resubmission count remains zero in the record"
+    ],
+    "observation_ref": "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/after-executor-exit.json"
+  },
+  "previous_records": [
+    "https://github.com/jack0682/rx_docs/blob/4384ed49e384c53e645f71757ce597292b928eb6/references/2026-10-05-f2-checkpoint2/RUN_CP2.md"
+  ],
+  "files": [
+    {
+      "path": "docs/implementation/framework_extension_cost.md",
+      "mode": "100644",
+      "blob_oid": "628f25c4ba6fa70069b520d5937211b7e09cca71",
+      "sha256": "effae8ca723307e6e0c0df03a43c0d54d02f8298fa18e4a254dea719fe251111",
+      "bytes": 66401,
+      "added_lines": 22,
+      "deleted_lines": 0,
+      "origin": "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/docs/implementation/framework_extension_cost.md"
+    },
+    {
+      "path": "docs/implementation/parking.md",
+      "mode": "100644",
+      "blob_oid": "854099db3942f10874dcec5b25cca16318d6042c",
+      "sha256": "c794efd54080bdf6be68b36e9a8aacb6cc8830744d54171e8f7fbc9281dd51e8",
+      "bytes": 3541,
+      "added_lines": 1,
+      "deleted_lines": 0,
+      "origin": "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/docs/implementation/parking.md"
+    },
+    {
+      "path": "references/2026-10-05-f2-cp2-not-accepted/DIAGNOSIS.md",
+      "mode": "100644",
+      "blob_oid": "dfb8df05c5b1df65780fba328ba938d1e7561cd1",
+      "sha256": "2697975ed742c1ff3e530873095c56342888ded605ed25ee59ec731be674adde",
+      "bytes": 10952,
+      "added_lines": 169,
+      "deleted_lines": 0,
+      "origin": "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/DIAGNOSIS.md"
+    },
+    {
+      "path": "references/2026-10-05-f2-cp2-not-accepted/after-executor-exit.json",
+      "mode": "100644",
+      "blob_oid": "e479c02ad0bbe2d73ff30a07d8ebe5b9c759ecf5",
+      "sha256": "e4025adab3b2091635e6722cb99e05168ac4d579f4f27eb9ccf6284c79444ca7",
+      "bytes": 4116,
+      "added_lines": 118,
+      "deleted_lines": 0,
+      "origin": "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/after-executor-exit.json"
+    },
+    {
+      "path": "references/2026-10-05-f2-cp2-not-accepted/containers.txt",
+      "mode": "100644",
+      "blob_oid": "1a6cee0f054e9ae33fc067be56be92b421a4527a",
+      "sha256": "e1eea72220b8272ed3db29492cb01847f4bfce3c5a8b18ecad81670cff548db9",
+      "bytes": 23791,
+      "added_lines": 507,
+      "deleted_lines": 0,
+      "origin": "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/containers.txt"
+    },
+    {
+      "path": "references/2026-10-05-f2-cp2-not-accepted/cpu.txt",
+      "mode": "100644",
+      "blob_oid": "039f19003a90b9ac97a604835fe70e8742c1b1ed",
+      "sha256": "b97ae9f9883b444be4e82be8c836798b969ed39bc9661bbdb679aeb986274dd7",
+      "bytes": 997,
+      "added_lines": 25,
+      "deleted_lines": 0,
+      "origin": "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/cpu.txt"
+    },
+    {
+      "path": "references/2026-10-05-f2-cp2-not-accepted/environment-change.json",
+      "mode": "100644",
+      "blob_oid": "f479d815eefd550953ddb667fced45005fd76785",
+      "sha256": "3eb837366ed63bde127ad7018801e4661addd2b20fdf1460d1194a448e7aae88",
+      "bytes": 2728,
+      "added_lines": 104,
+      "deleted_lines": 0,
+      "origin": "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/environment-change.json"
+    },
+    {
+      "path": "references/2026-10-05-f2-cp2-not-accepted/native-timings.json",
+      "mode": "100644",
+      "blob_oid": "7932fa0200c7a95c97b865cc80da4675d1d417bb",
+      "sha256": "20c58694a03aa512aea6d3fe61279fbdcf21627e12dfa73d180d1732c881e6bf",
+      "bytes": 8403,
+      "added_lines": 252,
+      "deleted_lines": 0,
+      "origin": "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/native-timings.json"
+    },
+    {
+      "path": "references/2026-10-05-f2-cp2-not-accepted/passive-latency.json",
+      "mode": "100644",
+      "blob_oid": "25050531c52d2890a1d42c75bed224e968bcc235",
+      "sha256": "96885478fd6452069de38b6057dc9c5f7323b2211759c1e6306bb3c9d4e8a2e3",
+      "bytes": 8694,
+      "added_lines": 482,
+      "deleted_lines": 0,
+      "origin": "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/passive-latency.json"
+    },
+    {
+      "path": "references/2026-10-05-f2-cp2-not-accepted/platform-logs.txt.stderr",
+      "mode": "100644",
+      "blob_oid": "8d52ebec49022c19ffcc20d8bf5134b9efb4148a",
+      "sha256": "b73287c3d815055ddfd24506cdba5e7192d3cf789b4c868d9272c95352770757",
+      "bytes": 784,
+      "added_lines": 4,
+      "deleted_lines": 0,
+      "origin": "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/platform-logs.txt.stderr"
+    },
+    {
+      "path": "references/2026-10-05-f2-cp2-not-accepted/provenance.json",
+      "mode": "100644",
+      "blob_oid": "a8ffd66902b0acddac12de6b6f9036f59c0966aa",
+      "sha256": "3b3b55c3cb5fc503d5119b887bbaa0aad94453b80d9102e3e9273eb71cb57a6d",
+      "bytes": 436,
+      "added_lines": 10,
+      "deleted_lines": 0,
+      "origin": "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/provenance.json"
+    },
+    {
+      "path": "references/2026-10-05-f2-cp2-not-accepted/python-timings.json",
+      "mode": "100644",
+      "blob_oid": "7a7720d103c2797a35724343558ebc23c77639ec",
+      "sha256": "dc1fa80680043ffd2c15300481a22d232116f2891e7b008e11cfe850c5991f7b",
+      "bytes": 12674,
+      "added_lines": 386,
+      "deleted_lines": 0,
+      "origin": "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/python-timings.json"
+    },
+    {
+      "path": "references/2026-10-05-f2-cp2-not-accepted/snapshot-latency.jsonl",
+      "mode": "100644",
+      "blob_oid": "c1db079d007855eb16c1338cc945bb8322cce633",
+      "sha256": "f7dd30b37001eecd56a8b3f1026d4529161f47682ea873ece79ce946295da0b1",
+      "bytes": 2566,
+      "added_lines": 20,
+      "deleted_lines": 0,
+      "origin": "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/snapshot-latency.jsonl"
+    },
+    {
+      "path": "references/2026-10-05-f2-cp2-not-accepted/snapshot-summary.json",
+      "mode": "100644",
+      "blob_oid": "1c3535afcfb3d60644f08af58e5a96ed4b3c3614",
+      "sha256": "8b983f827fe5563f5de9e7d336ac4ea20498f5e2a6c23d19fd38ed3c2695b03e",
+      "bytes": 262,
+      "added_lines": 10,
+      "deleted_lines": 0,
+      "origin": "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/snapshot-summary.json"
+    },
+    {
+      "path": "references/2026-10-05-f2-cp2-not-accepted/target-boundaries.json",
+      "mode": "100644",
+      "blob_oid": "24fb958a976dfe9ea6baf2cec87300ecb1f0d7a7",
+      "sha256": "33eb21916320d78080e7d13371d5698ddf5d52bfc302c5e6058948cc52388d1e",
+      "bytes": 10962,
+      "added_lines": 298,
+      "deleted_lines": 0,
+      "origin": "https://github.com/jack0682/rx_docs/blob/293aff75e49fe1551adbdefe9090c314f94bcb57/references/2026-10-05-f2-cp2-not-accepted/target-boundaries.json"
+    }
+  ],
+  "public_projection": null,
+  "original_evidence_bytes_modified": false,
+  "limitations": [
+    "This index is new metadata over unchanged historical evidence",
+    "Current runtime state, full historical test execution, and new product acceptance are not independently established by this manifest"
+  ]
+}

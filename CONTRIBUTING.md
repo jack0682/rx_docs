@@ -70,13 +70,13 @@ See the [guard wiring and negative-control evidence](references/ci_guards_2026-0
 
 ## Published content
 
-Keep AI assistant instructions, prompts and local state out of Git. General documentation may use Korean. Shared normative documents must stay aligned with the English platform and SDK copies, including manifests and hashes.
+Keep AI assistant instructions, prompts and local state out of Git. General documentation may use Korean. Existing normative snapshots and their manifest hashes remain preserved evidence. Current canonical documents and contracts are maintained in [RobotTransformation](https://github.com/jack0682/RobotTransformation/blob/develop/contracts/README.md); do not regenerate historical hashes or synchronize new product revisions into the preserved snapshots. Follow the [evidence charter](references/EVIDENCE_CHARTER.md) for new records.
 
 ## Changes across repositories
 
-Original designs and contracts live in [rx_docs](https://github.com/jack0682/rx_docs), the platform and contract copies in [rx-platform](https://github.com/jack0682/rx-platform), and adapters, services and the pinned SDK in [rx-solutions](https://github.com/jack0682/rx-solutions). Record the original contract revision, compatibility impact and manifests first, then synchronize platform specs and the solutions SDK. Link related PRs and record compatible commit combinations.
+Current product designs, canonical contracts, implementation and SDK development belong to [RobotTransformation](https://github.com/jack0682/RobotTransformation). Normative changes require revision, compatibility and manifest impact review there. This repository retains historical documents, raw evidence and original source/artifact/Run locators; it does not own a second active canonical copy.
 
-The platform command `python3 tools/check_host_sdk.py ../rx-solutions/sdk` checks agreement with current platform sources. Standalone solutions CI checks its SDK inventory; it does not establish compatibility with the latest platform. Regenerate SDK copies from platform sources instead of editing them directly.
+For evidence spanning repositories, record exact full-SHA source tuples, artifact digests and related PRs. Existing Platform/Solutions commits, tags, signatures, releases and their historical SDK relationships remain valid evidence at their recorded revisions. Use the monorepo contribution and release instructions for current changes; do not administer or rewrite the old repositories through imported helpers.
 
 ## License and security
 

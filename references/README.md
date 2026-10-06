@@ -1,4 +1,17 @@
-# 근거와 이전 기록
+# Evidence index
+
+현재 제품의 canonical 문서·계약은 [RobotTransformation 문서 입구](https://github.com/jack0682/RobotTransformation/blob/develop/docs/README.md)와 [계약 입구](https://github.com/jack0682/RobotTransformation/blob/develop/contracts/README.md)에 있다. 이 index는 기존 evidence의 경로와 당시 의미를 유지하면서 새 실패·진단·수락 기록의 입구를 추가한다. [Evidence charter와 접수 규칙](EVIDENCE_CHARTER.md)을 따른다.
+
+## 최근 실패·진단과 원 상태
+
+| 기록 | 그 기록이 말하는 범위 | 원문 |
+|---|---|---|
+| F2′ CP2 사용자 미수락, 2026-10-05 | 원 Run의 UNKNOWN/QUARANTINED, 이후 RECOVERY_REQUIRED, 환경 변화와 정상 재제출 0회. 현재 runtime 재조회 결과나 사용자 수락 아님 | [진단](2026-10-05-f2-cp2-not-accepted/DIAGNOSIS.md) · [원 기록 연결 manifest](2026-10-05-f2-cp2-not-accepted/publication-manifest.json) |
+| F2′ CP2 이전 precheck, 2026-10-05 | 당시 별도 SIM Run의 정상 결과와 작성 비용. 뒤의 사용자 거절을 대체하지 않음 | [고정 precheck 원문](https://github.com/jack0682/rx_docs/blob/4384ed49e384c53e645f71757ce597292b928eb6/references/2026-10-05-f2-checkpoint2/RUN_CP2.md) |
+
+새 evidence는 original identity와 이전 record를 잇는다. raw file을 덮거나 실패를 지워 최신 결과로 대체하지 않는다. source import·repository migration·CI·문서 publication은 제품 또는 사용자 수락이 아니다.
+
+## 이전 기록 — 기존 고정 locator 보존
 
 현재 프로젝트의 목표·규범·미결은 [문서 입구](../README.md)에서 읽는다. 2026-09-14 저장소 정비에서 과거 조사·장비 자료·소스 스냅샷·실행 로그를 현재 트리의 요구사항과 분리했다. 원문은 변경하지 않고 Git 이력의 아래 고정 위치에 보존한다.
 

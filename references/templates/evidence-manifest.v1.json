@@ -1,0 +1,59 @@
+{
+  "schema": "rx.evidence-manifest.v1",
+  "template_only": true,
+  "record_id": null,
+  "record_kind": null,
+  "actors": {
+    "requester": null,
+    "executor": null,
+    "execution_host": null,
+    "verifier": null,
+    "verification_scope": null,
+    "acceptor": null
+  },
+  "sources": [],
+  "artifacts": [],
+  "candidate": {
+    "baseline_refs": [],
+    "candidate_refs": [],
+    "actually_executed_artifacts": [],
+    "review_host_confirmation_qualification": "NOT_RUN"
+  },
+  "operation_identity": {
+    "run": null,
+    "request": null,
+    "operation": null,
+    "invocation": null,
+    "not_applicable_reason": null
+  },
+  "clock": {
+    "observed_at_utc": null,
+    "received_at_utc": null,
+    "monotonic_clock_id": null,
+    "monotonic_unit": null,
+    "mapping_method_and_uncertainty": null
+  },
+  "execution": {
+    "command_and_cwd": null,
+    "exit_code": null,
+    "raw_output_refs": [],
+    "environment_and_load": null,
+    "scope": [],
+    "result": "NOT_RUN",
+    "limits": ["Template only; no execution or verification has occurred"]
+  },
+  "acceptance": {
+    "decision": "NOT_REQUESTED",
+    "decider": null,
+    "decision_at_utc": null,
+    "source_ref": null
+  },
+  "custody_and_unknown": {
+    "state": "UNKNOWN",
+    "original_obligations": [],
+    "observation_ref": null
+  },
+  "previous_records": [],
+  "files": [],
+  "public_projection": null
+}

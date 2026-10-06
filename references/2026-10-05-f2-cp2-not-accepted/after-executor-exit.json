@@ -1,0 +1,118 @@
+{
+  "run_state": "RECOVERY_REQUIRED",
+  "target": {
+    "activation": "01a10af4-3c32-7473-b98f-63cc9c786883",
+    "execution": {
+      "mandate": "01a10af3-3c43-7116-ab75-b8d3350732c8",
+      "operation": "01a10af4-3c83-7188-b378-68e9fa79b8be",
+      "policy": {
+        "schema_id": "rx.execution-policy.v2",
+        "sha256": "d7c9735a0ec9fd8faa4ed5f01b07664dc03f651dac4815371330256b68577b63",
+        "size_bytes": "14593"
+      },
+      "publication": {
+        "catalog": "a86ea3cc-8431-58ac-8401-5c2c63cb532c",
+        "digest": "49e0c9d82a6c15ef31680896645a504c70e2919f55b67f1595aabc8c26bce10d",
+        "id": "3ad5fe58-64a3-4107-b572-1c99dead7ed5",
+        "revision": "1"
+      },
+      "report": {
+        "schema_id": "rx.execution-report.v2",
+        "sha256": "a449cf7b0c3e92b51e0bc4cdc79c93aee861c1ac94af0cbbda23a2962156d766",
+        "size_bytes": "240133"
+      },
+      "schema": "rx.execution-operation.v2",
+      "selection": {
+        "authority_generation": "7",
+        "candidate": 0,
+        "configuration_digest": "d80ca2a204df3e46d28436d44173cd965d9ba73323c32ad76978d7e9e025c5f6",
+        "intent_digest": "43e916670c5c74bb214a2aab3960472671274a8cffb6cc64abbfea2fa99283db",
+        "node": "clamp",
+        "object": {
+          "catalog": "a86ea3cc-8431-58ac-8401-5c2c63cb532c",
+          "digest": "708abc5fd8d2a8b77e9193bf9fe1c59c234f9645317b9a3236015e9a4ba7fc56",
+          "id": "1ef534b6-4566-4242-a464-e6301c87e281",
+          "revision": "1"
+        },
+        "object_values_digest": "bc68f26ce1956400ca8faaeeb98d86d032bff5681b147d11de2bd222cd46f099",
+        "ordinal": "3",
+        "parameter": {
+          "schema_id": "rx.workflow-parameters.v2",
+          "sha256": "b046c00c113b2a690780004b6f21ebfb8a259da051805d443a1ff4260d4474c9",
+          "size_bytes": "1107"
+        },
+        "part": "01a10af4-1fc0-7463-9882-68444084a99f",
+        "policy_digest": "9fbb6576f54bee93a487ec971497a6c974767b8f0d0f97fb3ad1de4b8da09472",
+        "publication": "3ad5fe58-64a3-4107-b572-1c99dead7ed5",
+        "report_digest": "a449cf7b0c3e92b51e0bc4cdc79c93aee861c1ac94af0cbbda23a2962156d766",
+        "run": "01a10af3-3889-7271-b57c-722737f97e6d",
+        "schema": "rx.execution-selection.v2",
+        "slot": 5,
+        "slot_ordinal": "6"
+      },
+      "selection_digest": "bbbf2c92c4fd537db3cf22a95b43a4ccef94cfdb6955283200b1eb172c57f086"
+    },
+    "host": "host/sim-b",
+    "invocation": "3e5f80fc-0069-4a5d-a862-a2cbac92d008",
+    "operation": {
+      "disposition": "QUARANTINED",
+      "evidence_ids": [],
+      "execution_knowledge": "UNKNOWN",
+      "integrity": "VALID",
+      "intent_digest": "43e916670c5c74bb214a2aab3960472671274a8cffb6cc64abbfea2fa99283db",
+      "operation_id": "01a10af4-3c83-7188-b378-68e9fa79b8be",
+      "outcome": "NONE",
+      "phase": "RECONCILING",
+      "revision": "4"
+    },
+    "part": "01a10af4-1fc0-7463-9882-68444084a99f",
+    "reconciliation": null,
+    "resources": [
+      {
+        "revision": "119",
+        "value": {
+          "fence": "1",
+          "holder": "01a10af4-3c83-7188-b378-68e9fa79b8be",
+          "id": "controller/simulation",
+          "quarantined": true
+        }
+      }
+    ],
+    "slot": "main"
+  },
+  "parts": [
+    {
+      "revision": "2",
+      "value": {
+        "disposition": "CONFIRMED_COMPLETED",
+        "id": "01a10af3-3f2d-7720-bfac-1cfb8423ecab",
+        "ordinal": "1",
+        "run": "01a10af3-3889-7271-b57c-722737f97e6d"
+      }
+    },
+    {
+      "revision": "2",
+      "value": {
+        "disposition": "CONFIRMED_COMPLETED",
+        "id": "01a10af3-aaf0-7667-9821-1b0622a17b40",
+        "ordinal": "2",
+        "run": "01a10af3-3889-7271-b57c-722737f97e6d"
+      }
+    },
+    {
+      "revision": "1",
+      "value": {
+        "disposition": "IN_PROGRESS",
+        "id": "01a10af4-1fc0-7463-9882-68444084a99f",
+        "ordinal": "3",
+        "run": "01a10af3-3889-7271-b57c-722737f97e6d"
+      }
+    }
+  ],
+  "slots": null,
+  "main_resubmission_runs": 0,
+  "consecutive_successes": 0,
+  "candidate_platform_commit": "108f1cb",
+  "candidate_solutions_commit": "6773cdd",
+  "merged": false
+}

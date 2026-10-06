@@ -1,0 +1,298 @@
+{
+  "host": [
+    [
+      "delivery/883e23a859f4fbbefc1f395b23af01a54d587da7fc538b479764781a64ba171a",
+      2,
+      {
+        "schema": "rx.host.delivery.v1",
+        "value": {
+          "cell": "cell/a",
+          "device_session": "430af93f-87bd-4404-8d26-416bd7a5c190",
+          "digest": "43e916670c5c74bb214a2aab3960472671274a8cffb6cc64abbfea2fa99283db",
+          "evidence_ids": [],
+          "intent": {
+            "body": {
+              "program": {
+                "parameter_set": {
+                  "schema_id": "rx.workflow-parameters.v2",
+                  "sha256": "b046c00c113b2a690780004b6f21ebfb8a259da051805d443a1ff4260d4474c9",
+                  "size_bytes": "1107"
+                },
+                "program": {
+                  "schema_id": "rx.external-process-program.v1",
+                  "sha256": "5d18341324f1e3c30e3f6fce35ac0a5ef1289ff1f615e28e1252d17cc59035f8",
+                  "size_bytes": "804"
+                }
+              }
+            },
+            "calibration_digests": [],
+            "cancel_rule": "sim/stop",
+            "completion_rule": "rx.simulation.chuck-completed.v1",
+            "execution_timeout_ms": "30000",
+            "kind": "FINITE_ACTION",
+            "prepare_validity_ms": "1000",
+            "profile_digest": "363236df87b767a592da36f1fb76c068e4af17dcb2429d9c262249ed3316365a",
+            "resource_set": [
+              "controller/simulation"
+            ],
+            "site_config_digest": "f3584aed9f40375d3331dd83f309b18f6bcfe7c0653f15fe0ca975de80ebeb13",
+            "target": "device/s2/clamp"
+          },
+          "invocation": "3e5f80fc-0069-4a5d-a862-a2cbac92d008",
+          "journal_seq": "51",
+          "operation": "01a10af4-3c83-7188-b378-68e9fa79b8be",
+          "permit": "01a10af4-3c83-7188-b378-68ea1d7443fe",
+          "permit_digest": "5f354a5f7815f22b310dc920f836c06949028ad46c22db26e2adf81ea000ad3e",
+          "prepare_until": {
+            "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+            "ticks_ns": "315808796736247"
+          },
+          "prepared_boot": "5acdd7b5-a21f-4423-aff5-f0e147952856",
+          "state": "SEND_ENTERED"
+        }
+      }
+    ],
+    [
+      "delivery-history/00000000000000000050",
+      1,
+      {
+        "schema": "rx.host.delivery.v1",
+        "value": {
+          "cell": "cell/a",
+          "device_session": "430af93f-87bd-4404-8d26-416bd7a5c190",
+          "digest": "43e916670c5c74bb214a2aab3960472671274a8cffb6cc64abbfea2fa99283db",
+          "evidence_ids": [],
+          "intent": {
+            "body": {
+              "program": {
+                "parameter_set": {
+                  "schema_id": "rx.workflow-parameters.v2",
+                  "sha256": "b046c00c113b2a690780004b6f21ebfb8a259da051805d443a1ff4260d4474c9",
+                  "size_bytes": "1107"
+                },
+                "program": {
+                  "schema_id": "rx.external-process-program.v1",
+                  "sha256": "5d18341324f1e3c30e3f6fce35ac0a5ef1289ff1f615e28e1252d17cc59035f8",
+                  "size_bytes": "804"
+                }
+              }
+            },
+            "calibration_digests": [],
+            "cancel_rule": "sim/stop",
+            "completion_rule": "rx.simulation.chuck-completed.v1",
+            "execution_timeout_ms": "30000",
+            "kind": "FINITE_ACTION",
+            "prepare_validity_ms": "1000",
+            "profile_digest": "363236df87b767a592da36f1fb76c068e4af17dcb2429d9c262249ed3316365a",
+            "resource_set": [
+              "controller/simulation"
+            ],
+            "site_config_digest": "f3584aed9f40375d3331dd83f309b18f6bcfe7c0653f15fe0ca975de80ebeb13",
+            "target": "device/s2/clamp"
+          },
+          "invocation": "3e5f80fc-0069-4a5d-a862-a2cbac92d008",
+          "journal_seq": "50",
+          "operation": "01a10af4-3c83-7188-b378-68e9fa79b8be",
+          "permit": "01a10af4-3c83-7188-b378-68ea1d7443fe",
+          "permit_digest": "5f354a5f7815f22b310dc920f836c06949028ad46c22db26e2adf81ea000ad3e",
+          "prepare_until": {
+            "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+            "ticks_ns": "315808796736247"
+          },
+          "prepared_boot": "5acdd7b5-a21f-4423-aff5-f0e147952856",
+          "state": "PREPARED"
+        }
+      }
+    ],
+    [
+      "consumed-permit/dcd2bc8658c6536683def0a8fbf18f7ae83d010a7f33042232a5106f4a9dcb44",
+      1,
+      {
+        "schema": "rx.host.permit-consumed.v1",
+        "value": [
+          "01a10af4-3c83-7188-b378-68ea1d7443fe",
+          "01a10af4-3c83-7188-b378-68e9fa79b8be"
+        ]
+      }
+    ],
+    [
+      "delivery-history/00000000000000000051",
+      1,
+      {
+        "schema": "rx.host.delivery.v1",
+        "value": {
+          "cell": "cell/a",
+          "device_session": "430af93f-87bd-4404-8d26-416bd7a5c190",
+          "digest": "43e916670c5c74bb214a2aab3960472671274a8cffb6cc64abbfea2fa99283db",
+          "evidence_ids": [],
+          "intent": {
+            "body": {
+              "program": {
+                "parameter_set": {
+                  "schema_id": "rx.workflow-parameters.v2",
+                  "sha256": "b046c00c113b2a690780004b6f21ebfb8a259da051805d443a1ff4260d4474c9",
+                  "size_bytes": "1107"
+                },
+                "program": {
+                  "schema_id": "rx.external-process-program.v1",
+                  "sha256": "5d18341324f1e3c30e3f6fce35ac0a5ef1289ff1f615e28e1252d17cc59035f8",
+                  "size_bytes": "804"
+                }
+              }
+            },
+            "calibration_digests": [],
+            "cancel_rule": "sim/stop",
+            "completion_rule": "rx.simulation.chuck-completed.v1",
+            "execution_timeout_ms": "30000",
+            "kind": "FINITE_ACTION",
+            "prepare_validity_ms": "1000",
+            "profile_digest": "363236df87b767a592da36f1fb76c068e4af17dcb2429d9c262249ed3316365a",
+            "resource_set": [
+              "controller/simulation"
+            ],
+            "site_config_digest": "f3584aed9f40375d3331dd83f309b18f6bcfe7c0653f15fe0ca975de80ebeb13",
+            "target": "device/s2/clamp"
+          },
+          "invocation": "3e5f80fc-0069-4a5d-a862-a2cbac92d008",
+          "journal_seq": "51",
+          "operation": "01a10af4-3c83-7188-b378-68e9fa79b8be",
+          "permit": "01a10af4-3c83-7188-b378-68ea1d7443fe",
+          "permit_digest": "5f354a5f7815f22b310dc920f836c06949028ad46c22db26e2adf81ea000ad3e",
+          "prepare_until": {
+            "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+            "ticks_ns": "315808796736247"
+          },
+          "prepared_boot": "5acdd7b5-a21f-4423-aff5-f0e147952856",
+          "state": "SEND_ENTERED"
+        }
+      }
+    ]
+  ],
+  "platform": [
+    [
+      "resource/4090b7ccfa78c33c8b3f21675675e2f8fdbf6de571f3b46d09dc59da45abfb0c",
+      117,
+      {
+        "schema": "rx.internal.resource.v1",
+        "value": {
+          "fence": "1",
+          "holder": "01a10af4-3c83-7188-b378-68e9fa79b8be",
+          "id": "controller/simulation",
+          "quarantined": false
+        }
+      }
+    ],
+    [
+      "permit/a3873a0ad8f772ff36c45e83aaf46919e88d614bfeea59b754bb53726ab339b0",
+      2,
+      {
+        "schema": "rx.internal.permit.v1",
+        "value": {
+          "cell": "cell/a",
+          "condition_ids": [
+            "sim/ready"
+          ],
+          "condition_revision": "1",
+          "envelope_digest": "79c16b46d9ca9bf00a912a2a2bdf89d01daf2ee6eabb4fe4ac9e91fe3565c4f9",
+          "epoch": "7",
+          "evidence_ids": [
+            "aac90208-a01c-4f24-b6a7-ccd1f40252be"
+          ],
+          "expires_at": {
+            "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+            "ticks_ns": "315808191092247"
+          },
+          "grant": {
+            "fence": "1",
+            "id": "a514ad66-948e-40aa-bcd8-d9b40cd1c063",
+            "owner": "76101293-8083-4bdb-8e62-bee811eb1bd6",
+            "resources": [
+              "controller/simulation"
+            ],
+            "ttl_ms": "10000",
+            "valid_until": {
+              "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+              "ticks_ns": "315814110242287"
+            }
+          },
+          "host": "host/sim-b",
+          "host_boot": "5acdd7b5-a21f-4423-aff5-f0e147952856",
+          "id": "01a10af4-3c83-7188-b378-68ea1d7443fe",
+          "intent_digest": "43e916670c5c74bb214a2aab3960472671274a8cffb6cc64abbfea2fa99283db",
+          "issued_at": {
+            "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+            "ticks_ns": "315807191092247"
+          },
+          "mandate": "01a10af3-3c43-7116-ab75-b8d3350732c8",
+          "operation": "01a10af4-3c83-7188-b378-68e9fa79b8be",
+          "purpose": "PRODUCTION",
+          "qualification": "01a10ac1-b3a4-76a9-a859-4beffab3376d",
+          "qualification_revision": "1",
+          "scopes": {
+            "zone/simulation": "7"
+          },
+          "state": "CONSUMED"
+        }
+      }
+    ],
+    [
+      "hostreceipt/88a1dc1468999ca37eeffcfde9527617ed9732a346e1350d9951829c5bfa646e",
+      1,
+      {
+        "schema": "rx.internal.host-receipt.v1",
+        "value": {
+          "digest": "43e916670c5c74bb214a2aab3960472671274a8cffb6cc64abbfea2fa99283db",
+          "invocation": "3e5f80fc-0069-4a5d-a862-a2cbac92d008",
+          "journal": "ce23e6f3-f0f8-44b3-a244-6db0a80eeffc",
+          "operation": "01a10af4-3c83-7188-b378-68e9fa79b8be",
+          "sequence": "50",
+          "state": "PREPARED"
+        }
+      }
+    ],
+    [
+      "hostreceipt/25aaf8198e772ae9aebdc6686a58a36e77f47534355bc899635931232c4a75d3",
+      1,
+      {
+        "schema": "rx.internal.host-receipt.v1",
+        "value": {
+          "digest": "43e916670c5c74bb214a2aab3960472671274a8cffb6cc64abbfea2fa99283db",
+          "invocation": "3e5f80fc-0069-4a5d-a862-a2cbac92d008",
+          "journal": "ce23e6f3-f0f8-44b3-a244-6db0a80eeffc",
+          "operation": "01a10af4-3c83-7188-b378-68e9fa79b8be",
+          "sequence": "51",
+          "state": "SEND_ENTERED"
+        }
+      }
+    ]
+  ],
+  "outbox": [
+    [
+      "01a10af4-3c83-7188-b378-68e9fa79b8be",
+      "DELIVERED",
+      {
+        "schema": "rx.internal.delivery.v1",
+        "value": {
+          "host": "host/sim-b",
+          "kind": "PREPARE",
+          "operation": "01a10af4-3c83-7188-b378-68e9fa79b8be",
+          "permit": "01a10af4-3c83-7188-b378-68ea1d7443fe"
+        }
+      }
+    ],
+    [
+      "72929705-3c9d-8526-b62a-16c1063b0821",
+      "DELIVERED",
+      {
+        "schema": "rx.internal.delivery.v1",
+        "value": {
+          "host": "host/sim-b",
+          "invocation": "3e5f80fc-0069-4a5d-a862-a2cbac92d008",
+          "kind": "AUTHORIZE",
+          "operation": "01a10af4-3c83-7188-b378-68e9fa79b8be",
+          "permit": "01a10af4-3c83-7188-b378-68ea1d7443fe"
+        }
+      }
+    ]
+  ]
+}

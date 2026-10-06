@@ -1,0 +1,252 @@
+[
+  {
+    "operation": "01a10ac2-232f-7223-baf8-bc5c148e5943",
+    "dispatch": {
+      "admitted_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312524737614336"
+      },
+      "expires_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312525008414169"
+      }
+    },
+    "request_mtime_ns": 1791181858043701011,
+    "completion_mtime_ns": 1791181858046701011,
+    "capture": {
+      "captured_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312524760983628"
+      },
+      "device_session": "430af93f-87bd-4404-8d26-416bd7a5c190",
+      "native_id": "44149529-6eff-482b-a21a-84bbf50e393c",
+      "status": 0,
+      "status_schema": "rx.simulation.chuck-completed.v1"
+    }
+  },
+  {
+    "operation": "01a10ac2-b8b6-7206-92f7-5ad26cd74ebd",
+    "dispatch": {
+      "admitted_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312563014903312"
+      },
+      "expires_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312563291544687"
+      }
+    },
+    "request_mtime_ns": 1791181896321685001,
+    "completion_mtime_ns": 1791181896324685001,
+    "capture": {
+      "captured_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312563038245770"
+      },
+      "device_session": "430af93f-87bd-4404-8d26-416bd7a5c190",
+      "native_id": "b087af73-24d2-438f-8006-5b55a7bb87a1",
+      "status": 0,
+      "status_schema": "rx.simulation.chuck-completed.v1"
+    }
+  },
+  {
+    "operation": "01a10ac2-4d2d-7123-973d-4c193c2ad02c",
+    "dispatch": {
+      "admitted_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312535466528674"
+      },
+      "expires_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312535767890674"
+      }
+    },
+    "request_mtime_ns": 1791181868774803002,
+    "completion_mtime_ns": 1791181868776803002,
+    "capture": {
+      "captured_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312535491383674"
+      },
+      "device_session": "430af93f-87bd-4404-8d26-416bd7a5c190",
+      "native_id": "a088757f-20aa-46d2-a980-9b74f3e94691",
+      "status": 0,
+      "status_schema": "rx.simulation.chuck-completed.v1"
+    }
+  },
+  {
+    "operation": "01a10af3-c3af-743e-910f-fc6a0611d3de",
+    "dispatch": {
+      "admitted_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "315777092631859"
+      },
+      "expires_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "315777343322692"
+      }
+    },
+    "request_mtime_ns": 1791185110399792003,
+    "completion_mtime_ns": 1791185110403792003,
+    "capture": {
+      "captured_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "315777117063192"
+      },
+      "device_session": "430af93f-87bd-4404-8d26-416bd7a5c190",
+      "native_id": "56e6d966-f288-4fc6-bb3c-8c6296eda927",
+      "status": 0,
+      "status_schema": "rx.simulation.chuck-completed.v1"
+    }
+  },
+  {
+    "operation": "01a10ac2-ecc3-767d-b31d-5168520ed8e1",
+    "dispatch": {
+      "admitted_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312576353115652"
+      },
+      "expires_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312576608706568"
+      }
+    },
+    "request_mtime_ns": 1791181909660685007,
+    "completion_mtime_ns": 1791181909663685007,
+    "capture": {
+      "captured_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312576377296402"
+      },
+      "device_session": "430af93f-87bd-4404-8d26-416bd7a5c190",
+      "native_id": "2a333adc-9528-4f6f-83ca-2d56c101e119",
+      "status": 0,
+      "status_schema": "rx.simulation.chuck-completed.v1"
+    }
+  },
+  {
+    "operation": "01a10ac2-897f-71c3-9ada-5f89153403d7",
+    "dispatch": {
+      "admitted_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312550918854348"
+      },
+      "expires_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312551208231223"
+      }
+    },
+    "request_mtime_ns": 1791181884224803010,
+    "completion_mtime_ns": 1791181884227803010,
+    "capture": {
+      "captured_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312550942132973"
+      },
+      "device_session": "430af93f-87bd-4404-8d26-416bd7a5c190",
+      "native_id": "a6f0bdee-6c69-4f4b-8cdf-3597d48bd356",
+      "status": 0,
+      "status_schema": "rx.simulation.chuck-completed.v1"
+    }
+  },
+  {
+    "operation": "01a10ac1-ef5c-72fd-be2e-3d914b65ac2f",
+    "dispatch": {
+      "admitted_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312511465033371"
+      },
+      "expires_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312511751273579"
+      }
+    },
+    "request_mtime_ns": 1791181844776701005,
+    "completion_mtime_ns": 1791181844779701005,
+    "capture": {
+      "captured_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "312511494118746"
+      },
+      "device_session": "430af93f-87bd-4404-8d26-416bd7a5c190",
+      "native_id": "079982bb-3b52-4eab-a4a9-49c288c8524f",
+      "status": 0,
+      "status_schema": "rx.simulation.chuck-completed.v1"
+    }
+  },
+  {
+    "operation": "01a10af3-5870-7076-8f10-9238dec3e831",
+    "dispatch": {
+      "admitted_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "315749637191430"
+      },
+      "expires_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "315749891141971"
+      }
+    },
+    "request_mtime_ns": 1791185082944257004,
+    "completion_mtime_ns": 1791185082948257004,
+    "capture": {
+      "captured_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "315749660919888"
+      },
+      "device_session": "430af93f-87bd-4404-8d26-416bd7a5c190",
+      "native_id": "e9043aff-3300-40ba-9036-5c7e5949775e",
+      "status": 0,
+      "status_schema": "rx.simulation.chuck-completed.v1"
+    }
+  },
+  {
+    "operation": "01a10af3-9336-7570-b7e0-0305924ec813",
+    "dispatch": {
+      "admitted_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "315764683643979"
+      },
+      "expires_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "315764934804979"
+      }
+    },
+    "request_mtime_ns": 1791185097992257011,
+    "completion_mtime_ns": 1791185097997257011,
+    "capture": {
+      "captured_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "315764710149896"
+      },
+      "device_session": "430af93f-87bd-4404-8d26-416bd7a5c190",
+      "native_id": "23950de6-bb78-47ee-a233-04c16084cc29",
+      "status": 0,
+      "status_schema": "rx.simulation.chuck-completed.v1"
+    }
+  },
+  {
+    "operation": "01a10af4-0632-75f6-86c4-3cd980722889",
+    "dispatch": {
+      "admitted_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "315794149425950"
+      },
+      "expires_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "315794351237908"
+      }
+    },
+    "request_mtime_ns": 1791185127456792011,
+    "completion_mtime_ns": 1791185127460792011,
+    "capture": {
+      "captured_at": {
+        "clock_id": "linux-boottime/4bd00254-138d-4723-a32f-2ca4e9391bc9",
+        "ticks_ns": "315794174114325"
+      },
+      "device_session": "430af93f-87bd-4404-8d26-416bd7a5c190",
+      "native_id": "d0d748c0-913d-4beb-97a8-43f4c40c6412",
+      "status": 0,
+      "status_schema": "rx.simulation.chuck-completed.v1"
+    }
+  }
+]

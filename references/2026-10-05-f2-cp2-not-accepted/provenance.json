@@ -1,0 +1,10 @@
+{
+  "captured_at": "2026-10-05T07:34:16.867602+00:00",
+  "acceptance_executor": "Claude on user Mac",
+  "acceptance_decision": "user: NOT ACCEPTED",
+  "diagnosis_executor": "Codex on user Mac",
+  "run": "01a10af3-3889-7271-b57c-722737f97e6d",
+  "request": "45fc67b5-3112-426d-9b28-fc24bfcab56f",
+  "operation": "01a10af4-3c83-7188-b378-68e9fa79b8be",
+  "constraints": "No release, retry, new request, runtime restart, or load removal"
+}

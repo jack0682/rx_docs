@@ -1,0 +1,4 @@
+2026-10-05T06:29:04.317664708Z {"category":"HOST_RPC","code":"FailedPrecondition","event":"rx.host-delivery-error.v1","host":"host/sim","message":"stale cell fence","truncated":false}
+2026-10-05T06:29:06.355179001Z {"category":"HOST_RPC","code":"FailedPrecondition","event":"rx.host-delivery-error.v1","host":"host/sim-b","message":"stale cell fence","truncated":false}
+2026-10-05T07:25:41.480636045Z {"category":"HOST_RPC","code":"InvalidArgument","event":"rx.host-delivery-error.v1","host":"host/sim-b","message":"invalid input: Resource temporarily unavailable (os error 11)","truncated":false}
+2026-10-05T07:25:44.462975505Z {"category":"HOST_RPC","code":"FailedPrecondition","event":"rx.host-delivery-error.v1","host":"host/sim-b","message":"stale cell fence","truncated":false}

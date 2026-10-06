@@ -1,0 +1,104 @@
+[
+  {
+    "name": "/rx-f2-s1d-e",
+    "image": "sha256:8c3657f091e63c4a9b6b179452a7c5494ec4f5cbc10f661c38b31ee18ecea83a",
+    "state": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 1,
+      "Error": "",
+      "StartedAt": "2026-10-05T06:29:05.272730751Z",
+      "FinishedAt": "2026-10-05T07:42:38.872347127Z"
+    }
+  },
+  {
+    "name": "/rx-f2-s1d-p",
+    "image": "sha256:44b0cac77a73684cd12317eef081cfcca17c680928418d623adb59fb61aa6723",
+    "state": {
+      "Status": "running",
+      "Running": true,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 77590,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-10-05T06:28:57.088375969Z",
+      "FinishedAt": "2026-10-05T06:28:56.519097177Z"
+    }
+  },
+  {
+    "name": "/rx-f2-s1d-ha",
+    "image": "sha256:8c3657f091e63c4a9b6b179452a7c5494ec4f5cbc10f661c38b31ee18ecea83a",
+    "state": {
+      "Status": "running",
+      "Running": true,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 78023,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-10-05T06:29:02.607973972Z",
+      "FinishedAt": "0001-01-01T00:00:00Z"
+    }
+  },
+  {
+    "name": "/rx-f2-s1d-hb",
+    "image": "sha256:8c3657f091e63c4a9b6b179452a7c5494ec4f5cbc10f661c38b31ee18ecea83a",
+    "state": {
+      "Status": "running",
+      "Running": true,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 78307,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-10-05T06:29:04.659928625Z",
+      "FinishedAt": "0001-01-01T00:00:00Z"
+    }
+  },
+  {
+    "name": "/rx-f2-s1-p",
+    "image": "sha256:44b0cac77a73684cd12317eef081cfcca17c680928418d623adb59fb61aa6723",
+    "state": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": true,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 137,
+      "Error": "",
+      "StartedAt": "2026-10-05T05:43:28.514189762Z",
+      "FinishedAt": "2026-10-05T07:58:48.284837881Z"
+    }
+  },
+  {
+    "name": "/rx-f2-s1b-p",
+    "image": "sha256:44b0cac77a73684cd12317eef081cfcca17c680928418d623adb59fb61aa6723",
+    "state": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": true,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 137,
+      "Error": "",
+      "StartedAt": "2026-10-05T05:55:22.962094176Z",
+      "FinishedAt": "2026-10-05T07:59:12.349927212Z"
+    }
+  }
+]
